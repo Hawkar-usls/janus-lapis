@@ -34,7 +34,7 @@ def main():
     if no_transformer:
         cmd.append("--no-transformer")
 
-    print(json.dumps({"ts": now(), "event": "janus_lapis_v013_start", "cmd": " ".join(cmd)}, ensure_ascii=False))
+    print(json.dumps({"ts": now(), "event": "janus_lapis_v014_start", "cmd": " ".join(cmd)}, ensure_ascii=False))
     p = subprocess.run(cmd, text=True, capture_output=True)
     (RUNS / "JANUS_LAPIS_console.log").write_text(p.stdout + "\n" + p.stderr, encoding="utf-8")
     print(p.stdout[-9000:])

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-JANUS-LAPIS / LapisModernGPT v0.1.3 Demiurge Edition
+JANUS-LAPIS / LapisModernGPT v0.1.4 Canvas / Stagekeeper Edition
 
 The alchemists were not fools. They lacked instruments.
 We do not worship symbols. We test functions.
@@ -9,9 +9,11 @@ We do not worship symbols. We test functions.
 v0.1.1: archetype map.
 v0.1.2: diversity lock.
 v0.1.3: Demiurge layer.
+v0.1.4: Canvas / Stagekeeper layer.
 
 Core idea:
 The philosopher's stone is not only a material.
+The stone is also the clean scene that lets a new game appear.
 The stone is also the engine that changes the search space.
 
 Boundary:
@@ -30,7 +32,7 @@ from datetime import datetime, timezone
 from typing import Dict, List, Any, Tuple
 import argparse, csv, hashlib, json, random, shutil, statistics, zipfile, os, sys
 
-VERSION = "0.1.3-janus-lapis-demiurge-edition"
+VERSION = "0.1.4-janus-lapis-canvas-stagekeeper"
 DEFAULT_OUTDIR = "janus_lapis_runs"
 
 MATERIAL_FEATURES = [
@@ -43,7 +45,12 @@ META_FEATURES = [
     "programmability", "world_modeling", "agency", "feedback_gain"
 ]
 
-FEATURES = MATERIAL_FEATURES + META_FEATURES
+CANVAS_FEATURES = [
+    "noise_removal", "surface_readiness", "signal_clarity",
+    "safe_containment", "scene_preparation", "creative_potential"
+]
+
+FEATURES = MATERIAL_FEATURES + META_FEATURES + CANVAS_FEATURES
 
 BANNED_TOKENS = {
     "MERCURY","QUICKSILVER","LEAD","ARSENIC","CADMIUM","THALLIUM","URANIUM","PLUTONIUM",
@@ -100,6 +107,16 @@ TARGETS = {
         "purification":0.09, "durability":0.08, "structure_strength":0.06, "self_healing":0.05,
         "closed_loop_learning":0.05, "world_modeling":0.04, "transformation":0.03, "biomineralization":0.02,
     },
+    "LAPIS_CANVAS": {
+        "noise_removal":0.18, "surface_readiness":0.17, "signal_clarity":0.15,
+        "safe_containment":0.14, "scene_preparation":0.14, "creative_potential":0.09,
+        "purification":0.05, "durability":0.03, "low_hazard":0.03, "testability":0.02,
+    },
+    "LAPIS_STAGEKEEPER": {
+        "safe_containment":0.20, "scene_preparation":0.18, "surface_readiness":0.14,
+        "signal_clarity":0.12, "noise_removal":0.12, "durability":0.08,
+        "low_hazard":0.07, "testability":0.04, "creative_potential":0.03, "closed_loop_learning":0.02,
+    },
     "LAPIS_DEMIURGE": {
         "rule_rewriting":0.18, "closed_loop_learning":0.17, "generativity":0.15,
         "programmability":0.13, "world_modeling":0.12, "agency":0.10,
@@ -122,6 +139,8 @@ ARCHETYPE_DESCRIPTIONS = {
     "LAPIS_ENERGY": "stone as spiritus: light/charge/energy conversion",
     "LAPIS_BIOMINERAL": "stone grown from life: biomineral/living fabrication",
     "LAPIS_LOWHAZARD": "stone as safe path: non-toxic, accessible, testable",
+    "LAPIS_CANVAS": "stone as clean canvas: purified surface and low-noise field where new order can appear",
+    "LAPIS_STAGEKEEPER": "stone as stagekeeper: safe containment and stable scene preparation",
     "LAPIS_DEMIURGE": "stone as engine: self-improving discovery loop that changes the search space",
     "LAPIS_WORLD_REWRITER": "stone as world-rewriter: rule-editing generative system, not a passive material",
 }
@@ -153,6 +172,13 @@ class Primitive:
     world_modeling: float = 0.0
     agency: float = 0.0
     feedback_gain: float = 0.0
+
+    noise_removal: float = 0.0
+    surface_readiness: float = 0.0
+    signal_clarity: float = 0.0
+    safe_containment: float = 0.0
+    scene_preparation: float = 0.0
+    creative_potential: float = 0.0
 
     density: float = 1.0
 
@@ -198,6 +224,14 @@ PRIMITIVES: List[Primitive] = [
     P("MYCELIUM_BINDER_TOKEN","bio_process","binder","fungal/mycelial biofabrication direction",transformation=.28,purification=.36,self_healing=.58,structure_strength=.42,durability=.44,bio_safety=.74,energy_conversion=.04,biomineralization=.68,accessibility=.42,testability=.50,low_hazard=.72,density=.80),
     P("KOMBUCHA_FERMENTATION_TOKEN","bio_process","process","bacterial cellulose growth direction; not protocol",transformation=.25,purification=.28,self_healing=.45,structure_strength=.52,durability=.34,bio_safety=.88,energy_conversion=.03,biomineralization=.58,accessibility=.68,testability=.55,low_hazard=.88,density=1.10),
     P("DIATOM_BIOSILICA_TOKEN","bio_process","biomineral","biological silica architecture concept",transformation=.22,purification=.38,self_healing=.18,structure_strength=.58,durability=.70,bio_safety=.80,energy_conversion=.08,biomineralization=.88,accessibility=.28,testability=.42,low_hazard=.76,density=1.70),
+
+    # Canvas / Stagekeeper layer: safe scene-preparation primitives.
+    P("CLEAN_CANVAS_SURFACE","canvas_layer","surface","prepared clean surface / low-noise test field",purification=.62,durability=.50,bio_safety=.86,accessibility=.72,testability=.86,low_hazard=.88,noise_removal=.82,surface_readiness=.94,signal_clarity=.82,safe_containment=.54,scene_preparation=.88,creative_potential=.66,density=1.20),
+    P("SIGNAL_CLARITY_GATE","canvas_layer","clarity_gate","removes ambiguity and improves measurable signal",purification=.58,durability=.42,bio_safety=.84,accessibility=.66,testability=.92,low_hazard=.88,noise_removal=.74,surface_readiness=.72,signal_clarity=.96,safe_containment=.50,scene_preparation=.78,creative_potential=.58,density=1.10),
+    P("SAFE_CONTAINMENT_MATRIX","canvas_layer","containment","safe boundary that lets experiments be falsifiable",purification=.42,durability=.76,bio_safety=.92,accessibility=.70,testability=.88,low_hazard=.94,noise_removal=.50,surface_readiness=.62,signal_clarity=.66,safe_containment=.96,scene_preparation=.88,creative_potential=.54,density=1.40),
+    P("REPRODUCIBLE_SCENE_PROTOCOL","canvas_layer","stage_protocol","repeatable clean scene and measurement protocol",purification=.50,durability=.58,bio_safety=.88,accessibility=.82,testability=.96,low_hazard=.94,noise_removal=.68,surface_readiness=.84,signal_clarity=.86,safe_containment=.82,scene_preparation=.94,creative_potential=.62,density=1.00),
+    P("LOW_NOISE_MEMORY_FIELD","canvas_layer","memory_field","keeps failures and context without contaminating new trials",purification=.46,durability=.48,bio_safety=.90,accessibility=.72,testability=.84,low_hazard=.94,noise_removal=.86,surface_readiness=.68,signal_clarity=.88,safe_containment=.66,scene_preparation=.82,creative_potential=.72,closed_loop_learning=.48,world_modeling=.40,density=1.00),
+    P("CREATIVE_POTENTIAL_SEED","canvas_layer","creative_seed","prepared blank space that can host new games",purification=.34,durability=.42,bio_safety=.86,accessibility=.74,testability=.74,low_hazard=.92,noise_removal=.46,surface_readiness=.76,signal_clarity=.70,safe_containment=.60,scene_preparation=.88,creative_potential=.98,generativity=.36,density=1.00),
 
     # Demiurge layer: non-chemical primitives. These represent the discovery engine itself.
     P("GPT_TRANSFORMER_ENGINE","meta_engine","engine","generative transformer for hypothesis creation",testability=.78,low_hazard=.92,rule_rewriting=.72,autocatalysis=.40,closed_loop_learning=.55,generativity=.95,programmability=.88,world_modeling=.74,agency=.52,feedback_gain=.60),
@@ -292,6 +326,10 @@ def phase_balance(c: Candidate) -> Dict[str, float]:
         "rule_editor_like": rolefrac(c,"rule_editor"),
         "closed_loop_like": rolefrac(c,"closed_loop") + rolefrac(c,"optimizer"),
         "safety_gate_like": rolefrac(c,"safety_gate"),
+        "canvas_like": rolefrac(c,"canvas_layer"),
+        "surface_like": rolefrac(c,"surface") + rolefrac(c,"clarity_gate"),
+        "containment_like": rolefrac(c,"containment") + rolefrac(c,"stage_protocol"),
+        "scene_protocol_like": rolefrac(c,"stage_protocol") + rolefrac(c,"memory_field") + rolefrac(c,"creative_seed"),
     }
 
 def max_single_component(c: Candidate) -> float:
@@ -315,7 +353,16 @@ def hard_reject(c: Candidate) -> Tuple[bool, str]:
     if n_comp < min_comp:
         return True, "not_enough_components"
 
-    if c.archetype in ("LAPIS_DEMIURGE","LAPIS_WORLD_REWRITER"):
+    if c.archetype in ("LAPIS_CANVAS","LAPIS_STAGEKEEPER"):
+        if ph["canvas_like"] < 0.24:
+            return True, "canvas_layer_floor"
+        if weighted(c, "surface_readiness") < 0.25:
+            return True, "canvas_surface_floor"
+        if weighted(c, "signal_clarity") < 0.25:
+            return True, "canvas_signal_floor"
+        if c.archetype == "LAPIS_STAGEKEEPER" and weighted(c, "safe_containment") < 0.38:
+            return True, "stagekeeper_containment_floor"
+    elif c.archetype in ("LAPIS_DEMIURGE","LAPIS_WORLD_REWRITER"):
         if ph["engine_like"] < 0.25:
             return True, "demiurge_engine_floor"
         if weighted(c, "rule_rewriting") < (0.32 if c.archetype=="LAPIS_WORLD_REWRITER" else 0.20):
@@ -358,6 +405,13 @@ def evaluate(c: Candidate) -> Dict[str, float]:
     agency = weighted(c,"agency") + 0.12*min(ph["rule_editor_like"]+ph["closed_loop_like"], ph["safety_gate_like"]+ph["engine_like"])
     feedback_gain = weighted(c,"feedback_gain") + 0.18*min(ph["closed_loop_like"]+ph["safety_gate_like"], ph["memory_like"]+ph["engine_like"])
 
+    noise_removal = weighted(c,"noise_removal") + 0.16*min(ph["sorbent_like"]+ph["surface_like"]+ph["canvas_like"], ph["containment_like"]+ph["matrix_like"]+ph["engine_like"])
+    surface_readiness = weighted(c,"surface_readiness") + 0.18*min(ph["surface_like"]+ph["canvas_like"], ph["containment_like"]+ph["scene_protocol_like"]+ph["matrix_like"])
+    signal_clarity = weighted(c,"signal_clarity") + 0.16*min(ph["surface_like"]+ph["memory_like"]+ph["canvas_like"], ph["closed_loop_like"]+ph["containment_like"]+ph["testability"] if "testability" in ph else ph["scene_protocol_like"])
+    safe_containment = weighted(c,"safe_containment") + 0.18*min(ph["containment_like"]+ph["safety_gate_like"]+ph["canvas_like"], ph["matrix_like"]+ph["engine_like"]+ph["scene_protocol_like"])
+    scene_preparation = weighted(c,"scene_preparation") + 0.20*min(ph["canvas_like"]+ph["scene_protocol_like"]+ph["matrix_like"], ph["sorbent_like"]+ph["engine_like"]+ph["containment_like"])
+    creative_potential = weighted(c,"creative_potential") + 0.16*min(ph["canvas_like"]+ph["generator_like"]+ph["scene_protocol_like"], ph["signal_clarity"] if "signal_clarity" in ph else ph["surface_like"]+ph["closed_loop_like"])
+
     vals = [transformation,purification,self_healing,structure_strength,durability,weighted(c,"bio_safety"),energy_conversion,biomineralization]
     clipped = [max(0,min(1,x)) for x in vals]
     unity_bonus = min(clipped)*0.05 + (1.0-statistics.pstdev(clipped))*0.03
@@ -388,6 +442,13 @@ def evaluate(c: Candidate) -> Dict[str, float]:
         "agency": agency + 0.5*demiurge_bonus,
         "feedback_gain": feedback_gain + 0.7*demiurge_bonus,
 
+        "noise_removal": noise_removal,
+        "surface_readiness": surface_readiness,
+        "signal_clarity": signal_clarity,
+        "safe_containment": safe_containment,
+        "scene_preparation": scene_preparation,
+        "creative_potential": creative_potential,
+
         "raw_density": weighted(c,"density"),
         "unity_bonus": unity_bonus,
         "demiurge_bonus": demiurge_bonus,
@@ -406,7 +467,14 @@ def score_candidate(c: Candidate, archetype: str = None) -> Candidate:
     weights = TARGETS.get(c.archetype, TARGETS["LAPIS_UNIVERSAL"])
     score = sum(weights.get(k,0)*obj.get(k,0) for k in FEATURES)
 
-    if c.archetype == "LAPIS_DEMIURGE":
+    if c.archetype == "LAPIS_CANVAS":
+        if obj["surface_readiness"] < 0.42: score *= 0.78
+        if obj["signal_clarity"] < 0.40: score *= 0.82
+        if obj["scene_preparation"] < 0.40: score *= 0.82
+    elif c.archetype == "LAPIS_STAGEKEEPER":
+        if obj["safe_containment"] < 0.48: score *= 0.76
+        if obj["scene_preparation"] < 0.44: score *= 0.82
+    elif c.archetype == "LAPIS_DEMIURGE":
         if obj["closed_loop_learning"] < 0.35: score *= 0.78
         if obj["rule_rewriting"] < 0.30: score *= 0.82
         if obj["generativity"] < 0.35: score *= 0.82
@@ -454,6 +522,10 @@ def archetype_bias(archetype: str) -> Dict[str,float]:
         b.update({"biomineral":3.5,"bio_process":3.2,"mineral":2.0,"biopolymer":1.8})
     elif archetype=="LAPIS_LOWHAZARD":
         b.update({"biopolymer":2.5,"mineral":1.8,"biomineral":1.8,"enzyme":1.4,"modifier":1.5})
+    elif archetype in ("LAPIS_CANVAS","LAPIS_STAGEKEEPER"):
+        b.update({"canvas_layer":4.0,"surface":3.2,"clarity_gate":3.2,"containment":3.4,"stage_protocol":3.4,"memory_field":2.4,"creative_seed":2.5,"sorbent":2.0,"mineral":1.6,"biopolymer":1.4})
+        if archetype=="LAPIS_STAGEKEEPER":
+            b.update({"containment":4.5,"stage_protocol":4.0,"safety_gate":2.4})
     elif archetype in ("LAPIS_DEMIURGE","LAPIS_WORLD_REWRITER"):
         b.update({"meta_engine":4.0,"engine":3.0,"optimizer":3.0,"closed_loop":3.4,"memory":2.7,"rule_editor":3.5,"world_model":3.0,"safety_gate":2.6,"publication":2.0,"interpreter":2.6})
         if archetype=="LAPIS_WORLD_REWRITER":
@@ -474,7 +546,18 @@ def random_candidate(rng: random.Random, archetype: str) -> Candidate:
     bias = archetype_bias(archetype)
     comps = {}
 
-    if archetype in ("LAPIS_DEMIURGE","LAPIS_WORLD_REWRITER"):
+    if archetype in ("LAPIS_CANVAS","LAPIS_STAGEKEEPER"):
+        canvas = [p for p in PRIMITIVES if p.family=="canvas_layer"]
+        essentials = ["CLEAN_CANVAS_SURFACE","SIGNAL_CLARITY_GATE","SAFE_CONTAINMENT_MATRIX","REPRODUCIBLE_SCENE_PROTOCOL"]
+        for code in essentials:
+            comps[code] = rng.uniform(0.04,0.20)
+        for _ in range(rng.randint(2,5)):
+            p = choose(rng, canvas + [BY_CODE[k] for k in ["ZEOLITE_SAFE","ACTIVATED_CARBON_SAFE","BACTERIAL_CELLULOSE_MATRIX","CLAY_PLATELET_BARRIER","CHITOSAN_BINDER"]], bias)
+            comps[p.code] = comps.get(p.code,0)+rng.uniform(0.02,0.18)
+        tags = ["LOW_HAZARD_GATE","EXPERT_VALIDATION_REQUIRED","CLEAN_CANVAS","LOW_NOISE_FIELD","SAFE_STAGE"]
+        if archetype=="LAPIS_STAGEKEEPER":
+            tags += ["SAFE_CONTAINMENT","REPRODUCIBLE_SCENE"]
+    elif archetype in ("LAPIS_DEMIURGE","LAPIS_WORLD_REWRITER"):
         meta = [p for p in PRIMITIVES if p.family=="meta_engine"]
         # Force essential loop pieces.
         essentials = ["GPT_TRANSFORMER_ENGINE","ACTIVE_LEARNING_AUTOLAB","SCORING_FUNCTION_MUTATOR","KNOWLEDGE_GRAPH_MEMORY","EXPERT_REVIEW_GATE"]
@@ -769,7 +852,7 @@ def run_all(outdir: str, trials_per_archetype: int, seed: int, use_transformer: 
         "generated_at":now_iso(),
         "repo_name":"janus-lapis",
         "engine":"LapisModernGPT",
-        "edition":"Demiurge Edition",
+        "edition":"Canvas / Stagekeeper Edition",
         "trials_per_archetype":trials_per_archetype,
         "seed":seed,
         "use_transformer":use_transformer,
@@ -795,6 +878,8 @@ def interpretation(archetype: str) -> str:
         "LAPIS_ENERGY":"spiritus: light/charge/energy conversion",
         "LAPIS_BIOMINERAL":"living stone: biomineralization and biological mineral architecture",
         "LAPIS_LOWHAZARD":"safe path: accessible, non-toxic, testable candidate space",
+        "LAPIS_CANVAS":"clean canvas: purified, low-noise surface where a new game can appear",
+        "LAPIS_STAGEKEEPER":"stagekeeper: safe, stable, reproducible scene preparation",
         "LAPIS_DEMIURGE":"the Lapis as discovery engine: closed-loop transformer/search/review system",
         "LAPIS_WORLD_REWRITER":"the Lapis as rule editor: system that changes the search space itself",
     }.get(archetype,"modern Lapis research vector")
@@ -818,6 +903,8 @@ def build_lab_request(outdir: str, top_per_archetype=3, replicates=1) -> Dict[st
                     tests.append("SELF_HEALING_OR_DAMAGE_RECOVERY_SCREENING")
                 if a in ("LAPIS_STONE","LAPIS_BIOMINERAL"):
                     tests.append("STRUCTURE_MECHANICAL_OR_BIOMINERAL_REVIEW")
+                if a in ("LAPIS_CANVAS","LAPIS_STAGEKEEPER"):
+                    tests += ["LOW_NOISE_SCENE_REVIEW","REPRODUCIBILITY_AND_CONTAINMENT_REVIEW","SURFACE_READINESS_REVIEW"]
                 if a in ("LAPIS_DEMIURGE","LAPIS_WORLD_REWRITER"):
                     tests += ["CLOSED_LOOP_DISCOVERY_REVIEW","SEARCH_SPACE_REWRITE_REVIEW","REPRODUCIBILITY_AND_HUMAN_GATE_REVIEW"]
                 rows.append({
@@ -849,12 +936,16 @@ Version: {VERSION}
 JANUS-LAPIS is a respectful modern search for the real functions behind the historical philosopher's stone.
 
 v0.1.3 adds the Demiurge layer.
+v0.1.4 adds the Canvas / Stagekeeper layer.
 
 The stone is not only a material.
-The stone is the engine that changes the search space.
+The stone is also the clean scene that lets a new game appear.
 
 Material archetypes:
 Catalyst, Purifier, Healer, Stone, Life, Energy, Biomineral, LowHazard.
+
+Scene-preparation archetypes:
+Canvas, Stagekeeper.
 
 Meta archetypes:
 Demiurge, World-Rewriter.
@@ -902,13 +993,14 @@ def build_send_to_reviewers(outdir: str) -> Dict[str,Any]:
         p = root/"lab_request"/name
         if p.exists():
             shutil.copy2(p,lab_send/name)
-    (send/"COVER_NOTE.md").write_text("""# JANUS-LAPIS v0.1.3
+    (send/"COVER_NOTE.md").write_text("""# JANUS-LAPIS v0.1.4
 
 A modern GPT-guided search space for the real functions behind the philosopher's stone.
 
-Demiurge Edition:
+Canvas / Stagekeeper Edition:
 The stone is not only a material.
-The stone is the engine that changes the search space.
+The stone is the clean scene that lets a new game appear.
+The stone is also the engine that changes the search space.
 
 Boundary:
 No literal transmutation claim, no elixir claim, no hazardous synthesis protocol.
@@ -918,7 +1010,8 @@ All outputs are computational research vectors and expert-review requests.
     (send/"README_SEND_THIS.md").write_text("""# SEND_TO_REVIEWERS_JANUS_LAPIS
 
 This package is for expert scientific review.
-It maps possible modern Lapis archetypes and the Demiurge discovery-engine layer.
+It maps possible modern Lapis archetypes, the Canvas / Stagekeeper scene-preparation layer,
+and the Demiurge discovery-engine layer.
 """,encoding="utf-8")
     zip_path = root/"SEND_TO_REVIEWERS_JANUS_LAPIS.zip"
     if zip_path.exists():
@@ -936,7 +1029,7 @@ def full_run(outdir: str, trials_per_archetype: int, seed: int, top_per_archetyp
     return build_send_to_reviewers(outdir)
 
 def build_parser():
-    p = argparse.ArgumentParser(description="JANUS-LAPIS / LapisModernGPT v0.1.3")
+    p = argparse.ArgumentParser(description="JANUS-LAPIS / LapisModernGPT v0.1.4")
     p.add_argument("--outdir", default=DEFAULT_OUTDIR)
     sub = p.add_subparsers(dest="cmd", required=True)
     fr = sub.add_parser("full-run")

@@ -1,4 +1,4 @@
-# JANUS-LAPIS v0.1.3 — Demiurge Edition
+# JANUS-LAPIS v0.1.4 — Canvas / Stagekeeper Edition
 
 A modern GPT-guided search space for the real functions behind the philosopher's stone.
 
@@ -7,16 +7,15 @@ A modern GPT-guided search space for the real functions behind the philosopher's
 The alchemists were not fools. They lacked instruments.
 We do not worship symbols. We test functions.
 
-## v0.1.3
+## v0.1.4
 
-This version keeps the material-archetype search and adds the Demiurge layer.
+This version adds the Canvas / Stagekeeper layer above purification and before the Demiurge layer.
 
 ```text
 The stone is not only a material.
-The stone is the engine that changes the search space.
+The stone is the clean scene that lets a new game appear.
+The stone is also the engine that changes the search space.
 ```
-
-Purification is not a lower stage. It prepares the safe matrix and clean canvas where a new game can be created. JANUS-LAPIS treats purification, safe-matrix formation, and clean-scene preparation as necessary conditions for the Demiurge layer.
 
 ## Archetypes
 
@@ -32,10 +31,24 @@ Material layer:
 - `LAPIS_BIOMINERAL`
 - `LAPIS_LOWHAZARD`
 
+Scene-preparation layer:
+
+- `LAPIS_CANVAS`
+- `LAPIS_STAGEKEEPER`
+
 Meta layer:
 
 - `LAPIS_DEMIURGE`
 - `LAPIS_WORLD_REWRITER`
+
+Canvas metrics:
+
+- `noise_removal`
+- `surface_readiness`
+- `signal_clarity`
+- `safe_containment`
+- `scene_preparation`
+- `creative_potential`
 
 Meta metrics:
 
@@ -53,8 +66,8 @@ Meta metrics:
 - Not a claim of literal transmutation.
 - Not an elixir claim.
 - No hazardous synthesis protocol.
-- No instructions for dangerous chemistry.
 - Not a certified material claim.
+- No instructions for dangerous chemistry.
 - All outputs are computational research vectors and expert-review requests, not measured or validated materials.
 
 ## Run
@@ -88,4 +101,16 @@ JANUS_LAPIS_SEED=1618
 JANUS_LAPIS_TOP_PER_ARCHETYPE=3
 JANUS_LAPIS_REPLICATES=1
 JANUS_LAPIS_NO_TRANSFORMER=0
+```
+
+
+## Canvas principle
+
+Purification is not a lower stage. It prepares the clean canvas.
+
+```text
+LAPIS_PURIFIER cleans matter.
+LAPIS_CANVAS prepares the clean surface.
+LAPIS_STAGEKEEPER protects the scene.
+LAPIS_DEMIURGE creates the new game.
 ```

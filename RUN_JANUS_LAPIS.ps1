@@ -8,9 +8,9 @@ Set-Location $PSScriptRoot
 
 Clear-Host
 Write-Host "==============================================================" -ForegroundColor DarkMagenta
-Write-Host "              J A N U S - L A P I S   v0.1.3" -ForegroundColor Magenta
+Write-Host "              J A N U S - L A P I S   v0.1.4" -ForegroundColor Magenta
 Write-Host "==============================================================" -ForegroundColor DarkMagenta
-Write-Host "Demiurge Edition: the stone is also the engine." -ForegroundColor Green
+Write-Host "Canvas / Stagekeeper Edition: the stone prepares the scene." -ForegroundColor Green
 
 python janus_lapis_selfrunner.py
 

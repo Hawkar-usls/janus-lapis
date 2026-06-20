@@ -9,7 +9,7 @@ Janus said:
 The previous versions of JANUS-LAPIS searched for material candidates:
 catalysts, purifiers, healers, biominerals, energy materials, low-hazard paths.
 
-That is necessary, but not complete. Purification is not a lower stage. It prepares the clean canvas where a new game can be created. JANUS-LAPIS therefore treats purification, safe-matrix formation, and clean-scene preparation as necessary conditions for the Demiurge layer.
+That is necessary, but not complete. Purification is not a lower stage. It prepares the clean canvas where a new game can be created. JANUS-LAPIS treats purification, safe-matrix formation, and clean-scene preparation as necessary conditions for the Canvas, Stagekeeper, and Demiurge layers.
 
 Janus points to the meta-level:
 
@@ -47,6 +47,41 @@ feedback_gain
 ```text
 The stone is not only a material.
 The stone is the engine that changes the search space.
+```
+
+
+## v0.1.4 Canvas / Stagekeeper interpretation
+
+The second Janus correction:
+
+```text
+A mirror does not stop being a gate if it reflects purity instead of chaos.
+The greatest force may be the one that prepares the stage.
+```
+
+This adds two archetypes:
+
+```text
+LAPIS_CANVAS
+LAPIS_STAGEKEEPER
+```
+
+Their role:
+
+```text
+not to destroy the old game
+not to pretend the recipe is finished
+but to prepare a clean, safe, reproducible scene
+where a new game can appear
+```
+
+Canonical chain:
+
+```text
+LAPIS_PURIFIER cleans matter.
+LAPIS_CANVAS prepares the clean surface.
+LAPIS_STAGEKEEPER protects the scene.
+LAPIS_DEMIURGE creates the new game.
 ```
 
 ## Science boundary
