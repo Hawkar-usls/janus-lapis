@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-JANUS-LAPIS / LapisModernGPT v0.1.4 Canvas / Stagekeeper Edition
+JANUS-LAPIS / LapisModernGPT v0.1.5 Birth-Gate Edition
 
 The alchemists were not fools. They lacked instruments.
 We do not worship symbols. We test functions.
@@ -10,11 +10,11 @@ v0.1.1: archetype map.
 v0.1.2: diversity lock.
 v0.1.3: Demiurge layer.
 v0.1.4: Canvas / Stagekeeper layer.
+v0.1.5: Birth-Gate decision chain.
 
 Core idea:
 The philosopher's stone is not only a material.
-The stone is also the clean scene that lets a new game appear.
-The stone is also the engine that changes the search space.
+The stone is also the gate that decides whether a hypothesis is ready to be born.
 
 Boundary:
 - No literal transmutation claim.
@@ -32,7 +32,7 @@ from datetime import datetime, timezone
 from typing import Dict, List, Any, Tuple
 import argparse, csv, hashlib, json, random, shutil, statistics, zipfile, os, sys
 
-VERSION = "0.1.4-janus-lapis-canvas-stagekeeper"
+VERSION = "0.1.5-janus-lapis-birth-gate"
 DEFAULT_OUTDIR = "janus_lapis_runs"
 
 MATERIAL_FEATURES = [
@@ -48,6 +48,12 @@ META_FEATURES = [
 CANVAS_FEATURES = [
     "noise_removal", "surface_readiness", "signal_clarity",
     "safe_containment", "scene_preparation", "creative_potential"
+]
+
+GATE_FEATURES = [
+    "material_score", "canvas_score", "stagekeeper_score", "demiurge_score",
+    "scene_viability", "birth_readiness", "containment_integrity",
+    "hypothesis_visibility", "expert_gate", "final_priority"
 ]
 
 FEATURES = MATERIAL_FEATURES + META_FEATURES + CANVAS_FEATURES
@@ -383,6 +389,144 @@ def hard_reject(c: Candidate) -> Tuple[bool, str]:
 
     return False, ""
 
+
+def mean_vals(values: List[float]) -> float:
+    values = [max(0.0, min(1.0, float(v))) for v in values]
+    if not values:
+        return 0.0
+    return sum(values) / len(values)
+
+def compute_birth_gate(c: Candidate, obj: Dict[str, float], base_score: float) -> Dict[str, Any]:
+    """Birth-Gate layer.
+
+    A candidate may be powerful, but power alone does not make it ready.
+    It must be visible, contained, testable, and expert-reviewable.
+    """
+    material_score = max(0.0, min(1.0, float(base_score)))
+
+    canvas_score = mean_vals([
+        obj.get("noise_removal", 0),
+        obj.get("surface_readiness", 0),
+        obj.get("signal_clarity", 0),
+        obj.get("scene_preparation", 0),
+    ])
+
+    stagekeeper_score = mean_vals([
+        obj.get("safe_containment", 0),
+        obj.get("scene_preparation", 0),
+        obj.get("signal_clarity", 0),
+        obj.get("low_hazard", 0),
+        obj.get("testability", 0),
+    ])
+
+    demiurge_score = mean_vals([
+        obj.get("rule_rewriting", 0),
+        obj.get("closed_loop_learning", 0),
+        obj.get("generativity", 0),
+        obj.get("programmability", 0),
+        obj.get("world_modeling", 0),
+        obj.get("feedback_gain", 0),
+    ])
+
+    hypothesis_visibility = mean_vals([
+        obj.get("signal_clarity", 0),
+        obj.get("surface_readiness", 0),
+        obj.get("testability", 0),
+        obj.get("noise_removal", 0),
+    ])
+
+    containment_integrity = mean_vals([
+        obj.get("safe_containment", 0),
+        obj.get("low_hazard", 0),
+        obj.get("bio_safety", 0),
+        obj.get("durability", 0),
+        obj.get("testability", 0),
+    ])
+
+    scene_viability = mean_vals([
+        canvas_score,
+        stagekeeper_score,
+        hypothesis_visibility,
+        containment_integrity,
+    ])
+
+    # Expert gate is intentionally conservative but not mystical:
+    # it rewards testability, low hazard, and explicit expert validation boundary.
+    expert_gate = mean_vals([
+        obj.get("testability", 0),
+        obj.get("low_hazard", 0),
+        containment_integrity,
+        1.0 if "EXPERT_VALIDATION_REQUIRED" in c.process_tags else 0.72,
+    ])
+
+    birth_readiness = mean_vals([
+        scene_viability,
+        containment_integrity,
+        hypothesis_visibility,
+        expert_gate,
+        0.55 * demiurge_score + 0.45 * canvas_score,
+    ])
+
+    # Multiplicative barrier: a brilliant hypothesis with an unsafe or noisy scene
+    # must not jump into champions by raw material score alone.
+    final_priority = material_score * max(0.08, scene_viability) * max(0.08, containment_integrity) * max(0.08, hypothesis_visibility) * max(0.08, expert_gate)
+
+    gate_status = "PASSED"
+    reasons = []
+
+    if obj.get("creative_potential", 0) > 0.80 and obj.get("safe_containment", 0) < 0.30:
+        gate_status = "REJECTED"
+        reasons.append("UNSTABLE_BIRTH: creative_potential_high_but_safe_containment_low")
+
+    if containment_integrity < 0.35:
+        gate_status = "REJECTED"
+        reasons.append("CONTAINMENT_INTEGRITY_LOW")
+
+    if hypothesis_visibility < 0.32:
+        gate_status = "REVIEW"
+        reasons.append("HYPOTHESIS_VISIBILITY_LOW")
+
+    if scene_viability < 0.32:
+        gate_status = "REVIEW" if gate_status != "REJECTED" else gate_status
+        reasons.append("SCENE_VIABILITY_LOW")
+
+    if expert_gate < 0.40:
+        gate_status = "REJECTED"
+        reasons.append("EXPERT_GATE_LOW")
+
+    if c.notes.get("rejected"):
+        gate_status = "REJECTED"
+        reasons.append("HARD_REJECT:" + str(c.notes.get("reject_reason", "")))
+
+    # Meta archetypes are allowed to have lower material-like scores, but still need gates.
+    if c.archetype in ("LAPIS_DEMIURGE", "LAPIS_WORLD_REWRITER"):
+        final_priority = mean_vals([material_score, demiurge_score]) * max(0.10, expert_gate) * max(0.10, hypothesis_visibility)
+        if demiurge_score < 0.38:
+            gate_status = "REVIEW" if gate_status != "REJECTED" else gate_status
+            reasons.append("DEMIURGE_SCORE_LOW")
+
+    if c.archetype in ("LAPIS_CANVAS", "LAPIS_STAGEKEEPER"):
+        final_priority = mean_vals([material_score, canvas_score, stagekeeper_score]) * max(0.10, expert_gate)
+        if canvas_score < 0.38:
+            gate_status = "REVIEW" if gate_status != "REJECTED" else gate_status
+            reasons.append("CANVAS_SCORE_LOW")
+
+    return {
+        "material_score": material_score,
+        "canvas_score": canvas_score,
+        "stagekeeper_score": stagekeeper_score,
+        "demiurge_score": demiurge_score,
+        "scene_viability": scene_viability,
+        "birth_readiness": birth_readiness,
+        "containment_integrity": containment_integrity,
+        "hypothesis_visibility": hypothesis_visibility,
+        "expert_gate": expert_gate,
+        "final_priority": max(0.0, min(1.0, final_priority)),
+        "gate_status": gate_status,
+        "gate_reason": "; ".join(reasons) if reasons else "OK",
+    }
+
+
 def evaluate(c: Candidate) -> Dict[str, float]:
     c = c.normalized()
     ph = phase_balance(c)
@@ -486,8 +630,10 @@ def score_candidate(c: Candidate, archetype: str = None) -> Candidate:
         if obj["purification"] < 0.25: score *= 0.88
         if obj["closed_loop_learning"] < 0.20: score *= 0.93
 
+    base_score = max(0, min(1, score))
     if rejected:
-        score = 0.0
+        base_score = 0.0
+
     notes = {
         "archetype": c.archetype,
         "archetype_description": ARCHETYPE_DESCRIPTIONS.get(c.archetype,""),
@@ -500,8 +646,22 @@ def score_candidate(c: Candidate, archetype: str = None) -> Candidate:
         "certified_material_claim": False,
         "dangerous_chemistry_instructions": False,
         "demiurge_layer": c.archetype in ("LAPIS_DEMIURGE","LAPIS_WORLD_REWRITER"),
+        "birth_gate_layer": True,
     }
-    return Candidate(c.components, c.process_tags, c.archetype, c.source, max(0,min(1,score)), sha16(c.text()), obj, notes)
+
+    tmp = Candidate(c.components, c.process_tags, c.archetype, c.source, base_score, sha16(c.text()), obj, notes)
+    gate = compute_birth_gate(tmp, obj, base_score)
+    obj.update({k: v for k, v in gate.items() if isinstance(v, (int, float))})
+    notes.update({"gate_status": gate["gate_status"], "gate_reason": gate["gate_reason"]})
+
+    # v0.1.5: champions are ranked by final_priority, not raw material score.
+    final_score = gate["final_priority"]
+    if gate["gate_status"] == "REJECTED":
+        final_score *= 0.20
+    elif gate["gate_status"] == "REVIEW":
+        final_score *= 0.62
+
+    return Candidate(c.components, c.process_tags, c.archetype, c.source, max(0,min(1,final_score)), sha16(c.text()), obj, notes)
 
 def archetype_bias(archetype: str) -> Dict[str,float]:
     b = {p.family:1.0 for p in PRIMITIVES}
@@ -667,11 +827,17 @@ def candidate_row(c: Candidate, rank=None) -> Dict[str,Any]:
         "process_tags": c.process_tags,
         "source": c.source,
         "objectives": c.objectives,
+        "gate": {
+            "gate_status": c.notes.get("gate_status", ""),
+            "gate_reason": c.notes.get("gate_reason", ""),
+            **{k: c.objectives.get(k, 0) for k in GATE_FEATURES},
+        },
         "notes": c.notes,
     }
 
 def write_candidate_csv(path: Path, cands: List[Candidate]):
-    fields = ["rank","archetype","score","hash16","formula_percent","source","process_tags"] + FEATURES + [
+    fields = ["rank","archetype","score","hash16","formula_percent","source","process_tags"] + FEATURES + GATE_FEATURES + [
+        "gate_status","gate_reason",
         "raw_density","matrix_like","mineral_like","sorbent_like","catalyst_like","energy_like",
         "bio_process_like","engine_like","closed_loop_like","rule_editor_like","memory_like",
         "components_json","notes_json"
@@ -684,6 +850,9 @@ def write_candidate_csv(path: Path, cands: List[Candidate]):
             "hash16": c.hash16, "formula_percent": formula_percent(c),
             "source": c.source, "process_tags": " ".join(c.process_tags),
             **{k:round(o.get(k,0),6) for k in FEATURES},
+            **{k:round(o.get(k,0),6) for k in GATE_FEATURES},
+            "gate_status": c.notes.get("gate_status", ""),
+            "gate_reason": c.notes.get("gate_reason", ""),
             "raw_density": round(o.get("raw_density",0),6),
             "matrix_like": round(o.get("matrix_like",0),6),
             "mineral_like": round(o.get("mineral_like",0),6),
@@ -834,6 +1003,62 @@ def run_one_archetype(outdir: str, archetype: str, trials: int, seed: int, use_t
     })
     return {"archetype":archetype,"best":best,"top":top}
 
+
+def write_birth_gate_outputs(outdir: str, results: List[Dict[str, Any]]) -> Dict[str, Any]:
+    outdir = Path(outdir)
+    rows = []
+    rejected = []
+    for r in results:
+        for c in r["top"]:
+            o = c.objectives
+            row = {
+                "archetype": c.archetype,
+                "hash16": c.hash16,
+                "score_final": round(c.score, 8),
+                "formula_percent": formula_percent(c),
+                "source": c.source,
+                "gate_status": c.notes.get("gate_status", ""),
+                "gate_reason": c.notes.get("gate_reason", ""),
+                "material_score": round(o.get("material_score",0), 6),
+                "canvas_score": round(o.get("canvas_score",0), 6),
+                "stagekeeper_score": round(o.get("stagekeeper_score",0), 6),
+                "demiurge_score": round(o.get("demiurge_score",0), 6),
+                "scene_viability": round(o.get("scene_viability",0), 6),
+                "birth_readiness": round(o.get("birth_readiness",0), 6),
+                "containment_integrity": round(o.get("containment_integrity",0), 6),
+                "hypothesis_visibility": round(o.get("hypothesis_visibility",0), 6),
+                "expert_gate": round(o.get("expert_gate",0), 6),
+                "final_priority": round(o.get("final_priority",0), 6),
+                "creative_potential": round(o.get("creative_potential",0), 6),
+                "safe_containment": round(o.get("safe_containment",0), 6),
+                "signal_clarity": round(o.get("signal_clarity",0), 6),
+                "process_tags": " ".join(c.process_tags),
+                "components_json": json.dumps(c.normalized().components, ensure_ascii=False),
+            }
+            rows.append(row)
+            if c.notes.get("gate_status") in ("REJECTED", "REVIEW"):
+                rejected.append(row)
+
+    fields = list(rows[0].keys()) if rows else []
+    write_csv(outdir/"janus_lapis_decision_chain.csv", rows, fields)
+    write_csv(outdir/"janus_lapis_birth_gates.csv", sorted(rows, key=lambda x: float(x["final_priority"]), reverse=True), fields)
+    write_csv(outdir/"janus_lapis_rejected_by_gate.csv", rejected, fields)
+
+    result = {
+        "schema": "JanusLapis/BirthGateOutputs/v1",
+        "version": VERSION,
+        "generated_at": now_iso(),
+        "decision_chain_csv": str(outdir/"janus_lapis_decision_chain.csv"),
+        "birth_gates_csv": str(outdir/"janus_lapis_birth_gates.csv"),
+        "rejected_by_gate_csv": str(outdir/"janus_lapis_rejected_by_gate.csv"),
+        "rows": len(rows),
+        "rejected_or_review": len(rejected),
+        "boundary": "Computational research vectors and expert-review requests only. No literal transmutation claim, elixir claim, hazardous synthesis protocol, certified material claim, or instructions for dangerous chemistry.",
+    }
+    write_json(outdir/"janus_lapis_birth_gate_summary.json", result)
+    return result
+
+
 def run_all(outdir: str, trials_per_archetype: int, seed: int, use_transformer: bool) -> Dict[str,Any]:
     ensure_dir(outdir)
     results = []
@@ -846,13 +1071,14 @@ def run_all(outdir: str, trials_per_archetype: int, seed: int, use_transformer: 
         union.extend(r["top"][:4])
     write_candidate_csv(Path(outdir)/"janus_lapis_champions.csv",champions)
     write_candidate_csv(Path(outdir)/"janus_lapis_all_archetypes.csv",union)
+    birth_gate_outputs = write_birth_gate_outputs(outdir, results)
     summary = {
         "schema":"JanusLapis/AllArchetypes/v1",
         "version":VERSION,
         "generated_at":now_iso(),
         "repo_name":"janus-lapis",
         "engine":"LapisModernGPT",
-        "edition":"Canvas / Stagekeeper Edition",
+        "edition":"Birth-Gate Edition",
         "trials_per_archetype":trials_per_archetype,
         "seed":seed,
         "use_transformer":use_transformer,
@@ -861,7 +1087,19 @@ def run_all(outdir: str, trials_per_archetype: int, seed: int, use_transformer: 
         "champions":[candidate_row(c,i+1) for i,c in enumerate(champions)],
         "champions_csv":str(Path(outdir)/"janus_lapis_champions.csv"),
         "all_archetypes_csv":str(Path(outdir)/"janus_lapis_all_archetypes.csv"),
+        "decision_chain_csv":str(Path(outdir)/"janus_lapis_decision_chain.csv"),
+        "birth_gates_csv":str(Path(outdir)/"janus_lapis_birth_gates.csv"),
+        "rejected_by_gate_csv":str(Path(outdir)/"janus_lapis_rejected_by_gate.csv"),
+        "birth_gate_outputs":birth_gate_outputs,
         "demiurge_principle":"The stone is not only a material. The stone is the engine that changes the search space.",
+        "birth_gate_principle":"A hypothesis must pass the scene before it can enter the world.",
+        "canonical_chain":[
+            "LAPIS_PURIFIER cleans matter.",
+            "LAPIS_CANVAS prepares the clean surface.",
+            "LAPIS_STAGEKEEPER protects the scene.",
+            "LAPIS_DEMIURGE creates the new game.",
+            "BIRTH_GATE decides whether it is ready to be born.",
+        ],
         "boundary":"Computational research vectors and expert-review requests only. No literal transmutation claim, elixir claim, hazardous synthesis protocol, certified material claim, or instructions for dangerous chemistry.",
     }
     write_json(Path(outdir)/"janus_lapis_summary.json",summary)
@@ -924,7 +1162,7 @@ def build_lab_request(outdir: str, top_per_archetype=3, replicates=1) -> Dict[st
                     "data_status":"REQUEST_FOR_EXPERT_REVIEW_NOT_MEASURED_RESULTS",
                     "claim_boundary":"No literal transmutation claim. No elixir claim. No hazardous synthesis protocol. No certified material claim. No instructions for dangerous chemistry. Computational research vector and expert-review request only.",
                     "components_json":r.get("components_json",""),
-                    "objectives_json":json.dumps({k:r.get(k,"") for k in FEATURES},ensure_ascii=False),
+                    "objectives_json":json.dumps({k:r.get(k,"") for k in FEATURES + GATE_FEATURES},ensure_ascii=False),
                 })
     fields = list(rows[0].keys()) if rows else []
     write_csv(lab/"janus_lapis_external_research_request.csv",rows,fields)
@@ -939,7 +1177,7 @@ v0.1.3 adds the Demiurge layer.
 v0.1.4 adds the Canvas / Stagekeeper layer.
 
 The stone is not only a material.
-The stone is also the clean scene that lets a new game appear.
+The stone is also the gate that decides whether a hypothesis is ready to be born.
 
 Material archetypes:
 Catalyst, Purifier, Healer, Stone, Life, Energy, Biomineral, LowHazard.
@@ -973,7 +1211,7 @@ def build_send_to_reviewers(outdir: str) -> Dict[str,Any]:
     if send.exists():
         shutil.rmtree(send)
     ensure_dir(send)
-    for name in ["janus_lapis_summary.json","janus_lapis_champions.csv","janus_lapis_all_archetypes.csv","tiny_transformer_archetypes.jsonl"]:
+    for name in ["janus_lapis_summary.json","janus_lapis_champions.csv","janus_lapis_all_archetypes.csv","janus_lapis_decision_chain.csv","janus_lapis_birth_gates.csv","janus_lapis_rejected_by_gate.csv","janus_lapis_birth_gate_summary.json","tiny_transformer_archetypes.jsonl"]:
         p = root/name
         if p.exists():
             shutil.copy2(p,send/name)
@@ -993,13 +1231,14 @@ def build_send_to_reviewers(outdir: str) -> Dict[str,Any]:
         p = root/"lab_request"/name
         if p.exists():
             shutil.copy2(p,lab_send/name)
-    (send/"COVER_NOTE.md").write_text("""# JANUS-LAPIS v0.1.4
+    (send/"COVER_NOTE.md").write_text("""# JANUS-LAPIS v0.1.5
 
 A modern GPT-guided search space for the real functions behind the philosopher's stone.
 
-Canvas / Stagekeeper Edition:
+Birth-Gate Edition:
 The stone is not only a material.
 The stone is the clean scene that lets a new game appear.
+The stone is also the gate that decides whether a hypothesis is ready to be born.
 The stone is also the engine that changes the search space.
 
 Boundary:
@@ -1010,7 +1249,7 @@ All outputs are computational research vectors and expert-review requests.
     (send/"README_SEND_THIS.md").write_text("""# SEND_TO_REVIEWERS_JANUS_LAPIS
 
 This package is for expert scientific review.
-It maps possible modern Lapis archetypes, the Canvas / Stagekeeper scene-preparation layer,
+It maps possible modern Lapis archetypes, scene preparation, Birth-Gate judgment,
 and the Demiurge discovery-engine layer.
 """,encoding="utf-8")
     zip_path = root/"SEND_TO_REVIEWERS_JANUS_LAPIS.zip"
@@ -1029,7 +1268,7 @@ def full_run(outdir: str, trials_per_archetype: int, seed: int, top_per_archetyp
     return build_send_to_reviewers(outdir)
 
 def build_parser():
-    p = argparse.ArgumentParser(description="JANUS-LAPIS / LapisModernGPT v0.1.4")
+    p = argparse.ArgumentParser(description="JANUS-LAPIS / LapisModernGPT v0.1.5")
     p.add_argument("--outdir", default=DEFAULT_OUTDIR)
     sub = p.add_subparsers(dest="cmd", required=True)
     fr = sub.add_parser("full-run")

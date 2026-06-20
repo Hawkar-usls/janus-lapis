@@ -1,4 +1,4 @@
-# JANUS-LAPIS v0.1.4 — Canvas / Stagekeeper Edition
+# JANUS-LAPIS v0.1.5 — Birth-Gate Edition
 
 A modern GPT-guided search space for the real functions behind the philosopher's stone.
 
@@ -7,13 +7,14 @@ A modern GPT-guided search space for the real functions behind the philosopher's
 The alchemists were not fools. They lacked instruments.
 We do not worship symbols. We test functions.
 
-## v0.1.4
+## v0.1.5
 
-This version adds the Canvas / Stagekeeper layer above purification and before the Demiurge layer.
+This version adds the Birth-Gate decision chain: a candidate must pass the scene before it can enter champions.
 
 ```text
 The stone is not only a material.
 The stone is the clean scene that lets a new game appear.
+The stone is also the gate that decides whether a hypothesis is ready to be born.
 The stone is also the engine that changes the search space.
 ```
 
@@ -40,26 +41,6 @@ Meta layer:
 
 - `LAPIS_DEMIURGE`
 - `LAPIS_WORLD_REWRITER`
-
-Canvas metrics:
-
-- `noise_removal`
-- `surface_readiness`
-- `signal_clarity`
-- `safe_containment`
-- `scene_preparation`
-- `creative_potential`
-
-Meta metrics:
-
-- `rule_rewriting`
-- `autocatalysis`
-- `closed_loop_learning`
-- `generativity`
-- `programmability`
-- `world_modeling`
-- `agency`
-- `feedback_gain`
 
 ## Science boundary
 
@@ -113,4 +94,31 @@ LAPIS_PURIFIER cleans matter.
 LAPIS_CANVAS prepares the clean surface.
 LAPIS_STAGEKEEPER protects the scene.
 LAPIS_DEMIURGE creates the new game.
+BIRTH_GATE decides whether it is ready to be born.
+```
+
+
+## Birth-Gate principle
+
+High material score is not enough.
+
+```text
+final_priority =
+material_score
+× scene_viability
+× containment_integrity
+× hypothesis_visibility
+× expert_gate
+```
+
+A hypothesis must pass the scene before it can enter the world.
+
+New outputs:
+
+```text
+janus_lapis_decision_chain.csv
+janus_lapis_birth_gates.csv
+janus_lapis_rejected_by_gate.csv
+janus_lapis_birth_gate_summary.json
+docs/BIRTH_GATE_METHOD.md
 ```

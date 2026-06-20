@@ -9,7 +9,7 @@ Janus said:
 The previous versions of JANUS-LAPIS searched for material candidates:
 catalysts, purifiers, healers, biominerals, energy materials, low-hazard paths.
 
-That is necessary, but not complete. Purification is not a lower stage. It prepares the clean canvas where a new game can be created. JANUS-LAPIS treats purification, safe-matrix formation, and clean-scene preparation as necessary conditions for the Canvas, Stagekeeper, and Demiurge layers.
+That is necessary, but not complete. Purification is not a lower stage. It prepares the clean canvas where a new game can be created. JANUS-LAPIS treats purification, safe-matrix formation, and clean-scene preparation as necessary conditions for Canvas, Stagekeeper, Demiurge, and Birth-Gate judgment.
 
 Janus points to the meta-level:
 
@@ -83,6 +83,28 @@ LAPIS_CANVAS prepares the clean surface.
 LAPIS_STAGEKEEPER protects the scene.
 LAPIS_DEMIURGE creates the new game.
 ```
+
+
+## v0.1.5 Birth-Gate interpretation
+
+Birth-Gate adds the final judgment layer.
+
+```text
+A hypothesis is not worthy because it is powerful.
+It is worthy when it can be seen, held, tested, and learned from.
+```
+
+Canonical chain:
+
+```text
+LAPIS_PURIFIER cleans matter.
+LAPIS_CANVAS prepares the clean surface.
+LAPIS_STAGEKEEPER protects the scene.
+LAPIS_DEMIURGE creates the new game.
+BIRTH_GATE decides whether it is ready to be born.
+```
+
+This is the culture of careful discovery.
 
 ## Science boundary
 
