@@ -1,0 +1,105 @@
+{
+  "registry_type": "JANUS_CAUSAL_TOPOLOGY_EXPERIMENT_RESULT",
+  "identity": "JANUS 113.8",
+  "experiment": "JANUS_TACHYON_BUROVCHIK_PETUSHOK_GATE_V4",
+  "conjecture_basis": "Janus–Dirac–SCOBY–Burovchik Causal-Topological Memory Conjecture",
+  "chronicle": {
+    "human_anchor_local": "2026-08-07 07:07 Europe/Zaporozhye",
+    "machine_result_utc": "2026-08-07T04:07:36.832569+00:00",
+    "machine_result_local": "2026-08-07T07:07:36.832569+03:00",
+    "previous_transition_anchor_local": "2026-08-07 06:06 Europe/Zaporozhye"
+  },
+  "frozen_selector": {
+    "name": "tachyon_burovchik_dirac_r12",
+    "rounds": 12,
+    "weights": {
+      "J_star": 0.4,
+      "E": 0.7,
+      "Phi_Gamma": 0.35,
+      "Z2": 1.1,
+      "mu": 0.15,
+      "winding": 0.7,
+      "chirality": 0.35
+    }
+  },
+  "scoby_memory": {
+    "sectors": 64,
+    "source_updates": 275,
+    "delta_mu_in_holdout": 0,
+    "status": "FROZEN"
+  },
+  "sealed_holdout": {
+    "rounds_completed": 512,
+    "k_janus_full_hashes_per_round": 128,
+    "full_sha256d_counts": {
+      "tachyon_janus": 65536,
+      "random_equal": 65536,
+      "random_work": 163840
+    },
+    "equal_control": {
+      "tachyon_janus_wins": 254,
+      "random_wins": 258,
+      "ties": 0,
+      "p_two_sided": 0.8945403708614397,
+      "geometric_best_ratio": 1.0076468312302036,
+      "interpretation": "NO_DETECTABLE_PER_FULL_HASH_ADVANTAGE"
+    },
+    "work_normalized_control": {
+      "tachyon_janus_wins": 128,
+      "random_wins": 384,
+      "ties": 0,
+      "p_two_sided": 9.947731704100265e-31,
+      "geometric_best_ratio": 0.3595215052584198,
+      "interpretation": "RANDOM_WORK_STRONGLY_OUTPERFORMS_CURRENT_SELECTOR"
+    },
+    "mean_predicted_observables": {
+      "J_star": -0.7367370748088433,
+      "W": 0.0,
+      "abs_W": 0.0,
+      "nu": 0.0,
+      "mu": 0.8930086234577165,
+      "E": 0.45562744140625,
+      "Phi_Gamma": 2.3146057590547593,
+      "orientation_penalty": 0.0,
+      "chirality_penalty": 0.0,
+      "closure_score": 0.14815974904595314
+    },
+    "pool_share_hits": {
+      "tachyon_janus": 2,
+      "random_equal": 4,
+      "random_work": 5
+    },
+    "network_block_hits": {
+      "tachyon_janus": 0,
+      "random_equal": 0,
+      "random_work": 0
+    }
+  },
+  "classification": {
+    "TACHYON_PER_FULL_HASH_SIGNAL_CANDIDATE": false,
+    "TACHYON_WORK_NORMALIZED_SIGNAL_CANDIDATE": false,
+    "TACHYON_STRONG_WORK_SIGNAL_CANDIDATE": false,
+    "PER_HASH_ADVANTAGE_ADMITTED": false,
+    "HASHRATE_INDEPENDENCE_ADMITTED": false,
+    "PHYSICAL_TACHYON_CAUSALITY_ADMITTED": false,
+    "PETUSHOK_FOUND": false,
+    "CONTROL_NETWORK_BLOCK_FOUND": false,
+    "gate_result": "VALID_NEGATIVE"
+  },
+  "scientific_boundary": {
+    "physical_FTL_demonstrated": false,
+    "J_star_is_real_negative_time": false,
+    "return_boundary_is_exact_SHA_inverse": false,
+    "W_is_physical_mechanical_winding": false,
+    "chi_is_physical_angular_velocity_dot_k": false,
+    "SkinGPT_measured": false,
+    "camera_obscura_measured": false,
+    "standard_sha256d_is_only_block_verifier": true
+  },
+  "artifact_sha256": {
+    "JANUS_TACHYON_BUROVCHIK_PETUSHOK_20260807_065915.log": "c6666f44f5074f8b1e1217476fc26ae55d719b73c20f68400e67fac257070b82",
+    "JANUS_TACHYON_BUROVCHIK_PETUSHOK_20260807_065915.rounds.csv": "6cf346d6e148b5bdd0fd6aff9eb28dd8ecfca3d544cb14160bb84385a2aa9505",
+    "JANUS_TACHYON_BUROVCHIK_PETUSHOK_20260807_065915.summary.json": "08d4d4c1cca54aefdf8c467daaa1b5b8d1fb14911b5ccfca4cea460ac7fa5947"
+  },
+  "next_requirement": "Design a new selector family and replicate under sealed work-normalized control. A statistical signal would still be algorithmic correlation evidence, not FTL. PETUSHOK_FOUND remains reserved for SHA256d(header) <= network_target(nBits)."
+}
