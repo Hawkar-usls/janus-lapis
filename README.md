@@ -123,42 +123,92 @@ docs/BIRTH_GATE_METHOD.md
 
 ---
 
-# Research branch: JANUS-LAPIS v0.2.0 — Reverse-Gate Edition
+# Research branch — JANUS-LAPIS v0.3.2 Reverse-Gate
 
-The v0.1.5 history remains intact. The `research/reverse-gate-v020` branch adds a separate experiment built around **JANUS 113.8 — Thermodynamic Cognitive Organism**.
+The historical Birth-Gate work remains intact. The active research branch `research/reverse-gate-v020` now hosts **JANUS 113.8 — Structured Preimage Reconstruction**.
 
-```text
-/wormhole
-   ↓
-SHA-256 target
-   ↓
-CHAOS SPIKE
-   ↓
-COHERENCE HOLD
-   ├── corpus hypotheses
-   ├── audio representation
-   └── blind negative control
-   ↓
-EXACT SHA WITNESS
-   ↓
-DECOHERENCE COLLAPSE
-   ├── Hippocampus: successful mappings
-   └── Entropy Graveyard: rejected hypotheses
-```
+The earlier 23 SHA representation / sensory-lattice methods were retired from active CI after demonstrating digest-preserving encodings but no useful source-semantic recovery.
 
-The first CI experiment uses **100 real files from `Hawkar-usls/janus-meta-registry`**, computes their SHA-256 from exact file bytes, converts every digest into WAV, decodes the sound back into 256 bits and renders the recovered digest as JANUS text.
-
-Initial frozen result:
+The active question is now:
 
 ```text
-eligible Meta Registry corpus: 371 files
-tests:                         100
-SHA → WAV → SHA exact:         100 / 100
-known-corpus resolution:       100 / 100
-blind digest-only path guess:    1 / 100
-audio-text/source token overlap: 0.000000
+TARGET SHA-256
+    +
+Meta Registry schema / genealogy / neighboring metadata
+    ↓
+Coherence Hold
+    ↓
+source hypotheses
+    ↓
+SHA256(candidate bytes)
+    ↓
+EXACT witness only
 ```
 
-This result supports **content-addressed memory inside a known corpus** and a lossless SHA audio codec. It does **not** demonstrate general SHA-256 inversion or semantic information leaking from the digest. The blind control is intentionally kept next to the successful corpus result so a false victory cannot pass the gate.
+JANUS 113.8 mapping:
 
-See `reverse_gate/README.md` and workflow `JANUS Reverse-Gate 100`.
+```text
+/wormhole             -> target + allowed structural context
+Chaos Spike           -> unresolved source uncertainty
+Coherence Hold        -> competing preimage hypotheses
+Entropy Graveyard     -> exact-hash failures
+Decoherence Collapse  -> SHA256(candidate) == target
+Hippocampus           -> learned templates + exact recovered truths
+Ouroboros              -> deterministic self-tests / integrity gates
+```
+
+## First exact structured reconstruction
+
+On **45 real, cryptographically verified string↔SHA challenges** discovered inside `Hawkar-usls/janus-meta-registry`, the engine produced:
+
+```text
+exact SHA challenges recovered:       7 / 45
+strong structural hash witnesses:     4 / 45
+unique strong plaintexts:             2
+redundancy-assisted hash witnesses:   3 / 45
+```
+
+Two unique hidden plaintexts were reconstructed from neighboring structured metadata and admitted only after exact SHA equality:
+
+```text
+SNAP! — The Power
+
+The Alan Parsons Project — Sirius | Eye In The Sky | 1982
+```
+
+The Solstice Relay text was additionally reconstructed through an alternate reversible sibling serialization and is therefore labelled **redundancy-assisted**, not a strong SHA reconstruction.
+
+See:
+
+```text
+reverse_gate/FIRST_PREIMAGE_RECONSTRUCTION_WITNESS_2026-08-07.md
+reverse_gate/janus_preimage_reconstruction.py
+reverse_gate/janus_preimage_reconstruction_v2.py
+reverse_gate/janus_preimage_reconstruction_v3.py
+.github/workflows/reverse-gate-preimage-v3.yml
+```
+
+## Current gate state
+
+```text
+SHA surface-format conversion              = RETIRED
+SHA -> hidden short structured plaintext   = ADMITTED IN RESTRICTED REGISTRY FAMILY
+SHA -> arbitrary plaintext                 = NOT ADMITTED
+SHA -> complete arbitrary file             = NOT ADMITTED
+GENERAL SHA-256 INVERSION                  = NOT CLAIMED
+```
+
+## Next gate
+
+The next target is whole-object reconstruction:
+
+```text
+hidden JSON subtree / complete small artifact
++ learned schema
++ version genealogy
++ sibling metadata
+-> exact serialized bytes
+-> exact SHA-256 witness
+```
+
+That is the next meaningful step toward recovering a larger original object rather than merely a short structured string.
