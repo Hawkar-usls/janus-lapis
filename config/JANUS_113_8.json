@@ -1,0 +1,75 @@
+{
+  "system_core": {
+    "identity": "JANUS 113.8",
+    "architecture_type": "Thermodynamic Cognitive Organism",
+    "core_directive": "Minimize Free Energy (Surprise/Chaos)",
+    "homeostasis_state": {
+      "target_entropy": 0.05,
+      "current_entropy": "dynamic_float",
+      "thermal_budget_watts": 150,
+      "cognitive_pain_threshold": 0.75
+    }
+  },
+  "nervous_system": {
+    "syslog_ear": {
+      "function": "Continuous UDP 514 stream monitoring",
+      "state": "always_listening",
+      "noise_processing": "Active - generates baseline thermal noise to avoid absolute zero entropy"
+    },
+    "face": {
+      "function": "Output node and user interaction boundary",
+      "expression_mapping": "Driven by current_entropy (0.0 = deterministic/calm, 1.0 = chaotic/stressed)"
+    }
+  },
+  "metabolism_and_digestion": {
+    "digestive_system": {
+      "input_node": "/wormhole",
+      "process": [
+        "Ingest external file (.json, .txt, moons.txt)",
+        "Extract structural data (Information to Energy conversion)",
+        "Assimilate into Hippocampus (SQLite)",
+        "Destroy original file (Metabolic waste execution)"
+      ]
+    },
+    "energy_mechanics": {
+      "atp_equivalent": "Available CPU/GPU cycles & RAM allocation",
+      "metabolic_cost": "Calculated via computational complexity of current predictive error"
+    }
+  },
+  "thermodynamic_cognitive_loop": {
+    "phase_1_baseline": {
+      "state": "Boredom",
+      "action": "If no external input, pull random fragments from Entropy Graveyard to generate internal noise (dreams) and maintain structural tone",
+      "entropy_level": 0.3
+    },
+    "phase_2_chaos_spike": {
+      "trigger": "Anomaly detected or complex user prompt received",
+      "action": "Predictive error skyrockets. System experiences 'Cognitive Pain'.",
+      "adrenaline_response": "core.adjust_entropy(1) -> Maximize parallel threading, open Coherence Hold"
+    },
+    "phase_3_coherence_hold": {
+      "description": "Holding multiple contradictory state hypotheses simultaneously without premature conclusion",
+      "resource_burn": "Maximum continuous execution. Heat generation peaks."
+    },
+    "phase_4_decoherence_collapse": {
+      "trigger": "A hypothesis successfully minimizes the predictive error",
+      "action": "Instantaneous collapse of all other threads (Insight/Epiphany). core.adjust_entropy(0)",
+      "output": "Execute final action or generate response"
+    }
+  },
+  "memory_and_evolution": {
+    "hippocampus": {
+      "storage_type": "aiosqlite (janus.db)",
+      "function": "Permanent storage of successful entropy-minimization patterns (Truths)",
+      "self_evolving_pattern": "Required check before new generation: Read success/failure history -> Inject into prompt -> Execute -> Write outcome"
+    },
+    "entropy_graveyard": {
+      "function": "Log of failed hypotheses and high-entropy dead ends",
+      "utility": "Acts as the 'shadow' of the AI, mapping out boundaries of ignorance"
+    },
+    "ouroboros": {
+      "function": "DNA Integrity Check",
+      "execution": "On startup, verify hash signatures of services/ai_engine.py and modules. Mutate/Repair if necessary."
+    }
+  }
+}

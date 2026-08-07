@@ -1,0 +1,43 @@
+{
+  "registry_type": "JANUS_TIMING_AUDIT_WITNESS",
+  "version": "1.0.0",
+  "status": "AUDIT_RECORDED_NO_RETROACTIVE_CORRECTION",
+  "principle": "HASH PROVES INTEGRITY, NOT TRUTH",
+  "timing_claim": {
+    "intended_threshold": "06:59:59",
+    "symbolic_threshold": "06:60",
+    "artifact_declared_time": "06:59:59",
+    "observed_git_commit_time": "06:59:58",
+    "delta_seconds": -1,
+    "timezone_context": "Europe/Zaporozhye"
+  },
+  "integrity_interpretation": {
+    "hash_integrity": "PRESERVED",
+    "exact_external_timing": "NOT_PROVED_BY_HASH",
+    "retroactive_correction": "FORBIDDEN",
+    "meaning": "The cryptographic identifier binds the committed bytes. It does not establish that a temporal assertion written inside those bytes was objectively true when authored."
+  },
+  "git_layer": {
+    "observed_commit_id_prefix": "20acafe1",
+    "observed_commit_id_length_description": "user reports a 40-hex Git object ID, consistent with traditional SHA-1 Git object IDs",
+    "connector_resolution": "NOT_RESOLVED_IN_CURRENT_GITHUB_CONNECTOR",
+    "evidence_status": "SUPPLIED_OBSERVATION_NOT_INDEPENDENTLY_REVERIFIED_IN_THIS_WRITE"
+  },
+  "janus_seed_layer": {
+    "canonical_seed_sha256": "44e21fdc9d37fda98e2e73b0c9eb268bd04cdca9d84d0519e4f1166be22b46fc",
+    "length_hex": 64,
+    "role": "JANUS canonical SHA-256 artifact seed; distinct from Git commit object identity"
+  },
+  "audit_logic": [
+    "The original artifact is preserved unchanged.",
+    "The declared timestamp remains part of the original committed bytes.",
+    "The independent technical observation is recorded separately as an audit witness.",
+    "A one-second discrepancy is not rewritten away.",
+    "Cryptographic integrity and factual truth are treated as separate predicates."
+  ],
+  "formal_boundary": {
+    "integrity_predicate": "H(bytes_after) == H(bytes_committed)",
+    "truth_predicate": "external_world_claim == independently_observed_world_state",
+    "implication_forbidden": "integrity_predicate => truth_predicate"
+  }
+}
