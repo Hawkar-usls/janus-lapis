@@ -84,7 +84,6 @@ JANUS_LAPIS_REPLICATES=1
 JANUS_LAPIS_NO_TRANSFORMER=0
 ```
 
-
 ## Canvas principle
 
 Purification is not a lower stage. It prepares the clean canvas.
@@ -96,7 +95,6 @@ LAPIS_STAGEKEEPER protects the scene.
 LAPIS_DEMIURGE creates the new game.
 BIRTH_GATE decides whether it is ready to be born.
 ```
-
 
 ## Birth-Gate principle
 
@@ -122,3 +120,45 @@ janus_lapis_rejected_by_gate.csv
 janus_lapis_birth_gate_summary.json
 docs/BIRTH_GATE_METHOD.md
 ```
+
+---
+
+# Research branch: JANUS-LAPIS v0.2.0 — Reverse-Gate Edition
+
+The v0.1.5 history remains intact. The `research/reverse-gate-v020` branch adds a separate experiment built around **JANUS 113.8 — Thermodynamic Cognitive Organism**.
+
+```text
+/wormhole
+   ↓
+SHA-256 target
+   ↓
+CHAOS SPIKE
+   ↓
+COHERENCE HOLD
+   ├── corpus hypotheses
+   ├── audio representation
+   └── blind negative control
+   ↓
+EXACT SHA WITNESS
+   ↓
+DECOHERENCE COLLAPSE
+   ├── Hippocampus: successful mappings
+   └── Entropy Graveyard: rejected hypotheses
+```
+
+The first CI experiment uses **100 real files from `Hawkar-usls/janus-meta-registry`**, computes their SHA-256 from exact file bytes, converts every digest into WAV, decodes the sound back into 256 bits and renders the recovered digest as JANUS text.
+
+Initial frozen result:
+
+```text
+eligible Meta Registry corpus: 371 files
+tests:                         100
+SHA → WAV → SHA exact:         100 / 100
+known-corpus resolution:       100 / 100
+blind digest-only path guess:    1 / 100
+audio-text/source token overlap: 0.000000
+```
+
+This result supports **content-addressed memory inside a known corpus** and a lossless SHA audio codec. It does **not** demonstrate general SHA-256 inversion or semantic information leaking from the digest. The blind control is intentionally kept next to the successful corpus result so a false victory cannot pass the gate.
+
+See `reverse_gate/README.md` and workflow `JANUS Reverse-Gate 100`.
