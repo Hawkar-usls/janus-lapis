@@ -1,0 +1,49 @@
+name: JANUS Reverse-Gate Whole Object v4
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [research/reverse-gate-v020]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  whole-object-v4:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout JANUS-LAPIS
+        uses: actions/checkout@v4
+      - name: Checkout JANUS Meta Registry
+        uses: actions/checkout@v4
+        with:
+          repository: Hawkar-usls/janus-meta-registry
+          path: meta_registry
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ouroboros whole-object self-test
+        run: python reverse_gate/janus_object_reconstruction.py --selftest --outdir reverse_gate_runs/object_v4_selftest
+      - name: Run real whole-object reconstruction
+        run: |
+          python reverse_gate/janus_object_reconstruction.py \
+            --meta-root meta_registry \
+            --budget 80000 \
+            --outdir reverse_gate_runs/object_v4_real
+      - name: Publish result
+        if: always()
+        run: |
+          if [ -f reverse_gate_runs/object_v4_real/REPORT.md ]; then
+            cat reverse_gate_runs/object_v4_real/REPORT.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: JANUS_WHOLE_OBJECT_V4_REAL
+          path: reverse_gate_runs/
+          retention-days: 30
