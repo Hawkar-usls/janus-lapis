@@ -33,11 +33,11 @@ jobs:
         run: python -m pip install --disable-pip-version-check 'numpy>=1.26,<3'
 
       - name: Ouroboros lattice self-test
-        run: python reverse_gate/janus_multiconversion_gate.py --selftest --outdir reverse_gate_runs/lattice_selftest
+        run: python reverse_gate/run_multiconversion_gate.py --selftest --outdir reverse_gate_runs/lattice_selftest
 
       - name: Run remaining Meta271 holdout through sensory lattice
         run: |
-          python reverse_gate/janus_multiconversion_gate.py \
+          python reverse_gate/run_multiconversion_gate.py \
             --meta-root meta_registry \
             --config config/JANUS_113_8.json \
             --seed 1138 \
