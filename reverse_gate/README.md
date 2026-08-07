@@ -1,70 +1,87 @@
-# JANUS-LAPIS v0.2.0 — Reverse-Gate Edition
+# JANUS-LAPIS — Reverse-Gate Research
 
-This branch preserves v0.1.5 **Birth-Gate Edition** and adds a separate SHA-256 research organism built around **JANUS 113.8**.
+## Active engine
+
+**JANUS 113.8 / Structured Preimage Reconstruction v0.3.2**
+
+The active path no longer treats SHA-256 as something to be rendered through many surface formats. The earlier sensory-lattice experiment is retained only as negative historical evidence; its active code/workflow were retired after failing to recover source semantics.
+
+## Core rule
+
+A reconstruction is accepted only when:
+
+```text
+SHA256(generated_candidate_bytes) == target_sha256
+```
+
+No similarity score, Hamming proximity, semantic resemblance, or aesthetically convincing text counts as success.
 
 ## JANUS 113.8 mapping
 
 | JANUS organ | Reverse-Gate role |
 |---|---|
-| `/wormhole` | target SHA / Meta Registry input |
+| `/wormhole` | target SHA + allowed registry context |
 | `syslog_ear` | experiment telemetry |
-| `digestive_system` | parse repository files and structural metadata |
-| `ATP` | comparisons, CPU time, memory |
-| `Cognitive Pain` | predictive-error / uncertainty threshold (telemetry metaphor only) |
-| `Coherence Hold` | keep multiple preimage hypotheses alive |
-| `Decoherence Collapse` | exact `SHA(candidate) == target` witness |
-| `Hippocampus` | SQLite store of successful exact mappings |
-| `Entropy Graveyard` | exact-mismatch hypotheses and dead ends |
-| `Ouroboros` | SHA-256 integrity manifest for code/config |
-| `Face` | Markdown/CSV/JSON/audio reports |
+| `digestive_system` | parse registry structure and provenance |
+| `ATP` | candidate budget / CPU work |
+| `Cognitive Pain` | unresolved prediction error telemetry |
+| `Coherence Hold` | simultaneous source hypotheses |
+| `Decoherence Collapse` | exact SHA witness |
+| `Hippocampus` | learned templates and recovered exact truths |
+| `Entropy Graveyard` | rejected candidate sources |
+| `Ouroboros` | deterministic self-test and integrity gate |
 
-## Three gates
+## Current reconstruction strategies
 
-1. **Audio Integrity Gate** — convert each 256-bit digest to 32 deterministic tones and decode it back.
-2. **Known-Corpus Preimage Gate** — hash every eligible file in `Hawkar-usls/janus-meta-registry` and resolve target digests against that finite corpus. This is content-addressed memory / corpus lookup, not a general SHA-256 inverse.
-3. **Blind Semantic Gate** — do not use file bytes to guess the source path; use a deliberately blind digest-only control and compare its performance.
+These act on the **source hypothesis space**, not on alternate encodings of the digest:
 
-## SHA → sound → text
+- learned registry templates;
+- schema-aware field composition;
+- filename / version genealogy;
+- sibling semantic composition;
+- signal / identifier reassembly;
+- explicitly labelled redundancy-assisted serialization genealogy.
 
-Each digest byte `0..255` maps to a unique tone:
+## Frozen first result
 
-```text
-frequency = 300 Hz + byte × 25 Hz
-```
-
-The WAV decoder recovers 32 bytes. The bytes are rendered through a fixed 16×16 JANUS syllable codebook such as:
+The engine discovered **45 real cryptographically verified string↔SHA challenges** inside `Hawkar-usls/janus-meta-registry`.
 
 ```text
-alba-bore  nexa-soma  ...
+exact hash challenges recovered:       7 / 45
+strong structural hash witnesses:     4 / 45
+unique strong plaintexts:             2
+redundancy-assisted hash witnesses:   3 / 45
 ```
 
-The words are **not claimed to be hidden plaintext**. They are a reversible textual representation of the digest recovered from audio. The experiment checks whether they have any relationship to source metadata beyond the negative control.
+Strong exact reconstructed plaintexts include:
 
-## Run locally
+```text
+SNAP! — The Power
+The Alan Parsons Project — Sirius | Eye In The Sky | 1982
+```
+
+The target plaintext was removed from candidate context; the reconstruction was admitted only by recomputing SHA-256 over the generated candidate.
+
+See `FIRST_PREIMAGE_RECONSTRUCTION_WITNESS_2026-08-07.md`.
+
+## Run
 
 ```bash
-python -m pip install numpy
-python reverse_gate/janus_reverse_gate.py --selftest
-python reverse_gate/janus_reverse_gate.py \
+python reverse_gate/janus_preimage_reconstruction_v3.py --selftest
+python reverse_gate/janus_preimage_reconstruction_v3.py \
   --meta-root ../janus-meta-registry \
-  --limit 100 \
-  --seed 1138 \
-  --outdir reverse_gate_runs/meta100
+  --budget 180000 \
+  --outdir reverse_gate_runs/preimage_v3_real
 ```
 
-Outputs:
+Active CI:
 
 ```text
-summary.json
-results_100.csv
-audio_to_text.txt
-REPORT.md
-janus.db
-entropy_graveyard.jsonl
-ouroboros_integrity.json
-audio/*.wav
+.github/workflows/reverse-gate-preimage-v3.yml
 ```
 
 ## Scientific boundary
 
-SHA-256 is intentionally preimage resistant and has an avalanche effect. Sonification cannot recreate information that was not retained in the 256-bit digest. Reverse-Gate asks a narrower, testable question: **how much can a structured known corpus and provenance model reduce a preimage search space, and does an audio representation add any measurable information?**
+This is **constrained preimage reconstruction using side information** from a structured corpus. It does not provide a general inverse for SHA-256, and no claim of arbitrary hash reversal is made.
+
+The next gate is reconstruction of an entire hidden JSON subtree or small complete artifact with an exact serialized-byte SHA witness.
