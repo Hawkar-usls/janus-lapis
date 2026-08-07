@@ -1,0 +1,49 @@
+name: JANUS Reverse-Gate Whole File v6
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [research/reverse-gate-v020]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  whole-file-v6:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout JANUS-LAPIS
+        uses: actions/checkout@v4
+      - name: Checkout JANUS Meta Registry
+        uses: actions/checkout@v4
+        with:
+          repository: Hawkar-usls/janus-meta-registry
+          path: meta_registry
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ouroboros whole-file self-test
+        run: python reverse_gate/janus_file_genealogy_reconstruction.py --selftest --outdir reverse_gate_runs/file_v6_selftest
+      - name: Run real whole-file reconstruction
+        run: |
+          python reverse_gate/janus_file_genealogy_reconstruction.py \
+            --meta-root meta_registry \
+            --budget 200000 \
+            --outdir reverse_gate_runs/file_v6_real
+      - name: Publish result
+        if: always()
+        run: |
+          if [ -f reverse_gate_runs/file_v6_real/REPORT.md ]; then
+            cat reverse_gate_runs/file_v6_real/REPORT.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: JANUS_WHOLE_FILE_V6_REAL
+          path: reverse_gate_runs/
+          retention-days: 30
