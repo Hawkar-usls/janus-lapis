@@ -83,6 +83,39 @@ v0.7 companion template transfer         -> 0 / 4
 
 These methods are removed from active CI.
 
+## Bitcoin / NerdMinerV2 experimental gate
+
+A separate Bitcoin PoW path now lives under:
+
+```text
+bitcoin_live_gate/
+```
+
+It mirrors NerdMinerV2 Stratum-v1 header construction and compares ordinary sequential nonce traversal against a deterministic JANUS full-cycle nonce permutation while keeping each header/job identical between strategies.
+
+Frozen baseline:
+
+```text
+48 paired header spaces
+12,000,000 hashes / strategy
+24,000,000 SHA256d total
+NerdMiner share difficulty 0.00015
+sequential share hits 21
+JANUS share hits 24
+sequential pair wins 25
+JANUS pair wins 23
+```
+
+The observed difference does **not** pass a signal gate; it is compatible with chance. The value of this benchmark is calibration before real low-difficulty Stratum jobs.
+
+See:
+
+```text
+bitcoin_live_gate/README.md
+bitcoin_live_gate/nerdminer_v2_janus_bridge.py
+bitcoin_live_gate/NERDMINER_V2_PAIRED_48X250K_2026-08-07.json
+```
+
 ## Run
 
 ```bash
@@ -99,6 +132,10 @@ Active CI:
 .github/workflows/reverse-gate-preimage-v4.yml
 ```
 
+Bitcoin live-pool mining is deliberately not run in GitHub Actions; use explicitly authorized local hardware/network instead.
+
 ## Scientific boundary
 
 This is **constrained preimage reconstruction using side information** from a structured corpus. It does not provide a general inverse for SHA-256. The demonstrated mechanism is: use structure/provenance to collapse the possible source space, then use SHA-256 as an exact cryptographic witness.
+
+The Bitcoin gate is a separate nonce-order experiment. SHA-256 is still treated as pseudorandom with respect to nonce order unless repeated paired evidence demonstrates otherwise.
