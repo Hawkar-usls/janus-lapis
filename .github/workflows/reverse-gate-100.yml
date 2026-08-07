@@ -1,0 +1,60 @@
+name: JANUS Reverse-Gate 100
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [research/reverse-gate-v020]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reverse-gate-100:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout JANUS-LAPIS
+        uses: actions/checkout@v4
+
+      - name: Checkout JANUS Meta Registry
+        uses: actions/checkout@v4
+        with:
+          repository: Hawkar-usls/janus-meta-registry
+          path: meta_registry
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install codec dependency
+        run: python -m pip install --disable-pip-version-check 'numpy>=1.26,<3'
+
+      - name: Ouroboros self-test
+        run: python reverse_gate/janus_reverse_gate.py --selftest --outdir reverse_gate_runs/selftest
+
+      - name: Run 100 real Meta Registry tests
+        run: |
+          python reverse_gate/janus_reverse_gate.py \
+            --meta-root meta_registry \
+            --config config/JANUS_113_8.json \
+            --limit 100 \
+            --seed 1138 \
+            --outdir reverse_gate_runs/meta100
+
+      - name: Publish summary
+        if: always()
+        run: |
+          if [ -f reverse_gate_runs/meta100/REPORT.md ]; then
+            cat reverse_gate_runs/meta100/REPORT.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload Reverse-Gate evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: JANUS_REVERSE_GATE_META100
+          path: reverse_gate_runs/
+          retention-days: 30
