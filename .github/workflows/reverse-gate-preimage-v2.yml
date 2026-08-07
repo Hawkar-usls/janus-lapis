@@ -1,0 +1,49 @@
+name: JANUS Reverse-Gate Structured Preimage v2
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [research/reverse-gate-v020]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structured-preimage-v2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout JANUS-LAPIS
+        uses: actions/checkout@v4
+      - name: Checkout JANUS Meta Registry
+        uses: actions/checkout@v4
+        with:
+          repository: Hawkar-usls/janus-meta-registry
+          path: meta_registry
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ouroboros schema self-test
+        run: python reverse_gate/janus_preimage_reconstruction_v2.py --selftest --outdir reverse_gate_runs/preimage_v2_selftest
+      - name: Run schema-aware reconstruction
+        run: |
+          python reverse_gate/janus_preimage_reconstruction_v2.py \
+            --meta-root meta_registry \
+            --budget 160000 \
+            --outdir reverse_gate_runs/preimage_v2_real
+      - name: Publish result
+        if: always()
+        run: |
+          if [ -f reverse_gate_runs/preimage_v2_real/REPORT.md ]; then
+            cat reverse_gate_runs/preimage_v2_real/REPORT.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: JANUS_STRUCTURED_PREIMAGE_V2_REAL
+          path: reverse_gate_runs/
+          retention-days: 30
