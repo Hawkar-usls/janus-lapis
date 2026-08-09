@@ -3,29 +3,31 @@
 # JANUS Lapis
 ### Computational hypothesis-ranking sandbox
 
-`candidate generation` · `explicit gates` · `expert review required`
+![Status](https://img.shields.io/badge/status-work%20in%20progress-8c959f)
+![Class](https://img.shields.io/badge/class-exploratory%20research%20tool-6e7681)
 
 </div>
 
-JANUS Lapis is an exploratory software tool inspired by historical alchemical archetypes. It ranks computational candidates and records gate decisions so that ideas can be reviewed later by qualified experts.
+## Status
 
-It does **not** validate a material, reaction or synthesis procedure.
+**Work in Progress.** JANUS Lapis is an incomplete exploratory ranking tool. Scoring models, gates, candidate sets, and documentation may change. It is not a validated chemistry or materials result.
+
+## Abstract
+
+The project uses historical alchemical archetypes as labels for a computational candidate-ranking workflow. It records scores, gate decisions, rejections, and review outputs so hypotheses can be inspected later.
 
 ## Current scope
-
-The tool produces:
 
 - candidate/ranking tables;
 - archetype comparisons;
 - gate/rejection records;
 - machine-readable summaries;
-- an external-review brief.
+- external-review briefs.
 
-Machine-readable project boundary: [`PROJECT_STATUS.json`](PROJECT_STATUS.json)
-
-## Scientific boundary
+## Boundary
 
 ```text
+MATURITY = WORK_IN_PROGRESS
 LITERAL_TRANSMUTATION = NOT_CLAIMED
 ELIXIR_OR_LIFE_EXTENSION = NOT_CLAIMED
 VALIDATED_MATERIAL = NOT_ESTABLISHED
@@ -34,28 +36,15 @@ SAFE_SYNTHESIS_PROCEDURE = NOT_PROVIDED
 HAZARDOUS_SYNTHESIS_INSTRUCTIONS = FORBIDDEN
 ```
 
-Names such as `LAPIS_DEMIURGE` or `BIRTH_GATE` are internal search/archetype labels. They are not claims about physics, chemistry or metaphysical agency.
+Internal names such as `LAPIS_DEMIURGE` or `BIRTH_GATE` are search/archetype labels, not claims about physics, chemistry, or metaphysical agency.
 
-## Run
+## Review
 
-```bash
-RUN_JANUS_LAPIS.bat
-```
+- Machine-readable project status: [`PROJECT_STATUS.json`](PROJECT_STATUS.json)
+- External-review material: [`lab_request/`](lab_request/)
+- Method notes: [`docs/`](docs/)
+- Portfolio maturity/visibility: [`portfolio-visibility.json`](https://github.com/Hawkar-usls/Janus/blob/main/portfolio-visibility.json)
 
-Primary review outputs include:
+A high software score means only that a candidate ranked highly under the implemented model. Any real material claim requires separate expert review, laboratory protocol, measurement, safety analysis, and independent interpretation.
 
-```text
-janus_lapis_summary.json
-janus_lapis_champions.csv
-janus_lapis_all_archetypes.csv
-janus_lapis_decision_chain.csv
-janus_lapis_birth_gates.csv
-janus_lapis_rejected_by_gate.csv
-lab_request/JANUS_LAPIS_EXTERNAL_RESEARCH_BRIEF.md
-lab_request/janus_lapis_external_research_request.csv
-docs/BIRTH_GATE_METHOD.md
-```
-
-## Interpretation
-
-A high computational score means only that a candidate ranked highly under the implemented scoring/gating model. Any real material claim requires separate chemistry, safety review, experimental protocol, measurements and independent interpretation.
+Presentation follows the account's [public repository standard](https://github.com/Hawkar-usls/Janus/blob/main/docs/PUBLIC_REPOSITORY_PRESENTATION_STANDARD.md). No affiliation with MIT is implied by the presentation style.
