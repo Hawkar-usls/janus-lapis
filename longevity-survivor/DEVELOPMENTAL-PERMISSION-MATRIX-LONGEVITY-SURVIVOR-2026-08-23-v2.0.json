@@ -1,0 +1,244 @@
+{
+  "schema": "janus.lapis.longevity_survivor.developmental_permission_matrix.v2_0",
+  "artifact_id": "DEVELOPMENTAL-PERMISSION-MATRIX-LONGEVITY-SURVIVOR-2026-08-23-v2.0",
+  "title": "LONGEVITY SURVIVOR v2 — Developmental Permission Matrix",
+  "created_at_local": "2026-08-23T22:49:00+03:00",
+  "repository": "Hawkar-usls/janus-lapis",
+  "branch": "LONGEVITY-SURVIVOR",
+  "status": "ACTIVE_EVIDENCE_RANKED_WORKING_MODEL",
+  "frozen_question": "Which safety gates change together when mammalian tissues transition from high-fidelity regeneration toward limited repair or fibrosis, and which adult-regenerative tissues retain or transiently reopen those gates?",
+  "claim_ceiling": [
+    "This artifact ranks comparative developmental mechanisms; it does not establish a human rejuvenation therapy.",
+    "A repeated pathway across tissues is a candidate shared control node, not proof of one universal regeneration switch.",
+    "Direction of a pathway can be cell-type- and time-dependent; YAP and TGF-beta are explicitly not treated as scalar ON/OFF switches.",
+    "Mouse neonatal timing is not assumed to map directly to human chronological timing."
+  ],
+  "topa_result": {
+    "single_master_switch": "NOT_SUPPORTED",
+    "common_state_transition": "SUPPORTED_AS_WORKING_MODEL",
+    "name": "MATURATION_LOCK",
+    "definition": "A coupled transition in which intrinsic cellular plasticity decreases while the tissue niche, immune response, mechanics and repair program mature toward rapid stabilization and scar-biased healing.",
+    "important_nuance": "The lock is a state vector, not a single molecule and not necessarily synchronized to the same postnatal day in every tissue."
+  },
+  "maturation_lock_modules": [
+    {
+      "id": "ML1",
+      "name": "PLASTICITY_AND_MITOTIC_COMPETENCE_LOCK",
+      "evidence_grade": "A_MINUS",
+      "summary": "Across multiple neonatal tissues, regenerative loss tracks reduced ability of differentiated or supporting/progenitor cells to proliferate, transdifferentiate or re-enter a developmental program.",
+      "examples": [
+        "Heart: neonatal cardiomyocyte proliferation is rapidly lost after birth as cardiomyocytes mature, withdraw from the cell cycle, become structurally specialized and often polyploid/binucleated.",
+        "Cochlea: neonatal supporting-cell plasticity is largely lost during the first postnatal week; hair-cell enhancers lose a primed chromatin state and become less accessible.",
+        "Brain/spinal cord: neonatal neural progenitor proliferative capacity and axon-permissive repair decline with age.",
+        "Dense connective tissue: neonatal healing recruits resident and non-resident tenogenic cells more effectively than adult scar-biased healing."
+      ],
+      "sources": [
+        "PMID:35708609",
+        "PMID:41081290",
+        "DOI:10.1007/s11886-026-02382-4",
+        "PMID:39453996",
+        "PMID:32501213"
+      ]
+    },
+    {
+      "id": "ML2",
+      "name": "NICHE_AND_MECHANICAL_MATURATION_LOCK",
+      "evidence_grade": "A_MINUS",
+      "summary": "ECM composition, crosslinking, stiffness and mechanical loading change during maturation and can causally redirect cell behavior toward maturation or fibrosis rather than regeneration.",
+      "examples": [
+        "Heart: postnatal cardiac ECM stiffens rapidly; manipulating crosslinking/stiffness can alter the regenerative window and YAP-associated cardiomyocyte behavior.",
+        "Skin: mechanical tension activates a YAP-to-Engrailed-1 fibrotic fibroblast program; blocking this route in mouse wounds can restore appendage-rich regenerative healing.",
+        "Spinal cord: neonatal microglia build a transient fibronectin bridge and resolve inflammation, whereas adult lesions form a different scar environment.",
+        "Acomys: multiple adult tissues show unusual biomechanics and reduced fibrotic ECM responses together with enhanced regeneration."
+      ],
+      "sources": [
+        "PMID:32590172",
+        "PMID:33888614",
+        "DOI:10.1038/s41586-020-2795-6",
+        "PMID:39805008"
+      ]
+    },
+    {
+      "id": "ML3",
+      "name": "IMMUNE_KINETICS_AND_RESOLUTION_LOCK",
+      "evidence_grade": "A",
+      "summary": "Regeneration is not simply low inflammation; it repeatedly requires a correctly timed immune response that clears damage, supports progenitors and then resolves. Adult or non-regenerative states often show altered macrophage/microglial composition, duration or pro-fibrotic signaling.",
+      "examples": [
+        "Heart: neonatal macrophages are required for regeneration and angiogenesis; depletion converts the outcome toward fibrosis.",
+        "Spinal cord: neonatal microglia are required for scar-free repair and express inflammation-resolving programs absent from adult microglia.",
+        "Tendon: macrophage depletion impairs neonatal functional regeneration.",
+        "Fetal skin: scarless healing correlates with shorter/lower inflammatory signaling and distinct TGF-beta isoform balance.",
+        "Acomys: reduced pro-inflammatory/fibrotic responses recur across skin, muscle, kidney and spinal cord while macrophages remain necessary for regeneration."
+      ],
+      "sources": [
+        "PMID:24569380",
+        "DOI:10.1038/s41586-020-2795-6",
+        "DOI:10.1096/fj.202100049R",
+        "PMID:39152955",
+        "PMID:32599302",
+        "PMID:39805008"
+      ]
+    },
+    {
+      "id": "ML4",
+      "name": "SCAR_PRIORITY_ROUTING_LOCK",
+      "evidence_grade": "A_MINUS",
+      "summary": "Mature mammalian injury responses often prioritize fast closure and mechanical stability through fibroblast/myofibroblast activation and ECM deposition. Regeneration requires this program to be transient, spatially limited, or actively resolved rather than absent.",
+      "examples": [
+        "Fetal skin transitions from scarless restoration to later scar-forming repair as fibroblast, immune and ECM states mature.",
+        "Adult skin mechanotransduction can convert fibroblasts into a scar-producing state through YAP/En1.",
+        "Acomys still activates myofibroblasts, but their activation is transient and coupled to blastema/regenerative progression rather than persistent fibrosis.",
+        "Liver and lung literature similarly distinguishes transient repair matrix from persistent pathological fibrosis."
+      ],
+      "sources": [
+        "DOI:10.1016/j.jid.2024.05.027",
+        "PMID:33888614",
+        "PMCID:PMC8623355",
+        "DOI:10.1016/j.stem.2025.10.002"
+      ]
+    }
+  ],
+  "context_dependent_nodes_not_master_switches": [
+    {
+      "node": "YAP_TAZ",
+      "status": "ROUTER_NOT_SCALAR_SWITCH",
+      "why": "Transient YAP/TAZ activity supports fetal-like reprogramming and regeneration in intestine and can promote cardiomyocyte proliferation, but mechanical YAP in conventional skin fibroblasts can drive En1-positive scar formation. Adult Acomys shows yet another YAP dynamic associated with regeneration.",
+      "rule": "YAP_STATE must include cell_type + upstream mechanical/biochemical context + duration + downstream transcriptional partner."
+    },
+    {
+      "node": "TGF_BETA",
+      "status": "ROUTER_NOT_SCALAR_SWITCH",
+      "why": "TGF-beta1/2-rich persistent signaling is strongly associated with fibrotic adult skin, yet canonical TGF-beta signaling is required for tenocyte recruitment and functional neonatal tendon regeneration; TGF-beta3 is enriched in regenerative contexts.",
+      "rule": "Never encode TGF-beta as simply pro-fibrotic or anti-regenerative without isoform, cell type, amplitude and timing."
+    },
+    {
+      "node": "P53",
+      "status": "TERMINATION_AND_CANCER_SAFETY_GATE",
+      "why": "In intestinal injury, p53 is required to terminate a transient fetal-like regenerative state; loss of p53 leaves cells locked in a highly proliferative YAP-high/glycolytic regenerative state and links regenerative persistence to cancer risk.",
+      "rule": "Safe renewal requires both ENTRY and EXIT gates."
+    }
+  ],
+  "tissue_matrix": [
+    {
+      "tissue": "heart",
+      "regenerative_state": "neonatal",
+      "loss_or_restriction": "rapidly postnatal; exact window varies by injury model, commonly within the first week in mouse",
+      "gate_changes": ["cell-cycle withdrawal", "polyploidization/binucleation", "sarcomere maturation", "chromatin restriction", "oxidative metabolic shift and ROS/DNA-damage signaling", "ECM stiffening/mechanical loading", "immune-response maturation", "fibrotic replacement"],
+      "strongest_causal_nodes": ["mitotic competence", "ECM mechanics", "immune/macrophage state"],
+      "status": "HIGH_CONFIDENCE_MODEL_SYSTEM"
+    },
+    {
+      "tissue": "cochlea",
+      "regenerative_state": "neonatal supporting-cell plasticity",
+      "loss_or_restriction": "first postnatal week in mouse",
+      "gate_changes": ["loss of supporting-cell proliferative/transdifferentiation competence", "loss of H3K4me1-primed hair-cell enhancers", "increasing chromatin inaccessibility", "reduced response to Wnt/Notch manipulations"],
+      "strongest_causal_nodes": ["epigenetic accessibility", "cell-state competence"],
+      "status": "HIGH_CONFIDENCE_LOCAL_PLASTICITY_LOCK"
+    },
+    {
+      "tissue": "spinal_cord",
+      "regenerative_state": "neonatal scar-free bridge-permissive repair",
+      "loss_or_restriction": "declines with maturation",
+      "gate_changes": ["microglial state changes", "loss of transient fibronectin bridge program", "reduced inflammation-resolution program", "adult scar environment and axon-growth restriction"],
+      "strongest_causal_nodes": ["microglial identity/kinetics", "ECM bridge versus scar routing"],
+      "status": "HIGH_CONFIDENCE_IMMUNE_NICHE_LOCK"
+    },
+    {
+      "tissue": "skin",
+      "regenerative_state": "early fetal scarless healing",
+      "loss_or_restriction": "during fetal-to-late-development maturation rather than one universal postnatal date",
+      "gate_changes": ["immune maturation", "TGF-beta isoform/duration shift", "fibroblast lineage/activation changes", "ECM composition and crosslinking", "mechanical tension and YAP-En1 scar routing"],
+      "strongest_causal_nodes": ["mechanotransduction/fibroblast state", "immune/fibrotic kinetics", "ECM"],
+      "status": "HIGH_CONFIDENCE_REGENERATION_TO_SCAR_MODEL"
+    },
+    {
+      "tissue": "tendon",
+      "regenerative_state": "neonatal functional regeneration",
+      "loss_or_restriction": "adult healing becomes limited/scar-biased",
+      "gate_changes": ["cell recruitment competence", "immune/macrophage support", "matrix maturation and load", "TGF-beta signaling context"],
+      "strongest_causal_nodes": ["TGF-beta-dependent tenocyte recruitment", "macrophage support"],
+      "status": "STRONG_COUNTEREXAMPLE_TO_SIMPLE_TGF_BETA_BLOCKADE"
+    }
+  ],
+  "adult_regenerative_positive_controls": [
+    {
+      "tissue": "intestine_colon",
+      "finding": "Adult injury can transiently reactivate fetal-like programs through YAP/TAZ-associated plasticity; p53 is required for exit and restoration of homeostasis.",
+      "lesson": "A mature tissue can retain a reversible developmental permission window if activation and termination remain coupled.",
+      "sources": ["PMID:38971147", "PMID:39453996", "PMID:40054463"]
+    },
+    {
+      "tissue": "stomach_pancreas",
+      "finding": "Mature differentiated cells can enter paligenosis: autophagy/mTORC1-downshift, state remodeling, then mTORC1 reactivation and cell-cycle re-entry.",
+      "lesson": "Terminal differentiation does not always mean irreversible loss of plasticity; safe regeneration may require staged dismantling and rebuild rather than a single proliferation trigger.",
+      "sources": ["DOI:10.1016/j.stem.2024.05.009", "PMID:41733879"]
+    },
+    {
+      "tissue": "liver",
+      "finding": "Adult liver retains exceptional regeneration through hepatocyte proliferation, dedifferentiation/progenitor activation, immune-ECM coordination and termination signals.",
+      "lesson": "The adult mammal already contains a working example of high regeneration with cancer/fibrosis brakes; it is a critical control, not an exception to ignore.",
+      "sources": ["DOI:10.1038/s41392-024-02104-8", "PMID:41420250"]
+    },
+    {
+      "tissue": "skeletal_muscle",
+      "finding": "Adult regeneration is preserved through quiescent satellite cells that transiently activate, proliferate, differentiate and self-renew; aging degrades the niche through inflammation, ECM stiffening and altered signaling.",
+      "lesson": "Quiescence itself is not the enemy; reversible quiescence with a preserved niche is a safe-renewal architecture.",
+      "sources": ["PMID:42394625", "DOI:10.1186/s13287-025-04481-5"]
+    },
+    {
+      "tissue": "Acomys_multiple_tissues",
+      "finding": "Adult spiny mice preserve regenerative or low-fibrosis responses across skin, muscle, kidney, heart and spinal cord, with recurring differences in inflammation, biomechanics, cell-cycle deployment and transient fibrotic signaling.",
+      "lesson": "Adult mammalian regeneration is biologically possible without globally remaining neonatal; mature systems can evolve alternative routing of the same injury-response machinery.",
+      "sources": ["PMID:39805008", "PMID:32599302", "PMID:37126559"]
+    }
+  ],
+  "reverse_to_human_result": {
+    "old_question": "Which regeneration genes are humans missing?",
+    "new_question": "Which coupled maturation locks prevent adult human tissues from transiently entering and then safely exiting a developmental-like regenerative state?",
+    "surviving_architecture": [
+      "DAMAGE_DETECTION",
+      "LOCAL_PERMISSION_TO_DEDIFFERENTIATE_OR_ACTIVATE_PROGENITORS",
+      "TEMPORARY_CELL_CYCLE_OR_REPLACEMENT_PROGRAM",
+      "PERMISSIVE_ECM_AND_MECHANICS",
+      "PRO_REGENERATIVE_IMMUNE_SUPPORT_WITH_TIMELY_RESOLUTION",
+      "SPATIAL_PATTERN_AND_LINEAGE_CONTROL",
+      "FIBROSIS_AS_TRANSIENT_SUPPORT_NOT_TERMINAL_STATE",
+      "P53_AND_OTHER_CANCER_SAFETY_CHECKS",
+      "MANDATORY_EXIT_FROM_REGENERATIVE_STATE",
+      "RETURN_TO_TISSUE_HOMEOSTASIS"
+    ]
+  },
+  "longgevity_survivor_v2": {
+    "status": "SURVIVES_AS_STRONG_WORKING_MODEL",
+    "statement": "The repeated cross-tissue unit is not permanent youth or unrestricted proliferation. It is reversible developmental plasticity embedded inside a mature safety architecture: enter locally, rebuild, preserve lineage and geometry, suppress malignant escape, then terminate the regenerative state and return to homeostasis.",
+    "formula": "SAFE_RENEWAL = LOCAL_ENTRY_PERMISSION + PLASTICITY/PROLIFERATION + PERMISSIVE_NICHE + IMMUNE_RESOLUTION + PATTERN_CONTROL + CANCER_GATES + RELIABLE_EXIT",
+    "strongest_new_prediction": "Adult regenerative tissues and regenerative mammals should differ from scar-biased tissues less by possession of unique genes than by the timing, reversibility and coupling of common developmental, mechanical, immune and termination programs."
+  },
+  "next_killer_tests": [
+    {
+      "priority": "P0",
+      "test": "Build a time-aligned multi-tissue matrix (developmental age normalized to regenerative-window closure, not chronological day) for heart, cochlea, spinal cord, tendon and skin; score chromatin accessibility, proliferative competence, ECM stiffness/crosslinking, macrophage/microglia state and fibrotic output at pre-closure, transition and post-closure states."
+    },
+    {
+      "priority": "P0",
+      "test": "Use adult-regenerative controls (intestine, liver, skeletal muscle) to identify which MATURATION_LOCK modules are transiently reopened after injury and which remain permanently open."
+    },
+    {
+      "priority": "P0",
+      "test": "Compare ordinary mouse versus adult Acomys across matched tissues to test whether reduced fibrosis and regenerative healing co-segregate with immune-resolution kinetics and ECM/mechanotransduction rather than a single pathway."
+    },
+    {
+      "priority": "P1",
+      "test": "Search for a conserved ENTRY/EXIT pair: candidate ENTRY nodes include YAP/TAZ-fetal-like reversion and paligenosis; candidate EXIT nodes include p53-dependent termination, restoration of Wnt/RA/homeostatic programs and re-establishment of quiescence."
+    }
+  ],
+  "topa_rejections": [
+    "ONE_GENE_CAUSES_REGENERATION",
+    "YAP_ALWAYS_PRO_REGENERATIVE",
+    "TGF_BETA_ALWAYS_ANTI_REGENERATIVE",
+    "INFLAMMATION_MUST_BE_ZERO",
+    "QUIESCENCE_IS_THE_PROBLEM",
+    "SCAR_FORMATION_MUST_BE_COMPLETELY_DISABLED",
+    "KEEP_CELLS_PERMANENTLY_IN_A_FETAL_STATE"
+  ]
+}
