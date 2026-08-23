@@ -1,0 +1,108 @@
+{
+  "schema": "janus.lapis.longevity_survivor.human_tissue_permission_matrix.v1_0",
+  "artifact_id": "HUMAN-TISSUE-RENEWAL-PERMISSION-MATRIX-2026-08-23-v1.0",
+  "created_at_local": "2026-08-23T22:39:00+03:00",
+  "status": "COMPARATIVE_HUMAN_TISSUE_MAP_NOT_THERAPEUTIC_PROTOCOL",
+  "purpose": "Use within-human tissue differences as a stronger control than cross-species analogy for identifying which regenerative functions are present but gated.",
+  "central_hypothesis": "If the same human genome supports both highly renewing and poorly renewing tissues, then at least part of adult regenerative limitation is controlled by tissue state, niche, developmental program, damage response and safety gating rather than simple absence of regeneration genes.",
+  "matrix": [
+    {
+      "tissue": "intestinal epithelium",
+      "renewal_mode": "CONTINUOUS_HIGH",
+      "core_machinery": ["LGR5-positive stem cells", "Wnt-driven renewal", "lineage differentiation", "crypt niche", "cell competition"],
+      "safety_tradeoff": "The same Wnt/stemness machinery that sustains constant renewal is deeply coupled to colorectal tumorigenesis when regulatory control is lost.",
+      "janus_read": "RENEWAL_ALLOWED_CONTINUOUSLY_BUT_SPATIALLY_CONFINED",
+      "evidence_refs": ["Nature Reviews Molecular Cell Biology 2025 Wnt-beta-catenin review", "Experimental & Molecular Medicine intestinal stem cell review"]
+    },
+    {
+      "tissue": "skin",
+      "renewal_mode": "CONTINUOUS_PLUS_WOUND_REPAIR",
+      "core_machinery": ["epidermal stem/progenitor renewal", "hair-follicle-associated plasticity", "fibroblast remodeling", "immune coordination"],
+      "safety_tradeoff": "Adult wound healing often favors scar formation; mechanical tension, TGF-beta and YAP/TAZ can push repair toward fibrosis, while regenerative appendage formation requires tightly patterned local signals.",
+      "janus_read": "RENEWAL_PRESENT_RECONSTRUCTION_PARTIALLY_GATED",
+      "evidence_refs": ["Cell Discovery 2025 spatiotemporal wound-healing review"]
+    },
+    {
+      "tissue": "liver",
+      "renewal_mode": "DAMAGE_TRIGGERED_HIGH",
+      "core_machinery": ["mature hepatocyte cell-cycle re-entry", "growth-factor and cytokine priming", "metabolic reprogramming", "termination after mass restoration"],
+      "safety_tradeoff": "Chronic injury can shift regeneration toward fibrosis and carcinogenesis; successful regeneration therefore depends on both ON and STOP signals.",
+      "janus_read": "HUMAN_PROOF_THAT_ADULT_ORGAN_REGENERATION_CAN_BE_TEMPORARY_AND_TERMINABLE",
+      "evidence_refs": ["Signal Transduction and Targeted Therapy 2025 liver regeneration review"]
+    },
+    {
+      "tissue": "hematopoietic system",
+      "renewal_mode": "CONTINUOUS_SYSTEMIC",
+      "core_machinery": ["hematopoietic stem cells", "quiescence", "self-renewal", "multilineage differentiation", "bone-marrow niche"],
+      "safety_tradeoff": "Repeated stem-cell division under aging/inflammation permits clonal selection; clonal hematopoiesis shows that renewal capacity can be hijacked by mutation-bearing clones.",
+      "janus_read": "RENEWAL_REQUIRES_CLONAL_SURVEILLANCE_NOT_JUST_STEMNESS",
+      "evidence_refs": ["Nature Reviews Molecular Cell Biology 2026 inflammageing and clonal haematopoiesis", "Nature Cell Biology 2025 haematopoietic ageing"]
+    },
+    {
+      "tissue": "skeletal muscle",
+      "renewal_mode": "QUIESCENT_UNTIL_INJURY",
+      "core_machinery": ["satellite cells", "reversible quiescence", "injury-triggered expansion", "differentiation and stem-pool restoration"],
+      "safety_tradeoff": "Quiescence protects long-lived progenitors from exhaustion and mutation, but aging and niche dysfunction reduce regenerative output.",
+      "janus_read": "SAFE_RENEWAL_PATTERN = SLEEP -> LOCAL_WAKE -> EXPAND -> DIFFERENTIATE -> RETURN_TO_SLEEP",
+      "evidence_refs": ["Nature Reviews Molecular Cell Biology satellite-cell regeneration review", "Nature Cell Biology 2025 quiescence review"]
+    },
+    {
+      "tissue": "heart muscle",
+      "renewal_mode": "LOW_IN_ADULTS",
+      "core_machinery": ["limited cardiomyocyte cell-cycle re-entry", "Hippo-YAP growth-control machinery", "fibroblast wound response"],
+      "developmental_control": "Mammalian hearts possess strong neonatal regenerative capacity that is sharply reduced later; human adult cardiomyocyte renewal is low and injury usually produces scar.",
+      "safety_tradeoff": "Forcing proliferation without precise control can cause fibrosis, abnormal growth or oncogenic signaling.",
+      "janus_read": "STRONGEST_WITHIN_MAMMAL_EVIDENCE_FOR_DEVELOPMENTALLY_CLOSED_PERMISSION_GATE",
+      "evidence_refs": ["Nature Reviews Molecular Cell Biology 2026 mammalian regeneration perspective", "Nature Reviews Cardiology 2026 YAP cardiac regeneration", "npj Regenerative Medicine 2025 fibrosis review"]
+    },
+    {
+      "tissue": "central nervous system",
+      "renewal_mode": "LOW_AND_REGION_RESTRICTED",
+      "core_machinery": ["limited neural progenitor activity", "glial injury response", "plasticity without broad neuron replacement"],
+      "safety_tradeoff": "Preserving stable circuit identity and connectivity places unusually high cost on uncontrolled cell replacement or dedifferentiation.",
+      "janus_read": "IDENTITY_AND_CONNECTIVITY_GATE_DOMINANT",
+      "evidence_refs": ["general adult mammalian regeneration literature; requires dedicated CNS deep pass"]
+    },
+    {
+      "tissue": "bone",
+      "renewal_mode": "CONTINUOUS_REMODELING",
+      "core_machinery": ["osteoblast formation", "osteoclast resorption", "mesenchymal progenitors", "mechanical load sensing"],
+      "safety_tradeoff": "Renewal is distributed as remodeling rather than full organ reset; endocrine, inflammatory and mechanical state alter balance with age.",
+      "janus_read": "RENEWAL_CAN_BE_CONTINUOUS_WHEN_GEOMETRY_IS_MAINTAINED_BY_COUPLED_BUILD_AND_REMOVE",
+      "evidence_refs": ["Nature Reviews Endocrinology 2025 bone-muscle crosstalk review"]
+    }
+  ],
+  "cross_tissue_survivors": [
+    "HIGH_RENEWAL_DOES_NOT_REQUIRE_GLOBAL_DEDIFFERENTIATION",
+    "SAFE_RENEWAL_IS_NICHE_BOUND_AND_SPATIALLY_CONSTRAINED",
+    "QUIESCENCE_IS_A_FEATURE_NOT_A_FAILURE",
+    "THE_STOP_SIGNAL_IS_AS_IMPORTANT_AS_THE_START_SIGNAL",
+    "CANCER_RISK_TRACKS_RENEWAL_CONTROL_FAILURE_NOT_RENEWAL_PER_SE",
+    "FIBROSIS_IS_OFTEN_A_FAST_STABILITY_FALLBACK_WHEN_EXACT_RECONSTRUCTION_IS_UNAVAILABLE",
+    "TISSUE_IDENTITY_AND_GEOMETRY_ARE_FIRST_CLASS_GATES"
+  ],
+  "transception_delta": {
+    "before": "Ask what regenerative machinery humans are missing.",
+    "after": "Compare human tissues that already regenerate with those that do not, then identify the control variables that differ despite a shared genome.",
+    "strongest_candidate_variables": [
+      "developmental state",
+      "stem-cell availability and quiescence",
+      "niche signals",
+      "Hippo-YAP/TAZ and organ-size control",
+      "Wnt and lineage-state control",
+      "p53/p16-RB damage checkpoints",
+      "telomere/telomerase state",
+      "TGF-beta/fibrosis response",
+      "immune-state timing",
+      "positional information and termination"
+    ]
+  },
+  "topa_status": {
+    "one_master_switch": "REFUTED_AS_SUFFICIENT",
+    "humans_have_no_regeneration": "REFUTED_AS_GLOBAL_CLAIM",
+    "regeneration_equals_uncontrolled_growth": "REFUTED_AS_IDENTITY; high-renewal tissues show controlled physiological renewal",
+    "regeneration_can_ignore_cancer_control": "REFUTED",
+    "best_survivor": "SAFE_RENEWAL_IS_A_TISSUE_SPECIFIC_PERMISSION_STATE_WITH_START_STOP_LINEAGE_AND_CLONAL_CONTROL"
+  },
+  "next_gate": "Build DEVELOPMENTAL_PERMISSION_MATRIX comparing neonatal, adult and aged states in heart, liver, muscle, skin, intestine and hematopoietic tissue; search for controls that change in the same direction when regenerative permission closes."
+}
