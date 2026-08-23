@@ -1,0 +1,60 @@
+{
+  "schema": "janus.lapis.longevity_survivor.telomerase_tradeoff.v1_0",
+  "artifact_id": "TELOMERASE-CANCER-TRADEOFF-TRANCEPTION-2026-08-23-v1.0",
+  "parent": "LONGEVITY-SURVIVOR-TRANCEPTION-2026-08-23-v1.0",
+  "anchor_gate": "3_TELOMERE_AND_REPLICATIVE_CAPACITY",
+  "status": "LOCAL_5D_BRANCH_RETURNED_TO_PARENT_AS_SPLIT",
+  "frozen_claim": "More telomerase or longer telomeres should generally produce greater organismal longevity.",
+  "D1_CAUSAL": {
+    "forward": "Higher telomerase can preserve telomere length and long-term proliferative capacity.",
+    "back": "Long-term tissue renewal requires sufficient replicative capacity, but replicative capacity alone does not specify whether expanding clones remain safe.",
+    "failure_mode": "A clone that bypasses replicative limits while accumulating oncogenic changes gains a selective advantage.",
+    "delta": "Telomere maintenance must be coupled to mutation control, tumour suppression and cell-state verification."
+  },
+  "D2_HOMOLOG_MIRROR": {
+    "left": {
+      "model": "Homarus americanus",
+      "finding": "High telomerase activity was reported in all examined organs and is compatible with indeterminate growth.",
+      "source": "Klapper et al., FEBS Lett 1998, PMID:9849895"
+    },
+    "right": {
+      "model": "Many mammals",
+      "finding": "Somatic telomerase repression and shorter telomeres can function as tumour-suppressive replicative barriers; comparative analyses do not support a universal longer-telomere/longer-life rule.",
+      "sources": ["PMID:33662151", "PMID:21518243", "Evolution 2025 comparative analysis across 122 vertebrate species"]
+    },
+    "matched_control_result": "Opposite telomere strategies can coexist with longevity. Therefore telomerase level is not the invariant; safe control of proliferative capacity is."
+  },
+  "D3_ABSTRACTION": {
+    "ascend_from_telomerase": "REPLICATIVE_CAPACITY_CONTROL",
+    "higher_invariant": "Permit enough renewal to maintain tissues while preventing indefinite expansion of genomically unsafe clones.",
+    "dive": ["telomerase activity", "telomere length", "telomere protection", "p53/Rb checkpoints", "apoptosis", "immune surveillance", "DNA-repair fidelity"]
+  },
+  "D4_EXPAND_CONTRACT": {
+    "expanded": ["lobster", "rainbow trout", "bats with detectable telomerase", "large mammals with telomerase repression", "Peto's paradox"],
+    "contracted": ["replicative capacity is necessary for renewal", "unrestricted replicative capacity is dangerous", "different lineages solve the tradeoff differently"],
+    "rejected": ["maximize telomerase", "maximize telomere length", "telomerase equals immortality"]
+  },
+  "D5_PROVENANCE": {
+    "direct": ["lobster organ telomerase assays", "comparative mammalian/vertebrate telomere datasets"],
+    "inference": "Telomerase is a context-dependent module in a larger renewal/cancer-control architecture.",
+    "claim_ceiling": "No comparative result here establishes that increasing telomerase in humans would extend healthy lifespan or be safe."
+  },
+  "LOCAL_DELTA": {
+    "old_gate": "TELOMERE_AND_REPLICATIVE_CAPACITY",
+    "new_gate": "CONTROLLED_REPLICATIVE_CAPACITY",
+    "new_rule": "RENEWAL_CAPACITY must be sufficient, but every increase must be evaluated against CANCER_ESCAPE and GENOME_FIDELITY.",
+    "return_to_parent_as": "SPLIT"
+  },
+  "TOPA_status": {
+    "MORE_TELOMERASE_EQUALS_LONGER_LIFE": "REFUTED_AS_GENERAL_RULE",
+    "LONGER_TELOMERES_EQUALS_LONGER_LIFE": "NOT_SUPPORTED_AS_GENERAL_RULE",
+    "SAFE_REPLICATIVE_CAPACITY_IS_A_LONGEVITY_MODULE": "SURVIVES"
+  },
+  "sources": [
+    "Klapper et al. 1998, PMID:9849895",
+    "Le Pepke & Eisenberg 2021, PMID:33662151",
+    "Gomes et al. comparative mammalian telomere framework, PMID:21518243",
+    "Evolution 2025: Why are telomeres the length that they are? comparative analysis across 122 vertebrate species",
+    "Nature 2022: Cancer risk across mammals, DOI:10.1038/s41586-021-04224-5"
+  ]
+}
