@@ -1,14 +1,16 @@
 {
   "artifact_id": "POLYPEDILUM-OUTREACH-MANIFEST-2026-08-24-v1.0",
-  "status": "SENT_SINGLE_TECHNICAL_OUTREACH_AWAITING_REPLY",
+  "status": "RESENT_TO_CURRENT_NARO_ADDRESS_AWAITING_REPLY",
   "repository": "Hawkar-usls/janus-lapis",
   "branch": "LONGEVITY-SURVIVOR",
   "recipient": {
     "name": "Richard Cornette",
     "institution": "Institute of Agrobiological Sciences, NARO",
     "group": "Extremotolerance Biotechnology Group",
-    "email": "cornette@affrc.go.jp",
-    "verification": "Public professional address listed in PubMed for Mitochondrion 2023; NARO currently lists Richard Cornette as a member of the Extremotolerance Biotechnology Group."
+    "current_email": "cornette.richard704@naro.go.jp",
+    "current_email_verification": "Listed in the 2025 Scientific Reports Pv11 paper DOI:10.1038/s41598-025-19627-x / PMID:41073648.",
+    "obsolete_email": "cornette@affrc.go.jp",
+    "obsolete_email_evidence": "Listed in the 2023 Mitochondrion paper DOI:10.1016/j.mito.2023.11.002 but rejected by the receiving mail server on 2026-08-24 with 550 5.1.0 Address rejected."
   },
   "subject": "Technical question on Pv11 rehydration: DNA-repair timing versus proliferation restart",
   "packet": [
@@ -26,8 +28,24 @@
     "no human longevity or therapeutic claim"
   ],
   "single_primary_request": "Ask whether denser 0-96 h Pv11 cell-cycle/proliferation data or matched damage/repair perturbation data exist that could test whether unresolved DNA damage causally shifts proliferation restart.",
-  "sent_at_local": "2026-08-24T00:03:00+03:00",
-  "delivery_state": "SENT",
+  "delivery_history": [
+    {
+      "attempt": 1,
+      "sent_at_local": "2026-08-24T00:03:00+03:00",
+      "email": "cornette@affrc.go.jp",
+      "state": "BOUNCED",
+      "smtp": "550 5.1.0 Address rejected",
+      "delivered": false
+    },
+    {
+      "attempt": 2,
+      "sent_at_local": "2026-08-24T00:14:00+03:00",
+      "email": "cornette.richard704@naro.go.jp",
+      "state": "SENT",
+      "delivered": "AWAITING_SERVER_OR_RECIPIENT_FEEDBACK"
+    }
+  ],
   "email_sent": true,
-  "next_gate": "WAIT_FOR_REPLY_OR_NEW_PUBLIC_DATA; DO_NOT_INFER_CAUSALITY_FROM_SILENCE"
+  "delivery_state": "RESENT_TO_CURRENT_NARO_ADDRESS_AWAITING_REPLY",
+  "next_gate": "WAIT_FOR_REPLY_OR_BOUNCE; DO_NOT_INFER_CAUSALITY_FROM_SILENCE"
 }
