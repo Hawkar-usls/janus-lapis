@@ -1,0 +1,98 @@
+{
+  "schema_id": "janus.resolution-gate.node.v1",
+  "node_id": "SKIN_CAUSAL_EXIT_NODE_FMOD_2025",
+  "gate": "TEMPORARY_WOUND_STATE_TO_PERSISTENT_SCAR_STATE",
+  "status": "P0_CAUSAL_SUPPORT_SKIN",
+  "tissue": "skin",
+  "claim_class": "CAUSAL_EXIT_SUPPORT",
+  "paper": {
+    "title": "Fibromodulin selectively accelerates myofibroblast apoptosis in cutaneous wounds by enhancing interleukin 1β signaling",
+    "authors_short": "Jiang et al.",
+    "journal": "Nature Communications",
+    "published": "2025-04-12",
+    "doi": "10.1038/s41467-025-58906-z",
+    "url": "https://www.nature.com/articles/s41467-025-58906-z"
+  },
+  "intervention": {
+    "name": "fibromodulin (FMOD)",
+    "target_process": "myofibroblast apoptosis/clearance",
+    "proposed_mechanism": "enhanced and prolonged IL-1β–IL1R1–IL1RAP complex formation pushes apoptosis-primed myofibroblasts across a cell-death threshold",
+    "temporal_specificity": "MODERATE",
+    "note": "FMOD was administered in the wound-treatment paradigm rather than as a late-only depletion pulse; therefore the in-vivo outcome can include earlier FMOD effects in addition to accelerated late myofibroblast clearance."
+  },
+  "models": [
+    {
+      "species": "rat",
+      "age": "adult",
+      "endpoint": "day 14",
+      "source_figure": "Fig. 1b-c",
+      "alpha_SMA_positive_cell_density_pct": {
+        "control_mean": 13.4983813333,
+        "control_sd": 6.166684926,
+        "control_n": 12,
+        "FMOD_mean": 5.0140047857,
+        "FMOD_sd": 2.391311854,
+        "FMOD_n": 14,
+        "FMOD_vs_control_percent_change": -62.8548
+      },
+      "cleaved_caspase_3_positive_cell_density_pct": {
+        "control_mean": 2.9166666667,
+        "control_sd": 0.642202649,
+        "control_n": 12,
+        "FMOD_mean": 7.9083333333,
+        "FMOD_sd": 1.094164965,
+        "FMOD_n": 12,
+        "FMOD_vs_control_fold": 2.71143
+      }
+    },
+    {
+      "species": "red Duroc pig",
+      "sex": "female",
+      "age": "adult",
+      "model": "cutaneous wound under excessive mechanical loading",
+      "endpoint": "week 8",
+      "source_figure": "Fig. 1e-f",
+      "alpha_SMA_positive_cell_density_pct": {
+        "control_mean": 50.7733955556,
+        "control_sd": 21.685223745,
+        "control_n_wounds": 9,
+        "FMOD_mean": 26.2587013333,
+        "FMOD_sd": 13.074838587,
+        "FMOD_n_wounds": 9,
+        "FMOD_vs_control_percent_change": -48.2826
+      },
+      "cleaved_caspase_3_positive_cell_density_pct": {
+        "control_mean": 3.6555555556,
+        "control_sd": 0.534114012,
+        "control_n_wounds": 9,
+        "FMOD_mean": 7.3222222222,
+        "FMOD_sd": 1.238726945,
+        "FMOD_n_wounds": 9,
+        "FMOD_vs_control_fold": 2.00304
+      },
+      "biological_replication_note": "9 wounds from 3 pigs per group as reported for the figure-level analysis."
+    }
+  ],
+  "causal_chain": [
+    "wound activation",
+    "useful myofibroblast state",
+    "FMOD-enhanced apoptosis/clearance",
+    "lower persistence of alpha-SMA-positive myofibroblasts",
+    "reduced scar burden"
+  ],
+  "source_data": {
+    "xlsx_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-025-58906-z/MediaObjects/41467_2025_58906_MOESM4_ESM.xlsx",
+    "xlsx_sha256": "19dd47777546f07d5f8b3c8a041fcddc08e97d4ba3470cbad756ed9b41602381",
+    "relevant_sheets": ["Fig. 1b", "Fig. 1c", "Fig. 1e", "Fig. 1f", "Fig. 9b-f", "Fig. 10b-f"]
+  },
+  "killer_test": {
+    "criterion": "causal alteration of EXIT/resolution changes repair outcome",
+    "verdict": "PASS_WITH_TEMPORAL_CAVEAT",
+    "reason": "FMOD increases apoptotic clearance and lowers persistence of activated myofibroblasts in adult mammalian wounds while scar burden is reduced, but the intervention is not restricted to a late-only resolution window."
+  },
+  "half_life_status": {
+    "in_vivo_wound_state_half_life": "NOT_IDENTIFIABLE_FROM_PUBLISHED_TIMEPOINTS",
+    "reason": "The animal endpoints are sparse terminal anchors rather than a dense longitudinal decay series."
+  },
+  "reviewed": "2026-08-24"
+}
