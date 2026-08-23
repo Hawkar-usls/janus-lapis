@@ -1,0 +1,102 @@
+{
+  "schema": "janus.lapis.longevity_survivor.polypedilum_third_lineage_gate.v1_3",
+  "artifact_id": "POLYPEDILUM-THIRD-LINEAGE-GATE-CLOSEOUT-2026-08-23-v1.3",
+  "created_at_local": "2026-08-23T23:58:00+03:00",
+  "repository": "Hawkar-usls/janus-lapis",
+  "branch": "LONGEVITY-SURVIVOR",
+  "status": "P0_KINETIC_SURVIVOR_CAUSAL_GATE_OPEN",
+  "frozen_prediction": "After rehydration, low-risk/basic functions can restart before genome restoration is complete, while proliferation/developmental progression should restart on a later permission clock associated with recovery from damage.",
+  "preregistered_threshold": ">=3 independently evolved lineages with matched evidence that high-risk restart is temporally separated from basic-function recovery; causal promotion requires direct perturbation showing that damage-repair/checkpoint status shifts restart timing.",
+  "polypedilum_result": {
+    "organism": "Polypedilum vanderplanki",
+    "whole_larva": {
+      "basic_function": "physiological activity returns within ~1 h after rehydration",
+      "genome_integrity": "nuclear DNA restoration after anhydrobiosis typically requires ~72-96 h in comet/TEM assays",
+      "interpretation": "basic organismal function resumes long before whole-nuclear-DNA integrity is restored"
+    },
+    "pv11_cell_line": {
+      "origin": "embryonic cell line derived from P. vanderplanki",
+      "rehydration_early_function": [
+        "mitochondrial membrane potential can recover within ~30 min in preconditioned Pv11 cells",
+        "a preserved membrane-protein response is detectable ~1 h after rehydration in a 2025 engineered Pv11 line",
+        "de-novo-protein-dependent sensory response emerges from ~12 h and is strongly recovered by ~24 h"
+      ],
+      "dna_repair_program": [
+        "Pv11 transcriptomes sampled at 3 h and 24 h after rehydration show recovery-associated DNA-repair activity",
+        "a RAD16-like gene is specifically elevated at R3",
+        "NER-associated genes are elevated during rehydration including at R24",
+        "later transcriptomic work sampled R3/R12/R24/R72 and explicitly links rehydration-associated DNA-repair programs to recovery and resumption of proliferation"
+      ],
+      "proliferation_clock": {
+        "1_h": "live-cell concentration established as baseline",
+        "1_to_48_h": "live-cell concentration remains essentially stable; no significant growth",
+        "72_h": "significant cell growth first detected",
+        "144_h": "growth reaches a plateau in the 2025 time series"
+      },
+      "strongest_bridge": "EARLY FUNCTION 1-24 h -> DNA-REPAIR PROGRAM 3-24 h -> CELL NUMBER FLAT THROUGH 48 h -> SIGNIFICANT PROLIFERATION FROM 72 h"
+    }
+  },
+  "supporting_damage_load_test": {
+    "source_class": "JAEA technical annual-report evidence; supportive, below peer-reviewed causal tier",
+    "observation": "dried Pv11 cells exposed to larger ionizing-radiation damage showed delayed return to normal proliferation; 480 Gy samples were reported to begin normal proliferation around ~2 weeks rather than within ~1 week for lower-dose/control samples",
+    "interpretation": "damage load covaries with proliferation restart delay, but this is not accepted here as definitive repair-checkpoint causality"
+  },
+  "cross_lineage_update": {
+    "Bacillus_subtilis": "A_CAUSAL_CHECKPOINT",
+    "Adineta_vaga": "A_MINUS_STRONG_RISK_STRUCTURED_REPAIR",
+    "Polypedilum_vanderplanki": "A_MINUS_KINETIC_THIRD_LINEAGE",
+    "result": "THREE_LINEAGE_KINETIC_THRESHOLD_MET"
+  },
+  "topa": {
+    "promote": {
+      "claim": "HIGH_RISK_RESTART_IS_TEMPORALLY_SEPARATED_FROM_BASIC_FUNCTION_RECOVERY",
+      "status": "P0_KINETIC_SURVIVOR",
+      "reason": "Bacillus, Adineta and Polypedilum/Pv11 now provide three independently evolved lineages showing multi-clock recovery with later high-risk restart or high-fidelity genome handling."
+    },
+    "hold": {
+      "claim": "A_CONSERVED_DAMAGE_REPAIR_CHECKPOINT_CAUSALLY_GATES_HIGH_RISK_RESTART",
+      "status": "P1_CAUSAL_CANDIDATE",
+      "reason": "Polypedilum still lacks a direct matched perturbation in which DNA-repair/checkpoint impairment is shown to delay or deregulate the 72 h proliferation restart."
+    },
+    "refuted": [
+      "FULL_REPAIR_BEFORE_ANY_FUNCTION",
+      "ONE_REENTRY_CLOCK",
+      "BASIC_FUNCTION_RETURN_EQUALS_FULL_RECOVERY"
+    ]
+  },
+  "revised_operator": {
+    "name": "RISK_STRATIFIED_REENTRY_PERMISSION_GRAPH",
+    "formula": "REHYDRATION -> EARLY FUNCTION -> DAMAGE_PROCESSING -> FUNCTION_SPECIFIC_PERMISSION -> HIGH_RISK_RESTART -> STABLE_HOMEOSTASIS",
+    "important": "This is a cross-kingdom functional abstraction, not evidence for a conserved molecular pathway."
+  },
+  "next_decisive_experiment": {
+    "priority": "P0",
+    "system": "Pv11 / Polypedilum",
+    "test": "Measure DNA damage or repair-state and cell-cycle entry in the same rehydration experiment at dense time points from 0-96 h, then perturb a repair/checkpoint component and test whether the onset of S phase/proliferation shifts.",
+    "preferred_readouts": [
+      "DNA-damage burden",
+      "repair-state activity",
+      "EdU/BrdU or equivalent S-phase entry",
+      "cell-cycle phase distribution",
+      "live-cell number",
+      "mitochondrial/basic-function recovery",
+      "viability"
+    ],
+    "kill_rule": "If proliferation onset is unchanged despite experimentally increasing unresolved DNA damage or impairing relevant repair/checkpoint activity, the causal high-risk permission-gate model is weakened or rejected for Polypedilum."
+  },
+  "source_index": [
+    "DOI:10.1371/journal.pone.0014008",
+    "DOI:10.1038/s41598-018-36124-6",
+    "DOI:10.1371/journal.pone.0230218",
+    "DOI:10.1038/s41598-025-19627-x",
+    "DOI:10.1038/s41598-022-07707-1",
+    "DOI:10.11484/jaea-review-2014-050"
+  ],
+  "claim_ceiling": [
+    "KINETIC SEPARATION != CAUSAL CHECKPOINT",
+    "PV11 CELL LINE != WHOLE LARVA",
+    "SAME SPECIES DIFFERENT EXPERIMENTS != MATCHED SINGLE-EXPERIMENT CAUSALITY",
+    "CROSS-KINGDOM ARCHITECTURE != MOLECULAR HOMOLOGY",
+    "NO HUMAN LONGEVITY OR THERAPEUTIC CLAIM"
+  ]
+}
