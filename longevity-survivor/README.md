@@ -51,36 +51,17 @@ CANCER_ESCAPE remains controlled
 8. Epigenetic identity preservation or safe reset
 9. Tissue and systemic homeostasis
 
-The original seven-gate model was expanded during the 5D Tranception pass because DNA/cell-centric repair did not explicitly cover proteostasis, autophagy, mitochondrial quality, extracellular/tissue context, inflammation and intercellular communication.
-
-## Comparative anchors
-
-- **Turritopsis dohrnii** — repeated life-cycle reversal / reprogramming candidate
-- **Hydra** — continuous stem-cell self-renewal
-- **Homarus americanus** — broad telomerase activity / replicative capacity
-- **Giant tortoises** — genome maintenance + tumour-resistance candidates
-- **Greenland shark** — slow damage rate + DNA repair/chromatin/cancer candidates
-- **Bowhead whale** — high-fidelity DNA double-strand-break repair candidate
-- **Naked mole-rat** — extracellular-matrix/contact-inhibition/p53 anti-cancer architecture
-- **Elephants** — enhanced damage-triggered apoptosis / TP53 expansion
-- **Long-lived bats** — maintenance under unusually high metabolic load
-
 ## Reverse → HUMAN
 
 The human pass changes the question from **what regeneration machinery is missing?** to **which permission states allow a specific tissue to renew while preserving identity, geometry and tumour suppression?**
 
-Current result:
-
 ```text
 HUMANS_HAVE_MOST_COMPONENT_CLASSES = SUPPORTED
 ONE_GLOBAL_REGENERATION_SWITCH      = NOT_SUPPORTED
-CANCER_SUPPRESSION_IS_A_BRAKE       = PARTLY_TRUE_BUT_INCOMPLETE
 SAFE_RENEWAL                        = PERMISSION + CONTROL + STOP
 ```
 
-The strongest within-human control is the contrast between tissues that share the same genome but have very different regenerative behavior: intestine, skin, blood and liver renew strongly; skeletal muscle uses injury-triggered quiescent progenitors; adult heart and CNS are much more restricted.
-
-This produces an emergent cross-cutting gate:
+The strongest within-human control is the contrast between tissues that share the same genome but have very different regenerative behavior. This produces an emergent cross-cutting gate:
 
 ```text
 SPATIOTEMPORAL_ORCHESTRATION_AND_TERMINATION
@@ -88,100 +69,91 @@ SPATIOTEMPORAL_ORCHESTRATION_AND_TERMINATION
 
 A renewal program must be local, temporary, lineage-preserving, damage-aware, spatially instructed, cancer-surveilled and reliably terminable.
 
-## Human safety-gate stack
-
-1. **Cancer permission** — p53/p21, p16/RB, apoptosis, senescence, immune surveillance.
-2. **Lineage identity** — epigenetic and transcriptional barriers against uncontrolled dedifferentiation.
-3. **Spatiotemporal termination** — organ-size, positional and mechanical controls including Hippo/YAP/TAZ.
-4. **Replicative capacity** — telomerase repression, telomere attrition and replicative senescence.
-5. **Stem-cell quiescence** — protects long-lived pools from exhaustion and clonal expansion.
-6. **Fibrosis / wound closure** — fast mechanical stabilization can outrank exact reconstruction.
-7. **Immune-state control** — debris and abnormal-cell clearance are necessary, but chronic inflammation can damage regenerative niches.
-
-None of these should be treated as a defect to delete globally. The working model is that **SAFE RENEWAL must preserve the brakes and change when and where permission is granted.**
-
 ## Lock-aligned cross-tissue pass — v2.1
 
-The developmental pass now aligns tissues by the **relative loss of regenerative capacity** rather than by chronological age:
+The developmental pass aligns HEART / COCHLEA / SPINAL CORD / SKIN / TENDON by the **relative loss of regenerative capacity** rather than by chronological age:
 
 ```text
 BEFORE_LOCK → LOCK_TRANSITION → AFTER_LOCK
        tau<0       tau≈0            tau>0
 ```
 
-The five focal tissues are **HEART / COCHLEA / SPINAL CORD / SKIN / TENDON** and the overlay is performed over chromatin/plasticity, ECM/mechanics, immune state, resident-cell recruitment or cell-cycle competence, fibrosis/scar persistence, and EXIT/resolution machinery.
+### P0-A — RESIDENT_REGENERATIVE_COMPETENCE_COLLAPSE
 
-### P0 survivors
+Strong independent support: heart, cochlea, tendon; supportive parallels: spinal cord and skin.
 
-**P0-A — RESIDENT_REGENERATIVE_COMPETENCE_COLLAPSE**
+### P0-B — TEMPORARY_WOUND_STATE / RESOLUTION
+
+Strong support: spinal cord, skin, tendon; supportive cardiac parallel.
+
+### P0-C — NICHE_MECHANICAL_MATURATION
+
+Heart and skin provide strong causal support. A third clean developmental native-mechanics perturbation is still required before promotion.
+
+## Resolution-gate kinetic killer test — v2.2
+
+The half-life hypothesis was tested directly against published time courses. The simple rule
 
 ```text
-HIGH PLASTICITY / RECRUITABILITY
-        ↓
-MATURATION LOCK
-        ↓
-LOW REGENERATIVE COMPETENCE
+REGENERATION = SHORT WOUND STATE
+SCAR         = SAME STATE PERSISTS
 ```
 
-Strong independent support currently comes from heart, cochlea and tendon, with supportive parallels in spinal cord and skin. The invariant is functional; it is not evidence for one shared molecular switch.
+**does not survive as a universal rule.**
 
-**P0-B — TRANSIENT_WOUND_STATE → PERSISTENT_SCAR_STATE**
+### What survives
 
-```text
-TEMPORARY BRIDGE / HELPER / MYOFIBROBLAST-LIKE STATE
-        ↓
-RESOLUTION OR FAILURE-TO-RESOLVE
-        ↓
-RESTORED TISSUE  OR  PERSISTENT SCAR
-```
+- **Neonatal spinal cord:** Fn1-high microglial bridge state is present at ~3 dpi, absent in the reported 5 dpi in-situ time point, fibronectin bridge is gone by ~7 dpi, and microglia return toward homeostasis within the first week. Adult lesions retain activated macrophage/microglial states and scar architecture much longer.
+- **Neonatal tendon:** alpha-SMA+ helper cells are abundant early and strongly reduced by d14; scar-associated transcripts return toward control by d28 while intrinsic tenocyte recruitment builds neo-tendon.
+- **Acomys ear skin:** myofibroblasts are transient during regeneration, and experimentally prolonging their persistence by YAP-TEAD inhibition shifts healing toward fibrosis.
 
-Strong support currently comes from spinal cord, skin and tendon, with a supportive cardiac parallel. The cochlea is intentionally left outside this module because classic fibrosis is not its dominant lock phenotype.
+### What kills the half-life-only model
 
-### P0 candidate pending one more causal tissue
+- **Adult heart:** alpha-SMA myofibroblasts are themselves transient and largely lose alpha-SMA by ~10–14 days, yet the scar persists because fibroblasts transition into alternate scar-maintaining states and ECM matures.
+- **Acomys full-thickness skin (29 July 2026):** dermal alpha-SMA+ wound-bed cells clear earlier than in Mus, but a separate alpha-SMA+ bridge at the panniculus carnosus persists for weeks while muscle regenerates successfully.
 
-**NICHE_MECHANICAL_MATURATION**
+Therefore persistence time alone is not the invariant.
 
-Heart and skin provide strong causal support that mature mechanics/ECM can redirect regenerative competence. Spinal cord and tendon support the broader matrix-architecture transition, but a third clean developmental stiffness/mechanics perturbation is still required before this becomes a hard cross-tissue survivor.
-
-### Deliberately not promoted
-
-- **Universal immune lock** — P1: strong in heart and spinal cord, but tissue-specific identities and timing remain too different.
-- **Universal chromatin lock** — P1: exceptionally strong in cochlea, but matched tau-aligned chromatin time series are missing for several focal tissues.
-- **YAP = regeneration ON** — refuted as a scalar rule.
-- **TGF-beta inhibition = regeneration** — refuted as a scalar rule.
-- **All six axes close synchronously** — refuted.
-
-### Current v2.1 survivor
+### Revised P0 survivor
 
 ```text
-REVERSIBLE_MATURATION_LOCK_WITH_RESOLUTION
+WOUND_STATE_FATE_ROUTING_AND_RESOLUTION_GATE
 =
-LOCAL_ENTRY_PERMISSION
-+ RESIDENT_CELL_COMPETENCE
-+ PERMISSIVE_NICHE
-+ TEMPORARY_WOUND_STATE
-+ PATTERNED_REBUILD
-+ RESOLUTION
-+ MANDATORY_EXIT
+ENTRY
+→ WOUND STATE
+→ SPATIAL ROUTING
+→ HANDOFF TO REBUILD
+→ TERMINATE PROFIBROTIC OUTPUT
+→ CLEAR / REDIFFERENTIATE / REDIRECT / FATE-SWITCH
+→ RESTORE ARCHITECTURE
 ```
 
-The strongest current interpretation is that mammalian regeneration loss is a **coordinated state transition**, not simply absence of a pathway. Regeneration repeatedly requires both temporary access to a plastic state and reliable return to stable lineage-correct tissue.
+The key variable is **where the wound-state goes**, not merely how long one marker remains positive.
 
-## TOPA-style falsification state
+Required measurements now include:
+
+1. duration;
+2. spatial compartment;
+3. cell-state identity;
+4. lineage fate after marker loss;
+5. ECM reversibility and crosslinking;
+6. duration of profibrotic output;
+7. handoff to resident regenerative cells;
+8. final tissue architecture.
+
+## Current falsification state
 
 ```text
-TELOMERASE_ALONE             = REFUTED_AS_SUFFICIENT
-LOW_METABOLISM_ALONE         = REFUTED_AS_SUFFICIENT
-REGENERATION_ALONE           = REFUTED_AS_SUFFICIENT
-DNA_REPAIR_ALONE             = REFUTED_AS_SUFFICIENT
-REMOVE_SENESCENCE_GLOBALLY   = REFUTED_AS_SAFE_GENERAL_RULE
-ACTIVATE_YAP_GLOBALLY        = REFUTED_AS_SAFE_GENERAL_RULE
-GLOBAL_EPIGENETIC_RESET      = REFUTED_AS_SAFE_GENERAL_RULE
-SINGLE_MASTER_GENE           = NOT_SUPPORTED
-ALL_SIX_AXES_SYNC_GLOBALLY   = REFUTED
-MULTI_GATE_ARCHITECTURE      = SURVIVES_AS_WORKING_MODEL
-SAFE_PERMISSION_PLUS_STOP    = CURRENT_HARD_SURVIVOR_ARCHITECTURE
-DIRECT_HUMAN_TRANSLATION     = NOT_ESTABLISHED
+TELOMERASE_ALONE                    = REFUTED_AS_SUFFICIENT
+LOW_METABOLISM_ALONE                = REFUTED_AS_SUFFICIENT
+DNA_REPAIR_ALONE                    = REFUTED_AS_SUFFICIENT
+SINGLE_MASTER_GENE                  = NOT_SUPPORTED
+ALL_SIX_AXES_SYNC_GLOBALLY          = REFUTED
+HALF_LIFE_ONLY_RESOLUTION_RULE      = REFUTED
+SCAR_EQUALS_SAME_ALPHA_SMA_STATE    = REFUTED
+MULTI_GATE_ARCHITECTURE             = SURVIVES
+WOUND_STATE_FATE_ROUTING            = CURRENT_P0_REVISED_SURVIVOR
+DIRECT_HUMAN_TRANSLATION            = NOT_ESTABLISHED
 ```
 
 ## Canonical artifacts
@@ -192,17 +164,20 @@ DIRECT_HUMAN_TRANSLATION     = NOT_ESTABLISHED
 - [`HUMAN-TISSUE-RENEWAL-PERMISSION-MATRIX-2026-08-23-v1.0.json`](HUMAN-TISSUE-RENEWAL-PERMISSION-MATRIX-2026-08-23-v1.0.json)
 - [`DEVELOPMENTAL-PERMISSION-MATRIX-LONGEVITY-SURVIVOR-2026-08-23-v2.0.json`](DEVELOPMENTAL-PERMISSION-MATRIX-LONGEVITY-SURVIVOR-2026-08-23-v2.0.json)
 - [`LOCK-ALIGNED-OVERLAY-LONGEVITY-SURVIVOR-2026-08-23-v2.1.json`](LOCK-ALIGNED-OVERLAY-LONGEVITY-SURVIVOR-2026-08-23-v2.1.json)
+- [`RESOLUTION-GATE-KINETIC-KILLER-TEST-2026-08-23-v2.2.json`](RESOLUTION-GATE-KINETIC-KILLER-TEST-2026-08-23-v2.2.json)
+- [`SCIENTIFIC-OUTREACH-QUEUE-RESOLUTION-GATE-2026-08-23-v1.0.json`](SCIENTIFIC-OUTREACH-QUEUE-RESOLUTION-GATE-2026-08-23-v1.0.json)
+
+## Scientific-sharing boundary
+
+The current result is suitable to share as a **cross-tissue hypothesis note and quantitative-data request**, not as a new experimental discovery or universal regeneration mechanism. The strongest outreach questions concern raw time-series state occupancy, lineage fate after marker loss, spatial compartment identity and ECM-state persistence.
 
 ## Next gates
 
-- recover matched **before / transition / after** single-cell or multi-omic datasets for all five focal tissues;
-- compare them in the same six-axis state space **without using gene-name overlap as the alignment criterion**;
-- measure the persistence half-life of temporary wound-state cells and matrices in regenerative versus scar-forming conditions;
-- find a third tissue with direct causal evidence that developmental ECM/mechanical maturation suppresses regeneration and that reversing that mechanical state restores regenerative competence;
-- split every failure into **ENTRY failure / REBUILD failure / RESOLUTION failure / EXIT failure**;
-- compare high-renewal and low-renewal human tissues under the same variables;
-- split **cell rejuvenation**, **tissue regeneration** and **organismal longevity** into independent endpoints;
-- preserve **homology != therapeutic feasibility** and **clinical entry != clinical efficacy**.
+- reconstruct normalized state-occupancy curves from source data rather than infer universal half-lives from sparse time points;
+- track what cells become after marker loss: apoptosis, redifferentiation, migration, spatial redirection or alternate stable scar state;
+- measure profibrotic **output half-life** (periostin, collagen production, crosslinking, stiffness, MMP/TIMP balance) separately from alpha-SMA marker lifetime;
+- seek a third clean causal native-tissue test for the ECM/mechanical maturation lock;
+- preserve **marker loss != cell clearance**, **cell clearance != ECM clearance**, **animal regeneration != human therapy**.
 
 ## Boundary
 
