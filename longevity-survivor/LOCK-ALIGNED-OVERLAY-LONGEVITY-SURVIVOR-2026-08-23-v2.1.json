@@ -1,0 +1,312 @@
+{
+  "schema": "janus.lapis.longevity_survivor.lock_aligned_overlay.v2_1",
+  "artifact_id": "LOCK-ALIGNED-OVERLAY-LONGEVITY-SURVIVOR-2026-08-23-v2.1",
+  "title": "LONGEVITY SURVIVOR v2.1 — Lock-Aligned Cross-Tissue Overlay",
+  "created_at_local": "2026-08-23T22:58:00+03:00",
+  "repository": "Hawkar-usls/janus-lapis",
+  "branch": "LONGEVITY-SURVIVOR",
+  "status": "ACTIVE_P0_CANDIDATE_OVERLAY",
+  "frozen_question": "When HEART, COCHLEA, SPINAL_CORD, SKIN and TENDON are aligned by the relative moment when high-fidelity regeneration is lost rather than by chronological age, which state transitions recur across tissues?",
+  "alignment_rule": {
+    "tau": "relative regeneration-loss coordinate",
+    "BEFORE_LOCK": "tau < 0; tissue still shows high-fidelity or substantially more complete regeneration",
+    "LOCK_TRANSITION": "tau ~= 0; developmental interval in which regenerative competence sharply declines or scar-biased repair becomes dominant",
+    "AFTER_LOCK": "tau > 0; regeneration is strongly limited, incomplete, lineage-restricted, or replaced by fibrosis/scarring",
+    "important": "tau=0 is tissue-specific and is not assumed to correspond to the same postnatal day, gestational week, species age, or pathway amplitude."
+  },
+  "axes": [
+    "CHROMATIN_ACCESSIBILITY_OR_CELL_STATE_PLASTICITY",
+    "ECM_AND_MECHANICS",
+    "IMMUNE_STATE_AND_RESOLUTION",
+    "CELL_CYCLE_OR_RESIDENT_CELL_RECRUITMENT_COMPETENCE",
+    "FIBROSIS_OR_SCAR_PERSISTENCE",
+    "EXIT_AND_RETURN_TO_HOMEOSTASIS"
+  ],
+  "tissue_overlays": [
+    {
+      "tissue": "HEART",
+      "model": "mammalian neonatal heart, strongest mechanistic data in mouse",
+      "lock_anchor": "brief neonatal regenerative window; exact timing is model-dependent, with strong mouse evidence for rapid postnatal loss",
+      "BEFORE_LOCK": {
+        "plasticity": "pre-existing cardiomyocytes retain substantially greater proliferative/dedifferentiation competence; epicardial developmental programs remain more active",
+        "ecm_mechanics": "cardiac ECM is softer and compositionally more development-like",
+        "immune": "resident/embryonic-derived macrophage programs are enriched and support angiogenesis/reparative signaling",
+        "cell_cycle": "cardiomyocyte mitotic competence is substantially higher",
+        "fibrosis": "injury-associated matrix/scar can be transient and resolve during successful regeneration",
+        "exit": "successful regeneration terminates after structure/function recovery rather than remaining constitutively proliferative"
+      },
+      "LOCK_TRANSITION": {
+        "plasticity": "cardiomyocyte and epicardial developmental competence declines",
+        "ecm_mechanics": "rapid ECM stiffening/crosslinking and compositional maturation occurs near the loss window; experimental softening plus fetal ECM can extend regenerative behavior in low-regenerative neonatal hearts",
+        "immune": "resident regenerative macrophage balance shifts toward more monocyte-derived/pro-inflammatory adult-like responses",
+        "cell_cycle": "cell-cycle competence falls with cardiomyocyte maturation, although some studies indicate ECM changes can precede full cell-cycle arrest",
+        "fibrosis": "scar resolution becomes less efficient and permanent collagenous repair becomes favored",
+        "exit": "adult-like repair terminates by stabilization/remodeling rather than restoration of lost myocardium"
+      },
+      "AFTER_LOCK": {
+        "plasticity": "mature cardiomyocytes are strongly cell-cycle restricted",
+        "ecm_mechanics": "stiffer mature matrix constrains pro-regenerative signaling",
+        "immune": "injury recruits stronger inflammatory/monocyte-derived programs",
+        "cell_cycle": "replacement of lost myocardium by cardiomyocyte proliferation is insufficient",
+        "fibrosis": "permanent fibrotic scar is the dominant outcome after major injury",
+        "exit": "repair exits into stable scar/homeostasis, not anatomical regeneration"
+      },
+      "evidence": [
+        "JACC Focus Seminar: rapid mouse ventricular stiffness increase near earliest postnatal loss window; lowering ECM stiffness prolongs regeneration",
+        "PMCID:PMC7428869 — fetal ECM + softening increases cardiomyocyte cell-cycle activity and lowers fibrosis",
+        "Nature Reviews Cardiology 2024 — neonatal vs adult mammalian cardiac regeneration",
+        "eLife 2025 DOI:10.7554/eLife.107419 — extending embryonic-like epicardial HIF activity improves regeneration beyond the usual window",
+        "Frontiers Cell Dev Biol 2024 — developmental macrophage composition differs across regenerative vs non-regenerative heart states"
+      ],
+      "grade": "A_MINUS"
+    },
+    {
+      "tissue": "COCHLEA",
+      "model": "mammalian cochlear supporting-cell/hair-cell regenerative competence",
+      "lock_anchor": "regenerative competence falls rapidly after birth and is largely lost before/around hearing maturation",
+      "BEFORE_LOCK": {
+        "plasticity": "supporting/prosensory cells retain progenitor-like competence and can generate hair-cell-like descendants more readily",
+        "ecm_mechanics": "developing cochlear niche is not yet fully mechanically and architecturally mature",
+        "immune": "not established as the dominant developmental lock axis",
+        "cell_cycle": "supporting-cell mitotic/transdifferentiation competence is higher",
+        "fibrosis": "fibrosis is not the primary lock phenotype; failure is more lineage/epigenetic than classic scar formation",
+        "exit": "development normally terminates regenerative/developmental competence as sensory architecture matures"
+      },
+      "LOCK_TRANSITION": {
+        "plasticity": "enhancer decommissioning, H3K4me1 loss, DNA methylation and reduced accessibility stabilize supporting-cell identity and reduce hair-cell fate competence",
+        "ecm_mechanics": "architectural maturation occurs but current evidence does not support matrix stiffness as the primary universal cochlear lock",
+        "immune": "immune niche can shape repair after injury, but developmental synchronization with regeneration loss is not yet strong enough for P0",
+        "cell_cycle": "supporting cells become increasingly refractory to proliferation and reprogramming",
+        "fibrosis": "not a canonical scar transition; mark as tissue-specific exception",
+        "exit": "maturation effectively closes a developmental permission state rather than merely ending an acute wound program"
+      },
+      "AFTER_LOCK": {
+        "plasticity": "mature supporting cells retain some residual substrate but are strongly epigenetically locked",
+        "ecm_mechanics": "mature organ architecture imposes additional integration constraints",
+        "immune": "repair-associated macrophages can aid synaptic repair but do not restore full hair-cell regenerative competence",
+        "cell_cycle": "spontaneous hair-cell replacement is minimal",
+        "fibrosis": "not the dominant failure mode",
+        "exit": "mature stable sensory architecture is preserved at the cost of regenerative flexibility"
+      },
+      "evidence": [
+        "eLife 2019 DOI:10.7554/eLife.44328 — mature cochlear supporting cells show lower hair-cell-locus accessibility than regenerative utricle supporting cells",
+        "PNAS 2023 — DNA methylation promotes supporting-cell maturation and contributes to regenerative failure",
+        "Developmental Cell 2021 — enhancer decommissioning imposes epigenetic barrier",
+        "PNAS 2024 — long-range Atoh1 enhancers maintain regenerative competency",
+        "World Journal of Stem Cells 2026 review — postnatal competence loss summarized as enhancer decommissioning/H3K4me1 loss/DNA methylation"
+      ],
+      "grade": "A_MINUS_FOR_PLASTICITY_AXIS"
+    },
+    {
+      "tissue": "SPINAL_CORD",
+      "model": "neonatal vs later mouse spinal-cord injury response",
+      "lock_anchor": "age-dependent decline in scar-free healing and long-tract axon regrowth",
+      "BEFORE_LOCK": {
+        "plasticity": "axon regrowth and neonatal repair programs are substantially more permissive",
+        "ecm_mechanics": "injury generates a temporary fibronectin-rich bridge rather than an immediately persistent mature fibroglial scar",
+        "immune": "neonatal microglia are transiently activated and express programs associated with inflammation resolution",
+        "cell_cycle": "support-cell/glial response is organized toward bridging and resolution rather than persistent scar containment",
+        "fibrosis": "scar-free or markedly reduced scar healing can occur",
+        "exit": "microglial activation and temporary ECM bridge resolve after reconnection"
+      },
+      "LOCK_TRANSITION": {
+        "plasticity": "axon-permissive state declines with maturation",
+        "ecm_mechanics": "temporary regenerative bridge is replaced by a lesion environment dominated by mature fibroblast/astroglial scar architecture",
+        "immune": "microglial/macrophage response loses neonatal pro-resolving configuration",
+        "cell_cycle": "supportive injury-response cell states no longer recreate the neonatal bridge effectively",
+        "fibrosis": "collagen/GFAP/CSPG-associated scar becomes increasingly persistent",
+        "exit": "wound response exits into stable scar containment rather than bridge-resolution-restoration"
+      },
+      "AFTER_LOCK": {
+        "plasticity": "long-distance axon regrowth is poor",
+        "ecm_mechanics": "scar ECM and inhibitory matrix dominate lesion organization",
+        "immune": "adult inflammatory/glial states persist differently from neonatal microglia",
+        "cell_cycle": "cellular response stabilizes the lesion but does not recreate the original neural architecture",
+        "fibrosis": "persistent fibroglial scar is dominant",
+        "exit": "repair reaches containment rather than full reconnection"
+      },
+      "evidence": [
+        "Nature 2020 DOI:10.1038/s41586-020-2795-6 — neonatal microglia form transient fibronectin bridge, resolve inflammation, enable scar-free healing; adult/neonatal transplantation experiments support causality",
+        "Neuroscience Bulletin 2022 — spatiotemporal adult glial scar comparison"
+      ],
+      "grade": "A"
+    },
+    {
+      "tissue": "SKIN",
+      "model": "fetal scarless mammalian skin vs postnatal/adult scarring skin; adult mechanotransduction models",
+      "lock_anchor": "developmental transition from fetal scarless regeneration to postnatal scar-forming repair; exact gestational timing is species-specific",
+      "BEFORE_LOCK": {
+        "plasticity": "fetal fibroblasts and epidermal programs support restoration with appendage/ECM architecture more faithfully",
+        "ecm_mechanics": "HA-rich, less crosslinked, development-like matrix with rapid turnover",
+        "immune": "brief/minimal inflammatory response with rapid resolution",
+        "cell_cycle": "fetal cells retain high proliferative/migratory competence",
+        "fibrosis": "myofibroblast presence is absent, reduced or transient; collagen organization returns toward normal",
+        "exit": "wound program terminates after restoration rather than persistent myofibroblast activity"
+      },
+      "LOCK_TRANSITION": {
+        "plasticity": "fibroblast fate becomes more mechanically coupled to profibrotic states",
+        "ecm_mechanics": "increased tissue tension/mechanotransduction favors YAP/TAZ-dependent scar-forming fibroblast trajectories",
+        "immune": "postnatal wounds develop stronger and more sustained inflammatory signaling",
+        "cell_cycle": "proliferation remains available but is increasingly routed into repair/fibrosis rather than architecture restoration",
+        "fibrosis": "persistent myofibroblast/collagen programs become favored",
+        "exit": "scar-producing states are not cleared as rapidly as fetal wound states"
+      },
+      "AFTER_LOCK": {
+        "plasticity": "adult fibroblasts remain plastic enough to scar and can be experimentally rerouted, showing the machinery is not simply absent",
+        "ecm_mechanics": "mechanical tension strongly reinforces fibrosis",
+        "immune": "inflammation and mechanics interact to reinforce repair trajectories",
+        "cell_cycle": "cell proliferation closes wounds but does not reliably regenerate appendages/normal architecture",
+        "fibrosis": "scar is the dominant mammalian outcome",
+        "exit": "healing terminates in remodeled scar"
+      },
+      "evidence": [
+        "fetal wound literature — low/promptly resolved inflammation, HA-rich ECM, transient myofibroblast states and scarless outcome",
+        "Mascharak et al lineage/mechanotransduction work — mechanical tension/YAP can convert regenerative fibroblast potential toward scar-forming fate in mouse skin",
+        "Science Translational Medicine 2025 large-animal work summarized by Stanford profile — local YAP/mechanotransduction inhibition drove more regenerative porcine wound healing",
+        "Burns & Trauma 2026 spatiotemporal skin review — YAP/TAZ/TEAD accessibility and mechanics linked to fibrotic fibroblast trajectories"
+      ],
+      "grade": "A_MINUS"
+    },
+    {
+      "tissue": "TENDON",
+      "model": "neonatal vs adult mouse Achilles tendon healing",
+      "lock_anchor": "neonatal regenerative competence is present before approximately postnatal day 7 in mouse models and is absent in adult tendon",
+      "BEFORE_LOCK": {
+        "plasticity": "resident Scx-lineage tenocytes proliferate and are recruited into the defect",
+        "ecm_mechanics": "developing tendon niche supports organized neo-tendon formation",
+        "immune": "not yet established as the sole master lock; niche/lymphatic signaling contributes",
+        "cell_cycle": "injured neonatal tenocytes show strong proliferation and recruitment",
+        "fibrosis": "extrinsic alpha-SMA-positive cells are recruited transiently but do not persist as permanent scar",
+        "exit": "transient wound cells leave/resolve as intrinsic tenocytes rebuild aligned tendon"
+      },
+      "LOCK_TRANSITION": {
+        "plasticity": "stemness/progenitor-associated tendon states decline during maturation",
+        "ecm_mechanics": "tendon niche matures toward dense low-cellularity ECM and altered stem-cell support",
+        "immune": "lymphatic niche signaling and macrophage state influence regenerative outcome; developmental synchronization requires more direct time-series evidence",
+        "cell_cycle": "resident tenocyte recruitment/proliferation competence is lost",
+        "fibrosis": "extrinsic alpha-SMA-positive repair cells shift from transient helpers to persistent scar contributors",
+        "exit": "wound-state resolution fails to restore tenogenic occupancy of the defect"
+      },
+      "AFTER_LOCK": {
+        "plasticity": "adult tenocytes can reactivate some tendon programs but are not properly recruited into the defect and may undergo aberrant differentiation",
+        "ecm_mechanics": "fibrovascular scar and disorganized matrix dominate repair",
+        "immune": "adult repair remains inflammatory/fibrotic with altered niche support",
+        "cell_cycle": "adult Scx-lineage tenocytes remain largely quiescent after transection",
+        "fibrosis": "extrinsic scar cells persist",
+        "exit": "repair terminates in mechanically inferior scar rather than neo-tendon"
+      },
+      "evidence": [
+        "Scientific Reports 2017 DOI:10.1038/srep45238 — neonatal Scx-lineage proliferation/recruitment and transient alpha-SMA cells vs adult persistent scar",
+        "eLife 2020 DOI:10.7554/eLife.51779 — TGF-beta is required for neonatal tenocyte recruitment, showing pathway context rather than scalar anti-fibrosis logic",
+        "Nature Communications 2026 (published 26 Dec 2025) — neonatal-before-P7 vs adult tendon single-cell comparison identifies lymphatic vessels as regenerative niche elements; stemness scores decline from tendon stem cells to mature tenocytes; Reelin loss impairs regeneration"
+      ],
+      "grade": "A_MINUS"
+    }
+  ],
+  "cross_tissue_overlay": {
+    "P0_A": {
+      "name": "RESIDENT_REGENERATIVE_COMPETENCE_COLLAPSE",
+      "transition": "HIGH_INTRINSIC_PLASTICITY_OR_RECRUITMENT -> RAPID_MATURATION_LOCK -> LOW_REGENERATIVE_COMPETENCE",
+      "strong_support": ["HEART", "COCHLEA", "TENDON"],
+      "supportive": ["SPINAL_CORD", "SKIN"],
+      "relative_alignment": "clusters around tau ~= 0 by construction because each tissue loses regenerative competence as the relevant resident cells become less proliferative, less recruitable or more lineage-locked",
+      "why_P0": "This is the cleanest repeated intrinsic transition across at least three unrelated tissues and is supported by functional perturbation or lineage/epigenetic evidence.",
+      "claim_ceiling": "A common functional transition is supported; no single molecular switch is established."
+    },
+    "P0_B": {
+      "name": "TRANSIENT_WOUND_STATE_TO_PERSISTENT_SCAR_STATE",
+      "transition": "TEMPORARY_SUPPORT_CELLS_AND_MATRIX -> FAILED_OR_INCOMPLETE_RESOLUTION -> PERSISTENT_FIBROTIC_CONTAINMENT",
+      "strong_support": ["SPINAL_CORD", "SKIN", "TENDON"],
+      "supportive": ["HEART"],
+      "exception": "COCHLEA does not use classic fibrosis as the dominant lock phenotype and therefore should not be forced into this module.",
+      "relative_alignment": "the regenerative side uses temporary injury states that are actively resolved; the non-regenerative side stabilizes those states or their descendants as scar/containment",
+      "why_P0": "Three tissues independently show the same topology: transient bridge/helper/myofibroblast-like state is compatible with regeneration; persistence predicts scar-biased repair.",
+      "claim_ceiling": "The shared invariant is persistence-versus-resolution, not identity of one cell type or cytokine."
+    },
+    "P0_C": {
+      "name": "NICHE_MECHANICAL_MATURATION",
+      "transition": "DEVELOPMENTALLY_PERMISSIVE_MATRIX -> ECM_MATURATION_STIFFENING_OR_ARCHITECTURAL_LOCK -> REGENERATION_RESISTANT_NICHE",
+      "strong_support": ["HEART", "SKIN"],
+      "supportive": ["SPINAL_CORD", "TENDON"],
+      "insufficient_or_different": ["COCHLEA"],
+      "relative_alignment": "mechanical/matrix maturation is near tau=0 in heart and developmentally coupled to postnatal scarring in skin; in spinal cord/tendon the strongest evidence is a switch in injury-matrix architecture rather than a directly measured universal stiffness threshold",
+      "why_not_P0_full": "Current evidence supports a strong cross-tissue candidate but not yet a clean 3-tissue causal developmental stiffness transition.",
+      "status": "P0_CANDIDATE_PENDING_ONE_MORE_CAUSAL_TISSUE"
+    },
+    "P1_IMMUNE": {
+      "name": "REGENERATIVE_IMMUNE_RESOLUTION_SHIFT",
+      "strong_support": ["HEART", "SPINAL_CORD"],
+      "supportive": ["SKIN", "TENDON"],
+      "status": "P1_NOT_PROMOTED",
+      "reason": "Immune timing and cell identities differ substantially by tissue; evidence does not yet justify one synchronized universal immune lock."
+    },
+    "P1_CHROMATIN": {
+      "name": "EPIGENETIC_PERMISSION_CLOSURE",
+      "strong_support": ["COCHLEA"],
+      "supportive": ["HEART", "SKIN"],
+      "status": "P1_NOT_PROMOTED",
+      "reason": "Cochlea has unusually direct enhancer/methylation evidence, but equivalent tau-aligned chromatin time series are not yet recovered for all five tissues."
+    }
+  },
+  "topa_falsification": [
+    {
+      "claim": "All six axes close synchronously in all five tissues.",
+      "verdict": "REFUTED",
+      "reason": "Cochlea is dominated by epigenetic/lineage locking rather than classical fibrosis, and several tissues lack matched measurements on all axes."
+    },
+    {
+      "claim": "YAP is the universal regeneration ON switch.",
+      "verdict": "REFUTED_AS_SCALAR_RULE",
+      "reason": "YAP can support regeneration in some contexts but promote fibrosis in others; interpretation depends on cell type, mechanics, timing, partners and duration."
+    },
+    {
+      "claim": "TGF-beta inhibition is a universal anti-fibrotic route to regeneration.",
+      "verdict": "REFUTED_AS_SCALAR_RULE",
+      "reason": "TGF-beta is required for neonatal tenocyte recruitment and adult zebrafish tendon regeneration despite pro-fibrotic roles in other contexts."
+    },
+    {
+      "claim": "Regeneration loss is caused only by cell-cycle arrest.",
+      "verdict": "REFUTED_AS_SUFFICIENT",
+      "reason": "Heart ECM changes can precede full cardiomyocyte cell-cycle loss; spinal cord and skin demonstrate niche/immune/scar-routing contributions; cochlea demonstrates epigenetic competence loss."
+    },
+    {
+      "claim": "The common gate is one conserved gene.",
+      "verdict": "NOT_SUPPORTED",
+      "reason": "The strongest recurrence is topological and state-based: permission, transient wound state, niche, resolution and exit."
+    }
+  ],
+  "survivor_v2_1": {
+    "name": "REVERSIBLE_MATURATION_LOCK_WITH_RESOLUTION",
+    "formula": "LOCAL_ENTRY_PERMISSION + RESIDENT_CELL_COMPETENCE + PERMISSIVE_NICHE + TEMPORARY_WOUND_STATE + PATTERNED_REBUILD + RESOLUTION + MANDATORY_EXIT",
+    "minimum_common_core": [
+      "PRESERVE_OR_REOPEN_REGENERATIVE_COMPETENCE",
+      "PREVENT_TEMPORARY_WOUND_PROGRAM_FROM_BECOMING_PERSISTENT_SCAR",
+      "RESTORE_OR_MIMIC_A_PERMISSIVE_NICHE",
+      "EXIT_AFTER_STRUCTURE_AND_FUNCTION_ARE_RESTORED"
+    ],
+    "interpretation": "The mammalian regeneration lock currently looks more like a coordinated state transition than a missing pathway. Successful regeneration repeatedly requires both entry into a temporary plastic state and reliable resolution back to stable tissue identity."
+  },
+  "next_killer_tests": [
+    {
+      "priority": "P0",
+      "test": "Recover matched before/transition/after single-cell or multi-omic datasets for all five tissues and project them into the same six-axis state space without using gene-name overlap as the alignment criterion.",
+      "pass_condition": "At least three tissues show the same directional transition on an axis with independent causal or perturbational support."
+    },
+    {
+      "priority": "P0",
+      "test": "Quantify persistence half-life of wound-state cells/matrix across regenerative and non-regenerative conditions: neonatal microglia bridge, fetal/adult myofibroblasts, neonatal/adult tendon alpha-SMA cells, neonatal/adult cardiac scar fibroblasts.",
+      "pass_condition": "Regenerative conditions consistently show shorter-lived helper/scar states followed by lineage-correct replacement."
+    },
+    {
+      "priority": "P0",
+      "test": "Find a third tissue with direct causal evidence that developmental ECM/mechanical maturation at tau~=0 suppresses regenerative competence and that reversing the mechanical state restores it without merely delaying wound closure.",
+      "pass_condition": "NICHE_MECHANICAL_MATURATION promotes from P0 candidate to hard survivor."
+    },
+    {
+      "priority": "P1",
+      "test": "Separate ENTRY machinery from EXIT machinery in each tissue and test whether regenerative failure is caused by failure to enter, failure to rebuild, failure to resolve, or failure to exit.",
+      "pass_condition": "At least three tissues share the same failure topology even if molecular implementations differ."
+    }
+  ],
+  "boundary": "Comparative developmental biology and hypothesis ranking only. This artifact does not provide a human treatment, dosing plan, gene-editing protocol, rejuvenation procedure, or evidence that manipulating these gates is safe in humans."
+}
