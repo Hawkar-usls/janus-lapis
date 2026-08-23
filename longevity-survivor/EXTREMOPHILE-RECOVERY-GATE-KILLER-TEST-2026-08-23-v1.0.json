@@ -1,0 +1,154 @@
+{
+  "schema": "janus.lapis.longevity_survivor.extremophile_recovery_gate_killer_test.v1_0",
+  "artifact_id": "EXTREMOPHILE-RECOVERY-GATE-KILLER-TEST-2026-08-23-v1.0",
+  "created_at_local": "2026-08-23T23:54:00+03:00",
+  "status": "ACTIVE_CROSS_KINGDOM_KILLER_TEST",
+  "parent_atlas": "EXTREMOPHILE-MECHANISM-ATLAS-2026-08-23-v1.0",
+  "question": "If independent extremophiles are aligned by entry into and exit from their survival state rather than by absolute time, does a common resolution architecture appear?",
+  "alignment": {
+    "NORMAL": "ordinary active state before major stress",
+    "ENTRY": "transition into stress-adapted or dormant state",
+    "SURVIVAL_STATE": "active homeostatic adaptation or metabolically suppressed protected state",
+    "REENTRY_T0": "stress release / rehydration / germination cue",
+    "RECOVERY": "damage processing, biochemical normalization, structural restoration",
+    "RESUMED_FUNCTION": "growth, movement, photosynthesis or replication resumes"
+  },
+  "initial_hypotheses": [
+    {"id":"H0_CONTINUOUS_REPAIR","claim":"Extreme survival requires continuous active repair throughout the extreme state.","result":"REFUTED","why":"Dormant spores and anhydrobiotes can accumulate damage while metabolism is minimal or absent and execute substantial repair only on germination/rehydration."},
+    {"id":"H0_DORMANCY_UNIVERSAL","claim":"A reversible dormant state is the universal extremophile strategy.","result":"REFUTED","why":"Psychrophiles, halophiles, acidophiles, alkaliphiles, piezophiles, osmophiles and many thermophiles remain metabolically active under their defining extreme."},
+    {"id":"H0_DNA_PROTECTION_SUFFICIENT","claim":"Preventing DNA damage is the central sufficient extremophile mechanism.","result":"REFUTED_AS_SUFFICIENT","why":"Deinococcus and other radiotolerant models show that proteome protection, ROS control and post-damage repair are critical; substantial DNA damage can coexist with survival."},
+    {"id":"H0_LOW_METABOLISM_SUFFICIENT","claim":"Lower metabolism is sufficient for extreme survival and therefore a general longevity mechanism.","result":"REFUTED","why":"Many extremophiles actively grow under extremes; dormant-state duration can also reduce recovery probability in tardigrades."}
+  ],
+  "strategy_split": {
+    "ACTIVE_HOMEOSTASIS": {
+      "members":["Deinococcus radiodurans","Haloferax volcanii","Picrophilus torridus","Natronomonas pharaonis","Colwellia psychrerythraea","Pyrococcus yayanosii","Zygosaccharomyces rouxii","Cupriavidus metallidurans"],
+      "architecture":"SENSE EXTREME -> continuously tune membrane/solvent/proteome/redox/metabolism -> repair damage while functioning -> maintain viable operating state",
+      "core_rule":"Keep biochemistry inside a workable envelope instead of leaving the active state."
+    },
+    "REVERSIBLE_SUSPENSION_RECOVERY": {
+      "members":["Ramazzottius varieornatus and other anhydrobiotic tardigrades","Adineta vaga","Polypedilum vanderplanki","Bacillus subtilis spores","Craterostigma plantagineum","Chroococcidiopsis spp.","Cryomyces antarcticus"],
+      "architecture":"SENSE/ENTER -> suppress vulnerable processes -> physically/chemically stabilize -> tolerate residual damage -> REENTRY -> prioritized repair/normalization -> resume function",
+      "core_rule":"Preserve enough structure and repair capacity to make a controlled return possible."
+    }
+  },
+  "kinetic_cases": [
+    {
+      "system":"Bacillus subtilis spore",
+      "survival_state":"dormant spore",
+      "reentry":"germination/outgrowth",
+      "kinetics":"Germination begins on the scale of minutes; damaged DNA is processed during germination/outgrowth, with published work placing important repair in the early ~15-60 min revival window depending on lesion/system.",
+      "critical_observation":"Repair capacity is prepared before dormancy but much lesion processing waits until rehydration/metabolism resumes.",
+      "classification":"STRONGEST_RECOVERY_CHECKPOINT_ANALOG",
+      "sources":["PMCID:PMC11332352","PMCID:PMC12448304","PMCID:PMC12029834"]
+    },
+    {
+      "system":"Adineta vaga",
+      "survival_state":"desiccated anhydrobiotic state",
+      "reentry":"rehydration",
+      "kinetics":"DNA DSB repair measured at 0/2/8/24/48 h after rehydration; early repair transcription peaks around ~1.5 h in later transcriptomic work; mobility can recover before genome integrity is fully restored.",
+      "critical_observation":"Functional recovery and molecular repair are partially decoupled; EXIT is not one instant.",
+      "classification":"STRONG_KINETIC_SUPPORT",
+      "sources":["DOI:10.1111/jeb.12326","DOI:10.1186/s12915-023-01807-8"]
+    },
+    {
+      "system":"Polypedilum vanderplanki",
+      "survival_state":"anhydrobiotic larva with trehalose/LEA-supported stabilization",
+      "reentry":"rehydration",
+      "kinetics":"Animals can revive rapidly; rehydration produces a strong oxidative pulse that damages DNA, proteins and membrane lipids, yet reported damage is repaired within hours. Earlier work reports full genome-integrity restoration on a longer ~96-h scale for some DSB measurements.",
+      "critical_observation":"Reentry itself is a dangerous transition requiring active recovery, not merely passive rehydration.",
+      "classification":"STRONG_SUPPORT_FOR_REENTRY_DAMAGE_AND_REPAIR",
+      "sources":["DOI:10.1016/j.mito.2023.11.002","DOI:10.1371/journal.pone.0014008"]
+    },
+    {
+      "system":"Hypsibius exemplaris",
+      "survival_state":"active radiotolerant tardigrade / stress recovery comparison",
+      "reentry":"24-h post-irradiation recovery",
+      "kinetics":"TUNEL-detectable DNA damage decreases significantly during 24 h after a well-tolerated extreme radiation dose.",
+      "critical_observation":"Resistance includes damage repair after exposure rather than perfect shielding.",
+      "classification":"SUPPORTIVE_RECOVERY_CASE",
+      "sources":["PMCID:PMC11078613"]
+    },
+    {
+      "system":"Ramazzottius varieornatus",
+      "survival_state":"tun",
+      "reentry":"rehydration",
+      "kinetics":"In ultrastructural work, movement resumes around ~5 min after rehydration; cellular ultrastructure is sampled at 5 and 15 min, illustrating extremely fast functional re-entry in this species.",
+      "critical_observation":"Very fast behavioral recovery does not prove all molecular damage is repaired at that time.",
+      "classification":"FUNCTIONAL_REENTRY_KINETIC_ANCHOR",
+      "sources":["DOI:10.1371/journal.pone.0302552"]
+    },
+    {
+      "system":"Paramacrobiotus experimentalis",
+      "survival_state":"tun",
+      "reentry":"rehydration",
+      "kinetics":"Recovery is scored at 2/6/24/48 h; longer or repeated anhydrobiosis lowers and delays recovery, and age is a major predictor.",
+      "critical_observation":"Dormancy is not cost-free or infinitely protective; recovery competence itself ages/declines.",
+      "classification":"NEGATIVE_CONTROL_AGAINST_DORMANCY_EQUALS_AGELESSNESS",
+      "sources":["DOI:10.1016/j.heliyon.2024.e26807"]
+    },
+    {
+      "system":"Craterostigma plantagineum",
+      "survival_state":"desiccated resurrection-plant tissue",
+      "reentry":"rewatering",
+      "kinetics":"Dehydration-specific products decline during early rehydration; transcriptome after ~24 h clusters near hydrated state, and photosynthetic carbon assimilation substantially recovers over ~48 h.",
+      "critical_observation":"Recovery is an orchestrated state transition, not simple reversal of dehydration.",
+      "classification":"STRONG_CROSS_KINGDOM_REENTRY_PARALLEL",
+      "sources":["PMCID:PMC160978","PMCID:PMC8453721"]
+    },
+    {
+      "system":"Chroococcidiopsis spp.",
+      "survival_state":"dry ametabolic desert/space-exposed state",
+      "reentry":"rehydration and renewed growth",
+      "kinetics":"Survival and genome recovery after prolonged dry/space exposure are established, while the detailed omics of rehydration/recovery remain explicitly unresolved in a 2026 comparative-genomics study.",
+      "critical_observation":"This is a high-value open dataset/model for testing the recovery architecture.",
+      "classification":"P0_DATA_GAP_TARGET",
+      "sources":["DOI:10.1093/femsmc/xtag036"]
+    }
+  ],
+  "cross_kingdom_result": {
+    "universal_single_resolution_gate":"NOT_SUPPORTED",
+    "shared_molecular_switch":"NOT_SUPPORTED",
+    "shared_functional_architecture":"SUPPORTED_AS_TWO_BRANCH_MODEL",
+    "hard_survivors":[
+      "Damage must be limited enough that recovery machinery itself remains functional.",
+      "Proteome and membrane/solvent integrity are first-class survival variables, not secondary to DNA.",
+      "Genome repair is widespread but can occur during stress or be deferred until recovery depending on life strategy.",
+      "In reversible-dormancy systems, re-entry is an active regulated phase with its own hazards and repair requirements.",
+      "Dormancy protects but is not free: duration, repetition and organismal age can reduce successful recovery."
+    ]
+  },
+  "new_candidate": {
+    "name":"REACTIVATION_REPAIR_CHECKPOINT",
+    "status":"P0_CROSS_KINGDOM_SURVIVAL_ABSTRACTION_NOT_MAMMALIAN_REGENERATION_GATE",
+    "formula":"PROTECT -> PAUSE_WHEN_NEEDED -> PRESERVE_REPAIR_CAPACITY -> REENTRY -> REPAIR_AND_NORMALIZE -> THEN_FULL_RESUMPTION",
+    "strongest_support":["Bacillus spore germination/outgrowth","Adineta rehydration repair kinetics","Polypedilum rehydration oxidative-damage repair","Craterostigma rehydration state reset"],
+    "why_it_matters":"It adds a temporal ordering principle to LONGEVITY SURVIVOR: preserving repair capacity and controlling restart may be as important as the amount of repair machinery.",
+    "claim_ceiling":"Functional convergence across distant lineages does not establish homologous molecular control or applicability to mammals."
+  },
+  "relation_to_mammalian_resolution_gate": {
+    "similarity":"Both architectures emphasize that a temporary stress/repair state must transition into a stable functional state rather than remain indefinitely activated.",
+    "difference":"Extremophile dormancy/re-entry concerns organismal or cellular stress survival, whereas mammalian wound resolution concerns multicellular tissue reconstruction, lineage routing, ECM and fibrosis.",
+    "status":"ANALOGY_GENERATOR_ONLY_NOT_INDEPENDENT_MAMMALIAN_EVIDENCE"
+  },
+  "next_killer_tests": [
+    {"priority":"P0","test":"Build normalized recovery curves for Bacillus spore repair, Adineta DSB recovery, Polypedilum oxidative-damage recovery, tardigrade activity recovery and Craterostigma transcriptome/physiology recovery using tau=0 at rehydration/germination."},
+    {"priority":"P0","test":"Separate behavioral/functional recovery from genome/proteome/ECM or structural recovery; test whether visible function routinely precedes complete molecular repair."},
+    {"priority":"P0","test":"Identify whether full replication/growth is delayed until a damage threshold is cleared in independent dormancy systems; if not, kill the stronger REPAIR_BEFORE_REPLICATION form of the hypothesis."},
+    {"priority":"P1","test":"Use Chroococcidiopsis 2026 recovery data gap as an external prediction: expect rapid rehydration induction of DNA repair/ROS management before full photosynthetic growth."},
+    {"priority":"P1","test":"Compare active-homeostasis extremophiles against dormancy-enabled extremophiles to determine whether proteome preservation predicts tolerance more consistently than DNA-break avoidance."}
+  ],
+  "topa": {
+    "EXTREMOTOLERANCE_EQUALS_LONGEVITY":"REFUTED",
+    "DORMANCY_EQUALS_REJUVENATION":"REFUTED",
+    "LOW_METABOLISM_IS_UNIVERSAL":"REFUTED",
+    "DNA_PROTECTION_ALONE":"REFUTED_AS_SUFFICIENT",
+    "ONE_EXTREMOPHILE_SWITCH":"REFUTED",
+    "PROTECT_PRESERVE_REPAIR_RESTART":"SURVIVES_AS_CROSS_KINGDOM_WORKING_ARCHITECTURE"
+  },
+  "firewall": [
+    "NO_THERAPEUTIC_INFERENCE",
+    "NO_GENE_TRANSFER_RECOMMENDATION",
+    "NO_HUMAN_SELF_EXPERIMENTATION",
+    "EXTREMOPHILE_RESULT_IS_COMPARATIVE_BIOLOGY_ONLY"
+  ]
+}
