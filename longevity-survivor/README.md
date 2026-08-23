@@ -100,6 +100,73 @@ A renewal program must be local, temporary, lineage-preserving, damage-aware, sp
 
 None of these should be treated as a defect to delete globally. The working model is that **SAFE RENEWAL must preserve the brakes and change when and where permission is granted.**
 
+## Lock-aligned cross-tissue pass — v2.1
+
+The developmental pass now aligns tissues by the **relative loss of regenerative capacity** rather than by chronological age:
+
+```text
+BEFORE_LOCK → LOCK_TRANSITION → AFTER_LOCK
+       tau<0       tau≈0            tau>0
+```
+
+The five focal tissues are **HEART / COCHLEA / SPINAL CORD / SKIN / TENDON** and the overlay is performed over chromatin/plasticity, ECM/mechanics, immune state, resident-cell recruitment or cell-cycle competence, fibrosis/scar persistence, and EXIT/resolution machinery.
+
+### P0 survivors
+
+**P0-A — RESIDENT_REGENERATIVE_COMPETENCE_COLLAPSE**
+
+```text
+HIGH PLASTICITY / RECRUITABILITY
+        ↓
+MATURATION LOCK
+        ↓
+LOW REGENERATIVE COMPETENCE
+```
+
+Strong independent support currently comes from heart, cochlea and tendon, with supportive parallels in spinal cord and skin. The invariant is functional; it is not evidence for one shared molecular switch.
+
+**P0-B — TRANSIENT_WOUND_STATE → PERSISTENT_SCAR_STATE**
+
+```text
+TEMPORARY BRIDGE / HELPER / MYOFIBROBLAST-LIKE STATE
+        ↓
+RESOLUTION OR FAILURE-TO-RESOLVE
+        ↓
+RESTORED TISSUE  OR  PERSISTENT SCAR
+```
+
+Strong support currently comes from spinal cord, skin and tendon, with a supportive cardiac parallel. The cochlea is intentionally left outside this module because classic fibrosis is not its dominant lock phenotype.
+
+### P0 candidate pending one more causal tissue
+
+**NICHE_MECHANICAL_MATURATION**
+
+Heart and skin provide strong causal support that mature mechanics/ECM can redirect regenerative competence. Spinal cord and tendon support the broader matrix-architecture transition, but a third clean developmental stiffness/mechanics perturbation is still required before this becomes a hard cross-tissue survivor.
+
+### Deliberately not promoted
+
+- **Universal immune lock** — P1: strong in heart and spinal cord, but tissue-specific identities and timing remain too different.
+- **Universal chromatin lock** — P1: exceptionally strong in cochlea, but matched tau-aligned chromatin time series are missing for several focal tissues.
+- **YAP = regeneration ON** — refuted as a scalar rule.
+- **TGF-beta inhibition = regeneration** — refuted as a scalar rule.
+- **All six axes close synchronously** — refuted.
+
+### Current v2.1 survivor
+
+```text
+REVERSIBLE_MATURATION_LOCK_WITH_RESOLUTION
+=
+LOCAL_ENTRY_PERMISSION
++ RESIDENT_CELL_COMPETENCE
++ PERMISSIVE_NICHE
++ TEMPORARY_WOUND_STATE
++ PATTERNED_REBUILD
++ RESOLUTION
++ MANDATORY_EXIT
+```
+
+The strongest current interpretation is that mammalian regeneration loss is a **coordinated state transition**, not simply absence of a pathway. Regeneration repeatedly requires both temporary access to a plastic state and reliable return to stable lineage-correct tissue.
+
 ## TOPA-style falsification state
 
 ```text
@@ -111,6 +178,7 @@ REMOVE_SENESCENCE_GLOBALLY   = REFUTED_AS_SAFE_GENERAL_RULE
 ACTIVATE_YAP_GLOBALLY        = REFUTED_AS_SAFE_GENERAL_RULE
 GLOBAL_EPIGENETIC_RESET      = REFUTED_AS_SAFE_GENERAL_RULE
 SINGLE_MASTER_GENE           = NOT_SUPPORTED
+ALL_SIX_AXES_SYNC_GLOBALLY   = REFUTED
 MULTI_GATE_ARCHITECTURE      = SURVIVES_AS_WORKING_MODEL
 SAFE_PERMISSION_PLUS_STOP    = CURRENT_HARD_SURVIVOR_ARCHITECTURE
 DIRECT_HUMAN_TRANSLATION     = NOT_ESTABLISHED
@@ -122,14 +190,18 @@ DIRECT_HUMAN_TRANSLATION     = NOT_ESTABLISHED
 - [`TELOMERASE-CANCER-TRADEOFF-TRANCEPTION-2026-08-23-v1.0.json`](TELOMERASE-CANCER-TRADEOFF-TRANCEPTION-2026-08-23-v1.0.json)
 - [`HUMAN-SAFE-RENEWAL-FULL-JANUS-COUNCIL-2026-08-23-v1.0.json`](HUMAN-SAFE-RENEWAL-FULL-JANUS-COUNCIL-2026-08-23-v1.0.json)
 - [`HUMAN-TISSUE-RENEWAL-PERMISSION-MATRIX-2026-08-23-v1.0.json`](HUMAN-TISSUE-RENEWAL-PERMISSION-MATRIX-2026-08-23-v1.0.json)
+- [`DEVELOPMENTAL-PERMISSION-MATRIX-LONGEVITY-SURVIVOR-2026-08-23-v2.0.json`](DEVELOPMENTAL-PERMISSION-MATRIX-LONGEVITY-SURVIVOR-2026-08-23-v2.0.json)
+- [`LOCK-ALIGNED-OVERLAY-LONGEVITY-SURVIVOR-2026-08-23-v2.1.json`](LOCK-ALIGNED-OVERLAY-LONGEVITY-SURVIVOR-2026-08-23-v2.1.json)
 
 ## Next gates
 
-- build a **developmental permission matrix**: neonatal → adult → aged tissue;
+- recover matched **before / transition / after** single-cell or multi-omic datasets for all five focal tissues;
+- compare them in the same six-axis state space **without using gene-name overlap as the alignment criterion**;
+- measure the persistence half-life of temporary wound-state cells and matrices in regenerative versus scar-forming conditions;
+- find a third tissue with direct causal evidence that developmental ECM/mechanical maturation suppresses regeneration and that reversing that mechanical state restores regenerative competence;
+- split every failure into **ENTRY failure / REBUILD failure / RESOLUTION failure / EXIT failure**;
 - compare high-renewal and low-renewal human tissues under the same variables;
 - split **cell rejuvenation**, **tissue regeneration** and **organismal longevity** into independent endpoints;
-- score every candidate simultaneously for regeneration benefit and escape modes: cancer, fibrosis, identity loss, clonal selection, immune dysregulation and malformed tissue geometry;
-- follow the first human partial-epigenetic-reprogramming phase-1 program as an external safety/target-engagement test without inferring efficacy before results;
 - preserve **homology != therapeutic feasibility** and **clinical entry != clinical efficacy**.
 
 ## Boundary
