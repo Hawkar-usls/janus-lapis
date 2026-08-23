@@ -1,0 +1,229 @@
+{
+  "schema_id": "janus.exit-clock.v0.1",
+  "clock_id": "JANUS_EXIT_CLOCK_v0.1_2026-08-24",
+  "gate": "P0_CROSS_TISSUE_CAUSAL_TIMING_GATE",
+  "created": "2026-08-24",
+  "purpose": "Represent repair-state timing across skin, heart and tendon without forcing incomparable absolute days into a false universal clock; retain spinal cord as an independent matrix-resolution control.",
+  "frozen_rules": {
+    "causal_requirement": "A tissue-level EXIT claim requires a perturbation that changes persistence or clearance of a defined activated repair-state cell population and changes an objective repair outcome.",
+    "timing_rule": "Do not infer that more EXIT is always beneficial; classify whether depletion occurs before, near, or after structural stabilization.",
+    "normalization_rule": "A dimensionless cross-tissue clock may be calculated only when activation onset, a stabilization/resolution transition, and a comparable resolution endpoint are empirically anchored in the same repair-state lineage or state.",
+    "half_life_rule": "Do not label intervention-associated depletion, sparse terminal endpoints, or single-interval signaling decay as a biological wound-state half-life."
+  },
+  "shared_architecture": [
+    "injury",
+    "activation",
+    "useful repair-state persistence",
+    "structural stabilization",
+    "resolution-permissive transition",
+    "selective EXIT / state shutdown",
+    "resolved tissue",
+    "pathological persistence if EXIT is delayed or incomplete"
+  ],
+  "tissue_clocks": {
+    "skin": {
+      "node": "SKIN_CAUSAL_EXIT_NODE_FMOD_2025",
+      "paper_doi": "10.1038/s41467-025-58906-z",
+      "repair_state": "alpha-SMA-positive wound myofibroblasts",
+      "intervention": "FMOD administered at surgery; apoptosis is preferentially observed in activated myofibroblasts",
+      "anchors": [
+        {
+          "time": "day 0",
+          "event": "full-thickness wound creation, FMOD/control administration and primary suture closure",
+          "status": "MEASURED_PROTOCOL_ANCHOR"
+        },
+        {
+          "time": "day 7",
+          "event": "suture removal in rodent protocol",
+          "status": "MEASURED_PROTOCOL_ANCHOR"
+        },
+        {
+          "time": "day 14",
+          "event": "rat terminal endpoint: FMOD group shows lower alpha-SMA-positive cell density and higher cleaved-caspase-3-positive cell density with reduced scar burden",
+          "status": "MEASURED_CAUSAL_ENDPOINT"
+        },
+        {
+          "time": "week 8",
+          "event": "red Duroc pig terminal endpoint under excessive mechanical loading: lower alpha-SMA-positive persistence and higher cleaved-caspase-3-positive cell density with reduced scar burden",
+          "status": "MEASURED_CAUSAL_ENDPOINT"
+        }
+      ],
+      "source_data_summary": {
+        "rat_day14_alpha_SMA_FMOD_vs_control_percent_change": -62.8548,
+        "rat_day14_cleaved_caspase3_FMOD_vs_control_fold": 2.71143,
+        "pig_week8_alpha_SMA_FMOD_vs_control_percent_change": -48.2826,
+        "pig_week8_cleaved_caspase3_FMOD_vs_control_fold": 2.00304,
+        "mechanistic_PLA_timepoints_h": [1, 6, 12, 24, 48, 72],
+        "note": "PLA kinetics describe IL1R1-complex signaling in vitro and are not the in-vivo wound-state clock."
+      },
+      "safe_exit_onset": {
+        "status": "NOT_IDENTIFIABLE",
+        "reason": "FMOD is present from surgery and published in-vivo activated-cell measurements are sparse terminal endpoints; there is no late-only dosing series or dense post-closure alpha-SMA lineage decay curve."
+      },
+      "biological_half_life": "NOT_IDENTIFIABLE"
+    },
+    "heart": {
+      "node": "HEART_CAUSAL_LATE_EXIT_NODE_CD248_BBIRT_2025",
+      "paper_doi": "10.1038/s41467-025-56703-2",
+      "repair_states": {
+        "F_Myo": "periostin-positive / alpha-SMA-positive reparative myofibroblasts",
+        "F_Act": "CD248-positive late-activated fibroblast population targeted by BBIR-T"
+      },
+      "anchors": [
+        {
+          "time": "day 7",
+          "event": "F-Myo is present; F-Act is detectable in peri-infarct myocardium",
+          "status": "MEASURED_STATE_ANCHOR"
+        },
+        {
+          "time": "day 14",
+          "event": "F-Myo peaks; infarct scar described as almost mature; CD248-targeted BBIR-T dosing begins",
+          "status": "MEASURED_STABILIZATION_AND_CAUSAL_INTERVENTION_ANCHOR"
+        },
+        {
+          "time": "day 21",
+          "event": "F-Act surpasses F-Myo as the dominant fibroblast subpopulation",
+          "status": "MEASURED_STATE_TRANSITION"
+        },
+        {
+          "time": "approximately day 23 under the published 3-day dosing cadence",
+          "event": "after three BBIR-T injections, CD248-positive cells are reduced by approximately two-thirds",
+          "status": "INTERVENTION_ASSOCIATED_CLEARANCE_MILESTONE",
+          "caveat": "This is reconstructed from the stated day-14 start and every-3-day dosing/assessment schedule; it is not a biological half-life."
+        },
+        {
+          "time": "day 28",
+          "event": "F-Myo approaches baseline while F-Act remains persistently activated without targeted clearance",
+          "status": "MEASURED_STATE_ANCHOR"
+        }
+      ],
+      "safe_exit_onset": {
+        "status": "CAUSALLY_ANCHORED_FOR_CD248_F_ACT",
+        "lower_bound": "day 14 post-MI",
+        "meaning": "Selective depletion initiated when the scar was almost mature improved fibrosis/remodeling outcomes.",
+        "lineage_specificity_warning": "Do not transfer this timing to the earlier reparative F-Myo population."
+      },
+      "biological_half_life": "NOT_IDENTIFIABLE",
+      "intervention_clearance_timescale": "A ~2/3 reduction after three discrete BBIR-T doses is a treatment-response milestone, not an exponential natural decay constant."
+    },
+    "tendon": {
+      "node": "TENDON_CAUSAL_EXIT_TIMING_NODE_SCX_DTR_2022",
+      "paper_doi": "10.1371/journal.pone.0274227",
+      "repair_states": {
+        "causal_depletion_target": "broad Scx-lineage repair-cell pool",
+        "natural_resolution_readout": "alpha-SMA-positive myofibroblasts, nearly all actively Scx-expressing during their transient presence"
+      },
+      "anchors": [
+        {
+          "time": "day 7",
+          "event": "virtually no alpha-SMA-positive myofibroblasts",
+          "status": "MEASURED_STATE_ANCHOR"
+        },
+        {
+          "time": "day 14",
+          "event": "substantial alpha-SMA-positive population; proliferative phase",
+          "status": "MEASURED_STATE_ANCHOR"
+        },
+        {
+          "time": "days 14-18",
+          "event": "local diphtheria-toxin-induced apoptosis of Scx-lineage cells",
+          "status": "MEASURED_CAUSAL_PREMATURE_EXIT_WINDOW",
+          "outcome": "D28 structural/function restoration is impaired and the repair program is transiently stalled near the proliferative state"
+        },
+        {
+          "time": "day 21",
+          "event": "alpha-SMA-positive myofibroblast presence peaks",
+          "status": "MEASURED_PEAK_STATE_ANCHOR"
+        },
+        {
+          "time": "days 28-35",
+          "event": "alpha-SMA-positive cells persist but are markedly reduced; remodeling phase",
+          "status": "MEASURED_NATURAL_RESOLUTION_INTERVAL"
+        },
+        {
+          "time": "day 42",
+          "event": "alpha-SMA-positive cells are no longer detected in injured tendons",
+          "status": "MEASURED_NATURAL_RESOLUTION_COMPLETION_ANCHOR"
+        },
+        {
+          "time": "day 56",
+          "event": "mechanical properties of the D14-18 depleted repairs are no longer significantly different from WT",
+          "status": "MEASURED_RECOVERY_ENDPOINT"
+        }
+      ],
+      "premature_exit_boundary": {
+        "status": "CAUSALLY_ANCHORED",
+        "window": "day 14-18",
+        "verdict": "TOO_EARLY_FOR_BROAD_SCX_LINEAGE_DEPLETION"
+      },
+      "natural_resolution_onset": {
+        "status": "BRACKETED",
+        "bracket": "after the D21 peak and by D28",
+        "note": "This is an observational physiological transition, not proof that an artificial depletion beginning in this interval would be beneficial."
+      },
+      "natural_resolution_completion": {
+        "status": "MEASURED",
+        "time": "day 42 for alpha-SMA-positive myofibroblast disappearance"
+      },
+      "biological_half_life": "NOT_IDENTIFIABLE_FROM_REPORTED_SUMMARY_WITHOUT_POINT_LEVEL_DENSITIES"
+    }
+  },
+  "matrix_resolution_control": {
+    "tissue": "spinal_cord",
+    "role": "INDEPENDENT_RESOLUTION_CONTROL_NOT_STRICT_CELL_EXIT",
+    "papers": [
+      {
+        "doi": "10.1371/journal.pone.0027969",
+        "finding": "monocyte-derived macrophage depletion/reconstitution and MMP-13 competence causally control CSPG scar-matrix resolution and functional recovery",
+        "key_times": ["day 5 MMP-13 expression", "day 7 approximately half of infiltrating monocytes CD11c-positive", "day 14 CSPG endpoint", "day 21 motor-function endpoint"]
+      },
+      {
+        "doi": "10.1016/j.cell.2018.02.004",
+        "finding": "reducing generation of pericyte-derived scar-forming progeny reduces fibrosis/ECM and promotes recovery, but this perturbs scar generation rather than post-use cell EXIT"
+      }
+    ],
+    "interpretation": "The control supports the general importance of timed resolution while remaining outside the strict activated-cell EXIT count."
+  },
+  "cross_tissue_clock_status": {
+    "strict_causal_tissues": 3,
+    "timing_dependence": "SUPPORTED",
+    "simple_more_exit_is_better_model": "REJECTED",
+    "universal_dimensionless_exit_window": "OPEN_NOT_IDENTIFIABLE_V0.1",
+    "why_not_yet": [
+      "skin lacks a dense in-vivo activated-cell decay trajectory or late-only intervention series",
+      "heart has a strong target-specific day-14 safe intervention anchor but no natural F-Act resolution endpoint in the observed day-7 to day-28 window",
+      "tendon has the best natural trajectory, but the causal depletion target is broader than the alpha-SMA-positive myofibroblast readout"
+    ]
+  },
+  "provisional_clock_logic": {
+    "adaptive_zone": "activated repair cells are still required for closure, matrix deposition, organization or structural stabilization",
+    "transition_zone": "repair-state population reaches peak/plateau while tissue enters remodeling and selective late states become dispensable or maladaptive",
+    "resolution_zone": "natural or selective EXIT can proceed without loss of structural integrity",
+    "persistence_hazard_zone": "activated state remains after its useful structural role and contributes to continuing fibrosis/scar expansion"
+  },
+  "next_killer_measurements": [
+    {
+      "priority": 1,
+      "tissue": "skin",
+      "measurement": "same-lineage in-vivo alpha-SMA or lineage-traced myofibroblast density at multiple points spanning closure through D14, in control and FMOD; ideally add delayed FMOD-start arms",
+      "goal": "identify natural and FMOD-shifted decay curves and the earliest non-harmful EXIT window"
+    },
+    {
+      "priority": 2,
+      "tissue": "heart",
+      "measurement": "point-level CD248-positive F-Act abundance immediately before each BBIR-T dose and at dense intervals after the third dose, plus later untreated natural-history points beyond D28",
+      "goal": "separate treatment clearance kinetics from natural persistence and estimate a state-specific clearance constant"
+    },
+    {
+      "priority": 3,
+      "tissue": "tendon",
+      "measurement": "extract point-level alpha-SMA density across D7, D14, D21, D28, D35 and D42 and test a later, narrower Scx/myofibroblast-selective depletion window after the D21 peak",
+      "goal": "convert the observed natural-resolution bracket into a causal safe-exit boundary"
+    }
+  ],
+  "gate_decision": {
+    "status": "EXIT_CLOCK_V0.1_FROZEN",
+    "strongest_conclusion": "Across skin, heart and tendon, repair outcome depends not merely on whether activated repair-state cells exit, but on cell identity and timing relative to tissue stabilization. Current evidence supports a cross-tissue timing gate but does not yet identify a universal numerical resolution window.",
+    "next_version_gate": "EXIT_CLOCK_v0.2 requires at least two tissues with dense same-state decay trajectories plus a causally bounded safe-exit onset."
+  }
+}
