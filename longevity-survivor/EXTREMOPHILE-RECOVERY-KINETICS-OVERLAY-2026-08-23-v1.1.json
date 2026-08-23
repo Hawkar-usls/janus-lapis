@@ -1,0 +1,81 @@
+{
+  "schema": "janus.lapis.longevity_survivor.extremophile_recovery_kinetics_overlay.v1_1",
+  "artifact_id": "EXTREMOPHILE-RECOVERY-KINETICS-OVERLAY-2026-08-23-v1.1",
+  "created_at_local": "2026-08-23T23:59:00+03:00",
+  "status": "ACTIVE_FALSIFICATION_RESULT",
+  "question": "When reversible extremotolerance systems are aligned at stress exit (rehydration/germination = tau0), is complete molecular repair required before organismal/cellular function resumes?",
+  "measurement_rule": "Use reported sampling windows and functional milestones. Do not invent exponential half-lives from sparse points.",
+  "systems": [
+    {
+      "system":"Ramazzottius varieornatus",
+      "tau0":"water added to tun",
+      "first_function":"movement begins around ~5 min in a 2024 ultrastructural protocol",
+      "molecular_repair_complete":"UNKNOWN",
+      "interpretation":"Fast behavioral re-entry does not establish complete molecular restoration.",
+      "source":"DOI:10.1371/journal.pone.0302552"
+    },
+    {
+      "system":"Paramacrobiotus experimentalis",
+      "tau0":"rehydration",
+      "first_function":"recovery measured at 2/6/24/48 h; cumulative activity rises over time",
+      "molecular_repair_complete":"NOT_MEASURED_IN_THIS_STUDY",
+      "interpretation":"Recovery is distributed rather than instantaneous; older animals and longer/repeated dormancy show poorer/slower return.",
+      "source":"DOI:10.1016/j.heliyon.2024.e26807"
+    },
+    {
+      "system":"Adineta vaga",
+      "tau0":"rehydration after desiccation / irradiation",
+      "first_function":"full mobility reported by ~8 h in one repair experiment",
+      "early_repair":"DNA-repair/oxidoreduction response peaks early (~1.5 h in later transcriptomic study); PFGE repair tracked 0/2/8/24/48 h",
+      "molecular_repair_complete":"DSB signal can remain at 48 h despite restored mobility",
+      "interpretation":"DECISIVE counterexample to FULL_REPAIR_BEFORE_FUNCTION.",
+      "sources":["DOI:10.1111/jeb.12326","DOI:10.1186/s12915-023-01807-8"]
+    },
+    {
+      "system":"Polypedilum vanderplanki",
+      "tau0":"rehydration",
+      "first_function":"larvae can revive rapidly, classically within ~1 h",
+      "early_repair":"rehydration produces severe oxidative damage; a 2023 study reports DNA/protein/lipid oxidation repaired within a couple of hours",
+      "molecular_repair_complete":"older DSB assays report genome-integrity recovery on a longer ~96-h scale",
+      "interpretation":"Functional return and different molecular repair layers have different time constants.",
+      "sources":["DOI:10.1016/j.mito.2023.11.002","DOI:10.1371/journal.pone.0014008"]
+    },
+    {
+      "system":"Bacillus subtilis spore",
+      "tau0":"germination cue / core rehydration",
+      "first_function":"germination begins over minutes",
+      "early_repair":"predamaged-spore work places important lesion processing during early revival, including ~15-60 min ripening/outgrowth windows",
+      "replication_constraint":"repair/checkpoint defects delay outgrowth and increase mutation/chromosome segregation defects during first replication",
+      "interpretation":"Strongest evidence that dangerous restart processes are damage-gated, but not proof that every cellular function waits for total repair.",
+      "sources":["PMCID:PMC12448304","PMCID:PMC12029834","PMCID:PMC11332352"]
+    },
+    {
+      "system":"Craterostigma plantagineum",
+      "tau0":"rewatering",
+      "first_function":"metabolic recovery begins during rehydration",
+      "state_reset":"24-h rehydrated transcriptome clusters close to hydrated control",
+      "physiology":"photosynthetic carbon assimilation substantially recovers by ~48 h",
+      "interpretation":"Recovery is a staged transition across molecular and physiological layers.",
+      "sources":["PMCID:PMC8453721","PMCID:PMC160978"]
+    }
+  ],
+  "topa": {
+    "FULL_REPAIR_BEFORE_ANY_FUNCTION":"REFUTED",
+    "SINGLE_RECOVERY_HALF_LIFE":"REFUTED_AS_UNIVERSAL",
+    "FUNCTIONAL_RECOVERY_EQUALS_MOLECULAR_RECOVERY":"REFUTED",
+    "STAGED_DAMAGE_AWARE_REENTRY":"SURVIVES_AS_P0_CROSS_KINGDOM_ABSTRACTION"
+  },
+  "revised_survivor": {
+    "name":"STAGED_DAMAGE_AWARE_REENTRY",
+    "formula":"PROTECTED_STATE -> REHYDRATE/GERMINATE -> EARLY_SENSING_AND_REPAIR -> LOW_RISK_FUNCTIONS_CAN_RETURN -> DAMAGE_CHECKPOINTS_GATE_HIGH_RISK_RESTART -> CONTINUED_REPAIR_AND_NORMALIZATION -> FULL_STABLE_STATE",
+    "key_point":"There is not one universal EXIT time. Different layers—movement, metabolism, transcription, genome integrity, replication and full physiology—can recover on distinct timescales.",
+    "relation_to_longevity_survivor":"Adds an ordering principle: safe recovery may depend on gating specific high-risk functions to damage state, rather than demanding complete repair of everything before any activity resumes.",
+    "claim_ceiling":"Cross-kingdom survival abstraction only; not a mammalian rejuvenation mechanism."
+  },
+  "next_tests": [
+    "For each reversible extremophile, measure separate tau50 values for behavioral function, metabolic function, genome integrity, proteome oxidation, replication/growth and full physiology only when quantitative curves exist.",
+    "Test whether replication/growth tau is more tightly coupled to genome-repair completion than movement or basic metabolism across at least three independent lineages.",
+    "Use Bacillus checkpoint mutants as a causal positive control and Adineta as a counterexample to total-repair-first models.",
+    "Seek modern rehydration omics for Chroococcidiopsis to prospectively test the staged-reentry model."
+  ]
+}
