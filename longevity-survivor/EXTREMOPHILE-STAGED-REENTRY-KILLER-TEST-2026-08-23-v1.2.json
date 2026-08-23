@@ -1,0 +1,179 @@
+{
+  "schema": "janus.lapis.longevity_survivor.extremophile_staged_reentry_killer_test.v1_2",
+  "artifact_id": "EXTREMOPHILE-STAGED-REENTRY-KILLER-TEST-2026-08-23-v1.2",
+  "created_at_local": "2026-08-23T23:50:00+03:00",
+  "repository": "Hawkar-usls/janus-lapis",
+  "branch": "LONGEVITY-SURVIVOR",
+  "status": "ACTIVE_FALSIFICATION_RESULT",
+  "frozen_question": "Across independent reversible-extremotolerance systems, are high-risk functions such as genome replication, reproductive genome transmission or growth restarted more conservatively than low-risk functions such as movement, hydration or basal metabolism after stress release?",
+  "alignment_rule": {
+    "tau0": "rehydration or germination cue",
+    "measurements": [
+      "tau_basic_function",
+      "tau_damage_response",
+      "tau_genome_repair",
+      "tau_proteome_or_structural_recovery",
+      "tau_replication_growth_or_reproductive_restart",
+      "tau_full_physiology"
+    ],
+    "censoring_rule": "If only sparse time points are available, report intervals or first-observed milestones; do not infer a half-life or exact onset.",
+    "risk_rule": "Movement, hydration and simple metabolic activity are treated as lower-risk than chromosome replication, germline transmission, cell division or sustained growth."
+  },
+  "systems": [
+    {
+      "system": "Bacillus subtilis spore germination/outgrowth",
+      "lineage": "Bacteria",
+      "tau0": "germinant exposure / onset of germination",
+      "observations": {
+        "early_repair_program": "DNA repair and replication functions are enriched during early outgrowth ~5-25 min, with a second repair wave reported around ~40-50 min.",
+        "replication_growth": "Wild-type spores have completed multiple chromosome-replication/division cycles by ~90 min in a 2025 checkpoint study.",
+        "causal_checkpoint": "ROS-promoted lesions and BER defects delay outgrowth and chromosome replication. DisA-dependent and DisA-independent checkpoint mechanisms respond to oxidative lesions; checkpoint-defective/repair-defective combinations increase lesions and chromosome-segregation failure during first replication."
+      },
+      "classification": "A_CAUSAL_SUPPORT_FOR_HIGH_RISK_RESTART_GATE",
+      "sources": [
+        "DOI:10.3390/microorganisms13040939",
+        "PMCID:PMC12029834",
+        "PMCID:PMC1855883",
+        "PMCID:PMC11332352"
+      ]
+    },
+    {
+      "system": "Adineta vaga desiccation/rehydration",
+      "lineage": "Rotifera",
+      "tau0": "rehydration",
+      "observations": {
+        "basic_function": "Complete mobility is restored within an interval of ~2-24 h in desiccation experiments and at ~8 h in the heavily DNA-damaged proton-irradiated rehydration experiment.",
+        "somatic_genome_repair": "DSB-containing genomic fragments progressively decline through 2/4/8/24/48 h recovery; substantial repair occurs but damage can remain at 48 h despite full mobility.",
+        "germline_checkpoint_like_behavior": "Primary oocytes do not immediately repair heavily damaged chromatin. DNA repair synthesis is delayed to a specific oogenesis window; chromosomes become juxtaposed in a nonreductional meiotic-like configuration and the parental restriction pattern is accurately restored in progeny.",
+        "risk_separation": "Somatic movement resumes while genomic lesions remain, whereas accurate germline transmission uses a later, spatially and temporally restricted repair phase."
+      },
+      "classification": "A_MINUS_STRONG_SUPPORT_FOR_COMPARTMENT_SPECIFIC_HIGH_RISK_REENTRY",
+      "sources": [
+        "DOI:10.1111/jeb.12326",
+        "DOI:10.1126/sciadv.adc8829",
+        "PMCID:PMC10809525"
+      ]
+    },
+    {
+      "system": "Polypedilum vanderplanki anhydrobiosis/rehydration",
+      "lineage": "Insecta",
+      "tau0": "rehydration",
+      "observations": {
+        "very_early_function": "Pharynx and heart begin beating ~7-12 min after rehydration in prior physiological observations.",
+        "active_state": "Larvae typically recover active behavior within ~20 min-1 h; some hydration protocols report medium full-activation times closer to ~170 min depending on water composition and assay.",
+        "molecular_damage": "A strong ROS burst occurs during the first post-rehydration hour and oxidizes DNA, lipids and proteins; several oxidative lesions are repaired within hours.",
+        "chromosomal_integrity": "Older comet/TEM work found severe nuclear DNA fragmentation after anhydrobiosis and restoration of overall nuclear DNA integrity only after ~72-96 h.",
+        "critical_interpretation": "Different molecular damage layers recover on different clocks: organ function can restart within minutes-hours while complete nuclear DNA integrity may lag for days."
+      },
+      "classification": "B_PLUS_STRONG_KINETIC_SUPPORT_BUT_NO_CLEAN_REPLICATION_GATE_READOUT",
+      "sources": [
+        "DOI:10.1371/journal.pone.0014008",
+        "DOI:10.1016/j.mito.2023.11.002",
+        "DOI:10.1038/s41598-022-07707-1",
+        "PMCID:PMC2975212"
+      ]
+    },
+    {
+      "system": "Ramazzottius varieornatus / Paramacrobiotus experimentalis tardigrade rehydration",
+      "lineage": "Tardigrada",
+      "tau0": "rehydration",
+      "observations": {
+        "ramazzottius_basic_function": "Movement begins at ~5 min; by ~15 min specimens show normal activity including mobility and feeding in a 2024 ultrastructural study.",
+        "ramazzottius_structure": "Mitochondrial size and several tissue ultrastructural features approach hydrated-control state by ~15 min.",
+        "paramacrobiotus_population_recovery": "Recovery is measured at 2/6/24/48 h; age, prior tun duration and repeated anhydrobiosis materially affect the fraction returning to coordinated crawling.",
+        "missing_dimension": "No matched quantitative genome-damage/repair versus replication or reproduction time series was found that can test the high-risk restart prediction in the same experiment."
+      },
+      "classification": "B_FUNCTIONAL_REENTRY_SUPPORTED_CHECKPOINT_TEST_NOT_RESOLVED",
+      "sources": [
+        "DOI:10.1371/journal.pone.0302552",
+        "DOI:10.1016/j.heliyon.2024.e26807",
+        "PMCID:PMC11156355",
+        "PMCID:PMC10907786"
+      ]
+    },
+    {
+      "system": "Craterostigma plantagineum resurrection plant",
+      "lineage": "Angiosperm",
+      "tau0": "rewatering / rehydration",
+      "observations": {
+        "early_molecular_switch": "Dehydration-specific products disappear early and a small rehydration-specific transcript set appears around ~12-15 h.",
+        "transcriptome": "After ~24 h of rehydration the global transcriptome is close to fully hydrated controls in modern multi-omics analysis.",
+        "proteome_physiology": "A 48 h point gives a more complete protein recovery; photosynthetic carbon assimilation reaches ~71% of control while stomatal conductance and transpiration are reported as fully recovered.",
+        "causal_repair_control": "Related Craterostigma wilmsii work shows that when rapid drying causes additional damage, blocking de novo transcription or translation during rehydration prevents recovery, demonstrating that repair synthesis can be required when pre-protection fails.",
+        "missing_dimension": "Matched DNA-repair kinetics and cell-cycle/growth restart are insufficient to score a replication checkpoint."
+      },
+      "classification": "B_PLUS_STAGED_RECOVERY_AND_CAUSAL_REPAIR_REQUIREMENT_BUT_NO_REPLICATION_GATE",
+      "sources": [
+        "DOI:10.1111/tpj.15294",
+        "PMID:12226346",
+        "PMID:12147731",
+        "GEO:GSE157098",
+        "PRIDE:PXD020923"
+      ]
+    }
+  ],
+  "topa_falsification": {
+    "refuted": [
+      {
+        "claim": "FULL_MOLECULAR_REPAIR_PRECEDES_ANY_FUNCTIONAL_RETURN",
+        "reason": "Adineta and Polypedilum regain movement/physiological activity while substantial genomic damage remains; Ramazzottius resumes movement within minutes without evidence that all molecular systems are already normalized."
+      },
+      {
+        "claim": "ONE_REENTRY_CLOCK_CONTROLS_ALL_LEVELS",
+        "reason": "Movement, transcriptome, proteome, DNA integrity, photosynthesis and reproductive genome repair recover on markedly different time scales."
+      },
+      {
+        "claim": "DAMAGE_REPAIR_MUST_BE_CONTINUOUS_DURING_DORMANCY",
+        "reason": "Dormant systems can defer substantial repair until rehydration/germination."
+      }
+    ],
+    "survivors": [
+      {
+        "name": "STAGED_DAMAGE_AWARE_REENTRY",
+        "status": "P0_CROSS_KINGDOM_SURVIVOR",
+        "support": ["Bacillus", "Adineta", "Polypedilum", "tardigrade functional kinetics", "Craterostigma"],
+        "formula": "PROTECTED_STATE -> REHYDRATE/GERMINATE -> EARLY_SENSING_AND_REPAIR -> PARTIAL_FUNCTION_RETURN -> COMPARTMENT_SPECIFIC_CHECKS -> HIGHER_RISK_RESTART -> CONTINUED_REPAIR -> STABLE_HOMEOSTASIS"
+      },
+      {
+        "name": "HIGH_RISK_FUNCTIONS_REQUIRE_STRONGER_DAMAGE_RESOLUTION_GATE",
+        "status": "P1_STRONG_CANDIDATE_NOT_YET_P0",
+        "causal_support": ["Bacillus subtilis"],
+        "strong_independent_support": ["Adineta vaga germline repair during oogenesis"],
+        "kinetic_support_without_clean_replication_readout": ["Polypedilum vanderplanki"],
+        "why_not_promoted": "The pre-registered >=3 independent-lineage criterion with a matched high-risk restart readout is not yet met."
+      }
+    ]
+  },
+  "cross_lineage_invariant": {
+    "supported": "Recovery is multi-stage and risk-structured rather than a single all-or-none return to normal.",
+    "not_supported": "A universal molecular pathway, universal recovery half-life, or requirement for complete DNA repair before any behavior/metabolism resumes.",
+    "new_abstraction": "SAFE_REENTRY_IS_A_PERMISSIONS_GRAPH_NOT_A_TIMER"
+  },
+  "next_killer_tests": [
+    {
+      "priority": "P0",
+      "test": "Find or generate a third independent lineage with matched damage-load, repair-state and replication/growth restart measurements plus a causal perturbation of the checkpoint or repair process.",
+      "candidate_systems": ["Polypedilum developmental progression after rehydration", "resurrection-plant cell-cycle restart", "fungal or algal desiccation recovery", "Chroococcidiopsis rehydration omics"]
+    },
+    {
+      "priority": "P0",
+      "test": "For Adineta, align mobility recovery, somatic DSB repair, oocyte repair entry, egg laying and viable-progeny production on one normalized tau axis.",
+      "reason": "This is currently the cleanest multicellular example of compartment-specific risk gating."
+    },
+    {
+      "priority": "P0",
+      "test": "For Polypedilum, separate fast oxidative-lesion repair from slow whole-nuclear-DNA integrity restoration and determine whether cell proliferation/developmental progression waits for the latter.",
+      "reason": "The existing literature already shows distinct molecular clocks but not the high-risk permission edge."
+    },
+    {
+      "priority": "P1",
+      "test": "Use Craterostigma GSE157098/PXD020923 to build transcriptome-proteome-physiology lag curves and search specifically for cell-cycle/growth re-entry markers without inferring a causal checkpoint from expression alone."
+    }
+  ],
+  "claim_ceiling": [
+    "Cross-kingdom temporal analogy does not prove the mammalian wound-resolution gate.",
+    "A checkpoint in Bacillus and staged germline repair in Adineta do not imply a conserved molecular checkpoint pathway.",
+    "Anhydrobiosis is not rejuvenation and extremotolerance is not longevity.",
+    "No therapeutic or human-life-extension inference is licensed by this comparison."
+  ]
+}
