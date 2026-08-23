@@ -103,14 +103,14 @@ SCAR         = SAME STATE PERSISTS
 
 ### What survives
 
-- **Neonatal spinal cord:** Fn1-high microglial bridge state is present at ~3 dpi, absent in the reported 5 dpi in-situ time point, fibronectin bridge is gone by ~7 dpi, and microglia return toward homeostasis within the first week. Adult lesions retain activated macrophage/microglial states and scar architecture much longer.
-- **Neonatal tendon:** alpha-SMA+ helper cells are abundant early and strongly reduced by d14; scar-associated transcripts return toward control by d28 while intrinsic tenocyte recruitment builds neo-tendon.
-- **Acomys ear skin:** myofibroblasts are transient during regeneration, and experimentally prolonging their persistence by YAP-TEAD inhibition shifts healing toward fibrosis.
+- **Neonatal spinal cord:** transient microglial/Fn1-fibronectin bridge followed by return toward homeostasis, with causal depletion/transplantation evidence.
+- **Neonatal tendon:** early alpha-SMA+ helper/fibrotic state followed by intrinsic Scx-lineage recruitment and neo-tendon formation.
+- **Acomys ear:** transient myofibroblast state; experimentally delaying resolution shifts regeneration toward fibrosis.
 
 ### What kills the half-life-only model
 
-- **Adult heart:** alpha-SMA myofibroblasts are themselves transient and largely lose alpha-SMA by ~10–14 days, yet the scar persists because fibroblasts transition into alternate scar-maintaining states and ECM matures.
-- **Acomys full-thickness skin (29 July 2026):** dermal alpha-SMA+ wound-bed cells clear earlier than in Mus, but a separate alpha-SMA+ bridge at the panniculus carnosus persists for weeks while muscle regenerates successfully.
+- **Adult heart:** alpha-SMA myofibroblast identity is transient, but lineage-traced fibroblasts persist as matrifibrocytes and the mature ECM scar remains.
+- **Acomys full-thickness skin (29 July 2026):** dermal alpha-SMA clears early, while a distinct panniculus-associated alpha-SMA+ bridge persists for weeks during successful muscle regeneration.
 
 Therefore persistence time alone is not the invariant.
 
@@ -123,23 +123,49 @@ ENTRY
 → WOUND STATE
 → SPATIAL ROUTING
 → HANDOFF TO REBUILD
+→ STATE FATE
 → TERMINATE PROFIBROTIC OUTPUT
-→ CLEAR / REDIFFERENTIATE / REDIRECT / FATE-SWITCH
 → RESTORE ARCHITECTURE
 ```
 
-The key variable is **where the wound-state goes**, not merely how long one marker remains positive.
+Required measurements now include duration, spatial compartment, state identity, lineage fate, ECM reversibility, profibrotic-output duration, regenerative handoff and final tissue architecture.
 
-Required measurements now include:
+## Resolution Gate Data Pack v1.0
 
-1. duration;
-2. spatial compartment;
-3. cell-state identity;
-4. lineage fate after marker loss;
-5. ECM reversibility and crosslinking;
-6. duration of profibrotic output;
-7. handoff to resident regenerative cells;
-8. final tissue architecture.
+The next stage is now packaged as an auditable scientific-data request rather than a broad hypothesis pitch.
+
+Core distinction:
+
+```text
+marker lifetime
+!= lineage lifetime
+!= profibrotic-output lifetime
+!= scar lifetime
+```
+
+The pack contains interval-censored kinetics for neonatal spinal cord, neonatal tendon, Acomys ear, 2026 Acomys full-thickness skin, adult post-MI heart and a new **4 August 2026 neonatal-heart bioRxiv preprint** with 4/7/10/21-dpi scar-resolution measurements and fibroblast/myeloid Erbb4 perturbations.
+
+The preprint is especially useful because it provides a provisional causal separation:
+
+```text
+CARDIOMYOCYTE PROLIFERATION
+!=
+SCAR-RESOLUTION KINETICS
+```
+
+It remains preprint evidence and is not promoted to settled mechanism.
+
+### Current quantitative target
+
+Instead of fitting only `alpha-SMA(t)`, the P0 test now compares:
+
+```text
+CELL_STATE_OCCUPANCY(t)
+vs
+PROFIBROTIC_OUTPUT_OCCUPANCY(t)
+```
+
+with spatial compartment, lineage transition and final architecture carried as explicit variables.
 
 ## Current falsification state
 
@@ -165,17 +191,24 @@ DIRECT_HUMAN_TRANSLATION            = NOT_ESTABLISHED
 - [`DEVELOPMENTAL-PERMISSION-MATRIX-LONGEVITY-SURVIVOR-2026-08-23-v2.0.json`](DEVELOPMENTAL-PERMISSION-MATRIX-LONGEVITY-SURVIVOR-2026-08-23-v2.0.json)
 - [`LOCK-ALIGNED-OVERLAY-LONGEVITY-SURVIVOR-2026-08-23-v2.1.json`](LOCK-ALIGNED-OVERLAY-LONGEVITY-SURVIVOR-2026-08-23-v2.1.json)
 - [`RESOLUTION-GATE-KINETIC-KILLER-TEST-2026-08-23-v2.2.json`](RESOLUTION-GATE-KINETIC-KILLER-TEST-2026-08-23-v2.2.json)
+- [`RESOLUTION-GATE-DATA-PACK-2026-08-23-v1.0.json`](RESOLUTION-GATE-DATA-PACK-2026-08-23-v1.0.json)
+- [`RESOLUTION-GATE-DATA-PACK-2026-08-23-v1.0.md`](RESOLUTION-GATE-DATA-PACK-2026-08-23-v1.0.md)
+- [`RESOLUTION-GATE-SCIENTIFIC-NOTE-DRAFT-2026-08-23-v0.1.md`](RESOLUTION-GATE-SCIENTIFIC-NOTE-DRAFT-2026-08-23-v0.1.md)
 - [`SCIENTIFIC-OUTREACH-QUEUE-RESOLUTION-GATE-2026-08-23-v1.0.json`](SCIENTIFIC-OUTREACH-QUEUE-RESOLUTION-GATE-2026-08-23-v1.0.json)
 
 ## Scientific-sharing boundary
 
-The current result is suitable to share as a **cross-tissue hypothesis note and quantitative-data request**, not as a new experimental discovery or universal regeneration mechanism. The strongest outreach questions concern raw time-series state occupancy, lineage fate after marker loss, spatial compartment identity and ECM-state persistence.
+The current result is suitable to share as a **cross-tissue technical hypothesis note and quantitative-data request**, not as a new experimental discovery or universal regeneration mechanism.
+
+No email is sent from this branch. Outreach remains blocked until the packet is judged sufficiently valuable and specific.
 
 ## Next gates
 
-- reconstruct normalized state-occupancy curves from source data rather than infer universal half-lives from sparse time points;
-- track what cells become after marker loss: apoptosis, redifferentiation, migration, spatial redirection or alternate stable scar state;
-- measure profibrotic **output half-life** (periostin, collagen production, crosslinking, stiffness, MMP/TIMP balance) separately from alpha-SMA marker lifetime;
+- reconstruct normalized state-occupancy curves from public source data;
+- extract per-animal/time-point values where legally/publicly available rather than digitize figures when source data exist;
+- track lineage fate after marker loss;
+- measure profibrotic-output persistence separately from alpha-SMA marker lifetime;
+- test whether `[state + output + routing]` separates outcomes better than marker lifetime alone;
 - seek a third clean causal native-tissue test for the ECM/mechanical maturation lock;
 - preserve **marker loss != cell clearance**, **cell clearance != ECM clearance**, **animal regeneration != human therapy**.
 
