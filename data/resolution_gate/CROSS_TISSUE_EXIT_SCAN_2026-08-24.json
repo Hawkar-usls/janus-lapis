@@ -1,0 +1,106 @@
+{
+  "schema_id": "janus.resolution-gate.cross-tissue-scan.v1",
+  "scan_id": "CROSS_TISSUE_EXIT_SCAN_2026-08-24",
+  "gate": "TEMPORARY_WOUND_STATE_TO_PERSISTENT_SCAR_STATE",
+  "scan_date": "2026-08-24",
+  "frozen_test": {
+    "core_criterion": "causal alteration of EXIT/resolution changes repair outcome",
+    "strict_cell_exit_counting_rule": "count a tissue only when an intervention directly or near-directly changes persistence/clearance of a defined activated repair-state cell population and an objective repair outcome changes",
+    "do_not_assume_direction": true
+  },
+  "counted_tissues": [
+    {
+      "tissue": "skin",
+      "node_id": "SKIN_CAUSAL_EXIT_NODE_FMOD_2025",
+      "verdict": "PASS_WITH_TEMPORAL_CAVEAT",
+      "intervention": "FMOD",
+      "exit_effect": "increased cleaved-caspase-3-positive cells and reduced alpha-SMA-positive myofibroblast persistence",
+      "repair_effect": "reduced scar burden in adult rat and mechanically loaded red Duroc pig wounds",
+      "direction": "MORE_EXIT_ASSOCIATED_WITH_BETTER_SCAR_OUTCOME",
+      "doi": "10.1038/s41467-025-58906-z"
+    },
+    {
+      "tissue": "heart",
+      "node_id": "HEART_CAUSAL_LATE_EXIT_NODE_CD248_BBIRT_2025",
+      "verdict": "PASS_STRONG",
+      "intervention": "CD248-targeted BBIR-T cells against late-activated fibroblasts",
+      "timing": "treatment initiated at day 14 after myocardial infarction, when the scar was nearly mature; three injections at 3-day intervals",
+      "exit_effect": "approximately two-thirds reduction of CD248-positive late-activated fibroblasts after three injections",
+      "repair_effect": "reduced fibrosis expansion and adverse ventricular remodeling with improved cardiac function",
+      "direction": "SELECTIVE_LATE_EXIT_ASSOCIATED_WITH_BETTER_OUTCOME",
+      "doi": "10.1038/s41467-025-56703-2"
+    },
+    {
+      "tissue": "tendon",
+      "node_id": "TENDON_CAUSAL_EXIT_TIMING_NODE_SCX_DTR_2022",
+      "verdict": "PASS_CAUSAL_EXIT_CHANGED_OUTCOME",
+      "intervention": "local diphtheria-toxin-induced apoptosis of Scx-lineage cells in Scx-Cre;Rosa-DTR mice",
+      "timing": "days 14-18 after flexor tendon repair, during the late proliferative/early remodeling interval",
+      "exit_effect": "direct depletion by apoptosis of Scx-lineage repair cells",
+      "repair_effect": "substantial structural and functional impairment at day 28; the mechanical deficit was transient and not significant by day 56",
+      "direction": "MORE_EXIT_AT_THIS_WINDOW_WORSENED_EARLY_REPAIR",
+      "doi": "10.1371/journal.pone.0274227",
+      "interpretive_caveat": "Scx-lineage cells are broader than the alpha-SMA-positive myofibroblast compartment, so this is a repair-state cell EXIT node rather than a myofibroblast-specific node."
+    }
+  ],
+  "timing_controls": [
+    {
+      "tissue": "heart",
+      "node_id": "HEART_EARLY_EXIT_HAZARD_POSTN_2016",
+      "finding": "periostin-positive myofibroblasts are necessary for adaptive healing after myocardial infarction; early/ongoing ablation reduces scar formation and can compromise acute structural repair",
+      "doi": "10.1038/ncomms12260",
+      "role": "supports a timing-dependent rather than monotonic EXIT model"
+    },
+    {
+      "tissue": "heart",
+      "node_id": "HEART_ACTIVATED_FIBROBLAST_ABLATION_KAUR_2016",
+      "finding": "diphtheria-toxin-mediated ablation of periostin-expressing activated cardiac fibroblasts reduced fibrosis and improved function in post-MI and chronic angiotensin-II models without compromising scar stability in the reported MI protocol",
+      "doi": "10.1161/CIRCRESAHA.116.308643",
+      "role": "independent causal replication that activated-fibroblast population control changes remodeling"
+    }
+  ],
+  "supportive_but_not_counted_as_strict_cell_exit": [
+    {
+      "tissue": "spinal_cord",
+      "node_id": "SCI_CAUSAL_RESOLUTION_MATRIX_MMP13_MONOCYTE_2011",
+      "verdict": "PASS_RESOLUTION_NOT_CELL_EXIT",
+      "intervention": "conditional depletion/reconstitution of monocyte-derived macrophages and MMP-13 competence",
+      "resolution_effect": "changes CSPG scar-matrix clearance",
+      "repair_effect": "matrix resolution is required for functional recovery",
+      "doi": "10.1371/journal.pone.0027969",
+      "reason_not_counted": "causal target is scar-matrix resolution by resolving macrophages, not EXIT of the activated fibrogenic cell population"
+    },
+    {
+      "tissue": "spinal_cord",
+      "node_id": "SCI_PERICYTE_SCAR_GENERATION_DIAS_2018",
+      "verdict": "PASS_SCAR_FORMATION_NOT_EXIT",
+      "intervention": "inhibition of progeny generation by a scar-forming pericyte subclass",
+      "repair_effect": "reduced fibrosis/ECM deposition, enhanced axonal regeneration and sensorimotor recovery",
+      "doi": "10.1016/j.cell.2018.02.004",
+      "reason_not_counted": "perturbs generation/expansion of scar-forming cells rather than their post-use clearance"
+    }
+  ],
+  "gate_decision": {
+    "strict_causal_exit_tissue_count": 3,
+    "strict_causal_exit_perturbation_gate": "PASS_3_INDEPENDENT_TISSUES",
+    "universal_more_exit_is_better_gate": "FAIL_AS_SIMPLE_MONOTONIC_MODEL",
+    "new_status": "P0_CROSS_TISSUE_CAUSAL_TIMING_GATE",
+    "best_supported_architecture": [
+      "activation",
+      "useful repair-state persistence",
+      "structural stabilization",
+      "correctly timed and sufficiently selective EXIT/resolution",
+      "avoidance of persistent fibrosis without premature loss of repair capacity"
+    ],
+    "interpretation": "Skin, heart and tendon independently show that experimentally changing persistence/clearance of activated repair-state cells changes tissue outcome. The sign depends on timing and cell identity: late selective clearance can reduce persistent fibrosis, whereas depletion during a still-required repair window can impair recovery."
+  },
+  "next_killer_test": {
+    "target": "measure tissue-specific repair-state decay constants and define the transition point at which cell persistence changes from adaptive to maladaptive",
+    "priority": [
+      "skin: obtain intermediate in-vivo alpha-SMA/lineage timepoints after wound closure with and without FMOD",
+      "heart: reconstruct CD248-positive late-fibroblast decay after day-14 BBIR-T dosing",
+      "tendon: use published Scx/alpha-SMA D14-D42 trajectory plus depletion windows to bracket the safe EXIT onset",
+      "spinal cord: search for a direct late ablation/clearance experiment on scar-forming pericyte/fibroblast populations"
+    ]
+  }
+}
