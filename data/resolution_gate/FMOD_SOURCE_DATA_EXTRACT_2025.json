@@ -1,0 +1,53 @@
+{
+  "schema_id": "janus.source-data.extract.v1",
+  "extract_id": "FMOD_SOURCE_DATA_EXTRACT_2025",
+  "parent_node": "SKIN_CAUSAL_EXIT_NODE_FMOD_2025",
+  "source": {
+    "paper_doi": "10.1038/s41467-025-58906-z",
+    "xlsx_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-025-58906-z/MediaObjects/41467_2025_58906_MOESM4_ESM.xlsx",
+    "xlsx_sha256": "19dd47777546f07d5f8b3c8a041fcddc08e97d4ba3470cbad756ed9b41602381",
+    "sheet_count": 70
+  },
+  "mechanistic_time_series": {
+    "IL1R1_IL1beta_PLA_dots_per_cell": {
+      "time_h": [1, 6, 12, 24, 48, 72],
+      "control_mean": [4.0, 11.0, 16.2, 9.2, 25.2, 50.4],
+      "FMOD_mean": [33.6, 93.9, 79.3, 218.5, 512.9, 282.0],
+      "IL1beta_mean": [30.0, 80.5, 71.2, 151.2, 420.1, 195.5],
+      "FMOD_plus_IL1beta_mean": [45.7, 170.7, 290.5, 557.0, 830.8, 504.4],
+      "n_per_group_per_timepoint": 10,
+      "source_sheet": "Fig. 9b-f"
+    },
+    "IL1R1_IL1RAP_PLA_dots_per_cell": {
+      "time_h": [1, 6, 12, 24, 48, 72],
+      "control_mean": [15.0, 40.1, 6.1, 6.3, 12.3, 5.2],
+      "FMOD_mean": [107.2, 229.4, 160.5, 726.6, 709.8, 84.7],
+      "IL1beta_mean": [38.0, 97.4, 86.2, 661.5, 135.1, 18.6],
+      "FMOD_plus_IL1beta_mean": [231.8, 297.7, 340.1, 1164.3, 784.3, 198.0],
+      "n_per_group_per_timepoint": 10,
+      "source_sheet": "Fig. 10b-f"
+    }
+  },
+  "derived_kinetics": {
+    "method": "single-interval exponential apparent terminal decay, t_half = ln(2) / (ln(y48/y72)/24h)",
+    "FMOD_IL1R1_IL1beta_48_to_72h_apparent_terminal_decay_half_life_h": 27.8105,
+    "FMOD_IL1R1_IL1RAP_48_to_72h_apparent_terminal_decay_half_life_h": 7.8253,
+    "interpretation": "These are descriptive mechanistic-signal decay estimates from one 48-to-72-hour interval. They are not biological wound-state half-lives and must not be used as such."
+  },
+  "animal_endpoint_summary": {
+    "rat_day14": {
+      "alpha_SMA_FMOD_vs_control_percent_change": -62.8548,
+      "cleaved_caspase_3_FMOD_vs_control_fold": 2.71143
+    },
+    "red_Duroc_pig_week8": {
+      "alpha_SMA_FMOD_vs_control_percent_change": -48.2826,
+      "cleaved_caspase_3_FMOD_vs_control_fold": 2.00304
+    }
+  },
+  "half_life_gate": {
+    "wound_state_half_life": "OPEN",
+    "minimum_missing_data": "multiple in-vivo intermediate timepoints spanning wound closure through resolution with the same activated-cell-state readout",
+    "author_query_target": "unpublished or archived longitudinal alpha-SMA/lineage samples between closure and terminal day-14/week-8 endpoints"
+  },
+  "extracted": "2026-08-24"
+}
