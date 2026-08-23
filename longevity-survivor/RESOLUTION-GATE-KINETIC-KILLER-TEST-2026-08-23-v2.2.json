@@ -1,0 +1,214 @@
+{
+  "schema": "janus.lapis.longevity_survivor.resolution_gate_kinetic_killer_test.v2_2",
+  "artifact_id": "RESOLUTION-GATE-KINETIC-KILLER-TEST-2026-08-23-v2.2",
+  "title": "LONGEVITY SURVIVOR v2.2 — Resolution Gate Kinetic Killer Test",
+  "created_at_local": "2026-08-23T23:18:00+03:00",
+  "repository": "Hawkar-usls/janus-lapis",
+  "branch": "LONGEVITY-SURVIVOR",
+  "status": "ACTIVE_KILLER_TEST_WITH_MODEL_REVISION",
+  "frozen_claim": "Across mammalian regenerative systems, successful regeneration should show a shorter-lived controlled wound-state followed by timely EXIT, whereas scarring should reflect persistence of the same wound-state.",
+  "measurement_rule": {
+    "priority": "measure appearance -> peak -> decay/clearance of cellular wound states rather than pathway abundance alone",
+    "true_half_life": "Only report a half-life when quantitative time-series permit a defensible decay estimate.",
+    "interval_censored_lifetime": "If publications provide only discrete sampling points, report the interval in which disappearance/resolution occurs; do not invent an exponential t1/2.",
+    "state_identity_rule": "Marker disappearance is not equivalent to lineage disappearance; follow fate transitions when lineage tracing or state-resolved data exist.",
+    "spatial_rule": "The same marker in distinct anatomical compartments must not be merged into one state."
+  },
+  "tissues": [
+    {
+      "tissue": "NEONATAL_SPINAL_CORD",
+      "model": "P2 mouse spinal cord crush",
+      "regenerative": true,
+      "state": "injury-activated microglia / fibronectin bridge",
+      "kinetics": {
+        "1_2_dpi": "clear lesion gap; microglia accumulate and activate",
+        "3_dpi": "fibronectin+ bridge present; activated CD68+/SPP1+ microglia occupy lesion; Fn1-expressing repair state detected",
+        "5_dpi": "Fn1 lesion expression no longer detected in the reported in situ time series",
+        "7_dpi": "fibronectin signal disappeared; gap refilled; most microglia ramified, P2Y12+, SPP1-/CD68-",
+        "14_dpi": "blood-derived CCR2+ macrophages absent and lesion remains largely scar-free"
+      },
+      "kinetic_bound": "Fn1-high lesion state detectable at 3 dpi and absent at 5 dpi; bridge present at 3 dpi and gone by 7 dpi; activated microglia return to homeostatic phenotype within ~1 week.",
+      "nonregenerative_control": "Adult spinal-cord lesions retain CD68+ activated microglia/macrophages and monocyte-derived macrophages through at least 14 dpi and form mature scar architecture.",
+      "causal_support": "Microglia depletion impairs neonatal bridge formation and axon regrowth; neonatal microglia or peptidase-inhibitor-treated adult microglia improve adult lesion healing.",
+      "classification": "STRONG_SUPPORT_FOR_TIMELY_RESOLUTION",
+      "sources": ["DOI:10.1038/s41586-020-2795-6", "PMID:33029008", "GEO:GSE150871"]
+    },
+    {
+      "tissue": "NEONATAL_TENDON",
+      "model": "P5 mouse Achilles tendon transection",
+      "regenerative": true,
+      "state": "transient alpha-SMA+ extrinsic helper cells plus transient fibrotic-marker program",
+      "kinetics": {
+        "3_dpi": "abundant alpha-SMA+ ScxGFP-negative cells occupy gap; intrinsic Scx+ tenocytes proliferate near cut ends",
+        "7_dpi": "scar-associated transcripts including alpha-SMA begin transient upregulation",
+        "14_dpi": "only limited alpha-SMA immunostaining remains in neonatal neo-tendon while adult scar shows intense alpha-SMA/laminin",
+        "28_dpi": "neonatal scar-associated transcripts return to control range; tendon-lineage program remains elevated"
+      },
+      "kinetic_bound": "Helper-cell alpha-SMA abundance is high at day 3 and markedly reduced by day 14; fibrotic transcript program resolves by day 28. Sampling is insufficient for a true t1/2.",
+      "nonregenerative_control": "Adult tendon shows persistent fibrotic repair; independent adult flexor-tendon lineage studies detect alpha-SMA+ myofibroblasts through days 28-35 with disappearance by ~day 42, depending on model and compartment.",
+      "causal_support": "TGF-beta signaling is required for neonatal tenocyte recruitment and functional regeneration; macrophage depletion impairs neonatal regeneration, but a direct EXIT-specific perturbation of neonatal alpha-SMA helper clearance remains missing.",
+      "classification": "SUPPORTIVE_BUT_EXIT_CAUSALITY_INCOMPLETE",
+      "sources": ["DOI:10.1038/srep45238", "DOI:10.7554/eLife.51779", "PMID:28332620", "PMID:32501213"]
+    },
+    {
+      "tissue": "SKIN_ACOMYS_EAR",
+      "model": "adult Acomys cahirinus regenerative ear-pinna injury versus Mus scarring control",
+      "regenerative": true,
+      "state": "injury-induced myofibroblasts",
+      "kinetics": {
+        "weeks_1_2": "myofibroblasts appear rapidly in both Acomys and Mus",
+        "weeks_3_4": "Acomys ear myofibroblasts resolve as wound closure/blastema differentiation progress; Mus myofibroblasts persist",
+        "causal_perturbation": "YAP-TEAD inhibition prolongs Acomys myofibroblast persistence and converts regenerative healing toward fibrosis"
+      },
+      "kinetic_bound": "Acomys ear myofibroblast state is transient on the scale of ~1-3 weeks; exact t1/2 requires source-data reconstruction.",
+      "causal_support": "Direct in vivo perturbation links delayed myofibroblast resolution to loss of regenerative outcome.",
+      "classification": "STRONG_CAUSAL_SUPPORT_FOR_RESOLUTION_GATE",
+      "sources": ["DOI:10.1016/j.devcel.2021.09.008", "PMID:34610329"]
+    },
+    {
+      "tissue": "SKIN_ACOMYS_FULL_THICKNESS_2026",
+      "model": "adult Acomys full-thickness dorsal skin wound versus Mus; sampled d0,7,14,21,28,35,70",
+      "regenerative": true,
+      "state": "spatially distinct alpha-SMA+ myofibroblast compartments",
+      "kinetics": {
+        "day_7": "~75% of upper wound-bed cells are alpha-SMA+ in both Mus and Acomys",
+        "day_14": "Acomys upper dermal wound-bed alpha-SMA effectively disappears while Mus remains strongly positive; Acomys simultaneously develops a strong lower alpha-SMA+ bridge between panniculus carnosus ends",
+        "day_21_plus": "Acomys dermal myofibroblasts remain cleared while panniculus-associated alpha-SMA bridge remains intense for weeks during muscle regeneration",
+        "day_70": "panniculus muscle architecture is regenerated"
+      },
+      "killer_observation": "A long-lived alpha-SMA+ wound-associated state can coexist with successful regeneration when it is spatially routed into a regenerative scaffold compartment.",
+      "classification": "DECISIVE_COUNTEREXAMPLE_TO_HALF_LIFE_ONLY_MODEL",
+      "sources": ["DOI:10.3390/cells15151370", "publication_date:2026-07-29"]
+    },
+    {
+      "tissue": "ADULT_SKIN_MUS",
+      "model": "adult mouse full-thickness wound",
+      "regenerative": false,
+      "state": "dermal alpha-SMA+ myofibroblasts / wound fibroblast states",
+      "kinetics": {
+        "~day_7": "myofibroblasts become prominent; fibroblast wound-state transcriptomic cluster peaks around day 7 in multiple datasets",
+        "weeks_2_3": "classical reviews report greatest myofibroblast content during second and third weeks",
+        "later": "myofibroblast abundance declines, while collagenous scar and remodeled ECM persist"
+      },
+      "killer_observation": "Persistent scar does not require indefinite persistence of alpha-SMA+ myofibroblasts.",
+      "classification": "COUNTEREXAMPLE_TO_SCAR_EQUALS_SAME_STATE_PERSISTS",
+      "sources": ["PMCID:PMC4229131", "PMCID:PMC8982612", "PMCID:PMC9845335"]
+    },
+    {
+      "tissue": "NEONATAL_HEART",
+      "model": "neonatal mouse apex resection / neonatal MI literature",
+      "regenerative": "MODEL_DEPENDENT_BUT_STRONGLY_REGENERATIVE_IN_VALIDATED_WINDOWS",
+      "state": "myofibroblast / provisional ECM / transient fibrosis",
+      "kinetics": {
+        "48_hours": "fibronectin/tenascin-C deposition, immune infiltrate and alpha-SMA+ myofibroblasts appear after neonatal apex resection",
+        "7_days": "inflammation largely resolves while myofibroblasts are more frequent",
+        "21_days": "alpha-SMA restricted mainly to vessels in one apex-resection series; in neonatal MI studies fibrosis can be present through days 1-17 and nearly disappear by day 21"
+      },
+      "kinetic_bound": "Regenerative neonatal cardiac wound programs can occupy a multi-day to ~3-week window and then resolve/reorganize; exact behavior depends strongly on injury model and resection size.",
+      "classification": "SUPPORTIVE_WITH_MODEL_HETEROGENEITY",
+      "sources": ["PMCID:PMC5918841", "DOI:10.1093/cvr/cvx001"]
+    },
+    {
+      "tissue": "ADULT_HEART",
+      "model": "adult mouse myocardial infarction",
+      "regenerative": false,
+      "state": "cardiac fibroblast activation trajectory",
+      "kinetics": {
+        "day_3_4": "alpha-SMA+ myofibroblasts appear; proliferation peaks around early proliferative phase",
+        "day_7": "alpha-SMA remains high while ECM production is robust",
+        "day_10": "alpha-SMA becomes only partially detectable / lineage studies show myofibroblast marker loss",
+        "day_14": "alpha-SMA myofibroblast phenotype largely absent, but scar maturation continues",
+        "day_28": "periostin-positive / activated or scar-maintaining fibroblast populations and ECM maintenance can persist"
+      },
+      "killer_observation": "Scar can persist after the alpha-SMA myofibroblast state has exited because fibroblasts transition into alternate scar-maintaining states and ECM becomes stabilized/crosslinked.",
+      "classification": "DECISIVE_COUNTEREXAMPLE_TO_SAME_STATE_PERSISTENCE_MODEL",
+      "sources": ["PMCID:PMC5957472", "DOI:10.1038/s41569-018-0025-9", "DOI:10.1038/s41467-025-56703-2"]
+    }
+  ],
+  "topa_falsification": {
+    "killed": [
+      {
+        "claim": "REGENERATION_ALWAYS_EQUALS_SHORT_WOUND_STATE",
+        "status": "REFUTED_AS_UNIVERSAL",
+        "reason": "Acomys panniculus-associated alpha-SMA+ bridge persists for weeks while tissue regenerates."
+      },
+      {
+        "claim": "SCAR_EQUALS_PERSISTENCE_OF_THE_SAME_ALPHA_SMA_STATE",
+        "status": "REFUTED",
+        "reason": "Adult cardiac myofibroblasts lose alpha-SMA by ~10-14 days while scar persists via state transition and ECM maturation; adult skin scars also persist after myofibroblast decline."
+      },
+      {
+        "claim": "ALPHA_SMA_HALF_LIFE_ALONE_IS_A_UNIVERSAL_RESOLUTION_METRIC",
+        "status": "REFUTED",
+        "reason": "Marker duration is compartment- and fate-dependent and can be regenerative, fibrotic or merely transitional."
+      }
+    ],
+    "survives": {
+      "name": "WOUND_STATE_FATE_ROUTING_AND_RESOLUTION_GATE",
+      "status": "P0_REVISED_SURVIVOR",
+      "formula": "ENTRY -> TEMPORARY_OR_SUPPORTIVE_WOUND_STATE -> SPATIAL_ROUTING -> HANDOFF_TO_REBUILD -> PROFIBROTIC_OUTPUT_TERMINATION -> FATE_SWITCH_OR_CLEARANCE -> HOMEOSTASIS",
+      "key_variable": "Not raw persistence time, but whether wound-state occupancy remains in a pro-fibrotic attractor versus being cleared, re-differentiated, spatially redirected or converted into a regenerative-support state.",
+      "required_dimensions": [
+        "duration",
+        "spatial compartment",
+        "cell-state identity",
+        "lineage fate",
+        "ECM reversibility",
+        "profibrotic-output duration",
+        "handoff to resident regenerative cells",
+        "final tissue architecture"
+      ]
+    }
+  },
+  "cross_tissue_result": {
+    "strongest_positive_support": [
+      "Neonatal spinal cord: rapid microglial Fn1 bridge state and return to homeostasis, with causal depletion/transplantation evidence.",
+      "Acomys ear skin: myofibroblast resolution correlates with regeneration and experimentally delaying resolution causes fibrosis.",
+      "Neonatal tendon: transient alpha-SMA helper/fibrotic program followed by intrinsic tenocyte recruitment and neo-tendon formation."
+    ],
+    "strongest_negative_controls": [
+      "Adult heart: alpha-SMA state ends yet scar persists via alternate fibroblast state + ECM stabilization.",
+      "Acomys full-thickness skin: a long-lived alpha-SMA bridge can be pro-regenerative when spatially assigned to muscle reconstruction."
+    ],
+    "interpretation": "The common mammalian control candidate is not a universal half-life threshold. It is a state-routing/termination architecture that decides whether a wound program hands off into regeneration, redirects into a useful temporary scaffold, or locks into scar-maintaining ECM/cell states."
+  },
+  "next_killer_tests": [
+    {
+      "priority": "P0",
+      "test": "Reconstruct quantitative state-occupancy curves from source data for neonatal spinal microglia, Acomys ear myofibroblasts, neonatal tendon alpha-SMA cells, adult cardiac fibroblast states and Acomys full-thickness dermal versus panniculus compartments.",
+      "output": "normalized fraction-of-state versus tau, with interval-censored clearance and state-transition edges"
+    },
+    {
+      "priority": "P0",
+      "test": "Track lineage fate after marker loss: apoptosis, de-differentiation, re-differentiation, spatial relocation, or transition into scar-maintaining matrifibrocyte-like state.",
+      "reason": "Marker disappearance alone cannot define EXIT."
+    },
+    {
+      "priority": "P0",
+      "test": "Compare persistence of profibrotic OUTPUT rather than alpha-SMA marker: collagen I/III deposition, periostin, crosslinking, matrix alignment, stiffness, and MMP/TIMP balance.",
+      "reason": "Scar memory can persist in ECM after cellular activation changes."
+    },
+    {
+      "priority": "P1",
+      "test": "Mechanical-lock third-tissue causal test remains open: seek a developmental/regenerative model where experimentally changing native ECM mechanics shifts regeneration-versus-scar outcome without relying only on an implanted biomaterial context."
+    }
+  ],
+  "shareability": {
+    "status": "SHAREABLE_AS_HYPOTHESIS_AND_DATA_REQUEST_NOT_AS_DISCOVERY_CLAIM",
+    "safe_claim": "A cross-tissue comparison suggests that mammalian regenerative outcome is better predicted by wound-state fate, spatial routing and termination of profibrotic output than by the half-life of a single activated-cell marker. Existing data provide causal examples and counterexamples that falsify a simple short-state-versus-persistent-state model.",
+    "not_yet_allowed": [
+      "claim of a universal mammalian resolution gate",
+      "claim of a new therapeutic target",
+      "claim of human rejuvenation or clinical applicability",
+      "numerical universal half-life threshold"
+    ]
+  },
+  "firewall": [
+    "PUBLISHED_SYNTHESIS != NEW_EXPERIMENTAL_DISCOVERY",
+    "MARKER_LOSS != CELL_CLEARANCE",
+    "CELL_CLEARANCE != ECM_CLEARANCE",
+    "PERSISTENCE != FIBROSIS_WITHOUT_SPATIAL_AND_STATE_CONTEXT",
+    "REGENERATION_IN_MOUSE != HUMAN_THERAPY",
+    "CORRELATION != CAUSAL_EXIT_MECHANISM"
+  ]
+}
