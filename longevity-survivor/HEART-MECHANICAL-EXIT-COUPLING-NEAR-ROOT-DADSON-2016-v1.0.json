@@ -1,0 +1,71 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_exit.near_root.v1",
+  "artifact_id": "HEART-MECHANICAL-EXIT-COUPLING-NEAR-ROOT-DADSON-2016-v1.0",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "tissue": "HEART",
+  "paper": {
+    "title": "Cellular, structural and functional cardiac remodelling following pressure overload and unloading",
+    "authors_short": "Dadson et al.",
+    "journal": "International Journal of Cardiology",
+    "year": 2016,
+    "doi": "10.1016/j.ijcard.2016.03.240",
+    "pmid": "27140334"
+  },
+  "causal_root": {
+    "model": "adult male C57BL/6 mouse transverse-aortic banding followed by delayed debanding",
+    "establishment": "4 weeks of pressure overload with serial echocardiography and terminal tissue characterization in a matched 4-week PO group",
+    "intervention": "physical removal of the aortic band after 4 weeks",
+    "post_intervention": "echocardiography at 1 and 2 weeks after debanding; microscopy/histology at 2 weeks",
+    "second_surgery_groups": "10 debanding and 10 sham-debanding mice; survivors reported as 8 unloading and 7 sham-unloading"
+  },
+  "mechanical_exit_coupling_audit": {
+    "protocol": "MECHANICAL-EXIT-COUPLING-GATE-2026-08-24-v0.1",
+    "criteria": {
+      "M1_ESTABLISHED_STATE": "YES",
+      "M2_DIRECT_PHYSICAL_RETUNING": "YES",
+      "M3_MECHANICS_TRAJECTORY": "YES",
+      "M4_EXIT_TRAJECTORY": "UNKNOWN",
+      "M5_TISSUE_OUTCOME_AND_INTEGRITY": "UNKNOWN"
+    },
+    "M1_basis": "Pressure-overload remodeling is documented through four weekly assessments and a separate 4-week PO tissue group before the debanding time point.",
+    "M2_basis": "Debanding directly removes the imposed pressure load rather than targeting a downstream molecular pathway.",
+    "M3_basis": "The same experimental root quantitatively follows cardiac mechanical/functional state with speckle-tracking radial strain and strain rate plus Doppler-derived load before and after unloading; dyssynchrony and altered radial strain rate resolve after debanding.",
+    "M4_reason_for_unknown": "The authors explicitly use triple immunofluorescence (vimentin, alpha-SMA, desmin) to distinguish interstitial fibroblast/myofibroblast-associated cells from vascular smooth muscle and report substantial reduction after unloading, but the public article presents representative fields rather than a numerical lineage/state-resolved disappearance, apoptosis, clearance, or validated shutdown trajectory. Under the frozen UNKNOWN policy this cannot be promoted to an EXIT-trajectory YES.",
+    "M5_reason_for_unknown": "Structural/mechanical recovery is demonstrated in surviving animals, but the second operation had 25% perioperative mortality and the publication does not provide cause-specific safety attribution sufficient to certify preserved intervention integrity under the strict coupling rule.",
+    "decision": "NOT_ADMITTED_FOR_MECHANICAL_EXIT_COUPLING"
+  },
+  "important_identity_control": {
+    "markers": ["vimentin", "alpha-SMA", "desmin"],
+    "purpose": "separate interstitial fibroblast/myofibroblast-associated staining from alpha-SMA-positive vascular smooth muscle",
+    "boundary": "Marker identity control is stronger than alpha-SMA alone but does not convert representative imaging into quantitative EXIT kinetics."
+  },
+  "mechanics_observation": {
+    "radial_strain": "pressure-overload-associated LV strain abnormalities were ameliorated after unloading",
+    "dyssynchrony": "posterior-versus-anterior time-to-peak radial strain difference resolved after debanding",
+    "radial_strain_rate": "posterior LV wall increase after pressure overload resolved by debanding",
+    "boundary": "strain/strain-rate are accepted as measured tissue mechanical state for M3; they are not relabeled as passive myocardial stiffness or elastic modulus"
+  },
+  "cell_state_observation": {
+    "pre_unloading": "4-week banding increased the interstitial vimentin-expressing fibroblast fraction and the paper describes increased myofibroblast content as a pressure-overload remodeling feature",
+    "post_unloading": "debanding substantially reduced vimentin-expressing fibroblasts toward sham levels",
+    "classification": "QUALITATIVE_OR_SEMIQUANTITATIVE_STATE_REVERSAL_NEAR_HIT_NOT_EXIT_KINETICS"
+  },
+  "safety_boundary": {
+    "reported_second_surgery_mortality": "25%, all deaths during surgery",
+    "survivors": {"debanding": 8, "sham_debanding": 7},
+    "interpretation": "The intervention group does not numerically show excess survivors loss relative to sham surgery, but cause-specific attribution and repair-integrity evidence are insufficient for strict M5 certification. No inference from survivor counts is used to override UNKNOWN."
+  },
+  "next_exact_resolution": [
+    "retrieve supplementary data associated with DOI 10.1016/j.ijcard.2016.03.240 and test whether numerical myofibroblast-state quantification exists",
+    "determine whether perioperative deaths were procedure-specific and whether any myocardial structural failure occurred after successful debanding",
+    "if both M4 and M5 become directly documented in the same root, rerun the frozen coupling admission without changing any criterion"
+  ],
+  "anti_heuristic_audit": {
+    "weighted_score": false,
+    "cross_paper_fusion": false,
+    "representative_image_promoted_to_quantitative_exit": false,
+    "absence_of_reported_harm_promoted_to_safety": false,
+    "decision_rule": "UNKNOWN_EQUALS_NOT_ADMITTED"
+  }
+}
