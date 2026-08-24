@@ -1,0 +1,67 @@
+{
+  "schema": "janus.lapis.longevity_survivor.polypedilum_transcript_proxy_input_lock.v1",
+  "artifact_id": "POLYPEDILUM-TRANSCRIPT-PROXY-INPUT-LOCK-2026-08-24-v1.0",
+  "status": "INPUT_IDENTITIES_RESOLVED_BYTES_NOT_MATERIALIZED_ANALYSIS_BLOCKED",
+  "purpose": "Prevent inference of a Pv11 cell-cycle transcript trajectory until exact public input bytes and sample identities are acquired and hashed.",
+  "public_anchor": {
+    "source": "DOI:10.1371/journal.pone.0230218",
+    "dataset": "DRA008948",
+    "rehydration_design": ["R3", "R12", "R24", "R72"],
+    "biological_replicates_per_condition": 3,
+    "module_level_fact": "Published WGCNA reports a Blue module containing 1222 genes with DNA replication (GO:0006260) as its representative enriched GO term (reported p=1.20e-12).",
+    "hard_boundary": "MODULE_ENRICHMENT_NE_TIMEPOINT_DIRECTION"
+  },
+  "required_primary_inputs": [
+    {
+      "input_id": "PLOS_S1_DATA",
+      "identity": "DOI:10.1371/journal.pone.0230218 supplementary S1 Data",
+      "expected_role": "DEG/expression data supporting time-series reconstruction",
+      "state": "IDENTIFIED_NOT_MATERIALIZED"
+    },
+    {
+      "input_id": "PLOS_S2_DATA",
+      "identity": "DOI:10.1371/journal.pone.0230218 supplementary S2 Data",
+      "expected_role": "gene-to-WGCNA-module membership",
+      "state": "IDENTIFIED_NOT_MATERIALIZED"
+    },
+    {
+      "input_id": "DRA008948_SAMPLE_MANIFEST",
+      "identity": "DRA008948 sample/experiment/run metadata",
+      "expected_role": "bind exact run accessions to T0/T12/T24/T36/T48/R0/R3/R12/R24/R72 and replicate numbers",
+      "state": "DIRECTORY_AND_ACCESSION_RANGE_VISIBLE_EXACT_RUN_TO_CONDITION_BINDING_NOT_YET_MATERIALIZED"
+    }
+  ],
+  "optional_validation_inputs": [
+    {
+      "input_id": "DRA007433",
+      "role": "independent Pv11 CAGE-seq R3/R24 context check",
+      "state": "PUBLIC_ACCESSION_IDENTIFIED"
+    },
+    {
+      "input_id": "SRP070984",
+      "role": "HSF perturbation transcriptomic context",
+      "state": "PUBLIC_ACCESSION_IDENTIFIED"
+    }
+  ],
+  "admission_requirements": [
+    "EXACT_INPUT_BYTES_ACQUIRED",
+    "SHA256_RECORDED_FOR_EACH_INPUT",
+    "FILE_SIZE_RECORDED",
+    "SAMPLE_TO_CONDITION_BINDING_MACHINE_READABLE",
+    "REPLICATE_IDENTITIES_PRESERVED",
+    "R3_R12_R24_MITOCHONDRIAL_MAPPING_CAVEAT_PRESERVED",
+    "GENE_ORTHOLOGY_ASSIGNMENT_SOURCE_RECORDED",
+    "PRIMARY_GENE_FAMILY_PANEL_FROZEN_BEFORE_TRAJECTORY_INSPECTION"
+  ],
+  "fail_closed_rules": [
+    "NO_HEATMAP_PIXEL_DIGITIZATION_AS_SUBSTITUTE_FOR_MATRIX",
+    "NO_ACCESSION_ORDER_GUESSING_FOR_SAMPLE_LABELS",
+    "NO_MODULE_ENRICHMENT_TO_EARLY_OR_LATE_TRAJECTORY_INFERENCE",
+    "NO_TRANSCRIPT_PROXY_TO_S_PHASE_PERCENT_CONVERSION",
+    "NO_PRIVATE_BRDU_INFORMATION_IN_PUBLIC_ANALYSIS_WITHOUT_PERMISSION",
+    "MISSING_DATA_STAYS_MISSING"
+  ],
+  "analysis_state": "BLOCKED_PENDING_PRIMARY_INPUT_BYTES",
+  "next_transition": "INPUT_BYTES_ACQUIRED_AND_HASHED -> SAMPLE_MANIFEST_VERIFIED -> PRIMARY_PANEL_LOCKED -> PROXY_ANALYSIS_ALLOWED",
+  "claim_ceiling": "INPUT_LOCK_ONLY_NO_TRANSCRIPT_TRAJECTORY_RESULT"
+}
