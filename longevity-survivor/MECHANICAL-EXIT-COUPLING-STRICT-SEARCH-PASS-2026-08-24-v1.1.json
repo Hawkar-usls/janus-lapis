@@ -1,0 +1,92 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_exit.strict_search_pass.v1_1",
+  "artifact_id": "MECHANICAL-EXIT-COUPLING-STRICT-SEARCH-PASS-2026-08-24-v1.1",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "parent_gate": "MECHANICAL-EXIT-COUPLING-GATE-2026-08-24-v0.1",
+  "decision_rule": "M1=M2=M3=M4=M5=YES in one causal experimental root; NO or UNKNOWN on any item = NOT_ADMITTED",
+  "result": "NO_SINGLE_ROOT_COUPLING_PASS_FOUND",
+  "gate_status": "OPEN",
+  "new_or_reaudited_candidates": [
+    {
+      "id": "PAN_LI_2020_HUMAN_PRESSURE_THESIS",
+      "tissue": "SKIN",
+      "source": "Pressure therapy for management of post-burn hypertrophic scarring: effects and mechanism",
+      "type": "PhD thesis",
+      "cohort": "34 patients / 65 post-burn hypertrophic scars in a 6-month Smart Pressure Monitored Suits programme, with early and late intervention strata and histopathology",
+      "criteria": {"M1":"YES","M2":"YES","M3":"NO","M4":"YES_WITH_STATE_SHUTDOWN_BUT_NOT_CLEAN_APOPTOSIS_EFFECT","M5":"YES_CLINICAL_OUTCOME"},
+      "M3_reason": "The same clinical programme measures interface pressure, ultrasound scar thickness and ordinal VSS pliability, but no quantitative tissue modulus/elasticity trajectory was identified. Interface pressure is intervention dose, not scar mechanical state.",
+      "M4_boundary": "alpha-SMA decreases after pressure, while apoptosis trends were not statistically significant between early/late intervention groups in the thesis summary; do not convert this to demonstrated apoptosis-mediated clearance.",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "id": "ZHAO_2023_PRESSURE_DEDIFFERENTIATION",
+      "tissue": "SKIN",
+      "paper": "Mechanical pressure-induced dedifferentiation of myofibroblasts inhibits scarring via SMYD3/ITGBL1 signaling",
+      "doi": "10.1016/j.devcel.2023.04.014",
+      "criteria": {"M1":"YES_FOR_ESTABLISHED_SCAR_DERIVED_STATE","M2":"YES","M3":"NO","M4":"YES_FOR_VALIDATED_STATE_SHUTDOWN_MECHANISM","M5":"YES_FOR_ANTI_SCARRING_PHENOTYPE"},
+      "M4_basis": "The study supports pressure-induced dedifferentiation of human scar-derived myofibroblasts into fibroblast-like states through integrin-beta1/ILK/TCF4/SMYD3/ITGBL1 signaling.",
+      "M3_reason": "No same-root longitudinal quantitative tissue mechanical-state trajectory before and after pressure was identified.",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "id": "HETTRICH_2014_DELAYED_TENDON_LOADING",
+      "tissue": "TENDON_TO_BONE_INTERFACE",
+      "paper": "The Effect of Mechanical Load on Tendon-to-Bone Healing in a Rat Model",
+      "doi": "10.1177/0363546514526138",
+      "criteria": {"M1":"UNKNOWN","M2":"YES","M3":"NO","M4":"NO","M5":"YES_OUTCOME_BUT_NOT_BENEFICIAL_FOR_DELAYED_LOADING"},
+      "notes": "Loading is directly imposed at 3 N or 6 N with immediate, day-4 or day-10 starts and multi-timepoint histology/biomechanics. However, apoptotic cells are not lineage/state-resolved repair-cell EXIT, and no qualifying pre/post tissue-mechanical-state trajectory is present. Loaded groups were not superior overall to immobilization in this model.",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "id": "DADSON_2016_PRESSURE_OVERLOAD_UNLOADING",
+      "tissue": "HEART",
+      "node": "HEART-MECHANICAL-EXIT-COUPLING-NEAR-ROOT-DADSON-2016-v1.0",
+      "doi": "10.1016/j.ijcard.2016.03.240",
+      "criteria": {"M1":"YES","M2":"YES","M3":"YES","M4":"UNKNOWN","M5":"UNKNOWN"},
+      "notes": "Still the closest heart root. Unloading reverses strain/dyssynchrony and reduces fibroblast/myofibroblast-associated signal, but no numeric lineage/state-resolved EXIT trajectory was found and perioperative second-surgery mortality prevents strict integrity certification.",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "id": "ERTUGRAL_2026_SCI_NATURAL_HISTORY",
+      "tissue": "SPINAL_CORD",
+      "node": "SCI-MECHANICAL-NATURAL-HISTORY-CLOCK-ERTUGRAL-2026-v1.0",
+      "doi": "10.64898/2026.07.02.736147",
+      "criteria": {"M1":"NA","M2":"NO","M3":"YES_OBSERVATIONAL","M4":"NO","M5":"NO"},
+      "notes": "AFM/nanoindentation maps a non-monotonic injury mechanics trajectory with early softening, minimum around one month and later chronic stiffening. This is a timing map, not a causal coupling intervention.",
+      "decision": "NOT_ADMITTED"
+    }
+  ],
+  "anti_heuristic_findings": [
+    "VSS pliability is not substituted for quantitative tissue mechanics.",
+    "Interface pressure is not substituted for scar modulus or elasticity.",
+    "Bulk alpha-SMA mRNA is not substituted for lineage-resolved cell EXIT.",
+    "Generic TUNEL/apoptotic-cell counts are not substituted for identified repair-cell clearance.",
+    "Myofibroblast state shutdown by dedifferentiation is allowed by frozen M4, but only when directly validated; it is not assumed from alpha-SMA decrease alone.",
+    "Natural-history mechanics cannot be fused with a separate intervention paper to manufacture M3.",
+    "Same thesis or research programme does not permit cross-phase fusion unless cohort/sample identity is established for the required measurements."
+  ],
+  "current_best_single_root_targets": [
+    {
+      "rank": 1,
+      "target": "DADSON_2016_HEART_SUPPLEMENT_OR_RAW_IMAGES",
+      "missing": ["numeric lineage/state-resolved myofibroblast EXIT/state-shutdown trajectory", "procedure-specific integrity/safety attribution"]
+    },
+    {
+      "rank": 2,
+      "target": "HUMAN_SKIN_PRESSURE_COHORT_WITH_CUTOMETER_PLUS_BIOPSY",
+      "missing": "one cohort measuring quantitative scar elasticity/modulus and identified myofibroblast disappearance/dedifferentiation/apoptosis before and after the same pressure intervention"
+    },
+    {
+      "rank": 3,
+      "target": "SCI_DELAYED_ENDOGENOUS_RETUNING_AFTER_MECHANICALLY_DEFINED_SCAR_PHASE",
+      "missing": "causal intervention itself; natural-history mechanical clock is now available to prespecify timing"
+    }
+  ],
+  "gate_decision": {
+    "MECHANICAL_CLOCK": "PASS_TWO_STRICT_TISSUES",
+    "EXIT_CLOCK": "INDEPENDENTLY_SUPPORTED",
+    "MECHANICAL_EXIT_COUPLING": "OPEN_NO_SINGLE_ROOT_PASS",
+    "strongest_new_conclusion": "Mechanical retuning can be followed by myofibroblast state shutdown in multiple skin and heart studies, but the current public record still lacks one single experimental root that simultaneously quantifies the tissue-mechanical trajectory and a lineage/state-resolved EXIT trajectory under the frozen coupling criteria."
+  }
+}
