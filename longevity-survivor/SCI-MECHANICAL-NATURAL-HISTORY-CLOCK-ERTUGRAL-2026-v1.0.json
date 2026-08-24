@@ -1,0 +1,65 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.natural_history.v1",
+  "artifact_id": "SCI-MECHANICAL-NATURAL-HISTORY-CLOCK-ERTUGRAL-2026-v1.0",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "tissue": "SPINAL_CORD",
+  "role": "PRESPECIFIED_TIMING_MAP_NOT_CAUSAL_CLOCK_PASS",
+  "publication": {
+    "title": "Coupled Transcriptomic and ECM-Mechanical Remodeling Reveal Mechanotransductive Pathways in Spinal Cord Injury",
+    "authors_short": "Ertugral et al.",
+    "status": "PREPRINT",
+    "posted": "2026-07-08",
+    "doi": "10.64898/2026.07.02.736147",
+    "peer_reviewed": false
+  },
+  "model": {
+    "injury": "severe thoracic contusion SCI",
+    "mechanics_methods": ["AFM nanoindentation", "viscoelastic relaxation analysis"],
+    "molecular_layer": "bulk RNA sequencing"
+  },
+  "observed_mechanical_trajectory": [
+    {
+      "phase": "acute_to_subacute",
+      "observation": "rapid tissue softening after SCI",
+      "causal_status": "OBSERVATIONAL"
+    },
+    {
+      "phase": "approximately_1_month",
+      "observation": "reported minimum in tissue stiffness",
+      "causal_status": "OBSERVATIONAL_TIME_ANCHOR"
+    },
+    {
+      "phase": "chronic_approximately_6_months",
+      "observation": "progressive stiffening with denser fibrotic ECM and prolonged relaxation dynamics",
+      "causal_status": "OBSERVATIONAL_TIME_ANCHOR"
+    }
+  ],
+  "transcriptomic_alignment": {
+    "early_soft_phase": "inflammatory and matrix-degrading programs enriched",
+    "chronic_stiff_phase": "collagen synthesis, ECM organization and fibrotic-remodeling programs enriched",
+    "mechanotransduction": "regulators change in temporally coordinated fashion with tissue-mechanics evolution",
+    "boundary": "temporal co-variation does not establish mechanics as the causal driver of the transcriptomic state"
+  },
+  "clock_consequence": {
+    "simple_model_rejected": "SCI_INJURY_IMMEDIATELY_PRODUCES_MONOTONIC_STIFFENING",
+    "best_supported_natural_history": "SCI mechanics are non-monotonic: early softening precedes later chronic scar stiffening",
+    "importance_for_delayed_retuning": "a future delayed mechanical intervention must be anchored to measured lesion mechanics rather than chronological injury time alone"
+  },
+  "mechanical_exit_coupling_audit": {
+    "M1_ESTABLISHED_STATE": "NOT_APPLICABLE_NO_INTERVENTION",
+    "M2_DIRECT_PHYSICAL_RETUNING": "NO",
+    "M3_MECHANICS_TRAJECTORY": "YES_OBSERVATIONAL",
+    "M4_EXIT_TRAJECTORY": "NO",
+    "M5_TISSUE_OUTCOME_AND_INTEGRITY": "NO_CAUSAL_INTERVENTION_OUTCOME",
+    "decision": "NOT_ADMITTED"
+  },
+  "anti_heuristic_boundaries": [
+    "The one-month stiffness minimum is not declared a therapeutic optimum.",
+    "The six-month stiffening phase is not declared causally sufficient for regenerative failure.",
+    "Bulk RNA programs are not lineage-resolved scar-cell EXIT.",
+    "A natural-history time series cannot substitute for a delayed intervention root.",
+    "No modulus threshold is inferred from the published trajectory."
+  ],
+  "next_exact_test": "Perform delayed endogenous lesion retuning at prespecified mechanically defined phases, with lesion mechanics measured immediately before and after retuning, lineage/state-resolved scar-cell trajectory, and locomotor/sensory outcome in the same causal root."
+}
