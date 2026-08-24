@@ -1,0 +1,52 @@
+name: Pv11 DRA008948 public-byte acquisition
+
+on:
+  pull_request:
+    branches:
+      - LONGEVITY-SURVIVOR
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact PR head
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Acquire exact public bytes and extract manifests
+        shell: bash
+        run: |
+          set +e
+          rm -rf dra008948_acquisition
+          python longevity-survivor/tools/acquire_dra008948.py 2>&1 | tee acquisition.log
+          code=${PIPESTATUS[0]}
+          echo "$code" > acquisition_exit_code.txt
+          exit 0
+
+      - name: Upload proof-carrying acquisition artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pv11-dra008948-acquisition
+          path: |
+            dra008948_acquisition/
+            acquisition.log
+            acquisition_exit_code.txt
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Enforce acquisition result
+        shell: bash
+        run: |
+          code="$(cat acquisition_exit_code.txt)"
+          echo "acquisition_exit_code=$code"
+          test "$code" = "0"
