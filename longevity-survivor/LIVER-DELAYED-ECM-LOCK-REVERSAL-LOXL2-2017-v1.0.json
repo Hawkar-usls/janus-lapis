@@ -1,0 +1,58 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_timing.liver.v1",
+  "artifact_id": "LIVER-DELAYED-ECM-LOCK-REVERSAL-LOXL2-2017-v1.0",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "role": "ADULT_REGENERATIVE_CONTROL_FOR_MECHANICAL_STATE_TIMING_GATE",
+  "tissue": "LIVER",
+  "paper": {
+    "title": "Selective targeting of lysyl oxidase-like 2 (LOXL2) suppresses hepatic fibrosis progression and accelerates its reversal",
+    "journal": "Gut",
+    "year": 2017,
+    "doi": "10.1136/gutjnl-2016-312473",
+    "pmid": "28073888"
+  },
+  "causal_target": {
+    "molecule": "LOXL2",
+    "intervention": "anti-LOXL2 monoclonal antibody AB0023",
+    "dose": "30 mg/kg intraperitoneally twice weekly",
+    "mechanical_axis": "collagen crosslinking / fibrotic matrix stabilization",
+    "important_boundary": "crosslinking and matrix stability were measured biochemically and morphologically; tissue elastic modulus was not the primary intervention readout"
+  },
+  "delayed_progression_arm": {
+    "injury_model": "TAA-induced pan-lobular liver fibrosis in C57BL/6 mice",
+    "pre_existing_state": "after 6 weeks of TAA, significant pericentral fibrosis with bridging was already established",
+    "treatment_window": "weeks 7-12 of continued TAA fibrosis induction",
+    "result": {
+      "collagen_stained_area_change_vs_progression_control": "approximately 53.4% lower",
+      "overall_collagen_deposition": "partly reduced relative to start-of-treatment controls",
+      "crosslinked_collagen": "significantly reduced; delayed treatment inhibited further stabilization of the insoluble collagen fraction",
+      "scar_architecture": "less bridging fibrosis"
+    },
+    "verdict": "PASS_DELAYED_PREESTABLISHED_MATRIX_LOCK_INTERVENTION"
+  },
+  "reversal_arm": {
+    "setup": "6 weeks TAA to establish fibrosis, then TAA withdrawn and mice allowed to recover with AB0023, control antibody or vehicle",
+    "early_recovery_endpoint": "4 weeks",
+    "result": "anti-LOXL2 accelerated disruption, widening and splitting of fibrotic septa and reduced connective-tissue burden during early recovery",
+    "interpretation": "blocking late collagen crosslink stabilization accelerates remodeling of already-established fibrotic architecture"
+  },
+  "timing_specificity": {
+    "late_window": "effective when started after 6 weeks of established fibrosis",
+    "early_window": "the same anti-LOXL2 strategy was reported as ineffective when applied during an earlier weeks 3-8 progression window",
+    "meaning": "the causal contribution of LOXL2-mediated matrix stabilization is phase-dependent rather than monotonic across the full injury course"
+  },
+  "cell_state_context": {
+    "activated_HSC": "LOXL2 localized in fibrotic septa in a distribution similar to collagen I and alpha-SMA-positive activated hepatic stellate cells",
+    "HPC": "LOXL2 also influenced hepatic progenitor lineage commitment independently of collagen crosslinking",
+    "confound": "the antibody can therefore affect both extracellular matrix stabilization and cell-autonomous/paracrine LOXL2 biology; it is not a pure mechanics-only perturbation"
+  },
+  "gate_verdict": {
+    "delayed_ECM_lock_reversal": "PASS_STRONG",
+    "direct_tissue_stiffness_measurement": "NO",
+    "functional_regeneration_endpoint": "NOT_PRIMARY",
+    "strict_mechanical_state_timing_gate": "PARTIAL_PASS",
+    "why": "This is a clean delayed intervention against an established matrix-stabilization mechanism, but does not provide a matched point-level elastic-modulus trajectory or a primary organ-function endpoint."
+  },
+  "next_killer_measurement": "repeat delayed LOXL2/crosslink intervention with longitudinal AFM/rheology of liver stiffness, same-state activated-HSC trajectories, matrix crosslink fractions and organ-function/regeneration endpoints"
+}
