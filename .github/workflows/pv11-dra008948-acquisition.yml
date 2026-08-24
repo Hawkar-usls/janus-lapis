@@ -32,6 +32,16 @@ jobs:
           echo "$code" > acquisition_exit_code.txt
           exit 0
 
+      - name: Inspect pinned author-published RSEM TPM matrix
+        shell: bash
+        run: |
+          set +e
+          rm -rf pv_authors_tpm_inspection
+          python longevity-survivor/tools/inspect_pv_authors_tpm.py 2>&1 | tee tpm_inspection.log
+          code=${PIPESTATUS[0]}
+          echo "$code" > tpm_inspection_exit_code.txt
+          exit 0
+
       - name: Upload proof-carrying acquisition artifact
         if: always()
         uses: actions/upload-artifact@v4
@@ -39,14 +49,20 @@ jobs:
           name: pv11-dra008948-acquisition
           path: |
             dra008948_acquisition/
+            pv_authors_tpm_inspection/
             acquisition.log
             acquisition_exit_code.txt
+            tpm_inspection.log
+            tpm_inspection_exit_code.txt
           if-no-files-found: error
           retention-days: 7
 
-      - name: Enforce acquisition result
+      - name: Enforce acquisition and TPM-inspection results
         shell: bash
         run: |
-          code="$(cat acquisition_exit_code.txt)"
-          echo "acquisition_exit_code=$code"
-          test "$code" = "0"
+          acq="$(cat acquisition_exit_code.txt)"
+          tpm="$(cat tpm_inspection_exit_code.txt)"
+          echo "acquisition_exit_code=$acq"
+          echo "tpm_inspection_exit_code=$tpm"
+          test "$acq" = "0"
+          test "$tpm" = "0"
