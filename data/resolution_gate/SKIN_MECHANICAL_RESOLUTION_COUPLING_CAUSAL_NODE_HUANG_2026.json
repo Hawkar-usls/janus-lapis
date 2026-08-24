@@ -1,0 +1,148 @@
+{
+  "schema_id": "janus.resolution-gate.mechanical-coupling-node.v1",
+  "node_id": "SKIN_MECHANICAL_RESOLUTION_COUPLING_CAUSAL_NODE_HUANG_2026",
+  "created": "2026-08-24",
+  "tissue": "skin",
+  "candidate_links": [
+    "TEMPORARY_WOUND_STATE_TO_PERSISTENT_SCAR_STATE",
+    "NICHE/ECM_MECHANICAL_MATURATION_LOCK"
+  ],
+  "paper": {
+    "title": "Mechanically adaptive hydrogels reprogram apoptotic cell clearance to prevent tissue fibrosis",
+    "authors_short": "Huang et al.",
+    "journal": "Acta Biomaterialia",
+    "published_online": "2026-07-17",
+    "doi": "10.1016/j.actbio.2026.07.032",
+    "pmid": "42468599",
+    "pii": "S1742706126004782",
+    "peer_reviewed_primary_study": true
+  },
+  "core_intervention": {
+    "name": "Gel/VP mechanically adaptive hydrogel",
+    "components": "AAm/CSMA interpenetrating network with CNC@PDA@ZIF8 nanonodes and verteporfin",
+    "intended_action": "reverse mechanical buffering plus sustained YAP-pathway modulation",
+    "in_vivo_timing": "immediate at wound creation",
+    "delayed_treatment_arm": "NOT_FOUND",
+    "clock_implication": "does not identify a late safe-EXIT onset because treatment begins before the repair state is established"
+  },
+  "mechanistic_chain_audit": {
+    "target_chain": [
+      "abnormal mechanical/Piezo1-YAP signaling",
+      "apoptotic-cell accumulation/retention",
+      "impaired macrophage efferocytosis",
+      "persistent fibroblast/myofibroblast activation",
+      "fibrotic scar"
+    ],
+    "evidence_modules": [
+      {
+        "module": "Piezo1/YAP -> endothelial stress/apoptosis",
+        "status": "CAUSAL_IN_VITRO",
+        "details": "Yoda1 stimulation for 24 h increased Ca2+/ROS, Piezo1/YAP1 signaling and cell death; apoptotic HUVECs were then used as a defined downstream perturbation."
+      },
+      {
+        "module": "apoptotic endothelial cells -> fibroblast scar phenotype",
+        "status": "CAUSAL_IN_VITRO",
+        "details": "Yoda1-induced apoptotic endothelial cells were collected and co-cultured with fibroblasts for 24 h; COL-1, COL-3 and alpha-SMA increased."
+      },
+      {
+        "module": "mechanical/YAP intervention -> macrophage efferocytosis",
+        "status": "CAUSAL_IN_VITRO",
+        "details": "Macrophages were exposed to material for 24 h, then Yoda1 for 24 h, then apoptotic endothelial cells for 4 h. Gel/VP restored phagocytic activity strongly under the perturbed condition."
+      },
+      {
+        "module": "restored macrophage state -> reduced fibroblast activation",
+        "status": "CAUSAL_CONDITIONED_MEDIA_BRIDGE",
+        "details": "Conditioned medium from macrophages receiving apoptotic-cell uptake plus Gel/VP intervention reduced fibrosis-associated markers including alpha-SMA in BLM-activated fibroblasts."
+      },
+      {
+        "module": "in vivo wound outcome",
+        "status": "CAUSAL_TISSUE_OUTCOME",
+        "details": "Immediate wound application in a rat 16-mm full-thickness skin-defect model was associated with reduced YAP activation, reparative macrophage shift, fewer alpha-SMA-positive myofibroblasts, more ordered collagen remodeling and less scar formation at the reported wound-healing endpoints."
+      }
+    ],
+    "dense_in_vivo_temporal_sequence": "NOT_ESTABLISHED",
+    "reason": "the full Piezo1/YAP -> apoptotic-cell retention -> efferocytosis -> alpha-SMA sequence is assembled from linked perturbation modules plus sparse in-vivo endpoints rather than a single dense longitudinal in-vivo series"
+  },
+  "temporal_audit": {
+    "rat_model": {
+      "species": "Sprague-Dawley rat",
+      "sex": "male",
+      "age": "6-8 weeks",
+      "wound": "16-mm circular full-thickness dorsal skin defect",
+      "treatment_start": "immediately after wound creation",
+      "groups": ["PBS", "Gel", "Gel/VP"],
+      "dressing_change": "every 48 h",
+      "reported_macroscopic_times": ["day 3", "day 7", "day 14"],
+      "reported_tissue_harvest_times": ["day 7", "day 14"]
+    },
+    "delayed_intervention_test": {
+      "verdict": "FAIL_NOT_PRESENT",
+      "meaning": "no arm starting after closure, after myofibroblast peak, or after structural stabilization was identified",
+      "exit_clock_upgrade": "NO"
+    }
+  },
+  "mechanical_measurement_audit": {
+    "material_mechanics": {
+      "status": "PRESENT",
+      "test": "Instron tensile testing of 20 x 10 x 2 mm hydrogel samples at 2 mm/min, at least 3 parallel samples per group",
+      "youngs_modulus_kPa": {
+        "mean": 8.42,
+        "sd": 1.56
+      },
+      "stress_at_break_kPa": {
+        "mean": 15.52,
+        "sd": 8.79
+      },
+      "elongation_at_break_percent": 100,
+      "paper_abstract_elastic_window_kPa": "7-15",
+      "paper_abstract_extensibility": "approximately twofold"
+    },
+    "point_level_source_data": "NOT_PUBLICLY_IDENTIFIED_IN_THIS_PASS",
+    "in_vivo_wound_stiffness_or_force_mapping": "NOT_FOUND",
+    "longitudinal_mechanics": "NOT_FOUND",
+    "interpretation": "mechanical characterization of the material is quantitative, but there is no identified longitudinal point-level measurement of wound-tissue stiffness, local stress, or force redistribution over healing time"
+  },
+  "source_data_and_supplement_audit": {
+    "elsevier_public_article": "FOUND",
+    "public_supplement_or_source_data_file": "NOT_IDENTIFIED_VIA_PUBLIC_INDEXING_IN_THIS_PASS",
+    "public_corollary_disclosure": {
+      "type": "patent application",
+      "id": "CN122251318A",
+      "assignee": "Shanghai Tongren Hospital",
+      "publication_date": "2026-06-23",
+      "role": "corroborating experimental disclosure for timing, mechanical testing and linked mechanistic modules; not treated as peer-reviewed source data or as a substitute for article supplementary files"
+    }
+  },
+  "selected_quantitative_readouts": {
+    "macrophage_phagocytic_rate": {
+      "baseline_or_comparator_percent": 22.50,
+      "Gel_VP_percent": 64.50,
+      "note": "reported article-level headline value; patent disclosure provides mean +/- SD for the corresponding assays and additional paired values"
+    },
+    "in_vivo_wound_closure": ">95% within two weeks",
+    "alpha_SMA_myofibroblast_accumulation": "markedly reduced with Gel/VP",
+    "collagen_remodeling": "more ordered",
+    "scar_formation": "reduced"
+  },
+  "gate_verdict": {
+    "mechanical_resolution_coupling": "PASS_CAUSAL_SUPPORT_SKIN",
+    "strict_cell_exit_node": "NO",
+    "new_independent_tissue": "NO",
+    "ECM_MECHANICAL_LOCK_support": "YES_SKIN_CAUSAL_SUPPORT",
+    "EXIT_CLOCK_support": "SUPPORTIVE_BUT_NOT_TIMING_IDENTIFYING",
+    "reason": "mechanical intervention changes mechanotransduction, macrophage apoptotic-cell clearance and downstream fibrotic outcome, but treatment is preventive/immediate rather than delayed and no biological wound-state decay constant or safe late-EXIT boundary is identified"
+  },
+  "frozen_boundaries": [
+    "mechanical buffering plus verteporfin is a compound intervention and should not be reduced to pure mechanics without component-specific evidence",
+    "linked causal modules do not equal a dense in-vivo temporal trajectory",
+    "reduced alpha-SMA accumulation is not equivalent to direct myofibroblast EXIT",
+    "immediate treatment cannot establish the timing of a safe delayed resolution intervention",
+    "material modulus is not wound-tissue stiffness",
+    "patent disclosure is not peer-reviewed source data"
+  ],
+  "next_killer_test": {
+    "primary": "delayed-start Gel or mechanically matched drug-free buffering arms initiated after wound closure / after the alpha-SMA rise, with dense YAP, apoptotic-cell burden, macrophage efferocytosis and alpha-SMA measurements",
+    "secondary": "obtain article supplementary/source-data files or author-provided point-level data for Figures 2, 3, 6 and 7, including raw stress-strain traces and exact D7/D14 marker quantification",
+    "clock_question": "does restoring mechanical buffering after the reparative state is established accelerate resolution without impairing closure or matrix stabilization?"
+  }
+}
