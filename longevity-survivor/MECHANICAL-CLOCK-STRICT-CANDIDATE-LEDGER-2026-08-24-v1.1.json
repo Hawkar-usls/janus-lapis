@@ -1,0 +1,49 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.candidate_ledger.v1_1",
+  "artifact_id": "MECHANICAL-CLOCK-STRICT-CANDIDATE-LEDGER-2026-08-24-v1.1",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "supersedes": "MECHANICAL-CLOCK-STRICT-CANDIDATE-LEDGER-2026-08-24-v1.0",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "status": "OPEN_WITH_ONE_ADMITTED_5_OF_5_SKIN_ROOT",
+  "admitted_roots": [
+    {
+      "tissue": "SKIN",
+      "node": "SKIN-MECHANICAL-CLOCK-STRICT-ROOT-KIM-PGT-2015-v1.0",
+      "doi": "10.1097/PRS.0000000000001507",
+      "decision": "ADMITTED_5_OF_5",
+      "criteria": {"C1":"YES","C2":"YES","C3":"YES","C4":"YES","C5":"YES"},
+      "root_integrity": "PASS_SINGLE_CAUSAL_EXPERIMENTAL_ROOT",
+      "heuristic_score_used": false,
+      "cross_arm_fusion_used": false,
+      "direction_prior_used": false
+    }
+  ],
+  "not_admitted_roots_preserved_from_v1_0": [
+    "SKIN_HINZ_2001_TENSION_RELEASE",
+    "SKIN_CONTROLLED_TENSION_2020",
+    "SKIN_YAP_VERTEPORFIN_IMMEDIATE_CONTROL",
+    "SCI_ZHENG_2026_HAMA_CA",
+    "SCI_PARK_2026_DELAYED_NSC_HYDROGEL",
+    "SCI_COOPER_2020_IMP",
+    "HEART_YOSHIZUMI_2016_DELAYED_HYDROGEL",
+    "HEART_KADNER_2012_DEFERRED_PEG",
+    "HEART_ADAM17_2026",
+    "LIVER_IKENAGA_2017_LOXL2"
+  ],
+  "gate_logic": {
+    "current_strict_tissue_count": 1,
+    "required_for_cross_tissue_v0_2": 2,
+    "cross_tissue_mechanical_clock": "NOT_YET_ADMITTED",
+    "reason": "The frozen v0.2 rule requires two independent tissues with 5/5 roots. Skin is the first."
+  },
+  "exit_clock_boundary": {
+    "status": "NOT_COUPLED",
+    "reason": "The admitted skin root follows scar mechanics/remodeling but does not contain lineage-resolved alpha-SMA/myofibroblast EXIT kinetics. It is a strict Mechanical Clock anchor, not a Mechanical-EXIT coupling root."
+  },
+  "next_priority": [
+    "SPINAL_CORD: delayed endogenous lesion retuning after lesion/scar establishment with repeated lesion mechanics, endogenous scar-state trajectory and function in one root",
+    "HEART: post-stabilization direct ECM/crosslink/mechanical retuning with same-root scar mechanics, fibroblast-state trajectory and integrity/function"
+  ],
+  "anti_heuristic_boundary": "No second tissue will be admitted by combining separate natural-history, mechanics, cell-state or function arms. All five criteria must remain within one causal experimental root."
+}
