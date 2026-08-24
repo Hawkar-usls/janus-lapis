@@ -1,0 +1,113 @@
+{
+  "schema": "janus.lapis.longevity_survivor.polypedilum_third_lineage_gate.v1_5",
+  "artifact_id": "POLYPEDILUM-THIRD-LINEAGE-GATE-CLOSEOUT-2026-08-24-v1.5",
+  "supersedes": "POLYPEDILUM-THIRD-LINEAGE-GATE-CLOSEOUT-2026-08-24-v1.4",
+  "repository": "Hawkar-usls/janus-lapis",
+  "branch": "LONGEVITY-SURVIVOR",
+  "status": "P0_MULTI_CLOCK_CALIBRATED_FIRST_CELL_CYCLE_UNKNOWN_CAUSAL_GATE_OPEN",
+  "calibration_basis": {
+    "public_reaudit": true,
+    "private_trigger": true,
+    "private_content_exposed": false,
+    "rule": "Private expert correspondence may trigger conservative correction and lower confidence, but unpublished details remain outside public evidence until explicitly authorized."
+  },
+  "central_correction": "The Polypedilum/Pv11 branch must not use a single DNA-repair clock or equate statistically significant bulk population growth with first cell-cycle re-entry.",
+  "public_clock_state": {
+    "behavioral_function": "whole-larva activity returns on an approximately 1 h scale",
+    "oxidative_damage_recovery": "some oxidative damage is reported to resolve within a few hours after rehydration",
+    "fat_body_comet_fragmentation": "no significant recovery in first 24 h; background approached by approximately 96 h in assayed fat-body cells",
+    "pv11_early_function_rebuild": "functional and de-novo-protein-dependent recovery occurs across approximately 1-24 h depending on assay",
+    "pv11_bulk_population_growth": "stable through 48 h from the 1 h live-cell baseline; significant increase first detected at 72 h in the 2025 series",
+    "first_s_phase_or_first_mitosis": "PUBLICLY_UNRESOLVED_AT_DENSE_MATCHED_0_96H_RESOLUTION"
+  },
+  "damage_state_model": {
+    "status": "MULTIPLEX_NOT_SCALAR",
+    "invariant": "OXIDATIVE_DAMAGE_REPAIR_NE_FAT_BODY_COMET_FRAGMENTATION_REPAIR",
+    "interpretation": "Different lesion classes and assays can recover on distinct clocks; no global DNA-repair-completion time may be inferred by averaging them."
+  },
+  "causal_separation_public_anchor": {
+    "source": "DOI:10.1073/pnas.1719493115",
+    "result": "Hsf knockdown reduced Pv11 post-rehydration survival approximately fivefold, while the post-day-1 proliferation-rate comparison was not significantly different (reported P=0.3).",
+    "promotion": "SURVIVAL_AND_LATER_PROLIFERATION_RATE_ARE_EXPERIMENTALLY_SEPARABLE_OBSERVABLES",
+    "non_claim": "THIS_DOES_NOT_SHOW_THAT_DNA_REPAIR_IS_IRRELEVANT_TO_CELL_CYCLE_ENTRY"
+  },
+  "cross_lineage_update": {
+    "Bacillus_subtilis": "PRIMARY_CAUSAL_CHECKPOINT_ANCHOR",
+    "Adineta_vaga": "PRIMARY_RISK_STRUCTURED_REPAIR_TIMING_ANCHOR",
+    "Polypedilum_vanderplanki": "MULTI_CLOCK_CALIBRATION_ANCHOR_WITH_FIRST_CELL_CYCLE_ENTRY_MISSING",
+    "result": "THREE_LINEAGE_MULTI_CLOCK_RECOVERY_PATTERN_RETAINED_BUT_POLYPEDILUM_LATER_PROLIFERATION_PERMISSION_CLAIM_NOT_ADMITTED"
+  },
+  "topa": {
+    "promote": [
+      {
+        "claim": "RECOVERY_CONTAINS_MULTIPLE_NONINTERCHANGEABLE_CLOCKS",
+        "status": "PUBLICLY_SUPPORTED"
+      },
+      {
+        "claim": "DNA_DAMAGE_REPAIR_CANNOT_BE_TREATED_AS_ONE_SCALAR_STATE",
+        "status": "PUBLIC_CALIBRATION_SUPPORTED"
+      },
+      {
+        "claim": "SURVIVAL_RATE_AND_LATER_PROLIFERATION_RATE_CAN_BE_SEPARABLE_IN_PV11",
+        "status": "PUBLIC_CAUSAL_SEPARATION_ANCHOR"
+      }
+    ],
+    "hold": [
+      {
+        "claim": "FIRST_CELL_CYCLE_REENTRY_OCCURS_AT_72H",
+        "status": "NOT_ESTABLISHED"
+      },
+      {
+        "claim": "DNA_REPAIR_COMPLETION_CAUSALLY_GATES_FIRST_CELL_CYCLE_REENTRY",
+        "status": "OPEN_NOT_ESTABLISHED"
+      },
+      {
+        "claim": "ALL_POLYPEDILUM_TISSUES_SHARE_ONE_REENTRY_SCHEDULE",
+        "status": "NOT_ESTABLISHED"
+      }
+    ],
+    "blocked": [
+      "BULK_GROWTH_ONSET_EQUALS_FIRST_S_PHASE",
+      "OXIDATIVE_DAMAGE_RECOVERY_EQUALS_GLOBAL_DNA_INTEGRITY_RECOVERY",
+      "FAT_BODY_CLOCK_EQUALS_ALL_TISSUE_CLOCK",
+      "TEMPORAL_ORDER_ALONE_PROVES_CAUSAL_CHECKPOINT"
+    ]
+  },
+  "competing_hypotheses_artifact": "POLYPEDILUM-COMPETING-HYPOTHESES-2026-08-24-v1.0.csv",
+  "recovery_calibration_artifact": "POLYPEDILUM-RECOVERY-CLOCKS-CALIBRATION-2026-08-24-v1.0.json",
+  "next_gate_artifact": "POLYPEDILUM-DENSE-0-96H-MATCHED-GATE-2026-08-24-v1.0.md",
+  "next_decisive_gate": {
+    "name": "POLYPEDILUM_DENSE_0_96H_MATCHED_CELL_CYCLE_DAMAGE_GATE",
+    "timepoints_h": [0, 0.5, 1, 2, 3, 6, 12, 18, 24, 36, 48, 60, 72, 96],
+    "primary_endpoint": "DIRECT_FIRST_CELL_CYCLE_ENTRY",
+    "required_separation": [
+      "direct_S_phase_or_mitosis",
+      "lesion_class_specific_damage_state",
+      "repair_state",
+      "viability",
+      "viable_founder_number",
+      "bulk_cell_count",
+      "functional_recovery",
+      "metabolic_or_proteostatic_recovery"
+    ],
+    "causal_promotion_rule": "Only a validated manipulation that shifts a defined damage/repair/checkpoint state and correspondingly shifts direct S-phase/mitotic onset, with independent confirmation and an orthogonal rescue/reversal where defensible, can promote a domain-bounded causal permission-gate candidate.",
+    "kill_rule": "If direct cell-cycle entry timing does not shift despite a validated change in the candidate unresolved damage/repair/checkpoint state, weaken or reject the causal permission-gate hypothesis for the tested system."
+  },
+  "source_index": [
+    "DOI:10.1371/journal.pone.0014008",
+    "DOI:10.1016/j.mito.2023.11.002",
+    "DOI:10.1073/pnas.1719493115",
+    "DOI:10.1038/s41598-018-36124-6",
+    "DOI:10.1038/s41598-025-19627-x",
+    "SRA:SRP070984"
+  ],
+  "claim_ceiling": [
+    "MULTI_CLOCK_PATTERN_NE_UNIVERSAL_CHECKPOINT",
+    "FIRST_CELL_CYCLE_ENTRY_REMAINS_UNKNOWN_UNTIL_DIRECTLY_MEASURED",
+    "PV11_NE_WHOLE_LARVA",
+    "FAT_BODY_NE_ALL_TISSUES",
+    "DAMAGE_CLASS_NE_GLOBAL_DNA_DAMAGE",
+    "PRIVATE_CORRESPONDENCE_NE_PUBLIC_EVIDENCE",
+    "NO_LONGEVITY_OR_THERAPEUTIC_CLAIM"
+  ]
+}
