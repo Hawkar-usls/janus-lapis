@@ -1,0 +1,86 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.strict_root.v1",
+  "artifact_id": "SKIN-MECHANICAL-CLOCK-STRICT-ROOT-KIM-PGT-2015-v1.0",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "tissue": "SKIN",
+  "model": "female red Duroc pig full-thickness burn scar",
+  "paper": {
+    "title": "Burn Scar Biomechanics after Pressure Garment Therapy",
+    "authors_short": "Kim et al.",
+    "journal": "Plastic and Reconstructive Surgery",
+    "year": 2015,
+    "doi": "10.1097/PRS.0000000000001507",
+    "pmid": "25989300",
+    "pmcid": "PMC4552574"
+  },
+  "causal_root": {
+    "animals": "female red Duroc pigs",
+    "wounds": "full-thickness thermal burns, eight wounds per pig",
+    "pre_intervention_state": "wounds healed naturally for 28 days; by day 28 the majority were fully re-epithelialized and the study treated the resulting lesions as burn scars",
+    "intervention_start": "day 28 post-burn",
+    "intervention": "pressure garment therapy applied at 10% circumference reduction",
+    "mechanical_dose": "approximately 10 mmHg; initial measured pressure 10.1 mmHg decreasing to 9.5 mmHg over 12 h, with daily repositioning to maintain approximately 10 mmHg",
+    "control": "garments exerting no compression",
+    "follow_up": "through approximately day 78"
+  },
+  "frozen_criteria": {
+    "C1_DELAYED_AFTER_ESTABLISHMENT": {
+      "value": "YES",
+      "basis": "The mechanical intervention begins on day 28, after natural healing and after the majority of wounds are fully re-epithelialized. Pre-treatment day-28 scar area, mechanics and morphology are measured in the same experimental root."
+    },
+    "C2_DIRECT_PHYSICAL_RETUNING": {
+      "value": "YES",
+      "basis": "The intervention is direct physical compression, not a downstream molecular surrogate, and its delivered pressure is explicitly quantified."
+    },
+    "C3_PHYSICAL_STATE_MEASURED": {
+      "value": "YES",
+      "basis": "Scar hardness and elasticity are measured non-destructively by torsional ballistometry at day 28 before treatment and again at days 42, 56 and 78; terminal tensile strength and linear stiffness are also measured."
+    },
+    "C4_SAME_STATE_TRAJECTORY": {
+      "value": "YES",
+      "basis": "The same root follows burn-scar resolution/remodeling by serial scar-area/contraction measurements and repeated morphology/histology, with terminal collagen ultrastructure by TEM. This satisfies the frozen scar-resolution-trajectory alternative without requiring an alpha-SMA surrogate."
+    },
+    "C5_TISSUE_OUTCOME_WITH_INTEGRITY": {
+      "value": "YES",
+      "basis": "Pressure treatment reduces excessive contraction and hardness, improves elasticity toward normal pig skin, and increases ultimate tensile strength approximately 1.3-fold. Small residual epidermal defects present in a minority of scars at day 28 were no longer observed after day 28; no treatment-associated dehiscence or loss of repair integrity was reported."
+    }
+  },
+  "admission": {
+    "decision": "ADMITTED_5_OF_5",
+    "root_integrity": "PASS_SINGLE_CAUSAL_EXPERIMENTAL_ROOT",
+    "heuristic_score_used": false,
+    "cross_arm_fusion_used": false,
+    "direction_prior_used": false
+  },
+  "quantitative_endpoints": {
+    "pressure_mmHg": "approximately 10",
+    "control_scar_area_day72_percent_of_day28": "64.6 +/- 13.9",
+    "PGT_scar_area_day72_percent_of_day28": "82.7 +/- 17.9",
+    "day78_control_indentation_mm": "0.27 +/- 0.08",
+    "day78_PGT_indentation_mm": "0.42 +/- 0.06",
+    "day78_control_elasticity_coefficient_alpha": "0.052 +/- 0.009",
+    "day78_PGT_elasticity_coefficient_alpha": "0.033 +/- 0.0071",
+    "normal_pig_skin_elasticity_coefficient_alpha": "0.026 +/- 0.0056",
+    "ultimate_tensile_strength": "approximately 1.3-fold higher with PGT than control",
+    "collagen_ultrastructure": "PGT scars show smaller, more densely packed collagen fibrils with approximately 27% less free space between fibers than controls"
+  },
+  "clock_interpretation": {
+    "mechanical_clock_status": "FIRST_STRICT_SKIN_ANCHOR",
+    "start_anchor": "day 28 post-burn after majority re-epithelialization and with pre-treatment scar mechanics measured",
+    "response_window": "mechanics and scar trajectory followed from day 28 through approximately day 78",
+    "strongest_claim": "A delayed, quantified physical retuning of an already-established large-animal skin scar changes the subsequent mechanical/remodeling trajectory while preserving and improving tissue strength.",
+    "not_claimed": [
+      "This does not identify a universal mammalian pressure or modulus threshold.",
+      "This does not prove that compression accelerates alpha-SMA-positive myofibroblast EXIT because alpha-SMA lineage kinetics are not the qualifying same-state readout in this root.",
+      "This does not by itself establish a cross-tissue MECHANICAL CLOCK; a second independent strict 5/5 tissue is still required by the frozen v0.2 rule.",
+      "Pressure garment compression is not assumed equivalent to YAP inhibition, tissue softening or mechanical offloading in every geometry."
+    ]
+  },
+  "relation_to_exit_clock": {
+    "status": "PARALLEL_TIMING_ANCHOR_NOT_YET_COUPLED",
+    "reason": "The experiment establishes delayed mechanical-state retuning of an established scar, but does not provide lineage-resolved alpha-SMA EXIT kinetics. Mechanical Clock and EXIT Clock evidence roots therefore remain separate."
+  },
+  "next_killer_measurement": "In the same red-Duroc delayed-pressure design, add lineage/state-resolved myofibroblast abundance/apoptosis or equivalent alpha-SMA-with-vessel-exclusion time points immediately before pressure and during the first days/weeks after pressure initiation to test direct Mechanical-Clock to EXIT-Clock coupling."
+}
