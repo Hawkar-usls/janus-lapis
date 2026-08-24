@@ -1,0 +1,114 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.strict_root.v1",
+  "artifact_id": "HEART-MECHANICAL-CLOCK-STRICT-ROOT-NEFF-UNTAC-2022-v1.0",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "tissue": "HEART",
+  "model": "adult mouse transverse-aortic-constriction pressure-overload fibrosis followed by physical unloading",
+  "paper": {
+    "title": "Mechanisms that limit regression of myocardial fibrosis following removal of left ventricular pressure overload",
+    "authors_short": "Neff et al.",
+    "journal": "American Journal of Physiology-Heart and Circulatory Physiology",
+    "year": 2022,
+    "doi": "10.1152/ajpheart.00148.2022",
+    "pmid": "35657618",
+    "pmcid": "PMC9236876"
+  },
+  "causal_root": {
+    "establishment_phase": "4 weeks of transverse aortic constriction (TAC)",
+    "established_state": "pressure-overload hypertrophy with interstitial fibrosis, elevated myocardial stiffness, increased LV wall thickness/mass, elevated aortic velocity and peak systolic stress",
+    "delayed_intervention": "surgical removal of the constricting band after 4 weeks (unTAC)",
+    "intervention_class": "direct physical/hemodynamic unloading",
+    "post_intervention_endpoints": ["2 weeks unTAC", "4 weeks unTAC", "6 weeks unTAC"]
+  },
+  "frozen_criteria": {
+    "C1_DELAYED_AFTER_ESTABLISHMENT": {
+      "value": "YES",
+      "basis": "The intervention starts only after 4 weeks of TAC. The same experimental root documents the pre-unloading state with increased LV mass/wall thickness, fibrillar collagen, myocardial stiffness and hemodynamic load."
+    },
+    "C2_DIRECT_PHYSICAL_RETUNING": {
+      "value": "YES",
+      "basis": "unTAC physically removes the aortic constriction and directly normalizes the imposed pressure load; it is not a downstream molecular surrogate."
+    },
+    "C3_PHYSICAL_STATE_MEASURED": {
+      "value": "YES",
+      "basis": "The same root quantifies peak aortic velocity, calculated LV peak systolic stress and passive myocardial stiffness in the 4-week TAC state and at multiple post-unTAC endpoints."
+    },
+    "C4_SAME_STATE_TRAJECTORY": {
+      "value": "YES",
+      "basis": "The same root follows the endogenous fibrotic ECM state across 4-week TAC and 2-, 4- and 6-week unTAC using collagen volume fraction, collagen-hybridizing-peptide reactivity, collagenases/gelatinases, TIMP1 and collagen-crosslinking enzymes. This is a serial scar/fibrosis-resolution trajectory under the frozen C4 alternative."
+    },
+    "C5_TISSUE_OUTCOME_WITH_INTEGRITY": {
+      "value": "YES",
+      "basis": "After unloading, LV mass and wall thickness regress, lung/body-weight congestion falls, cardiomyocyte hypertrophy regresses and LV peak systolic stress returns toward control while EF remains stable. The measured structural/hemodynamic phenotype shows reverse remodeling rather than mechanical destabilization. The criterion is satisfied by structural outcome; no EF improvement is claimed."
+    }
+  },
+  "selected_quantitative_anchors": {
+    "peak_aortic_velocity_m_per_s": {
+      "control": "0.64 +/- 0.07",
+      "4wk_TAC": "3.58 +/- 0.42",
+      "4wk_TAC_plus_2wk_unTAC": "0.64 +/- 0.31",
+      "4wk_TAC_plus_4wk_unTAC": "0.67 +/- 0.24",
+      "4wk_TAC_plus_6wk_unTAC": "0.57 +/- 0.14"
+    },
+    "LV_peak_systolic_stress_g_per_cm2": {
+      "control": "92 +/- 24",
+      "4wk_TAC": "163 +/- 93",
+      "2wk_unTAC": "96 +/- 23",
+      "4wk_unTAC": "94 +/- 24",
+      "6wk_unTAC": "90 +/- 14"
+    },
+    "myocardial_stiffness_beta": {
+      "control": "0.030 +/- 0.005",
+      "4wk_TAC": "0.075 +/- 0.015",
+      "2wk_unTAC": "0.061 +/- 0.054",
+      "4wk_unTAC": "0.048 +/- 0.017",
+      "6wk_unTAC": "0.041 +/- 0.004",
+      "note": "The paper reports progressive reduction after unTAC, with stiffness remaining above control; do not interpret these group means as an individual longitudinal decay curve."
+    },
+    "LV_mass_body_weight_mg_per_g": {
+      "control": "3.5 +/- 0.3",
+      "4wk_TAC": "6.5 +/- 1.2",
+      "2wk_unTAC": "4.6 +/- 0.3",
+      "4wk_unTAC": "4.3 +/- 0.5",
+      "6wk_unTAC": "4.2 +/- 0.7"
+    },
+    "LV_EF_percent": {
+      "control": "55 +/- 5",
+      "4wk_TAC": "51 +/- 5",
+      "2wk_unTAC": "52 +/- 7",
+      "4wk_unTAC": "51 +/- 7",
+      "6wk_unTAC": "50 +/- 14",
+      "boundary": "EF did not materially improve; C5 is supported by structural/hemodynamic reverse remodeling, not an EF rescue claim."
+    }
+  },
+  "resolution_kinetics": {
+    "early_2wk_unTAC": "collagen hybridizing peptide reactivity and ECM-degrading enzymes increase while collagen volume fraction has not yet fallen substantially",
+    "later_4wk_unTAC": "collagen volume fraction decreases but remains above control; myocardial stiffness is lower than at 4-week TAC",
+    "6wk_unTAC": "fibrosis and stiffness remain incompletely normalized and late ECM-degradation activity is dampened",
+    "interpretation": "Physical unloading starts a time-ordered ECM reversal program with an early degradation phase followed by incomplete later regression."
+  },
+  "admission": {
+    "decision": "ADMITTED_5_OF_5",
+    "root_integrity": "PASS_SINGLE_CAUSAL_EXPERIMENTAL_ROOT",
+    "heuristic_score_used": false,
+    "cross_arm_fusion_used": false,
+    "cross_paper_fusion_used": false,
+    "direction_prior_used": false
+  },
+  "clock_interpretation": {
+    "mechanical_clock_status": "SECOND_STRICT_INDEPENDENT_TISSUE_ANCHOR",
+    "strongest_claim": "After a chronic pressure-overload fibrotic state is established, direct physical unloading causally shifts myocardial mechanical and fibrotic trajectories in a time-dependent manner within one experimental root.",
+    "not_claimed": [
+      "This is not a myocardial-infarction wound-healing model and must not be represented as post-MI scar resolution.",
+      "This does not establish a universal stiffness target or a universal softer-is-better rule.",
+      "The group-wise 2/4/6-week endpoints are not an individual-tissue half-life measurement.",
+      "This does not establish lineage-resolved myofibroblast EXIT kinetics."
+    ]
+  },
+  "relation_to_exit_clock": {
+    "status": "PARALLEL_MECHANICAL_FIBROSIS_CLOCK_NOT_DIRECT_EXIT_COUPLING",
+    "reason": "The root provides a collagen/fibrosis-resolution trajectory but not lineage-resolved activated-fibroblast clearance/apoptosis."
+  }
+}
