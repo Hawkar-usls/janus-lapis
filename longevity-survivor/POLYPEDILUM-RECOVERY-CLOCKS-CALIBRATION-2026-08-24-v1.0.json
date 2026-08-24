@@ -1,0 +1,104 @@
+{
+  "schema": "janus.lapis.longevity_survivor.polypedilum_recovery_clocks_calibration.v1",
+  "artifact_id": "POLYPEDILUM-RECOVERY-CLOCKS-CALIBRATION-2026-08-24-v1.0",
+  "repository": "Hawkar-usls/janus-lapis",
+  "branch": "LONGEVITY-SURVIVOR",
+  "status": "P0_PUBLIC_EVIDENCE_CALIBRATED_FIRST_CELL_CYCLE_ENTRY_UNRESOLVED",
+  "purpose": "Separate distinct post-rehydration observables that had previously been compressed into a single recovery or proliferation clock.",
+  "privacy_boundary": {
+    "trigger": "A private domain-expert correspondence triggered the re-audit.",
+    "rule": "No unpublished observation from the private correspondence is reproduced, quantified, attributed, or promoted in this public artifact without explicit permission.",
+    "public_model_may_be_corrected": true,
+    "private_observation_may_be_published": false
+  },
+  "clock_map": [
+    {
+      "clock_id": "C0_BEHAVIORAL_FUNCTION",
+      "system": "whole larva",
+      "public_observation": "Larvae resume active life in approximately one hour after rehydration.",
+      "interpretation": "Behavioral or organismal function can return rapidly.",
+      "source": "DOI:10.1371/journal.pone.0014008",
+      "claim_ceiling": "FUNCTION_RETURN_NE_FULL_MOLECULAR_RECOVERY"
+    },
+    {
+      "clock_id": "C1_OXIDATIVE_DAMAGE_RECOVERY",
+      "system": "whole larva / oxidative-damage assays",
+      "public_observation": "Oxidative stress is strongest during the first hour after rehydration; oxidative damage to DNA and membrane lipids is reported to be repaired within a few hours.",
+      "interpretation": "Some oxidative lesions resolve on an hours-scale clock.",
+      "source": "DOI:10.1016/j.mito.2023.11.002",
+      "claim_ceiling": "OXIDATIVE_DAMAGE_ASSAY_NE_GLOBAL_NUCLEAR_DNA_INTEGRITY"
+    },
+    {
+      "clock_id": "C2_FAT_BODY_DNA_FRAGMENTATION",
+      "system": "larval fat-body cells",
+      "public_observation": "Alkaline comet-assay fragmentation after anhydrobiosis showed no significant recovery within the first 24 h and returned to background by approximately 96 h.",
+      "interpretation": "The fragmentation/integrity endpoint has a much slower clock in the assayed fat-body-cell population.",
+      "source": "DOI:10.1371/journal.pone.0014008",
+      "claim_ceiling": "FAT_BODY_COMET_CLOCK_NE_ALL_TISSUE_DNA_REPAIR_CLOCK"
+    },
+    {
+      "clock_id": "C3_EARLY_CELLULAR_FUNCTION_AND_REBUILD",
+      "system": "Pv11 / Pv11-00443-Or47a",
+      "public_observation": "Functional outputs can be detectable early after rehydration; preserved receptor/co-receptor function can be detected at approximately 1 h in some assays, while de-novo-protein-dependent ligand response is restored from approximately 12-24 h.",
+      "interpretation": "Cellular function and proteostatic rebuilding are active before detectable bulk population expansion.",
+      "source": "DOI:10.1038/s41598-025-19627-x",
+      "claim_ceiling": "EARLY_FUNCTION_NE_CELL_CYCLE_ENTRY"
+    },
+    {
+      "clock_id": "C4_BULK_POPULATION_GROWTH",
+      "system": "Pv11-00443-Or47a",
+      "public_observation": "Live-cell concentration was stable from the 1 h baseline through 48 h; statistically significant population growth was first detected at 72 h and plateaued near 144 h in the published 2025 series.",
+      "interpretation": "Bulk population expansion is delayed relative to several early functional-recovery readouts.",
+      "source": "DOI:10.1038/s41598-025-19627-x",
+      "claim_ceiling": "SIGNIFICANT_BULK_GROWTH_NE_FIRST_S_PHASE_OR_FIRST_MITOSIS"
+    },
+    {
+      "clock_id": "CX_FIRST_CELL_CYCLE_ENTRY",
+      "system": "larval tissue and Pv11",
+      "public_observation": "No sufficiently dense public matched EdU/BrdU/flow-cytometric/mitotic-index time series was identified that establishes the first post-rehydration S-phase or first mitosis across 0-96 h.",
+      "interpretation": "First cell-cycle entry remains a missing measurement and must not be inferred from bulk cell-count significance.",
+      "source": "PUBLIC_EVIDENCE_SEARCH_2026-08-24",
+      "claim_ceiling": "UNKNOWN_STAYS_UNKNOWN"
+    }
+  ],
+  "damage_metric_calibration": {
+    "invariant": "DNA_DAMAGE_IS_NOT_ONE_SCALAR_CLOCK",
+    "reason": "Different assays observe different lesion classes and biological compartments. Hours-scale oxidative-damage resolution and approximately 96 h fat-body comet-fragmentation recovery must not be averaged or treated as the same state variable.",
+    "required_future_fields": [
+      "lesion_or_damage_class",
+      "assay",
+      "tissue_or_cell_system",
+      "timepoint",
+      "baseline_definition"
+    ]
+  },
+  "causal_separation_anchor": {
+    "source": "DOI:10.1073/pnas.1719493115",
+    "public_result": "Hsf knockdown reduced Pv11 survival after rehydration approximately fivefold, while the post-day-1 proliferation rate comparison was not significantly altered (reported ANOVA P=0.3).",
+    "interpretation": "Desiccation-survival capacity and the later proliferation rate of surviving cells are experimentally separable observables.",
+    "does_not_establish": [
+      "DNA_REPAIR_INDEPENDENCE",
+      "FIRST_CELL_CYCLE_ENTRY_TIME",
+      "UNIVERSAL_PROLIFERATION_GATE"
+    ]
+  },
+  "hard_invariants": [
+    "BEHAVIORAL_RECOVERY_NE_CELL_CYCLE_ENTRY",
+    "OXIDATIVE_DAMAGE_REPAIR_NE_COMET_FRAGMENTATION_REPAIR",
+    "FAT_BODY_NE_ALL_TISSUES",
+    "PV11_CELL_LINE_NE_WHOLE_LARVA",
+    "BULK_GROWTH_NE_FIRST_S_PHASE",
+    "SURVIVAL_RATE_NE_PROLIFERATION_RATE",
+    "TEMPORAL_ORDER_NE_CAUSAL_GATE",
+    "PRIVATE_CORRESPONDENCE_NE_PUBLIC_EVIDENCE"
+  ],
+  "source_index": [
+    "DOI:10.1371/journal.pone.0014008",
+    "DOI:10.1016/j.mito.2023.11.002",
+    "DOI:10.1073/pnas.1719493115",
+    "DOI:10.1038/s41598-018-36124-6",
+    "DOI:10.1038/s41598-025-19627-x",
+    "SRA:SRP070984"
+  ],
+  "next_gate": "POLYPEDILUM_DENSE_0_96H_MATCHED_CELL_CYCLE_DAMAGE_GATE"
+}
