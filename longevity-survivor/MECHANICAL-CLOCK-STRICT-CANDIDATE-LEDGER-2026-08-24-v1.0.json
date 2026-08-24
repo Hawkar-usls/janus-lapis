@@ -1,0 +1,188 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.candidate_ledger.v1",
+  "artifact_id": "MECHANICAL-CLOCK-STRICT-CANDIDATE-LEDGER-2026-08-24-v1.0",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "gate_status": "OPEN_NO_5_OF_5_ROOT_FOUND_IN_THIS_PASS",
+  "candidates": [
+    {
+      "id": "SKIN_HINZ_2001_TENSION_RELEASE",
+      "tissue": "SKIN",
+      "paper": "Mechanical Tension Controls Granulation Tissue Contractile Activity and Myofibroblast Differentiation",
+      "doi": "10.1016/S0002-9440(10)61776-2",
+      "causal_root": "rat wounds splinted for 7 days then released for 1-2 days; separate 14-day granuloma pouches released from tension",
+      "criteria": {
+        "C1": "YES",
+        "C2": "YES",
+        "C3": "NO",
+        "C4": "YES",
+        "C5": "NO"
+      },
+      "notes": {
+        "C3": "Tension is physically removed and tissue contractility is measured, but the imposed/local wound mechanical state is not quantitatively mapped before and after release in the same strict sense required by the frozen clock protocol.",
+        "C4": "alpha-SMA falls 2-3 days after release; F-actin and ED-A fibronectin decline on a temporally ordered schedule.",
+        "C5": "No final scar-quality or tissue-function rescue with demonstrated preservation of wound integrity is provided."
+      },
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "id": "SKIN_CONTROLLED_TENSION_2020",
+      "tissue": "SKIN",
+      "paper": "A modified scar model with controlled tension on secondary wound healing in mice",
+      "doi": "10.1093/burnst/tkaa013",
+      "causal_root": "granulation established by day 7, then controlled external tension applied for 14 days",
+      "criteria": {
+        "C1": "YES",
+        "C2": "YES",
+        "C3": "YES",
+        "C4": "NO",
+        "C5": "NO"
+      },
+      "notes": {
+        "C3": "Applied tension is explicitly quantified in N/mm^2 and adjustable in real time.",
+        "C4": "No qualifying same-state alpha-SMA/myofibroblast trajectory was identified in the reported experiment.",
+        "C5": "The model intentionally increases scar/collagen and high tension can injure tissue; it is not a delayed beneficial retuning experiment with preserved repair integrity."
+      },
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "id": "SKIN_YAP_VERTEPORFIN_IMMEDIATE_CONTROL",
+      "tissue": "SKIN",
+      "causal_root": "YAP/verteporfin anti-scarring wound studies",
+      "criteria": {
+        "C1": "NO",
+        "C2": "NO",
+        "C3": "NO",
+        "C4": "YES",
+        "C5": "YES"
+      },
+      "notes": "Primary anti-scarring treatment begins at wounding and is molecular rather than direct physical retuning. Repeated dosing can also delay closure, so it is retained as a timing/safety falsifier rather than admitted mechanics-clock evidence.",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "id": "SCI_ZHENG_2026_HAMA_CA",
+      "tissue": "SPINAL_CORD",
+      "paper": "Mussel Inspired Hydrogel Promotes Axon Regeneration via Piezo1 Modulation and Cytoskeleton Dynamics in Synergy After Spinal Cord Injury",
+      "doi": "10.1002/adfm.202517284",
+      "criteria": {
+        "C1": "NO",
+        "C2": "YES",
+        "C3": "YES",
+        "C4": "NO",
+        "C5": "YES"
+      },
+      "notes": "Strong causal mechanical-state study, but implantation occurs at injury rather than after lesion/scar establishment; axonal readouts do not constitute a delayed endogenous scar-state EXIT trajectory under this strict protocol.",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "id": "SCI_PARK_2026_DELAYED_NSC_HYDROGEL",
+      "tissue": "SPINAL_CORD",
+      "paper": "Mechanical Environment Afforded by Engineered Hydrogel Critically Regulates Survival of Neural Stem Cells Transplanted in the Injured Spinal Cord via Piezo1-Mediated Mechanotransduction",
+      "doi": "10.1002/advs.202507160",
+      "criteria": {
+        "C1": "YES",
+        "C2": "YES",
+        "C3": "NO",
+        "C4": "NO",
+        "C5": "NO"
+      },
+      "notes": "NSC+hydrogel transplantation is delayed to 7 days and material stiffness is controlled, but no qualifying before/after endogenous lesion physical-state trajectory is established; primary causal endpoint is exogenous graft survival, not endogenous scar resolution or a qualifying whole-tissue structural/functional repair endpoint.",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "id": "SCI_COOPER_2020_IMP",
+      "tissue": "SPINAL_CORD",
+      "paper": "Spinal Cord Injury Results in Chronic Mechanical Stiffening",
+      "doi": "10.1089/neu.2019.6540",
+      "criteria": {
+        "C1": "NO",
+        "C2": "NO",
+        "C3": "YES",
+        "C4": "YES",
+        "C5": "NO"
+      },
+      "notes": "Chronic lesion stiffness is quantitatively measured, but the IMP intervention is acute (2, 24 and 48 h) and immune-directed rather than a delayed direct physical retuning. Function reported from separate prior work is not fused into this root.",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "id": "HEART_YOSHIZUMI_2016_DELAYED_HYDROGEL",
+      "tissue": "HEART",
+      "paper": "Timing effect of intramyocardial hydrogel injection for positively impacting left ventricular remodeling after myocardial infarction",
+      "doi": "10.1016/j.biomaterials.2015.12.002",
+      "criteria": {
+        "C1": "YES",
+        "C2": "YES",
+        "C3": "NO",
+        "C4": "NO",
+        "C5": "YES"
+      },
+      "notes": "Hydrogel is injected at immediate, day-3 and 2-week phases and day 3 gives the strongest functional effect. However, no qualifying same-root before/after endogenous scar mechanical-state measurement and no state-specific longitudinal myofibroblast trajectory satisfying the frozen protocol were identified.",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "id": "HEART_KADNER_2012_DEFERRED_PEG",
+      "tissue": "HEART",
+      "paper": "The beneficial effects of deferred delivery on the efficiency of hydrogel therapy post myocardial infarction",
+      "doi": "10.1016/j.biomaterials.2011.11.031",
+      "criteria": {
+        "C1": "YES",
+        "C2": "YES",
+        "C3": "NO",
+        "C4": "NO",
+        "C5": "YES"
+      },
+      "notes": "One-week deferred PEG injection improves scar thickness and ventricular function versus immediate delivery, but lacks the same-root endogenous tissue mechanics and same-state cellular trajectory required for admission.",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "id": "HEART_ADAM17_2026",
+      "tissue": "HEART",
+      "paper": "Temporal inhibition of ADAM17 in fibroblasts reduces stiffness and promotes vascularization following myocardial infarction",
+      "doi": "10.1093/cvr/cvaf256",
+      "criteria": {
+        "C1": "YES",
+        "C2": "NO",
+        "C3": "NO",
+        "C4": "YES",
+        "C5": "YES"
+      },
+      "notes": "A highly informative timing/mechanotransduction control. Short-term post-MI pharmacological inhibition targets the myofibroblast phase and improves long-term remodeling, while genetic myofibroblast Adam17 loss reduces scar stiffness. Under the root-integrity rule these arms are not fused: ADAM17 inhibition is biochemical rather than direct physical retuning, and stiffness evidence from the genetic root does not satisfy C3 for the delayed pharmacological root.",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "id": "LIVER_IKENAGA_2017_LOXL2",
+      "tissue": "LIVER",
+      "paper": "Selective targeting of lysyl oxidase-like 2 (LOXL2) suppresses hepatic fibrosis progression and accelerates its reversal",
+      "doi": "10.1136/gutjnl-2016-312473",
+      "criteria": {
+        "C1": "YES",
+        "C2": "YES",
+        "C3": "YES",
+        "C4": "YES",
+        "C5": "NO"
+      },
+      "notes": "Closest strict root in the current ledger. Anti-LOXL2 begins after established bridging fibrosis, directly reduces collagen crosslink stabilization, and accelerates septal disruption during recovery. It is not admitted because a qualifying primary organ-function/regenerative outcome with the frozen repair-integrity requirement is absent.",
+      "decision": "NOT_ADMITTED"
+    }
+  ],
+  "falsification_controls": [
+    {
+      "finding": "Higher-stiffness 15% GelMA outperformed 7.5% GelMA for axonal extension and sensory recovery in one SCI model.",
+      "doi": "10.1371/journal.pone.0325798",
+      "consequence": "SOFTER_IS_ALWAYS_BETTER remains rejected."
+    },
+    {
+      "finding": "In infarcted heart, alpha-SMA myofibroblast state can decline while scar stiffness/collagen complexity continues to mature.",
+      "doi": "10.1172/JCI98215",
+      "consequence": "Mechanical maturation and myofibroblast-state abundance are not interchangeable clocks."
+    }
+  ],
+  "closest_missing_measurements": {
+    "SKIN": "Delayed tension/offloading after established alpha-SMA with quantitative local tissue mechanics before/after plus final scar strength/architecture and wound-integrity outcome in the same root.",
+    "SPINAL_CORD": "Delayed endogenous lesion mechanical retuning after measured scar/lesion establishment, followed by repeated lesion mechanics, endogenous scar-state trajectory and whole-tissue functional recovery in the same root.",
+    "HEART": "Delayed direct physical/crosslink retuning after scar stabilization with same-arm scar modulus/crosslink readout, lineage-resolved fibroblast-state trajectory and rupture/remodeling/function endpoints."
+  },
+  "decision": "MECHANICAL_CLOCK_STRICT_GATE_REMAINS_OPEN",
+  "reason": "No candidate located in this pass satisfies all five frozen criteria within one causal experimental root."
+}
