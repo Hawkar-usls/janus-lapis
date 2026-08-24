@@ -1,0 +1,84 @@
+{
+  "schema": "janus.lapis.longevity_survivor.polypedilum_third_lineage_gate.v1_4",
+  "artifact_id": "POLYPEDILUM-THIRD-LINEAGE-GATE-CLOSEOUT-2026-08-24-v1.4",
+  "supersedes": "POLYPEDILUM-THIRD-LINEAGE-GATE-CLOSEOUT-2026-08-23-v1.3",
+  "repository": "Hawkar-usls/janus-lapis",
+  "branch": "LONGEVITY-SURVIVOR",
+  "status": "P0_KINETIC_MULTI_CLOCK_CAUSAL_GATE_OPEN",
+  "correction_trigger": {
+    "type": "PRIVATE_DOMAIN_EXPERT_CORRESPONDENCE_PLUS_PRIMARY_SOURCE_REAUDIT",
+    "date": "2026-08-24",
+    "public_boundary": "Unpublished correspondence is not quoted or exposed in this public artifact. Only conservative claim corrections that are independently supportable from public evidence are recorded here."
+  },
+  "primary_public_correction": {
+    "source": "DOI:10.1371/journal.pone.0014008",
+    "correction": "The 72-96 h DNA-integrity restoration time course was measured in fat-body cells. It must not be generalized as a validated whole-organism, all-tissue DNA-repair clock.",
+    "old_shortcut_blocked": "WHOLE_LARVA_NUCLEAR_DNA_72_96H_AS_ALL_TISSUE_CLOCK"
+  },
+  "revised_prediction": "After rehydration, behavioral/basic cellular functions can recover rapidly, while other recovery clocks including tissue-specific DNA repair, cell-cycle entry and bulk population growth may proceed on different schedules. Bulk Pv11 population growth is delayed relative to early function, but current evidence does not establish that completion of DNA repair is the cause of that delay or that all tissues defer proliferation until repair is complete.",
+  "polypedilum_result": {
+    "whole_larva": {
+      "behavioral_recovery": "physiological activity resumes within about 1 h after rehydration",
+      "dna_repair_scope": "published 72-96 h DNA-integrity restoration assay is fat-body-cell specific",
+      "interpretation": "rapid organismal activity can coexist with incompletely restored DNA integrity in the assayed fat-body cell population; no all-tissue timing claim is allowed"
+    },
+    "pv11_cell_line": {
+      "early_function": "functional recovery signals occur within the first 1-24 h depending on assay",
+      "repair_program": "rehydration-associated DNA-repair transcriptional activity is present during early recovery including ~3-24 h windows",
+      "bulk_growth": "live-cell concentration remains essentially flat through 48 h and significant population growth is first detected around 72 h in the published 2025 time series",
+      "interpretation": "bulk population-growth delay is real in the published series, but bulk cell-count kinetics do not identify the first S-phase event, first mitosis, or tissue-specific proliferation timing"
+    }
+  },
+  "cross_lineage_update": {
+    "Bacillus_subtilis": "PRIMARY_CAUSAL_CHECKPOINT_ANCHOR",
+    "Adineta_vaga": "PRIMARY_RISK_STRUCTURED_REPAIR_TIMING_ANCHOR",
+    "Polypedilum_vanderplanki": "PRIMARY_MULTI_CLOCK_KINETIC_ANCHOR_CAUSAL_GATE_OPEN",
+    "result": "THREE_LINEAGE_MULTI_CLOCK_RECOVERY_THRESHOLD_MET_WITH_POLYPEDILUM_TISSUE_SCOPE_CORRECTED"
+  },
+  "topa": {
+    "promote": {
+      "claim": "MULTIPLE_RECOVERY_CLOCKS_CAN_BE_TEMPORALLY_SEPARATED",
+      "status": "P0_KINETIC_SURVIVOR",
+      "reason": "Rapid function, tissue-specific repair kinetics and delayed bulk Pv11 population growth are separable observations."
+    },
+    "hold": {
+      "claim": "DNA_REPAIR_COMPLETION_CAUSALLY_GATES_POLYPEDILUM_CELL_CYCLE_RESTART",
+      "status": "OPEN_NOT_ESTABLISHED",
+      "reason": "Published data do not provide a matched perturbation linking repair completion to cell-cycle restart, and bulk population growth cannot be substituted for first S-phase/mitosis timing."
+    },
+    "refuted_or_blocked": [
+      "FULL_REPAIR_BEFORE_ANY_FUNCTION",
+      "ONE_REENTRY_CLOCK",
+      "WHOLE_LARVA_72_96H_DNA_REPAIR_CLOCK",
+      "BULK_POPULATION_GROWTH_ONSET_EQUALS_FIRST_CELL_CYCLE_REENTRY",
+      "TEMPORAL_ORDER_ALONE_PROVES_DAMAGE_REPAIR_CHECKPOINT_CAUSALITY"
+    ]
+  },
+  "next_decisive_experiment": {
+    "test": "Measure DNA-damage/repair state and cell-cycle entry in the same tissue or cell system at dense 0-96 h time points, then perturb repair/checkpoint capacity and test whether S-phase/mitotic onset shifts.",
+    "required_readouts": [
+      "tissue_or_cell_system_identity",
+      "DNA-damage burden",
+      "repair-state activity",
+      "EdU_or_BrdU_or_equivalent_S_phase_entry",
+      "mitotic_or_cell_cycle_state",
+      "live-cell number",
+      "basic-function recovery",
+      "viability"
+    ],
+    "kill_rule": "If cell-cycle entry timing does not shift when unresolved damage or relevant repair/checkpoint activity is experimentally altered in the same matched system, the causal permission-gate hypothesis is weakened or rejected for that system."
+  },
+  "source_index": [
+    "DOI:10.1371/journal.pone.0014008",
+    "DOI:10.1038/s41598-018-36124-6",
+    "DOI:10.1038/s41598-025-19627-x"
+  ],
+  "claim_ceiling": [
+    "FAT_BODY_REPAIR_TIMING_NE_ALL_TISSUE_REPAIR_TIMING",
+    "BULK_GROWTH_NE_FIRST_CELL_CYCLE_ENTRY",
+    "KINETIC_SEPARATION_NE_CAUSAL_CHECKPOINT",
+    "PV11_CELL_LINE_NE_WHOLE_LARVA",
+    "PRIVATE_CORRESPONDENCE_NE_PUBLIC_QUANTITATIVE_EVIDENCE",
+    "NO_UNIVERSAL_CHECKPOINT_OR_THERAPEUTIC_CLAIM"
+  ]
+}
