@@ -1,0 +1,16 @@
+{
+  "schema": "janus.organism.member_link.v1",
+  "organism_id": "JANUS_FEDERATED_ORGANISM",
+  "canonical_manifest": "Hawkar-usls/Janus:organism/JANUS_ORGANISM_v1.json",
+  "member_repository": "Hawkar-usls/janus-lapis",
+  "organ_key": "hypothesis_metabolism",
+  "role": "HYPOTHESIS_RANKING_AND_CANDIDATE_METABOLISM",
+  "consumes": ["CANDIDATE_SET", "EVIDENCE_ANNOTATION", "REJECTION_FEEDBACK"],
+  "emits": ["RANKED_HYPOTHESIS", "GATE_REJECTION", "CANDIDATE_SUMMARY"],
+  "routes_to": ["proof_spine", "anomaly_lab", "guardian_cortex", "memory"],
+  "authority": "EXPLORATORY_RANKING_ONLY",
+  "evidence_authority": false,
+  "authority_delta": 0,
+  "cross_repo_write_default": "DENY",
+  "claim_boundary": ["RANKING != VALIDATION", "ANALOGY != MECHANISM", "SOFTWARE_SCORE != LAB_RESULT"]
+}
