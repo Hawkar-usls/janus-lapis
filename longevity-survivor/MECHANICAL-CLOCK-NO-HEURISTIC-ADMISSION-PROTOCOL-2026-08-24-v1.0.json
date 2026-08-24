@@ -1,0 +1,51 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.admission_protocol.v1",
+  "artifact_id": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "parent_gate": "MECHANICAL_STATE_TIMING_GATE",
+  "status": "FROZEN_BEFORE_ADMISSION",
+  "admission_mode": "BINARY_CONJUNCTIVE_NO_HEURISTIC",
+  "purpose": "Test whether a delayed physical/mechanical retuning of an already-established repair state defines a causal MECHANICAL CLOCK without weighted scoring, cross-arm evidence fusion, or direction priors.",
+  "mandatory_criteria": {
+    "C1_DELAYED_AFTER_ESTABLISHMENT": "The intervention starts only after the relevant repair/fibrotic state is directly demonstrated to be established in the same experimental model and compatible time window.",
+    "C2_DIRECT_PHYSICAL_RETUNING": "The causal intervention directly changes an ECM/mechanical physical variable such as imposed tension/load, modulus/compliance, crosslink density, physical scaffold mechanics, or an equivalent explicit physical-state variable. A downstream molecular pathway intervention alone does not satisfy C2.",
+    "C3_PHYSICAL_STATE_MEASURED": "The same causal experimental root contains an explicit physical-state measurement before/at intervention and after intervention, or matched contemporaneous controls sufficient to quantify the mechanical/ECM change. Material modulus is not accepted as tissue modulus unless the claim is explicitly limited to material mechanics.",
+    "C4_SAME_STATE_TRAJECTORY": "The same causal experimental root measures the relevant endogenous repair-state population or scar-resolution trajectory after retuning using a state-specific readout. Molecular pathway activity alone is insufficient.",
+    "C5_TISSUE_OUTCOME_WITH_INTEGRITY": "The same causal experimental root demonstrates improved structural or functional tissue outcome and reports no evidence that the delayed intervention destabilized necessary early repair, such as rupture, dehiscence, failed closure, loss of structural integrity, or equivalent harm."
+  },
+  "decision_logic": {
+    "ADMITTED": "C1 == YES AND C2 == YES AND C3 == YES AND C4 == YES AND C5 == YES within one causal experimental root",
+    "NOT_ADMITTED": "Any criterion is NO or UNKNOWN",
+    "UNKNOWN_POLICY": "UNKNOWN is retained in provenance but is treated as NOT_ADMITTED for gate decisions until the missing measurement is obtained.",
+    "NO_PARTIAL_CREDIT": true,
+    "NO_WEIGHTED_SCORE": true
+  },
+  "root_integrity_rule": {
+    "rule": "All five mandatory criteria must belong to one causal experimental root. Evidence from separate genetic, pharmacological, biomaterial, timing, species, or assay arms must not be fused to construct a synthetic 5/5 experiment.",
+    "examples_forbidden": [
+      "combining a delayed pharmacological arm with stiffness measurements obtained only in a separate genetic arm",
+      "combining tissue mechanics from one paper with cellular outcomes from another paper",
+      "using a review-defined phase boundary when the intervention model does not itself document the relevant established state"
+    ]
+  },
+  "anti_heuristic_rules": [
+    "No prior assumption that softer is better or stiffer is better.",
+    "No prior assumption that YAP, FAK, Piezo1, ADAM17 or another mechanotransduction pathway equals a measured mechanical state.",
+    "No conversion of association into causality.",
+    "No conversion of material stiffness into tissue stiffness without direct tissue measurement.",
+    "No use of alpha-SMA area as a myofibroblast-specific readout unless vascular/smooth-muscle contamination is excluded or lineage/state identity is otherwise established.",
+    "No use of wall thickening, bulking or biomaterial persistence alone as regeneration or repair-state resolution.",
+    "No use of improved molecular markers alone as a tissue outcome.",
+    "No post-hoc relaxation of criteria after a promising paper is found.",
+    "No merging of independent evidence roots to increase admission count.",
+    "Negative and null results are retained as falsification controls."
+  ],
+  "priority_order": [
+    "SKIN: delayed post-alpha-SMA mechanical offloading/buffering or direct physical retuning",
+    "SPINAL_CORD: delayed endogenous lesion mechanical retuning after lesion/scar establishment",
+    "HEART: post-stabilization direct crosslink/mechanical intervention with scar mechanics and fibroblast-state readouts"
+  ],
+  "upgrade_rule": "MECHANICAL_CLOCK v0.2 requires two independent tissues with ADMITTED 5/5 roots, at least one from SKIN, SPINAL_CORD, HEART or TENDON.",
+  "frozen_boundary": "Supportive timing controls, mechanotransduction studies and partial mechanical experiments may guide the next measurement but cannot change the strict gate status."
+}
