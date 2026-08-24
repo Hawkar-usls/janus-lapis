@@ -1,0 +1,63 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.candidate_ledger.v1_2",
+  "artifact_id": "MECHANICAL-CLOCK-STRICT-CANDIDATE-LEDGER-2026-08-24-v1.2",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "supersedes": "MECHANICAL-CLOCK-STRICT-CANDIDATE-LEDGER-2026-08-24-v1.1",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "status": "PASS_TWO_INDEPENDENT_ADMITTED_5_OF_5_TISSUES",
+  "admitted_roots": [
+    {
+      "tissue": "SKIN",
+      "node": "SKIN-MECHANICAL-CLOCK-STRICT-ROOT-KIM-PGT-2015-v1.0",
+      "doi": "10.1097/PRS.0000000000001507",
+      "criteria": {"C1":"YES","C2":"YES","C3":"YES","C4":"YES","C5":"YES"},
+      "root_integrity": "PASS_SINGLE_CAUSAL_EXPERIMENTAL_ROOT",
+      "mechanical_action": "delayed quantified external compression of established burn scar"
+    },
+    {
+      "tissue": "HEART",
+      "node": "HEART-MECHANICAL-CLOCK-STRICT-ROOT-NEFF-UNTAC-2022-v1.0",
+      "doi": "10.1152/ajpheart.00148.2022",
+      "criteria": {"C1":"YES","C2":"YES","C3":"YES","C4":"YES","C5":"YES"},
+      "root_integrity": "PASS_SINGLE_CAUSAL_EXPERIMENTAL_ROOT",
+      "mechanical_action": "delayed direct hemodynamic unloading after established pressure-overload myocardial fibrosis"
+    }
+  ],
+  "frozen_upgrade_rule_check": {
+    "required_independent_tissues": 2,
+    "observed_independent_tissues": 2,
+    "required_at_least_one_priority_tissue": true,
+    "priority_tissues_present": ["SKIN", "HEART"],
+    "result": "PASS"
+  },
+  "nonadmitted_priority_roots_retained": [
+    "SCI delayed BMP1 inhibition: timing/functional control but no same-root quantitative lesion mechanics before/after",
+    "SCI chronic scar resection/scaffold roots: delayed structural intervention and function but no same-root quantitative physical-state trajectory",
+    "HEART 1-week Acorn CSD: direct restraint and serial MRI mechanics but not admitted as the decisive post-stabilization fibrosis root",
+    "HEART 2-week PEUU patch: delayed physical support and compliance/function but no qualifying serial same-state fibrosis trajectory",
+    "HEART 8-week PECUU-ECM patch: chronic delayed support and terminal compliance/function but no qualifying serial same-state fibrosis trajectory"
+  ],
+  "anti_heuristic_audit": {
+    "weighted_score_used": false,
+    "unknown_promoted_to_yes": false,
+    "cross_paper_fusion_used": false,
+    "cross_arm_fusion_used": false,
+    "direction_prior_used": false,
+    "post_hoc_rule_change_used": false,
+    "negative_controls_retained": true
+  },
+  "gate_decision": {
+    "MECHANICAL_CLOCK_v0_2": "PASS_STRICT_TWO_TISSUE_CAUSAL_TIMING_GATE",
+    "universal_dimensionless_window": "OPEN_NOT_IDENTIFIED",
+    "universal_stiffness_or_pressure_target": "REJECTED_NOT_SUPPORTED",
+    "softer_is_always_better": "REJECTED",
+    "stiffer_is_always_better": "REJECTED",
+    "best_supported_invariant": "A previously established pathological repair/fibrotic mechanical state can be causally redirected by delayed direct physical retuning, and the subsequent remodeling trajectory depends on timing and tissue context."
+  },
+  "exit_clock_relation": {
+    "status": "PARALLEL_CLOCKS_CAUSALLY_SUPPORTED_BUT_NOT_COUPLED",
+    "reason": "Neither strict root provides lineage-resolved activated-repair-cell EXIT kinetics sufficient to establish that mechanical retuning causally moves the EXIT clock."
+  },
+  "next_gate": "MECHANICAL_EXIT_COUPLING_GATE"
+}
