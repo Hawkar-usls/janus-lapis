@@ -12,7 +12,7 @@ permissions:
 jobs:
   acquire:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout exact PR head
         uses: actions/checkout@v4
@@ -42,6 +42,16 @@ jobs:
           echo "$code" > tpm_inspection_exit_code.txt
           exit 0
 
+      - name: Inspect public PvG to g.t bridge candidates
+        shell: bash
+        run: |
+          set +e
+          rm -rf pvg_bridge_inspection
+          python longevity-survivor/tools/inspect_pvg_to_gt_bridge.py 2>&1 | tee pvg_bridge_inspection.log
+          code=${PIPESTATUS[0]}
+          echo "$code" > pvg_bridge_inspection_exit_code.txt
+          exit 0
+
       - name: Upload proof-carrying acquisition artifact
         if: always()
         uses: actions/upload-artifact@v4
@@ -50,19 +60,25 @@ jobs:
           path: |
             dra008948_acquisition/
             pv_authors_tpm_inspection/
+            pvg_bridge_inspection/
             acquisition.log
             acquisition_exit_code.txt
             tpm_inspection.log
             tpm_inspection_exit_code.txt
+            pvg_bridge_inspection.log
+            pvg_bridge_inspection_exit_code.txt
           if-no-files-found: error
           retention-days: 7
 
-      - name: Enforce acquisition and TPM-inspection results
+      - name: Enforce acquisition and inspection execution
         shell: bash
         run: |
           acq="$(cat acquisition_exit_code.txt)"
           tpm="$(cat tpm_inspection_exit_code.txt)"
+          bridge="$(cat pvg_bridge_inspection_exit_code.txt)"
           echo "acquisition_exit_code=$acq"
           echo "tpm_inspection_exit_code=$tpm"
+          echo "pvg_bridge_inspection_exit_code=$bridge"
           test "$acq" = "0"
           test "$tpm" = "0"
+          test "$bridge" = "0"
