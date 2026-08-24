@@ -1,0 +1,126 @@
+{
+  "artifact_id": "JANUS-PV11-PVG-PV52-EXACT-SEQUENCE-BRIDGE-PREREGISTRATION-V1",
+  "date": "2026-08-24",
+  "status": "PREREGISTERED_BEFORE_SEQUENCE_MATCHING",
+  "objective": "Recover an authoritative PvScaf0.9/0.91 sequence set, reconstruct the 1222 S2 Blue-module old transcripts, and measure exact old-PvG to Pv5.2 gene coverage before any Blue trajectory arithmetic.",
+  "frozen_denominator": {
+    "blue_genes": 1222,
+    "source": "PLOS ONE 2020 S2 ModuleInclusion.tsv extracted from the public supplementary workbook",
+    "id_space": "PvGxxxxx"
+  },
+  "old_reference_requirements": {
+    "annotation": {
+      "source": "GSE78799_pvan.gtf.gz",
+      "expected_coordinate_space": "PvScaf*",
+      "observed_features": ["gene", "transcript", "exon"],
+      "cds_features_present": false
+    },
+    "genome_sequence": {
+      "required_identity": "original/public PvScaf0.9 or PvScaf0.91 assembly from the MidgeBase/2014 genome lineage, or a byte-identical/explicitly versioned archival mirror",
+      "forbidden_substitute": "de_novo_reassembly_from_PRJDB1558_raw_reads",
+      "required_validation": [
+        "SHA256_OF_ACQUIRED_BYTES",
+        "FASTA_HEADERS_CONTAIN_PvScaf_IDS",
+        "GTF_SCAFFOLD_IDS_MUST_RESOLVE_IN_FASTA",
+        "SOURCE_URL_AND_RETRIEVAL_ROUTE_RECORDED"
+      ]
+    },
+    "protein_or_cds": {
+      "status": "OPTIONAL_AND_NOT_YET_RECOVERED",
+      "rule": "No Tier B protein admission may be generated from a guessed ORF. Tier B requires an authoritative old CDS/protein source with explicit provenance."
+    }
+  },
+  "new_reference": {
+    "author_repository": "Kikawada-Lab-UT-NARO/Pvanderplanki_chromosomal_genome",
+    "pinned_commit": "fe5064db5e999e0c868d4c8330a231b2da15f256",
+    "target_id_space": "gNNNN.tN",
+    "rule": "New transcript/gene sequences must come from the pinned author data or an explicitly accessioned Pv5.2/Pv5.2.4 assembly paired with the pinned author annotation."
+  },
+  "reconstruction_contract": {
+    "old_transcript_sequence": "concatenate exon intervals for each transcript in genomic order; reverse-complement minus-strand transcripts after interval extraction",
+    "coordinate_convention": "GTF coordinates are 1-based inclusive",
+    "no_cds_inference": true,
+    "validation": [
+      "EVERY_EXON_INTERVAL_WITHIN_SCAFFOLD_BOUNDS",
+      "EVERY_BLUE_GENE_REPORTED_EVEN_IF_SEQUENCE_MISSING",
+      "MISSING_SCAFFOLD_OR_INVALID_INTERVAL_STAYS_MISSING"
+    ]
+  },
+  "frozen_mapping_tiers": {
+    "TIER_A_EXACT_TRANSCRIPT": {
+      "admissible": true,
+      "criteria": [
+        "100_PERCENT_NUCLEOTIDE_IDENTITY",
+        "100_PERCENT_OLD_SPLICED_TRANSCRIPT_COVERAGE",
+        "EXACT_SEQUENCE_HASH_EQUALITY_OR_EQUIVALENT_BYTE_EXACT_COMPARISON",
+        "ALL_EXACT_NEW_TRANSCRIPT_HITS_RESOLVE_TO_EXACTLY_ONE_NEW_GENE"
+      ],
+      "isoform_rule": "Multiple exact hits to gXXXX.t1/gXXXX.t2/etc are gene-level unambiguous if all belong to the same gXXXX gene."
+    },
+    "TIER_B_EXACT_PROTEIN": {
+      "admissible": true,
+      "criteria": [
+        "AUTHORITATIVE_OLD_PROTEIN_OR_CDS_SOURCE_REQUIRED",
+        "100_PERCENT_AMINO_ACID_IDENTITY",
+        "100_PERCENT_OLD_PROTEIN_COVERAGE",
+        "ALL_EXACT_NEW_PROTEIN_HITS_RESOLVE_TO_EXACTLY_ONE_NEW_GENE"
+      ],
+      "current_execution_status": "BLOCKED_UNTIL_AUTHORITATIVE_OLD_CDS_OR_PROTEIN_IS_RECOVERED"
+    },
+    "TIER_C_NEAR_MATCH": {
+      "admissible": false,
+      "status": "CANDIDATE_ONLY",
+      "rule": "Near-full-length, near-exact, BLAST-like, or similarity-based matches may be reported separately but never promoted into the exact bridge."
+    },
+    "TIER_D_UNRESOLVED": {
+      "admissible": false,
+      "conditions": [
+        "NO_EXACT_HIT",
+        "EXACT_HITS_TO_MULTIPLE_NEW_GENES",
+        "OLD_SEQUENCE_MISSING",
+        "SPLIT_OR_MERGE_CONFLICT",
+        "NUCLEOTIDE_PROTEIN_CONFLICT",
+        "PROVENANCE_FAILURE"
+      ]
+    }
+  },
+  "forbidden_inference_routes": [
+    "ROW_ORDER_IDENTITY",
+    "PvG_NUMBER_TO_g_NUMBER_ARITHMETIC",
+    "PREFIX_OR_NAME_SIMILARITY",
+    "CROSS_ASSEMBLY_COORDINATE_PROXIMITY_WITHOUT_LIFTOVER",
+    "BEST_HIT_PROMOTED_AS_IDENTITY",
+    "NEAR_MATCH_PROMOTED_AS_EXACT",
+    "RAW_READ_REASSEMBLY_CALLED_PvScaf0.9",
+    "LONGEST_ORF_GUESS_CALLED_AUTHORITATIVE_PROTEIN"
+  ],
+  "coverage_outputs_required": {
+    "denominator": 1222,
+    "counts": [
+      "TIER_A_UNIQUE_NEW_GENE",
+      "TIER_B_UNIQUE_NEW_GENE",
+      "TIER_A_OR_B_UNION",
+      "AMBIGUOUS_MULTIGENE",
+      "NO_EXACT_MATCH",
+      "OLD_SEQUENCE_MISSING",
+      "PROVENANCE_BLOCKED"
+    ],
+    "per_gene_ledger": true,
+    "report_fraction": "N/1222 and N/1222*100 percent"
+  },
+  "trajectory_gate": {
+    "current_status": "BLOCKED_PENDING_EXACT_BRIDGE_COVERAGE_AUDIT",
+    "automatic_open_threshold": null,
+    "rule": "No Blue trajectory value, aggregate, direction, peak, or recovery inference may be computed before the exact bridge coverage ledger exists and its missing/ambiguous fraction is visible. The coverage result is reported first; a separate gate decision follows.",
+    "future_expression_gene_aggregation_candidate": "TPM(gXXXX)=sum(TPM(gXXXX.t*))",
+    "aggregation_status": "NOT_YET_ADMITTED"
+  },
+  "hard_boundaries": [
+    "MISSING_DATA_STAYS_MISSING",
+    "UNKNOWN_IS_A_VALID_OUTPUT",
+    "EXACT_SEQUENCE_IDENTITY_NE_CAUSAL_IDENTITY",
+    "TRANSCRIPT_EXACTNESS_NE_PROTEIN_EXACTNESS",
+    "BRIDGE_COVERAGE_NE_TRAJECTORY_RESULT",
+    "TRAJECTORY_PROXY_NE_DIRECT_S_PHASE_OR_MITOSIS"
+  ]
+}
