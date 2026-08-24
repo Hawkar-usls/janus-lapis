@@ -1,0 +1,88 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_lock.cross_tissue_closeout.v1",
+  "artifact_id": "MECHANICAL-LOCK-CROSS-TISSUE-CLOSEOUT-2026-08-24-v1.0",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "candidate": "NICHE/ECM_MECHANICAL_MATURATION_LOCK",
+  "prior_status": "P0_CANDIDATE_PENDING_ONE_MORE_CAUSAL_TISSUE",
+  "frozen_question": "Does changing the mechanical/ECM state of the repair niche causally change regenerative versus scar/containment outcome in at least three independent mammalian tissues, while preserving tissue-specific direction and timing?",
+  "counted_strong_tissues": [
+    {
+      "tissue": "HEART",
+      "status": "STRONG_CAUSAL_SUPPORT",
+      "basis": "developmental ECM stiffening aligns with rapid postnatal loss of cardiac regenerative competence; experimental ECM softening/fetal-matrix conditions extend regenerative behavior in low-regenerative neonatal heart models",
+      "boundary": "does not establish a universal stiffness threshold or direct adult-human regeneration therapy"
+    },
+    {
+      "tissue": "SKIN",
+      "status": "STRONG_CAUSAL_SUPPORT",
+      "basis": "mechanical tension/mechanotransduction perturbations alter YAP-linked fibroblast scar trajectories; Huang et al. 2026 additionally couples mechanical buffering to apoptotic-cell clearance and reduced persistent alpha-SMA/fibrotic outcome",
+      "boundary": "compound biomaterial/drug interventions and immediate treatment do not identify a delayed safe-resolution window"
+    },
+    {
+      "tissue": "SPINAL_CORD",
+      "status": "STRONG_CAUSAL_SUPPORT_WITH_MATERIAL_CONFOUNDER",
+      "node": "SPINAL-CORD-MECHANICAL-LOCK-CAUSAL-NODE-ZHENG-2026-v1.0",
+      "basis": "AFM shows age-associated spinal-cord stiffening and marked lesion stiffening; neonatal-like mechanical retuning of an adult SCI lesion changes axon regrowth, circuit-associated histology and functional recovery; an independent stiffness-varied scaffold study replicates causal mechanical sensitivity",
+      "primary_doi": "10.1002/adfm.202517284",
+      "independent_replication_doi": "10.1016/j.bioactmat.2024.12.006",
+      "boundary": "stiffness is tuned through scaffold formulation, so mechanics are not perfectly isolated from polymer-density/transport/adhesion effects"
+    }
+  ],
+  "supportive_not_counted_as_clean_strong": [
+    {
+      "tissue": "TENDON",
+      "evidence": "2026 stiff-versus-soft PVA-SHMP scaffold study changes alpha-SMA suppression, collagen maturation and functional repair",
+      "doi": "10.1016/j.bioactmat.2026.05.036",
+      "reason_not_counted": "mechanics were changed by SHMP concentration, coupling stiffness to network chemistry and degradation; developmental lock causality is not isolated"
+    },
+    {
+      "tissue": "COCHLEA",
+      "reason_not_counted": "regenerative competence loss is strongly supported on epigenetic/plasticity axes, but stiffness is not established as the primary causal lock"
+    }
+  ],
+  "falsification_controls": [
+    {
+      "tissue": "SPINAL_CORD",
+      "doi": "10.1371/journal.pone.0325798",
+      "finding": "a different GelMA model reported greater axonal extension and sensory recovery with the higher-stiffness formulation",
+      "consequence": "reject a monotonic SOFTER_IS_BETTER law"
+    },
+    {
+      "cross_tissue_rule": "mechanical effects can reverse sign depending on phase, geometry, absolute modulus, tissue load-bearing role, scaffold architecture and cell identity"
+    }
+  ],
+  "gate_decision": {
+    "strong_causal_tissue_count": 3,
+    "three_tissue_causal_mechanics_gate": "PASS",
+    "new_status": "P0_CROSS_TISSUE_CAUSAL_MECHANICAL_STATE_GATE",
+    "old_simple_model": "DEVELOPMENTAL_STIFFENING_ALWAYS_CAUSES_REGENERATION_LOSS",
+    "old_simple_model_status": "NOT_ADMITTED",
+    "best_supported_model": "Each tissue has a permissible mechanical niche/state range that changes with development and injury. Moving the niche away from that range can stabilize non-regenerative repair states; experimentally retuning mechanics can change outcome, but the favorable direction and threshold are tissue- and context-specific.",
+    "claim_ceiling": "Three independent mammalian tissues now support causal importance of mechanical niche state. This is not evidence for one universal modulus, one universal softer-is-better rule, or human regenerative efficacy."
+  },
+  "relation_to_resolution_gate": {
+    "status": "PARTIAL_COUPLING_SUPPORTED",
+    "skin": "mechanical buffering can improve apoptotic-cell clearance/efferocytosis and reduce persistent fibrotic state",
+    "spinal_cord": "mechanical retuning improves axonal regeneration but current intervention is immediate and does not measure late scar-cell EXIT",
+    "heart": "mechanics and fibroblast-state transitions overlap temporally but should remain separate evidence roots unless the same experiment links them"
+  },
+  "relation_to_exit_clock": {
+    "status": "NO_DIRECT_UPGRADE",
+    "reason": "the decisive new spinal-cord interventions are applied at injury rather than after structural stabilization; they establish a mechanical-state gate, not a delayed resolution clock"
+  },
+  "next_killer_gate": {
+    "name": "MECHANICAL_STATE_TIMING_GATE",
+    "requirements": [
+      "at least two tissues with delayed mechanical retuning after the repair state is established",
+      "point-level tissue stiffness/force measurements before and after intervention",
+      "same-state cellular readouts showing whether mechanical retuning precedes resolution or regenerative re-entry",
+      "function/structural outcome showing benefit without destabilizing necessary early repair"
+    ],
+    "highest_value_targets": [
+      "skin: delayed mechanical buffering after alpha-SMA rise",
+      "spinal cord: delayed neonatal-like softening after lesion stiffness/scar is established",
+      "heart: delayed ECM/crosslinking or mechanotransduction intervention after infarct stabilization with direct tissue mechanics"
+    ]
+  }
+}
