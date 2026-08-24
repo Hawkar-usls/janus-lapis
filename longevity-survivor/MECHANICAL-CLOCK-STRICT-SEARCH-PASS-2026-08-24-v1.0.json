@@ -1,0 +1,80 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.strict_search_pass.v1",
+  "artifact_id": "MECHANICAL-CLOCK-STRICT-SEARCH-PASS-2026-08-24-v1.0",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "ledger": "MECHANICAL-CLOCK-STRICT-CANDIDATE-LEDGER-2026-08-24-v1.0",
+  "priority_order": ["SKIN", "SPINAL_CORD", "HEART"],
+  "result": "NO_ADMITTED_5_OF_5_ROOT",
+  "gate": "MECHANICAL_CLOCK_STRICT_GATE_REMAINS_OPEN",
+  "search_findings": [
+    {
+      "tissue": "SKIN",
+      "finding": "Hinz et al. provide a direct delayed tension-release experiment after 7 days of splinted wound healing and after 14 days in granuloma pouches; alpha-SMA decreases 2-3 days after release, but the root lacks quantitative local wound mechanical-state mapping before/after and a final beneficial scar/function endpoint with repair integrity.",
+      "doi": "10.1016/S0002-9440(10)61776-2",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "tissue": "SKIN",
+      "finding": "The controlled-tension mouse scar model begins quantified loading after granulation fills the wound at day 7 and measures applied stress in N/mm^2; it intentionally increases scar formation and does not provide a qualifying same-state myofibroblast trajectory or beneficial delayed retuning outcome.",
+      "doi": "10.1093/burnst/tkaa013",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "tissue": "SKIN",
+      "finding": "Stress-shielding polymer studies contain complementary but non-fusible evidence roots: red-Duroc experiments provide fibrotic-marker/scar outcomes but apply the device immediately after closure, while the human postoperative root begins around one week and shows durable scar improvement without major dehiscence/delayed healing but lacks same-state cellular and local tissue-mechanics trajectories.",
+      "doi": "10.1097/SLA.0b013e318220b159",
+      "root_integrity_warning": "PRECLINICAL_IMMEDIATE_AND_HUMAN_DELAYED_ROOTS_MUST_NOT_BE_MERGED",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "tissue": "SPINAL_CORD",
+      "finding": "A 2026 delayed NSC+hydrogel study applies the mechanical environment at 7 days post-SCI and establishes Piezo1-dependent stiffness sensitivity, but the causal endpoint is exogenous graft survival rather than endogenous scar-state resolution and the root lacks the required endogenous before/after lesion-mechanics trajectory.",
+      "doi": "10.1002/advs.202507160",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "tissue": "SPINAL_CORD",
+      "finding": "Immediate stiffness-tuned hydrogel studies causally alter axon regeneration and function, and chronic SCI stiffness can be measured by AFM, but delayed endogenous lesion retuning satisfying all criteria was not identified.",
+      "control_dois": ["10.1002/adfm.202517284", "10.1089/neu.2019.6540", "10.1371/journal.pone.0325798"],
+      "decision": "NO_STRICT_DELAYED_ROOT"
+    },
+    {
+      "tissue": "HEART",
+      "finding": "Yoshizumi et al. and Kadner et al. show that timing of mechanically supportive hydrogel delivery after MI changes ventricular remodeling/function, but neither root supplies the required same-arm endogenous scar-mechanics before/after measurement plus a state-specific fibroblast trajectory.",
+      "dois": ["10.1016/j.biomaterials.2015.12.002", "10.1016/j.biomaterials.2011.11.031"],
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "tissue": "HEART",
+      "finding": "Li et al. 2026 show a strong temporal myofibroblast-phase ADAM17 intervention with scar-stiffness biology and long-term function, but direct stiffness data arise from a genetic myofibroblast root while the delayed therapeutic arm is pharmacological; the roots are not fused and ADAM17 inhibition is not direct physical retuning under the frozen rule.",
+      "doi": "10.1093/cvr/cvaf256",
+      "decision": "NOT_ADMITTED"
+    },
+    {
+      "tissue": "HEART",
+      "finding": "Zhu et al. 2026 directly link collagen histaminylation to TGM2 crosslinking, scar Young's modulus, fibroblast-to-myofibroblast mechanotransduction and cardiac function. However, the histamine-releasing hydrogel is injected at the time of infarction induction, so the delayed-after-establishment criterion fails regardless of the strength of downstream mechanics.",
+      "doi": "10.1038/s41392-026-02721-5",
+      "decision": "NOT_ADMITTED_C1_FAIL"
+    }
+  ],
+  "anti_fusion_examples_confirmed": [
+    "Do not combine red-Duroc immediate stress-shielding histology with one-week-delayed human scar outcome.",
+    "Do not combine delayed pharmacological ADAM17 timing with stiffness measurements from the genetic myofibroblast knockdown root.",
+    "Do not combine independent post-MI stiffness natural-history papers with delayed hydrogel outcome papers to manufacture C3.",
+    "Do not combine SCI chronic AFM measurements with separate immediate or graft-focused hydrogel interventions to manufacture a delayed endogenous root."
+  ],
+  "nearest_root": {
+    "tissue": "LIVER",
+    "node": "LIVER-DELAYED-ECM-LOCK-REVERSAL-LOXL2-2017-v1.0",
+    "status": "FOUR_OF_FIVE_NOT_ADMITTED",
+    "missing": "qualifying primary organ-function/regenerative endpoint with repair-integrity criterion"
+  },
+  "next_exact_data_targets": [
+    "SKIN: one experiment that measures local wound tension/modulus immediately before and after delayed offloading, follows lineage-resolved alpha-SMA-positive repair cells, and reports final scar architecture/tensile integrity.",
+    "SPINAL_CORD: one experiment that measures lesion mechanics before delayed intervention, physically retunes the endogenous lesion after scar establishment, repeats mechanics, follows endogenous scar/glial state, and reports locomotor/sensory outcome.",
+    "HEART: one experiment that starts direct ECM/crosslink/mechanical retuning only after scar stabilization, measures scar modulus/crosslink state in that same intervention root, tracks lineage-resolved fibroblast state, and reports rupture/survival plus ventricular remodeling/function."
+  ],
+  "interpretation": "The absence of a 5/5 root is a valid result. The current evidence supports a mechanical-state gate and phase dependence, but does not yet establish a strict delayed MECHANICAL CLOCK under the no-heuristic admission rule."
+}
