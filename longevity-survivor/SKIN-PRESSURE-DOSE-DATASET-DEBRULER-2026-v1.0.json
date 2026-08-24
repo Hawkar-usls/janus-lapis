@@ -1,0 +1,66 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.dataset_control.v1",
+  "artifact_id": "SKIN-PRESSURE-DOSE-DATASET-DEBRULER-2026-v1.0",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "role": "OPEN_DATASET_PRESSURE_DOSE_CONTROL_NOT_COUPLING_PASS",
+  "tissue": "SKIN",
+  "paper": {
+    "title": "Low-fatigue, adjustable pressure garments at 10, 20 and 30 mm Hg reduce scar thickness and improve pliability",
+    "authors_short": "DeBruler et al.",
+    "journal": "PLOS ONE",
+    "published": "2026-01-20",
+    "doi": "10.1371/journal.pone.0327691",
+    "pmid": "41557666"
+  },
+  "open_dataset": {
+    "repository": "Dryad",
+    "doi": "10.5061/dryad.xsj3tx9s7",
+    "status": "PUBLICLY_ACCESSIBLE_DATASET_REPORTED_BY_ARTICLE",
+    "janus_value": "permits non-heuristic re-analysis of pressure dose, garment fatigue, scar trajectory and terminal biomechanical endpoints"
+  },
+  "experimental_root": {
+    "model": "red Duroc porcine burn-excise-autograft scars",
+    "groups_mmHg": [0, 10, 20, 30],
+    "n_per_group": 16,
+    "pressure_start": "7 days post-grafting immediately after dressing removal",
+    "pressure_control": "garments adjusted daily to restore target interface pressure",
+    "reported_daily_pressure_drop": {
+      "10_mmHg_percent": "13.6 +/- 17.1",
+      "20_mmHg_percent": "11.0 +/- 6.1",
+      "30_mmHg_percent": "13.1 +/- 2.8"
+    },
+    "histology_times": ["week 1", "week 6", "week 12"],
+    "terminal_biomechanics": "week 12 BTC-2000 scar stiffness, elasticity and laxity"
+  },
+  "mechanical_exit_coupling_audit": {
+    "protocol": "MECHANICAL-EXIT-COUPLING-GATE-2026-08-24-v0.1",
+    "criteria": {
+      "M1_ESTABLISHED_STATE": "NO",
+      "M2_DIRECT_PHYSICAL_RETUNING": "YES",
+      "M3_MECHANICS_TRAJECTORY": "NO",
+      "M4_EXIT_TRAJECTORY": "NO",
+      "M5_TISSUE_OUTCOME_AND_INTEGRITY": "YES"
+    },
+    "M1_reason": "Pressure begins at week 1, when histology reports minimal ECM deposition and a large dermal cell population; the required established scar/activated-repair state is not demonstrated before intervention.",
+    "M3_reason": "Interface pressure is longitudinally quantified, but scar-tissue biomechanical state is reported terminally at week 12 rather than as a qualifying pre-intervention plus post-intervention tissue-mechanics trajectory.",
+    "M4_reason": "The root does not measure lineage/state-resolved myofibroblast abundance, alpha-SMA with state identity, apoptosis, clearance or validated activated-cell shutdown.",
+    "decision": "NOT_ADMITTED_FOR_MECHANICAL_EXIT_COUPLING"
+  },
+  "dose_response_falsification_control": {
+    "finding": "All 10, 20 and 30 mmHg groups significantly improved terminal scar stiffness, elasticity and laxity versus controls, while the pressure-treated groups were statistically equivalent for those biomechanical endpoints; 30 mmHg showed stronger contraction prevention than 10 or 20 mmHg.",
+    "consequence": "Do not assume a monotonic scalar rule in which higher pressure necessarily produces proportionally better mechanical scar normalization across endpoints.",
+    "direction_prior_used": false
+  },
+  "frozen_boundaries": [
+    "Open raw/analysis data do not upgrade a causal gate when required biological measurements are absent.",
+    "Garment-skin interface pressure is not identical to scar tissue modulus.",
+    "The authors discuss prior myofibroblast-apoptosis literature, but those external observations are not measurements in this causal root and are not fused into M4.",
+    "A week-1 intervention in a developing graft scar is not reclassified as delayed treatment of an established scar.",
+    "No pressure threshold is inferred from group-level outcome equivalence."
+  ],
+  "next_exact_analysis": {
+    "dataset_task": "download and hash the Dryad dataset, identify the exact pressure/time/biomechanics tables, and test prespecified monotonic versus plateau dose-response models without selecting a preferred model from the observed result",
+    "coupling_task": "do not reopen M4 unless this same cohort contains an unindexed state-resolved myofibroblast/apoptosis dataset"
+  }
+}
