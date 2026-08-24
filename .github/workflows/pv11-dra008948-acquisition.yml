@@ -52,6 +52,16 @@ jobs:
           echo "$code" > pvg_bridge_inspection_exit_code.txt
           exit 0
 
+      - name: Inspect pinned author Figure S6B for exact identifier bridge
+        shell: bash
+        run: |
+          set +e
+          rm -rf author_s6b_bridge_inspection
+          python longevity-survivor/tools/inspect_author_s6b_bridge.py 2>&1 | tee author_s6b_bridge_inspection.log
+          code=${PIPESTATUS[0]}
+          echo "$code" > author_s6b_bridge_inspection_exit_code.txt
+          exit 0
+
       - name: Upload proof-carrying acquisition artifact
         if: always()
         uses: actions/upload-artifact@v4
@@ -61,12 +71,15 @@ jobs:
             dra008948_acquisition/
             pv_authors_tpm_inspection/
             pvg_bridge_inspection/
+            author_s6b_bridge_inspection/
             acquisition.log
             acquisition_exit_code.txt
             tpm_inspection.log
             tpm_inspection_exit_code.txt
             pvg_bridge_inspection.log
             pvg_bridge_inspection_exit_code.txt
+            author_s6b_bridge_inspection.log
+            author_s6b_bridge_inspection_exit_code.txt
           if-no-files-found: error
           retention-days: 7
 
@@ -76,9 +89,12 @@ jobs:
           acq="$(cat acquisition_exit_code.txt)"
           tpm="$(cat tpm_inspection_exit_code.txt)"
           bridge="$(cat pvg_bridge_inspection_exit_code.txt)"
+          s6b="$(cat author_s6b_bridge_inspection_exit_code.txt)"
           echo "acquisition_exit_code=$acq"
           echo "tpm_inspection_exit_code=$tpm"
           echo "pvg_bridge_inspection_exit_code=$bridge"
+          echo "author_s6b_bridge_inspection_exit_code=$s6b"
           test "$acq" = "0"
           test "$tpm" = "0"
           test "$bridge" = "0"
+          test "$s6b" = "0"
