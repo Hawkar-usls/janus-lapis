@@ -1,0 +1,60 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_exit.decoupling_control.v1",
+  "artifact_id": "HEART-MECHANICAL-EXIT-DECOUPLING-CONTROL-STEIER-2026-v1.0",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "role": "HYSTERESIS_OR_STATE_MEMORY_CONTROL_NOT_COUPLING_PASS",
+  "tissue": "HEART",
+  "publication": {
+    "title": "Multicellular signaling and partial recovery define reverse cardiac remodeling",
+    "authors_short": "Steier et al.",
+    "status": "PREPRINT",
+    "year": 2026,
+    "doi": "10.64898/2026.01.12.699040",
+    "peer_reviewed": false
+  },
+  "public_resources": {
+    "analysis_repository": "https://github.com/saezlab/heart_revremod_paper",
+    "code_status": "PUBLIC",
+    "data_statement": "repository states that bulk RNA-seq counts/metadata and processed snRNA-seq AnnData are publicly available at Zenodo",
+    "exact_zenodo_record": "NOT_RESOLVED_IN_THIS_PASS",
+    "boundary": "A public code repository and transcriptomic dataset statement do not substitute for a tissue-mechanics measurement."
+  },
+  "experimental_root": {
+    "model": "reversible murine pressure overload using O-ring aortic banding followed by de-banding",
+    "perturbation": "direct mechanical unloading by de-banding",
+    "phenotype": "pressure overload induces heart failure; unloading produces partial functional recovery with regression of fibrosis and cardiomyocyte hypertrophy",
+    "bulk_transcriptomics": "partial normalization of extracellular-matrix and metabolic pathways with persistent inflammatory and mitochondrial-dysfunction signatures",
+    "single_nucleus_transcriptomics": "cardiomyocytes and endothelial cells largely re-establish homeostatic transcriptional states while fibroblasts retain activated remodeling-associated programs"
+  },
+  "mechanical_exit_coupling_audit": {
+    "protocol": "MECHANICAL-EXIT-COUPLING-GATE-2026-08-24-v0.1",
+    "criteria": {
+      "M1_ESTABLISHED_STATE": "YES",
+      "M2_DIRECT_PHYSICAL_RETUNING": "YES",
+      "M3_MECHANICS_TRAJECTORY": "NO",
+      "M4_EXIT_TRAJECTORY": "NO",
+      "M5_TISSUE_OUTCOME_AND_INTEGRITY": "YES"
+    },
+    "M3_reason": "Current public evidence confirms imposed-load removal and phenotypic reverse remodeling but no qualifying same-root quantitative tissue-stiffness/force trajectory before and after unloading was identified in this pass.",
+    "M4_reason": "The key fibroblast result is persistence of activated transcriptional programs, not lineage-resolved disappearance, apoptosis, clearance or validated EXIT kinetics.",
+    "decision": "NOT_ADMITTED_FOR_MECHANICAL_EXIT_COUPLING"
+  },
+  "falsification_value": {
+    "observation": "Mechanical unloading and partial organ/ECM recovery do not force all cellular compartments back to a homeostatic state; fibroblasts can retain activated programs during recovery.",
+    "classification": "POTENTIAL_HYSTERESIS_OR_STATE_MEMORY_CONTROL",
+    "consequence": "Reject any deterministic rule MECHANICAL_RETUNING_IMPLIES_AUTOMATIC_FIBROBLAST_EXIT.",
+    "claim_ceiling": "This preprint supports cell-type-specific persistence after unloading in this model; it does not prove a universal fibroblast memory mechanism and does not establish the causal molecular basis of persistence."
+  },
+  "relation_to_existing_neff_root": {
+    "neff_2022": "HEART-MECHANICAL-CLOCK-STRICT-ROOT-NEFF-UNTAC-2022-v1.0",
+    "fusion": "FORBIDDEN",
+    "reason": "Neff 2022 supplies quantitative myocardial mechanics in a distinct TAC/unTAC experiment; Steier 2026 supplies transcriptomic cell-state resolution in a different experimental root. They cannot be combined to manufacture M3+M4 coupling."
+  },
+  "next_exact_tests": [
+    "resolve the exact Zenodo record and freeze dataset hashes/metadata if publicly accessible",
+    "inspect the preprint methods/source data for any same-root pressure, strain or myocardial stiffness measurement not surfaced in indexing",
+    "if no physical-state trajectory exists, retain this node only as a decoupling/hysteresis control",
+    "seek a future single-root unloading study combining serial myocardial mechanics with lineage-resolved fibroblast disappearance/apoptosis or state shutdown"
+  ]
+}
