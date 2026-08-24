@@ -1,0 +1,31 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_state_timing_gate.v0.1.1",
+  "artifact_id": "MECHANICAL-STATE-TIMING-GATE-2026-08-24-v0.1.1",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "supersedes": "MECHANICAL-STATE-TIMING-GATE-2026-08-24-v0.1",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "status": "OPEN_WITH_ONE_STRICT_5_OF_5_SKIN_ROOT",
+  "new_admitted_root": {
+    "tissue": "SKIN",
+    "node": "SKIN-MECHANICAL-CLOCK-STRICT-ROOT-KIM-PGT-2015-v1.0",
+    "doi": "10.1097/PRS.0000000000001507",
+    "intervention_start": "day 28 post-burn",
+    "physical_intervention": "quantified pressure garment therapy at approximately 10 mmHg",
+    "pre_intervention_state": "majority of wounds re-epithelialized; day-28 scar area, hardness, elasticity and morphology measured before treatment",
+    "post_intervention_trajectory": "serial scar area, hardness, elasticity and morphology through approximately day 78, with terminal collagen ultrastructure and tensile testing",
+    "integrity_outcome": "ultimate tensile strength approximately 1.3-fold higher with pressure therapy and no reported treatment-associated dehiscence or loss of repair integrity",
+    "decision": "ADMITTED_5_OF_5"
+  },
+  "cross_tissue_status": {
+    "strict_admitted_tissues": 1,
+    "required_tissues": 2,
+    "MECHANICAL_CLOCK_v0_2": "OPEN",
+    "next_required_event": "one independent 5/5 causal root, preferentially SPINAL_CORD or HEART"
+  },
+  "relation_to_exit_clock": {
+    "status": "PARALLEL_CLOCKS_NOT_YET_CAUSALLY_COUPLED",
+    "reason": "The strict skin root establishes delayed mechanical retuning of an established scar but does not contain lineage-resolved myofibroblast EXIT/apoptosis kinetics."
+  },
+  "frozen_boundary": "No rule was relaxed to admit the skin root. The same five conjunctive criteria and single-root integrity rule remain mandatory for every subsequent tissue."
+}
