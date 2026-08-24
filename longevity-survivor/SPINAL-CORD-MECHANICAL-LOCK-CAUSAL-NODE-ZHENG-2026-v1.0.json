@@ -1,0 +1,92 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_lock.spinal_cord.v1",
+  "artifact_id": "SPINAL-CORD-MECHANICAL-LOCK-CAUSAL-NODE-ZHENG-2026-v1.0",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "candidate": "NICHE/ECM_MECHANICAL_MATURATION_LOCK",
+  "tissue": "SPINAL_CORD",
+  "primary_paper": {
+    "title": "Mussel Inspired Hydrogel Promotes Axon Regeneration via Piezo1 Modulation and Cytoskeleton Dynamics in Synergy After Spinal Cord Injury",
+    "authors_short": "Zheng et al.",
+    "journal": "Advanced Functional Materials",
+    "first_published": "2025-11-12",
+    "issue": "36(22), 2026",
+    "doi": "10.1002/adfm.202517284"
+  },
+  "developmental_mechanics": {
+    "method": "atomic force microscopy of uninjured rat spinal cord across neonatal, young and adult stages",
+    "reported_direction": "progressive stiffening with age",
+    "paper_level_stiffness_mapping_Pa": {
+      "neonatal_like": 300,
+      "young_like": 500,
+      "adult_like": 700,
+      "injury_like_hydrogel_target": 1200,
+      "injured_lesion_8_weeks_approx": 1500
+    },
+    "interpretation": "The paper directly links a developmental rise in spinal-cord stiffness to the age axis on which axonal regenerative competence declines, but does not by itself prove that stiffness is the sole developmental cause of that decline."
+  },
+  "causal_in_vivo_intervention": {
+    "animal": "female Sprague-Dawley rat, approximately 6 weeks old",
+    "injury": "complete 1-mm T9 spinal-cord transection",
+    "groups": [
+      "no implant control",
+      "0.5% HAMA@CA",
+      "0.75% HAMA@CA",
+      "1.0% HAMA@CA",
+      "1.5% HAMA@CA"
+    ],
+    "n_per_group_per_timepoint": 5,
+    "hydrogel_family": "same catechol-modified methacrylated hyaluronic-acid platform with polymer concentration varied to tune stiffness",
+    "reported_storage_modulus_at_1Hz_Pa": [232.37, 393.10, 597.34, 1571.98],
+    "key_result": "the softer neonatal-like HAMA@CA condition reduced lesion-region elasticity toward approximately 300 Pa and produced smaller cavities, more axonal growth, myelination/synaptic structures and better functional recovery than stiffer/control conditions",
+    "timing": "implantation at the time of transection",
+    "delayed_reversal_arm": "NOT_PRESENT"
+  },
+  "mechanotransduction": {
+    "pathway": "Piezo1 -> RhoA -> MLC / actomyosin cytoskeleton",
+    "in_vitro_stiffness_response": "stiffer matrices increased Piezo1/RhoA/cytoskeletal restraint and reduced axon elongation; softer matrices increased branching/elongation",
+    "pharmacology": {
+      "Piezo1_inhibitor": "GsMTx-4",
+      "Piezo1_agonist": "Yoda1",
+      "result": "pharmacological manipulation shifted downstream RhoA/p-MLC/MLC2 in the predicted direction"
+    },
+    "in_vivo_status": "MECHANISTICALLY_CONSISTENT_BUT_NOT_FULL_PATHWAY_KNOCKOUT_CAUSAL_IN_VIVO"
+  },
+  "independent_spinal_cord_replication": {
+    "paper": "Biomaterial scaffold stiffness influences the foreign body reaction, tissue stiffness, angiogenesis and neuroregeneration in spinal cord injury",
+    "journal": "Bioactive Materials",
+    "doi": "10.1016/j.bioactmat.2024.12.006",
+    "model": "adult rat C5 lateral hemisection with stiffness-varied alginate anisotropic capillary hydrogel scaffolds",
+    "result": "scaffold stiffness changed host foreign-body reaction, YAP-associated mechanosensing, tissue mechanics, angiogenesis and axonal regrowth; mechanically matched/soft formulations were favored for integration/regrowth, although growth orientation showed trade-offs",
+    "role": "INDEPENDENT_CAUSAL_STIFFNESS_SUPPORT_WITHIN_SPINAL_CORD"
+  },
+  "directional_falsifier": {
+    "paper": "The influence of hydrogel stiffness on axonal regeneration after spinal cord injury",
+    "journal": "PLOS ONE",
+    "year": 2025,
+    "doi": "10.1371/journal.pone.0325798",
+    "finding": "15% GelMA produced better axonal extension and sensory functional recovery than 7.5% GelMA in that complete-transection model",
+    "meaning": "A universal monotonic rule SOFTER_IS_ALWAYS_MORE_REGENERATIVE is falsified; optimal mechanics are material-, scale-, geometry- and tissue-state-dependent."
+  },
+  "confound_audit": {
+    "stiffness_is_not_perfectly_isolated": true,
+    "reason": "HAMA@CA stiffness was tuned by changing polymer concentration; this can also affect polymer density, swelling, degradation, transport and adhesion even though chemistry and gross channel architecture were shared.",
+    "adhesion_is_part_of_primary_design": true,
+    "injury_treatment_is_immediate": true,
+    "not_an_EXIT_clock_experiment": true
+  },
+  "gate_verdict": {
+    "spinal_cord_mechanical_causality": "PASS_STRONG_WITH_MATERIAL_CONFOUNDER",
+    "developmental_stiffness_alignment": "PASS_MEASURED_ASSOCIATION_PLUS_ADULT_CAUSAL_RESCUE",
+    "mechanical_lock_support": "UPGRADE_SUPPORTIVE_TO_STRONG_CAUSAL_SUPPORT",
+    "universal_softness_rule": "FAIL",
+    "exit_clock_upgrade": "NO",
+    "reason": "Developmental spinal-cord stiffening is directly measured, adult lesion stiffening is measured, and mechanically retuning the injured niche changes regeneration and function. However, polymer concentration and adhesion remain coupled to stiffness and the intervention begins immediately after injury."
+  },
+  "next_killer_tests": [
+    "same-chemistry, same-architecture, same-adhesion scaffold series in which modulus is varied independently of polymer concentration",
+    "delayed softening or mechanical retuning initiated after the adult lesion/scar mechanical state is established",
+    "dense AFM plus axon-growth time series to determine whether mechanical retuning precedes the regeneration shift",
+    "in-vivo Piezo1-pathway necessity test under matched mechanical conditions"
+  ]
+}
