@@ -12,7 +12,7 @@ permissions:
 jobs:
   acquire:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Checkout exact PR head
         uses: actions/checkout@v4
@@ -28,8 +28,7 @@ jobs:
           set +e
           rm -rf dra008948_acquisition
           python longevity-survivor/tools/acquire_dra008948.py 2>&1 | tee acquisition.log
-          code=${PIPESTATUS[0]}
-          echo "$code" > acquisition_exit_code.txt
+          echo "${PIPESTATUS[0]}" > acquisition_exit_code.txt
           exit 0
 
       - name: Inspect pinned author-published RSEM TPM matrix
@@ -38,8 +37,7 @@ jobs:
           set +e
           rm -rf pv_authors_tpm_inspection
           python longevity-survivor/tools/inspect_pv_authors_tpm.py 2>&1 | tee tpm_inspection.log
-          code=${PIPESTATUS[0]}
-          echo "$code" > tpm_inspection_exit_code.txt
+          echo "${PIPESTATUS[0]}" > tpm_inspection_exit_code.txt
           exit 0
 
       - name: Inspect public PvG to g.t bridge candidates
@@ -48,8 +46,7 @@ jobs:
           set +e
           rm -rf pvg_bridge_inspection
           python longevity-survivor/tools/inspect_pvg_to_gt_bridge.py 2>&1 | tee pvg_bridge_inspection.log
-          code=${PIPESTATUS[0]}
-          echo "$code" > pvg_bridge_inspection_exit_code.txt
+          echo "${PIPESTATUS[0]}" > pvg_bridge_inspection_exit_code.txt
           exit 0
 
       - name: Inspect pinned author Figure S6B for exact identifier bridge
@@ -58,8 +55,16 @@ jobs:
           set +e
           rm -rf author_s6b_bridge_inspection
           python longevity-survivor/tools/inspect_author_s6b_bridge.py 2>&1 | tee author_s6b_bridge_inspection.log
-          code=${PIPESTATUS[0]}
-          echo "$code" > author_s6b_bridge_inspection_exit_code.txt
+          echo "${PIPESTATUS[0]}" > author_s6b_bridge_inspection_exit_code.txt
+          exit 0
+
+      - name: Inspect official PMC supplement for Pv0.9 to Pv5.2 bridge
+        shell: bash
+        run: |
+          set +e
+          rm -rf pv09_pv52_pmc_supplement
+          python longevity-survivor/tools/inspect_pv09_pv52_pmc_supplement.py 2>&1 | tee pmc_supplement_inspection.log
+          echo "${PIPESTATUS[0]}" > pmc_supplement_inspection_exit_code.txt
           exit 0
 
       - name: Upload proof-carrying acquisition artifact
@@ -72,6 +77,7 @@ jobs:
             pv_authors_tpm_inspection/
             pvg_bridge_inspection/
             author_s6b_bridge_inspection/
+            pv09_pv52_pmc_supplement/
             acquisition.log
             acquisition_exit_code.txt
             tpm_inspection.log
@@ -80,21 +86,15 @@ jobs:
             pvg_bridge_inspection_exit_code.txt
             author_s6b_bridge_inspection.log
             author_s6b_bridge_inspection_exit_code.txt
+            pmc_supplement_inspection.log
+            pmc_supplement_inspection_exit_code.txt
           if-no-files-found: error
           retention-days: 7
 
       - name: Enforce acquisition and inspection execution
         shell: bash
         run: |
-          acq="$(cat acquisition_exit_code.txt)"
-          tpm="$(cat tpm_inspection_exit_code.txt)"
-          bridge="$(cat pvg_bridge_inspection_exit_code.txt)"
-          s6b="$(cat author_s6b_bridge_inspection_exit_code.txt)"
-          echo "acquisition_exit_code=$acq"
-          echo "tpm_inspection_exit_code=$tpm"
-          echo "pvg_bridge_inspection_exit_code=$bridge"
-          echo "author_s6b_bridge_inspection_exit_code=$s6b"
-          test "$acq" = "0"
-          test "$tpm" = "0"
-          test "$bridge" = "0"
-          test "$s6b" = "0"
+          for f in acquisition_exit_code.txt tpm_inspection_exit_code.txt pvg_bridge_inspection_exit_code.txt author_s6b_bridge_inspection_exit_code.txt pmc_supplement_inspection_exit_code.txt; do
+            echo "$f=$(cat "$f")"
+            test "$(cat "$f")" = "0"
+          done
