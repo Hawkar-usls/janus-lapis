@@ -1,0 +1,94 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_state_timing_gate.v0.1",
+  "artifact_id": "MECHANICAL-STATE-TIMING-GATE-2026-08-24-v0.1",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "parent_gate": "P0_CROSS_TISSUE_CAUSAL_MECHANICAL_STATE_GATE",
+  "frozen_question": "After a repair/fibrotic state is already established, can delayed mechanical or ECM-stabilization retuning causally shift resolution/regeneration without disrupting necessary early repair?",
+  "strict_requirements": [
+    "delayed intervention begins after the relevant repair state is demonstrably established",
+    "mechanical/ECM state is directly perturbed, not merely a downstream transcriptional program",
+    "mechanical state is quantified before/after intervention by modulus, force, crosslinking or another explicit physical-state readout",
+    "same-state cellular trajectory or scar-resolution readout changes",
+    "structural or functional tissue outcome improves without evidence of destabilized early repair"
+  ],
+  "evidence_roots": [
+    {
+      "tissue": "LIVER",
+      "class": "DELAYED_ECM_STABILIZATION_UNLOCK",
+      "node": "LIVER-DELAYED-ECM-LOCK-REVERSAL-LOXL2-2017-v1.0",
+      "doi": "10.1136/gutjnl-2016-312473",
+      "timing": "anti-LOXL2 started after 6 weeks of already-established TAA fibrosis and also tested during recovery",
+      "mechanical_physical_readout": "collagen crosslinking / insoluble collagen fraction and fibrotic septal architecture",
+      "outcome": "less matrix stabilization/bridging and accelerated early fibrosis reversal",
+      "status": "PARTIAL_STRICT_PASS",
+      "missing": ["direct longitudinal tissue modulus", "primary organ-function endpoint"]
+    },
+    {
+      "tissue": "SPINAL_CORD",
+      "class": "DELAYED_GRAFT_MECHANICAL_ENVIRONMENT_CONTROL",
+      "paper": "Mechanical Environment Afforded by Engineered Hydrogel Critically Regulates Survival of Neural Stem Cells Transplanted in the Injured Spinal Cord via Piezo1-Mediated Mechanotransduction",
+      "doi": "10.1002/advs.202507160",
+      "timing": "NSC+hydrogel transplantation at 7 days after contusive SCI",
+      "mechanical_perturbation": "10%, 13% and 16% I-5 hydrogels; 16% approximately fivefold stiffer than 10% and approximately 9.3 kPa at 37 C",
+      "mechanistic_test": "Piezo1 pharmacology/siRNA in vitro and CRISPR/Cas9 Piezo1 editing in transplanted NSCs in vivo",
+      "outcome": "stiffer hydrogel substantially increased graft survival",
+      "status": "DELAYED_MECHANICAL_POSITIVE_CONTROL_NOT_CORE_RESOLUTION_PASS",
+      "why_not_core": "the principal endpoint is survival of an exogenous NSC graft, not endogenous scar-state EXIT/resolution or whole-tissue functional recovery"
+    },
+    {
+      "tissue": "HEART",
+      "class": "TIMING_FALSIFIER_NONMECHANICAL",
+      "paper": "Early and Delayed Tranilast Treatment Reduces Pathological Fibrosis Following Myocardial Infarction",
+      "doi": "10.1016/j.hlc.2012.08.054",
+      "timing_comparison": "24 h-day 7 versus day 7-day 28 after MI",
+      "result": "early antifibrotic treatment exacerbated infarct expansion, whereas delayed day-7 treatment reduced later fibrosis/remodeling without detriment to infarct healing",
+      "status": "STRONG_TIMING_CONTROL_NOT_MECHANICAL"
+    },
+    {
+      "tissue": "HEART",
+      "class": "MATRIX_STABILIZATION_TO_CELL_STATE_CONTROL",
+      "paper": "Specialized fibroblast differentiated states underlie scar formation in the infarcted mouse heart",
+      "status": "CAUSAL_ECM_MATURATION_CONTROL_NOT_DELAYED_GATE_PASS",
+      "result": "LOX inhibition with BAPN disrupted collagen maturation and prolonged alpha-SMA-positive myofibroblast state to day 14, supporting that matrix maturation can be required for normal fibroblast-state transition/EXIT",
+      "boundary": "do not infer that matrix softening or crosslink inhibition is always beneficial"
+    },
+    {
+      "tissue": "LUNG",
+      "class": "EXTERNAL_DELAYED_CROSSLINKING_CONTROL",
+      "paper": "Lysyl oxidase promotes bleomycin-induced lung fibrosis through modulating inflammation",
+      "timing": "BAPN from day 7 to 21 after bleomycin challenge, a therapeutic/fibrogenic-stage window",
+      "result": "reduced fibrosis, TGF-beta signaling and myofibroblast accumulation, but less strongly than preventive treatment",
+      "status": "SUPPORTIVE_EXTERNAL_CONTROL_NOT_COUNTED_IN_CORE_PRIORITY_TISSUES"
+    },
+    {
+      "tissue": "SKIN",
+      "class": "DOWNSTREAM_DELAYED_STATE_CONTROL",
+      "evidence": "Trps1 induction during POD7-17 initial-scarring interval can still reduce scar phenotype and support regenerative features",
+      "status": "SUPPORTIVE_TIMING_CONTROL_NOT_DIRECT_MECHANICAL_RETUNING"
+    }
+  ],
+  "cross_evidence_interpretation": {
+    "mechanical_effect_direction": "NON_MONOTONIC_AND_CONTEXT_DEPENDENT",
+    "examples": [
+      "neonatal-like softening can favor endogenous axon regrowth in one SCI scaffold system",
+      "a stiffer delayed I-5 hydrogel improves transplanted NSC survival in another SCI system",
+      "cardiac collagen maturation can facilitate exit from the alpha-SMA myofibroblast state",
+      "late inhibition of pathological collagen crosslink stabilization can accelerate reversal of established liver fibrosis"
+    ],
+    "best_supported_rule": "The relevant variable is whether the mechanical/ECM state is appropriate for the current repair phase and cell identity, not whether the tissue is simply softer or stiffer."
+  },
+  "gate_decision": {
+    "status": "OPEN_WITH_ONE_STRONG_DELAYED_ECM_UNLOCK_AND_MULTIPLE_TIMING_CONTROLS",
+    "strict_gate_pass": false,
+    "reason": "No two independent tissues yet satisfy all frozen requirements simultaneously. Liver provides the strongest delayed established-matrix reversal experiment but lacks direct longitudinal modulus/function; delayed spinal-cord mechanics is causal for graft survival rather than endogenous resolution.",
+    "claim_ceiling": "Delayed manipulation of ECM/mechanical state can remain biologically effective after injury states are established, and its effect depends on phase and target-cell identity. A universal delayed mechanical-resolution window is not yet established."
+  },
+  "next_killer_targets": [
+    "skin: delayed offloading/mechanical buffering or mechanotransduction intervention started after alpha-SMA-positive myofibroblasts are established, with tissue mechanics and closure-strength readouts",
+    "spinal cord: delayed mechanical retuning of the endogenous lesion after scar/lesion stiffness is measured, without requiring an exogenous graft",
+    "heart: delayed post-stabilization ECM/crosslink or mechanotransduction perturbation paired with scar modulus, activated-fibroblast state and rupture/remodeling endpoints",
+    "liver: delayed LOXL2/crosslink perturbation repeated with longitudinal AFM/rheology and liver-function/regenerative readouts"
+  ],
+  "upgrade_rule": "v0.2 requires two independent tissues satisfying every strict requirement; at least one must be HEART, SKIN, SPINAL_CORD or TENDON."
+}
