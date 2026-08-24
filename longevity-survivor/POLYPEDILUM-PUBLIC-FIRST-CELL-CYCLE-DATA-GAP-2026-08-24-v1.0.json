@@ -1,0 +1,46 @@
+{
+  "schema": "janus.lapis.longevity_survivor.polypedilum_public_first_cell_cycle_data_gap.v1",
+  "artifact_id": "POLYPEDILUM-PUBLIC-FIRST-CELL-CYCLE-DATA-GAP-2026-08-24-v1.0",
+  "status": "PUBLIC_DIRECT_FIRST_CELL_CYCLE_ENTRY_GAP_OPEN",
+  "search_date": "2026-08-24",
+  "scope": "Publicly discoverable Polypedilum vanderplanki / Pv11 literature relevant to direct post-rehydration cell-cycle entry from 0-96 h.",
+  "result": "Within the public sources located in this search, no sufficiently dense matched direct EdU/BrdU, S-phase, mitotic-index, phospho-H3, or flow-cytometric cell-cycle-state time series was identified that establishes the first post-rehydration cell-cycle event in Polypedilum/Pv11.",
+  "epistemic_boundary": [
+    "NOT_IDENTIFIED_IN_THIS_SEARCH_NE_DOES_NOT_EXIST",
+    "BULK_CELL_COUNT_NE_FIRST_S_PHASE",
+    "TRANSCRIPTOMIC_CELL_CYCLE_SIGNATURE_NE_DIRECT_CELL_CYCLE_ENTRY",
+    "PRIVATE_PRELIMINARY_INFORMATION_NE_PUBLIC_EVIDENCE",
+    "MISSING_DATA_STAYS_MISSING"
+  ],
+  "what_public_sources_do_provide": {
+    "behavioral_function": "rapid whole-larva recovery on approximately an hour scale",
+    "damage_state": "non-equivalent lesion/assay clocks including hours-scale oxidative-damage recovery and slower fat-body alkaline-comet fragmentation recovery",
+    "bulk_proliferation": "multi-day Pv11/Pv11-derived living-cell-count series demonstrating later population expansion",
+    "survival_vs_growth": "Hsf perturbation separates post-rehydration survival from the later proliferation-rate observable",
+    "transcriptomics": "public rehydration transcriptomes at R3/R24 and R3/R12/R24/R72 provide molecular-state proxies but not direct cell-cycle events"
+  },
+  "public_machine_readable_routes": [
+    {
+      "accession": "DRA007433",
+      "type": "Pv11 CAGE-seq",
+      "rehydration_points": ["R3", "R24"],
+      "admission": "REPAIR_AND_RECOVERY_TRANSCRIPT_PROXY_ONLY"
+    },
+    {
+      "accession": "DRA008948",
+      "type": "Pv11 RNA-seq",
+      "rehydration_points": ["R3", "R12", "R24", "R72"],
+      "admission": "MULTI_TIMEPOINT_TRANSCRIPT_PROXY_ONLY"
+    },
+    {
+      "accession": "SRP070984",
+      "type": "Pv11 RNA-seq associated with Hsf/desiccation-rehydration study",
+      "admission": "PERTURBATION_TRANSCRIPTOMIC_CONTEXT_ONLY"
+    }
+  ],
+  "next_action": {
+    "computational": "Preregister and run a cell-cycle transcript-proxy analysis on public rehydration transcriptomes without treating it as direct S-phase/mitosis evidence.",
+    "decisive_empirical": "Obtain or generate matched direct 0-96 h cell-cycle-entry data with lesion-class-specific damage state, viability, founder number and bulk growth in the same system."
+  },
+  "promotion_ceiling": "PUBLIC_DATA_GAP_AND_PROXY_ROUTE_DEFINED_NO_CELL_CYCLE_ONSET_CLAIM"
+}
