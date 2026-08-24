@@ -22,7 +22,21 @@ The project uses historical alchemical archetypes as labels for a computational 
 - archetype comparisons;
 - gate/rejection records;
 - machine-readable summaries;
-- external-review briefs.
+- external-review briefs;
+- evidence-gated biological resolution / repair-state EXIT tracking;
+- cross-domain computational analogies kept explicitly separate from biological mechanism claims.
+
+## Resolution / EXIT CLOCK lane
+
+A current research lane asks a narrower biological question: when a useful temporary wound/repair state is created, what controls its successful exit back toward stable tissue rather than persistence into scar-like states?
+
+The lane is evidence-gated. For example, `data/resolution_gate/SKIN_CAUSAL_EXIT_NODE_FMOD_2025.json` records causal-support evidence for accelerated myofibroblast clearance with explicit temporal caveats rather than promoting a general regeneration claim.
+
+A computational bridge is preserved at:
+
+- [`data/resolution_gate/ODONTOFORGE_TRANSIENT_STATE_BRIDGE_2026-08-25.json`](data/resolution_gate/ODONTOFORGE_TRANSIENT_STATE_BRIDGE_2026-08-25.json)
+
+The bridge maps transient-state bookkeeping onto the OdontoForge search architecture so quantities such as state lifetime, successful EXIT, conflict, and regeneration/replacement can be measured exactly in software. This is a hypothesis-generation analogy only: OdontoForge behavior is not biological evidence, and biological repair dynamics are not complexity-theory evidence.
 
 ## Boundary
 
@@ -34,6 +48,8 @@ VALIDATED_MATERIAL = NOT_ESTABLISHED
 LABORATORY_EFFICACY = NOT_ESTABLISHED
 SAFE_SYNTHESIS_PROCEDURE = NOT_PROVIDED
 HAZARDOUS_SYNTHESIS_INSTRUCTIONS = FORBIDDEN
+ODONTOFORGE_IS_BIOLOGICAL_MECHANISM = NOT_CLAIMED
+P_VS_NP = OPEN
 ```
 
 Internal names such as `LAPIS_DEMIURGE` or `BIRTH_GATE` are search/archetype labels, not claims about physics, chemistry, or metaphysical agency.
