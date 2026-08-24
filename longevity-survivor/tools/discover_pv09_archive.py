@@ -2,8 +2,8 @@
 """Discover archival/public acquisition routes for the original PvScaf0.9/0.91
 P. vanderplanki assembly without treating raw PRJDB1558 reads as the assembly.
 
-This is a discovery/provenance probe. It does not infer or fabricate filenames and it
-does not run trajectory arithmetic. Every HTTP attempt is recorded.
+Discovery is deliberately bounded: finite public endpoints, short network deadlines,
+and no filename guessing promoted as evidence. Every attempt is recorded.
 """
 from __future__ import annotations
 
@@ -14,11 +14,14 @@ import os
 import re
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 OUT = Path(os.environ.get("JANUS_PV09_DISCOVERY_OUT", "pv09_archive_discovery")).resolve()
 OUT.mkdir(parents=True, exist_ok=True)
 UA = "JANUS-LONGEVITY-SURVIVOR/1.0 PvScaf0.9 archival-discovery"
+NETWORK_TIMEOUT = 12
+MAX_DISCOVERED_PROBES = 30
 
 ROOTS = [
     "http://bertone.nises-f.affrc.go.jp/midgebase/",
@@ -42,7 +45,7 @@ def sha256(b: bytes) -> str:
     return hashlib.sha256(b).hexdigest()
 
 
-def get(url: str, timeout: int = 45) -> tuple[bytes, str, str]:
+def get(url: str, timeout: int = NETWORK_TIMEOUT) -> tuple[bytes, str, str]:
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read(), r.geturl(), r.headers.get("Content-Type", "")
@@ -61,7 +64,7 @@ def attempt(url: str, label: str) -> dict:
             "sha256": sha256(b),
             "prefix_hex": b[:16].hex(),
         }
-        if b[:4] in (b">PvS", b">pvs") or b.lstrip().startswith(b">"):
+        if b.lstrip().startswith(b">"):
             rec["payload_hint"] = "FASTA_LIKE"
         elif b[:2] == b"\x1f\x8b":
             rec["payload_hint"] = "GZIP_LIKE"
@@ -85,7 +88,7 @@ def cdx_query(target: str) -> dict:
         "collapse": "urlkey",
         "from": "2013",
         "to": "2023",
-        "limit": "10000",
+        "limit": "5000",
     }
     url = "https://web.archive.org/cdx/search/cdx?" + urllib.parse.urlencode(params)
     rec = attempt(url, "WAYBACK_CDX")
@@ -135,8 +138,10 @@ def extract_links(base: str, body: bytes) -> list[str]:
 
 def main() -> int:
     report = {
-        "artifact_id": "JANUS-PV09-ARCHIVE-DISCOVERY-V1",
+        "artifact_id": "JANUS-PV09-ARCHIVE-DISCOVERY-V1_1",
         "status": "DISCOVERY_ONLY",
+        "network_timeout_seconds": NETWORK_TIMEOUT,
+        "max_discovered_candidate_probes": MAX_DISCOVERED_PROBES,
         "forbidden_substitute": "PRJDB1558_RAW_READ_REASSEMBLY_AS_PvScaf0.9",
         "direct_attempts": [],
         "wayback_availability": [],
@@ -146,48 +151,42 @@ def main() -> int:
     }
 
     discovered = set()
-    for root in ROOTS:
-        r = attempt(root, "LIVE_ORIGINAL")
-        b = r.pop("_bytes", None)
-        report["direct_attempts"].append(r)
-        if b is not None and r.get("payload_hint") == "HTML":
-            for u in extract_links(r.get("final_url", root), b):
-                discovered.add(u)
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        futs = {ex.submit(attempt, root, "LIVE_ORIGINAL"): root for root in ROOTS}
+        for fut in as_completed(futs):
+            root = futs[fut]
+            r = fut.result(); b = r.pop("_bytes", None)
+            report["direct_attempts"].append(r)
+            if b is not None and r.get("payload_hint") == "HTML":
+                discovered.update(extract_links(r.get("final_url", root), b))
 
     for target in ARCHIVE_TARGETS:
         av = availability(target)
         report["wayback_availability"].append(av)
         snap = (((av.get("json") or {}).get("archived_snapshots") or {}).get("closest") or {}).get("url")
         if snap:
-            r = attempt(snap, "WAYBACK_CLOSEST_PAGE")
-            b = r.pop("_bytes", None)
+            r = attempt(snap, "WAYBACK_CLOSEST_PAGE"); b = r.pop("_bytes", None)
             report["direct_attempts"].append(r)
             if b is not None:
-                for u in extract_links(r.get("final_url", snap), b):
-                    discovered.add(u)
+                discovered.update(extract_links(r.get("final_url", snap), b))
         report["wayback_cdx"].append(cdx_query(target.rstrip("/") + "/*"))
 
-    # Probe only discovered links with a sequence/archive signature. This is finite and evidence-driven.
-    strong_discovered = sorted(u for u in discovered if SEQ_EXT_RE.search(u) or "download" in u.lower() or "genome" in u.lower())
+    strong_discovered = sorted(u for u in discovered if SEQ_EXT_RE.search(u) or "download" in u.lower() or "genome" in u.lower())[:MAX_DISCOVERED_PROBES]
     report["discovered_links"] = sorted(discovered)
-    for u in strong_discovered[:100]:
-        r = attempt(u, "DISCOVERED_CANDIDATE")
-        b = r.pop("_bytes", None)
-        if b is not None and r.get("payload_hint") in {"FASTA_LIKE", "GZIP_LIKE", "ZIP_LIKE"}:
-            # Preserve acquired candidate bytes only; provenance/admission happens later.
-            name = f"candidate_{len(report['candidate_payloads'])+1:03d}.bin"
-            (OUT / name).write_bytes(b)
-            r["saved_as"] = name
-        report["candidate_payloads"].append(r)
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        futs = {ex.submit(attempt, u, "DISCOVERED_CANDIDATE"): u for u in strong_discovered}
+        for fut in as_completed(futs):
+            r = fut.result(); b = r.pop("_bytes", None)
+            if b is not None and r.get("payload_hint") in {"FASTA_LIKE", "GZIP_LIKE", "ZIP_LIKE"}:
+                name = f"candidate_{len(report['candidate_payloads'])+1:03d}.bin"
+                (OUT / name).write_bytes(b); r["saved_as"] = name
+            report["candidate_payloads"].append(r)
 
-    # Flatten CDX strong candidates for easy review; no automatic admission.
     cdx_strong = []
     for block in report["wayback_cdx"]:
-        for row in block.get("strong_sequence_rows", []):
-            cdx_strong.append(row)
+        cdx_strong.extend(block.get("strong_sequence_rows", []))
     report["cdx_strong_sequence_candidates"] = cdx_strong
     report["old_assembly_admission"] = "NOT_ADMITTED_DISCOVERY_REQUIRES_CONTENT_VALIDATION"
-
     (OUT / "archive_discovery.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print("PV09_ARCHIVE_DISCOVERY", json.dumps({
         "direct_passes": sum(x.get("status") == "PASS" for x in report["direct_attempts"]),
