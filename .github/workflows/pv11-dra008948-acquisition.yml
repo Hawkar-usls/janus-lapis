@@ -12,7 +12,7 @@ permissions:
 jobs:
   acquire:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
       - name: Checkout exact PR head
         uses: actions/checkout@v4
@@ -58,6 +58,15 @@ jobs:
           echo "${PIPESTATUS[0]}" > author_s6b_bridge_inspection_exit_code.txt
           exit 0
 
+      - name: Discover archival PvScaf0.9 assembly routes
+        shell: bash
+        run: |
+          set +e
+          rm -rf pv09_archive_discovery
+          python longevity-survivor/tools/discover_pv09_archive.py 2>&1 | tee pv09_archive_discovery.log
+          echo "${PIPESTATUS[0]}" > pv09_archive_discovery_exit_code.txt
+          exit 0
+
       - name: Inspect official PMC supplement for Pv0.9 to Pv5.2 bridge
         shell: bash
         run: |
@@ -77,6 +86,7 @@ jobs:
             pv_authors_tpm_inspection/
             pvg_bridge_inspection/
             author_s6b_bridge_inspection/
+            pv09_archive_discovery/
             pv09_pv52_pmc_supplement/
             acquisition.log
             acquisition_exit_code.txt
@@ -86,15 +96,18 @@ jobs:
             pvg_bridge_inspection_exit_code.txt
             author_s6b_bridge_inspection.log
             author_s6b_bridge_inspection_exit_code.txt
+            pv09_archive_discovery.log
+            pv09_archive_discovery_exit_code.txt
             pmc_supplement_inspection.log
             pmc_supplement_inspection_exit_code.txt
           if-no-files-found: error
           retention-days: 7
 
-      - name: Enforce acquisition and inspection execution
+      - name: Enforce core acquisition and archive-discovery execution
         shell: bash
         run: |
-          for f in acquisition_exit_code.txt tpm_inspection_exit_code.txt pvg_bridge_inspection_exit_code.txt author_s6b_bridge_inspection_exit_code.txt pmc_supplement_inspection_exit_code.txt; do
+          for f in acquisition_exit_code.txt tpm_inspection_exit_code.txt pvg_bridge_inspection_exit_code.txt author_s6b_bridge_inspection_exit_code.txt pv09_archive_discovery_exit_code.txt; do
             echo "$f=$(cat "$f")"
             test "$(cat "$f")" = "0"
           done
+          echo "pmc_supplement_inspection_exit_code=$(cat pmc_supplement_inspection_exit_code.txt) (informational; stale external PMC delivery route is not a core-gate failure)"
