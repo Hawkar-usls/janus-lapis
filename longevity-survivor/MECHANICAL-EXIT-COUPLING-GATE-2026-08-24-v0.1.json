@@ -1,0 +1,63 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_exit_coupling_gate.v0.1",
+  "artifact_id": "MECHANICAL-EXIT-COUPLING-GATE-2026-08-24-v0.1",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "parent": "JANUS-MECHANICAL-CLOCK-v0.2-2026-08-24",
+  "status": "OPEN_NO_SINGLE_ROOT_COUPLING_ADMITTED",
+  "admission_mode": "BINARY_CONJUNCTIVE_NO_HEURISTIC",
+  "frozen_requirements": {
+    "M1_ESTABLISHED_STATE": "The activated repair/scar state is directly demonstrated before delayed intervention.",
+    "M2_DIRECT_PHYSICAL_RETUNING": "A delayed physical/mechanical intervention is directly applied and quantified.",
+    "M3_MECHANICS_TRAJECTORY": "The tissue/scar mechanical state is quantitatively measured before/at intervention and after intervention in the same causal root.",
+    "M4_EXIT_TRAJECTORY": "The same root measures lineage/state-resolved activated repair cells before/at intervention and after intervention, including disappearance, apoptosis, clearance, or validated state shutdown. Alpha-SMA must exclude vascular/smooth-muscle contamination or be supported by lineage/state identity.",
+    "M5_TISSUE_OUTCOME_AND_INTEGRITY": "The same root measures structural/function outcome and demonstrates preserved repair integrity."
+  },
+  "decision_logic": "ADMITTED only if M1=M2=M3=M4=M5=YES in one causal experimental root; NO or UNKNOWN on any item = NOT_ADMITTED.",
+  "current_roots": [
+    {
+      "id": "KIM_PGT_2015_SKIN",
+      "doi": "10.1097/PRS.0000000000001507",
+      "root": "SKIN-MECHANICAL-CLOCK-STRICT-ROOT-KIM-PGT-2015-v1.0",
+      "criteria": {"M1":"YES","M2":"YES","M3":"YES","M4":"NO","M5":"YES"},
+      "decision": "NOT_ADMITTED_FOR_COUPLING",
+      "missing": "lineage/state-resolved myofibroblast EXIT/apoptosis trajectory"
+    },
+    {
+      "id": "LI_TSANG_PRESSURE_2015_HUMAN_SKIN",
+      "paper": "A histological study on the effect of pressure therapy on the activities of myofibroblasts and keratinocytes in hypertrophic scar tissues after burn",
+      "doi": "10.1016/j.burns.2014.11.017",
+      "model": "human established post-burn hypertrophic scars; biopsies before pressure therapy and at 1 and 3 months",
+      "criteria": {"M1":"YES","M2":"YES","M3":"NO","M4":"YES","M5":"YES"},
+      "observed_exit_signal": "alpha-SMA immunoreactivity decreased by 1 month; myofibroblast population decreased and dermal apoptotic index increased by 3 months; myofibroblast abundance negatively correlated with apoptotic index",
+      "outcome": "scar thickness and redness improved during pressure therapy",
+      "decision": "NOT_ADMITTED_FOR_COUPLING",
+      "missing": "same-root quantitative tissue/scar mechanical-state trajectory before and after pressure intervention"
+    },
+    {
+      "id": "COSTA_PRESSURE_1999_HUMAN_SKIN",
+      "paper": "Mechanical forces induce scar remodeling. Study in non-pressure-treated versus pressure-treated hypertrophic scars",
+      "pmid": "10550323",
+      "criteria": {"M1":"YES","M2":"YES","M3":"NO","M4":"YES","M5":"UNKNOWN"},
+      "observed_exit_signal": "alpha-SMA-positive myofibroblasts were abundant in non-pressure-treated regions and almost absent in pressure-treated regions; fibroblastic apoptosis morphology was observed",
+      "decision": "NOT_ADMITTED_FOR_COUPLING",
+      "missing": "quantitative mechanical-state trajectory, fixed longitudinal timing and qualifying tissue outcome/integrity within the same root"
+    }
+  ],
+  "anti_fusion_rule": {
+    "forbidden": "Do not combine Kim 2015 quantitative mechanics with Li-Tsang 2015 or Costa 1999 myofibroblast/apoptosis measurements to manufacture a coupling root.",
+    "reason": "They are independent cohorts, protocols and causal roots."
+  },
+  "best_next_experiment": {
+    "model": "delayed pressure/offloading of established red-Duroc scar",
+    "minimum_sampling": [
+      "pre-intervention scar mechanics and lineage/state-resolved myofibroblast abundance",
+      "early post-retuning mechanics plus myofibroblast apoptosis/clearance",
+      "intermediate scar mechanics plus activated-cell persistence",
+      "late scar architecture, elasticity/strength and integrity"
+    ],
+    "preferred_state_readout": "alpha-SMA with vessel exclusion plus a fibroblast-lineage/state marker and cleaved-caspase-3 or another validated clearance/apoptosis readout",
+    "goal": "test whether a measured mechanical-state shift temporally precedes and causally changes activated-repair-cell EXIT in the same tissue."
+  },
+  "claim_ceiling": "Mechanical Clock and EXIT Clock are independently causally supported. Their direct coupling remains unproven until one single causal root satisfies all five coupling requirements."
+}
