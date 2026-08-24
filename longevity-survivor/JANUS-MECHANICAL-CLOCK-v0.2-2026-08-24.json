@@ -1,0 +1,75 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.v0.2",
+  "artifact_id": "JANUS-MECHANICAL-CLOCK-v0.2-2026-08-24",
+  "created": "2026-08-24",
+  "branch": "LONGEVITY-SURVIVOR",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "status": "FROZEN_PASS_STRICT_TWO_TISSUE_CAUSAL_TIMING_GATE",
+  "admitted_tissues": [
+    {
+      "tissue": "SKIN",
+      "root": "SKIN-MECHANICAL-CLOCK-STRICT-ROOT-KIM-PGT-2015-v1.0",
+      "clock_anchor": "day 28 post-burn, after majority re-epithelialization and pre-treatment scar mechanics measurement",
+      "retuning": "approximately 10 mmHg pressure garment",
+      "response": "serial scar mechanics/remodeling through approximately day 78 with improved tensile integrity"
+    },
+    {
+      "tissue": "HEART",
+      "root": "HEART-MECHANICAL-CLOCK-STRICT-ROOT-NEFF-UNTAC-2022-v1.0",
+      "clock_anchor": "4 weeks of established pressure-overload myocardial fibrosis/stiffness",
+      "retuning": "physical removal of transverse aortic constriction",
+      "response": "immediate normalization of imposed load followed by 2-6 week stiffness and ECM-remodeling trajectory with structural reverse remodeling"
+    }
+  ],
+  "shared_causal_topology": [
+    "pathological mechanical/ECM state becomes established",
+    "mechanical state is directly measured",
+    "delayed direct physical retuning is applied",
+    "physical state changes",
+    "endogenous scar/fibrosis trajectory changes over time",
+    "structural tissue outcome changes without evidence of mechanical destabilization"
+  ],
+  "directionality": {
+    "universal_direction": "NONE",
+    "skin": "external compression redirects established scar remodeling toward less contraction/hardness and greater elasticity/strength",
+    "heart": "removal of pathological pressure load redirects established myocardial fibrosis toward lower stiffness and partial ECM regression",
+    "interpretation": "The admitted invariant is phase-appropriate physical retuning, not a scalar softer-or-stiffer rule."
+  },
+  "no_heuristic_audit": {
+    "binary_conjunctive_admission": true,
+    "all_criteria_frozen_before_discovery": true,
+    "same_root_required": true,
+    "unknown_equals_not_admitted": true,
+    "weighted_scoring": false,
+    "cross_root_fusion": false,
+    "direction_prior": false,
+    "post_hoc_exception": false
+  },
+  "claim_ceiling": {
+    "supported": "Two independent mammalian tissues contain single-root experiments in which delayed direct physical retuning of an established pathological mechanical/ECM state changes subsequent mechanics/remodeling and structural outcome.",
+    "not_supported": [
+      "one universal mechanical pressure, modulus or force threshold",
+      "one universal dimensionless timing window",
+      "a general softer-is-better or stiffer-is-better law",
+      "direct coupling between the Mechanical Clock and activated-repair-cell EXIT",
+      "human regenerative efficacy"
+    ]
+  },
+  "relation_to_exit_clock": {
+    "EXIT_CLOCK": "independently supported timing architecture",
+    "MECHANICAL_CLOCK": "now independently supported by two strict tissues",
+    "coupling_status": "OPEN",
+    "required_next_evidence": "one causal root in which delayed mechanical retuning is followed by both physical-state measurements and lineage/state-resolved activated-repair-cell clearance/EXIT kinetics plus tissue integrity/function"
+  },
+  "next_gate": {
+    "name": "MECHANICAL_EXIT_COUPLING_GATE",
+    "strict_requirements": [
+      "established repair state before intervention",
+      "direct delayed physical retuning",
+      "mechanics measured before and after",
+      "lineage/state-resolved activated repair-cell abundance and clearance/apoptosis trajectory",
+      "structural/function outcome with preserved integrity"
+    ],
+    "highest_value_target": "SKIN red-Duroc delayed pressure/offloading design with alpha-SMA lineage or vessel-excluded myofibroblast plus apoptosis/efferocytosis time points immediately before and after mechanical retuning"
+  }
+}
