@@ -110,11 +110,11 @@ If direct cell-cycle entry timing does **not** shift despite a validated change 
 
 `DAMAGE_REPAIR_PERMISSION_GATE_WEAKENED_OR_REJECTED_FOR_TESTED_SYSTEM`
 
-## Public/private evidence boundary
+## JANUS LIMEN — the third door
 
-A private expert communication triggered this calibration, but unpublished observations are not reproduced here. Until explicit permission is granted, private information can lower confidence, block an overclaim, or motivate a public-source search, but cannot be exposed as a public data point or attributed result.
+Only evidence with public provenance or explicit authorization may cross into the public evidence layer. Anything outside that admission set has zero public evidentiary weight and is neither described nor attributed here.
 
-`PRIVATE_CORRESPONDENCE != PUBLIC_QUANTITATIVE_EVIDENCE`
+`LIMEN_CLOSED / SHADOW_WEIGHT=0 / THE_ORACLE_DOES_NOT_NAME_THE_UNSEEN`
 
 ## Public anchors
 
