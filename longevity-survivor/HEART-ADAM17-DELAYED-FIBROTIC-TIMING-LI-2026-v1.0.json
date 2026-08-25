@@ -1,0 +1,49 @@
+{
+  "schema_id": "janus.longevity_survivor.heart.adam17_delayed_fibrotic_timing.v1",
+  "artifact_id": "HEART-ADAM17-DELAYED-FIBROTIC-TIMING-LI-2026-v1.0",
+  "created": "2026-08-25",
+  "branch": "LONGEVITY-SURVIVOR",
+  "tissue": "HEART",
+  "source": {
+    "citation": "Li Y, Al Rimon R, Wang F, et al. Temporal inhibition of ADAM17 in fibroblasts reduces stiffness and promotes vascularization following myocardial infarction. Cardiovascular Research. 2026;122(1):112-131.",
+    "doi": "10.1093/cvr/cvaf256",
+    "pmid": "41524432",
+    "status": "PEER_REVIEWED"
+  },
+  "timing_experiment": {
+    "early_regimen": "PZ0416 started 2 days before MI and continued through 4 days after MI",
+    "delayed_regimen": "PZ0416 started day 3 after MI and continued for 4 days, days 3-7",
+    "early_result": "No material improvement in survival, infarct size, LV dilation or dysfunction in the early/pre-MI regimen.",
+    "delayed_result": "Treatment beginning after the initial scar-formation phase reduced infarct expansion and improved LV dilation/dysfunction through 4 weeks.",
+    "timing_interpretation": "The same molecular target has phase-dependent effects: initial ADAM17 activity participates in necessary early scar formation, whereas persistent activity becomes a later adverse-remodeling target."
+  },
+  "mechanistic_context": {
+    "myofibroblast_genetic_arm": "Postn-lineage Adam17 knockdown after MI reduced infarct expansion and ECM/fibrotic markers.",
+    "mechanical_measurement": "In a separate myofibroblast genetic arm, infarct stiffness was lower with Adam17 loss (reported instantaneous modulus approximately 23.68 kPa versus 33.7 kPa in controls at 1 week).",
+    "pathway": "ADAM17 -> EGFR activity -> YAP nuclear mechanotransduction/pro-fibrotic program; reduced ADAM17 was associated with reduced stiffness and greater vascularization.",
+    "root_integrity_warning": "The delayed pharmacological arm and the direct stiffness measurement belong to distinct experimental arms and must not be fused into a synthetic strict mechanical 5/5 root."
+  },
+  "janus_classification": {
+    "temporary_wound_to_persistent_scar_gate": "STRONG_CAUSAL_TIMING_SUPPORT_IN_HEART",
+    "exit_clock": "SUPPORTIVE_TIMING_NOT_DIRECT_CELLULAR_EXIT",
+    "mechanical_state_timing_gate": "NOT_ADMITTED",
+    "reason": "The delayed intervention is molecular, not direct physical retuning; direct tissue stiffness measurement is reported in a separate genetic arm rather than the delayed pharmacological root."
+  },
+  "strict_5_of_5_screen": {
+    "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+    "C1_DELAYED_AFTER_ESTABLISHMENT": "SUPPORTIVE_YES_FOR_TIMING_BUT_NOT_SUFFICIENT_TO_RESCUE_ROOT",
+    "C2_DIRECT_PHYSICAL_RETUNING": "NO",
+    "C3_PHYSICAL_STATE_MEASURED": "NO_IN_THE_DELAYED_PHARMACOLOGICAL_ROOT",
+    "C4_SAME_STATE_TRAJECTORY": "UNKNOWN_OR_INCOMPLETE_IN_DELAYED_ROOT",
+    "C5_TISSUE_OUTCOME_WITH_INTEGRITY": "YES_FOR_DELAYED_FUNCTIONAL_OUTCOME",
+    "decision": "NOT_ADMITTED"
+  },
+  "falsification_value": "The lack of benefit from the pre-MI/very-early regimen argues against a simple TARGET_INHIBITION_AT_ANY_TIME_IS_BENEFICIAL model and supports phase-specific intervention logic.",
+  "claim_ceiling": [
+    "DELAYED_MOLECULAR_TIMING_SUPPORT_NE_DIRECT_MECHANICAL_RETUNING",
+    "REDUCED_STIFFNESS_IN_GENETIC_ARM_NE_STIFFNESS_MEASURED_IN_DELAYED_DRUG_ARM",
+    "FUNCTIONAL_BENEFIT_NE_DIRECT_MYOFIBROBLAST_EXIT_MEASUREMENT",
+    "MOUSE_MI_NE_HUMAN_EFFICACY"
+  ],
+  "next_action": "Search HEART/SPINAL_CORD for one single experimental root with delayed direct physical retuning, contemporaneous tissue-mechanics measurement, endogenous repair-state trajectory and preserved structural integrity."
+}
