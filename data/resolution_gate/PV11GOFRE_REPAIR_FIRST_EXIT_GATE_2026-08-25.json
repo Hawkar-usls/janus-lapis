@@ -1,0 +1,56 @@
+{
+  "schema_id": "janus.lapis.pv11gofre.gate.v1",
+  "artifact_id": "PV11GOFRE_REPAIR_FIRST_EXIT_GATE_2026-08-25",
+  "created": "2026-08-25",
+  "status": "ACTIVE_PUBLIC_EVIDENCE_HYPOTHESIS_HARNESS",
+  "name": "Pv11Gofre",
+  "derived_from": [
+    "Janus-Fundamentum/tools/OdontoForge_PNP_EXP.py",
+    "janus-lapis/data/resolution_gate/ODONTOFORGE_TRANSIENT_STATE_BRIDGE_2026-08-25.json"
+  ],
+  "question": "Does Pv11 recovery show a reproducible repair-first trajectory before directly measured cell-cycle restart?",
+  "operator_cycle": [
+    "REHYDRATE_ENTER_RECOVERY",
+    "ACCUMULATE_REPAIR_AND_RECOVERY_ACTIVITY",
+    "TEST_GENOME_INTEGRITY_AND_CELL_CYCLE_COMPETENCE",
+    "CRYSTALLIZE_STABLE_RECOVERED_STATE_IF_SUPPORTED",
+    "RELEASE_CELL_CYCLE_ONLY_IF_DIRECTLY_MEASURED",
+    "REPAIR_OR_REPLACE_FAILED_STATE",
+    "PRESERVE_TIMEPOINT_REPLICATE_PROVENANCE"
+  ],
+  "public_evidence": {
+    "Yamada2018_SciRep": {
+      "doi": "10.1038/s41598-018-36124-6",
+      "R3": ["Pv.07646_RAD16_like upregulated; RT-qPCR support"],
+      "R24": ["Pv.10801_XPA_like upregulated", "Pv.01957_CCNH_like upregulated"]
+    },
+    "Yamada2020": {
+      "doi": "10.1371/journal.pone.0230218",
+      "accession": "DRA008948",
+      "timepoints": ["T0", "T12", "T24", "T36", "T48", "R0", "R3", "R12", "R24", "R72"],
+      "replication": "biological_triplicate"
+    }
+  },
+  "frozen_module_panel": {
+    "DNA_REPAIR": ["Pv.07646_RAD16_like", "Pv.10801_XPA_like", "Pv.01957_CCNH_like", "RAD51_family", "XRCC_family", "LIG4"],
+    "REPLICATION_LICENSING": ["ORC1-6", "CDC6", "CDT1", "MCM2-7"],
+    "S_PHASE": ["PCNA", "DNA_polymerases", "RPA", "replication_coupled_histones"],
+    "G1_S": ["E2F", "Cyclin_E", "CDK2"],
+    "G2_M": ["Cyclin_A", "Cyclin_B", "CDK1", "CDC25"],
+    "MITOSIS": ["AURORA", "PLK", "BUB", "MAD", "spindle_genes"]
+  },
+  "evidence_policy": {
+    "fixture": "public_only",
+    "unpublished_observations": "excluded_until_explicit_permission",
+    "population_growth_is_not_first_S_phase": true,
+    "single_DEG_is_not_cell_cycle_release": true
+  },
+  "initial_expected_gate": "REPAIR_FIRST_PRECURSOR_SUPPORTED_CELL_CYCLE_GATE_OPEN",
+  "promotion_requires": [
+    "DRA008948 run-to-condition manifest",
+    "expression matrix with provenance and SHA-256",
+    "frozen-panel trajectory analysis",
+    "direct public first-S-phase measurement",
+    "prospective perturbation for a causal-release claim"
+  ]
+}
