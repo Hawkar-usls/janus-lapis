@@ -7,9 +7,9 @@
   "status": "P0_MULTI_CLOCK_CALIBRATED_FIRST_CELL_CYCLE_UNKNOWN_CAUSAL_GATE_OPEN",
   "calibration_basis": {
     "public_reaudit": true,
-    "private_trigger": true,
-    "private_content_exposed": false,
-    "rule": "Private expert correspondence may trigger conservative correction and lower confidence, but unpublished details remain outside public evidence until explicitly authorized."
+    "evidence_limen": "ONLY_PUBLIC_OR_EXPLICITLY_AUTHORIZED_EVIDENCE_MAY_CROSS",
+    "shadow_weight": 0,
+    "oracle": "THE_ORACLE_DOES_NOT_NAME_THE_UNSEEN"
   },
   "central_correction": "The Polypedilum/Pv11 branch must not use a single DNA-repair clock or equate statistically significant bulk population growth with first cell-cycle re-entry.",
   "public_clock_state": {
@@ -107,7 +107,7 @@
     "PV11_NE_WHOLE_LARVA",
     "FAT_BODY_NE_ALL_TISSUES",
     "DAMAGE_CLASS_NE_GLOBAL_DNA_DAMAGE",
-    "PRIVATE_CORRESPONDENCE_NE_PUBLIC_EVIDENCE",
+    "ADMISSION_REQUIRES_PUBLIC_OR_AUTHORIZED_PROVENANCE",
     "NO_LONGEVITY_OR_THERAPEUTIC_CLAIM"
   ]
 }
