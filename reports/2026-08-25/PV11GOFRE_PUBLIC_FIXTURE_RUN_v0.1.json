@@ -1,0 +1,114 @@
+{
+  "observations": [
+    {
+      "evidence_type": "published_protocol",
+      "feature": "anhydrobiosis",
+      "hours_after_rehydration": 0.0,
+      "layer": "state",
+      "note": "R0 is the desiccated state before rehydration in the published RNA-seq time course.",
+      "public": true,
+      "source_id": "Yamada2020_DRA008948",
+      "state": "AMETABOLIC_BASELINE",
+      "timepoint": "R0"
+    },
+    {
+      "evidence_type": "CAGE_seq_plus_RT_qPCR",
+      "feature": "Pv.07646_RAD16_like",
+      "hours_after_rehydration": 3.0,
+      "layer": "DNA_REPAIR",
+      "note": "Pv.07646 is strongly induced at R3 and has RAD16-like domain similarity; authors propose a DNA-repair role.",
+      "public": true,
+      "source_id": "Yamada2018_SciRep",
+      "state": "UPREGULATED",
+      "timepoint": "R3"
+    },
+    {
+      "evidence_type": "CAGE_seq_DEG",
+      "feature": "Pv.10801_XPA_like",
+      "hours_after_rehydration": 24.0,
+      "layer": "DNA_REPAIR",
+      "note": "XPA-like Pv.10801 is significantly upregulated in R24 versus D10d.",
+      "public": true,
+      "source_id": "Yamada2018_SciRep",
+      "state": "UPREGULATED",
+      "timepoint": "R24"
+    },
+    {
+      "evidence_type": "CAGE_seq_DEG",
+      "feature": "Pv.01957_CCNH_like",
+      "hours_after_rehydration": 24.0,
+      "layer": "DNA_REPAIR",
+      "note": "CCNH-like Pv.01957 is significantly upregulated in R24 versus D10d.",
+      "public": true,
+      "source_id": "Yamada2018_SciRep",
+      "state": "UPREGULATED",
+      "timepoint": "R24"
+    },
+    {
+      "evidence_type": "RNA_seq_accession",
+      "feature": "DRA008948",
+      "hours_after_rehydration": 72.0,
+      "layer": "TIMECOURSE",
+      "note": "Published Pv11 series: T0,T12,T24,T36,T48,R0,R3,R12,R24,R72, biological triplicate.",
+      "public": true,
+      "source_id": "DRA008948",
+      "state": "AVAILABLE_TRIPLICATE_SERIES",
+      "timepoint": "R0_R72"
+    },
+    {
+      "evidence_type": "published_cell_counts",
+      "feature": "population_cell_count",
+      "hours_after_rehydration": 24.0,
+      "layer": "PROLIFERATION",
+      "note": "Population proliferation was assessed after rehydration on a day-scale; this is not a first-S-phase measurement.",
+      "public": true,
+      "source_id": "Mazin2018_PNAS_Pv11_assay",
+      "state": "MEASURED_DAY_SCALE",
+      "timepoint": "D1_D7"
+    }
+  ],
+  "result": {
+    "causal_cell_cycle_release_proven": false,
+    "earliest_repair_evidence_h": 3.0,
+    "engine": "Pv11Gofre",
+    "first_direct_population_proliferation_h": 24.0,
+    "first_direct_s_phase_h": null,
+    "fixture_sha256": "ed3dbf29df68c862907d5655b995e7aaa3f7711583dbb7155d8c809734025969",
+    "forbidden_inference_triggered": false,
+    "gate_status": "REPAIR_FIRST_PRECURSOR_SUPPORTED_CELL_CYCLE_GATE_OPEN",
+    "latest_repair_evidence_h": 24.0,
+    "missing_evidence": [
+      "direct public first-S-phase measurement after rehydration",
+      "raw DRA008948 run-to-condition manifest + expression matrix imported into this engine",
+      "prospective perturbation showing repair-state manipulation shifts cell-cycle restart"
+    ],
+    "notes": [
+      "CRYSTALLIZE is bookkeeping for a supported stable state, not literal mineralization.",
+      "Population proliferation timing must not be substituted for first-S-phase timing.",
+      "No unpublished observation is present in the public fixture.",
+      "The next decisive run requires DRA008948 bytes and a frozen repair/licensing/S-phase/mitosis panel."
+    ],
+    "odonto_cycle": [
+      "ENTER_TRANSIENT_STATE",
+      "GROW_OR_ACCUMULATE_STRUCTURE",
+      "TEST_LOCAL_CONSISTENCY_OR_VIABILITY",
+      "CRYSTALLIZE_IF_VERIFIED",
+      "EXIT_IF_TERMINAL",
+      "REGENERATE_OR_REPLACE_IF_FAILED",
+      "PRESERVE_LINEAGE_AND_COST"
+    ],
+    "public_only": true,
+    "pv11_cycle": [
+      "REHYDRATE_ENTER_RECOVERY",
+      "ACCUMULATE_REPAIR_AND_RECOVERY_ACTIVITY",
+      "TEST_GENOME_INTEGRITY_AND_CELL_CYCLE_COMPETENCE",
+      "CRYSTALLIZE_STABLE_RECOVERED_STATE_IF_SUPPORTED",
+      "RELEASE_CELL_CYCLE_ONLY_IF_DIRECTLY_MEASURED",
+      "REPAIR_OR_REPLACE_FAILED_STATE",
+      "PRESERVE_TIMEPOINT_REPLICATE_PROVENANCE"
+    ],
+    "repair_first_precursor_supported": true,
+    "timecourse_r0_r72_available": true,
+    "version": "0.1.0-pv11gofre-public-evidence-gate"
+  }
+}
