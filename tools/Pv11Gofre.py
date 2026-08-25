@@ -60,7 +60,8 @@ class GateResult:
     earliest_repair_evidence_h: Optional[float]
     latest_repair_evidence_h: Optional[float]
     first_direct_s_phase_h: Optional[float]
-    first_direct_population_proliferation_h: Optional[float]
+    earliest_population_assay_time_h: Optional[float]
+    proliferation_onset_h: Optional[float]
     timecourse_r0_r72_available: bool
     repair_first_precursor_supported: bool
     causal_cell_cycle_release_proven: bool
@@ -151,7 +152,7 @@ def analyse(observations: List[Observation]) -> GateResult:
     earliest_repair = min(repair_times) if repair_times else None
     latest_repair = max(repair_times) if repair_times else None
     first_s = min(s_phase_times) if s_phase_times else None
-    first_prolif = min(proliferation_times) if proliferation_times else None
+    first_prolif_assay = min(proliferation_times) if proliferation_times else None
 
     precursor = bool(repair_times and timecourse)
     causal = bool(first_s is not None and earliest_repair is not None and earliest_repair < first_s)
@@ -184,7 +185,8 @@ def analyse(observations: List[Observation]) -> GateResult:
         earliest_repair_evidence_h=earliest_repair,
         latest_repair_evidence_h=latest_repair,
         first_direct_s_phase_h=first_s,
-        first_direct_population_proliferation_h=first_prolif,
+        earliest_population_assay_time_h=first_prolif_assay,
+        proliferation_onset_h=None,
         timecourse_r0_r72_available=timecourse,
         repair_first_precursor_supported=precursor,
         causal_cell_cycle_release_proven=False,
@@ -212,6 +214,8 @@ def selftest() -> None:
     assert r.earliest_repair_evidence_h == 3.0
     assert r.latest_repair_evidence_h == 24.0
     assert r.first_direct_s_phase_h is None
+    assert r.earliest_population_assay_time_h == 24.0
+    assert r.proliferation_onset_h is None
     assert r.timecourse_r0_r72_available
     assert r.repair_first_precursor_supported
     assert not r.causal_cell_cycle_release_proven
