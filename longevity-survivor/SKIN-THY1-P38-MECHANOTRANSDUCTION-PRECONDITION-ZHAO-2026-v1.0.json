@@ -1,0 +1,60 @@
+{
+  "schema_id": "janus.longevity_survivor.skin.thy1_p38_mechanotransduction.v1",
+  "artifact_id": "SKIN-THY1-P38-MECHANOTRANSDUCTION-PRECONDITION-ZHAO-2026-v1.0",
+  "created": "2026-08-25",
+  "branch": "LONGEVITY-SURVIVOR",
+  "tissue": "SKIN",
+  "source": {
+    "citation": "Zhao H-r, Wang F-c, Yue J, et al. Targeting the Thy-1 mechanotransduction regulator rescues regenerative wound healing and induces hair follicle neogenesis under high tension. Cellular and Molecular Life Sciences. 2026.",
+    "doi": "10.1007/s00018-026-06401-z",
+    "publication_date": "2026-08-24",
+    "status": "PEER_REVIEWED_ARTICLE_IN_PRESS_OPEN_ACCESS"
+  },
+  "causal_route": {
+    "compact": "MECHANICAL_TENSION -> THY1 -> p38MAPK -> TGF_BETA -> ALPHA_SMA + COLLAGEN_I_III -> HYPERTROPHIC_SCAR",
+    "intervention": "local rAAV-mediated Thy-1 knockdown or overexpression",
+    "in_vivo_support": "Thy-1 knockdown under high-tension conditions reduced scar area, improved collagen organization, lowered p38MAPK phosphorylation, TGF-beta, alpha-SMA, Collagen I and Collagen III, and shifted healing toward appendage-containing regeneration.",
+    "orthogonal_pathway_test": "In vitro, p38MAPK inhibitor SB203580 attenuated the pro-fibrotic downstream phenotype driven by Thy-1 overexpression.",
+    "adapter_boundary": "The precise molecular adaptor linking GPI-anchored Thy-1 to p38MAPK remains unresolved; the route is supported at pathway-dependence level, not as a fully mapped direct molecular chain."
+  },
+  "timing": {
+    "rAAV_start": "21 days before wounding",
+    "wound_day": 0,
+    "tension_device_installation": "day 4 post-operation after suture removal",
+    "tension_schedule": "device expanded 2 mm every other day for 14 consecutive days",
+    "wound_followup_days": [0, 3, 6, 9, 12, 15, 30],
+    "classification": "PRECONDITIONING_ONLY_NOT_DELAYED_RESCUE",
+    "author_stated_limitation": "The authors explicitly describe the three-week pre-wound rAAV schedule as a preconditioning strategy and call for future therapeutic-window studies."
+  },
+  "outcomes": {
+    "scar": "reduced area and flatter/softer gross scar phenotype with more orderly collagen organization",
+    "regeneration": "de novo hair follicles and sebaceous glands in the Thy-1 knockdown condition at late follow-up",
+    "cell_state": "reduced alpha-SMA-associated myofibroblast program",
+    "molecular": ["p-p38MAPK_down", "TGF_BETA_down", "ALPHA_SMA_down", "COLLAGEN_I_down", "COLLAGEN_III_down"]
+  },
+  "janus_classification": {
+    "skin_causal_mechanotransduction_support": "STRONG",
+    "independent_skin_route": true,
+    "relation_to_existing_skin_mechanics": "SECOND_DISTINCT_SKIN_MECHANOTRANSDUCTION_ROUTE_ADJACENT_TO_YAP_LINKED_EVIDENCE",
+    "mechanical_state_timing_gate": "NOT_ADMITTED",
+    "exit_clock": "NO_UPGRADE",
+    "reason": "The intervention precedes injury by three weeks and is molecular rather than a delayed direct physical retuning of an established repair state."
+  },
+  "strict_5_of_5_screen": {
+    "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+    "C1_DELAYED_AFTER_ESTABLISHMENT": "NO",
+    "C2_DIRECT_PHYSICAL_RETUNING": "NO",
+    "C3_PHYSICAL_STATE_MEASURED": "NO_FOR_DELAYED_RETUNING_ROOT",
+    "C4_SAME_STATE_TRAJECTORY": "PARTIAL_SUPPORT_BUT_NOT_RELEVANT_AFTER_C1_C2_FAIL",
+    "C5_TISSUE_OUTCOME_WITH_INTEGRITY": "SUPPORTIVE",
+    "decision": "NOT_ADMITTED"
+  },
+  "claim_ceiling": [
+    "PRECONDITIONING_NE_DELAYED_RESCUE",
+    "THY1_PATHWAY_PERTURBATION_NE_DIRECT_PHYSICAL_RETUNING",
+    "MOUSE_SKIN_NE_HUMAN_THERAPY",
+    "SECOND_SKIN_ROUTE_NE_NEW_INDEPENDENT_TISSUE",
+    "PATHWAY_DEPENDENCE_NE_FULLY_MAPPED_DIRECT_ADAPTOR_CHAIN"
+  ],
+  "next_action": "Search for post-establishment intervention in an independent tissue; do not promote this study into the delayed EXIT CLOCK."
+}
