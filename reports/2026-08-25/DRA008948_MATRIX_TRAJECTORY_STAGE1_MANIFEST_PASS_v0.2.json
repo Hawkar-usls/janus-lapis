@@ -1,0 +1,40 @@
+{
+  "result": {
+    "conditions": {
+      "R0": {"experiments": ["DRX181496", "DRX181497", "DRX181498"], "replicates": ["Pv11 R0 rep1", "Pv11 R0 rep2", "Pv11 R0 rep3"], "runs": ["DRR191041", "DRR191042", "DRR191043"], "samples": ["DRS123462", "DRS123463", "DRS123464"]},
+      "R3": {"experiments": ["DRX181499", "DRX181500", "DRX181501"], "replicates": ["Pv11 R3 rep1", "Pv11 R3 rep2", "Pv11 R3 rep3"], "runs": ["DRR191044", "DRR191045", "DRR191046"], "samples": ["DRS123465", "DRS123466", "DRS123467"]},
+      "R12": {"experiments": ["DRX181502", "DRX181503", "DRX181504"], "replicates": ["Pv11 R12 rep1", "Pv11 R12 rep2", "Pv11 R12 rep3"], "runs": ["DRR191047", "DRR191048", "DRR191049"], "samples": ["DRS123468", "DRS123469", "DRS123470"]},
+      "R24": {"experiments": ["DRX181505", "DRX181506", "DRX181507"], "replicates": ["Pv11 R24 rep1", "Pv11 R24 rep2", "Pv11 R24 rep3"], "runs": ["DRR191050", "DRR191051", "DRR191052"], "samples": ["DRS123471", "DRS123472", "DRS123473"]},
+      "R72": {"experiments": ["DRX181508", "DRX181509", "DRX181510"], "replicates": ["Pv11 R72 rep1", "Pv11 R72 rep2", "Pv11 R72 rep3"], "runs": ["DRR191053", "DRR191054", "DRR191055"], "samples": ["DRS123474", "DRS123475", "DRS123476"]}
+    },
+    "engine": "Pv11Gofre",
+    "exact_triplicate_manifest": true,
+    "explicit_metadata_binding": true,
+    "gate_status": "MANIFEST_PASS_BYTE_PROVENANCE_PASS_MATRIX_BYTES_REQUIRED",
+    "ledger_sha256": "d26a05c7c4358c8647af25cb0b6bc6aa57f42eae15b618002ee7aa9cdd5534bf",
+    "manifest_rows": 30,
+    "manifest_sha256": "70a0f723dcb65b05153eab960e5475a7cc1a1b6c6d5c786389b94111bfe482c1",
+    "matrix_bytes_supplied": false,
+    "matrix_schema_validated": false,
+    "matrix_sha256": null,
+    "missing_evidence": ["accessible numerical expression-matrix bytes"],
+    "notes": [
+      "S1 Data is recorded as a DEG workbook; it is not promoted to a trajectory matrix without schema inspection.",
+      "The exact run-to-condition manifest is a provenance gate, not an expression result.",
+      "No private/unpublished observation is used by this gate.",
+      "No repair->cell-cycle temporal ordering is claimed until numerical trajectories are available."
+    ],
+    "recovery_rows": 15,
+    "s1_degs_byte_record_present": true,
+    "s1_degs_bytes": 4502625,
+    "s1_degs_sha256": "319279299f1778210c1aafc3452e3b1db185dd348093af0dcaebcd27171d5478",
+    "trajectory_run_permitted": false,
+    "version": "0.2.0-pv11gofre-manifest-matrix-gate"
+  },
+  "execution": {
+    "command": "Pv11Gofre.py manifest-gate --manifest pv11_manifest_compact.csv --ledger pv11_hash_ledger.csv",
+    "selftest": "PASS",
+    "engine_source_sha256_at_run": "8a07ff2361f391aa0f92714d9efcc9bef317d88e7eed6884ec51cf3a372fcf96",
+    "report_sha256_at_run": "d5f36585d850bbee90372c5170c206ea990fc868fd0abaf68cd960129e396d5f"
+  }
+}
