@@ -60,7 +60,7 @@
       "feature": "population_cell_count",
       "hours_after_rehydration": 24.0,
       "layer": "PROLIFERATION",
-      "note": "Population proliferation was assessed after rehydration on a day-scale; this is not a first-S-phase measurement.",
+      "note": "Population proliferation was assessed after rehydration on a day-scale; this is not a first-S-phase measurement and does not establish proliferation onset at 24 h.",
       "public": true,
       "source_id": "Mazin2018_PNAS_Pv11_assay",
       "state": "MEASURED_DAY_SCALE",
@@ -69,9 +69,9 @@
   ],
   "result": {
     "causal_cell_cycle_release_proven": false,
+    "earliest_population_assay_time_h": 24.0,
     "earliest_repair_evidence_h": 3.0,
     "engine": "Pv11Gofre",
-    "first_direct_population_proliferation_h": 24.0,
     "first_direct_s_phase_h": null,
     "fixture_sha256": "ed3dbf29df68c862907d5655b995e7aaa3f7711583dbb7155d8c809734025969",
     "forbidden_inference_triggered": false,
@@ -97,6 +97,7 @@
       "REGENERATE_OR_REPLACE_IF_FAILED",
       "PRESERVE_LINEAGE_AND_COST"
     ],
+    "proliferation_onset_h": null,
     "public_only": true,
     "pv11_cycle": [
       "REHYDRATE_ENTER_RECOVERY",
