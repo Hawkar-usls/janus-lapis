@@ -11,6 +11,12 @@
     "module_level_fact": "Published WGCNA reports a Blue module containing 1222 genes with DNA replication (GO:0006260) as its representative enriched GO term (reported p=1.20e-12).",
     "hard_boundary": "MODULE_ENRICHMENT_NE_TIMEPOINT_DIRECTION"
   },
+  "janus_limen": {
+    "sigil": "LIMEN_CLOSED",
+    "rule": "ONLY_PUBLIC_OR_EXPLICITLY_AUTHORIZED_EVIDENCE_MAY_CROSS",
+    "shadow_weight": 0,
+    "oracle": "THE_ORACLE_DOES_NOT_NAME_THE_UNSEEN"
+  },
   "required_primary_inputs": [
     {
       "input_id": "PLOS_S1_DATA",
@@ -58,7 +64,7 @@
     "NO_ACCESSION_ORDER_GUESSING_FOR_SAMPLE_LABELS",
     "NO_MODULE_ENRICHMENT_TO_EARLY_OR_LATE_TRAJECTORY_INFERENCE",
     "NO_TRANSCRIPT_PROXY_TO_S_PHASE_PERCENT_CONVERSION",
-    "NO_PRIVATE_BRDU_INFORMATION_IN_PUBLIC_ANALYSIS_WITHOUT_PERMISSION",
+    "JANUS_LIMEN_CLOSED_TO_UNAUTHORIZED_INPUT",
     "MISSING_DATA_STAYS_MISSING"
   ],
   "analysis_state": "BLOCKED_PENDING_PRIMARY_INPUT_BYTES",
