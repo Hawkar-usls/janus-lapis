@@ -1,0 +1,45 @@
+{
+  "schema_id": "janus.longevity_survivor.tendon.mechanical_gating.v1",
+  "artifact_id": "TENDON-MECHANICAL-GATING-HUSSIEN-2026-v1.0",
+  "created": "2026-08-25",
+  "branch": "LONGEVITY-SURVIVOR",
+  "tissue": "TENDON",
+  "source": {
+    "citation": "Hussien AA, Knell R, Wunderli SL, et al. Mechanical gating of tendon fibrogenic transcription in systemic sclerosis. Nature Communications. 2026;17:3893.",
+    "doi": "10.1038/s41467-026-70395-2",
+    "publication_date": "2026-03-13",
+    "version_of_record": "2026-04-29",
+    "public_data": ["GEO:GSE319654", "Zenodo:18455078", "article source-data files"]
+  },
+  "experimental_root": {
+    "system": "3D collagen tendon-like constructs containing tendon-derived stromal cells",
+    "physical_intervention": "compliant versus rigid cantilever boundary conditions vary static matrix tension while holding bulk collagen material properties constant",
+    "mechanical_measurement": "online post-deflection/traction-force readout over hours to days",
+    "causal_observation": "rigid/high-tension boundaries increased cellular traction and promoted alpha-SMA-associated myofibroblast phenoconversion relative to compliant boundaries",
+    "important_nonmonotonic_result": "high tension increased alpha-SMA but decreased Col1a1/Col3a1 transcription and tenogenic markers in the reductionist construct; a simple MORE_TENSION_EQUALS_MORE_COLLAGEN_TRANSCRIPTION rule is rejected.",
+    "immune_override": "macrophage co-culture can override tension-dependent suppression of matrix-gene expression, showing that mechanics is not an isolated universal master variable."
+  },
+  "janus_classification": {
+    "tendon_mechanotransduction_causality": "STRONG_IN_REDUCTIONIST_3D_SYSTEM",
+    "in_vivo_tendon_repair_causality": "NOT_ESTABLISHED_BY_THIS_ROOT",
+    "mechanical_state_timing_gate": "NOT_ADMITTED",
+    "exit_clock": "NO_UPGRADE",
+    "reason": "Mechanical state is imposed from construct formation rather than retuned after an established endogenous repair/fibrotic state, and there is no delayed in-vivo tissue repair/integrity outcome."
+  },
+  "strict_5_of_5_screen": {
+    "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+    "C1_DELAYED_AFTER_ESTABLISHMENT": "NO",
+    "C2_DIRECT_PHYSICAL_RETUNING": "YES_FOR_3D_CONSTRUCT",
+    "C3_PHYSICAL_STATE_MEASURED": "YES_FOR_CONSTRUCT_TENSION",
+    "C4_SAME_STATE_TRAJECTORY": "YES_FOR_IN_VITRO_STROMAL_STATE",
+    "C5_TISSUE_OUTCOME_WITH_INTEGRITY": "NO_FOR_IN_VIVO_TENDON_REPAIR",
+    "decision": "NOT_ADMITTED"
+  },
+  "claim_ceiling": [
+    "3D_CONSTRUCT_CAUSALITY_NE_IN_VIVO_TENDON_HEALING",
+    "STATIC_BOUNDARY_COMPARISON_NE_DELAYED_RETUNING",
+    "ALPHA_SMA_SHIFT_NE_COMPLETE_SCAR_RESOLUTION",
+    "MECHANICAL_GATE_NE_UNIVERSAL_COLLAGEN_DIRECTION"
+  ],
+  "next_action": "Search for tendon injury experiments that mechanically retune an already-established scar/adhesion state and then measure mechanics, lineage/state trajectory, function and structural integrity in the same root."
+}
