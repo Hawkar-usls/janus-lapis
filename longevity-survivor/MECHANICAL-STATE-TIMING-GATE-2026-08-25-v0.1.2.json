@@ -1,0 +1,67 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_state_timing_gate.v0.1.2",
+  "artifact_id": "MECHANICAL-STATE-TIMING-GATE-2026-08-25-v0.1.2",
+  "created": "2026-08-25",
+  "branch": "LONGEVITY-SURVIVOR",
+  "supersedes_status_snapshot": "MECHANICAL-STATE-TIMING-GATE-2026-08-24-v0.1.1",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "status": "OPEN_WITH_ONE_STRICT_5_OF_5_SKIN_ROOT",
+  "frozen_admitted_roots": [
+    {
+      "tissue": "SKIN",
+      "node": "SKIN-MECHANICAL-CLOCK-STRICT-ROOT-KIM-PGT-2015-v1.0",
+      "decision": "ADMITTED_5_OF_5"
+    }
+  ],
+  "new_screens": [
+    {
+      "tissue": "SKIN",
+      "node": "SKIN-THY1-P38-MECHANOTRANSDUCTION-PRECONDITION-ZHAO-2026-v1.0",
+      "doi": "10.1007/s00018-026-06401-z",
+      "decision": "NOT_ADMITTED",
+      "primary_fail": "rAAV intervention begins 21 days before wounding; this is preconditioning rather than delayed retuning after scar-state establishment",
+      "scientific_gain": "Adds a second distinct causal skin mechanotransduction route: tension -> Thy-1 -> p38MAPK -> TGF-beta/alpha-SMA/collagen program, with regenerative skin-appendage outcome after Thy-1 knockdown",
+      "exit_clock": "NO_UPGRADE"
+    },
+    {
+      "tissue": "HEART",
+      "node": "HEART-ADAM17-DELAYED-FIBROTIC-TIMING-LI-2026-v1.0",
+      "doi": "10.1093/cvr/cvaf256",
+      "decision": "NOT_ADMITTED",
+      "primary_fail": "The delayed day-3-to-7 intervention is a molecular ADAM17 inhibitor rather than direct physical retuning; direct stiffness measurement belongs to a separate genetic arm",
+      "scientific_gain": "Strong causal phase-specific timing support: early/pre-MI inhibition is not beneficial, whereas inhibition after initial scar formation improves long-term remodeling; supports a HEART intervention window without establishing a strict mechanical-clock root",
+      "exit_clock": "SUPPORTIVE_TIMING_NOT_DIRECT_CELLULAR_EXIT"
+    },
+    {
+      "tissue": "TENDON",
+      "node": "TENDON-MECHANICAL-GATING-HUSSIEN-2026-v1.0",
+      "doi": "10.1038/s41467-026-70395-2",
+      "decision": "NOT_ADMITTED",
+      "primary_fail": "The controlled mechanical state is imposed from construct formation, not delayed after an established endogenous tendon repair state, and no in-vivo repair-integrity outcome closes C5",
+      "scientific_gain": "Strong reductionist causal evidence that matrix tension gates tendon stromal myofibroblast phenoconversion while revealing non-monotonic collagen transcription and macrophage override",
+      "exit_clock": "NO_UPGRADE"
+    }
+  ],
+  "cross_tissue_status": {
+    "broad_causal_mechanical_state_gate": "PASS_ALREADY_FROZEN_IN_MECHANICAL_LOCK_CROSS_TISSUE_CLOSEOUT_v1.0",
+    "broad_strong_tissues": ["HEART", "SKIN", "SPINAL_CORD"],
+    "strict_delayed_mechanical_clock_admitted_tissues": 1,
+    "strict_delayed_mechanical_clock_required_tissues": 2,
+    "MECHANICAL_CLOCK_v0_2": "OPEN"
+  },
+  "priority_correction": {
+    "old_wording": "Find a third strong causal mechanical-lock tissue",
+    "current_wording": "The broad three-tissue causal mechanics gate is already PASS. The unresolved gate is one additional independent strict delayed 5/5 mechanical-retuning root.",
+    "highest_value_targets": [
+      "HEART: delayed direct physical ECM/crosslink/compliance intervention after infarct stabilization with same-root tissue mechanics and fibroblast-state trajectory",
+      "SPINAL_CORD: delayed lesion mechanical retuning after stiffness/scar establishment with same-root mechanics, endogenous state and function",
+      "TENDON: delayed in-vivo mechanical unloading/retuning after adhesion/scar establishment with force/modulus trajectory and structural integrity"
+    ]
+  },
+  "relation_to_exit_clock": {
+    "status": "NO_STRICT_CROSS_TISSUE_UPGRADE",
+    "reason": "Zhao is preconditioning; the HEART ADAM17 experiment provides a delayed molecular timing window but not a same-root direct physical retuning; the TENDON study is a reductionist static-mechanics model rather than delayed in-vivo resolution.",
+    "important_positive": "HEART now has a particularly strong phase-specific causal timing clue that early inhibition can be neutral/harm-prone while later inhibition is beneficial, which sharpens the search for a true physical EXIT CLOCK experiment."
+  },
+  "frozen_boundary": "No criterion was relaxed and no evidence roots were fused. Association remains distinct from causality; molecular mechanotransduction remains distinct from measured physical retuning; animal repair remains distinct from human therapeutic efficacy."
+}
