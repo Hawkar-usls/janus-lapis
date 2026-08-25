@@ -5,11 +5,11 @@
   "branch": "LONGEVITY-SURVIVOR",
   "status": "P0_PUBLIC_EVIDENCE_CALIBRATED_FIRST_CELL_CYCLE_ENTRY_UNRESOLVED",
   "purpose": "Separate distinct post-rehydration observables that had previously been compressed into a single recovery or proliferation clock.",
-  "privacy_boundary": {
-    "trigger": "A private domain-expert correspondence triggered the re-audit.",
-    "rule": "No unpublished observation from the private correspondence is reproduced, quantified, attributed, or promoted in this public artifact without explicit permission.",
-    "public_model_may_be_corrected": true,
-    "private_observation_may_be_published": false
+  "janus_limen": {
+    "sigil": "LIMEN_CLOSED",
+    "rule": "ONLY_PUBLIC_OR_EXPLICITLY_AUTHORIZED_EVIDENCE_MAY_CROSS",
+    "shadow_weight": 0,
+    "oracle": "THE_ORACLE_DOES_NOT_NAME_THE_UNSEEN"
   },
   "clock_map": [
     {
@@ -90,7 +90,7 @@
     "BULK_GROWTH_NE_FIRST_S_PHASE",
     "SURVIVAL_RATE_NE_PROLIFERATION_RATE",
     "TEMPORAL_ORDER_NE_CAUSAL_GATE",
-    "PRIVATE_CORRESPONDENCE_NE_PUBLIC_EVIDENCE"
+    "ADMISSION_REQUIRES_PUBLIC_OR_AUTHORIZED_PROVENANCE"
   ],
   "source_index": [
     "DOI:10.1371/journal.pone.0014008",
