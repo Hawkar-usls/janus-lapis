@@ -1,0 +1,77 @@
+{
+  "schema_id": "janus.longevity_survivor.digit_tip_ecm_mechanical_niche.mui_2026.v1",
+  "artifact_id": "DIGIT-TIP-ECM-MECHANICAL-NICHE-MUI-2026-v1.0",
+  "created": "2026-08-28",
+  "branch": "LONGEVITY-SURVIVOR",
+  "candidate": "NICHE/ECM_MECHANICAL_MATURATION_LOCK",
+  "source": {
+    "citation": "Mui et al., Science, 2026",
+    "doi": "10.1126/science.ady3136",
+    "pmid": "41955369",
+    "pmcid": "PMC7619039",
+    "public_dataset": "GSE274858",
+    "public_code": "JosephJYW/HA_TissueMechanics_Science2026",
+    "zenodo_record": "18458384"
+  },
+  "topa_spider_screen": {
+    "repository": "Hawkar-usls/TOPA",
+    "branch": "research/longevity-mechanical-lock-topa-spider-2026-08-28",
+    "workflow_run_id": 33203759330,
+    "workflow_head_sha": "f4fb1e1a55652ca57a100748153c827a76724a90",
+    "result": "PASS_ADVERSARIAL_AUDIT",
+    "firewall": "TOPA_SPIDER_LONGEVITY_MECHANICAL_LOCK_FIREWALL=PASS",
+    "frozen_receipt": "research/longevity-mechanical-lock/TOPA-SPIDER-MUI-GATE-AUDIT-RESULT-2026-08-28-v1.0.json"
+  },
+  "evidence": {
+    "model": "adult mouse digit amputation: regenerative distal P3 versus non-regenerative more proximal injury contexts",
+    "mechanical_observation": "Regenerative and non-regenerative digit environments differ in ECM organization and measured tissue mechanics; AFM/force mapping is reported in the source program.",
+    "loss_of_function": "HA depletion after regenerative digit-tip amputation impairs regenerative outcomes and promotes a more fibrotic/non-regenerative repair program.",
+    "gain_of_function_or_rescue_like": "HAPLN1-overexpressing fibroblast transplantation in a normally non-regenerative digit context changes ECM state/mechanics and improves bone-repair/regrowth-associated outcomes relative to controls.",
+    "public_replay_subgate": "GSE274858 and associated public analysis code permit replay of perturbation-associated single-cell transcriptional analyses."
+  },
+  "classification": {
+    "broad_mechanical_niche_support": "STRONG_DISTINCT_CAUSAL_DIGIT_MODEL_WITH_ECM_CHEMISTRY_MECHANICS_COUPLING",
+    "broad_three_tissue_gate_delta": "NO_CHANGE_ALREADY_PASS_BEFORE_THIS_NODE",
+    "mechanical_state_timing_gate": "NO_UPGRADE",
+    "pure_mechanics_isolation": "NOT_ESTABLISHED",
+    "human_efficacy": "NOT_ESTABLISHED"
+  },
+  "why_not_pure_mechanics": "The causal manipulations alter hyaluronic-acid biology/ECM composition and organization together with mechanical state. Measured mechanics plus a coupled ECM intervention do not isolate mechanics from matrix chemistry.",
+  "why_not_strict_timing_root": "The existing strict MECHANICAL_STATE_TIMING_GATE requires delayed direct physical retuning after an established repair/scar state. The TOPA screen found later DPA measurements and post-amputation interventions but did not establish the required delayed post-establishment direct physical-retuning design. OUTCOME_TIME_IS_NOT_INTERVENTION_TIME.",
+  "dedup_and_independence": {
+    "pubmed_pmc": "same publication lineage",
+    "geo": "dataset from the same experimental program",
+    "github_zenodo": "analysis-code/archive lineage from the same program",
+    "rule": "These strengthen provenance and replayability but do not multiply biological replication count."
+  },
+  "relation_to_existing_gate": {
+    "frozen_broad_gate": "P0_CROSS_TISSUE_CAUSAL_MECHANICAL_STATE_GATE already PASS with HEART, SKIN, SPINAL_CORD in MECHANICAL-LOCK-CROSS-TISSUE-CLOSEOUT-2026-08-24-v1.0",
+    "current_unresolved_gate": "MECHANICAL_CLOCK_v0_2 remains OPEN_WITH_ONE_STRICT_5_OF_5_SKIN_ROOT; one additional independent strict delayed 5-of-5 direct physical-retuning root is required.",
+    "priority_targets": ["HEART", "SPINAL_CORD", "TENDON"]
+  },
+  "observer_dedup": {
+    "doi_is_now_recorded": true,
+    "do_not_realert_as_new_third_tissue": true,
+    "qualifying_future_alerts": [
+      "new independent replication",
+      "new public raw dataset beyond the already recorded GSE274858 lineage",
+      "correction or retraction",
+      "new delayed direct physical-retuning experiment satisfying the frozen 5-of-5 timing protocol",
+      "material falsification of the current interpretation"
+    ]
+  },
+  "hard_boundaries": [
+    "ASSOCIATION_IS_NOT_CAUSALITY",
+    "GRAPH_EDGE_IS_NOT_CAUSATION",
+    "SAME_EXPERIMENT_MULTIPLE_REPOSITORIES_IS_NOT_INDEPENDENT_REPLICATION",
+    "MEASURED_STIFFNESS_PLUS_COUPLED_ECM_INTERVENTION_IS_NOT_PURE_MECHANICS_ISOLATION",
+    "OUTCOME_TIME_IS_NOT_INTERVENTION_TIME",
+    "ANIMAL_REGENERATION_IS_NOT_HUMAN_EFFICACY",
+    "NO_GATE_RELAXATION"
+  ],
+  "next_actions": [
+    "Replay GSE274858 under frozen contrasts for HA-inhibition-associated cell-state changes.",
+    "Inspect supplementary methods for exact intervention timing and AFM/force-map pairing.",
+    "Continue the strict search in HEART, SPINAL_CORD and TENDON for one additional delayed direct physical-retuning 5-of-5 root."
+  ]
+}
