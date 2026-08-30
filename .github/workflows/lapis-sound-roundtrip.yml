@@ -1,0 +1,71 @@
+name: Lapis SHA JSON Sound Roundtrip
+
+on:
+  push:
+    branches:
+      - research/lapis-sha256-sound-roundtrip-v1
+    paths:
+      - "tools/lapis_converter.py"
+      - "tools/lapis_sound_roundtrip.py"
+      - "tests/test_lapis_sound_roundtrip.py"
+      - "examples/sha256_json_reference_machine.v1.json"
+      - ".github/workflows/lapis-sound-roundtrip.yml"
+  pull_request:
+    paths:
+      - "tools/lapis_converter.py"
+      - "tools/lapis_sound_roundtrip.py"
+      - "tests/test_lapis_sound_roundtrip.py"
+      - "examples/sha256_json_reference_machine.v1.json"
+      - ".github/workflows/lapis-sound-roundtrip.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-sound-roundtrip:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compile converter lanes
+        run: python -m py_compile tools/lapis_converter.py tools/lapis_sound_roundtrip.py
+
+      - name: Run converter tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Run SHA-256 JSON -> sound -> JSON -> algorithm -> code
+        run: |
+          rm -rf /tmp/lapis-sha-sound
+          python tools/lapis_sound_roundtrip.py exact-roundtrip \
+            examples/sha256_json_reference_machine.v1.json \
+            --outdir /tmp/lapis-sha-sound \
+            --repeat 4
+          test -s /tmp/lapis-sha-sound/sha256_json_reference_machine_v1.exact-carrier.wav
+          test -s /tmp/lapis-sha-sound/sha256_json_reference_machine_v1.recovered.json
+          test -s /tmp/lapis-sha-sound/sha256_json_reference_machine_v1.sound.algorithm.json
+          test -s /tmp/lapis-sha-sound/sha256_json_reference_machine_v1.sound.generated.py
+          test -s /tmp/lapis-sha-sound/sha256_json_reference_machine_v1.sound-roundtrip.manifest.json
+
+      - name: Enforce byte-exact roundtrip and scientific boundary
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          src=json.load(open('examples/sha256_json_reference_machine.v1.json', encoding='utf-8'))
+          rec=json.load(open('/tmp/lapis-sha-sound/sha256_json_reference_machine_v1.recovered.json', encoding='utf-8'))
+          canon=lambda x: json.dumps(x, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
+          assert canon(src) == canon(rec)
+          m=json.load(open('/tmp/lapis-sha-sound/sha256_json_reference_machine_v1.sound-roundtrip.manifest.json', encoding='utf-8'))
+          assert m['roundtrip']['canonical_bytes_equal'] is True
+          assert m['roundtrip']['source_sha256'] == m['roundtrip']['recovered_sha256']
+          assert m['scientific_boundary']['sound_is_carrier_not_oracle'] is True
+          assert m['scientific_boundary']['SHA256_POLY_ROUTE_implies_SAT_POLY_ROUTE'] is False
+          assert m['scientific_boundary']['P_VS_NP'] == 'OPEN'
+          print('SHA256_JSON_SOUND_JSON_ALGORITHM_ROUNDTRIP=PASS')
+          print('SOUND_IS_EXACT_CARRIER_NOT_SEMANTIC_ORACLE')
+          PY
