@@ -92,15 +92,15 @@ class LapisSoundRoundtripTests(unittest.TestCase):
             with wave.open(str(wav), "rb") as r:
                 params = r.getparams()
                 frames = bytearray(r.readframes(r.getnframes()))
-            # Flip one complete repeated PCM symbol enough to map to a different byte.
-            symbol_index = 60
+            # Mutate one complete repeated symbol inside the framed uint64 length.
+            # The decoder must reject the changed frame rather than reinterpret it.
+            symbol_index = 10
             start = symbol_index * 4 * 2
             for j in range(4):
                 off = start + j * 2
-                if off + 1 < len(frames):
-                    sample = int.from_bytes(frames[off:off+2], "little", signed=True)
-                    sample = max(-32768, min(32767, sample + 257))
-                    frames[off:off+2] = int(sample).to_bytes(2, "little", signed=True)
+                sample = int.from_bytes(frames[off:off+2], "little", signed=True)
+                sample = max(-32768, min(32767, sample + 257))
+                frames[off:off+2] = int(sample).to_bytes(2, "little", signed=True)
             with wave.open(str(bad), "wb") as w:
                 w.setparams(params)
                 w.writeframes(bytes(frames))
