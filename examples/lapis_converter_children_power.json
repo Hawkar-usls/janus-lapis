@@ -1,0 +1,55 @@
+{
+  "$lapis": {
+    "algorithm": {
+      "name": "children_power_dual_clock_demo",
+      "inputs": [
+        "state"
+      ],
+      "state": {
+        "macro_rank": "external_domain_value",
+        "tension": "external_domain_value"
+      },
+      "invariants": [
+        "semantic invariant must be checked by a domain-native verifier",
+        "resource/debt bounds must be frozen outside this demo"
+      ],
+      "steps": [
+        {
+          "id": "preserve_signal",
+          "op": "ANNOTATE",
+          "text": "Preserve invariant while carrier/representation may change."
+        },
+        {
+          "id": "bounded_phrase",
+          "op": "ANNOTATE",
+          "text": "Allow a bounded preparation phrase; commit only after an externally certified progress gate."
+        },
+        {
+          "id": "commit_gate",
+          "op": "EMIT",
+          "value": "candidate_ready_for_domain_verifier"
+        }
+      ],
+      "outputs": [
+        "candidate_ready_for_domain_verifier"
+      ],
+      "progress": {
+        "kind": "dual_clock_candidate",
+        "macro": "R",
+        "micro": "T",
+        "candidate_rank": "Phi = R*(T_max+1)+T",
+        "evaluation": "EXTERNAL_DOMAIN_VERIFIER_REQUIRED"
+      },
+      "resource_bounds": {
+        "note": "Demo only. Concrete polynomial exponents are not asserted here."
+      },
+      "metadata": {
+        "source_analogy": [
+          "Robert Miles — Children (Dream Version)",
+          "SNAP! — The Power"
+        ],
+        "claim": "algorithmic analogy candidate, not a proof of P=NP"
+      }
+    }
+  }
+}
