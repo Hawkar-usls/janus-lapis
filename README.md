@@ -24,7 +24,34 @@ The project uses historical alchemical archetypes as labels for a computational 
 - machine-readable summaries;
 - external-review briefs;
 - evidence-gated biological resolution / repair-state EXIT tracking;
+- deterministic JSON → algorithm / Python / sound translation;
 - cross-domain computational analogies kept explicitly separate from biological mechanism claims.
+
+## Universal converter lane
+
+`tools/lapis_converter.py` is a deterministic, fail-closed translation lane for machine-readable Lapis artifacts.
+
+It supports:
+
+```text
+JSON -> algorithm IR
+JSON -> fail-closed Python runner
+JSON -> deterministic WAV sonification
+JSON -> all three outputs + SHA-256 provenance manifest
+```
+
+Examples:
+
+```bash
+python tools/lapis_converter.py json-to-algorithm input.json -o output.algorithm.json
+python tools/lapis_converter.py json-to-code input.json -o output.generated.py
+python tools/lapis_converter.py json-to-sound input.json -o output.wav
+python tools/lapis_converter.py convert-all input.json --outdir lapis_converted
+```
+
+Natural-language JSON is translated conservatively and has no proof authority. For executable semantics, provide an explicit `$lapis.algorithm` contract. Unknown generated operators fail closed with `OPEN`; JSON content is never passed to `eval()` or `exec()`.
+
+See [`docs/LAPIS_UNIVERSAL_CONVERTER.md`](docs/LAPIS_UNIVERSAL_CONVERTER.md).
 
 ## Resolution / EXIT CLOCK lane
 
@@ -48,6 +75,8 @@ VALIDATED_MATERIAL = NOT_ESTABLISHED
 LABORATORY_EFFICACY = NOT_ESTABLISHED
 SAFE_SYNTHESIS_PROCEDURE = NOT_PROVIDED
 HAZARDOUS_SYNTHESIS_INSTRUCTIONS = FORBIDDEN
+GENERATED_ALGORITHM = CANDIDATE_UNTIL_REVIEWED_AND_TESTED
+HEURISTIC_JSON_TRANSLATION = NOT_THEOREM_AUTHORITY
 ODONTOFORGE_IS_BIOLOGICAL_MECHANISM = NOT_CLAIMED
 P_VS_NP = OPEN
 ```
