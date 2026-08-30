@@ -3,15 +3,17 @@
   "project": "JANUS Lapis",
   "repository": "https://github.com/Hawkar-usls/janus-lapis",
   "portfolio_class": "exploratory_hypothesis_tool",
-  "last_reviewed": "2026-08-25",
+  "last_reviewed": "2026-08-31",
   "maturity": "WORK_IN_PROGRESS",
   "completion_status": "INCOMPLETE",
-  "summary": "Computational hypothesis-ranking sandbox inspired by historical alchemical archetypes, now also carrying an evidence-gated biological resolution/repair-state EXIT lane and explicitly bounded cross-domain computational analogies.",
+  "summary": "Computational hypothesis-ranking sandbox inspired by historical alchemical archetypes, carrying evidence-gated EXIT tracking, explicitly bounded cross-domain analogies, and a deterministic JSON-to-algorithm/code/sound translation lane.",
   "active_tracks": [
     "computational candidate ranking",
     "historical/archetype comparison",
     "biological resolution and wound-state EXIT evidence mapping",
-    "cross-domain transient-state operator watchlist"
+    "cross-domain transient-state operator watchlist",
+    "deterministic JSON -> algorithm IR -> fail-closed Python code translation",
+    "deterministic JSON sonification with provenance manifests"
   ],
   "outputs_are": [
     "computational rankings",
@@ -19,7 +21,11 @@
     "review requests",
     "rejected/accepted gate records",
     "causal-support nodes with explicit caveats",
-    "cross-domain analogy receipts"
+    "cross-domain analogy receipts",
+    "algorithm IR candidates",
+    "generated fail-closed Python runners",
+    "deterministic WAV sonifications",
+    "SHA-256 conversion manifests"
   ],
   "not_established": [
     "literal transmutation",
@@ -29,9 +35,20 @@
     "laboratory efficacy of generated candidates",
     "a general regeneration mechanism",
     "biological validity of the OdontoForge analogy",
+    "semantic correctness of heuristic JSON-to-algorithm translation without an explicit contract",
     "P=NP or P!=NP"
   ],
   "current_resolution_bridge": "data/resolution_gate/ODONTOFORGE_TRANSIENT_STATE_BRIDGE_2026-08-25.json",
+  "universal_converter": {
+    "tool": "tools/lapis_converter.py",
+    "algorithm_ir_schema": "janus.lapis.algorithm_ir.v1",
+    "sound_schema": "janus.lapis.json_sonification.v1",
+    "explicit_contract_key": "$lapis.algorithm",
+    "no_eval": true,
+    "no_exec_of_json": true,
+    "unknown_operator_policy": "OPEN_FAIL_CLOSED",
+    "heuristic_translation_authority": false
+  },
   "hazardous_synthesis_instructions": false,
   "external_review_required_for_material_claims": true,
   "biological_claims_require_domain_native_evidence": true,
