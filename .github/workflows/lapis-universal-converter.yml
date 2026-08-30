@@ -1,0 +1,38 @@
+name: Lapis Universal Converter
+
+on:
+  push:
+    paths:
+      - "tools/lapis_converter.py"
+      - "tests/test_lapis_converter.py"
+      - "examples/lapis_converter_children_power.json"
+      - ".github/workflows/lapis-universal-converter.yml"
+  pull_request:
+    paths:
+      - "tools/lapis_converter.py"
+      - "tests/test_lapis_converter.py"
+      - "examples/lapis_converter_children_power.json"
+      - ".github/workflows/lapis-universal-converter.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Converter smoke test
+        run: |
+          python tools/lapis_converter.py convert-all \
+            examples/lapis_converter_children_power.json \
+            --outdir /tmp/lapis-converted
+          test -s /tmp/lapis-converted/lapis_converter_children_power.algorithm.json
+          test -s /tmp/lapis-converted/lapis_converter_children_power.generated.py
+          test -s /tmp/lapis-converted/lapis_converter_children_power.wav
+          test -s /tmp/lapis-converted/lapis_converter_children_power.manifest.json
