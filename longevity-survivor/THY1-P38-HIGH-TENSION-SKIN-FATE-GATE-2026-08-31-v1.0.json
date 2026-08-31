@@ -1,0 +1,61 @@
+{
+  "schema": "janus.longevity_survivor.skin.thy1_p38_fate_gate.v1",
+  "artifact_id": "THY1-P38-HIGH-TENSION-SKIN-FATE-GATE-2026-08-31-v1.0",
+  "status": "CAUSAL_FATE_ROUTING_SUPPORTED__STRICT_DELAYED_LOCK_NOT_ADMITTED",
+  "branch": "LONGEVITY-SURVIVOR",
+  "tissue": "SKIN",
+  "source": {
+    "title": "Targeting the Thy-1 mechanotransduction regulator rescues regenerative wound healing and induces hair follicle neogenesis under high tension",
+    "doi": "10.1007/s00018-026-06401-z",
+    "journal": "Cellular and Molecular Life Sciences",
+    "publication_date": "2026-08-24",
+    "evidence_class": "PEER_REVIEWED_OPEN_ACCESS_ANIMAL_MECHANISTIC"
+  },
+  "parent_artifact": "longevity-survivor/SKIN-THY1-P38-MECHANOTRANSDUCTION-PRECONDITION-ZHAO-2026-v1.0.json",
+  "causal_result": {
+    "intervention": "local rAAV-mediated Thy-1 perturbation",
+    "background_state": "murine high-tension scar model",
+    "knockdown_effects": [
+      "scar_area_down",
+      "collagen_disorder_down",
+      "p38MAPK_phosphorylation_down",
+      "TGF_BETA_down",
+      "ALPHA_SMA_down",
+      "COLLAGEN_I_down",
+      "COLLAGEN_III_down",
+      "hair_follicle_neogenesis_up",
+      "sebaceous_gland_neogenesis_up"
+    ],
+    "interpretation": "Causal manipulation of a mechanotransduction regulator changed fibrotic-versus-regenerative healing fate while high mechanical tension remained part of the model."
+  },
+  "timing_gate": {
+    "rAAV_start": "21_days_before_wounding",
+    "wound_day": 0,
+    "tension_device_installation": "day_4_post_operation",
+    "classification": "PRECONDITIONING_ONLY_NOT_DELAYED_RESCUE",
+    "strict_delayed_mechanical_lock_pass": false,
+    "reason": "The molecular intervention began before injury and therefore does not test reversal after an established mature fibrotic/mechanical lock."
+  },
+  "gate_delta": {
+    "SKIN_MECHANOTRANSDUCTION_FATE_ROUTING": "CAUSAL_SUPPORT_UP",
+    "NICHE_ECM_MECHANICAL_MATURATION_LOCK": "SUPPORTING_INTERVENTION_ROOT",
+    "STRICT_DELAYED_MECHANICAL_LOCK": "NO_UPGRADE"
+  },
+  "janus_lane": {
+    "target": "GENESIS_LANE_3_LONGEVITY_SURVIVOR",
+    "route": "LAPIS_SOURCE_ROOT -> BICAMERAL_HRAIN_INAIHR -> PHYSARIUS_COMMISSURE -> DEMIHEAD -> GENESIS_LANE_3",
+    "required_views": {
+      "LEFT_HRAIN": "STRUCTURAL_CONTEXT",
+      "RIGHT_INAIHR": "ASSOCIATIVE_CONTEXT"
+    },
+    "agreement_rule": "BOTH_HEMISPHERES_AGREE_NE_INDEPENDENT_REPLICATION"
+  },
+  "claim_ceiling": [
+    "MOUSE_SKIN_NE_HUMAN_THERAPY",
+    "PRECONDITIONING_NE_DELAYED_RESCUE",
+    "CAUSAL_FATE_ROUTING_NE_MATURE_SCAR_REVERSAL",
+    "PATHWAY_DEPENDENCE_NE_COMPLETE_MOLECULAR_CHAIN",
+    "BICAMERAL_AGREEMENT_NE_EXTERNAL_REPLICATION"
+  ],
+  "next_gate": "SEARCH_FOR_POST_ESTABLISHMENT_SKIN_INTERVENTION_WITH_EXPLICIT_MATURE_FIBROTIC_STATE_BEFORE_TREATMENT"
+}
