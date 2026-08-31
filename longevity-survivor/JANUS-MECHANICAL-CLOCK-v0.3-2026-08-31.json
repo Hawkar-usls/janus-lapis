@@ -1,0 +1,58 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.v0.3",
+  "artifact_id": "JANUS-MECHANICAL-CLOCK-v0.3-2026-08-31",
+  "created": "2026-08-31",
+  "branch": "LONGEVITY-SURVIVOR",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "status": "FROZEN_PASS_STRICT_THREE_TISSUE_CAUSAL_TIMING_GATE",
+  "supersedes": "JANUS-MECHANICAL-CLOCK-v0.2-2026-08-24",
+  "admitted_tissues": [
+    {
+      "tissue": "SKIN",
+      "root": "SKIN-MECHANICAL-CLOCK-STRICT-ROOT-KIM-PGT-2015-v1.0",
+      "mechanical_retuning": "delayed external compression of established burn scar"
+    },
+    {
+      "tissue": "HEART",
+      "root": "HEART-MECHANICAL-CLOCK-STRICT-ROOT-NEFF-UNTAC-2022-v1.0",
+      "mechanical_retuning": "delayed removal of pathological pressure overload after established myocardial fibrosis"
+    },
+    {
+      "tissue": "ELBOW_JOINT_CAPSULE",
+      "root": "JOINT-CAPSULE-MECHANICAL-CLOCK-STRICT-ROOT-SCHOLP-CRS-2025-v1.0",
+      "mechanical_retuning": "delayed direct capsule release after established post-traumatic arthrofibrotic contracture",
+      "trajectory": "large early ROM rescue followed by partial recurrence of stiffness by 3 weeks"
+    }
+  ],
+  "shared_causal_topology": [
+    "pathological mechanical/fibrotic state is established before intervention",
+    "the established state is directly measured or bound by matched contemporaneous mechanical/ECM controls",
+    "a delayed direct physical retuning is applied",
+    "post-retuning physical state is measured",
+    "endogenous scar/fibrosis trajectory is measured",
+    "structural or functional tissue outcome is measured"
+  ],
+  "new_information_from_third_tissue": {
+    "law": "MECHANICAL_RESCUE_CAN_BE_REAL_YET_TRANSIENT",
+    "interpretation": "The elbow root adds explicit recurrence/hysteresis: direct release can reset function toward normal without erasing the fibrotic attractor, which can pull mechanics back toward contracture.",
+    "relation_to_first_future_break": "A physical retuning can cross an early functional boundary without permanently changing all later successor states."
+  },
+  "claim_ceiling": {
+    "supported": "Three distinct mammalian tissue contexts now satisfy the same frozen C1-C5 delayed mechanical-retuning gate in single causal roots.",
+    "not_supported": [
+      "one universal direction of optimal mechanical change",
+      "one universal force, modulus or pressure threshold",
+      "permanent reversal after every successful retuning",
+      "mechanical retuning alone guarantees activated-repair-cell EXIT",
+      "human regenerative efficacy"
+    ]
+  },
+  "next_gate": {
+    "name": "MECHANICAL_EXIT_COUPLING_GATE_PLUS_HYSTERESIS_STRATIFICATION",
+    "questions": [
+      "Which delayed retunings permanently change the repair-state successor set versus only transiently improve function?",
+      "Can recurrence be predicted from post-retuning fibrosis/state trajectories?",
+      "Can one root bind physical retuning to lineage-resolved activated-repair-cell EXIT kinetics?"
+    ]
+  }
+}
