@@ -1,0 +1,75 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.strict_root.v1",
+  "artifact_id": "JOINT-CAPSULE-MECHANICAL-CLOCK-STRICT-ROOT-SCHOLP-CRS-2025-v1.0",
+  "created": "2026-08-31",
+  "branch": "LONGEVITY-SURVIVOR",
+  "tissue": "ELBOW_JOINT_CAPSULE",
+  "species": "RAT",
+  "paper": {
+    "title": "Capsule release surgery temporarily reduces contracture in a rat elbow model of arthrofibrosis",
+    "journal": "Journal of Orthopaedic Research",
+    "year": 2025,
+    "first_published": "2024-09-15",
+    "doi": "10.1002/jor.25967",
+    "pmid": "39279043",
+    "pmcid": "PMC11615420"
+  },
+  "frozen_protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "root_integrity": "PASS_SINGLE_CAUSAL_EXPERIMENTAL_ROOT",
+  "experimental_timeline": {
+    "injury_and_immobilization": "post-traumatic elbow contracture induced and immobilized for 6 weeks",
+    "established_state_reference": "Injury Only group at 6 weeks directly documents severe persistent mechanical contracture and increased connective-tissue density",
+    "pre_intervention_compatible_reference": "3W Remobile group at 9 weeks post-injury is the matched contemporaneous natural-recovery reference immediately before capsule release in CRS groups",
+    "intervention": "anterior capsule release surgery after 3 weeks of remobilization; anterior joint capsule physically elevated/released and elbow gently extended to full extension",
+    "post_intervention": ["CRS + 1W Recovery", "CRS + 3W Recovery"]
+  },
+  "criterion_receipt": {
+    "C1_DELAYED_AFTER_ESTABLISHMENT": {
+      "status": "YES",
+      "basis": "Contracture was explicitly established after 6 weeks. At the exact 9-week intervention boundary, the matched 3W Remobile group retained restricted mechanics and elevated synovial connective-tissue density versus uninjured controls."
+    },
+    "C2_DIRECT_PHYSICAL_RETUNING": {
+      "status": "YES",
+      "basis": "Capsule release is a direct physical alteration of the fibrotic mechanical constraint: the anterior capsule was surgically released from the distal humerus and the elbow was physically extended to full extension. This is not inferred from a downstream molecular pathway."
+    },
+    "C3_PHYSICAL_STATE_MEASURED": {
+      "status": "YES",
+      "basis": "The same root uses controlled torque-angle mechanical testing (plus or minus 10 N mm) with ROM and maximum-extension outcomes. The matched 3W Remobile group samples the pre-intervention state and CRS + 1W / +3W groups quantify post-retuning mechanics."
+    },
+    "C4_SAME_STATE_TRAJECTORY": {
+      "status": "YES",
+      "basis": "The same root measures post-retuning synovial fibrosis using connective-tissue density at matched pre-intervention and post-CRS time points. C4 is bound to the fibrosis trajectory, not to alpha-SMA as a myofibroblast identity claim."
+    },
+    "C5_TISSUE_OUTCOME_WITH_INTEGRITY": {
+      "status": "YES",
+      "basis": "Capsule release significantly improved elbow ROM and maximum extension at 1 and 3 weeks relative to injury-only; the 1-week mechanical outcome was not significantly different from uninjured controls. No rupture, dehiscence, failed closure, ligament destabilization, or equivalent loss-of-integrity endpoint was reported. Recurrence of stiffness by 3 weeks is retained as a limitation rather than relabeled as failure of initial functional rescue."
+    }
+  },
+  "quantitative_anchor": {
+    "uninjured": {"ROM_deg": "114 +/- 9.4", "max_extension_deg": "16 +/- 6.7", "connective_tissue_density_pct": "45 +/- 6.3"},
+    "injury_only_6w": {"ROM_deg": "35 +/- 21", "max_extension_deg": "97 +/- 22", "connective_tissue_density_pct": "70 +/- 1.5"},
+    "pre_CRS_3w_remobile_9w_post_injury": {"ROM_deg": "65 +/- 41", "max_extension_deg": "70 +/- 37", "connective_tissue_density_pct": "60 +/- 6.5"},
+    "CRS_plus_1w": {"ROM_deg": "90 +/- 7.6", "max_extension_deg": "34 +/- 6.2", "connective_tissue_density_pct": "60 +/- 6.9"},
+    "CRS_plus_3w": {"ROM_deg": "81 +/- 8.2", "max_extension_deg": "51 +/- 16", "connective_tissue_density_pct": "68 +/- 6.7"}
+  },
+  "anti_heuristic_notes": [
+    "ALPHA_SMA_IS_NOT_USED_AS_THE_DECISIVE_C4_RECEIPT",
+    "CONNECTIVE_TISSUE_DENSITY_IS_USED_ONLY_AS_A_SCAR_FIBROSIS_TRAJECTORY_READOUT",
+    "TEMPORARY_FUNCTIONAL_RESCUE_NE_PERMANENT_CURE",
+    "SURGICAL_RELEASE_NE_MOLECULAR_MECHANOTRANSDUCTION_PROXY",
+    "MATCHED_CONTEMPORANEOUS_CONTROL_IS_ALLOWED_BY_FROZEN_C3",
+    "RECURRENCE_AFTER_RESCUE_IS_RETAINED_AS_HYSTERESIS_NOT_ERASED"
+  ],
+  "binary_decision": "ADMITTED_5_OF_5",
+  "distinct_tissue_decision": "THIRD_DISTINCT_STRICT_TISSUE_ADMITTED",
+  "claim_ceiling": {
+    "supported": "A third mammalian tissue context, the post-traumatic elbow joint capsule, contains a single-root experiment in which delayed direct physical release of an established pathological mechanical/fibrotic state changes subsequent joint mechanics, tracks fibrosis trajectory, and improves functional outcome.",
+    "not_supported": [
+      "permanent elimination of arthrofibrosis",
+      "myofibroblast clearance as the causal mechanism",
+      "a universal loading direction or mechanical threshold",
+      "human regenerative efficacy"
+    ]
+  },
+  "terminal": "PASS_STRICT_5_OF_5__THIRD_DISTINCT_TISSUE__TEMPORARY_RESCUE_WITH_RECURRENCE"
+}
