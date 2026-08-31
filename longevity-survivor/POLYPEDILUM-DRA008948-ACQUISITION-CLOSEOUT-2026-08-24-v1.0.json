@@ -1,0 +1,78 @@
+{
+  "schema": "janus.lapis.longevity_survivor.polypedilum_dra008948_acquisition_closeout.v1_0",
+  "artifact_id": "POLYPEDILUM-DRA008948-ACQUISITION-CLOSEOUT-2026-08-24-v1.0",
+  "date": "2026-08-24",
+  "repository": "Hawkar-usls/janus-lapis",
+  "branch_target": "LONGEVITY-SURVIVOR",
+  "workflow": {
+    "name": "Pv11 DRA008948 public-byte acquisition",
+    "run_id": 32746690039,
+    "job_id": 97493807977,
+    "conclusion": "success",
+    "artifact_id": 9527335765,
+    "artifact_name": "pv11-dra008948-acquisition",
+    "artifact_size_bytes": 10536924,
+    "artifact_digest": "sha256:39dbd0344b645d6f44059aa031115d4a29763ff099f48d5d3cd80deff536fb91"
+  },
+  "input_acquisition": {
+    "requested": 8,
+    "acquired": 8,
+    "errors": 0,
+    "exact_hashes_frozen_in": "POLYPEDILUM-DRA008948-PUBLIC-INPUT-HASH-LEDGER-2026-08-24-v1.0.csv"
+  },
+  "manifest_gate": {
+    "experiments": 30,
+    "runs": 30,
+    "samples": 30,
+    "joined_rows": 30,
+    "expected_design": "10 conditions x 3 biological replicates = 30 libraries",
+    "condition_counts": {
+      "T0": 3,
+      "T12": 3,
+      "T24": 3,
+      "T36": 3,
+      "T48": 3,
+      "R0": 3,
+      "R3": 3,
+      "R12": 3,
+      "R24": 3,
+      "R72": 3
+    },
+    "unresolved_condition_runs": 0,
+    "missing_experiment_links": 0,
+    "missing_sample_links": 0,
+    "condition_binding_status": "PASS_EXPLICIT_10x3",
+    "condition_binding_rule": "Only explicit metadata tokens were admitted; accession ordering was not used.",
+    "full_manifest_frozen_in": "POLYPEDILUM-DRA008948-EXACT-RUN-CONDITION-MANIFEST-2026-08-24-v1.0.csv"
+  },
+  "supplement_schema_result": {
+    "s001": "mapping-rate table per sample; useful early-rehydration mapping confound control",
+    "s003": "DEG table with baseMean/log2FoldChange/lfcSE/stat/pvalue/padj; NOT a per-timepoint expression matrix",
+    "s004": "gene-to-WGCNA-module membership table",
+    "s005": "module GO enrichment table",
+    "blue_module_public_anchor": {
+      "term": "DNA replication",
+      "go_id": "GO:0006260",
+      "p_value": 1.1952076483671101e-12,
+      "observed_count": 21,
+      "go_term_size": 52
+    },
+    "blue_temporal_trajectory": "NOT_RUN_FROM_THESE_SUPPLEMENTS"
+  },
+  "current_status": {
+    "DRA008948_EXACT_MANIFEST": "PASS",
+    "PUBLIC_INPUT_BYTES_AND_SHA256": "PASS",
+    "BLUE_DNA_REPLICATION_ENRICHMENT": "VERIFIED",
+    "BLUE_R3_R12_R24_R72_TRAJECTORY": "OPEN_INPUT_LAYER",
+    "CELL_CYCLE_TRANSCRIPT_PROXY_RESULT": "NOT_RUN",
+    "CX_FIRST_CELL_CYCLE_ENTRY": "UNKNOWN"
+  },
+  "next_gate": "Inspect author-published pinned processed RSEM TPM matrix and verify sample columns + identifier compatibility with S2 Blue membership before any trajectory computation.",
+  "hard_boundaries": [
+    "ACCESSION_ORDER_IS_NOT_CONDITION_BINDING",
+    "S003_IS_NOT_TIMEPOINT_EXPRESSION_MATRIX",
+    "MODULE_ENRICHMENT_IS_NOT_TIMEPOINT_DIRECTION",
+    "CELL_CYCLE_TRANSCRIPT_PROXY_IS_NOT_DIRECT_S_PHASE_OR_MITOSIS",
+    "MISSING_DATA_STAYS_MISSING"
+  ]
+}

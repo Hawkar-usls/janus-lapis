@@ -12,7 +12,7 @@ permissions:
 jobs:
   acquire:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - name: Checkout exact PR head
         uses: actions/checkout@v4
@@ -28,8 +28,61 @@ jobs:
           set +e
           rm -rf dra008948_acquisition
           python longevity-survivor/tools/acquire_dra008948.py 2>&1 | tee acquisition.log
-          code=${PIPESTATUS[0]}
-          echo "$code" > acquisition_exit_code.txt
+          echo "${PIPESTATUS[0]}" > acquisition_exit_code.txt
+          exit 0
+
+      - name: Inspect pinned author-published RSEM TPM matrix
+        shell: bash
+        run: |
+          set +e
+          rm -rf pv_authors_tpm_inspection
+          python longevity-survivor/tools/inspect_pv_authors_tpm.py 2>&1 | tee tpm_inspection.log
+          echo "${PIPESTATUS[0]}" > tpm_inspection_exit_code.txt
+          exit 0
+
+      - name: Inspect public PvG to g.t bridge candidates
+        shell: bash
+        run: |
+          set +e
+          rm -rf pvg_bridge_inspection
+          python longevity-survivor/tools/inspect_pvg_to_gt_bridge.py 2>&1 | tee pvg_bridge_inspection.log
+          echo "${PIPESTATUS[0]}" > pvg_bridge_inspection_exit_code.txt
+          exit 0
+
+      - name: Inspect pinned author Figure S6B for exact identifier bridge
+        shell: bash
+        run: |
+          set +e
+          rm -rf author_s6b_bridge_inspection
+          python longevity-survivor/tools/inspect_author_s6b_bridge.py 2>&1 | tee author_s6b_bridge_inspection.log
+          echo "${PIPESTATUS[0]}" > author_s6b_bridge_inspection_exit_code.txt
+          exit 0
+
+      - name: Discover archival PvScaf0.9 assembly routes
+        shell: bash
+        run: |
+          set +e
+          rm -rf pv09_archive_discovery
+          python longevity-survivor/tools/discover_pv09_archive.py 2>&1 | tee pv09_archive_discovery.log
+          echo "${PIPESTATUS[0]}" > pv09_archive_discovery_exit_code.txt
+          exit 0
+
+      - name: Acquire exact page-discovered Pv0.9 and Pv0.91 MidgeBase archives
+        shell: bash
+        run: |
+          set +e
+          rm -rf pv09_exact_archives
+          python longevity-survivor/tools/acquire_pv09_exact_archives.py 2>&1 | tee pv09_exact_archives.log
+          echo "${PIPESTATUS[0]}" > pv09_exact_archives_exit_code.txt
+          exit 0
+
+      - name: Inspect official PMC supplement for Pv0.9 to Pv5.2 bridge
+        shell: bash
+        run: |
+          set +e
+          rm -rf pv09_pv52_pmc_supplement
+          python longevity-survivor/tools/inspect_pv09_pv52_pmc_supplement.py 2>&1 | tee pmc_supplement_inspection.log
+          echo "${PIPESTATUS[0]}" > pmc_supplement_inspection_exit_code.txt
           exit 0
 
       - name: Upload proof-carrying acquisition artifact
@@ -39,14 +92,39 @@ jobs:
           name: pv11-dra008948-acquisition
           path: |
             dra008948_acquisition/
+            pv_authors_tpm_inspection/
+            pvg_bridge_inspection/
+            author_s6b_bridge_inspection/
+            pv09_archive_discovery/
+            pv09_exact_archives/
+            pv09_pv52_pmc_supplement/
             acquisition.log
             acquisition_exit_code.txt
+            tpm_inspection.log
+            tpm_inspection_exit_code.txt
+            pvg_bridge_inspection.log
+            pvg_bridge_inspection_exit_code.txt
+            author_s6b_bridge_inspection.log
+            author_s6b_bridge_inspection_exit_code.txt
+            pv09_archive_discovery.log
+            pv09_archive_discovery_exit_code.txt
+            pv09_exact_archives.log
+            pv09_exact_archives_exit_code.txt
+            pmc_supplement_inspection.log
+            pmc_supplement_inspection_exit_code.txt
           if-no-files-found: error
           retention-days: 7
 
-      - name: Enforce acquisition result
+      - name: Enforce core acquisition and archive-discovery execution
         shell: bash
         run: |
-          code="$(cat acquisition_exit_code.txt)"
-          echo "acquisition_exit_code=$code"
-          test "$code" = "0"
+          set -e
+          for f in acquisition_exit_code.txt tpm_inspection_exit_code.txt pvg_bridge_inspection_exit_code.txt author_s6b_bridge_inspection_exit_code.txt pv09_archive_discovery_exit_code.txt pv09_exact_archives_exit_code.txt; do
+            code="$(cat "$f")"
+            echo "$f=$code"
+            if [ "$code" != "0" ]; then
+              echo "core probe failed: $f=$code" >&2
+              exit 1
+            fi
+          done
+          echo "pmc_supplement_inspection_exit_code=$(cat pmc_supplement_inspection_exit_code.txt) (informational; stale external PMC delivery route is not a core-gate failure)"

@@ -1,0 +1,41 @@
+{
+  "artifact_id": "PV11-AUTHOR-S6B-PVG-GT-BRIDGE-AUDIT-2026-08-24-v1.0",
+  "status": "NEGATIVE_DIRECT_BRIDGE_CERTIFICATE",
+  "scope": "Pinned author-published Figure S6B expression/DEG layer only",
+  "source": {
+    "repository": "Kikawada-Lab-UT-NARO/Pvanderplanki_chromosomal_genome",
+    "commit": "fe5064db5e999e0c868d4c8330a231b2da15f256",
+    "files": [
+      "Rplots/data/fig_s6b_get_degs_from_both.pl.out.tpm.gz",
+      "Rplots/data/fig_s6b_get_degs_from_both.pl.out.gz"
+    ]
+  },
+  "proof_run": {
+    "github_actions_run_id": 32751378080,
+    "artifact_id": 9529145969,
+    "artifact_digest": "sha256:f4e7d6292267c6fb7b9a9ac4d8d985cebe0b27761ce19da2793da9814d6f7b2f"
+  },
+  "results": {
+    "blue_gene_denominator": 1222,
+    "s6b_tpm_rows": 8969,
+    "s6b_tpm_unique_new_gt_ids": 8765,
+    "s6b_tpm_unique_old_pvg_ids": 0,
+    "s6b_deg_rows": 18807,
+    "s6b_deg_unique_new_gt_ids": 8765,
+    "s6b_deg_unique_old_pvg_ids": 0,
+    "explicit_same_record_pvg_gt_crossrefs": 0,
+    "exact_blue_old_id_coverage": 0,
+    "exact_blue_old_id_coverage_fraction": 0.0,
+    "rehydration_columns_present": true
+  },
+  "admission": "DIRECT_AUTHOR_PVG_TO_GT_BRIDGE_NOT_PRESENT_IN_S6B",
+  "interpretation": "The Figure S6B layer is a derived expression/DEG dataset in the new g/g.t identifier space. Its filename must not be interpreted as an old/new identifier bridge.",
+  "hard_boundaries": [
+    "FILENAME_IS_NOT_SEMANTICS",
+    "ROW_ORDER_IS_NOT_IDENTITY",
+    "EXACT_ID_OR_EXPLICIT_CROSSREF_REQUIRED",
+    "AMBIGUOUS_MAPS_STAY_AMBIGUOUS",
+    "NEGATIVE_IN_THIS_SOURCE_NE_GLOBAL_NONEXISTENCE"
+  ],
+  "next_gate": "AUDIT_OFFICIAL_PV0_9_VS_PV5_2_SUPPLEMENT_THEN_SEQUENCE_BRIDGE_IF_NO_DIRECT_MAPPING"
+}
