@@ -1,0 +1,107 @@
+{
+  "schema_id": "janus.longevity_survivor.skin.mature_scar_appendage_search.v1",
+  "artifact_id": "SKIN-MATURE-SCAR-APPENDAGE-REGENERATION-SEARCH-PASS-2026-08-31-v1.0",
+  "created": "2026-08-31",
+  "branch": "LONGEVITY-SURVIVOR",
+  "status": "ACTIVE_SEARCH_PASS_COMPLETE__NO_CLEAN_SAME_ARM_MATURE_SCAR_DE_NOVO_APPENDAGE_PASS",
+  "relationship_to_mechanical_clock": "PARALLEL_FATE_ROUTING_GATE_NOT_A_REPLACEMENT_FOR_C1_C5_MECHANICAL_CLOCK",
+  "search_question": "Is there a single causal skin experimental arm in which a mature/established fibrotic scar is directly documented before delayed intervention and the same scar subsequently shows endogenous de novo appendage regeneration rather than mere preservation, imported follicle tissue, or cross-arm inference?",
+  "retrospective_gate_for_this_pass": {
+    "note": "These criteria formalize the user-specified target after candidate discovery in this pass. This record does not claim prospective blindness or novelty prediction.",
+    "S1": "Mature or explicitly established fibrotic scar is directly documented before intervention in the same arm.",
+    "S2": "Intervention begins only after that documented state.",
+    "S3": "The intervention causally changes the scar/fibrotic remodeling outcome.",
+    "S4": "The treated scar demonstrates endogenous de novo appendage regeneration/neogenesis; preservation of pre-existing follicles, histological reappearance without lineage/neogenesis evidence, or transplantation of existing appendage tissue is insufficient for strict S4.",
+    "S5": "All qualifying evidence belongs to the same experimental arm; no species/arm fusion is allowed.",
+    "decision": "STRICT_PASS_ONLY_IF_S1_TO_S5_ARE_ALL_YES"
+  },
+  "candidates": [
+    {
+      "id": "CTGF_ASO_LI_2025_MOUSE",
+      "title": "Locked nucleic acid-modified antisense oligonucleotides attenuate scar hyperplasia through targeted inhibition of CTGF",
+      "doi": "10.3389/fphar.2025.1623640",
+      "arm": "mouse high-tension hypertrophic-scar model",
+      "timeline": "wounds healed at day 14; intralesional treatment began day 14; endpoint day 42",
+      "observed": "scar area decreased; CTGF/collagen-I/collagen-III/alpha-SMA and profibrotic signaling decreased; new hair growth reported; histology after treatment showed reappearance of hair follicles and sebaceous glands",
+      "criteria": {"S1":"UNKNOWN","S2":"YES","S3":"YES","S4":"UNKNOWN","S5":"YES"},
+      "verdict": "NEAR_HIT_NOT_STRICT_PASS",
+      "why_not": "Healed wound at day 14 is not equivalent to an explicitly mature scar, and histological reappearance/new hair growth does not by itself establish endogenous de novo appendage neogenesis."
+    },
+    {
+      "id": "CTGF_ASO_LI_2025_RABBIT",
+      "doi": "10.3389/fphar.2025.1623640",
+      "arm": "rabbit ear hypertrophic-scar model",
+      "timeline": "prominent raised firm reddish hypertrophic scars documented by day 28 with abnormal histology; four weeks of treatment followed",
+      "observed": "scar protrusion and dermal thickness decreased; collagen became more organized; fibrosis markers decreased",
+      "criteria": {"S1":"YES","S2":"YES","S3":"YES","S4":"NO","S5":"YES"},
+      "verdict": "ESTABLISHED_SCAR_REVERSAL_PASS__APPENDAGE_NEOGENESIS_NOT_SHOWN",
+      "why_not": "The strong established-scar timing exists in the rabbit arm, but appendage regeneration was not established there. The mouse appendage observation cannot be fused into the rabbit arm."
+    },
+    {
+      "id": "SHH_LIM_2018",
+      "title": "Hedgehog stimulates hair follicle neogenesis by creating inductive dermis during murine skin wound healing",
+      "doi": "10.1038/s41467-018-07142-9",
+      "arm": "murine wound myofibroblast Smoothened activation",
+      "timeline": "one delayed arm begins doxycycline at approximately post-wound day 10 plus/minus 2 days following re-epithelialization and continues to day 46",
+      "observed": "new dermal papillae and neogenic hair follicles formed after wound closure, including differentiated follicular structures",
+      "criteria": {"S1":"NO","S2":"YES","S3":"YES","S4":"YES","S5":"YES"},
+      "verdict": "POST_REEPITHELIALIZATION_DE_NOVO_REGENERATION_PASS__MATURE_SCAR_GATE_FAIL",
+      "why_not": "The intervention is delayed until wound closure but not until a directly demonstrated mature fibrotic scar."
+    },
+    {
+      "id": "FR1_CHEN_2026",
+      "title": "Transcriptome-guided development of a fibrosis-reversal compound reduces skin scarring and allows regeneration via mitochondrial uncoupling",
+      "doi": "10.1016/j.xcrm.2026.102821",
+      "arm": "murine linear excisional wound scar",
+      "timeline": "FR-1 treatment begins 13 days post-injury after epithelialization, described as established scar during active remodeling/fibrotic phase",
+      "observed": "scar area decreases; profibrotic myofibroblast phenotype and ECM are reduced; hair-follicle damage is avoided",
+      "criteria": {"S1":"NO","S2":"YES","S3":"YES","S4":"NO","S5":"YES"},
+      "verdict": "DELAYED_ACTIVE_REMODELING_ANTIFIBROTIC_PASS__MATURE_SCAR_AND_DE_NOVO_APPENDAGE_FAIL",
+      "why_not": "Active remodeling/post-epithelialization is not the strict mature-scar state, and follicle preservation is not de novo appendage neogenesis."
+    },
+    {
+      "id": "MATURE_HUMAN_SCAR_HF_TRANSPLANT_PLOTCZYK_2023",
+      "title": "Anagen hair follicles transplanted into mature human scars remodel fibrotic tissue",
+      "doi": "10.1038/s41536-022-00270-3",
+      "arm": "human mature normotrophic scalp scars",
+      "timeline": "scars at least four years old; baseline biopsy before autologous anagen-hair-follicle transplantation; follow-up at 2, 4 and 6 months",
+      "observed": "mature scar collagen, epidermis, vascularity and transcriptional state shift toward healthier skin",
+      "criteria": {"S1":"YES","S2":"YES","S3":"YES","S4":"NO","S5":"YES"},
+      "verdict": "MATURE_HUMAN_SCAR_REMODELING_PASS__DE_NOVO_APPENDAGE_FAIL",
+      "why_not": "The intervention imports existing anagen hair follicles; it demonstrates mature scar remodelability, not endogenous de novo appendage neogenesis."
+    },
+    {
+      "id": "HF_MICROPARTICLE_RCT_SUN_2026",
+      "title": "Hair follicle micro-particle skin grafting induces scar remodeling via PI3K-AKT signaling: a randomized clinical trial",
+      "doi": "10.1038/s41536-026-00485-8",
+      "arm": "prospective human scar trial, 40 participants",
+      "timeline": "mature scars treated with FUE-derived hair-follicle micro-graft transplantation plus punch excision versus punch excision control; six-month follow-up",
+      "observed": "greater scar-volume reduction, lower Vancouver Scar Scale scores and regenerative histologic/transcriptomic changes",
+      "criteria": {"S1":"YES","S2":"YES","S3":"YES","S4":"NO","S5":"YES"},
+      "verdict": "HUMAN_MATURE_SCAR_REMODELING_REPLICATED__DE_NOVO_APPENDAGE_FAIL",
+      "why_not": "The regenerative tissue is imported as follicular micrograft material rather than generated de novo from the locked scar."
+    }
+  ],
+  "cross_arm_killer_result": {
+    "strongest_near_hit": "CTGF_ASO_LI_2025",
+    "reason": "One paper contains an established hypertrophic-scar reversal arm in rabbit and an appendage-return arm in mouse.",
+    "strict_consequence": "NOT_PASS",
+    "law": "CROSS_ARM_COMPLEMENTARITY_NE_SAME_SYSTEM_STRICT_PASS"
+  },
+  "current_terminal": {
+    "clean_same_arm_mature_scar_to_de_novo_appendage_regeneration": false,
+    "strict_skin_fate_gate": "OPEN",
+    "mechanical_clock_upgrade": "NO_CHANGE",
+    "human_therapy_claim": false
+  },
+  "next_killer_target": "A single arm with pre-treatment histologic/biomechanical documentation of mature scar, intervention only afterward, and lineage/structural evidence that new hair follicles or sebaceous glands formed endogenously within the treated scar.",
+  "laws": [
+    "HEALED_WOUND_NE_MATURE_SCAR",
+    "POST_REEPITHELIALIZATION_NE_MATURE_FIBROTIC_LOCK",
+    "REAPPEARANCE_NE_PROVEN_DE_NOVO_NEOGENESIS",
+    "PRESERVED_HAIR_FOLLICLE_NE_NEW_HAIR_FOLLICLE",
+    "IMPORTED_APPENDAGE_REMODELING_NE_DE_NOVO_APPENDAGE_NEOGENESIS",
+    "CROSS_ARM_COMPLEMENTARITY_NE_SAME_SYSTEM_STRICT_PASS",
+    "MATURE_SCAR_REMODELABILITY_NE_MECHANICAL_CLOCK_C1_C5_PASS"
+  ]
+}
