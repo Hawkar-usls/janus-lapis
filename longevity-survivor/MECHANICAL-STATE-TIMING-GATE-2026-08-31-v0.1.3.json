@@ -1,0 +1,89 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_state_timing_gate.v0.1.3",
+  "artifact_id": "MECHANICAL-STATE-TIMING-GATE-2026-08-31-v0.1.3",
+  "created": "2026-08-31",
+  "branch": "LONGEVITY-SURVIVOR",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "supersedes_for_current_status": "MECHANICAL-STATE-TIMING-GATE-2026-08-25-v0.1.2",
+  "status": "RECONCILED_TWO_STRICT_TISSUES_PASS__THIRD_TISSUE_SEARCH_OPEN__SKIN_MATURE_APPENDAGE_GATE_OPEN",
+  "status_drift_audit": {
+    "finding": "MECHANICAL-STATE-TIMING-GATE-2026-08-25-v0.1.2 retained an older one-strict-tissue OPEN snapshot even though it descends from the already-frozen two-tissue admission lineage.",
+    "canonical_prior_pass": {
+      "ledger": "MECHANICAL-CLOCK-STRICT-CANDIDATE-LEDGER-2026-08-24-v1.2",
+      "ledger_commit": "923f10bc84d08b0ea38b3f51ea1cf05ad5360708",
+      "clock": "JANUS-MECHANICAL-CLOCK-v0.2-2026-08-24",
+      "status": "FROZEN_PASS_STRICT_TWO_TISSUE_CAUSAL_TIMING_GATE",
+      "admitted_tissues": ["SKIN", "HEART"]
+    },
+    "later_stale_snapshot_commit": "58d3a15e04c2bcbfac9bbb1e7a35e5d95c9065b8",
+    "ancestry_check": "DESCENDS_FROM_TWO_TISSUE_LEDGER",
+    "interpretation": "STATUS_DRIFT_NOT_SCIENTIFIC_REVERSAL",
+    "history_policy": "Preserve v0.1.2 unchanged; supersede its cross-tissue count rather than rewriting history."
+  },
+  "strict_gate": {
+    "mode": "BINARY_CONJUNCTIVE_NO_HEURISTIC",
+    "criteria": [
+      "C1_DELAYED_AFTER_ESTABLISHMENT",
+      "C2_DIRECT_PHYSICAL_RETUNING",
+      "C3_PHYSICAL_STATE_MEASURED",
+      "C4_SAME_STATE_TRAJECTORY",
+      "C5_TISSUE_OUTCOME_WITH_INTEGRITY"
+    ],
+    "admission_rule": "ALL_5_YES_WITHIN_ONE_CAUSAL_EXPERIMENTAL_ROOT",
+    "unknown_policy": "UNKNOWN_EQUALS_NOT_ADMITTED",
+    "cross_arm_fusion": false,
+    "cross_paper_fusion": false
+  },
+  "current_admitted_roots": [
+    {
+      "tissue": "SKIN",
+      "root": "SKIN-MECHANICAL-CLOCK-STRICT-ROOT-KIM-PGT-2015-v1.0",
+      "doi": "10.1097/PRS.0000000000001507",
+      "decision": "ADMITTED_5_OF_5"
+    },
+    {
+      "tissue": "HEART",
+      "root": "HEART-MECHANICAL-CLOCK-STRICT-ROOT-NEFF-UNTAC-2022-v1.0",
+      "doi": "10.1152/ajpheart.00148.2022",
+      "decision": "ADMITTED_5_OF_5"
+    }
+  ],
+  "terminology_correction": {
+    "incorrect": "A second independent SKIN root would become the third strict delayed mechanical-lock tissue.",
+    "correct": "A second independent SKIN root would strengthen or replicate the existing SKIN tissue anchor but would not increase the number of distinct admitted tissues.",
+    "third_tissue_requirement": "The next distinct strict tissue must be non-SKIN and non-HEART, for example LIVER, SPINAL_CORD, TENDON or another independently qualifying tissue.",
+    "law": "NEW_ROOT_IN_EXISTING_TISSUE_NE_NEW_TISSUE"
+  },
+  "parallel_skin_front": {
+    "name": "MATURE_SCAR_REGENERATIVE_APPENDAGE_FATE_GATE",
+    "relationship": "SEPARATE_FROM_STRICT_MECHANICAL_CLOCK_C1_C5",
+    "reason": "A delayed molecular fate intervention can be biologically important without satisfying the direct-physical-retuning requirement of the Mechanical Clock.",
+    "current_status": "OPEN_NO_CLEAN_SAME_ARM_PASS_IN_2026_08_31_SWEEP"
+  },
+  "third_tissue_front": {
+    "highest_priority_candidate": "LIVER_PLOD2_YUE_2024",
+    "doi": "10.1016/j.bbadis.2024.167205",
+    "current_decision": "NOT_ADMITTED_C1_UNKNOWN",
+    "reason": "The therapeutic arm starts PLOD2 siRNA at day 7 and later measures crosslinks, AFM stiffness, collagen architecture, fibrosis and ALT/AST, but the accessible root does not directly establish the qualifying mechanical/fibrotic state at day 7 before intervention; day-7 PLOD2 upregulation is not itself a measured fibrotic mechanical lock."
+  },
+  "laws_added": [
+    "NEW_ROOT_IN_EXISTING_TISSUE_NE_NEW_TISSUE",
+    "MOLECULAR_MECHANOTRANSDUCTION_NE_DIRECT_PHYSICAL_RETUNING",
+    "PATHWAY_UPREGULATION_NE_ESTABLISHED_MECHANICAL_LOCK",
+    "POST_REEPITHELIALIZATION_NE_MATURE_SCAR",
+    "IMPORTED_APPENDAGE_REMODELING_NE_DE_NOVO_APPENDAGE_NEOGENESIS",
+    "CROSS_ARM_COMPLEMENTARITY_NE_SAME_ROOT_STRICT_PASS",
+    "STATUS_DRIFT_NE_SCIENTIFIC_REVERSAL"
+  ],
+  "next_actions": [
+    "Re-audit Yue et al. 2024 supplementary/raw evidence specifically for a direct day-7 pre-intervention fibrosis/mechanics anchor.",
+    "Continue non-SKIN/non-HEART search for a single-root C1-C5 delayed physical retuning experiment.",
+    "Keep mature-scar appendage regeneration as a separate SKIN fate-routing gate rather than silently relaxing Mechanical Clock C2/C3."
+  ],
+  "claim_ceiling": {
+    "mechanical_clock_v0_2": "PASS_TWO_DISTINCT_TISSUES",
+    "third_distinct_strict_tissue": "NOT_ESTABLISHED",
+    "skin_mature_scar_de_novo_appendage_reversal": "NOT_ESTABLISHED",
+    "human_regenerative_therapy": "NOT_CLAIMED"
+  }
+}
