@@ -1,0 +1,56 @@
+{
+  "schema": "janus.longevity_survivor.mechanical_future_set_rechallenge.calibration.v1",
+  "artifact_id": "HEART-HYPERTROPHIC-PRECONDITIONING-H3A-RECHALLENGE-CALIBRATION-2015-v1.0",
+  "created": "2026-08-31",
+  "branch": "LONGEVITY-SURVIVOR",
+  "tissue": "HEART",
+  "paper": {
+    "title": "Myocardial Hypertrophic Preconditioning Attenuates Cardiomyocyte Hypertrophy and Slows Progression to Heart Failure Through Upregulation of S100A8/A9",
+    "year": 2015,
+    "doi": "10.1161/CIRCULATIONAHA.114.013789",
+    "pmid": "25820336"
+  },
+  "challenge_geometry": {
+    "preconditioning_load": "TAC for 3 days or 1 week",
+    "withdrawal": "aortic debanding for 4 days or 1 week",
+    "same_class_rechallenge": "re-TAC followed by 1 or 6 weeks of renewed pressure overload",
+    "load_equivalence_control": "re-TAC groups were compared with sustained TAC under similar pressure-overload measurements",
+    "post_rechallenge_outcomes": [
+      "lower hypertrophy versus sustained TAC",
+      "attenuated myocardial and perivascular fibrosis",
+      "less lung congestion",
+      "smaller LV dimensions",
+      "higher fractional shortening",
+      "lower LV end-diastolic pressure",
+      "higher LV contractility"
+    ]
+  },
+  "hysteresis_class": "H3A_CHALLENGE_RESISTANT_PRECONDITIONING",
+  "why_H3a_is_supported": "The same tissue is exposed to pressure overload, unloaded, and then exposed again to the same class of pressure overload; subsequent remodeling is blunted relative to naive sustained-pressure controls despite renewed load.",
+  "why_H3b_is_not_admitted": {
+    "target": "H3B_POST_LOCK_CHALLENGE_RESISTANT_REWRITE",
+    "status": "NOT_ADMITTED",
+    "reason": "The first TAC episode is deliberately short and is described as compensatory hypertrophic preconditioning. Significant hypertrophy is present, but the root does not directly establish a mature pathological fibrotic/mechanical lock before debanding. Therefore resistance on re-TAC cannot be represented as reversal and rewriting of an already-established mature fibrotic lock.",
+    "firewall": "PRECONDITIONING_RESISTANCE_NE_POST_LOCK_REWRITE"
+  },
+  "mechanical_exit_coupling": {
+    "status": "OPEN",
+    "reason": "The root does not provide lineage-resolved activated-fibroblast EXIT mode across load withdrawal and rechallenge."
+  },
+  "claim_ceiling": {
+    "supported": "Tissue-level cardiac mechanical-history dependence can make the heart more resistant to a later pressure-overload challenge.",
+    "not_supported": [
+      "durable rewrite after a mature fibrotic lock",
+      "erasure of cardiac fibrotic memory",
+      "lineage-resolved fibroblast exit",
+      "human therapeutic efficacy"
+    ]
+  },
+  "laws": [
+    "H3A_PRECONDITIONING_RESISTANCE_NE_H3B_POST_LOCK_REWRITE",
+    "SAME_CLASS_RECHALLENGE_WITH_BLUNTED_RESPONSE_IS_FUTURE_SET_INFORMATION",
+    "COMPENSATORY_HYPERTROPHY_NE_MATURE_FIBROTIC_LOCK",
+    "CHALLENGE_RESISTANCE_NE_MECHANICAL_EXIT_COUPLING"
+  ],
+  "terminal": "H3A_TISSUE_LEVEL_CHALLENGE_RESISTANCE_SUPPORTED__H3B_POST_LOCK_REWRITE_OPEN"
+}
