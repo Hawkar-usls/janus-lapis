@@ -1,0 +1,88 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.c1_killer_audit.v1",
+  "artifact_id": "LIVER-PLOD2-YUE-2024-DAY7-PREINTERVENTION-STATE-KILLER-AUDIT-2026-08-31-v1.0",
+  "created": "2026-08-31",
+  "branch": "LONGEVITY-SURVIVOR",
+  "tissue": "LIVER",
+  "parent_candidate": "LIVER-PLOD2-DELAYED-MECHANICAL-LOCK-CANDIDATE-YUE-2024-v1.0",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "status": "KILLER_AUDIT_COMPLETE__C1_REMAINS_UNKNOWN__THIRD_TISSUE_NOT_ADMITTED",
+  "paper": {
+    "title": "Procollagen-lysine 2-oxoglutarate 5-dioxygenase 2 promotes collagen cross-linking and ECM stiffening to induce liver fibrosis",
+    "doi": "10.1016/j.bbadis.2024.167205",
+    "pmid": "38696846",
+    "primary_public_source": "https://www.sciencedirect.com/science/article/pii/S0925443924001947"
+  },
+  "frozen_question": "Was the qualifying fibrotic/mechanical state directly established in the same Yue 2024 causal root at the day-7 boundary before therapeutic Plod2 siRNA began?",
+  "same_paper_evidence": {
+    "therapeutic_start": "Plod2 siRNA injected at day 7 of CCl4 administration before the third CCl4 injection; CCl4 continued for 14 days thereafter.",
+    "day7_direct_evidence": [
+      "Plod2 hepatic mRNA significantly up-regulated from day 7",
+      "Plod2 protein increased at the indicated fibrotic-liver time points"
+    ],
+    "direct_mechanical_baseline": {
+      "timepoint": "28_day_CCl4",
+      "measurement": "atomic_force_microscopy",
+      "result": "fibrotic liver ECM approximately 2.06-fold stiffer than control"
+    },
+    "therapeutic_endpoint": {
+      "timepoint": "21_day_CCl4_after_day7_intervention",
+      "measurements": [
+        "TEM_SEM_collagen_architecture",
+        "collagen_fiber_and_fibril_diameter",
+        "AFM_ECM_stiffness",
+        "collagen_solubility",
+        "Pyr_plus_dPyr_per_collagen",
+        "Sirius_red_fibrotic_area",
+        "ALT",
+        "AST"
+      ],
+      "direction": "Plod2 siRNA reduced crosslinking/stiffness/fibrosis and liver-injury readouts relative to scramble control."
+    }
+  },
+  "c1_test": {
+    "criterion": "C1_DELAYED_AFTER_ESTABLISHMENT",
+    "required": "The relevant repair/fibrotic physical state must be directly demonstrated as established in the SAME causal model/time window before intervention.",
+    "result": "UNKNOWN",
+    "reason": "The public same-paper root directly establishes Plod2 induction at day 7, but its explicit AFM characterization of the pre-existing fibrotic mechanical state is reported for 28-day CCl4 liver, not for the exact day-7 pre-siRNA boundary. Molecular-pathway induction is not accepted as direct physical-lock establishment."
+  },
+  "independent_support_not_fused": {
+    "paper": "Increased stiffness of the rat liver precedes matrix deposition: implications for fibrosis",
+    "doi": "10.1152/ajpgi.00032.2007",
+    "finding": "In an independent CCl4 rat model, whole-liver shear modulus was already significantly elevated at day 7.",
+    "use": "BIOLOGICAL_PLAUSIBILITY_AND_SEARCH_PRIORITY_ONLY",
+    "not_allowed_use": "CANNOT_UPGRADE_YUE_2024_C1",
+    "reason": "The strict gate forbids cross-paper and cross-model fusion to manufacture a single-root 5/5 admission."
+  },
+  "final_strict_vector": {
+    "C1_DELAYED_AFTER_ESTABLISHMENT": "UNKNOWN",
+    "C2_DIRECT_PHYSICAL_RETUNING": "YES",
+    "C3_PHYSICAL_STATE_MEASURED": "YES",
+    "C4_SAME_STATE_TRAJECTORY": "YES",
+    "C5_TISSUE_OUTCOME_WITH_INTEGRITY": "YES"
+  },
+  "decision": {
+    "binary_gate": "NOT_ADMITTED",
+    "third_distinct_strict_tissue": false,
+    "reason": "UNKNOWN in C1 is terminal for this frozen root unless new same-root provenance directly resolves the pre-intervention state.",
+    "no_posthoc_relaxation": true
+  },
+  "laws": [
+    "PLOD2_UPREGULATION_NE_DIRECT_MECHANICAL_STATE_ESTABLISHMENT",
+    "DAY28_AFM_NE_DAY7_PREINTERVENTION_AFM",
+    "INDEPENDENT_DAY7_STIFFNESS_PRIOR_NE_SAME_ROOT_C1",
+    "CROSS_PAPER_FUSION_NE_STRICT_ADMISSION",
+    "UNKNOWN_NE_YES",
+    "FOUR_OF_FIVE_NE_ADMITTED"
+  ],
+  "next_frontier": {
+    "third_tissue_search": "CONTINUE_NON_SKIN_NON_HEART_SINGLE_ROOT_C1_TO_C5_SEARCH",
+    "liver_plod2": "REOPEN_ONLY_IF_SAME_ROOT_DAY7_PREINTERVENTION_PHYSICAL_STATE_PROVENANCE_IS_FOUND",
+    "skin_parallel_gate": "CONTINUE_MATURE_SCAR_TO_ENDOGENOUS_DE_NOVO_APPENDAGE_REGENERATION_SEARCH_WITHOUT_COUNTING_IT_AS_A_NEW_TISSUE"
+  },
+  "claim_ceiling": {
+    "mechanical_clock": "PASS_TWO_DISTINCT_TISSUES_ONLY",
+    "third_distinct_tissue": "NOT_ESTABLISHED",
+    "human_therapy": "NOT_CLAIMED"
+  }
+}
