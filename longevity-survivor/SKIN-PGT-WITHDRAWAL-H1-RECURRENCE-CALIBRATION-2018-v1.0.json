@@ -1,0 +1,51 @@
+{
+  "schema": "janus.longevity_survivor.mechanical_future_set_rechallenge.calibration.v1",
+  "artifact_id": "SKIN-PGT-WITHDRAWAL-H1-RECURRENCE-CALIBRATION-2018-v1.0",
+  "created": "2026-08-31",
+  "branch": "LONGEVITY-SURVIVOR",
+  "tissue": "SKIN",
+  "paper": {
+    "title": "Early cessation of pressure garment therapy results in scar contraction and thickening",
+    "year": 2018,
+    "doi": "10.1371/journal.pone.0197558",
+    "pmid": "29897933",
+    "pmcid": "PMC5999072"
+  },
+  "withdrawal_geometry": {
+    "model": "female Red Duroc pig full-thickness burn wounds with split-thickness autograft",
+    "pressure_start": "within 1 week after injury",
+    "pressure_phase": "17 weeks pressure garment therapy",
+    "withdrawal": "pressure removed at week 17",
+    "post_withdrawal_followup": "12 additional weeks",
+    "observed_recurrence": [
+      "rapid scar contraction",
+      "increased scar height",
+      "increased hardness and roughness",
+      "decreased pliability",
+      "collagen orientation/thickness changes toward untreated-scar phenotype"
+    ]
+  },
+  "hysteresis_class": "H1_TRANSIENT_RESCUE_WITH_WITHDRAWAL_RECURRENCE",
+  "why_H1_is_supported": "Mechanical benefit is present under compression and substantially regresses after the mechanical intervention is removed.",
+  "strict_delayed_root_relation": {
+    "status": "CALIBRATION_ONLY_NOT_MECHANICAL_CLOCK_STRICT_ROOT",
+    "reason": "Compression began within the first week after injury, before an established mature scar state. This root therefore cannot replace the delayed day-28 Kim strict skin root and cannot establish post-lock rewrite."
+  },
+  "rechallenge_status": "NO_ADVERSE_RECHALLENGE_BEYOND_WITHDRAWAL",
+  "mechanical_exit_coupling": "OPEN_NOT_LINEAGE_RESOLVED",
+  "claim_ceiling": {
+    "supported": "Long mechanical improvement can remain intervention-dependent and can regress rapidly after withdrawal.",
+    "not_supported": [
+      "post-lock durable rewrite",
+      "challenge-resistant future-set rewrite",
+      "lineage-resolved repair-cell exit",
+      "human treatment prescription"
+    ]
+  },
+  "laws": [
+    "LONG_TREATMENT_NE_DURABLE_REWRITE",
+    "WITHDRAWAL_RECURRENCE_IS_HYSTERESIS_EVIDENCE",
+    "EARLY_PRESSURE_ROOT_NE_DELAYED_POST_LOCK_ROOT"
+  ],
+  "terminal": "H1_SKIN_WITHDRAWAL_RECURRENCE_SUPPORTED__H3B_NOT_TESTED"
+}
