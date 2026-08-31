@@ -1,0 +1,73 @@
+{
+  "schema": "janus.longevity_survivor.mechanical_future_set_rewrite.search_pass.v1",
+  "artifact_id": "MECHANICAL-FUTURE-SET-REWRITE-KILLER-SEARCH-2026-08-31-v1.0",
+  "created": "2026-08-31",
+  "branch": "LONGEVITY-SURVIVOR",
+  "parent_frontier": "MECHANICAL-EXIT-HYSTERESIS-STRATIFICATION-RESULT-2026-08-31-v1.0",
+  "question": "Can a tissue that has undergone mechanical retuning remain in a different response basin after withdrawal and re-exposure to the same adverse mechanical challenge?",
+  "refined_hysteresis_taxonomy": {
+    "H1": "TRANSIENT_RESCUE_WITH_RECURRENCE",
+    "H2": "OFF_INTERVENTION_PERSISTENCE_WITHOUT_RECHALLENGE",
+    "H3A": "CHALLENGE_RESISTANT_PRECONDITIONING_BEFORE_MATURE_LOCK",
+    "H3B": "POST_LOCK_CHALLENGE_RESISTANT_FUTURE_SET_REWRITE",
+    "H4": "UNKNOWN_NO_WITHDRAWAL_OR_RECHALLENGE"
+  },
+  "strongest_new_roots": [
+    {
+      "tissue": "HEART",
+      "artifact": "HEART-HYPERTROPHIC-PRECONDITIONING-H3A-RECHALLENGE-CALIBRATION-2015-v1.0",
+      "commit": "6b36d0f797dca4541d5d400fdf8c0ec84f3dad06",
+      "doi": "10.1161/CIRCULATIONAHA.114.013789",
+      "geometry": "TAC -> debanding -> re-TAC",
+      "class": "H3A_CHALLENGE_RESISTANT_PRECONDITIONING",
+      "result": "RE-TAC hearts show attenuated hypertrophy/fibrosis and better function versus naive sustained TAC under renewed pressure overload.",
+      "H3B": "NOT_ADMITTED_MATURE_FIBROTIC_LOCK_NOT_DIRECTLY_ESTABLISHED_BEFORE_DEBANDING"
+    },
+    {
+      "tissue": "SKIN",
+      "artifact": "SKIN-PGT-WITHDRAWAL-H1-RECURRENCE-CALIBRATION-2018-v1.0",
+      "commit": "0d5aa457c4fca418aadbf2b1d6b3e8cfaf4fb4e4",
+      "doi": "10.1371/journal.pone.0197558",
+      "geometry": "PGT for 17 weeks -> withdrawal for 12 weeks",
+      "class": "H1_TRANSIENT_RESCUE_WITH_WITHDRAWAL_RECURRENCE",
+      "result": "Scar contraction, height, hardness and roughness rebound after pressure withdrawal.",
+      "H3B": "NOT_TESTED_EARLY_INTERVENTION_AND_NO_ADVERSE_RECHALLENGE"
+    }
+  ],
+  "strict_root_overlay": {
+    "SKIN_KIM_2015": "H4_IN_STRICT_ROOT; separate DeBruler 2018 lineage supplies H1 withdrawal calibration but must not be fused into the Kim strict root",
+    "HEART_NEFF_2022": "H4_IN_STRICT_ROOT; separate hypertrophic-preconditioning lineage supplies H3A challenge-resistance calibration but must not be fused into the Neff post-lock root",
+    "ELBOW_JOINT_CAPSULE_SCHOLP_2025": "H1_IN_STRICT_ROOT due recurrence after capsule release"
+  },
+  "main_result": {
+    "tissue_level_same_mechanical_class_rechallenge_resistance": "SUPPORTED_AS_H3A_PRECONDITIONING_IN_HEART",
+    "post_mature_lock_challenge_resistant_rewrite": "NOT_YET_ESTABLISHED",
+    "mechanical_exit_coupling": "OPEN",
+    "scientific_breakthrough": false
+  },
+  "killer_target_H3B": {
+    "required_shape": [
+      "same-root direct establishment of mature pathological mechanical/fibrotic state before retuning",
+      "delayed direct physical retuning after that lock",
+      "time-resolved same-population repair-cell EXIT classification",
+      "withdrawal/washout of retuning where physically meaningful",
+      "re-imposition of the same or quantitatively equivalent adverse mechanical challenge",
+      "post-rechallenge ECM mechanics",
+      "post-rechallenge cell-state",
+      "post-rechallenge structural/function outcome",
+      "response remains durably shifted versus naive challenged controls"
+    ],
+    "terminal_on_missing_any_required_layer": "NOT_H3B_OR_UNKNOWN"
+  },
+  "firewalls": [
+    "H3A_PRECONDITIONING_NE_H3B_POST_LOCK_REWRITE",
+    "CROSS_PAPER_FUSION_NE_SINGLE_ROOT_H3B",
+    "LONG_FOLLOWUP_NE_RECHALLENGE",
+    "WITHDRAWAL_RECURRENCE_NE_CHALLENGE_RESISTANCE",
+    "BLUNTED_RECHALLENGE_RESPONSE_NE_LINEAGE_RESOLVED_EXIT",
+    "MATURE_LOCK_MUST_BE_DIRECTLY_ESTABLISHED_BEFORE_RETUNING",
+    "ANIMAL_MECHANISTIC_EVIDENCE_NE_HUMAN_THERAPY"
+  ],
+  "next_gate": "H3B_POST_LOCK_SAME_CHALLENGE_REWRITE_SEARCH",
+  "terminal": "H3A_FOUND__H1_CROSS_TISSUE_CALIBRATION_STRENGTHENED__H3B_POST_LOCK_REWRITE_OPEN"
+}
