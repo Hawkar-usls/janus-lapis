@@ -1,0 +1,96 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_exit_hysteresis_result.v1",
+  "artifact_id": "MECHANICAL-EXIT-HYSTERESIS-STRATIFICATION-RESULT-2026-08-31-v1.0",
+  "created": "2026-08-31",
+  "branch": "LONGEVITY-SURVIVOR",
+  "protocol": "MECHANICAL-EXIT-HYSTERESIS-STRATIFICATION-PROTOCOL-2026-08-31-v1.0",
+  "status": "THREE_STRICT_ROOTS_STRATIFIED__DIRECT_EXIT_COUPLING_NOT_YET_ESTABLISHED__DURABLE_TISSUE_REWRITE_NOT_YET_ESTABLISHED",
+  "strict_root_classification": [
+    {
+      "tissue": "SKIN",
+      "root": "SKIN-MECHANICAL-CLOCK-STRICT-ROOT-KIM-PGT-2015-v1.0",
+      "doi": "10.1097/PRS.0000000000001507",
+      "mechanical_clock": "ADMITTED_5_OF_5",
+      "exit_coupling": "UNKNOWN_NOT_LINEAGE_RESOLVED",
+      "hysteresis_class": "H4_UNKNOWN_NO_WITHDRAWAL_OR_RECHALLENGE",
+      "reason": "Pressure garment therapy remains the active mechanical intervention through the measured treatment window; the root does not provide off-compression persistence or a renewed adverse challenge, and it does not resolve myofibroblast EXIT mode."
+    },
+    {
+      "tissue": "HEART",
+      "root": "HEART-MECHANICAL-CLOCK-STRICT-ROOT-NEFF-UNTAC-2022-v1.0",
+      "doi": "10.1152/ajpheart.00148.2022",
+      "mechanical_clock": "ADMITTED_5_OF_5",
+      "exit_coupling": "UNKNOWN_NOT_LINEAGE_RESOLVED",
+      "hysteresis_class": "H4_UNKNOWN_NO_WITHDRAWAL_OR_RECHALLENGE",
+      "reason": "The aortic constriction is physically removed and remains removed; reverse remodeling is followed for 2/4/6 weeks, but there is no reloading challenge and no lineage-resolved activated-fibroblast exit route. Incomplete normalization is retained but is not by itself proof of hysteresis."
+    },
+    {
+      "tissue": "ELBOW_JOINT_CAPSULE",
+      "root": "JOINT-CAPSULE-MECHANICAL-CLOCK-STRICT-ROOT-SCHOLP-CRS-2025-v1.0",
+      "doi": "10.1002/jor.25967",
+      "mechanical_clock": "ADMITTED_5_OF_5",
+      "exit_coupling": "UNKNOWN_NO_RESOLVED_CELL_EXIT_MODE",
+      "hysteresis_class": "H1_TRANSIENT_RESCUE_WITH_RECURRENCE",
+      "reason": "A one-time capsule release improves ROM/max extension at 1 week, while stiffness/contracture partially returns by 3 weeks and connective-tissue density rises again. This directly distinguishes rescue from durable future-state rewrite."
+    }
+  ],
+  "external_calibration_roots": [
+    {
+      "system": "RAT_HEPATIC_STELLATE_CELLS_DYNAMIC_HYDROGEL",
+      "paper": "Gradually softening hydrogels for modeling hepatic stellate cell behavior during fibrosis regression",
+      "authors_short": "Caliari et al.",
+      "doi": "10.1039/C6IB00027D",
+      "classification": "PARTIAL_EXIT_WITH_REENTRY_HYSTERESIS_CALIBRATION",
+      "evidence": "Mechanically primed HSCs partially revert over 14 days after ~20 to ~3 kPa softening, but rapidly reacquire myofibroblast features after re-stiffening to diseased-liver stiffness.",
+      "authority": "CELLULAR_CALIBRATION_ONLY_NOT_STRICT_TISSUE_ROOT"
+    },
+    {
+      "system": "VALVULAR_INTERSTITIAL_CELLS_DYNAMIC_SOFTENING",
+      "paper": "Redirecting Valvular Myofibroblasts into Dormant Fibroblasts through Light-mediated Reduction in Substrate Modulus",
+      "authors_short": "Wang et al.",
+      "doi": "10.1371/journal.pone.0039969",
+      "classification": "MECHANICALLY_INDUCED_DEACTIVATION_BUT_REACTIVATABLE",
+      "evidence": "32 to 7 kPa in-situ softening rapidly downregulates alpha-SMA/CTGF and reduces activated morphology; deactivated cells remain capable of reactivation under growth/TGF-beta stimulation.",
+      "authority": "CELLULAR_EXIT_MECHANISM_CALIBRATION_ONLY"
+    },
+    {
+      "system": "VALVULAR_FIBROBLAST_PERSISTENCE_THRESHOLD",
+      "paper": "Nuclear mechanosensing drives chromatin remodelling in persistently activated fibroblasts",
+      "authors_short": "Walker et al.",
+      "doi": "10.1038/s41551-021-00709-w",
+      "classification": "EXPOSURE_DURATION_DEPENDENT_LOCK_FORMATION_CALIBRATION",
+      "evidence": "Myofibroblasts exposed to stiff matrix for 1-3 days deactivate after softening; 7-day stiff exposure produces persistent activation that remains after 2-6 days of softening.",
+      "authority": "CELLULAR_TIME_TO_LOCK_CALIBRATION_ONLY"
+    },
+    {
+      "system": "SOFT_PRIMED_MSC_CHALLENGE_RESISTANCE",
+      "paper": "Soft substrate priming erases fibrotic mechanical memory in mesenchymal stromal cells via YAP lysosomal degradation to improve therapeutic efficacy for spinal cord injury",
+      "authors_short": "Yao et al.",
+      "doi": "10.1016/j.biomaterials.2026.124311",
+      "classification": "H3_LIKE_CHALLENGE_RESISTANT_CELLULAR_RESET_CANDIDATE",
+      "evidence": "Soft priming promotes YAP cytoplasmic retention/lysosomal degradation and makes transplanted MSCs more refractory to future stiffness-induced fibrotic conversion in the chronic SCI environment.",
+      "authority": "CELLULAR_TRANSPLANT_CALIBRATION_ONLY_NOT_HOST_TISSUE_REWRITE"
+    }
+  ],
+  "main_result": {
+    "MECHANICAL_EXIT_COUPLING": "OPEN_IN_ALL_THREE_STRICT_TISSUES",
+    "HYSTERESIS_STRATIFICATION": "ACTIVE_AND_INFORMATIVE",
+    "confirmed_hysteresis_root": "ELBOW_JOINT_CAPSULE",
+    "durable_tissue_future_set_rewrite": "NOT_YET_ESTABLISHED",
+    "strongest_new_law": "IMMEDIATE_OR_EVEN_MULTI_WEEK_RESCUE_NE_DURABLE_FUTURE_SET_REWRITE"
+  },
+  "next_killer_experiment_shape": {
+    "phase_1": "establish pathological mechanical/fibrotic state",
+    "phase_2": "apply delayed direct mechanical retuning and demonstrate rescue",
+    "phase_3": "remove/terminate the retuning stimulus and observe a predefined washout",
+    "phase_4": "restore or reapply the adverse mechanical challenge",
+    "phase_5": "measure whether repair-cell state, ECM mechanics, and function remain shifted",
+    "promotion_target": "H3_CHALLENGE_RESISTANT_REWRITE_PLUS_MECHANICAL_EXIT_COUPLING"
+  },
+  "claim_ceiling": {
+    "durable_rewrite_in_admitted_tissue": "NOT_ESTABLISHED",
+    "mechanical_exit_coupled_in_admitted_tissue": "NOT_ESTABLISHED",
+    "human_therapy": "NOT_CLAIMED",
+    "scientific_breakthrough": false
+  }
+}
