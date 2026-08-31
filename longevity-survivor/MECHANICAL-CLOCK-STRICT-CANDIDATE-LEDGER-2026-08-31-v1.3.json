@@ -1,0 +1,69 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.candidate_ledger.v1_3",
+  "artifact_id": "MECHANICAL-CLOCK-STRICT-CANDIDATE-LEDGER-2026-08-31-v1.3",
+  "created": "2026-08-31",
+  "branch": "LONGEVITY-SURVIVOR",
+  "supersedes": "MECHANICAL-CLOCK-STRICT-CANDIDATE-LEDGER-2026-08-24-v1.2",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "status": "PASS_THREE_INDEPENDENT_ADMITTED_5_OF_5_TISSUES",
+  "admitted_roots": [
+    {
+      "tissue": "SKIN",
+      "node": "SKIN-MECHANICAL-CLOCK-STRICT-ROOT-KIM-PGT-2015-v1.0",
+      "doi": "10.1097/PRS.0000000000001507",
+      "criteria": {"C1":"YES","C2":"YES","C3":"YES","C4":"YES","C5":"YES"},
+      "root_integrity": "PASS_SINGLE_CAUSAL_EXPERIMENTAL_ROOT",
+      "mechanical_action": "delayed quantified external compression of established burn scar"
+    },
+    {
+      "tissue": "HEART",
+      "node": "HEART-MECHANICAL-CLOCK-STRICT-ROOT-NEFF-UNTAC-2022-v1.0",
+      "doi": "10.1152/ajpheart.00148.2022",
+      "criteria": {"C1":"YES","C2":"YES","C3":"YES","C4":"YES","C5":"YES"},
+      "root_integrity": "PASS_SINGLE_CAUSAL_EXPERIMENTAL_ROOT",
+      "mechanical_action": "delayed direct hemodynamic unloading after established pressure-overload myocardial fibrosis"
+    },
+    {
+      "tissue": "ELBOW_JOINT_CAPSULE",
+      "node": "JOINT-CAPSULE-MECHANICAL-CLOCK-STRICT-ROOT-SCHOLP-CRS-2025-v1.0",
+      "doi": "10.1002/jor.25967",
+      "criteria": {"C1":"YES","C2":"YES","C3":"YES","C4":"YES","C5":"YES"},
+      "root_integrity": "PASS_SINGLE_CAUSAL_EXPERIMENTAL_ROOT",
+      "mechanical_action": "delayed surgical release of an established post-traumatic capsular mechanical constraint after 6 weeks immobilization plus 3 weeks remobilization",
+      "special_note": "Functional rescue is temporary and stiffness partly recurs by 3 weeks; recurrence is retained as path-dependence/hysteresis rather than erased."
+    }
+  ],
+  "independence": {
+    "distinct_tissues": ["SKIN","HEART","ELBOW_JOINT_CAPSULE"],
+    "distinct_source_roots": 3,
+    "same_source_counting": false,
+    "cross_paper_fusion": false,
+    "cross_arm_synthetic_pass": false
+  },
+  "near_hits_not_promoted": [
+    {
+      "tissue": "LIVER",
+      "node": "LIVER-PLOD2-DELAYED-MECHANICAL-LOCK-CANDIDATE-YUE-2024-v1.0",
+      "criteria": {"C1":"UNKNOWN","C2":"YES","C3":"YES","C4":"YES","C5":"YES"},
+      "decision": "NOT_ADMITTED",
+      "reason": "exact day-7 pre-intervention physical lock not directly demonstrated in the same root"
+    }
+  ],
+  "anti_heuristic_audit": {
+    "weighted_score_used": false,
+    "unknown_promoted_to_yes": false,
+    "cross_paper_fusion_used": false,
+    "cross_arm_fusion_used": false,
+    "alpha_SMA_used_as_decisive_joint_capsule_C4": false,
+    "post_hoc_rule_change_used": false,
+    "negative_and_recurrence_results_retained": true
+  },
+  "gate_decision": {
+    "MECHANICAL_CLOCK_v0_3": "PASS_STRICT_THREE_TISSUE_CAUSAL_TIMING_GATE",
+    "best_supported_invariant": "Across three distinct mammalian tissue contexts, an already-established pathological mechanical/fibrotic state can be causally redirected by delayed direct physical retuning; the sign, persistence and completeness of rescue remain tissue- and phase-dependent.",
+    "permanent_reversal_universal": "REJECTED_NOT_SUPPORTED",
+    "universal_force_or_modulus_target": "REJECTED_NOT_SUPPORTED",
+    "human_regenerative_efficacy": "NOT_CLAIMED"
+  },
+  "next_gate": "MECHANICAL_EXIT_COUPLING_GATE_PLUS_HYSTERESIS_STRATIFICATION"
+}
