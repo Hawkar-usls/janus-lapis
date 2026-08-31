@@ -1,0 +1,54 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_exit_hysteresis_protocol.v1",
+  "artifact_id": "MECHANICAL-EXIT-HYSTERESIS-STRATIFICATION-PROTOCOL-2026-08-31-v1.0",
+  "created": "2026-08-31",
+  "branch": "LONGEVITY-SURVIVOR",
+  "status": "FROZEN_CLASSIFICATION_GATE__NOT_A_PROSPECTIVE_NOVELTY_PREREGISTRATION",
+  "parent": "JANUS-MECHANICAL-CLOCK-v0.3-2026-08-31",
+  "purpose": "Separate immediate mechanical rescue from true repair-state EXIT and from durable rewriting of future response under withdrawal or rechallenge.",
+  "core_distinctions": [
+    "FUNCTIONAL_RESCUE_NE_CELL_STATE_EXIT",
+    "LONG_FOLLOWUP_WHILE_RETUNING_PERSISTS_NE_DURABLE_REWRITE",
+    "OFF_INTERVENTION_PERSISTENCE_NE_CHALLENGE_RESISTANCE",
+    "APPARENT_DEACTIVATION_NE_ERASED_MECHANICAL_MEMORY",
+    "RECURRENCE_AFTER_RESCUE_IS_EVIDENCE_OF_HYSTERESIS_NOT_FAILURE_TO_HAVE_RESCUED"
+  ],
+  "mechanical_exit_coupling_gate": {
+    "E1_ESTABLISHED_ACTIVATED_REPAIR_STATE": "Before retuning, the same root directly identifies an activated repair/fibrotic cell-state population or a state-specific endogenous repair compartment. Generic collagen amount alone is insufficient for cell-state EXIT.",
+    "E2_DIRECT_MECHANICAL_RETUNING": "A direct physical/mechanical variable is changed after establishment.",
+    "E3_TIME_RESOLVED_STATE_TRANSITION": "The same root follows the activated state after retuning with enough temporal resolution to distinguish persistence from transition.",
+    "E4_EXIT_MODE_RESOLVED": "The root distinguishes apoptosis/clearance, deactivation/redifferentiation, replacement, or another explicit exit route. Marker loss alone without identity control remains UNKNOWN.",
+    "E5_MECHANICAL_TO_EXIT_CAUSAL_BINDING": "The state transition is bound to the mechanical intervention within the same causal root with contemporaneous controls.",
+    "decision": "MECHANICAL_EXIT_COUPLED only if E1-E5 are YES; any NO/UNKNOWN => NOT_COUPLED_OR_UNKNOWN"
+  },
+  "hysteresis_stratification": {
+    "H0_NO_RESCUE": "No qualifying improvement after retuning.",
+    "H1_TRANSIENT_RESCUE_WITH_RECURRENCE": "Qualifying rescue occurs, followed by return toward the pathological state after a one-time intervention, withdrawal, or continued follow-up without renewed rescue.",
+    "H2_OFF_INTERVENTION_PERSISTENCE": "Improved state persists after the retuning stimulus is removed for a defined washout/follow-up interval, but no adverse rechallenge is performed.",
+    "H3_CHALLENGE_RESISTANT_REWRITE": "After withdrawal/washout, the system is re-exposed to a frozen adverse mechanical challenge and retains materially improved state/fate relative to naive/pathological controls.",
+    "H4_UNKNOWN_NO_WITHDRAWAL_OR_RECHALLENGE": "The intervention remains mechanically active or the experiment ends before a withdrawal/rechallenge test can distinguish state rewrite from support dependence."
+  },
+  "future_set_rule": {
+    "durable_rewrite_claim_requires": [
+      "post_intervention_or_post_washout_measurement",
+      "predefined persistence interval",
+      "preferably adverse mechanical rechallenge",
+      "state/fate readout beyond immediate mechanics"
+    ],
+    "strongest_class": "H3_CHALLENGE_RESISTANT_REWRITE",
+    "formal_intuition": "A rewrite is supported when the post-retuning state preserves a different response distribution under a renewed challenge, not merely when the present observable is improved."
+  },
+  "firewalls": [
+    "ALPHA_SMA_ONLY_NE_LINEAGE_RESOLVED_EXIT",
+    "INTERVENTION_STILL_PRESENT_NE_OFF_INTERVENTION_MEMORY",
+    "REMOVAL_OF_LOAD_NE_TEST_OF_RELOAD_RESILIENCE",
+    "CELL_CULTURE_MEMORY_NE_TISSUE_LEVEL_DURABLE_REWRITE",
+    "TRANSPLANTED_PRIMED_CELL_NE_REPROGRAMMED_HOST_TISSUE",
+    "TWO_HEMISPHERES_AGREE_NE_INDEPENDENT_REPLICATION"
+  ],
+  "claim_ceiling": {
+    "human_therapy": "NOT_CLAIMED",
+    "universal_mechanical_memory_law": "NOT_CLAIMED",
+    "scientific_breakthrough": false
+  }
+}
