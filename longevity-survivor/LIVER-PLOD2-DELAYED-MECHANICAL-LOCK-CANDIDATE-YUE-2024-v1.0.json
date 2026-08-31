@@ -1,0 +1,83 @@
+{
+  "schema_id": "janus.longevity_survivor.mechanical_clock.third_tissue_candidate.v1",
+  "artifact_id": "LIVER-PLOD2-DELAYED-MECHANICAL-LOCK-CANDIDATE-YUE-2024-v1.0",
+  "created": "2026-08-31",
+  "branch": "LONGEVITY-SURVIVOR",
+  "tissue": "LIVER",
+  "protocol": "MECHANICAL-CLOCK-NO-HEURISTIC-ADMISSION-PROTOCOL-2026-08-24-v1.0",
+  "status": "HIGH_VALUE_THIRD_TISSUE_CANDIDATE__NOT_ADMITTED_C1_UNKNOWN",
+  "paper": {
+    "title": "Procollagen-lysine 2-oxoglutarate 5-dioxygenase 2 promotes collagen cross-linking and ECM stiffening to induce liver fibrosis",
+    "authors_short": "Yue et al.",
+    "journal": "Biochimica et Biophysica Acta - Molecular Basis of Disease",
+    "year": 2024,
+    "doi": "10.1016/j.bbadis.2024.167205",
+    "pmid": "38696846"
+  },
+  "causal_root": {
+    "model": "male ICR mouse CCl4 liver fibrosis",
+    "therapeutic_intervention_start": "day 7 of CCl4 administration before the third CCl4 injection",
+    "continued_injury": "CCl4 continued for 14 days after therapeutic siRNA start",
+    "intervention": "chemically modified stable Plod2 siRNA",
+    "mechanical_axis": "PLOD2-mediated collagen crosslinking -> ECM stiffness",
+    "same_root_post_intervention_readouts": [
+      "collagen fiber and fibril morphology by TEM/SEM",
+      "Pyr+dPyr collagen crosslink products",
+      "collagen solubility",
+      "liver ECM stiffness by AFM",
+      "Sirius-red fibrotic area",
+      "serum ALT",
+      "serum AST"
+    ]
+  },
+  "strict_criteria": {
+    "C1_DELAYED_AFTER_ESTABLISHMENT": {
+      "value": "UNKNOWN",
+      "basis": "The therapeutic intervention begins at day 7. The paper reports PLOD2 mRNA/protein upregulation from day 7, but the directly quantified reference mechanical state in the accessible text is the 28-day fibrotic liver AFM/crosslink characterization. PLOD2 upregulation alone is not accepted as direct demonstration that the qualifying fibrotic/mechanical state was already established at the exact pre-intervention day-7 boundary.",
+      "killer_requirement": "Direct day-7 pre-siRNA evidence in the same root for fibrosis/ECM physical state, such as AFM/rheology plus collagen/crosslink architecture or an equivalent explicit established-state measurement."
+    },
+    "C2_DIRECT_PHYSICAL_RETUNING": {
+      "value": "YES",
+      "basis": "PLOD2 is a collagen lysyl hydroxylase directly controlling stabilized collagen crosslinks; the intervention causally reduces measured crosslink products and tissue stiffness rather than merely altering a downstream mechanotransduction readout.",
+      "boundary": "This YES is limited to direct ECM-crosslink retuning and does not create a general rule that molecular interventions satisfy C2."
+    },
+    "C3_PHYSICAL_STATE_MEASURED": {
+      "value": "YES",
+      "basis": "The therapeutic root includes matched CCl4+scramble and CCl4+Plod2-siRNA tissue with AFM stiffness plus collagen crosslink and architecture measurements after retuning. The frozen protocol allows matched contemporaneous controls sufficient to quantify the mechanical/ECM change."
+    },
+    "C4_SAME_STATE_TRAJECTORY": {
+      "value": "YES",
+      "basis": "The same therapeutic root measures the endogenous fibrotic ECM state after retuning using collagen architecture, crosslinking, solubility and Sirius-red fibrotic area. This is accepted as a scar/fibrosis-state readout, not as lineage-resolved HSC EXIT kinetics."
+    },
+    "C5_TISSUE_OUTCOME_WITH_INTEGRITY": {
+      "value": "YES",
+      "basis": "Therapeutic Plod2 inhibition reduces fibrotic area and lowers ALT/AST relative to CCl4 controls, providing structural/injury outcome without evidence of worsened tissue injury in the reported root."
+    }
+  },
+  "decision": {
+    "binary_gate": "NOT_ADMITTED",
+    "reason": "C1 is UNKNOWN; the frozen conjunctive gate forbids partial credit.",
+    "yes_count_for_navigation_only_not_scoring": 4,
+    "unknown_count": 1,
+    "claim": "This is a high-value near-complete candidate for a third distinct strict tissue, not an admitted third tissue."
+  },
+  "relation_to_prior_liver_root": {
+    "prior": "LIVER-DELAYED-ECM-LOCK-REVERSAL-LOXL2-2017-v1.0",
+    "gain": "Yue 2024 adds direct AFM tissue-stiffness measurement and therapeutic crosslink retuning absent from the earlier LOXL2 root.",
+    "remaining_gap": "Exact pre-intervention established-state proof at day 7 remains unresolved under the frozen C1 wording.",
+    "fusion_rule": "Do not combine the LOXL2 2017 pre-established-fibrosis timing proof with Yue 2024 AFM measurements to synthesize a false 5/5 root."
+  },
+  "laws": [
+    "PLOD2_UPREGULATION_NE_ESTABLISHED_FIBROTIC_MECHANICAL_STATE",
+    "FOUR_OF_FIVE_NE_ADMITTED",
+    "CROSS_PAPER_COMPLEMENTARITY_NE_SINGLE_ROOT_PASS",
+    "AFM_POST_TREATMENT_NE_PRE_INTERVENTION_STATE_PROOF",
+    "DIRECT_CROSSLINK_RETUNING_MAY_SATISFY_C2_WHEN_THE_PHYSICAL_CHANGE_IS_MEASURED"
+  ],
+  "next_gate": "YUE_2024_DAY7_PREINTERVENTION_MECHANICAL_STATE_KILLER_AUDIT",
+  "claim_ceiling": {
+    "third_distinct_strict_tissue": "NOT_ESTABLISHED",
+    "liver_delayed_mechanical_lock_causality": "STRONG_CANDIDATE_NOT_STRICTLY_ADMITTED",
+    "human_therapy": "NOT_CLAIMED"
+  }
+}
