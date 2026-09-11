@@ -13,38 +13,36 @@ def atomic(p:pathlib.Path,obj:Any):
     tmp.write_text(json.dumps(obj,ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8'); tmp.replace(p)
 def canon(obj): return json.dumps(obj,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('--state-dir',required=True); ap.add_argument('--effective-config',required=True); ap.add_argument('--max-candidates',type=int,default=300); a=ap.parse_args()
+    ap=argparse.ArgumentParser(); ap.add_argument('--state-dir',required=True); ap.add_argument('--effective-config',required=True); ap.add_argument('--max-contexts',type=int,default=600); a=ap.parse_args()
     root=pathlib.Path(a.state_dir); cfg=load_json(pathlib.Path(a.effective_config),{})
     routes={d['id']:d.get('target_repositories',[]) for d in cfg.get('directions',[])}
-    route_meta={d['id']:{'base_direction_id':d.get('base_direction_id',d['id']),'mirror_lens':d.get('mirror_lens','FORWARD'),'title':d.get('title',d['id'])} for d in cfg.get('directions',[])}
     seen_path=root/'route_seen.json'; seen=load_json(seen_path,{})
-    cand_path=root/'candidates.jsonl'; rows=[]
-    if cand_path.exists():
-        with cand_path.open(encoding='utf-8',errors='replace') as f:
+    context_path=root/'contexts.jsonl'; rows=[]
+    if context_path.exists():
+        with context_path.open(encoding='utf-8',errors='replace') as f:
             for line in f:
                 if line.strip():
                     try: rows.append(json.loads(line))
                     except Exception: pass
-    rows=rows[-a.max_candidates:]
+    rows=rows[-a.max_contexts:]
     per_repo={}
     for c in rows:
-        did=c.get('direction_id'); cid=c.get('candidate_id')
-        if not did or not cid or did not in routes: continue
+        did=c.get('direction_id'); cid=c.get('candidate_id'); ctx=c.get('context_id')
+        if not did or not cid or not ctx or did not in routes: continue
         for repo in routes[did]:
-            token=f'{cid}|{repo}'
+            token=f'{ctx}|{repo}'
             if token in seen: continue
-            m=route_meta[did]
             item={
-              'schema':'janus.beetle.repo_memory_item.v1','routed_at':now(),'target_repository':repo,
-              'candidate_id':cid,'direction_id':did,'base_direction_id':m['base_direction_id'],'mirror_lens':m['mirror_lens'],
-              'direction_title':m['title'],'source':c.get('source'),'url':c.get('url'),'title':c.get('title'),
-              'summary':c.get('summary'),'tags':c.get('tags',[]),'score':c.get('score'),'keyword_hits':c.get('keyword_hits',[]),
+              'schema':'janus.beetle.repo_memory_item.v2','routed_at':now(),'target_repository':repo,
+              'candidate_id':cid,'context_id':ctx,'direction_id':did,'base_direction_id':c.get('base_direction_id',did),'mirror_lens':c.get('mirror_lens','FORWARD'),
+              'direction_title':c.get('direction_title',did),'source':c.get('source'),'url':c.get('url'),'title':c.get('title'),
+              'summary':c.get('summary'),'tags':c.get('tags',[]),'score':c.get('context_score'),'keyword_hits':c.get('context_keyword_hits',[]),
               'source_published':c.get('published'),'source_updated':c.get('updated'),
               'epistemic_status':'DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY',
-              'firewall':['ROUTED_NE_VERIFIED','INBOX_NE_EVIDENCE','PRIORITY_NE_TRUTH','MIRROR_LENS_NE_CONFIRMATION']
+              'firewall':['ROUTED_NE_VERIFIED','INBOX_NE_EVIDENCE','PRIORITY_NE_TRUTH','MIRROR_LENS_NE_CONFIRMATION','SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES']
             }
-            per_repo.setdefault(repo,[]).append(item); seen[token]={'routed_at':item['routed_at'],'direction_id':did}
-    summary={'schema':'janus.beetle.mirror_router.run.v1','at':now(),'repositories':{},'total_new_items':0}
+            per_repo.setdefault(repo,[]).append(item); seen[token]={'routed_at':item['routed_at'],'direction_id':did,'context_id':ctx}
+    summary={'schema':'janus.beetle.mirror_router.run.v2','at':now(),'repositories':{},'total_new_items':0,'input':'contexts.jsonl'}
     for repo,items in sorted(per_repo.items()):
         payload={'schema':'janus.beetle.repo_memory_batch.v1','created_at':now(),'target_repository':repo,'items':items,
                  'claim_ceiling':'DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY'}
