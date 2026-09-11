@@ -8,6 +8,7 @@ on:
     paths:
       - "tools/universal_beetle.py"
       - "tools/beetle_director_overlay.py"
+      - "tools/beetle_context_projector.py"
       - "tools/beetle_mirror_router.py"
       - "data/beetle/directions.json"
       - ".github/workflows/universal-beetle-hourly.yml"
@@ -93,7 +94,15 @@ jobs:
           if [[ -n "$GRAZER_TASK" ]]; then args+=(--grazer-task "$GRAZER_TASK"); fi
           python lapis/tools/universal_beetle.py "${args[@]}" | tee beetle-memory/data/beetle-state/last_console.json
 
-      - name: Route new discoveries into provenance-bound repo mirrors
+      - name: Project source identities through every active mirror lens
+        if: always()
+        run: |
+          python lapis/tools/beetle_context_projector.py \
+            --state-dir beetle-memory/data/beetle-state \
+            --effective-config lapis/runtime/effective_directions.json \
+            | tee beetle-memory/data/beetle-state/last_context_console.json
+
+      - name: Route new mirror contexts into provenance-bound repo mirrors
         if: always()
         run: |
           python lapis/tools/beetle_mirror_router.py \
@@ -125,8 +134,10 @@ jobs:
           path: |
             lapis/runtime/effective_directions.json
             beetle-memory/data/beetle-state/latest_run.json
+            beetle-memory/data/beetle-state/latest_context_projection.json
             beetle-memory/data/beetle-state/latest_routing.json
             beetle-memory/data/beetle-state/last_console.json
+            beetle-memory/data/beetle-state/last_context_console.json
             beetle-memory/data/beetle-state/last_routing_console.json
           if-no-files-found: warn
           retention-days: 14
