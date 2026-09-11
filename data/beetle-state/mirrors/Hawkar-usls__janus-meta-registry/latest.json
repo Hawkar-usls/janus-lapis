@@ -1,0 +1,1520 @@
+{
+  "batch_id": "3d09a095d073ac56ba6f",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "created_at": "2026-09-11T03:32:11.223800Z",
+  "items": [
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "d397e2eae40f5a010227b475",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199517Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_published": "2026-09-10T17:57:32Z",
+      "source_updated": "2026-09-10T17:57:32Z",
+      "summary": "Camera traps often run in the field on edge hardware with limited or no connectivity, making small, locally-deployable vision-language models (VLMs) -- not frontier-scale ones -- the practically relevant class to evaluate for species identification. We test whether models in this deployment-relevant 2--8B range carry genuine taxonomic knowledge, evaluating four such VLMs (Qwen3-VL 2B/4B/8B, Gemma3 4B) against the domain-specific specialist BioCLIP (300M parameters) on a 96-species task, comparing clean iNaturalist photographs against camera-trap imagery from 6 LILA.science collections, on two independently-sampled evaluation sets. All models identify species far above chance, but every model -- general-purpose or specialist -- degrades sharply on field imagery (domain gaps of 9.6--26.6 percentage points, consistent across taxonomic levels and both evaluation sets), indicating the degradation reflects general image legibility rather than fine-grained discrimination failure. BioCLIP substantially outperforms every VLM tested (by 33.2--59.2 percentage points across an expanded 200-image sample for every model) despite its far smaller size, suggesting the gap reflects specialized training data rather than model scale; yet BioCLIP's own domain gap (18.0 points) is statistically indistinguishable from the best VLM's (22.3 points), suggesting the clean-to-field degradation itself is a property of the image-quality shift rather than a general-purpose-model weakness. Under open-set prompting, 5.9--9.6% of responses are syntactically valid but taxonomically nonexistent species names; the relative fabrication-rate ranking across models replicates exactly across both evaluation sets, a more robust finding than any single point estimate.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Can Edge-Deployable Vision-Language Models Identify Species?",
+      "url": "https://arxiv.org/abs/2609.11916v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "38cfb0501bc60899a3c5be98",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199553Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 5.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-10T15:09:08Z",
+      "source_updated": "2026-09-10T15:09:08Z",
+      "summary": "Self-evolving runtime harnesses can substantially improve the capabilities of large language model (LLM) agents and provide a promising paradigm for optimizing agent execution. Existing harness evolution methods typically rely on iterative search, repeatedly evaluating and revising candidate harnesses based on execution feedback from task instances. While this paradigm enables continuous harness optimization, it incurs substantial time overhead due to repeated agent executions and code modifications, and may overfit to observed tasks and specific failure patterns, resulting in degraded generalization to unseen tasks. We identify the lack of principled failure diagnosis as a key bottleneck in harness evolution: an observed failure can reflect either model-specific deficiencies or systematic harness deficiencies, and directly optimizing against individual failures can lead to unnecessary model-specific accommodation. We therefore propose Ecdysis, an efficient and effective framework that distinguishes model-specific accommodation from harness-level repair and biases adaptation toward systematic harness deficiencies by identifying recurring cross-task failure patterns. Ecdysis adopts a batch-level cross-instance failure aggregation paradigm to jointly analyze failure evidence from multiple task instances and further introduces Failure-Driven Collaborative Refinement to diagnose failure causes and iteratively refine harness modification specifications. By combining cross-instance failure analysis with multi-role diagnosis, Ecdysis enables more effective harness evolution with lower training time. Experiments show that Ecdysis achieves up to a 1.84x speedup in harness training compared with existing harness evolution methods, while improving the reasoning accuracy of the resulting harnesses by 18.56%.",
+      "tags": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Ecdysis: Efficient and Effective Training of Runtime Harnesses for LLM Agents",
+      "url": "https://arxiv.org/abs/2609.11677v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "343d4c568369ea6ae72b2c57",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure",
+        "provenance"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199578Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.7083,
+      "source": "arxiv",
+      "source_published": "2026-09-10T12:59:04Z",
+      "source_updated": "2026-09-10T12:59:04Z",
+      "summary": "Chemistry, Manufacturing and Controls (CMC) process development generates an enormous body of technical information across a multi-stage, knowledge-intensive continuum from drug discovery to commercial manufacturing. This knowledge is traditionally fragmented across functions and heterogeneous formats, causing traceability gaps and significant knowledge-management costs during technology transfer and regulatory filing. We present a modular agentic-AI platform that converts a heterogeneous corpus of process-development documents into a queryable, dual-layer knowledge graph. A base knowledge layer builds a lexical graph with a Document-Section-Chunk hierarchy through lossless ingestion of digital, scanned, handwritten, and multilingual documents, while an intelligence layer extracts ontology-aligned entities and bridges cross-document concepts through a provenance-anchored domain graph. LLM agents operate across both layers, selecting the retrieval path best suited to each question. We evaluate the lexical layer with a novel three-tier protocol measuring the deployment-fidelity of a retrieval-augmented generation (RAG) system on proprietary data, demonstrated on 505 questions curated from 38 development reports of a Sanofi small-molecule program. Tier-1 multiple-choice accuracy of 95% signals strong platform reliability; the stricter Tier-2 LLM-judge pass rate of 85%, which degrades on comparative and corpus-wide questions, reveals a failure taxonomy that Tier-1 accuracy alone fails to capture. A router agent selects between layers according to question type. We anticipate this protocol will enable future designers of agentic platforms to assess their systems against nonpublic databases, and that graph-based architectures will see broader adoption in pharma as a means of transforming fragmented document repositories into structured process intelligence.",
+      "tags": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "From Document Silos to Process Intelligence: A Multi-Layer Knowledge Graph for CMC Process Development",
+      "url": "https://arxiv.org/abs/2609.11493v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "271e7734460d42987f752a9e",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199605Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_published": "2026-09-10T12:00:56Z",
+      "source_updated": "2026-09-10T12:00:56Z",
+      "summary": "Scientific workflows increasingly use repeated queries, multiple models, and interacting agents. Reliability therefore depends on whether models preserve correct conclusions, accept valid corrections, and contribute errors that a selector can distinguish. Using SycoBench- 600 as a controlled measurement substrate, we evaluate these requirements through selective updating, defined by resistance to misleading suggestions and uptake of correct suggestions. The study covers ten models and 17,055 trajectories. Published models span 13.4 to 71.6 percentage points in selectivity. Under identical local evaluation, Qwen3-4B is selectively adaptive at 45.6 points, Gemma3-4B is destabilized at minus 14.1 points, and SmolLM3-3B follows both correct and wrong explicit suggestions, producing zero selectivity. Matched interventions identify model specific responses to doubt, authority, and explicit advice. Among seven published models, the best reaches 95.3 percent accuracy, plurality reaches 88.6 percent, and the oracle ceiling is 99.8 percent. Mean error correlation of 0.285 reduces seven models to an effective independent count of 2.58. A leave-one-stem-family-out reliability selector reaches 96.2 percent, recovering 67.7 percent of the plurality-to-oracle gap. These results establish selective updating, error diversity, and calibrated adjudication as jointly measurable design targets for multi-model scientific workflows.",
+      "tags": [
+        "cs.DL"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Wavering Oracles: Selective Updating and Correlated Failures in LLMs and Their Implications for Scientific Workflows",
+      "url": "https://arxiv.org/abs/2609.11428v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "b13dc0796f791e0ce8838a7a",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure",
+        "limitation",
+        "provenance"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199631Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 11.2917,
+      "source": "arxiv",
+      "source_published": "2026-09-10T08:55:00Z",
+      "source_updated": "2026-09-10T08:55:00Z",
+      "summary": "Five decades of litigation have disgorged hundreds of millions of pages of formerly secret business records from the tobacco industry, along with documents from the makers of drugs, chemicals, food, firearms, and fossil fuels. Yet these archives have been effectively inaccessible to general-purpose large language models (LLMs) because they have never been compiled into an LLM-readable corpus. Chatbots may be familiar with some of the materials contained in such archives but, with no direct access to the documents, they are vulnerable to hallucination and other defects. Here we introduce INDRA, a research platform designed to remedy such failures by embedding the conventions of archival historiography into a system-level protocol governing every output. The platform federates UCSF's Industry Documents Library, Columbia and CUNY's ToxicDocs, Stanford's SRITA, and other heretofore siloed collections, and provides three interlinked safeguards: (1) a closed evidentiary sandbox confines the model to a user-selected corpus, blocking retrieval from external sources that could introduce bias; (2) real-time provenance tagging marks the boundary between archival evidence and parametric inference; and (3) a system-level protocol enforced by deterministic scripts guides the structure of every output. Together these safeguards prevent the model from conflating \"the documents say X\" with \"I think X\" or \"I learned X from prior training.\" The result is an LLM-powered research partner enabling massive multi-archival investigations, a tool whose outputs are designed to be checked rather than trusted, and whose architecture makes the conditions of knowledge production visible and auditable. Three case studies demonstrate the method's analytical value and limitations, including what we call the Heraclitus effect, the steppingstone dilemma, and the gullibility (or mafia) problem.",
+      "tags": [
+        "cs.DL",
+        "cs.CL",
+        "cs.CY"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "INDRA: A New AI Tool for Exploring Tobacco, Fossil Fuel, and Chemical Industry Archives",
+      "url": "https://arxiv.org/abs/2609.11261v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "e255bec84401b84924a918cc",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199661Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_published": "2026-09-10T08:41:07Z",
+      "source_updated": "2026-09-10T08:41:07Z",
+      "summary": "Autonomous research agents are increasingly expected to search the literature, analyze experimental evidence, and generate scientific hypotheses. These capabilities require multi-step evidence grounded reasoning that progressively acquires, integrates, and verifies evidence before reaching a conclusion. Existing multimodal benchmarks, however, largely evaluate final-answer accuracy, leaving open whether predictions are actually supported by traceable scientific evidence. We introduce Sci-MMR, a benchmark for multi-step evidence-grounded scientific reasoning built on structured argument graphs linking scientific claims, citation-grounded knowledge, visual evidence, and supporting regions. Sci-MMR comprises 235 multi-hop reasoning tasks spanning four scientific disciplines, with an average of nine figure panels per task. Evaluating eight frontier multimodal models, we find that answer accuracy consistently exceeds complete-evidence recovery rate by more than 20%, revealing a substantial gap that answer-only evaluation is structurally unable to capture. Through controlled interventions, we identify two fundamental bottlenecks. First, evidence acquisition: models struggle to extract complete structured evidence from scientific figures, accounting for 57.2% of failures. While cropping tools yield modest gains (+4.5 points), providing gold evidence improves accuracy by up to 37.0 points, indicating difficulty in assembling complete multi-region evidence. Second, evidence integration: models struggle to translate available evidence into correct conclusions, accounting for 31.8% of failures, while even with gold evidence the strongest model achieves only 69.1% accuracy on the hardest tasks. These findings indicate that current answer-centric benchmarks substantially overestimate the evidence-grounded reasoning capabilities of multimodal research agents",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Sci-MMR: Benchmarking Multi-Step Evidence-Grounded Scientific Reasoning in Multimodal Agents",
+      "url": "https://arxiv.org/abs/2609.11243v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "5019fab68ccf57386ab312d8",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode",
+        "reverse"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199684Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 7.0833,
+      "source": "arxiv",
+      "source_published": "2026-09-10T08:35:06Z",
+      "source_updated": "2026-09-10T08:35:06Z",
+      "summary": "Test-time adaptation (TTA) offers many ways to update a deployed model without labels, but choosing the wrong update can make a strong source model worse. Recent methods therefore try to predict which adaptation will work from unlabeled test data. We ask a prior question: does the evidence given to the selector contain enough information to determine the best action at all? We show that this is not guaranteed, even with a perfect selector. If an observation channel makes two deployments look the same while their TTA rankings differ, reliable selection is impossible from that channel; richer evidence can restore the decision only when it resolves the relevant ambiguity. We make this boundary exact in a finite-batch Gaussian TTA model, where doing nothing beats mean recentering for small shifts, recentering wins beyond a unique critical shift, and the boundary shrinks as $1/\\sqrt n$. Public benchmark studies on CIFAR-100-C and DomainNet-126 show the same failure mode with modern TTA methods: changing only deployment structure can reverse the oracle action while global order-blind evidence remains unchanged. The result is a practical way to separate two failure modes that are usually mixed together: a weak selector versus an information channel that cannot support the desired decision in the first place.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "When is Test-Time Adaptation Identifiable From Unlabeled Evidence?",
+      "url": "https://arxiv.org/abs/2609.11235v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "217cf990d09c7a254374a52e",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199708Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_published": "2026-09-10T06:13:53Z",
+      "source_updated": "2026-09-10T06:13:53Z",
+      "summary": "Verification and validation (V&V) of classification models is crucial to enable a wide range of sensor processing applications. Currently, the V&V process relies on time-consuming manual inspection of erroneous samples to find meaningful patterns. This work explores the use of Vision Language Models (VLMs) to speed up this laborious process. VLMs are trained to embed images into a semantically meaningful vector representation, from which human-interpretable systematic errors can be distilled. Deploying such VLM-based methods in a defence context introduces two major challenges: (1) the defence domain is underrepresented in the training data of VLMs, and (2) surroundings and context are less diverse than for other domains. This study provides an initial assessment of the suitability of VLM-based methods for V&V of defence applications. We propose a VLM-based error slice detection (ESD) method that independently groups and labels systematic errors made by a classification model. We demonstrate that this method is able to identify operationally-relevant artificially added perturbations in a non-military dataset. In a military context, our method clusters and describes images based on their surroundings, but also exhibits overlap between cluster descriptions. We further investigate the difference in embedding variation between our military and non-military dataset, which remains a topic of interest. Although the results do not yet warrant fully automated V&V through VLM-based ESD, they show that VLMs could be used to accelerate V&V processes in the future.",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.ET"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Beyond Benchmarks: Using VLMs to Reveal Systematic Classification Failures Under Real World Conditions",
+      "url": "https://arxiv.org/abs/2609.11126v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "65946809b8f098d82f9b1097",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199734Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_published": "2026-09-10T05:02:21Z",
+      "source_updated": "2026-09-10T05:02:21Z",
+      "summary": "Applied work often locates a threshold by linearizing a smooth function about a reference point and solving for the crossing. When the function is curved, the linear crossing can be substantively displaced even when standard errors are valid. We introduce the curvature-overstatement parameter \\(Θ_{COT}=\\log(|h_2^*|/|h_1^*|)\\), the log ratio of second- to first-order threshold displacement. On the quadratic branch continuous with the linear solution, \\(|h_2^*/h_1^*|=2/(1+\\sqrt{1-u})\\), where \\(u=2qa/b^2\\) is a dimensionless index formed from the local gap, slope, and curvature. Thus \\(Θ_{COT}\\) is scale-free, depends on the local parameters through one scalar, and has regular-domain range \\((-\\infty,\\log 2)\\), with boundary limit \\(\\log 2\\) at tangency. We derive regular asymptotic inference, characterize local-to-tangency and weak-slope failures, and give a remainder bound linking the second-order crossing to the true threshold. The main practical contribution is an adequacy test that can affirm that the linear threshold is accurate within a prespecified proportional tolerance, rather than treating failure to detect curvature as evidence of adequacy. Monte Carlo results confirm regular-case calibration, the predicted nonstandard behavior near tangency, and failure under weak slope, while bootstrap diagnostics identify regimes in which regular inference should not be used. COT therefore provides an effect-size scale, adequacy test, and diagnostics for deciding whether a first-order threshold is accurate enough to report.",
+      "tags": [
+        "stat.ME"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Is the Linear Threshold Good Enough? A Scale-Free Parameter and Adequacy Test for Curvature-Induced Threshold Displacement",
+      "url": "https://arxiv.org/abs/2609.11091v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "57e87a20f5be0cf537a4f875",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199761Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_published": "2026-09-10T03:20:46Z",
+      "source_updated": "2026-09-10T03:20:46Z",
+      "summary": "AI agents increasingly act through tools and delegated authority, but general incident repositories rarely capture the mechanisms needed to compare public failures with agent-security evaluations. We present the Agent Incident Registry (AIR), a source-linked catalog containing \\N{} records of agent-related events disclosed from \\Yfirst{} through \\Ylast{}. Each record includes supporting evidence, a stable identifier, and missingness-aware labels for causal role, disclosure class, mechanism, and outcome. Among the \\Nprimary{} generative-system records in which the agent acted, \\Rprimary{} involved realized harm (\\Pprimary\\%). Realized outcomes concentrate in in-the-wild and safety-failure records, while responsible disclosures and research demonstrations are overwhelmingly demonstrated; the aggregate share therefore characterizes collection composition rather than deployment risk. After initial curation, a second human reviewer checked all \\N{} records and their existing labels for completeness and correctness. In a deployment-analogue audit, InjecAgent's \\NInjecAgentCases{} cases occupy three of AIR's twelve surfaces and are all attacker-triggered, whereas AIR contains \\Nsafety{} no-adversary safety failures. AIR supports source-grounded case retrieval and evaluation-scope auditing, not failure-rate or control-efficacy estimation.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "The Agent Incident Registry: Toward Preventing Repeated AI Agent Failures",
+      "url": "https://arxiv.org/abs/2609.11030v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "1ff2b110d96fbfc1b5191bf4",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199789Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_published": "2026-09-10T01:48:29Z",
+      "source_updated": "2026-09-10T01:48:29Z",
+      "summary": "It is well-known that learning a pure $n$-qubit stabilizer state $|ψ\\rangle$ both requires, and can be accomplished with, access to a number of copies of $|ψ\\rangle$ linear in $n$. However, the precise constant coefficient of this scaling does not appear to have been determined. Here we prove that $L_δ(n)$, the smallest number of copies from which a quantum procedure can identify any stabilizer state with failure probability at most $0<δ<1/8$, satisfies $n+\\lceil\\log_2(1/δ)\\rceil-3\\leq L_δ(n)\\leq n+\\left\\lceil\\log_2(1/δ)\\right\\rceil+4$. We present a polynomial-time quantum learning algorithm that saturates this bound, achieving a constant factor improvement in sample-complexity over previously known approaches. As an immediate corollary, we obtain via the Choi-Jamiolkowski isomorphism an algorithm for learning an unknown $n$-qubit Clifford unitary from $2n+\\left\\lceil\\log_2(1/δ)\\right\\rceil+4$ queries, the $n$-dependence of which we show to be optimal. Our proof technique, which involves Fourier analysis on the abelian group $\\mathbb{Z}_4^n \\times \\mathbb{F}_2^{n(n-1)/2}$, seems to be qualitatively different to previous approaches to stabilizer state learning, and may be of some independent interest; in particular, it admits natural generalisations to further problems in quantum learning theory.",
+      "tags": [
+        "quant-ph"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Sample-optimal learning of stabilizer states",
+      "url": "https://arxiv.org/abs/2609.10974v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "aff116170bc7a8d0646db137",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199814Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_published": "2026-09-10T01:42:40Z",
+      "source_updated": "2026-09-10T01:42:40Z",
+      "summary": "Agentic systems commit state-changing actions, but additional verifiers can inherit the same upstream fault. We present VP-CONTROL, a runtime-assurance design and deterministic benchmark for cost-aware commit gates. Its 48 task templates yield 2,880 scenarios across six fault regimes. A fixed-call 2 x 2 experiment separates verifier-model diversity from evidence-source diversity. On frozen proposals from two local actor families, a cross-model vote over shared evidence approves 62.9% of unsafe proposals, versus 22.9% with an independent source. The source effect is 40.9 percentage points, compared with 11.3 for model diversity. A portfolio controller selects verification plans using only deployment-observable metadata. Approximate cluster-adjusted calibration at a nominal 5% per-task target yields 1.9% unsafe execution and 38.2% automated safe coverage on the locked test. Matched-budget portfolios also improve on fixed verification policies. Transfer remains conditional: unseen fault families yield 16-26% risk, and a FinQA check fails to reproduce the source effect with the tested small verifiers. A preregistered live HTTP/SQLite study tests concurrent writes and lost responses. After-check races defeat verifier-only gates; transactional partial guards prevent only covered failures, while a full atomic guard records no unsafe effects across 216 episodes. Idempotent request identifiers prevent duplicate effects after lost responses. The results motivate explicit evidence lineage, cost-aware selection, and commit-time enforcement, while exposing the limits of approximate calibration and local-tool generalization.",
+      "tags": [
+        "cs.SE"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Engineering Reliable Commit Gates for Agentic AI: Cost-Aware Verification Portfolios under Common-Mode Data Failures",
+      "url": "https://arxiv.org/abs/2609.10969v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "421f1176adcac175736d923b",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199842Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "Doucette argues the Fermi-Pasta-Ulam-Tsingou paradox is not about absence of nonlinearity but about transport. Nonlinear coupling exists, yet energy does not immediately spread to all modes. The book introduces the Trojan framework: a local Hamiltonian architecture where dominant oscillatory modes, spectral separation, and near-integrable normal forms suppress action transport. Recurrence is protected nonlinear coherence; thermalization is resonant thickening. Evidence includes an optical experiment by Pierangeli et al. showing FPUT-type recurrence governed by an integrable nonlinear Schr&ouml;dinger skeleton, controllable by amplitude and phase, and lost when integrability breaks. Discrete FPUT evidence comes from q-breathers, exact periodic orbits localized in normal-mode space. They supply a coherent backbone. Floquet stability tests local persistence. Resonances between q-breather frequencies collapse normal-form divisors, create spectral peaks, and generate composite periodic orbits. These are not failures of coherence but structural exits: the coherent backbone enlarges before equipartition. The book distinguishes thin and thick chaos. Thin chaos is local instability or irregular motion whose transport consequences remain confined; thick chaos occurs when instability gains reach to the failure region. The diagnostic is modal leakage, spectral entropy, recurrence fidelity, resonance distance, and transport connectivity. The book also extends the framework to intramolecular vibrational energy redistribution. Coupling is not transport; chemical failure depends on whether prepared action reaches the failure scale within chemical time. A thinness ratio compares maximum excursion to failure threshold. Isolated Fermi resonance can remain confined; resonance overlap may open transport. A selectivity window can exist. Overall, FPUT becomes a model case of protected transport. The paradox is reframed: why does nonlinear coupling fail to become transport-effective? The answer is Trojan architecture and resonant structural exit. The book synthesizes existing results rather than proving global integrability, and remains local, finite-time, and falsifiable. It argues that stability is not absence of perturbation but containment of transport, and that thermalization begins when resonance opens effective channels.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "FPUT Paradox Explained: Why Coupling Is Not Transport",
+      "url": "https://zenodo.org/records/22700592"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "4e0f18b0b746a438e9991a75",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199866Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_published": "2026-09-06",
+      "source_updated": null,
+      "summary": "Abstract Background: &nbsp;High-resolution computed tomography (HRCT) of the temporal bone is routinely used for the preoperative evaluation of chronic suppurative otitis media (CSOM) with cholesteatoma. However, its accuracy in predicting intraoperative findings remains variable. This study aimed to evaluate the correlation between preoperative HRCT temporal bone findings and intraoperative findings in patients undergoing tympanomastoidectomy, and to assess the diagnostic usefulness of HRCT in preoperative surgical planning.&nbsp; Materials and Methods: &nbsp;This prospective longitudinal observational study was conducted in the Department of Otorhinolaryngology at a tertiary care teaching hospital from June 2020 to November 2022. A total of 129 patients aged &gt;6 years with CSOM planned for tympanomastoidectomy were included. All patients underwent clinical evaluation, otoendoscopy, otomicroscopy, pure tone audiometry and HRCT temporal bone followed by surgery. HRCT findings regarding disease extent, ossicular chain, facial nerve canal, tegmen plate, sigmoid sinus plate, lateral semicircular canal and other anatomical structures were compared with intraoperative findings. Diagnostic accuracy was assessed using sensitivity, specificity, positive predictive value (PPV) and negative predictive value (NPV). Statistical analysis was performed using Chi-square/Fisher's exact test, with p&lt;0.05 considered statistically significant.&nbsp; Results: &nbsp;The majority of patients were aged 21&ndash;30 years (24.8%), with a male predominance (55.8%). HRCT showed significant agreement with intraoperative findings for the extent of cholesteatoma (p&lt;0.001). It demonstrated excellent diagnostic accuracy for tegmen plate, sigmoid sinus plate and high-riding jugular bulb, and good accuracy for malleus erosion, lateral semicircular canal erosion and fallopian canal dehiscence. Lower diagnostic accuracy was observed for incus and stapes erosion.&nbsp; Conclusion: &nbsp;Preoperative HRCT temporal bone demonstrated good correlation with intraoperative findings and is a valuable adjunct for preoperative assessment and surgical planning in tympanomastoidectomy. However, it has limitations in differentiating cholesteatoma from mucosal disease and in accurately predicting certain ossicular erosions. &nbsp; Keywords: Chronic suppurative otitis media; Cholesteatoma; High-resolution computed tomography; Temporal bone; Tympanomastoidectomy; Diagnostic accuracy. ##plugins.themes.academic_pro.article.details## &nbsp;",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Correlation of Preoperative HRCT Temporal Bone Findings with Intraoperative Findings in Patients Undergoing Tympanomastoidectomy",
+      "url": "https://zenodo.org/records/22546073"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "ad970d895cc10bdf3aae947b",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199888Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_published": "2026-04-20T13:01:05Z",
+      "source_updated": "2026-05-14T00:39:30Z",
+      "summary": "The existence of EFX allocations is a central open problem in discrete fair division. An allocation is EFX (envy-free up to any good) if no agent envies another agent after the removal of any single good from the other agent's bundle. We resolve this longstanding question by providing the \\textbf{first-ever counterexample} to the existence of EFX allocations for agents with monotone valuations, which in turn immediately implies a counterexample for submodular valuations. Specifically, we show that EFX allocations need not exist for instances with $n \\ge 3$ agents and $m \\ge n+5$ goods. In contrast, we prove that every instance with three agents and seven goods admits an EFX allocation. Both results are obtained via SAT solving. We encode the negation of EFX existence as a SAT instance: satisfiability yields a counterexample, while unsatisfiability establishes universal existence. The correctness of the encoding is formally verified in Lean. Finally, we establish positive guarantees for fair allocations with three agents and an arbitrary number of goods. Although EFX allocations may fail to exist, we prove that every instance with three agents and monotone valuations admits at least one of two natural relaxations of EFX: tEFX, or EF1 and EEFX.",
+      "tags": [
+        "cs.GT",
+        "cs.DS"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "A Counterexample to EFX $n \\ge 3$ Agents, $m \\ge n + 5$ Items, Submodular Valuations via SAT-Solving",
+      "url": "https://arxiv.org/abs/2604.18216v3"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "766223892b846b5322dc03b9",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure",
+        "proof complexity"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199903Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 5.9583,
+      "source": "arxiv",
+      "source_published": "2026-04-06T16:32:46Z",
+      "source_updated": "2026-04-13T11:14:59Z",
+      "summary": "A propositional proof system $P$ has the strong feasible disjunction property iff there is a constant $c \\geq 1$ such that whenever $P$ admits a size $s$ proof of $\\bigvee_i α_i$ with no two $α_i$ sharing an atom then one of $α_i$ has a $P$-proof of size $\\le s^c$. We combine the work of Ilango (2025) and Ren et al. (2025) with the gadget proof complexity generator of K. (2007) and rule out the property for strong enough proof systems under the following two hypotheses: - there exists a language in class E that requires exponential size circuits even if they are allowed to query an NP oracle, - there exists a P/poly demi-bit in the sense of Rudich (1997).",
+      "tags": [
+        "cs.CC",
+        "math.LO"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Failure of the strong feasible disjunction property",
+      "url": "https://arxiv.org/abs/2604.04830v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "159220c37fa9b8ad0793bf66",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "sat",
+        "unsat core"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199977Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 7.125,
+      "source": "arxiv",
+      "source_published": "2026-02-24T16:35:16Z",
+      "source_updated": "2026-04-08T13:07:55Z",
+      "summary": "Active automata learning (AAL) under a Minimally Adequate Teacher (MAT) has been successfully used to infer a regular language through membership and equivalence queries. This language might not be fully characterized: we are then interested in finding any solution in a target class of possibly many regular languages. Some problems such as regular language separation or inductive invariant synthesis in the context of regular model checking (RMC) may indeed admit more than one answer. We therefore introduce IdMAT: a new teacher formalism answering queries with respect to any language in the target class, all at once. Such a teacher tailored towards invariant synthesis might provide incomplete \"don't know\" answers, but also inductive facts of the form \"if w1 is accepted, so is w2\". We pair IdMAT with a novel AAL algorithm LIndA that 1. encodes all uncertainties as a unique SAT instance and does not fork, 2. leverages incremental SAT solving and UNSAT core analysis, and 3. handles counterexamples of the simple or inductive type in a frugal manner inspired by the Rivest-Schapire refinement technique. We finally evaluate a prototype implementation in the context of regular language separation and RMC.",
+      "tags": [
+        "cs.FL"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Automata Learning with an Incomplete but Inductive Teacher (Technical Report)",
+      "url": "https://arxiv.org/abs/2602.21073v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "6cb1029549479fee403ffda9",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.199994Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_published": "2025-11-29T20:13:27Z",
+      "source_updated": "2025-12-29T05:21:48Z",
+      "summary": "Algorithms for resolving majority cycles in preference aggregation have been studied extensively in computational social choice. Several sophisticated cycle-resolving methods, including Tideman's Ranked Pairs, Schulze's Beat Path, and Heitzig's River, are refinements of the Split Cycle (SC) method that resolves majority cycles by discarding the weakest majority victories in each cycle. Recently, Holliday and Pacuit proposed a new refinement of Split Cycle, dubbed Stable Voting, and a simplification thereof, called Simple Stable Voting (SSV). They conjectured that SSV is a refinement of SC whenever no two majority victories are of the same size. In this paper, we prove the conjecture up to 6 alternatives and refute it for more than 6 alternatives. While our proof of the conjecture for up to 5 alternatives uses traditional mathematical reasoning, our 6-alternative proof and 7-alternative counterexample were obtained with the use of SAT solving. The SAT encoding underlying this proof and counterexample is applicable far beyond SC and SSV: it can be used to test properties of any voting method whose choice of winners depends only on the ordering of margins of victory by size.",
+      "tags": [
+        "cs.GT",
+        "cs.AI",
+        "econ.TH"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Stable Voting and the Splitting of Cycles",
+      "url": "https://arxiv.org/abs/2512.00616v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "bc2c9da4c886d83a6bafe58d",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "sat",
+        "sat solver",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.200007Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 10.2083,
+      "source": "arxiv",
+      "source_published": "2024-12-20T16:57:15Z",
+      "source_updated": "2024-12-20T16:57:15Z",
+      "summary": "Automated reasoners, such as SAT/SMT solvers and first-order provers, are becoming the backbones of rigorous systems engineering, being used for example in applications of system verification, program synthesis, and cybersecurity. Automation in these domains crucially depends on the efficiency of the underlying reasoners towards finding proofs and/or counterexamples of the task to be enforced. In order to gain efficiency, automated reasoners use dedicated proof rules to keep proof search tractable. To this end, (variants of) subsumption is one of the most important proof rules used by automated reasoners, ranging from SAT solvers to first-order theorem provers and beyond. It is common that millions of subsumption checks are performed during proof search, necessitating efficient implementations. However, in contrast to propositional subsumption as used by SAT solvers and implemented using sophisticated polynomial algorithms, first-order subsumption in first-order theorem provers involves NP-complete search queries, turning the efficient use of first-order subsumption into a huge practical burden. In this paper we argue that the integration of a dedicated SAT solver opens up new venues for efficient implementations of first-order subsumption and related rules. We show that, by using a flexible learning approach to choose between various SAT encodings of subsumption variants, we greatly improve the scalability of first-order theorem proving. Our experimental results demonstrate that, by using a tailored SAT solver within first-order reasoning, we gain a large speedup in solving state-of-the-art benchmarks.",
+      "tags": [
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "SAT Solving for Variants of First-Order Subsumption",
+      "url": "https://arxiv.org/abs/2412.16058v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "f2d42fa3b6543a7cb16392c6",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "proof certificate"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.200024Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.2917,
+      "source": "arxiv",
+      "source_published": "2024-06-14T14:08:48Z",
+      "source_updated": "2024-06-14T14:08:48Z",
+      "summary": "Property-based testing (PBT) is a technique for validating code against an executable specification by automatically generating test-data. We present a proof-theoretical reconstruction of this style of testing for relational specifications and employ the Foundational Proof Certificate framework to describe test generators. We do this by encoding certain kinds of ``proof outlines'' as proof certificates that can describe various common generation strategies in the PBT literature, ranging from random to exhaustive, including their combination. We also address the shrinking of counterexamples as a first step toward their explanation. Once generation is accomplished, the testing phase is a standard logic programming search. After illustrating our techniques on simple, first-order (algebraic) data structures, we lift it to data structures containing bindings by using the $λ$-tree syntax approach to encode bindings. The $λ$Prolog programming language can perform both generating and checking of tests using this approach to syntax. We then further extend PBT to specifications in a fragment of linear logic. Under consideration in Theory and Practice of Logic Programming (TPLP).",
+      "tags": [
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Property-Based Testing by Elaborating Proof Outlines",
+      "url": "https://arxiv.org/abs/2406.10053v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "f028dc46f62ba2ba747bf736",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "rup",
+        "sat",
+        "sat solver"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.200059Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.8333,
+      "source": "arxiv",
+      "source_published": "2023-06-30T16:18:00Z",
+      "source_updated": "2023-06-30T16:18:00Z",
+      "summary": "State-of-the-art model-checking algorithms like IC3/PDR are based on uni-directional modular SAT solving for finding and/or blocking counterexamples. Modular SAT solvers divide a SAT-query into multiple sub-queries, each solved by a separate SAT solver (called a module), and propagate information (lemmas, proof obligations, blocked clauses, etc.) between modules. While modular solving is key to IC3/PDR, it is obviously not as effective as monolithic solving, especially when individual sub-queries are harder to solve than the combined query. This is partially addressed in SAT modulo SAT (SMS) by propagating unit literals back and forth between the modules and using information from one module to simplify the sub-query in another module as soon as possible (i.e., before the satisfiability of any sub-query is established). However, bi-directionality of SMS is limited because of the strict order between decisions and propagation -- only one module is allowed to make decisions, until its sub-query is SAT. In this paper, we propose a generalization of SMS, called SPEC SMS, that speculates decisions between modules. This makes it bi-directional -- decisions are made in multiple modules, and learned clauses are exchanged in both directions. We further extend DRUP proofs and interpolation, these are useful in model checking, to SPEC SMS. We have implemented SPEC SMS in Z3 and show that it performs exponentially better on a series of benchmarks that are provably hard for SMS.",
+      "tags": [
+        "cs.LO",
+        "cs.FL"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Speculative SAT Modulo SAT",
+      "url": "https://arxiv.org/abs/2306.17765v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "0966a769cc9bbb1da1c2721b",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.200072Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_published": "2020-09-18T16:07:33Z",
+      "source_updated": "2020-10-15T23:43:49Z",
+      "summary": "Hyperproperties are properties of systems that relate multiple computation traces, including security and concurrency properties. This paper introduces a bounded model checking (BMC) algorithm for hyperproperties expressed in HyperLTL, which - to the best of our knowledge - is the first such algorithm. Just as the classic BMC technique for LTL primarily aims at finding bugs, our approach also targets identifying counterexamples. BMC for LTL is reduced to SAT solving, because LTL describes a property via inspecting individual traces. HyperLTL allows explicit and simultaneous quantification over traces and describes properties that involves multiple traces and, hence, our BMC approach naturally reduces to QBF solving. We report on successful and efficient model checking, implemented in a tool called HyperQube, of a rich set of experiments on a variety of case studies, including security, concurrent data structures, path planning for robots, and testing.",
+      "tags": [
+        "cs.FL",
+        "cs.CR"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Bounded Model Checking for Hyperproperties",
+      "url": "https://arxiv.org/abs/2009.08907v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "d42bd3ab6dab997ecd924c2b",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure",
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.200089Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 5.4167,
+      "source": "arxiv",
+      "source_published": "2014-01-24T11:13:43Z",
+      "source_updated": "2018-03-13T13:06:19Z",
+      "summary": "With the technology of the time, Kowalski's seminal 1974 paper {\\em Predicate Logic as a Programming Language} was a breakthrough for the use of logic in computer science. It introduced two fundamental ideas: on the declarative side, the use of the Horn clause logic fragment of classical logic, which was soon extended with negation as failure, on the procedural side the procedural interpretation which made it possible to write algorithms in the formalism. Since then, strong progress was made both on the declarative understanding of the logic programming formalism and in automated reasoning technologies, particularly in SAT solving, Constraint Programming and Answer Set Programming. This has paved the way for the development of an extension of logic programming that embodies a more pure view of logic as a modelling language and its role for problem solving. In this paper, we present the \\idp language and system. The language is essentially classical logic extended with one of logic programmings most important contributions to knowledge representation: the representation of complex definitions as rule sets under well-founded semantics. The system is a knowledge base system: a system in which complex declarative information is stored in a knowledge base which can be used to solve different computational problems by applying multiple forms of inference. In this view, theories are declarative modellings, bags of information, descriptions of possible states of affairs. They are neither procedures nor descriptions of computational problems. As such, the \\idp language and system preserve the fundamental idea of a declarative reading of logic programs, while they break with the fundamental idea of the procedural interpretation of logic programs.",
+      "tags": [
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Predicate Logic as a Modelling Language: The IDP System",
+      "url": "https://arxiv.org/abs/1401.6312v3"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "36d36ca85be4f8b6ac5cd1ca",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:32:11.200102Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 7.2083,
+      "source": "arxiv",
+      "source_published": "2013-01-15T10:53:51Z",
+      "source_updated": "2013-01-15T10:53:51Z",
+      "summary": "The cost of LTL model checking is highly sensitive to the length of the formula under verification. We observe that, under some specific conditions, the input LTL formula can be reduced to an easier-to-handle one before model checking. In our reduction, these two formulae need not to be logically equivalent, but they share the same counterexample set w.r.t the model. In the case that the model is symbolically represented, the condition enabling such reduction can be detected with a lightweight effort (e.g., with SAT-solving). In this paper, we tentatively name such technique \"Counterexample-Preserving Reduction\" (CePRe for short), and finally the proposed technquie is experimentally evaluated by adapting NuSMV.",
+      "tags": [
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Counterexample-Preserving Reduction for Symbolic Model Checking",
+      "url": "https://arxiv.org/abs/1301.3299v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "69fa84270a925016f8454b6d",
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200130Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_published": "2026-09-10T17:54:32Z",
+      "source_updated": "2026-09-10T17:54:32Z",
+      "summary": "Spatial reasoning depends not only on metric properties such as distance, angle, and shape, but also on topological relations that remain invariant under continuous deformation. Cognitive science identifies these relations as foundational to spatial understanding, yet foundation-model evaluations largely focus on metric or viewpoint-dependent relations. We introduce MindTopo, a benchmark of topological intuition across five properties grounded in cognitive science and formal topology: continuity, separation, order, enclosure, and knots. MindTopo evaluates each property at two cognitive levels. Reasoning asks a model to identify topological relations or infer how they change. Planning instantiates a foundation model as a closed-loop agent whose policy selects environment actions. MindTopo contains 11,030 instances across 13 procedurally generated task types with controllable difficulty. We benchmark 14 MLLMs and study agent configurations augmented with image and video generation, including 3 video generative models in planning settings. Every MLLM performs better on reasoning than on planning, and the best-performing model remains far below observed human performance. On Qwen3-VL-2B-Instruct, supervised fine-tuning and reinforcement learning improve reasoning more than planning. Generated observations retain local cues and reach plausible endpoints, but audited rollouts do not reliably follow environment dynamics or preserve topology across transitions. Our website is at https://mind-topo.github.io/",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "MindTopo: Can Foundation Models Reason in Topological Space?",
+      "url": "https://arxiv.org/abs/2609.11900v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "18fb35b3d06ce39a8d187068",
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200155Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_published": "2026-09-10T17:46:01Z",
+      "source_updated": "2026-09-10T17:46:01Z",
+      "summary": "We present FM-JADES-v1, a self-supervised foundation model for James Webb Space Telescope ({\\em JWST}) deep-field science, trained with 482,444 objects from the {\\em JWST} Advanced Deep Extragalactic Survey (JADES) Data Release 5 using multi-band imaging and the photometric catalog. The shared embedding space is trained without class labels. We demonstrate that FM-JADES-v1 can serve as a powerful tool for object discovery and improving property measurements using two experiments, blind active discovery and few-band photometric redshift. For blind object discovery, FM-JADES-v1 identifies rare object populations such as high-redshift galaxies and Little Red Dots (LRDs) without any prior population labels or population-specific selection criteria. These rare populations emerge as isolated islands in the embedding space, which can be identified without prior astrophysical knowledge. For few-band photometric redshift, FM-JADES-v1's learned embeddings achieve $σ_{\\rm NMAD}=0.157$ in a strictly controlled three-band (F115W/F200W/F356W) photo-$z$ benchmark, compared to $σ_{\\rm NMAD}= 0.44$ for template fitting. These results demonstrate the potential of self-supervised multi-modal representations as scalable discovery spaces for large astronomical surveys. Applied to ongoing and future wide-field surveys from JWST, Roman, Euclid, and Rubin/LSST, this framework could enable systematic searches for rare populations, as well as enabling multiple downstream tasks such as improving astrophysical property measurements.",
+      "tags": [
+        "astro-ph.GA"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Learning JWST. I. A Foundation Model for New Population Discoveries and Morphology-Aware Photometric Redshift Measurements in the JADES Survey",
+      "url": "https://arxiv.org/abs/2609.11879v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "e087ee0cb46d10d39a4bbbc9",
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200179Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.375,
+      "source": "arxiv",
+      "source_published": "2026-09-10T17:36:12Z",
+      "source_updated": "2026-09-10T17:36:12Z",
+      "summary": "Language identification in code-mixed text, largely observed in social media, is highly essential when users frequently switch between multiple languages within a single utterance. Accurately identifying the languages of code-mixed tokens becomes an urgent necessity. Traditional language identification models, designed for monolingual text, are not well suited for token-level language identification in code-mixed settings. We formulate the task as a sequence labeling problem and fine-tune contextual transformer-based models MuRIL and XLM-RoBERTa best suited for Indian languages. We evaluate these systems on three different data configurations (Hindi, Gujarati, and Bengali) to predict language labels for individual tokens. We release a benchmark for language identification in code-mixed tokens with manually annotated test sets. We propose two approaches of code-mixed generation using parallel sentences of three languages. The trained models demonstrate the effectiveness of contextual embeddings for token-level language identification in multilingual social media text. For reproducibility and to facilitate future research, we publicly release our fine-tuned models.",
+      "tags": [
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "IndicTriMix: Developing Language Identification Datasets and Models for Tri-Language Code-Mixing",
+      "url": "https://arxiv.org/abs/2609.11851v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "dd01da74838ed5c18f167771",
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200203Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_published": "2026-09-10T17:30:39Z",
+      "source_updated": "2026-09-10T17:30:39Z",
+      "summary": "Semantic search is a core primitive of modern applications, powering recommender systems, web search, and retrieval-augmented generation for language models. The provider controls the index and query execution, leaving clients to trust that results come from the right algorithm over the intended index. A provider may truncate search to cut cost, bias results, or otherwise deviate from the specified execution undetected. Verifiability can remove this trust assumption by proving that results follow the agreed algorithm over a committed index. Realizing this efficiently is hard, as retrieval at scale relies on HNSW, a graph-based algorithm whose data-dependent traversal maps poorly onto the fixed constraint systems of zero-knowledge proofs. Prior verifiable systems therefore target regular, cluster-based indices that are easier to encode, sacrificing the recall of graph-based search. We present Atlas, a system that lets a provider prove a query was answered correctly against its committed index without revealing the index. At its core is a new zero-knowledge proof for HNSW search, built on three techniques: preprocessing that shifts all database-dependent cost offline, so per-query proving scales with the traversal rather than the database; a restructuring of HNSW into a fixed-size-state procedure that we prove returns the same result; and a timestep-tagged batching that merges the per-step arguments of the entire traversal into one. Atlas is the first to demonstrate verifiable graph-based search at scale, proving a query in under a second on the SIFT1M benchmark and in 2.0 seconds at 100 million vectors, while maintaining the recall of plaintext HNSW and revealing nothing about the index beyond the result. In a complete RAG pipeline, Atlas' proven retrieval preserves end-to-end answer quality, and reaches higher quality at lower proving cost than all prior verifiable retrieval systems.",
+      "tags": [
+        "cs.CR"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Atlas: Efficient Verifiable Semantic Search",
+      "url": "https://arxiv.org/abs/2609.11841v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "7135b22e01b5e4158b76f138",
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "control",
+        "symmetry"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200231Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 5.625,
+      "source": "arxiv",
+      "source_published": "2026-09-10T17:30:18Z",
+      "source_updated": "2026-09-10T17:30:18Z",
+      "summary": "We prove the Chen--Yang volume conjecture for all sufficiently long integral Dehn fillings of any fixed marked fundamental shadow-link exterior. For each fixed filling, the exponential growth of its $SO(3)$ Turaev--Viro invariants recovers its hyperbolic volume along the full sequence of odd levels. The filling coefficients may have mixed signs and unrelated magnitudes. We also establish a complete asymptotic expansion of the signed $SO(3)$ Witten--Reshetikhin--Turaev invariant and identify the absolute leading coefficient explicitly in terms of adjoint Reidemeister torsion. Fixed even colors on the filling cores recover characters of the geometric holonomy. The key difficulty is cancellation in the signed surgery sum. Our main analytic tool transfers an exact reflection symmetry from a continuous model to the finite quantum sums. We control the error below the exponential scale of the surviving contribution. We also apply the method to a one-edge state sum restricted to central colors. The dominant contributions cancel, and for each sufficiently large fixed number of blocks we determine the smaller surviving exponential rate and its nonzero leading coefficient.",
+      "tags": [
+        "math.GT",
+        "hep-th",
+        "math.QA"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "The Chen-Yang volume conjecture for long integral fillings of fundamental shadow links",
+      "url": "https://arxiv.org/abs/2609.11839v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "f13d532eb2dc6744f1a59492",
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200258Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.375,
+      "source": "arxiv",
+      "source_published": "2026-09-10T17:22:45Z",
+      "source_updated": "2026-09-10T17:22:45Z",
+      "summary": "We present the first spectral analysis from the JWST Cycle 3 GO Program #6362, the Dyn-Atmo Survey of dynamical-atmospheric benchmarks, characterizing the atmospheres of directly-imaged companions with dynamical masses and measured orbits. This program has obtained moderate-resolution spectra (R$\\sim$2700, 3-5$μ$m) using the NIRSpec/G395H IFU. We observe the T4-dwarf companion, HD 13724 B, companion to a G-type star at a projected angular separation of 0''2. Updated orbital monitoring constrains the mass to $38.3\\pm0.6~M_{\\rm{Jup}}$, which we use as a Gaussian prior when inferring the atmospheric state. We fit the continuum-subtracted spectrum using the BT-SETTL, Sonora Diamondback, Sonora Flame Skimmer, and NEWERA-PHOENIX self-consistent model grids, together with petitRADTRANS atmospheric retrievals. We adopt bulk parameter values of $T_\\mathrm{eff}$=$1150\\pm$195 K, $\\log g$=5.1$\\pm0.3$ dex, [M/H]=0.4$\\pm$0.4, $\\log_{10}(K_{zz})$=6.33$_{-2.22}^{+2.59}$, and C/O=$0.50\\pm0.13$ using a bayesian average across model grids. We find degeneracies in the models between surface gravity, metallicity, and $K_{zz}$ for Sonora Diamondback and Flame Skimmer. The Flame Skimmer and NEWERA-PHOENIX vertical mixing strengths are incompatible, with Flame Skimmer finding a systematically lower value. The retrievals favor an atmosphere in chemical equilibrium, with enhanced metallicity and a solar C/O ratio, but with no detection of disequilibrium chemistry, and no detection of trace gases other than CH$_4$, CO$_{2}$, $^{12}$CO and H$_{2}$O. Ultimately, we identify critical challenges in forward modeling continuum-subtracted G395H spectra in the low signal-to-noise regime. We find that including independent dynamical mass measurements better constrains atmospheric parameters, but degeneracies between self-consistent model parameters limit accurate atmospheric parameter inferences.",
+      "tags": [
+        "astro-ph.SR",
+        "astro-ph.EP",
+        "astro-ph.IM"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "The Dyn-Atmo Survey: High-contrast Imaging Spectroscopy of the Substellar Companion HD 13724 B with the JWST NIRSpec IFU",
+      "url": "https://arxiv.org/abs/2609.11827v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "ef0d9a5020f6f149afd251ef",
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200282Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_published": "2026-09-10T16:50:34Z",
+      "source_updated": "2026-09-10T16:50:34Z",
+      "summary": "Binary stars are common in the Galaxy, and understanding how stellar binarity influences the formation and evolution of planetary systems is an active area of research. In this study, we use metal-enriched white dwarfs in wide binaries as tracers of long-lived planetary systems. With Data Release 1 from the Dark Energy Spectroscopic Instrument (DESI), we find that the fraction of cool metal-enriched white dwarfs in wide binaries is 9.8\\,$\\pm$\\,2.1\\%, significantly lower (4.7\\,$σ$) than the 20.5\\,$\\pm$\\,0.9\\% in a control sample of single systems. Furthermore, we identify a tentative dependence of metal enrichment on projected separation and white dwarf effective temperature, where enrichment fraction decreases at smaller separations and lower temperatures. These findings indicate that, compared to single stars, binary systems either start with smaller initial planetary reservoirs due to suppressed planetesimal formation or undergo more rapid depletion of planetary material during the initial part of the white dwarf stage.",
+      "tags": [
+        "astro-ph.EP",
+        "astro-ph.SR"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Planetary Accretion Is Less Frequent in Wide Binaries: Evidence from Metal-Enriched White Dwarfs in DESI DR1",
+      "url": "https://arxiv.org/abs/2609.11798v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "139cdcce3eb0a1d2f3e3a749",
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "calibration"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200317Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 5.8333,
+      "source": "arxiv",
+      "source_published": "2026-09-10T16:03:00Z",
+      "source_updated": "2026-09-10T16:03:00Z",
+      "summary": "Experimental evidence suggests that ambiguity-sensitive choice can vary systematically with the circumstances of a decision. This paper isolates one channel within a stable preference relation: ambiguity weighting may depend on the act's certainty-equivalent level. After the standard Anscombe-Aumann calibration of consequence utility, a set of behavioral axioms yields a unique continuous family of normalized monotone capacities $\\{ν_v\\}_{v\\in(0,1)}$. Each nonendpoint act is evaluated by the Choquet integral associated with the capacity at its own interior certainty-equivalent level, while nonendpoint acts on the same indifference surface share the same capacity. Binary event comparisons identify local event weights at each elicited level and trace their cross-level variation, providing tests of the fixed-capacity restriction. Local uncertainty aversion is equivalent to convexity of $ν_v$ and yields an implicit multiple-priors representation with certainty-equivalent-indexed local cores. Certainty translation invariance holds if and only if the capacity is fixed across levels, recovering the maintained nondegenerate fixed-capacity Choquet expected utility benchmark; global mixture-betweenness yields implicit additive utility, and imposing both restrictions recovers full-support subjective expected utility. The capacity schedule is a reduced-form ambiguity weighting whose variation may reflect changes in ambiguity perception, ambiguity attitude, or both.",
+      "tags": [
+        "econ.TH"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Utility-Level-Dependent Ambiguity",
+      "url": "https://arxiv.org/abs/2609.11748v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "74997f9c6952c8618adccf7b",
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200342Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_published": "2026-09-10T16:01:25Z",
+      "source_updated": "2026-09-10T16:01:25Z",
+      "summary": "This paper studies the construction of control Lyapunov-barrier functions (CLBFs) from a given control Lyapunov function (CLF) $V$ and control barrier function (CBF) $h$. We consider functions of the form $W=F(V,h)$ that increase with the CLF value and do not increase with the barrier value, and show that the CLBF decrease condition is completely characterized by a nonnegative scalar weight that governs the relative contributions of the CLF and CBF. Because this weight depends only on $(V,h)$, the same value must satisfy the decrease condition at all states sharing the same CLF and CBF values, which leads to a joint-level-set admissibility condition. We then construct CLBFs from admissible weights through a first-order partial differential equation (PDE) and obtain explicit multiplicative and power-type families as special cases. We further identify an integrability obstruction showing that admissibility alone does not guarantee properness. Two nonlinear examples illustrate the constructions and demonstrate safe stabilization in cases where feedback based on the original CLF violates the safety constraint.",
+      "tags": [
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Construction of Control Lyapunov-Barrier Functions from CLF-CBF Pairs",
+      "url": "https://arxiv.org/abs/2609.11746v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "a27f3c07b2bfb3dc40f6c1f4",
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200368Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_published": "2026-09-10T15:45:26Z",
+      "source_updated": "2026-09-10T15:45:26Z",
+      "summary": "Neutral-atom tweezer arrays support scalable quantum information processing. Dual-species $^{87}\\mathrm{Rb}$--$^{171}\\mathrm{Yb}$ arrays combine long-lived ytterbium nuclear-spin data qubits with fast, species-selective rubidium ancilla control and readout. However, realizing interspecies gates without inducing destructive Stark mixing in divalent atoms remains an outstanding problem. Here, we identify an optically accessible $S{+}S\\leftrightarrow P{+}P$ Förster resonance at zero electric field, providing strong dipole-dipole exchange at array pitch. Using a shaped optical pulse under finite control response, we demonstrate a $0.36\\,μ\\mathrm{s}$ exchange-assisted controlled-$Z$ gate with an intrinsic fidelity of $99.91\\%$, remaining above $99.85\\%$ under bounded perturbations. We also identify an auxiliary repulsive van der Waals channel, providing a comprehensive toolbox for hybrid quantum processors.",
+      "tags": [
+        "quant-ph"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "An exchange-assisted entangling gate between 87Rb and 171Yb Rydberg atoms",
+      "url": "https://arxiv.org/abs/2609.11730v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "9af4bd3a4b61c066207690a9",
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200392Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_published": "2026-09-10",
+      "source_updated": null,
+      "summary": "Abstract Introduction: &nbsp;White spot lesions are a frequent problem during fixed orthodontic treatment, mainly because plaque tends to accumulate around brackets and makes oral hygiene difficult. CPP-ACP and CPP-ACP with fluoride (CPP-ACPF) are commonly used to promote enamel remineralization and reduce mineral loss. However, their use before bracket bonding may alter the enamel surface and could influence both bond strength and colour characteristics.&nbsp; Aim: &nbsp;To evaluate the effect of CPP-ACP and CPP-ACPF pre-treatment on the shear bond strength of orthodontic brackets bonded with light-cure and chemical-cure adhesive systems and to compare their colour characteristics.&nbsp; Materials and&nbsp; Methods: &nbsp;Ninety extracted human premolars were randomly divided into three groups of 30 teeth each: CPP-ACP, CPP-ACPF, and control. Each group was further divided into light-cure and chemical-cure subgroups (n = 15). After standardised enamel pre-treatment and bracket bonding, shear bond strength was measured using a universal testing machine at a crosshead speed of 4 mm/min. Colour parameters were recorded using a spectrophotometer. Statistical analysis was performed using one-way ANOVA, Tukey HSD post-hoc test, and independent samples t-test.&nbsp; Results: &nbsp;The control group showed the highest mean shear bond strength with both adhesive systems, followed by CPP-ACPF and CPP-ACP. However, these differences were not statistically significant (p&gt;0.05). Light-cure adhesives showed higher mean bond strength than chemical-cure adhesives, although the difference was also not significant. Colour assessment showed more consistent colour values with light curing, while chemical-cure groups showed greater variation, particularly towards yellow discolouration.&nbsp; Conclusion:&nbsp; CPP-ACP and CPP-ACPF pre-treatment did not significantly affect the shear bond strength of orthodontic brackets. CPP-ACPF showed slightly better mean bond strength than CPP-ACP, while light-cure adhesives showed more favourable and consistent colour characteristics. These findings suggest that both remineralizing agents can be used before orthodontic bonding without significantly compromising bond strength. Further clinical studies are needed to confirm these findings under actual oral conditions. &nbsp; Keywords: CPP-ACP, CPP-ACPF, shear bond strength, orthodontic brackets, light-cure adhesive, chemical-cure adhesive, colour characteristics",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Effect of CPP-ACP and CPP-ACP with Fluoride on the Shear Bond Strength of Orthodontic Brackets Bonded with Two Different Adhesive Systems: An In Vitro Study",
+      "url": "https://zenodo.org/records/22318288"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "7880c644ac5d70d53a784ba4",
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200415Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.7917,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "# On the Naturalness of Agent-Generated Documentation Replication package for the paper *On the Naturalness of Agent-Generated Documentation*. It contains the mining scripts used to build the corpus, the corpus itself, and one analysis notebook per research question. ## Repository layout ``` dataset/ &nbsp; buildDataset/ &nbsp; &nbsp;mining scripts and notebooks &nbsp; data/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PR pools, raw mining output, and the final corpus analysis/ &nbsp; rq1/ &hellip; rq5/ &nbsp; &nbsp; &nbsp;one folder per research question ``` ## Setup **Python packages** - Mining: `pandas`, `numpy`, `requests`, `python-dotenv`, `python-dateutil`, `tqdm`, `textstat`, `fastparquet`, `tree_sitter`, `tree_sitter_language_pack` - Analysis: `matplotlib`, `seaborn`, `scipy`, `statsmodels`, `pingouin`, `scikit-learn`, `nltk`, `vaderSentiment`, `lexicalrichness`, `textstat` **External tools** `build.py` invokes these as subprocesses, so they must be installed before mining: - `git` - repositories are cloned into `dataset/buildDataset/cloned_repos/` and deleted after each PR is processed. The directory is gitignored but needs free disk space during a run. - `semgrep` - static analysis findings. Requires network access, since the rulesets (`p/security-audit`, `p/default`, `p/owasp-top-ten`) are pulled from the Semgrep registry. If semgrep is missing, mining still completes but every row is written with zero findings. - `lizard` - cyclomatic complexity and interface metrics. Called as `python -m lizard`, so installing it into the same environment is enough. **GitHub tokens** Create a `.env` file in the repository root: ``` GITHUB_TOKEN_1=ghp_... GITHUB_TOKEN_2=ghp_... GITHUB_TOKEN_3=ghp_... ``` ## Dataset ### Mining scripts - `dataset/buildDataset/` - **`build.py`** - the primary miner. Takes a Parquet list of PRs, clones each repository at the merge commit, extracts functions and their documentation for the supported languages, and computes entropy, readability, complexity, and static-analysis metrics. - **`fetch_new_agent_prs.ipynb`** - searches GitHub for recently merged PRs authored by AI agents (Claude Code, Copilot, Cursor, Devin, OpenAI Codex), saving the PR list to `new_agent_pr_list.parquet` and the mined output to `agent_supplement_dataset.csv`. - **`build_human_pr_list.ipynb`** - builds the human baseline PR pool - **`combine.ipynb`** - merges the agent and human mining output, folds in the supplementary agent PRs, re-tokenizes and cleans comments, and writes the final `dev_agent_combined.csv`. ### Data files - `dataset/data/` **Final corpus** - `dev_agent_combined.csv` - the cleaned dataset every analysis notebook loads. **Raw mining output** (input to `combine.ipynb`) - `agent_dataset_subset_data.csv` + `stats_agent_subset_data.json` - agent PRs, from `build.py`. - `dev_dataset_subset_data.csv` + `stats_dev_subset_data.json` - human PRs, from `build.py`. - `agent_supplement_dataset.csv` + `mining_stats_new_agent.json` - supplementary agent PRs, from `fetch_new_agent_prs.ipynb`. **PR pools** (input to the miners) - `all_pull_request.parquet` - the AIDev dataset, downloaded from HuggingFace rather than produced by anything in this repo. - `all_pull_request_ballanced.parquet` - our sample of AIDev, 200 PRs per agent. - `new_agent_pr_list.parquet` - the supplementary agent PRs found by `fetch_new_agent_prs.ipynb`. - `human_baseline_2021.parquet` - the human baseline PR pool. ### Reading `dev_agent_combined.csv` - **One row per function**. - **`label` identifies the agent** - `Claude_Code`, `Copilot`, `Cursor`, `Devin`, `OpenAI_Codex`. It is **null for human-authored rows**; that null is how the human group is selected. - Per-function metrics: `loc`, `sloc`, `cyclomatic_complexity`, `num_parameters`, `doc_lines`, `doc_text`, `doc_entropy`, `total_entropy`, `doc_readability`, `doc_code_overlap`, `doc_redundancy`, `semgrep_findings`, `semgrep_findings_count`. - PR-level fields repeated on every row: `pr_date_created`, `",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "On the Naturalness of Agent-Generated Documentation",
+      "url": "https://zenodo.org/records/22700462"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "fe0e041b4bfd0e8306c1b5f4",
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200441Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.75,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "This paper proposes Temporal Information Retrieval for Historical Forensics (TIRHF), an experimental research program investigating whether advanced physics, quantum information processing, artificial intelligence, and related technologies could eventually recover otherwise inaccessible information about past events. It presents a DARPA-style research framework, controlled experimental pathway, and conceptual National Agency for Historical and Victim Evidence (NAHVE) designed to support evidence recovery for unresolved historical and contemporary cases. The proposal emphasizes falsifiability, independent replication, evidentiary integrity, privacy, civil liberties, and victim-centered investigation. &nbsp;",
+      "tags": [
+        "Temporal Information Retrieval",
+        "Historical Forensics"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Temporal Information Retrieval for Historical Forensics A DARPA-Style Research Proposal and Business Plan for a Federal Victim-Evidence Intelligence Agency",
+      "url": "https://zenodo.org/records/22699869"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7cbad3b0e63b0d7f8ffca9fc",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "proof complexity"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200463Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 6.0417,
+      "source": "arxiv",
+      "source_published": "2026-05-25T08:12:26Z",
+      "source_updated": "2026-05-27T19:06:07Z",
+      "summary": "Automated theorem proving systems built on Lean 4 increasingly rely on parallel tactic search over partially specified proofs, such as those generated by Draft-Sketch-Prove (DSP) pipelines. In current systems, each search branch reconstructs a proof state by re-running elaboration, leading to substantial per-branch overhead. In Lean 4 with Mathlib, this cost has two components: (1) import loading, which deserializes pre-compiled libraries (~60 s per branch); and (2) theorem-body elaboration, which re-checks the theorem context up to the target goal (estimated 18-735 s depending on proof complexity). Together, these account for >99% of per-branch wall time, making portfolio-based search impractical at scale. We observe that this overhead arises from a mismatch between the structure of proof search and its execution model: branching is implemented via repeated reconstruction of proof states rather than direct reuse. To address this, we introduce proof-state snapshotting, which captures the elaborated proof state once and reuses it across branches via a small extension to the Lean 4 language server. Across 48 miniF2F-v2 problems (45 prove-phase benchmarks and 3 full end-to-end runs), our approach achieves a 5.6-50x wall-time speedup over the standard fallback (average 14x, median 9.7x). Speedup increases with the number of proof branches. Our method is orthogonal to import-level caching (e.g., Kimina Lean Server), which avoids import loading but not theorem-body elaboration. The patched Lean binary and the Snapshot-DSP pipeline will be released as open source upon publication.",
+      "tags": [
+        "cs.LO",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Keep the Proof State Live: Snapshotting for Efficient Tactic Search in Lean 4",
+      "url": "https://arxiv.org/abs/2605.25556v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "d4b0a0af8e3e36d7328bcd67",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "cnf",
+        "sat",
+        "sat solver"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200476Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.625,
+      "source": "arxiv",
+      "source_published": "2026-05-15T17:17:07Z",
+      "source_updated": "2026-05-15T17:17:07Z",
+      "summary": "The Boolean Satisfiability (SAT) problem is a canonical NP-complete problem and a natural candidate for quantum acceleration via search-based algorithms. In Grover-based quantum SAT solvers, the dominant computational cost stems from the construction of a reversible oracle that evaluates the Boolean formula, rendering the choice of SAT encoding crucial for overall quantum resource efficiency. Although SAT instances are conventionally expressed in Conjunctive Normal Form (CNF), such encodings typically translate into quantum circuits with significant qubit overhead and high non-Clifford gate complexity. In this work, we investigate an Exclusive-Sum-of-Products (ESOP)-based CNF (e-CNF) representation tailored for quantum SAT solving and analyze its impact on oracle construction. We derive tighter upper bounds on qubit requirements and Clifford+$T$ gate counts for Grover-based SAT solvers when e-CNF encodings are employed in place of standard CNF. In addition, we propose a scalable transformation from Boolean formulas to e-CNF and present a systematic procedure for interpreting e-CNF representations as reversible quantum circuits suitable for oracle implementation. Experimental evaluation on representative SAT benchmarks demonstrates that the proposed e-CNF-based approach yields substantial and consistent reductions in quantum resources, including qubit count, T-gate complexity, and circuit depth, when compared to CNF-based oracle constructions. These results establish e-CNF as an effective quantum-aware SAT encoding that significantly improves the practicality of oracle-based quantum SAT solving.",
+      "tags": [
+        "quant-ph",
+        "cs.ET"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Performance Gains in Quantum SAT Solvers Using ESOP Encoding",
+      "url": "https://arxiv.org/abs/2605.16202v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "09df2f0125c7e06356c09c78",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "sat",
+        "sat solver"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200492Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.5,
+      "source": "arxiv",
+      "source_published": "2026-05-14T13:05:57Z",
+      "source_updated": "2026-05-14T13:05:57Z",
+      "summary": "We present a new algorithm for deciding formula entailment in orthologic (a sound approximation of classical logic) that avoids the costly preprocessing phase of prior implementations while retaining the same $\\mathcal{O}(n^2(1+|A|))$ worst-case complexity. We then introduce a family of synthetic SAT benchmarks based on the observation that, for any formula $φ$, the equivalence $φ\\leftrightarrow \\mathrm{NF}_{\\mathrm{OL}}(φ)$ is a tautology whose Tseitin encoding yields unsatisfiable instances that are hard for state-of-the-art SAT solvers yet have short orthologic proofs. Applied to EPFL arithmetic circuits, our algorithm solves these instances efficiently while Kissat times out on a significant fraction. Finally, we show that using orthologic normalization as a preprocessing step can improve SAT solving time on some hard problems.",
+      "tags": [
+        "cs.LO",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Orthologic for SAT Solving",
+      "url": "https://arxiv.org/abs/2605.16421v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "283f0c9186094c763cac0ad6",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200507Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 11.2917,
+      "source": "arxiv",
+      "source_published": "2026-05-05T17:54:42Z",
+      "source_updated": "2026-05-05T17:54:42Z",
+      "summary": "Boolean satisfiability (SAT) solvers are widely used in hardware verification, cryptanalysis, automatic test-pattern generation, and side-channel reasoning workflows. Modern conflict-driven clause-learning (CDCL) solvers are highly effective, but satisfiable instances may still require substantial conflict analysis and Boolean propagation before identifying productive regions of the search space. This paper studies a hybrid SAT-solving framework in which a probabilistic-bit (p-bit) Ising sampler proposes high-agreement literals that are passed to CDCL as temporary assumptions. The goal is not to replace CDCL, but to evaluate whether stochastic low-violation samples can reduce CDCL internal search effort while retaining correctness through CDCL fallback. On selected controlled-backbone random 3-SAT benchmarks, the hybrid method reduces median conflicts by 80.8-85.5% and median propagations by 80.2-84.6% relative to pure CDCL. The observed benefit is distribution-sensitive, suggesting that p-bit guidance is effective only for certain instance classes. We further report exploratory machine-learning gates that estimate when hybrid solving is likely to help. On the selected run, a random-forest gate retains 94.8% of hybrid wins, indicating that lightweight gating may help avoid unproductive hybrid calls.",
+      "tags": [
+        "cs.CR",
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Probabilistic-bit Guided CDCL for SAT Solving using Ising Consensus Assumptions",
+      "url": "https://arxiv.org/abs/2605.04033v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "f4ba176998079241af462e39",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "sat",
+        "sat solver"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200520Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 12.8333,
+      "source": "arxiv",
+      "source_published": "2026-05-05T11:38:57Z",
+      "source_updated": "2026-05-05T11:38:57Z",
+      "summary": "We introduce Backtrackable Inprocessing (BI), a framework that enables applying inprocessing under the current trail at any decision level, at any point during incremental SAT solving. Our approach lifts the long-standing restriction that inprocessing must be performed only at the global decision level, thereby substantially increasing its potential effectiveness. We focus on three highly efficient core techniques: subsumption, self-subsuming resolution, and Bounded Variable Elimination (BVE). We show how to ensure sound backtracking in the presence of inprocessing, and demonstrate that applying BI for incremental preprocessing after propagating assumptions yields significant performance improvements on Bounded Model Checking (BMC) benchmarks from the Hardware Model Checking Competition 2017. Implemented in the Island SAT solver (IntelSAT's fork), BI enables solving $\\sim$1.5$\\times$ as many difficult bounds as the baseline global-level incremental preprocessor.",
+      "tags": [
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Backtrackable Inprocessing",
+      "url": "https://arxiv.org/abs/2605.03654v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "29a8de420c67aa1171ec947a",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "sat",
+        "sat solver",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200535Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 14.3333,
+      "source": "arxiv",
+      "source_published": "2026-03-25T19:06:06Z",
+      "source_updated": "2026-03-25T19:06:06Z",
+      "summary": "Boolean satisfiability (SAT) problem, the first problem proven to be NP-complete, has become a fundamental challenge in computational complexity, with widespread applications in optimization and verification across many domains. Despite significant algorithmic advances over the past two decades, the performance of SAT solvers has improved at a limited pace. Notably, the 2025 competition winner shows only about a 2X improvement over the 2006 winner in SAT Competition performance after nearly 20 years of effort. This paper introduces GaloisSAT, a novel hybrid GPU-CPU SAT solver that integrates a differentiable SAT solving engine powered by modern machine learning infrastructure on GPUs, followed by a traditional CDCL-based SAT solving stage on CPUs. GaloisSAT is benchmarked against the latest versions of state-of-the-art solvers, Kissat and CaDiCaL, using the SAT Competition 2024 benchmark suite. Results demonstrate substantial improvements in the official SAT Competition metric PAR-2 (penalized average runtime with a timeout of 5,000 seconds and a penalty factor of 2). Specifically, GaloisSAT achieves an 8.41X speedup in the satisfiable category and a 1.29X speedup in the unsatisfiable category compared to the strongest baselines.",
+      "tags": [
+        "cs.LO",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "GaloisSAT: Differentiable Boolean Satisfiability Solving via Finite Field Algebra",
+      "url": "https://arxiv.org/abs/2603.28796v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a9715920bb4c1ee0122cdb7b",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "control",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200550Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 5.4167,
+      "source": "arxiv",
+      "source_published": "2026-03-02T17:37:10Z",
+      "source_updated": "2026-07-02T05:43:06Z",
+      "summary": "Modern language models reason within bounded context, an inherent constraint that poses a fundamental barrier to long-horizon reasoning. We identify recursion as a core principle for overcoming this barrier, and propose recursive models as a minimal realization, where the model can recursively invoke itself to solve subtasks in isolated contexts. We prove that any computable problem admits a recursive decomposition of reasoning in which each subtask requires only exponentially smaller active context than standard autoregressive models; this strictly surpasses any context management approach confined to a single sequence, such as summarization. We further generalize our framework to modern agentic systems with arbitrary context processing and control flows, and prove that recursive models can achieve optimal power within this broader class. Experimentally, we test two settings: fine-tuning a pretrained base model for recursive SAT solving, and training a small model from scratch on Go traces generated by exact game-tree search. Both show improved long-horizon accuracy with small active contexts.",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Recursive Models for Long-Horizon Reasoning",
+      "url": "https://arxiv.org/abs/2603.02112v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "bc7c49f11ea60c7ec5ffb509",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "sat",
+        "sat solver",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:32:11.200564Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 10.0,
+      "source": "arxiv",
+      "source_published": "2026-02-24T12:08:32Z",
+      "source_updated": "2026-02-25T14:14:42Z",
+      "summary": "Boolean Satisfiability (SAT) solving underpins a wide range of applications in Electronic Design Automation (EDA), particularly formal verification. However, this paper observes that the mainstream clause reduction heuristic in modern SAT solvers becomes ineffective in the critical domain of complex arithmetic circuit verification, such as multipliers. On these instances, the dominant Literal Block Distance (LBD) metric for measuring clause quality degrades into a simple value of clause length, without any perception of dynamic clause usage during solving. To address this issue, a novel clause reduction mechanism is proposed, which is entirely independent of LBD. Its core idea is to decouple and handle separately the two most fundamental characteristics of learnt clauses--inherent lineage and dynamic usage patterns--thereby avoiding the efficiency degradation caused by inappropriately mixing these properties. Experiments show that our method consistently improves mainstream solvers and achieves speedups of up to 5.74x on complex arithmetic circuit problems, while maintaining comparable performance on general-purpose benchmarks. These results challenge the prevailing LBD-centric clause quality metric for clause management.",
+      "tags": [
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Rethinking Clause Management for CDCL SAT Solvers",
+      "url": "https://arxiv.org/abs/2602.20829v2"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "d1caec534265e9b17e14f39d",
+      "direction_id": "mirror_bidirectional_provenance::REVERSE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "inversion"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:32:11.200586Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.375,
+      "source": "arxiv",
+      "source_published": "2026-09-10T17:42:52Z",
+      "source_updated": "2026-09-10T17:42:52Z",
+      "summary": "Mechanistic corrosion models are routinely fitted with four to six parameters to a few measurements and extrapolated across service lifetimes, yet whether the data determine them is rarely tested. We identify a reduced point defect model for the duplex oxide on Nb-stabilized AISI 347 in simulated boiling-water-reactor water from published depth profiles at three exposure times, by differentiable inversion graded against a closed-form reference. Profile likelihood, a 1000-member bootstrap and a prior-relaxation test agree that one of the five parameters is undetermined and a second only weakly so, and that 95% of the fit statistic rests on three chromium points. The kinetics track an empirical power law over the calibration window but diverge from it by a factor of 3.5 to 6.3 at ten years, outside the propagated uncertainty band. That separation, not the thickness it brackets, is what these data determine; an exposure near 3000 hours would resolve it.",
+      "tags": [
+        "cond-mat.mtrl-sci"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Sparse data limit what a mechanistic corrosion model can predict",
+      "url": "https://arxiv.org/abs/2609.11869v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "03c0446e81ac963b7c025b13",
+      "direction_id": "mirror_bidirectional_provenance::REVERSE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "inversion"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:32:11.200614Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_published": "2026-09-10T14:46:51Z",
+      "source_updated": "2026-09-10T14:46:51Z",
+      "summary": "One significant benefit of reactive element (RE) additions is the colossal improvement in oxide-scale retention during high-temperature oxidation. Selecting optimal RE dopants in high-entropy alloys remains empirical because the relevant thermodynamic landscape is inaccessible to first-principles at the required compositional resolution. Here we apply the macroscopic atom model, coupled with McLean isotherm and Guttmann models, to screen adhesion across nine CoCrFeMnNiAl sub-families at \\ce{Cr2O3} and \\ce{Al2O3} interfaces, ranking five REs (Hf, Y, Zr, La, Ti) for segregation, adhesion enhancement, and sulfur displacement. The screening reveals an oxide-dependent ranking inversion, with Hf dominating at \\ce{Cr2O3} and La dominating at \\ce{Al2O3}, driven by the interplay between RE--O and RE--matrix interaction enthalpies. Mn-containing alloys exhibit intrinsic sulfur resistance, consistent with their experimentally observed oxidation characteristics. A sulfur immunity phase diagram identifies compositions with Al~+~Mn~$\\gtrsim$~25~at\\% as thermodynamically immune to S-induced adhesion loss. All crossover concentrations collapse onto a universal exponential governed by the segregation enthalpy difference, providing a transferable design rule. Inverse design identifies \\ce{Co16Cr16Fe16Ni16Al35} as the optimal S-immune composition with $W_\\text{sep} = 5.95$~J/m$^2$ without RE doping.",
+      "tags": [
+        "cond-mat.mtrl-sci"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "High-throughput thermodynamic screening of oxide-scale adhesion across the CoCrFeMnNiAl high-entropy alloys",
+      "url": "https://arxiv.org/abs/2609.11640v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "6d43e3eb3112ad3fea49362a",
+      "direction_id": "mirror_bidirectional_provenance::REVERSE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:32:11.200640Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.875,
+      "source": "arxiv",
+      "source_published": "2026-09-10T14:40:32Z",
+      "source_updated": "2026-09-10T14:40:32Z",
+      "summary": "In this work, we develop an inverse Physics-Informed Neural Network (PINN) framework to infer the dependence of the scrape-off layer (SOL) perpendicular heat conductivity on plasma density and temperature, $κ_\\perp(n,T)$. The method combines radial profile measurements of electron density and temperature with the residual of a reduced one-dimensional SOL transport equation, so that the inferred conductivity is constrained by both the measurements and the underlying transport model. Three neural networks are trained simultaneously: two reconstruct the temperature and density profiles as functions of the radial coordinate and transported power, while a third represents the effective conductivity as a function of the local density and temperature. The framework is first validated using synthetic data generated from a prescribed conductivity function, allowing the inferred $κ_\\perp(n,T)$ to be compared directly with the ground truth. The model recovers the imposed functional dependence with errors below $10~\\%$ in the data-constrained region. Bootstrap resampling is shown to provide a practical indicator of prediction reliability and consistency. A scan in the number of plasma profiles used for training and the number of radial measurement positions per profile identifies a practical trade-off between reconstruction accuracy and data availability. Finally, the method is applied to an experimental dataset from the TJ-II stellarator obtained with the helium-beam diagnostic. This exploratory application provides an initial estimate of the effective SOL conductivity and illustrates the potential of inverse PINNs for extracting transport information from plasma edge measurements.",
+      "tags": [
+        "physics.plasm-ph",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Physics-Informed Neural Networks to Infer the Perpendicular Energy Conductivity in the Scrape-Off Layer of Stellarator Devices",
+      "url": "https://arxiv.org/abs/2609.11628v1"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "target_repository": "Hawkar-usls/janus-meta-registry"
+}
