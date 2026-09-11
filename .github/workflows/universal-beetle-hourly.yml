@@ -1,0 +1,109 @@
+name: JANUS Universal Beetle hourly
+
+on:
+  schedule:
+    - cron: "27 * * * *"
+  push:
+    branches: [main]
+    paths:
+      - "tools/universal_beetle.py"
+      - "data/beetle/directions.json"
+      - ".github/workflows/universal-beetle-hourly.yml"
+      - "requirements-ocean-beetle.txt"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: scout, graze, or both
+        required: true
+        default: both
+        type: choice
+        options: [both, scout, graze]
+      direction:
+        description: Optional direction id
+        required: false
+        default: ""
+      grazer_task:
+        description: Optional grazer task id
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: janus-universal-beetle-state
+  cancel-in-progress: false
+
+jobs:
+  beetle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: lapis
+
+      - name: Checkout durable Beetle memory
+        uses: actions/checkout@v4
+        with:
+          ref: beetle-state
+          path: beetle-memory
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Beetle dependencies
+        working-directory: lapis
+        run: python -m pip install -r requirements-ocean-beetle.txt
+
+      - name: Run Universal Beetle
+        env:
+          GH_TOKEN_FOR_BEETLE: ${{ github.token }}
+          MODE: ${{ github.event.inputs.mode || 'both' }}
+          DIRECTION: ${{ github.event.inputs.direction || '' }}
+          GRAZER_TASK: ${{ github.event.inputs.grazer_task || '' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          export GITHUB_TOKEN="$GH_TOKEN_FOR_BEETLE"
+          mkdir -p beetle-memory/data/beetle-state
+          args=(
+            --repo-root "$GITHUB_WORKSPACE/lapis"
+            --config data/beetle/directions.json
+            --state-dir "$GITHUB_WORKSPACE/beetle-memory/data/beetle-state"
+            --mode "$MODE"
+          )
+          if [[ -n "$DIRECTION" ]]; then args+=(--direction "$DIRECTION"); fi
+          if [[ -n "$GRAZER_TASK" ]]; then args+=(--grazer-task "$GRAZER_TASK"); fi
+          python lapis/tools/universal_beetle.py "${args[@]}" | tee beetle-memory/data/beetle-state/last_console.json
+
+      - name: Commit durable state
+        working-directory: beetle-memory
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "janus-beetle[bot]"
+          git config user.email "janus-beetle[bot]@users.noreply.github.com"
+          git add data/beetle-state
+          if git diff --cached --quiet; then
+            echo "No state change"
+            exit 0
+          fi
+          git commit -m "beetle: hourly bounded research state ${GITHUB_RUN_ID}"
+          git push origin HEAD:beetle-state
+
+      - name: Upload compact run receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: universal-beetle-${{ github.run_id }}
+          path: |
+            beetle-memory/data/beetle-state/latest_run.json
+            beetle-memory/data/beetle-state/last_console.json
+          if-no-files-found: warn
+          retention-days: 14
