@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import argparse, copy, datetime as dt, json, pathlib, re
+import argparse, copy, datetime as dt, json, pathlib
 from typing import Any
 import requests
 
+MIRROR_ORDER=("FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL")
 
 def now_dt(): return dt.datetime.now(dt.timezone.utc)
 def now(): return now_dt().isoformat().replace('+00:00','Z')
@@ -11,7 +12,7 @@ def now(): return now_dt().isoformat().replace('+00:00','Z')
 def load_local(p): return json.loads(pathlib.Path(p).read_text(encoding='utf-8'))
 def load_remote(url: str) -> dict[str,Any]:
     try:
-        r=requests.get(url,timeout=30,headers={'User-Agent':'JANUS-Beetle-Director-Overlay/1.1'})
+        r=requests.get(url,timeout=30,headers={'User-Agent':'JANUS-Beetle-Director-Overlay/1.2'})
         r.raise_for_status(); obj=r.json(); return obj if isinstance(obj,dict) else {}
     except Exception:
         return {}
@@ -88,8 +89,8 @@ def main():
     fairness=bool(static.get('scheduling',{}).get('reserve_one_fairness_slot',True))
     tnow=now_dt()
 
-    # Primary attention: priority controls most slots; one slot is reserved for the
-    # least-recently selected base direction so low-priority domains cannot starve.
+    # Most primary slots follow Demiurge attention. One slot goes to the least-recently
+    # selected base direction, so low-priority organs can never starve indefinitely.
     by_priority=sorted(directions,key=lambda d:(priorities.get(d['id'],float(d.get('priority',0))),d['id']),reverse=True)
     priority_slots=max_primary-1 if fairness and max_primary>1 and len(directions)>1 else max_primary
     primary=by_priority[:priority_slots]
@@ -121,12 +122,24 @@ def main():
             p=priorities.get(d['id'],float(d.get('priority',0)))*float(lc.get('weight',1.0))
             rank=p+min(20.0,stale_h*float(static.get('scheduling',{}).get('staleness_bonus_per_hour',0.02)))
             candidates.append((rank,stale_h,key,d,lens,lc,p))
-    selected=sorted(candidates,key=lambda x:(x[0],x[1],x[2]),reverse=True)[:max_lanes]
-    # Lens fairness is separate from base-direction fairness.
-    if fairness and candidates and selected:
-        oldest=max(candidates,key=lambda x:(x[1],x[2]))
-        if oldest[2] not in {x[2] for x in selected}:
-            selected[-1]=oldest
+
+    ranked=sorted(candidates,key=lambda x:(x[0],x[1],x[2]),reverse=True)
+    selected=[]; selected_keys=set()
+    # Global all-sided invariant: if we have at least four lane slots, every cycle must
+    # contain at least one FORWARD, REVERSE, COUNTEREVIDENCE and CONTROL lane.
+    if max_lanes>=4:
+        for required_lens in MIRROR_ORDER:
+            options=[x for x in ranked if x[4]==required_lens and x[2] not in selected_keys]
+            if options:
+                pick=options[0]; selected.append(pick); selected_keys.add(pick[2])
+    for x in ranked:
+        if len(selected)>=max_lanes: break
+        if x[2] not in selected_keys:
+            selected.append(x); selected_keys.add(x[2])
+    # If fewer than four slots were configured, plain ranking is the only coherent mode.
+    if max_lanes<4:
+        selected=ranked[:max_lanes]
+
     lanes=[]
     lane_at=now()
     for _,_,key,d,lens,lc,p in selected:
@@ -136,11 +149,14 @@ def main():
         rec['times_selected']=int(rec.get('times_selected',0))+1
     sched['runs']=int(sched.get('runs',0))+1; sched['last_run_at']=now(); atomic(sched_path,sched)
     eff=copy.deepcopy(base); eff['version']=str(base.get('version','2.0'))+'-effective'; eff['directions']=lanes
+    active_lenses=sorted({d.get('mirror_lens') for d in lanes if d.get('mirror_lens')})
     eff['effective_meta']={
       'generated_at':now(),'static_directives_loaded':bool(static),'live_priorities_loaded':bool(live),
       'live_source_scout_run_id':live.get('source_scout_run_id'),'selected_base_directions':[d['id'] for d in primary],
-      'selected_lanes':[d['id'] for d in lanes], 'priority_semantics':'ATTENTION_ONLY_NOT_EVIDENCE',
-      'base_direction_fairness_slot':fairness
+      'selected_lanes':[d['id'] for d in lanes], 'active_mirror_lenses':active_lenses,
+      'all_four_mirror_lenses_present':all(x in active_lenses for x in MIRROR_ORDER) if max_lanes>=4 else False,
+      'priority_semantics':'ATTENTION_ONLY_NOT_EVIDENCE','base_direction_fairness_slot':fairness,
+      'mirror_invariant':'FORWARD_REVERSE_COUNTEREVIDENCE_CONTROL_EACH_CYCLE_WHEN_MAX_LANES_GE_4'
     }
     atomic(pathlib.Path(a.out),eff); print(json.dumps(eff['effective_meta'],ensure_ascii=False))
     return 0
