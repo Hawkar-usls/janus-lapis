@@ -1,0 +1,72 @@
+{
+  "schema": "janus.universal_beetle.directions.v1",
+  "version": "1.0",
+  "principles": [
+    "DIRECTION_NOT_AUTONOMOUS_PURPOSE",
+    "DISCOVERY_CANDIDATE_NOT_TRUTH",
+    "BOUNDED_IO_BY_DEFAULT",
+    "PROVENANCE_BEFORE_INTERPRETATION",
+    "DEDUPE_BEFORE_STORAGE",
+    "CHECKPOINT_BEFORE_NEXT",
+    "NO_FULL_DOWNLOAD_WITHOUT_EXPLICIT_TASK_APPROVAL"
+  ],
+  "global_budget": {
+    "max_requests_per_run": 24,
+    "max_new_candidates_per_run": 40,
+    "max_metadata_bytes_per_run": 4000000
+  },
+  "directions": [
+    {
+      "id": "ocean_reader",
+      "title": "Ocean Reader / transceiver / invertibility",
+      "enabled": true,
+      "min_score": 1.0,
+      "priority_keywords": ["underwater acoustic", "channel impulse response", "hydrophone", "source localization"],
+      "keywords": ["underwater acoustic", "ocean channel", "hydrophone", "vector sensor", "multipath", "receiver diversity", "inverse problem", "source localization", "channel impulse response", "acoustic modem", "ocean observatory"],
+      "sources": [
+        {"kind": "arxiv", "enabled": true, "query": "all:\"underwater acoustic\" OR all:\"ocean acoustic channel\" OR all:\"hydrophone\"", "max_results": 12},
+        {"kind": "zenodo", "enabled": true, "query": "underwater acoustic channel hydrophone", "max_results": 12},
+        {"kind": "github", "enabled": true, "query": "underwater acoustic channel", "max_results": 10}
+      ]
+    },
+    {
+      "id": "kusto_ocean_data",
+      "title": "KUSTO marine data / towfish / sonar provenance",
+      "enabled": true,
+      "min_score": 1.0,
+      "priority_keywords": ["towfish", "TOBI", "bathymetry", "side scan sonar"],
+      "keywords": ["towfish", "TOBI", "veh_nav", "vehicle navigation", "bathymetry", "side scan sonar", "marine geophysics", "multibeam", "sonar", "seafloor", "MGDS"],
+      "sources": [
+        {"kind": "zenodo", "enabled": true, "query": "towfish sonar bathymetry marine geophysics", "max_results": 12},
+        {"kind": "github", "enabled": true, "query": "towfish sonar bathymetry", "max_results": 10},
+        {"kind": "arxiv", "enabled": true, "query": "all:\"side scan sonar\" OR all:\"bathymetry\"", "max_results": 10}
+      ]
+    },
+    {
+      "id": "large_data_methods",
+      "title": "Universal large-data ingestion methods",
+      "enabled": true,
+      "min_score": 1.0,
+      "priority_keywords": ["HTTP range", "out-of-core", "kerchunk", "Zarr"],
+      "keywords": ["HTTP range", "streaming HDF5", "HDF5", "out-of-core", "chunked dataset", "Zarr", "Dask", "kerchunk", "remote scientific data", "partial read", "hyperslab"],
+      "sources": [
+        {"kind": "github", "enabled": true, "query": "HDF5 HTTP range kerchunk", "max_results": 10},
+        {"kind": "arxiv", "enabled": true, "query": "all:\"scientific data\" AND (all:\"out-of-core\" OR all:\"HDF5\" OR all:\"Zarr\")", "max_results": 10}
+      ]
+    }
+  ],
+  "grazer_tasks": [
+    {
+      "id": "uwa_blue_1_raw_channel",
+      "kind": "uwa_hdf5_channel",
+      "enabled": true,
+      "url": "https://zenodo.org/api/records/21287414/files/blue_1.mat/content",
+      "bite": 64,
+      "max_bites_per_run": 1,
+      "block_size": 1048576,
+      "max_cache_blocks": 8,
+      "timeout_seconds": 900,
+      "epistemic_role": "RAW_FIELD_CHANNEL_INPUT__NO_PRIVILEGED_PACKET__42_IS_ONE_OF_64"
+    }
+  ]
+}
