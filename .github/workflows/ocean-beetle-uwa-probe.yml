@@ -1,0 +1,114 @@
+name: Ocean Beetle UWA bounded probe
+
+on:
+  workflow_dispatch:
+    inputs:
+      record_id:
+        description: Zenodo record id
+        required: true
+        default: "21287414"
+      channel_file:
+        description: Channel MAT filename
+        required: true
+        default: "blue_1.mat"
+      bite:
+        description: Time frames per bite
+        required: true
+        default: "64"
+      max_bites:
+        description: Maximum bites for this run
+        required: true
+        default: "2"
+  push:
+    branches: [main]
+    paths:
+      - "tools/ocean_beetle.py"
+      - "requirements-ocean-beetle.txt"
+      - ".github/workflows/ocean-beetle-uwa-probe.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  bounded-raw-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      RECORD_ID: ${{ github.event.inputs.record_id || '21287414' }}
+      CHANNEL_FILE: ${{ github.event.inputs.channel_file || 'blue_1.mat' }}
+      BITE: ${{ github.event.inputs.bite || '64' }}
+      MAX_BITES: ${{ github.event.inputs.max_bites || '2' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install bounded-reader dependencies
+        run: python -m pip install -r requirements-ocean-beetle.txt
+
+      - name: Resolve exact Zenodo file URL
+        id: zenodo
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, pathlib, requests
+          record = os.environ["RECORD_ID"]
+          target = os.environ["CHANNEL_FILE"]
+          api = f"https://zenodo.org/api/records/{record}"
+          response = requests.get(api, timeout=60)
+          response.raise_for_status()
+          meta = response.json()
+          matches = [f for f in meta.get("files", []) if f.get("key") == target]
+          if len(matches) != 1:
+              available = [f.get("key") for f in meta.get("files", [])]
+              raise SystemExit(f"Expected exactly one {target!r}; found {len(matches)}. Available: {available}")
+          f = matches[0]
+          url = f["links"]["self"]
+          out = pathlib.Path(os.environ["GITHUB_OUTPUT"])
+          with out.open("a", encoding="utf-8") as fh:
+              fh.write(f"url={url}\n")
+              fh.write(f"size={f.get('size', '')}\n")
+              fh.write(f"checksum={f.get('checksum', '')}\n")
+          print(json.dumps({"record": record, "file": target, "size": f.get("size"), "checksum": f.get("checksum"), "url": url}, indent=2))
+          PY
+
+      - name: Inspect HDF5 metadata by byte ranges
+        run: |
+          mkdir -p probe_output
+          python tools/ocean_beetle.py inspect "${{ steps.zenodo.outputs.url }}" \
+            > probe_output/inspect.json
+
+      - name: Eat only bounded time bites
+        run: |
+          python tools/ocean_beetle.py uwa-channel "${{ steps.zenodo.outputs.url }}" \
+            --bite "$BITE" \
+            --max-bites "$MAX_BITES" \
+            --include-tracking \
+            --out-dir probe_output/beetle
+
+      - name: Write source manifest
+        run: |
+          python - <<'PY'
+          import json, os, pathlib
+          obj = {
+            "schema": "lapis.ocean_beetle.github_probe.v1",
+            "zenodo_record": os.environ["RECORD_ID"],
+            "channel_file": os.environ["CHANNEL_FILE"],
+            "bite": int(os.environ["BITE"]),
+            "max_bites": int(os.environ["MAX_BITES"]),
+            "execution_boundary": "BOUNDED_HTTP_RANGE_HDF5_PROBE__NOT_FULL_FILE_DOWNLOAD",
+          }
+          pathlib.Path("probe_output/source_manifest.json").write_text(json.dumps(obj, indent=2) + "\n")
+          PY
+
+      - name: Upload receipts and checkpoints
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ocean-beetle-uwa-probe-${{ github.run_id }}
+          path: probe_output/
+          if-no-files-found: warn
+          retention-days: 14
