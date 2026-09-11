@@ -1,6 +1,6 @@
 {
   "schema": "janus.universal_beetle.directions.v1",
-  "version": "1.0",
+  "version": "2.0",
   "principles": [
     "DIRECTION_NOT_AUTONOMOUS_PURPOSE",
     "DISCOVERY_CANDIDATE_NOT_TRUTH",
@@ -8,50 +8,273 @@
     "PROVENANCE_BEFORE_INTERPRETATION",
     "DEDUPE_BEFORE_STORAGE",
     "CHECKPOINT_BEFORE_NEXT",
-    "NO_FULL_DOWNLOAD_WITHOUT_EXPLICIT_TASK_APPROVAL"
+    "NO_FULL_DOWNLOAD_WITHOUT_EXPLICIT_TASK_APPROVAL",
+    "FORWARD_REQUIRES_REVERSE_COUNTEREVIDENCE_AND_CONTROL_MIRRORS",
+    "PRIORITY_IS_ATTENTION_NOT_EVIDENCE",
+    "ROUTING_TO_REPO_MEMORY_IS_NOT_PROMOTION"
   ],
   "global_budget": {
-    "max_requests_per_run": 24,
-    "max_new_candidates_per_run": 40,
-    "max_metadata_bytes_per_run": 4000000
+    "max_requests_per_run": 28,
+    "max_new_candidates_per_run": 48,
+    "max_metadata_bytes_per_run": 5000000
   },
+  "default_mirror_lenses": ["FORWARD", "REVERSE", "COUNTEREVIDENCE", "CONTROL"],
   "directions": [
+    {
+      "id": "mirror_bidirectional_provenance",
+      "title": "Mirrors / bidirectionality / provenance / identifiability",
+      "enabled": true,
+      "priority": 92,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["bidirectional", "inverse problem", "provenance", "identifiability"],
+      "keywords": ["mirror", "reverse", "bidirectional", "reciprocal", "inverse problem", "source reconstruction", "identifiability", "provenance", "many-to-one", "information loss", "symmetry", "duality"],
+      "target_repositories": ["Hawkar-usls/Hrain","Hawkar-usls/iNaiHR","Hawkar-usls/tranception","Hawkar-usls/Janus-Fundamentum","Hawkar-usls/AIFC","Hawkar-usls/janus-meta-registry","Hawkar-usls/Demi_Head"],
+      "sources": [
+        {"kind":"arxiv","enabled":true,"query":"all:\"inverse problem\" OR all:\"identifiability\" OR all:\"provenance\" OR all:\"bidirectional\"","max_results":12},
+        {"kind":"github","enabled":true,"query":"inverse problem provenance reproducible research","max_results":8},
+        {"kind":"zenodo","enabled":true,"query":"inverse problem identifiability provenance","max_results":8}
+      ]
+    },
+    {
+      "id": "formal_proof_verification",
+      "title": "Formal proof / SAT / verification / counterexample",
+      "enabled": true,
+      "priority": 90,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["proof certificate", "SAT solver", "proof checking", "counterexample"],
+      "keywords": ["SAT", "CNF", "resolution proof", "proof certificate", "proof checker", "proof complexity", "verification", "counterexample", "unsat core", "DRAT", "LRAT", "RUP"],
+      "target_repositories": ["Hawkar-usls/Janus-Fundamentum","Hawkar-usls/AIFC","Hawkar-usls/Fast-CAT-SHAiTan","Hawkar-usls/janus-meta-registry"],
+      "sources": [
+        {"kind":"arxiv","enabled":true,"query":"all:\"proof complexity\" OR all:\"SAT solving\" OR all:\"proof certificate\"","max_results":12},
+        {"kind":"github","enabled":true,"query":"SAT proof checker LRAT DRAT","max_results":10}
+      ]
+    },
+    {
+      "id": "cognition_memory_reverse",
+      "title": "Cognition / memory / reverse models / representation",
+      "enabled": true,
+      "priority": 84,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["memory consolidation", "representation learning", "inverse model", "world model"],
+      "keywords": ["memory", "hippocampus", "world model", "representation", "inverse model", "reverse inference", "predictive processing", "continual learning", "memory consolidation", "retrieval", "state abstraction"],
+      "target_repositories": ["Hawkar-usls/Hrain","Hawkar-usls/iNaiHR","Hawkar-usls/Demi_Head","Hawkar-usls/Janus_Genesis","Hawkar-usls/tranception"],
+      "sources": [
+        {"kind":"arxiv","enabled":true,"query":"(cat:cs.AI OR cat:cs.LG) AND (all:\"memory\" OR all:\"world model\" OR all:\"inverse model\")","max_results":12},
+        {"kind":"github","enabled":true,"query":"continual memory world model agents","max_results":8}
+      ]
+    },
     {
       "id": "ocean_reader",
       "title": "Ocean Reader / transceiver / invertibility",
       "enabled": true,
+      "priority": 82,
       "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
       "priority_keywords": ["underwater acoustic", "channel impulse response", "hydrophone", "source localization"],
       "keywords": ["underwater acoustic", "ocean channel", "hydrophone", "vector sensor", "multipath", "receiver diversity", "inverse problem", "source localization", "channel impulse response", "acoustic modem", "ocean observatory"],
+      "target_repositories": ["Hawkar-usls/Janus-Cosmos","Hawkar-usls/The-Voice-of-Janus","Hawkar-usls/Echo-Pyramid","Hawkar-usls/janus-lapis"],
       "sources": [
-        {"kind": "arxiv", "enabled": true, "query": "all:\"underwater acoustic\" OR all:\"ocean acoustic channel\" OR all:\"hydrophone\"", "max_results": 12},
-        {"kind": "zenodo", "enabled": true, "query": "underwater acoustic channel hydrophone", "max_results": 12},
-        {"kind": "github", "enabled": true, "query": "underwater acoustic channel", "max_results": 10}
+        {"kind":"arxiv","enabled":true,"query":"all:\"underwater acoustic\" OR all:\"ocean acoustic channel\" OR all:\"hydrophone\"","max_results":12},
+        {"kind":"zenodo","enabled":true,"query":"underwater acoustic channel hydrophone","max_results":12},
+        {"kind":"github","enabled":true,"query":"underwater acoustic channel","max_results":8}
       ]
     },
     {
-      "id": "kusto_ocean_data",
-      "title": "KUSTO marine data / towfish / sonar provenance",
+      "id": "registry_provenance",
+      "title": "Scientific provenance / evidence ledgers / reproducibility",
       "enabled": true,
+      "priority": 80,
       "min_score": 1.0,
-      "priority_keywords": ["towfish", "TOBI", "bathymetry", "side scan sonar"],
-      "keywords": ["towfish", "TOBI", "veh_nav", "vehicle navigation", "bathymetry", "side scan sonar", "marine geophysics", "multibeam", "sonar", "seafloor", "MGDS"],
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["provenance", "reproducibility", "data lineage", "evidence graph"],
+      "keywords": ["provenance", "reproducibility", "data lineage", "evidence graph", "audit trail", "research object", "FAIR data", "workflow provenance", "scientific ledger"],
+      "target_repositories": ["Hawkar-usls/janus-meta-registry","Hawkar-usls/Janus-Demiurge","Hawkar-usls/Janus_Genesis"],
       "sources": [
-        {"kind": "zenodo", "enabled": true, "query": "towfish sonar bathymetry marine geophysics", "max_results": 12},
-        {"kind": "github", "enabled": true, "query": "towfish sonar bathymetry", "max_results": 10},
-        {"kind": "arxiv", "enabled": true, "query": "all:\"side scan sonar\" OR all:\"bathymetry\"", "max_results": 10}
+        {"kind":"arxiv","enabled":true,"query":"all:\"data provenance\" OR all:\"research reproducibility\" OR all:\"workflow provenance\"","max_results":10},
+        {"kind":"github","enabled":true,"query":"research provenance reproducibility workflow","max_results":8}
+      ]
+    },
+    {
+      "id": "swarm_distributed_systems",
+      "title": "Distributed agents / swarm / resilient coordination",
+      "enabled": true,
+      "priority": 76,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["multi-agent", "distributed systems", "fault tolerance", "consensus"],
+      "keywords": ["multi-agent", "swarm", "distributed systems", "fault tolerance", "consensus", "eventual consistency", "agent orchestration", "decentralized", "edge agents", "checkpoint recovery"],
+      "target_repositories": ["Hawkar-usls/janus-distributed-ai-swarm","Hawkar-usls/-Terminal-for-Janus","Hawkar-usls/Janus_Genesis","Hawkar-usls/Janus-Demiurge"],
+      "sources": [
+        {"kind":"arxiv","enabled":true,"query":"(all:\"multi-agent\" OR all:\"distributed agents\") AND (all:\"fault tolerance\" OR all:\"coordination\")","max_results":10},
+        {"kind":"github","enabled":true,"query":"multi agent orchestration checkpoint distributed","max_results":8}
       ]
     },
     {
       "id": "large_data_methods",
       "title": "Universal large-data ingestion methods",
       "enabled": true,
+      "priority": 74,
       "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
       "priority_keywords": ["HTTP range", "out-of-core", "kerchunk", "Zarr"],
-      "keywords": ["HTTP range", "streaming HDF5", "HDF5", "out-of-core", "chunked dataset", "Zarr", "Dask", "kerchunk", "remote scientific data", "partial read", "hyperslab"],
+      "keywords": ["HTTP range", "streaming HDF5", "HDF5", "out-of-core", "chunked dataset", "Zarr", "Dask", "kerchunk", "remote scientific data", "partial read", "hyperslab", "Parquet", "NetCDF"],
+      "target_repositories": ["Hawkar-usls/janus-lapis","Hawkar-usls/-Terminal-for-Janus","Hawkar-usls/janus-distributed-ai-swarm","Hawkar-usls/Janus_Genesis"],
       "sources": [
-        {"kind": "github", "enabled": true, "query": "HDF5 HTTP range kerchunk", "max_results": 10},
-        {"kind": "arxiv", "enabled": true, "query": "all:\"scientific data\" AND (all:\"out-of-core\" OR all:\"HDF5\" OR all:\"Zarr\")", "max_results": 10}
+        {"kind":"github","enabled":true,"query":"HDF5 HTTP range kerchunk zarr","max_results":10},
+        {"kind":"arxiv","enabled":true,"query":"all:\"scientific data\" AND (all:\"out-of-core\" OR all:\"HDF5\" OR all:\"Zarr\")","max_results":10}
+      ]
+    },
+    {
+      "id": "astronomy_blind_controls",
+      "title": "Astronomy blind searches / null models / independent replication",
+      "enabled": true,
+      "priority": 70,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["null model", "multiple testing", "blind analysis", "FITS"],
+      "keywords": ["astronomy", "FITS", "blind analysis", "null model", "multiple testing", "image morphology", "survey", "MAST", "Gaia", "cross-match", "replication"],
+      "target_repositories": ["Hawkar-usls/Janus-Cosmos","Hawkar-usls/janus-meta-registry"],
+      "sources": [
+        {"kind":"arxiv","enabled":true,"query":"(cat:astro-ph.*) AND (all:\"blind analysis\" OR all:\"null model\" OR all:\"multiple testing\")","max_results":10},
+        {"kind":"github","enabled":true,"query":"astronomy FITS null model reproducible","max_results":8}
+      ]
+    },
+    {
+      "id": "kusto_ocean_data",
+      "title": "KUSTO marine data / towfish / sonar provenance",
+      "enabled": true,
+      "priority": 70,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["towfish", "TOBI", "bathymetry", "side scan sonar"],
+      "keywords": ["towfish", "TOBI", "veh_nav", "vehicle navigation", "bathymetry", "side scan sonar", "marine geophysics", "multibeam", "sonar", "seafloor", "MGDS"],
+      "target_repositories": ["Hawkar-usls/Janus-Cosmos","Hawkar-usls/janus-meta-registry"],
+      "sources": [
+        {"kind":"zenodo","enabled":true,"query":"towfish sonar bathymetry marine geophysics","max_results":10},
+        {"kind":"arxiv","enabled":true,"query":"all:\"side scan sonar\" OR all:\"bathymetry\"","max_results":10}
+      ]
+    },
+    {
+      "id": "voice_acoustic_signal",
+      "title": "Voice / acoustic representation / source preservation",
+      "enabled": true,
+      "priority": 66,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["speaker representation", "source separation", "acoustic fingerprint", "audio provenance"],
+      "keywords": ["speech", "speaker", "voice", "source separation", "acoustic representation", "audio provenance", "speaker verification", "sound event", "signal reconstruction"],
+      "target_repositories": ["Hawkar-usls/The-Voice-of-Janus","Hawkar-usls/Echo-Pyramid","Hawkar-usls/Hrain"],
+      "sources": [
+        {"kind":"arxiv","enabled":true,"query":"(cat:eess.AS OR cat:cs.SD) AND (all:\"speaker verification\" OR all:\"source separation\" OR all:\"audio provenance\")","max_results":10},
+        {"kind":"github","enabled":true,"query":"speaker verification source separation audio provenance","max_results":8}
+      ]
+    },
+    {
+      "id": "bio_material_scoby",
+      "title": "SCOBY / cellulose biomaterials / absorption / barrier materials",
+      "enabled": true,
+      "priority": 62,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["bacterial cellulose", "oil sorption", "biocomposite", "wound dressing"],
+      "keywords": ["bacterial cellulose", "SCOBY", "kombucha", "biocomposite", "oil sorption", "absorbent", "barrier material", "wound dressing", "cellulose membrane"],
+      "target_repositories": ["Hawkar-usls/SCOBY-D0","Hawkar-usls/janus-lapis","Hawkar-usls/SkinGPT"],
+      "sources": [
+        {"kind":"arxiv","enabled":true,"query":"all:\"bacterial cellulose\" OR all:\"cellulose biocomposite\"","max_results":10},
+        {"kind":"zenodo","enabled":true,"query":"bacterial cellulose biocomposite oil sorption","max_results":10}
+      ]
+    },
+    {
+      "id": "longevity_regeneration",
+      "title": "Regeneration / wound resolution / cross-tissue longevity",
+      "enabled": true,
+      "priority": 60,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["wound resolution", "regeneration", "fibrosis resolution", "transient cell state"],
+      "keywords": ["regeneration", "wound healing", "fibrosis resolution", "scar", "transient cell state", "epigenetic reprogramming", "tissue repair", "telomerase", "senescence"],
+      "target_repositories": ["Hawkar-usls/SkinGPT","Hawkar-usls/Simptomat","Hawkar-usls/janus-meta-registry"],
+      "sources": [
+        {"kind":"arxiv","enabled":true,"query":"all:\"tissue regeneration\" OR all:\"fibrosis resolution\" OR all:\"wound healing\"","max_results":10},
+        {"kind":"zenodo","enabled":true,"query":"tissue regeneration wound healing single cell","max_results":8}
+      ]
+    },
+    {
+      "id": "machine_psychology_io",
+      "title": "Machine psychology / cultural transmission / sycophancy / conformity",
+      "enabled": true,
+      "priority": 58,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["sycophancy", "conformity", "cultural transmission", "model behavior"],
+      "keywords": ["sycophancy", "conformity", "social learning", "cultural transmission", "language model behavior", "model psychology", "machine culture", "bias propagation", "behavioral benchmark"],
+      "target_repositories": ["Hawkar-usls/janus-io","Hawkar-usls/Demi_Head","Hawkar-usls/Hrain","Hawkar-usls/janus-meta-registry"],
+      "sources": [
+        {"kind":"arxiv","enabled":true,"query":"(cat:cs.AI OR cat:cs.CL) AND (all:\"sycophancy\" OR all:\"conformity\" OR all:\"cultural transmission\")","max_results":12},
+        {"kind":"github","enabled":true,"query":"llm sycophancy conformity benchmark","max_results":8}
+      ]
+    },
+    {
+      "id": "health_screening",
+      "title": "Decision-support screening / calibrated uncertainty / symptom triage",
+      "enabled": true,
+      "priority": 52,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["clinical decision support", "calibration", "triage", "uncertainty"],
+      "keywords": ["clinical decision support", "symptom checker", "triage", "calibration", "uncertainty", "screening", "decision support", "diagnostic safety", "selective prediction"],
+      "target_repositories": ["Hawkar-usls/Simptomat","Hawkar-usls/SkinGPT"],
+      "sources": [
+        {"kind":"arxiv","enabled":true,"query":"all:\"clinical decision support\" AND (all:\"calibration\" OR all:\"uncertainty\" OR all:\"triage\")","max_results":10},
+        {"kind":"github","enabled":true,"query":"clinical decision support calibration triage","max_results":8}
+      ]
+    },
+    {
+      "id": "market_agents",
+      "title": "Agent markets / mechanism design / autonomous service exchange",
+      "enabled": true,
+      "priority": 48,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["agent market", "mechanism design", "multi-agent economy"],
+      "keywords": ["agent market", "mechanism design", "multi-agent economy", "auction", "autonomous agents", "service marketplace", "market simulation", "incentive compatibility"],
+      "target_repositories": ["Hawkar-usls/JANUS-MACHINE-MARKET","Hawkar-usls/janus-distributed-ai-swarm","Hawkar-usls/Demi_Head"],
+      "sources": [
+        {"kind":"arxiv","enabled":true,"query":"(all:\"autonomous agents\" OR all:\"multi-agent\") AND (all:\"market\" OR all:\"mechanism design\")","max_results":10},
+        {"kind":"github","enabled":true,"query":"agent market mechanism design multi-agent","max_results":8}
+      ]
+    },
+    {
+      "id": "solar_helios",
+      "title": "Solar / heliophysics / space weather reproducible data",
+      "enabled": true,
+      "priority": 44,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["heliophysics", "solar wind", "space weather", "coronal mass ejection"],
+      "keywords": ["heliophysics", "solar wind", "space weather", "CME", "coronal mass ejection", "solar flare", "magnetosphere", "solar data"],
+      "target_repositories": ["Hawkar-usls/Janus-HELIOS","Hawkar-usls/Janus-Cosmos"],
+      "sources": [
+        {"kind":"arxiv","enabled":true,"query":"cat:astro-ph.SR AND (all:\"space weather\" OR all:\"solar wind\" OR all:\"coronal mass ejection\")","max_results":10},
+        {"kind":"zenodo","enabled":true,"query":"heliophysics solar wind space weather","max_results":8}
+      ]
+    },
+    {
+      "id": "materials_lapis",
+      "title": "Lapis materials / phase transformations / functional materials",
+      "enabled": true,
+      "priority": 42,
+      "min_score": 1.0,
+      "mirror_lenses": ["FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"],
+      "priority_keywords": ["functional material", "phase transformation", "self-healing material"],
+      "keywords": ["functional material", "phase transformation", "self-healing material", "porous material", "sorption", "composite", "crystallization", "material discovery"],
+      "target_repositories": ["Hawkar-usls/janus-lapis","Hawkar-usls/SCOBY-D0"],
+      "sources": [
+        {"kind":"arxiv","enabled":true,"query":"(cat:cond-mat.mtrl-sci) AND (all:\"functional material\" OR all:\"self-healing\" OR all:\"phase transformation\")","max_results":10},
+        {"kind":"zenodo","enabled":true,"query":"functional materials phase transformation sorption","max_results":8}
       ]
     }
   ],
