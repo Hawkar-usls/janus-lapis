@@ -43,7 +43,7 @@ import h5py
 import numpy as np
 import requests
 
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 DEFAULT_BLOCK_SIZE = 8 * 1024 * 1024
 DEFAULT_MAX_CACHE_BLOCKS = 32
 
@@ -207,6 +207,46 @@ def walk_h5_tree(h5: h5py.File) -> list[dict[str, Any]]:
             rows.append({"path": "/" + name, "kind": "group"})
 
     h5.visititems(visitor)
+    return rows
+
+
+def shallow_h5_tree(h5: h5py.File) -> list[dict[str, Any]]:
+    """
+    Cheap root-level discovery. Avoid recursive visititems() on very large
+    remote files unless --deep is explicitly requested.
+    """
+    rows: list[dict[str, Any]] = []
+    for name in h5.keys():
+        obj = h5[name]
+        if isinstance(obj, h5py.Dataset):
+            rows.append(
+                {
+                    "path": "/" + name,
+                    "kind": "dataset",
+                    "shape_disk": list(obj.shape),
+                    "dtype": jsonable_dtype(obj.dtype),
+                    "chunks": list(obj.chunks) if obj.chunks else None,
+                    "compression": obj.compression,
+                    "nbytes_logical": int(obj.size * obj.dtype.itemsize),
+                }
+            )
+        else:
+            rows.append({"path": "/" + name, "kind": "group"})
+            if name == "params":
+                for child_name in obj.keys():
+                    child = obj[child_name]
+                    if isinstance(child, h5py.Dataset):
+                        rows.append(
+                            {
+                                "path": f"/{name}/{child_name}",
+                                "kind": "dataset",
+                                "shape_disk": list(child.shape),
+                                "dtype": jsonable_dtype(child.dtype),
+                                "chunks": list(child.chunks) if child.chunks else None,
+                                "compression": child.compression,
+                                "nbytes_logical": int(child.size * child.dtype.itemsize),
+                            }
+                        )
     return rows
 
 
@@ -396,7 +436,7 @@ def cmd_inspect(args: argparse.Namespace) -> int:
         max_cache_blocks=args.max_cache_blocks,
         allow_full_download=args.allow_full_download,
     ) as (h5, fp):
-        rows = walk_h5_tree(h5)
+        rows = walk_h5_tree(h5) if args.deep else shallow_h5_tree(h5)
         out: dict[str, Any] = {
             "tool": "LAPIS_OCEAN_BEETLE",
             "version": VERSION,
@@ -776,6 +816,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     inspect_p = sub.add_parser("inspect", help="Read only HDF5 metadata/tree")
     add_common_remote_args(inspect_p)
+    inspect_p.add_argument("--deep", action="store_true", help="Recursively walk the full HDF5 object tree")
     inspect_p.set_defaults(func=cmd_inspect)
 
     ch = sub.add_parser(
