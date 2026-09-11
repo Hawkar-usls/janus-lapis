@@ -1,0 +1,1257 @@
+{
+  "batch_id": "7c7a077b897e116d88dd",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "items": [
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "7d1c4c8bd78061fc29d31e34",
+      "context_id": "52f407b30bb859bae4c0eace",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus",
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.8333,
+      "source": "arxiv",
+      "source_published": "2026-08-22T22:22:06Z",
+      "source_updated": "2026-08-22T22:22:06Z",
+      "summary": "Cooperative teams often need to agree on the best few options rather than simply accumulate reward, and they must do so while each member sees only a fragment of the team's collective experience. We study this as top-$K$ joint-arm identification in multi-agent multi-armed bandits: at every round $M$ agents simultaneously choose individual actions that compose a joint arm, and the team must ultimately return the $K$ joint arms of highest mean reward. The difficulty is that an agent may not observe the actions of others, their rewards, or either. We treat three observability regimes---(A) shared rewards with hidden actions, (B) observed actions with private rewards, and (C) full asymmetry---and design communication-free elimination algorithms (UCB-Intervals) that reconstruct implicit coordination from whatever signal each regime leaves intact: a shared arm ordering in (A), observable deviations in (B), and enlarged confidence radii under (C). We give matching analyses in both the fixed-budget and fixed-confidence objectives, then fold all three regimes into a single meta-guarantee indexed by a multiplicity $c$ and a consensus factor $ρ$. Our central result is quantitative rather than merely algorithmic: change-of-measure lower bounds show that shared-reward identification is optimal up to one universal logarithmic factor, and that the entire statistical price of removing communication is a multiplicative $ρ^2$ in sample complexity---a fixed $4\\times$ penalty under full asymmetry. The resulting stopping time scales as $O\\!\\left(\\sum_{\\mathbf{a}} \\frac{\\log(A^M/δ)}{Δ_{\\mathbf{a}}^2}\\right)$ and the fixed-budget error as $\\exp(-Θ(T/H_1))$, with the dependence on the joint-action count $A^M$ shown to be unavoidable.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "The Price of Decentralization in Top-$K$ Arm Identification",
+      "url": "https://arxiv.org/abs/2608.22120v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "e7f57432877d9e80222e70b9",
+      "context_id": "35f4c2d1e5a9b293ab997842",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus",
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.8333,
+      "source": "arxiv",
+      "source_published": "2026-09-10T16:34:28Z",
+      "source_updated": "2026-09-10T16:34:28Z",
+      "summary": "This paper addresses predefined-time resilient consensus of leaderless second-order nonlinear multi-agent systems under denial-of-service (DoS) attacks, motivated by coordination requirements in safety-critical applications. The agents are subject to bounded external disturbances and communicate over a strongly connected directed graph whose links are simultaneously disabled during attacks. We develop a switching sliding-mode protocol with the objective of reaching an invariant manifold of position and velocity agreement. The protocol uses relative position and velocity information during attack-free intervals and local velocity feedback during communication blackouts. A time-scaling function remains constant during each blackout and resumes evolving when communication is restored, accounting for the time available for consensus. Under bounds on attack duration and frequency, we derive sufficient gain conditions through a Lyapunov analysis. We show that, despite bounded disturbances, the agents achieve position and velocity consensus by a realistic settling time equal to a prescribed convergence duration plus the cumulative attack duration up to the realistic settling time. The prescribed convergence duration is independent of the initial conditions, and the realistic settling time reduces to that duration in the absence of attacks.",
+      "tags": [
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Predefined-Time Leaderless Consensus Under Denial-of-Service Attacks",
+      "url": "https://arxiv.org/abs/2609.11781v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "a0c3e98cc6115c503078bdd6",
+      "context_id": "dec1cb2faaa8699b2d220c40",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent",
+        "swarm"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.2083,
+      "source": "arxiv",
+      "source_published": "2026-09-10T11:17:20Z",
+      "source_updated": "2026-09-10T11:17:20Z",
+      "summary": "Aerial robot swarms have the potential to transform time-critical safety, security, and search-and-rescue operations. By coordinating multiple robots, they can rapidly survey disaster sites, map collapsed or GPS-denied environments, and search cluttered areas faster than a single robot, reducing response times and minimizing risks to first responders. Realizing this potential, however, requires robust autonomous swarm navigation, which remains an active research challenge. Progress is further constrained by existing platforms, as commercial drones are often closed-source or lack the onboard computational resources needed for agile, vision-based collective flight. Moreover, developing, deploying, and maintaining software across multiple aerial robots requires significant engineering effort. To address these challenges, we present SwarmNxt, an open-source software platform built on the open-source OmniNxt drone hardware. SwarmNxt provides an end-to-end toolkit, including detailed hardware assembly instructions with a video tutorial, automation tools for parallel software deployment and swarm-wide updates, and a ROS 2-based framework for autonomous navigation. The platform integrates state-of-the-art control, planning, and depth estimation into a single ROS 2 multi-agent system, providing an open research infrastructure for physical swarm experimentation. We validate SwarmNxt through two real-world experiments: a six-drone swarm performing decentralized planning with high-speed inter-drone collision avoidance, and a four-drone swarm executing collective flight with onboard depth estimation in an obstacle-filled environment. Both experiments were run indoors with global position from external motion capture; perception, planning, and control run onboard.",
+      "tags": [
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "SwarmNxt: Open-source Software-Hardware Platform for Fast and Agile Aerial Swarms",
+      "url": "https://arxiv.org/abs/2609.11382v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "1982cb9b8c9f5321c3329ca9",
+      "context_id": "e42aab5b8a79ff7163218789",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "agent orchestration",
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.25,
+      "source": "github_repository_search",
+      "source_published": null,
+      "source_updated": "2026-09-10T19:59:28Z",
+      "summary": "AI Agent orchestration platform with priority task queues, workflow engine, multi‑agent communication, built‑in resilience (retry, circuit breaker, dead letter queue, checkpointing), distributed execution, multi‑tenant isolation, and monitoring dashboard.",
+      "tags": [
+        "agent-orchestration",
+        "ai-agents",
+        "chaos-engineering",
+        "distributed-systems",
+        "fastapi",
+        "fault-tolerance",
+        "microservice",
+        "multi-agent",
+        "multi-tenant",
+        "postgresql",
+        "production-hardening",
+        "python",
+        "redis",
+        "task-queue",
+        "workflow-engine"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "alrezesi/AI-Agent-Platform",
+      "url": "https://github.com/alrezesi/AI-Agent-Platform"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "b0d8aa7a29b35a4cdb4a0954",
+      "context_id": "499d435699046f348fec3ca9",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_published": "2026-08-12T14:15:35Z",
+      "source_updated": "2026-08-12T14:15:35Z",
+      "summary": "Multi-AUV ad-hoc network-based target tracking requires networked autonomous underwater vehicles (AUVs) to cooperatively track maneuvering targets under constrained acoustic communication, dynamic topology, and uncertain ocean disturbances. Although multi-agent reinforcement learning (MARL) enables decentralized coordination through centralized training, existing methods suffer from high-dimensional joint state-action modeling, noise-sensitive policy generation, leading to unstable training and degraded tracking. To address these issues, we propose VGG-MADiffRL, a value-gradient-guided multi-agent diffusion RL algorithm, and MDCA, a diffusion?based hierarchical control architecture. Leveraging underwater mission characteristics, we model sonar detection mechanisms and ocean current disturbances, formulating cooperative tracking for multi-AUV ad-hoc networks as an MDP. The proposed MDCA constitutes a three-tier closed-loop control framework: a global intelligent control layer, a local online training layer, and a physical action execution layer. This structure enables synergistic optimization across task allocation, local decision processes, and execution feedback. Within MDCA, the local online training layer is the policy learning framework; VGG-MADiffRL builds on diffusion policies and incorporates value gradients to guide action generation in the reverse denoising process, steering the generated actions towards higher expected returns. It employs twin value networks with joint optimization and soft target updates to mitigate overestimation and training oscillations, promoting more stable convergence. Experimental results show that VGG-MADiffRL consistently achieves faster convergence, higher tracking accuracy, and smoother training dynamics in cooperative tracking scenarios, validating its effectiveness and practical engineering value in dynamic underwater settings.",
+      "tags": [
+        "cs.LG",
+        "cs.MA",
+        "cs.NI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Multi-AUV Ad-hoc network-based Target Tracking: A Value Gradient Guidance Multi-Agent Diffusion Reinforcement Learning Approach",
+      "url": "https://arxiv.org/abs/2608.12436v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "372b5484c524f5d86b670708",
+      "context_id": "aef02b3f36fe8c6c73900237",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent",
+        "swarm"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.6667,
+      "source": "arxiv",
+      "source_published": "2026-08-21T09:26:27Z",
+      "source_updated": "2026-08-21T09:26:27Z",
+      "summary": "The certification of Unmanned Aerial Vehicle (UAV) swarms for safety-critical operations requires verifiable design assurance. Airworthiness standards demand deterministic reliability, whereas multi-agent coordination algorithms execute non-deterministic models. This paper proposes a mixed-criticality architectural framework that applies SAE ARP4754B methods to swarm reconfiguration. First, a hardware-isolated Safety Monitor functions as a Run-Time Assurance (RTA) gateway, decoupling the flight-critical core from the non-deterministic Swarm Manager. Second, the monitor enforces formal safety contracts based on agent Health Vectors derived systematically from a Functional Hazard Assessment (FHA). Third, the framework propagates these Health Vectors to the collective planner to trigger fail-operational task reallocation, enabling intelligent swarm behaviors without compromising flight-critical isolation. Markov reliability modeling demonstrates that the $10^{-7}$ failures per flight hour Hazardous target is theoretically achievable for our SAIL IV scenario, provided the Safety Monitor meets $C_{monitor}>0.9991$, consistent with DAL B CMD/MON implementations.",
+      "tags": [
+        "eess.SY",
+        "cs.MA",
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "A Safety-Driven Architectural Framework for Fail-Operational Drone Swarms in Critical Missions",
+      "url": "https://arxiv.org/abs/2608.20906v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "5d1c2d0ee6932c3604a5b702",
+      "context_id": "a637d62bb9f6034fbc4b305f",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "distributed systems"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.7917,
+      "source": "arxiv",
+      "source_published": "2026-08-04T06:50:49Z",
+      "source_updated": "2026-08-04T06:50:49Z",
+      "summary": "Large language models have transformed artificial intelligence from isolated prediction services into components of long-running, distributed systems that reason, invoke tools, retrieve external state, delegate tasks, and act on behalf of users and organizations. The surrounding ecosystem has responded with agent frameworks, workflow engines, model-serving platforms, memory systems, communication protocols, and observability tools. These technologies improve execution, but they do not provide a stable, implementation-independent operating architecture for governing intent, selecting capabilities, preserving authority across delegation, controlling uncertainty, coordinating runtime behavior, and reconstructing why consequential actions occurred. This paper proposes the Agent Operating System (AOS), a vendor-neutral reference operating architecture for distributed agentic systems. AOS contains two internal planes: a Control & Governance Plane responsible for intent, policy, trust, authority, confidence, auditability, observability, and human oversight; and a Runtime & Coordination Plane responsible for agent lifecycle, workflow coordination, model and tool routing, context and memory coordination, scheduling, traffic management, and runtime assurance. Platform services, Linux or Windows, container runtimes, and physical infrastructure remain outside the AOS boundary and are integrated through explicit interfaces. The paper specifies AOS concepts, invariants, interface objects, optimization objectives, deployment profiles, and reliability responsibilities. It also identifies tradeoffs and unresolved research questions. AOS is not presented as a replacement for existing frameworks or infrastructure; it is proposed as the operating architecture through which heterogeneous components can be composed into governable, reliable, observable, and interoperable agentic systems.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "The Agent Operating System (AOS): A Reference Operating Architecture for Distributed Agentic Systems",
+      "url": "https://arxiv.org/abs/2608.03214v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "df0d235112c0ed51e3edd83c",
+      "context_id": "fd9fd161d42cbd7120ec66d5",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-08-25T11:51:01Z",
+      "source_updated": "2026-08-25T11:51:01Z",
+      "summary": "Visual Language Models (VLMs) excel at describing visible scene content but struggle to reason about dynamic multi-agent interactions, where action semantics depend on coordinated roles and spatial-temporal dependencies. We formalize this capability as \\textbf{multi-agent tactical reasoning} and introduce \\textbf{DoublesEval}, a diagnostic evaluation framework that leverages professional doubles badminton as a structurally tractable testbed. DoublesEval employs a key-moment-based protocol that decomposes rallies into tactically salient instants and probes models across four interpretable dimensions: atomic recognition, intra-segment composite understanding, cross-segment causal reasoning, and high-level tactical abstraction. This design isolates \\emph{where} reasoning fails, rather than merely measuring answer correctness. To address observed failure modes, we propose \\textbf{TacticCheck}, a lightweight constraint-guided test-time consistency checker that reranks candidate answers using the model's own lower-level tactical predictions, requiring no parameter updates or ground-truth labels at inference time. Evaluating four representative open-source VLMs on 60 curated rallies (yielding $\\sim$9.6K structured instances) via a zero-shot protocol, we find that models remain weak across all diagnostic levels, with especially clear bottlenecks in spatial state, interaction binding, and terminal evidence. TacticCheck delivers consistent gains across all evaluated models, while still leaving a substantial gap to robust tactical reasoning. These results highlight the need for structured, interaction-aware evaluation paradigms for next-generation VLMs. The source code is available in \\href{https://github.com/Chengjt1999/DoublesEval}{\\textcolor{blue}{our GitHub repository}}.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "DoublesEval: Diagnosing Multi-Agent Tactical Reasoning in Vision-Language Models via Professional Doubles Badminton",
+      "url": "https://arxiv.org/abs/2608.24439v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "6a248c709011b837d583bc9b",
+      "context_id": "f972185e0927b82b1f41e459",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-08-19T02:58:12Z",
+      "source_updated": "2026-08-19T02:58:12Z",
+      "summary": "Methane field monitoring requires the integration of sampling design, meteorological interpretation, sensor processing, plume analysis, visualization, and reporting, but these steps are often distributed across separate expert-driven workflows. We developed a locally deployable, tool-grounded large language model (LLM) multi-agent framework for our low-cost methane sensing and field-monitoring campaigns. The framework uses LLM agents as workflow coordinators that link field measurements, meteorological data, deterministic sensor-processing routines, Gaussian plume inversion, and report generation, rather than directly estimating methane concentrations or emissions. Extensive field deployments across diverse real-world environments (e.g., wastewater treatment facilities, landfills, and oil and gas sites) demonstrate that our framework can achieve 92.0\\% accuracy in workflow routing and parameter extraction, 85.0\\% success in emission-rate estimation and plume prediction, and 95.0\\% success in generating editable reports under practical operating conditions. Compared with manual and general-purpose LLM-assisted workflows, it reduced workflow time from hours-level to minutes-level, lowered manual coordination and prompt-engineering requirements, and retained traceable plume-based outputs. In addition, most processing can be performed locally, reducing exposure of sensitive facility and field data to cloud services. These results indicate that tool-grounded LLM coordination can reduce the time, labor, usability, and data-security barriers of methane field monitoring.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "A Locally Deployable Tool-Grounded LLM Multi-agent Framework for Automating Methane Emission Analysis and Reporting",
+      "url": "https://arxiv.org/abs/2608.18473v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "20cfb5bee7cbe01be9893351",
+      "context_id": "ea85d754c661fb9d9ee9a393",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-10T17:50:07Z",
+      "source_updated": "2026-09-10T17:50:07Z",
+      "summary": "We consider a game theoretic approach to solve multi-agent coordination problems with submodular objectives. It is known for such problems that the Nash equilibria for the corresponding game are always within 50% of the optimal. A recent work further shows that the equilibria which achieve this worst-case bound are not stable. Leveraging this, we design an Approximate Best Response Algorithm (ABRA) governed by a noise parameter and a rationality parameter. The noise allows ABRA to escape the bad equilibria and the rationality parameter balances any degradation in the objective function caused by the noise. We show for any two-player game that if ABRA converges to a Nash equilibrium, its system objective value is strictly more than 50% of optimal plus a term controlled by the noise parameter. Otherwise, ABRA converges to some recurrent class: if a recurrent class contains any action profile yielding system objective less than 50% of the optimal, the class must also contain either the optimal action profile or an action profile yielding system objective strictly more than 50\\% of the optimal by the same amount in addition to a factor controlled by noise parameter. The time that ABRA spends in such action profiles can be controlled using the rationality parameter. Using numerical simulations, we show that the minimum expected objective function is typically well above half of the optimal.",
+      "tags": [
+        "cs.GT"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "ABRA: An algorithm which cannot converge to low-quality Nash equilibria",
+      "url": "https://arxiv.org/abs/2609.11889v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "3ee97099537e5b03768016a9",
+      "context_id": "dddfe55bd41b94f97d4a80e7",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-10T17:41:49Z",
+      "source_updated": "2026-09-10T17:41:49Z",
+      "summary": "We consider a game theoretic approach to solve multi-agent coordination problems with submodular maximization objectives. It is known for such problems that the Nash equilibria for the corresponding game are always within 50% of the optimal, but that the equilibria which achieve this worst-case bound are not stable. To exploit this instability, we propose a family of algorithms which we call Truncated Noisy Best-Response (TNBR) Algorithms. These algorithms are flexibly characterized by agents asynchronously and stochastically selecting actions from a neighbourhood of their best response payoffs. We compute bounds on the recurrent classes of TNBR algorithms' associated Markov chains. Our bounds fall into two categories: first, \"Performance\" bounds ensure that TNBR algorithms always have a high-value recurrent state; second, \"Safety\" bounds ensure that TNBR algorithms never have arbitrarily-bad recurrent states. Furthermore, these two types of bounds are linked by a waterbed-like effect: every game with a poor Safety guarantee necessarily has a favorable Performance guarantee.",
+      "tags": [
+        "cs.GT",
+        "cs.MA",
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Truncated Noisy Best-Response Algorithms: Toward Game Theoretic Learning with Safety Guarantees",
+      "url": "https://arxiv.org/abs/2609.11863v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "824fc48aec60487fd1e3c3fa",
+      "context_id": "d55bcca002aa120f9afdaa4e",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-08-28T12:29:23Z",
+      "source_updated": "2026-08-28T12:29:23Z",
+      "summary": "Agent systems powered by multimodal large language models (MLLMs) have advanced rapidly in recent years, yet existing embodied-agent benchmarks still lack fine-grained diagnostics for multi-agent coordination. Most benchmarks either focus on single-agent task completion or summarize multi-agent behavior with overall task success rates, which can obscure coordination failures such as duplicated work, violations of ordering constraints, resource contention, and desynchronized handoffs. In this paper, we introduce CoCoBench, a construct-level benchmark for evaluating multi-agent embodied coordination in executable household tasks. CoCoBench contains 897 oracle-validated instances organized around four recurring coordination constructs: task allocation, sequential ordering, mutual exclusion, and handoff coordination. In addition to task success rate, CoCoBench provides construct-level scores that measure whether agents coordinate effectively. We evaluate 11 leading MLLMs across different coordination modes, observation inputs, and numbers of agents. The results show that coordination ability is highly construct-specific: strong overall performance does not imply balanced competence across different coordination types. These findings point to new directions for designing targeted model architectures and improving multi-agent coordination ability.",
+      "tags": [
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "CoCoBench: A Cooperative Coordination Benchmark for Embodied Multi-Agent Task Planning",
+      "url": "https://arxiv.org/abs/2608.28266v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "af867bb7d37f3921a3766453",
+      "context_id": "bcf5fd5e22bfb2c5b64b4fef",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-08-11T06:15:38Z",
+      "source_updated": "2026-08-15T11:18:23Z",
+      "summary": "Time Division Multiple Access (TDMA)-based Medium Access Control (MAC) protocols have proven their practicality through extensive field trials in Underwater Acoustic Networks (UANs), attributable to their hardware compatibility and ease of implementation. In conventional TDMA-based MAC designs, channel access is typically organized using synchronized, fixed-length slots to mitigate contention and coordinate transmissions. However, this paradigm imposes significant clock synchronization overhead in UANs with long and variable propagation delays and struggles to improve scheduling flexibility. Although some protocols attempt to refine this slot paradigm (adjust the slot length to improve channel reuse efficiency or scheduling frequency), they are still constrained by the trade-off between channel utilization and scheduling complexity. To this end, this paper proposes AT-MAC, an Asynchronous Triggered MAC protocol that aims to achieve efficient and fair channel access through coordinated asynchronous scheduling. AT-MAC introduces a triggered slot paradigm without time synchronization, decoupling transmission scheduling from a rigid timeline and enabling asynchronous, variable-length slots to accommodate the long and diverse propagation delays. To power this slot paradigm, AT-MAC augments conventional Multi-Agent Deep Reinforcement Learning to handle asynchronous interaction, achieving coordinated channel access under partial observations. It further devises a load-aware fairness guard mechanism to enable network-wide fairness status inference solely through local overhearing, thereby guiding adaptive scheduling correction to maintain fairness. Field-reconstructed simulations and on-board inference benchmarking demonstrate the feasibility of AT-MAC. Extensive simulation results further demonstrate its consistent performance gains across the evaluated scenarios and traffic conditions.",
+      "tags": [
+        "cs.NI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "An Asynchronous Triggered MAC Protocol for Underwater Acoustic Networks",
+      "url": "https://arxiv.org/abs/2608.10533v2"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "ed47f0fe6410dbef003fc577",
+      "context_id": "ba0f03492eb2de463f17e9f9",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-08-27T13:40:11Z",
+      "source_updated": "2026-08-27T13:40:11Z",
+      "summary": "Internet memes are a pervasive form of multimodal online communication; however, such communication often involves users from diverse linguistic and cultural backgrounds. Therefore, adapting memes across cultures and languages is a central challenge for enabling mutual understanding in online communication. Unlike ordinary translation or standalone text rewriting, cross-cultural meme transcreation must jointly preserve communicative intent, adapt culture-dependent meaning for the target audience, and maintain coherence between text and image. In this work, we first provide an explicit task analysis of cross-cultural meme transcreation and identify three core challenges: culture-specific knowledge understanding, intent and tone preservation, and multimodal consistency. Based on this analysis, we propose a multi-agent framework with specialized agents that are coordinated to address these challenges through cultural adaptation, target text rewriting, revision, and conditional visual adjustment. The framework strengthens target text adaptation with coordinated feedback to handle difficult cases that require deeper cultural or visual intervention. We evaluate the framework on bidirectional Chinese-English meme transcreation using both human evaluation and LLM-as-a-Judge. Our method consistently outperforms all baselines across both evaluation settings. In human evaluation, it achieves the best performance on all four dimensions and delivers a 33.1% average improvement over the strongest baseline, while in LLM-as-a-Judge, it attains the highest Top-1 ranking rate (60% versus 26% for the second-best baseline). Further analysis indicates that each component contributes to the performance. Our error analysis suggests that the remaining bottlenecks lie in humor reconstruction and image-text alignment rather than simple cultural knowledge gaps, pointing to future work on humor transfer.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "TransMeme: A Multi-Agent Framework for Cross-Cultural Meme Transcreation",
+      "url": "https://arxiv.org/abs/2608.27127v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "26befc964042e040670c61e1",
+      "context_id": "b6abeb11cd95519ed80100df",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-04T05:29:31Z",
+      "source_updated": "2026-09-04T05:29:31Z",
+      "summary": "Large language model (LLM)-based multi-agent systems have experienced rapid growth in recent years. Despite their promise, such systems remain fragile, frequently exhibiting reasoning and coordination errors that can lead to system-level failures. Failure attribution in such systems relies on tracing natural language interactions among agents to identify the decisive error, which refers to the earliest action whose correction can reverse system failure. There are two key challenges: 1) Shallow attribution: Existing methods often capture only minor deviations, such as incomplete retrievals or formatting errors, which verification mechanisms can correct, while missing the decisive cause of system failure. 2) Contextual degradation: As the length of the system traces increases, the model's reasoning ability rapidly deteriorates. To address these challenges, we propose DCFA, a training-free framework for failure attribution. DCFA integrates a global module that constructs structured causal-inspired dependency graphs from system traces to identify the initial decisive error, and a local module that applies local counterfactual-inspired reasoning to refine causal-inspired attribution. Experiments on the Who&When benchmark across six LLMs show that DCFA improves step-level accuracy by up to 8.27% over state-of-the-art baselines.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "DCFA: Dual-view Causal-inspired Attribution for Failure Reasoning in LLM-based Multi-agent Systems",
+      "url": "https://arxiv.org/abs/2609.04749v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "0c0226f543caedf875311d15",
+      "context_id": "ad5cd9d5eb3e1ef75f2899b0",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-08-30T07:13:10Z",
+      "source_updated": "2026-08-30T07:13:10Z",
+      "summary": "Across industries, machine-learning systems support applications ranging from prediction and anomaly detection to forecasting, optimization, and scheduling, yet operationalizing these systems requires coordinating application development, model pipelines, cloud infrastructure, security, deployment, monitoring, retraining, recovery, and rollback. We present an evidence-gated multi-agent framework for transforming a natural-language MLOps cloud engineering task into a verified repository and operational cloud deployment. The framework combines graph engineering, loop engineering, and agent harness engineering. A stateful Graph Orchestrator coordinates specialized agents for repository generation, review, execution, verification, release, and monitoring while governing workflow dependencies, evidence gates, retry bounds, recovery paths, and termination. Consequential lifecycle transitions proceed only when their required predicates are supported by verifiable execution or runtime evidence. Verification failures activate bounded reflection, repair, and re-verification, while runtime evidence of failure, drift, degradation, or policy violation can trigger bounded adaptation, recovery, or rollback. Agent harness engineering constrains repository generation, review, and repair, artifact execution, and cloud operations through controlled capabilities and isolated execution environments. We realize the framework on Google Cloud Platform and evaluate repository completeness, controlled execution, evidence-gated transitions, cloud promotion, and bounded recovery. Our experimental results show that the framework prevents unsupported lifecycle transitions and drives each run toward either a verified operational deployment or an auditable terminal failure.",
+      "tags": [
+        "cs.MA",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Forward-Deployed Full-Stack Engineering for Autonomous Cloud MLOps",
+      "url": "https://arxiv.org/abs/2608.29615v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "7ff2aefa2f79c318ec2f55f4",
+      "context_id": "aaa5af0c1b60ca3366dd42be",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-08T14:25:11Z",
+      "source_updated": "2026-09-09T12:40:17Z",
+      "summary": "Multi-agent traffic simulation seeks diverse, coordinated, and physically realistic futures from maps and observed history. Long-horizon closed-loop generation must reconcile multiple decision time scales while its context evolves with generated states. Existing methods often unfold long futures from an initial scene and resolve intent, interaction, and motion monolithically, weakening cross-scale consistency and adaptation. Multimodal rollout poses a further consistency problem: independently reselecting modes across agents or commits can stitch together incompatible futures instead of preserving a coherent joint branch. We present Hi-FLoop, a branch-consistent multi-timescale state-feedback framework. Eight scene-level Worlds represent joint hypotheses; all agents share one selected World identity throughout all 16 commits of an 8-second rollout, while Goal, Preview, and Control states adapt within that branch. An 8-second Goal anchors intent, a 2-second Preview coordinates interactions, and 1-second Control produces physical motion. Every 0.5-second commit feeds back only its executed prefix as new facts, while unexecuted hypotheses never enter factual memory. Joint Preview Interaction induces a sparse directed future graph and uses conflict probabilities and signed arrival-time differences to refine interaction-aware motion. For generated-state recovery, a prefix-frozen A-to-B cascade transfers typed physical state and the branch index--but no latent state--from a frozen prefix model to an independently parameterized recovery model. On the full H-D public-validation split of 955 scenarios, the S2.1 cascade obtains an 8-second scene-joint ADE-at-joint-minFDE@8/joint-minFDE@8 of 2.048/6.384 m when one World must explain all evaluated agents. Agent-centric oracle-minADE@8 is 0.526 m at 6 seconds and 0.875 m at 8 seconds.",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Hi-FLoop: Hierarchical State-Feedback Loops for Multi-Timescale World Modeling",
+      "url": "https://arxiv.org/abs/2609.08796v2"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "6799b9feb54210fea5825c8a",
+      "context_id": "a6a055372d10068bc1f335d2",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-08-22T09:26:42Z",
+      "source_updated": "2026-08-22T09:26:42Z",
+      "summary": "Depression assessment from multimodal clinical interviews requires integrating dispersed evidence from multiple symptoms into a coherent PHQ-8 profile. This process is hierarchical: relevant evidence is often sparse and context-dependent within local question-answer exchanges, multiple exchanges jointly support symptom-level judgments, and the final assessment depends on the coherence of the complete symptom profile. Existing LLM systems either process interviews holistically or distribute work across generic agent roles; neither design necessarily provides an explicit orchestration mechanism that coordinates evidence access, item-score authority, bounded feedback, and state recording across these levels. To address this gap, we introduce HiMA-MDD, a hierarchical multi-agent harness that aligns this assessment hierarchy with three agent layers. After non-agentic preprocessing constructs context-preserving multimodal QA units, Layer 1 identifies candidate QA-to-item relations and supports bounded item-grounded evidence routing. Layer 2 assigns symptom groups to operational factor specialists, with one specialist responsible for each provisional item score. Layer 3 audits the complete provisional profile, requests at most one round of targeted revision, and reconstructs the verified PHQ-8 profile. This layered design naturally yields a Hierarchical Evidence Trace, preserves all intermediate evidence, judgments, and revisions for auditability. The final item scores then deterministically produce the total score and screening decision. Using Qwen2.5-72B-Instruct as the harness backbone, our experiments on E-DAIC demonstrate that HiMA-MDD outperforms the compared state-of-the-art methods.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "HiMA-MDD: A Hierarchical Multi-Agent Harness for Interpretable Multimodal Depression Detection in Clinical Interviews",
+      "url": "https://arxiv.org/abs/2608.21868v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "4f348675133392de0df56bf2",
+      "context_id": "9546285195facb7cb15cdee4",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-10T15:52:35Z",
+      "source_updated": "2026-09-10T15:52:35Z",
+      "summary": "Collective intelligence depends not only on the capabilities of individual members, but also on how those members are organized. Yet artificial multi-agent systems are typically assembled using fixed organizational structures, even when the physical tasks they perform impose fundamentally different coordination requirements. Here we show that principles from human organization theory can be operationalized to organize large, heterogeneous collectives of embodied artificial agents. We introduce ORCH (Organizing Roles and Coordination Hierarchies), which constructs task-specific hierarchical organizations by combining pooled interdependence for work that can proceed concurrently with sequential interdependence for work governed by prerequisite relationships. Across 25 wildfire-response missions spanning reconnaissance, rescue, transportation, resource management, containment and suppression, we evaluated teams of up to 50 heterogeneous agents using eight large language models. Organizations constructed using these principles consistently outperformed four representative embodied multi-agent approaches across mission outcome, execution efficiency, exploration and computational resource use. Human-designed ORCH organizations improved final score by 63.97% and execution efficiency by 74.29% on average relative to the four prior frameworks. Organizations generated automatically by language models improved these measures by 43.63% and 52.53%, respectively. These advantages persisted across missions and underlying language models. Notably, collective performance was not monotonically determined by model scale. Analysis of long-horizon missions showed that hierarchical organization enabled teams to preserve concurrent activity within specialized groups while coordinating ordered transitions between mission phases.",
+      "tags": [
+        "cs.MA",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "ORCH: Organizational Principles Enable Collective Intelligence in Embodied AI",
+      "url": "https://arxiv.org/abs/2609.11737v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "5526991218821edd3994f851",
+      "context_id": "70a600bec8ec5b7110fe8937",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-08T07:35:00Z",
+      "source_updated": "2026-09-08T07:35:00Z",
+      "summary": "Persistent communication limits force a multi-agent system to decide which agents may coordinate throughout a rollout. Current proximity alone is insufficient: separated agents may interact later, whereas a large pair reward may remain unreachable until it is heavily discounted. We introduce Reachability-Certified Subteam Decomposition (RCSD) for finite multi-agent Markov decision processes with factorized physical dynamics, finite-range ordered pair rewards, and almost-sure motion bounds. RCSD combines a speed-limit lower bound on pairwise contact time with a reward envelope to form a current-state affinity. For any capacity-valid persistent partition, the sum of cut affinities bounds the reward-deletion error of every unchanged stationary Markov state-feedback policy. A product of team-optimal policies for the resulting cut MDP incurs at most twice this certificate in regret against the centralized optimum. Both bounds are worst-case tight. On a controlled five-agent family, RCSD-Exact reduces aggregate normalized execution regret by 56.0%, 28.8%, and 25.3% relative to uniform, distance-only, and envelope-only partitions. A separate stochastic two-dimensional study finds no bound violation over 384 exact-partition and 1,440 restricted-controller evaluations. Exact four-agent evidence favors RCSD over uniform and distance-only grouping; raw evidence for current contact is borderline and envelope-only is unresolved. Across balanced 8-20-agent strata, controller-library utility is mixed: pointwise paired intervals favor RCSD over distance and current contact, include zero for uniform, and favor envelope-only and Value-MIP over RCSD. Partition construction remains subsecond in median up to 100 agents; this last result does not include affinity formation or MDP planning.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Reachability-Certified Subteam Decomposition for Locally Interacting Multi-Agent MDPs",
+      "url": "https://arxiv.org/abs/2609.08366v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "5a23543b7242983959c4a623",
+      "context_id": "7043f0c51481fa22c85d63de",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-06T21:16:42Z",
+      "source_updated": "2026-09-06T21:16:42Z",
+      "summary": "Agentic AI systems execute complex tasks through long-horizon workflows of planning, tool use, and multi-agent coordination. Task failures in these systems often originate from a single step, such as an injected prompt or a flawed plan, and are then amplified through downstream dependencies as the corrupted step propagates across many subsequent agents and tool calls. Existing defenses either target a specific class of attacks or failures, or inspect individual prompts and steps in isolation. Both leave the global dependency structure of a workflow unexamined, and miss the inconsistencies that only emerge when the execution is viewed as a whole. We argue that anomaly detection for agentic AI must reason at the workflow level, where global execution structure exposes signals that local checks cannot see. We present Skynet, a principled workflow-level anomaly detection framework that turns observed multi-agent execution into directed workflow graphs and scores them against learned benign behavior. Skynet jointly models the semantic execution context and the structural organization of inter-agent delegation, tool invocation, and data-flow dependencies, and trains only on benign workflows. Because training never sees attacks or failures, this design naturally extends to zero-day detection: any execution that violates benign workflow regularities surfaces as off-manifold geometry under a single decision rule. We evaluate Skynet on three public agentic safety and failure benchmarks. It sustains high recall together with a sub-1% false positive rate, with per-workflow and per-step latencies low enough for online monitoring of agentic AI runtimes.",
+      "tags": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Skynet: Workflow-Level Anomaly Detection for Agentic AI via Semantic and Structural Modeling",
+      "url": "https://arxiv.org/abs/2609.06835v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "842d70f7a1d6e60fb76a4088",
+      "context_id": "549019b07ffc9087345d2ab2",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-10T03:42:25Z",
+      "source_updated": "2026-09-10T03:42:25Z",
+      "summary": "Multi-agent robotic manipulation tasks require coordination among agents to satisfy task-level temporal, logical, and safety constraints. Recently, diffusion policies have been used to perform the task. However, they still suffer from desynchronization, incorrect action ordering, and coordination failures in tasks that require simultaneous or sequential multi-agent interaction. Therefore, LTLDiff is proposed as a framework that combines Finite Linear Temporal Logic (LTLf) specification learning for both the generation of demonstrations and learning via diffusion policies. Each task has a specific LTLf formula that is learned from a set of natural language instructions using a large-scale language model. To enable a fixed-dimensional vector embedding of the learned specification from the language model, LTLf uses an abstract syntax tree representation scheme. This embedding of logic serves as a condition for (i) logic-guided data collection and (ii) diffusion-based policy training, encouraging trajectories that are consistent with the desired ordering and coordination requirements. Experiments on multi-agent LTLDiff manipulation tasks demonstrate improved task success rates compared to the baseline. Together, these contributions demonstrate the effectiveness of LTLDiff for coordinated multi-agent manipulation.",
+      "tags": [
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "LTLDiff: Finite Linear Temporal Logic-Guided Data Generation and Diffusion Policies for Multi-agent Robotic Manipulation",
+      "url": "https://arxiv.org/abs/2609.11043v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "9cf549d4bc020782b9c8186d",
+      "context_id": "4e7d85d8b9b094122776fe7a",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-02T16:04:07Z",
+      "source_updated": "2026-09-02T16:04:07Z",
+      "summary": "Gaussian-process Bayesian optimization (GP-BO) excels at black-box optimization of costly functions, e.g., hyperparameter optimization (HPO) and multi-agent system (MAS) design. Convergence-rate guarantees exist for select methods, notably GP upper confidence bound (GP-UCB), but require a fixed kernel. Critically, the kernel encodes how input proximity affects objective value similarity. When raw coordinates poorly match this geometry - as with log-scaled hyperparameters or localized peaks - input warping can greatly improve sample efficiency, yet known GP-UCB proofs require a fixed kernel. We propose Finite-Library Input-Warped Bayesian Optimization (FLIWBO), which selects warps from a finite library of smooth input maps by any history-dependent rule. It adapts the input geometry to accelerate learning while retaining high-probability convergence guarantees under mild hypotheses, with an explicit $\\sqrt(N_\\varepsilon)$ library-size cost. Controlled diagnostics show that finite-library warping repairs planted geometry mismatches and identify FLIWBO failure cases. Across four repeated benchmarks - warped synthetic objectives, a confidence-fence trap, and Fashion-MNIST HPO - FLIWBO-UCB beats raw-coordinate GP-UCB under misspecified geometry, escapes traps that defeat even oracle-warp expected improvement, and recovers much of the gain from manual log scaling, while leading the tested methods that admit a matching regret guarantee. A 20-dimensional MAS design study further shows feasibility under costly noisy evaluations. Code for experiments is available: https://github.com/edvin-ketabati/bogp-paper-experiments.",
+      "tags": [
+        "cs.LG",
+        "math.OC",
+        "stat.ML"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "No-Regret Bayesian Optimization with Finite-Library Input-Warped Kernels",
+      "url": "https://arxiv.org/abs/2609.02993v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "b71a9b0579fa71007a843e46",
+      "context_id": "42a2e8c472268910bd36ce86",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-10T07:02:01Z",
+      "source_updated": "2026-09-10T07:02:01Z",
+      "summary": "Multi-Agent Reinforcement Learning (MARL) has emerged as a pivotal paradigm for complex decision-making in autonomous systems and air combat. While MARL has demonstrated significant potential in air combat, achieving sophisticated tactical coordination remains a non-trivial challenge. This difficulty is largely attributed to two primary limitations: (1) the absence of structured relational modeling hinders agents from capturing complex, time-varying interactions among battlefield entities; and (2) conventional flat architectures often lack the capability to explicitly model tactical roles, leading to ambiguous task allocation in highly dynamic environments. To address these challenges, we propose Hierarchical Dynamic Role-Graph Multi-Agent Proximal Policy Optimization (DRG-MAPPO), a novel MARL framework that integrates graph-based relational modeling with dynamic role assignment. Specifically, DRG-MAPPO constructs a graph-based representation of battlefield interactions and leverages graph attention mechanisms to extract critical relational features among allies, enemies, and threats. Subsequently, a high-level policy employs a dynamic role assignment mechanism to determine tactical responsibilities (e.g., ``leader'' and ``supporter''). Conditioned on these roles and encoded graph-relational features, a low-level policy executes discrete maneuver actions, facilitating the joint optimization of tactical strategy and collaborative execution. Furthermore, a target-priority auxiliary task is designed to foster the emergence of behaviors such as focus-fire. Experimental results demonstrate that DRG-MAPPO achieves a state-of-the-art win rate of 87%, suggesting that our framework effectively balances relational modeling, interpretability, and optimization stability for cooperative air combat.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "DRG-MAPPO: Hierarchical Dynamic Role-Graph Multi-Agent Reinforcement Learning for Cooperative Air Combat",
+      "url": "https://arxiv.org/abs/2609.11155v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "eae48dc923828d04dbaa2ac2",
+      "context_id": "3f9ea8f387033f759465b909",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-07-15T14:29:25Z",
+      "source_updated": "2026-07-15T14:29:25Z",
+      "summary": "In underwater covert cooperative missions, autonomous underwater vehicles (AUVs) often cannot rely on active sonar to continuously obtain complete information, since active sensing and frequent communications increase the risk of exposure. As a result, AUVs primarily rely on passive observation, an approach that yields incomplete local perception and limited task efficiency. Although underwater acoustic communications can mitigate this limitation through information sharing, they are simultaneously constrained by long delays, severe interference, low reliability, and the risk of covert exposure. Existing communications-oriented multi-agent reinforcement learning (MARL) studies often model communication as an ideal information flow, whereas traditional communication optimization primarily focuses on link-level performance. However, both are insufficient to characterize the actual contribution of perceptual information to cooperative tasks under realistic conditions of covert physical communications. This paper proposes a Sensed Information Value Realization Multi-Agent Reinforcement Learning (SVR-MARL) framework that leverages practical information to characterize the utility of information for cooperative tasks and learns distributed cooperative policies under realistic communication and covert constraints. Through a case study of covert multi-AUV cooperative localization and tracking, the potential of the proposed framework to improve collaborative task efficiency while reducing unnecessary communication and exposure risks is demonstrated.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Task-Oriented Sensing and Covert Transmissions for Collaborative Multi-AUV Systems",
+      "url": "https://arxiv.org/abs/2607.13880v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "2534d9a2eefb4ae0f139cdf7",
+      "context_id": "3b62f9e1d45e44e15dd5eadb",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-09T16:20:51Z",
+      "source_updated": "2026-09-09T16:20:51Z",
+      "summary": "The coordination of Automated Guided Vehicles (AGVs) in high-density industrial environments represents a critical challenge within Logistics 4.0, as traditional traffic management methods often lead to inefficiencies caused by negotiation-based priority assignment. To overcome the resulting limitations, this paper presents an innovative AGV traffic management system based on a Lifelong Multi-Agent Path Finding (L-MAPF) algorithm operating on roadmaps generated with Non-Uniform Rational B-Splines (NURBS) curves. The approach guarantees locally optimal coordination and ensures safe operation of large and heterogeneous AGVs. Building on this concept, the proposed framework integrates a modified version of the Bounded Horizon Conflict Based Search (CBS) technique within a Rolling Horizon Conflict Resolution strategy, utilizing an extended time horizon for each agent to enable effective conflict resolution in corridors identified by a topological map. In contrast to state-of-the-art methods for AGV fleet traffic management, the proposed solution is designed for real-world, non-standardized (i.e., non-grid-like) industrial settings characterized by narrow bidirectional corridors and high-traffic density, where AGVs of various sizes and capabilities operate simultaneously. Key contributions include an anytime conflict resolution strategy with adaptive time horizon regulation, an execution layer for safe and standard-compliant interaction with real AGVs, and an advanced mechanism for deadlock detection and resolution. Experimental results obtained in realistic industrial environments demonstrate higher throughput, with improvements of up to 11% over a conventional rule-based traffic management system, a state-of-the-art industrial method, and a priority-based L-MAPF variant, while maintaining continuous operation and improved efficiency.",
+      "tags": [
+        "cs.RO",
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "A traffic management system for large and heterogeneous vehicles in narrow industrial environments",
+      "url": "https://arxiv.org/abs/2609.10400v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "65a277cae4297e20c04ffb60",
+      "context_id": "37305f78936d4e32a795c474",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-09T14:53:45Z",
+      "source_updated": "2026-09-09T14:53:45Z",
+      "summary": "LLM serving systems already reuse KV caches, but only when the reused text sits at the very start of the prompt. Two growing workloads break this condition: a retrieval-augmented generation server assembles a different set of retrieved chunks for every query, and a multi-agent coordinator reads reports written by other agents. Reused inside a new prompt, a cache carries the wrong positions and never attended to the other sources. The cache may also have been written by a different checkpoint of the same model family, which changes the stored values. Repair methods for such caches have appeared in three separate communities, each measured on its own terms, and existing benchmarks test only exact-prefix reuse, where nothing is lost. KVShareArena benchmarks KV-cache reuse across prompt contexts and model checkpoints on retrieved chunks and agent reports. It scores every method by the fraction of the gap it recovers between no cache and full recomputation, and charges compute, memory, and per-request latency with the cache in hand, reporting the one-time cost of building a cache separately. We find that correcting positions, which needs no recomputation, is enough until a question needs several sources at once. There, only methods that pay, by re-encoding part of the cache or by training, recover half to two thirds of the gap; unrepaired caches can be worse than no cache. Cache-compression methods that are harmless on a single prompt fall significantly behind position correction on freshly written agent reports. These patterns hold across three model boards. When a different checkpoint wrote the cache, training-free methods are barely affected, while an adapter trained on one checkpoint's caches loses quality. Harness, frozen querysets, and cost accounting ship as a pip package with an automated submission workflow and a public leaderboard.",
+      "tags": [
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "KVShareArena: KV-Cache Reuse Across Contexts and Model Checkpoints",
+      "url": "https://arxiv.org/abs/2609.10266v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "fb35c343f51e53f842ee9d8b",
+      "context_id": "2fba39b8ea5e68e9c838e218",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-07T16:33:14Z",
+      "source_updated": "2026-09-07T16:33:14Z",
+      "summary": "Long-form narrative-to-film generation requires shot-level controllability and cross-clip consistency in both visual identity and character behavior-requirements that remain difficult to satisfy with current prompt-based workflows. A core reason existing workflows remain brittle is the lack of a structured intermediate layer between scripts and video models, especially when screenplays are underspecified at key cinematic decision points. We introduce a structured orchestration layer for film-oriented script-to-video generation, implemented as a multi-agent framework that operates between scripts and off-the-shelf video generators. The layer is centered on FilmDSL, a film-oriented domain-specific language that makes cinematic constraints explicit, including shot and camera directives, asset and continuity requirements, and persona cues, so that agents coordinate through a shared structured specification for planning, generation, critique, and repair. Specifically, a generation agent constructs asset packs and storyboard keyframes that anchor composition before clip-by-clip synthesis, while a critic agent produces structured QA signals and triggers targeted refinement without retraining the base model. Experiments on TV-style segments show improved controllability and consistency over text-only and reference-only baselines.",
+      "tags": [
+        "cs.CV",
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Better Call CineCrew: Consistent Ultra-Long Narrative-to-Film Generation",
+      "url": "https://arxiv.org/abs/2609.07720v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "f1488ba5bf40f9454f02c146",
+      "context_id": "2edb6502213d78dd56aedb66",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-08-08T10:18:58Z",
+      "source_updated": "2026-08-08T10:18:58Z",
+      "summary": "Urban embodied intelligence requires coordination among heterogeneous agents (e.g., UAVs, ground robots, and autonomous vehicles) in dynamic cities. Simulators therefore provide a scalable foundation for developing and evaluating such coordination. Existing platforms nevertheless isolate different embodiments and decouple them from task design and evaluation. We present \\textbf{Lingjing}, a simulation platform for heterogeneous multi-agent embodied intelligence in open-ended urban environments. Lingjing reconstructs and renders evolving cities from geographic data, synchronizes multiple physics engines, and exposes shared physical and structured urban state to agents. Its Gym-like interface supports user-defined ReAct agents and single- or multi-agent natural-language missions with configurable star or broadcast communication and resource constraints. Each episode becomes an attribution-ready replay that links agent trajectories and communication to relation-graph changes, resource consumption, and engine-based evaluations for systematic diagnosis. We evaluate twelve vision-language models on nine urban tasks under a shared engine-in-the-loop protocol. Controlled studies further examine communication, scalability, robustness, and failure provenance. Results expose persistent bottlenecks in grounding and long-horizon execution. They also show task-dependent coordination trade-offs and diminishing returns from added capacity, while heavier workloads further reduce success. Lingjing provides a unified testbed that enables reproducible end-to-end evaluation and systematic failure diagnosis in urban multi-agent embodied intelligence.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Lingjing: A Simulation Testbed for Multi-Agent Embodied Tasks in Open-Ended Cities",
+      "url": "https://arxiv.org/abs/2608.08045v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "1ebcdc0f875f7d0909a95cb9",
+      "context_id": "2d01bf387812a5c8657b8ec6",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-08-29T03:38:35Z",
+      "source_updated": "2026-08-29T03:38:35Z",
+      "summary": "Multi-agent LLM systems often coordinate by compressing an upstream interaction into a handoff artifact that downstream agents treat as shared state. We show that this handoff step is a structural source of privacy leakage: summaries preferentially preserve operational facts while weakening the boundary metadata that governs how those facts may be used---a failure mode we call \\emph{summary collapse}. On a controlled multi-agent coordination testbed we measure marker survival with a human-validated judge ($κ= 0.74$), where $σ_b = 1$ means every boundary marker survives verbatim and $σ_b = 0$ means all are lost. Boundary-marker and operational-fact survival are nearly uncorrelated at the handoff level on both GPT-5-mini and DeepSeek-R1-32B (Pearson $r$ near zero): uncompressed free-text handoffs preserve boundaries at $σ_b \\approx 0.80$, whereas a $25$-word budget drops $σ_b$ to ${\\approx}0.57$ while operational-fact survival stays near ceiling. Controlled downstream tests reveal that protection depends on \\emph{boundary explicitness}: vague languages leak in $73\\%$ of GPT and $50\\%$ of DeepSeek cases, while explicit constraints reduce leakage to under $15\\%$ across all three tested models. A no-handoff single-agent control further shows the failure is not reducible to multi-agent topology as direct full-marker access still leaks more often than the operationalized handoff. Prompt-only mitigation and exact-string redaction only partially address the problem, while a gold-derived audience allowlist nearly eliminates leakage across models, showing that correctly identifying audience boundaries is the key factor.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Facts Without Rules: Boundary Metadata Collapse in Multi-Agent LLM Handoffs",
+      "url": "https://arxiv.org/abs/2608.29028v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "6a1ae398b5a6f291117ddf5f",
+      "context_id": "14a1c91117cafe46d241402c",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2025-10-31T08:00:48Z",
+      "source_updated": "2025-10-31T08:00:48Z",
+      "summary": "In modern engineering practice, human engineers collaborate in specialized teams to design complex products, with each expert completing their respective tasks while communicating and exchanging results and data with one another. While this division of expertise is essential for managing multidisciplinary complexity, it demands substantial development time and cost. Recently, we introduced OpenFOAMGPT (1.0, 2.0), which functions as an autonomous AI engineer for computational fluid dynamics, and turbulence.ai, which can conduct end-to-end research in fluid mechanics draft publications and PhD theses. Building upon these foundations, we present Engineering.ai, a platform for teams of AI engineers in computational design. The framework employs a hierarchical multi-agent architecture where a Chief Engineer coordinates specialized agents consisting of Aerodynamics, Structural, Acoustic, and Optimization Engineers, each powered by LLM with domain-specific knowledge. Agent-agent collaboration is achieved through file-mediated communication for data provenance and reproducibility, while a comprehensive memory system maintains project context, execution history, and retrieval-augmented domain knowledge to ensure reliable decision-making across the workflow. The system integrates FreeCAD, Gmsh, OpenFOAM, CalculiX, and BPM acoustic analysis, enabling parallel multidisciplinary simulations while maintaining computational accuracy. The framework is validated through UAV wing optimization. This work demonstrates that agentic-AI-enabled AI engineers has the potential to perform complex engineering tasks autonomously. Remarkably, the automated workflow achieved a 100% success rate across over 400 parametric configurations, with zero mesh generation failures, solver convergence issues, or manual interventions required, validating that the framework is trustworthy.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Engineering.ai: A Platform for Teams of AI Engineers in Computational Design",
+      "url": "https://arxiv.org/abs/2511.00122v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "d3e78a3d424f24099a60eb4c",
+      "context_id": "0d117782857e141881937512",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-08-30T14:28:50Z",
+      "source_updated": "2026-08-30T14:28:50Z",
+      "summary": "Modern video generators excel at synthesizing individual clips, but complete video production requires coordinating a long sequence of interdependent creative steps, including scripting, storyboarding, generation, and editing. It further demands persistent asset management and dynamic task orchestration as intermediate outputs, dependencies, and execution states evolve over time. Existing automated systems typically rely on rigid pipelines that are difficult to adapt to diverse inputs and changing workflows, while general-purpose large language models (LLMs) remain unreliable for long-horizon orchestration and multimodal asset routing. We introduce FRAMEWORKERS, a task-centric and workspace-grounded multi-agent framework for open-ended video production. A central Director formulates video creation as dynamic task management, continuously editing a Task Stack to determine which subtask to execute next and which sub-agent to invoke. An Assistant serves as the execution layer, grounding each selected task in a shared Workspace, retrieving the required assets and context, invoking the assigned sub-agent, and persisting the resulting artifacts. Execution capabilities are exposed through modular sub-agents with registered descriptors, allowing new sub-agents to be integrated without redesigning the orchestration workflow. To improve orchestration reliability, we fine-tune the Director via supervised fine-tuning (SFT) followed by Group Relative Policy Optimization (GRPO) for descriptor-conditioned task routing. Experiments show that FRAMEWORKERS outperforms strong LLM planners in routing accuracy, recovers reliably from runtime failures, generalizes to unseen sub-agents without retraining, and achieves higher end-to-end video quality and broader task coverage than fixed pipelines, single-agent systems, and prior multi-agent approaches.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "FRAMEWORKERS: A Dynamic Multi-Agent Framework for AI-Generated Video Production",
+      "url": "https://arxiv.org/abs/2608.29814v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "e38bd8feb1baa7b1b08db38a",
+      "context_id": "0697742785002b4550fc3628",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2025-08-11T03:20:36Z",
+      "source_updated": "2025-08-11T03:20:36Z",
+      "summary": "This paper investigates the fair-effective communication and robustness in imperfect and energy-constrained underwater acoustic sensor networks (IC-UASNs). Specifically, we investigate the impact of unexpected node malfunctions on the network performance under the time-varying acoustic channels. Each node is expected to satisfy Quality of Service (QoS) requirements. However, achieving individual QoS requirements may interfere with other concurrent communications. Underwater nodes rely excessively on the rationality of other underwater nodes when guided by fully cooperative approaches, making it difficult to seek a trade-off between individual QoS and global fair-effective communications under imperfect conditions. Therefore, this paper presents a SEmi-COoperative Power Allocation approach (SECOPA) that achieves fair-effective communication and robustness in IC-UASNs. The approach is distributed multi-agent reinforcement learning (MARL)-based, and the objectives are twofold. On the one hand, each intelligent node individually decides the transmission power to simultaneously optimize individual and global performance. On the other hand, advanced training algorithms are developed to provide imperfect environments for training robust models that can adapt to the time-varying acoustic channels and handle unexpected node failures in the network. Numerical results are presented to validate our proposed approach.",
+      "tags": [
+        "cs.NI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Achieving Fair-Effective Communications and Robustness in Underwater Acoustic Sensor Networks: A Semi-Cooperative Approach",
+      "url": "https://arxiv.org/abs/2508.07578v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "686dd0f54736213ced48a1c9",
+      "context_id": "03dd183a70f2d1ef4ab7500c",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "github_repository_search",
+      "source_published": null,
+      "source_updated": "2026-09-05T23:38:38Z",
+      "summary": "Production-grade resilient distributed multi-agent orchestrator & governance runtime built with LangGraph, AsyncPG durable checkpointers, and OpenTelemetry.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "thanhauco/agent-mesh",
+      "url": "https://github.com/thanhauco/agent-mesh"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "c0c140bf846bc350455a2647",
+      "context_id": "03b1977c55f890fe0bd1ea74",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-08-22T13:23:30Z",
+      "source_updated": "2026-08-22T13:23:30Z",
+      "summary": "Complex clinical reasoning requires models to update diagnostic hypotheses as new evidence emerges and to coordinate different medical specialities under limited consultation resources. Existing LLM-based clinical reasoning systems typically perform single-pass prediction or rely on fixed multi-agent workflows, making expert participation either static or unnecessarily exhaustive. We propose Sparse Multi-Stage Expert-Agent Routing, a language-based clinical reasoning framework that models diagnosis as a stage-wise routing process. Given progressively available clinical evidence derived from multiple modalities, the framework maintains an evolving case state and adaptively activates a sparse set of medical expert agents, supported by expert-specific memory across stages. To evaluate free-text diagnostic conclusions beyond surface similarity, we further introduce ClinFEScore, a fact-aware semantic evaluation protocol for clinical reasoning outputs. On reconstructed multi-stage cases from MAC and AgentClinic-NEJM, our framework reduces the average number of activated experts from 17.0 to 3.0 whilst maintaining strong fact-level diagnostic quality. On 200 real-world hospital MDT cases, ClinFEScore correlates strongly with clinician judgements (Spearman's $ρ=0.81$; Pearson's $r=0.87$), whilst our method achieves 91.5\\% clinician-verified diagnostic accuracy with approximately five expert-agent/LLM calls per case. These results support sparse stage-wise coordination as an efficient and clinically relevant approach to LLM-based clinical reasoning.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Sparse Multi-Stage Expert-Agent Routing for Complex Clinical Reasoning",
+      "url": "https://arxiv.org/abs/2608.21948v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "5fcef94b3a4352c9a6035462",
+      "context_id": "00db7bba723cb56f09c02526",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-08T19:15:36Z",
+      "source_updated": "2026-09-08T19:15:36Z",
+      "summary": "Arctic maritime navigation is becoming increasingly important as changing sea-ice conditions expand seasonal accessibility while simultaneously introducing substantial operational, environmental, and community risks. Arctic route planning is inherently a multi-criteria problem: routes that improve vessel safety or efficiency may increase exposure to sea ice, sensitive ecosystems, or nearby communities. Existing routing methods prioritize travel time, fuel use, and navigational risk, often overlooking ecological and community impacts. We introduce a human-in-the-loop, multi-agent GeoAI system for Arctic eco-navigation that integrates operational, physical, ecological, and community-related criteria within a unified routing framework. Multiple specialized agents coordinate geospatial data acquisition and preparation, multi-objective route generation, and skyline-based decision support. The ecological criteria explicitly account for exposure to sensitive areas, including Essential Fish Habitat and seal critical habitat. By considering these ecosystem impacts and potential community burdens while keeping consequential value judgments under human control, the framework supports safer, more transparent, and socially responsible Arctic navigation. Project page and code are publicly available. https://samiraat.github.io/Arctic-Eco-Navigation-Agent/, https://github.com/samiraat/Arctic-Eco-Navigation-Agent",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "An Autonomous GeoAI Agent for Arctic Eco-Navigation",
+      "url": "https://arxiv.org/abs/2609.09374v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "283f0c9186094c763cac0ad6",
+      "context_id": "cca3535bc7ce2041cfed8d69",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.375,
+      "source": "arxiv",
+      "source_published": "2026-05-05T17:54:42Z",
+      "source_updated": "2026-05-05T17:54:42Z",
+      "summary": "Boolean satisfiability (SAT) solvers are widely used in hardware verification, cryptanalysis, automatic test-pattern generation, and side-channel reasoning workflows. Modern conflict-driven clause-learning (CDCL) solvers are highly effective, but satisfiable instances may still require substantial conflict analysis and Boolean propagation before identifying productive regions of the search space. This paper studies a hybrid SAT-solving framework in which a probabilistic-bit (p-bit) Ising sampler proposes high-agreement literals that are passed to CDCL as temporary assumptions. The goal is not to replace CDCL, but to evaluate whether stochastic low-violation samples can reduce CDCL internal search effort while retaining correctness through CDCL fallback. On selected controlled-backbone random 3-SAT benchmarks, the hybrid method reduces median conflicts by 80.8-85.5% and median propagations by 80.2-84.6% relative to pure CDCL. The observed benefit is distribution-sensitive, suggesting that p-bit guidance is effective only for certain instance classes. We further report exploratory machine-learning gates that estimate when hybrid solving is likely to help. On the selected run, a random-forest gate retains 94.8% of hybrid wins, indicating that lightweight gating may help avoid unproductive hybrid calls.",
+      "tags": [
+        "cs.CR",
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Probabilistic-bit Guided CDCL for SAT Solving using Ising Consensus Assumptions",
+      "url": "https://arxiv.org/abs/2605.04033v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "3061e86669e34d68bda41755",
+      "context_id": "57a718317c2cc69d6b196650",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.375,
+      "source": "arxiv",
+      "source_published": "2023-06-29T19:07:17Z",
+      "source_updated": "2024-09-13T21:29:32Z",
+      "summary": "Fast and reliable state estimation and tracking are essential for real-time situation awareness in Cyber-Physical Systems (CPS) operating in tactical environments or complicated civilian environments. Traditional centralized solutions do not scale well whereas existing fully distributed solutions over large networks suffer slow convergence, and are vulnerable to a wide spectrum of communication failures. In this paper, we aim to speed up the convergence and enhance the resilience of state estimation and tracking for large-scale networks using a simple hierarchical system architecture. We propose two ``consensus + innovation'' algorithms, both of which rely on a novel hierarchical push-sum consensus component. We characterize their convergence rates under a linear local observation model and minimal technical assumptions. We numerically validate our algorithms through simulation studies of underwater acoustic networks and large-scale synthetic networks.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Fast and Robust State Estimation and Tracking via Hierarchical Learning",
+      "url": "https://arxiv.org/abs/2306.17267v2"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "052b2d8d879ddb405e82908e",
+      "context_id": "1cd504e86c88899e8770e58b",
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5417,
+      "source": "arxiv",
+      "source_published": "2025-05-10T12:53:28Z",
+      "source_updated": "2025-05-10T12:53:28Z",
+      "summary": "Autonomous Vehicles (AV) proliferation brings important and pressing security and reliability issues that must be dealt with to guarantee public safety and help their widespread adoption. The contribution of the proposed research is towards achieving more secure, reliable, and trustworthy autonomous transportation system by providing more capabilities for anomaly detection, data provenance, and real-time response in safety critical AV deployments. In this research, we develop a new framework that combines the power of Artificial Intelligence (AI) for real-time anomaly detection with blockchain technology to detect and prevent any malicious activity including sensor failures in AVs. Through Long Short-Term Memory (LSTM) networks, our approach continually monitors associated multi-sensor data streams to detect anomalous patterns that may represent cyberattacks as well as hardware malfunctions. Further, this framework employs a decentralized platform for securely storing sensor data and anomaly alerts in a blockchain ledger for data incorruptibility and authenticity, while offering transparent forensic features. Moreover, immediate automated response mechanisms are deployed using smart contracts when anomalies are found. This makes the AV system more resilient to attacks from both cyberspace and hardware component failure. Besides, we identify potential challenges of scalability in handling high frequency sensor data, computational constraint in resource constrained environment, and of distributed data storage in terms of privacy.",
+      "tags": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "AI-Powered Anomaly Detection with Blockchain for Real-Time Security and Reliability in Autonomous Vehicles",
+      "url": "https://arxiv.org/abs/2505.06632v1"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "selection": "BALANCED_LENS_ROLLING_TOP",
+  "snapshot_cap": 48,
+  "target_repository": "Hawkar-usls/-Terminal-for-Janus"
+}
