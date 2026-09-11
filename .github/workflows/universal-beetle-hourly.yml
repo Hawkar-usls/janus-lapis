@@ -7,6 +7,8 @@ on:
     branches: [main]
     paths:
       - "tools/universal_beetle.py"
+      - "tools/beetle_director_overlay.py"
+      - "tools/beetle_mirror_router.py"
       - "data/beetle/directions.json"
       - ".github/workflows/universal-beetle-hourly.yml"
       - "requirements-ocean-beetle.txt"
@@ -19,7 +21,7 @@ on:
         type: choice
         options: [both, scout, graze]
       direction:
-        description: Optional direction id
+        description: Optional effective lane id
         required: false
         default: ""
       grazer_task:
@@ -61,6 +63,16 @@ jobs:
         working-directory: lapis
         run: python -m pip install -r requirements-ocean-beetle.txt
 
+      - name: Ask Demiurge for current attention and build mirrored schedule
+        run: |
+          mkdir -p lapis/runtime beetle-memory/data/beetle-state
+          python lapis/tools/beetle_director_overlay.py \
+            --base lapis/data/beetle/directions.json \
+            --static-url https://raw.githubusercontent.com/Hawkar-usls/Janus-Demiurge/main/beetle/DEMIURGE_BEETLE_DIRECTIVES.json \
+            --live-url https://raw.githubusercontent.com/Hawkar-usls/Janus-Demiurge/main/beetle/LIVE_PRIORITIES.json \
+            --state-dir beetle-memory/data/beetle-state \
+            --out lapis/runtime/effective_directions.json
+
       - name: Run Universal Beetle
         env:
           GH_TOKEN_FOR_BEETLE: ${{ github.token }}
@@ -71,10 +83,9 @@ jobs:
         run: |
           set -euo pipefail
           export GITHUB_TOKEN="$GH_TOKEN_FOR_BEETLE"
-          mkdir -p beetle-memory/data/beetle-state
           args=(
             --repo-root "$GITHUB_WORKSPACE/lapis"
-            --config data/beetle/directions.json
+            --config runtime/effective_directions.json
             --state-dir "$GITHUB_WORKSPACE/beetle-memory/data/beetle-state"
             --mode "$MODE"
           )
@@ -82,7 +93,15 @@ jobs:
           if [[ -n "$GRAZER_TASK" ]]; then args+=(--grazer-task "$GRAZER_TASK"); fi
           python lapis/tools/universal_beetle.py "${args[@]}" | tee beetle-memory/data/beetle-state/last_console.json
 
-      - name: Commit durable state
+      - name: Route new discoveries into provenance-bound repo mirrors
+        if: always()
+        run: |
+          python lapis/tools/beetle_mirror_router.py \
+            --state-dir beetle-memory/data/beetle-state \
+            --effective-config lapis/runtime/effective_directions.json \
+            | tee beetle-memory/data/beetle-state/last_routing_console.json
+
+      - name: Commit durable state and mirror outboxes
         working-directory: beetle-memory
         shell: bash
         run: |
@@ -94,7 +113,8 @@ jobs:
             echo "No state change"
             exit 0
           fi
-          git commit -m "beetle: hourly bounded research state ${GITHUB_RUN_ID}"
+          git commit -m "beetle: mirrored hourly research state ${GITHUB_RUN_ID}"
+          git pull --rebase origin beetle-state
           git push origin HEAD:beetle-state
 
       - name: Upload compact run receipt
@@ -103,7 +123,10 @@ jobs:
         with:
           name: universal-beetle-${{ github.run_id }}
           path: |
+            lapis/runtime/effective_directions.json
             beetle-memory/data/beetle-state/latest_run.json
+            beetle-memory/data/beetle-state/latest_routing.json
             beetle-memory/data/beetle-state/last_console.json
+            beetle-memory/data/beetle-state/last_routing_console.json
           if-no-files-found: warn
           retention-days: 14
