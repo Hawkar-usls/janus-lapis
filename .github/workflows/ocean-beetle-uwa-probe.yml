@@ -37,7 +37,7 @@ jobs:
       RECORD_ID: ${{ github.event.inputs.record_id || '21287414' }}
       CHANNEL_FILE: ${{ github.event.inputs.channel_file || 'blue_1.mat' }}
       BITE: ${{ github.event.inputs.bite || '64' }}
-      MAX_BITES: ${{ github.event.inputs.max_bites || '2' }}
+      MAX_BITES: ${{ github.event.inputs.max_bites || '1' }}
 
     steps:
       - uses: actions/checkout@v4
@@ -75,22 +75,9 @@ jobs:
           print(json.dumps({"record": record, "file": target, "size": f.get("size"), "checksum": f.get("checksum"), "url": url}, indent=2))
           PY
 
-      - name: Inspect HDF5 metadata by byte ranges
+      - name: Write frozen source manifest before reading body
         run: |
           mkdir -p probe_output
-          python tools/ocean_beetle.py inspect "${{ steps.zenodo.outputs.url }}" \
-            > probe_output/inspect.json
-
-      - name: Eat only bounded time bites
-        run: |
-          python tools/ocean_beetle.py uwa-channel "${{ steps.zenodo.outputs.url }}" \
-            --bite "$BITE" \
-            --max-bites "$MAX_BITES" \
-            --include-tracking \
-            --out-dir probe_output/beetle
-
-      - name: Write source manifest
-        run: |
           python - <<'PY'
           import json, os, pathlib
           obj = {
@@ -99,10 +86,21 @@ jobs:
             "channel_file": os.environ["CHANNEL_FILE"],
             "bite": int(os.environ["BITE"]),
             "max_bites": int(os.environ["MAX_BITES"]),
+            "reader_mode": "DIRECT_KNOWN_PATH_H_HAT__NO_FULL_TREE_WALK",
             "execution_boundary": "BOUNDED_HTTP_RANGE_HDF5_PROBE__NOT_FULL_FILE_DOWNLOAD",
           }
           pathlib.Path("probe_output/source_manifest.json").write_text(json.dumps(obj, indent=2) + "\n")
           PY
+
+      - name: Eat only bounded h_hat time bites
+        run: |
+          python tools/ocean_beetle.py uwa-channel "${{ steps.zenodo.outputs.url }}" \
+            --bite "$BITE" \
+            --max-bites "$MAX_BITES" \
+            --include-tracking \
+            --block-size 1048576 \
+            --max-cache-blocks 8 \
+            --out-dir probe_output/beetle
 
       - name: Upload receipts and checkpoints
         if: always()
