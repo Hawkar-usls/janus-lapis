@@ -2,7 +2,7 @@ name: JANUS Universal Beetle hourly
 
 on:
   schedule:
-    - cron: "27 * * * *"
+    - cron: "7,27,47 * * * *"
   push:
     branches: [main]
     paths:
@@ -72,7 +72,69 @@ jobs:
             --static-url https://raw.githubusercontent.com/Hawkar-usls/Janus-Demiurge/main/beetle/DEMIURGE_BEETLE_DIRECTIVES.json \
             --live-url https://raw.githubusercontent.com/Hawkar-usls/Janus-Demiurge/main/beetle/LIVE_PRIORITIES.json \
             --state-dir beetle-memory/data/beetle-state \
+            --max-primary 10 \
+            --max-lanes 16 \
             --out lapis/runtime/effective_directions.json
+
+      - name: Apply bounded WORKER profile
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('lapis/runtime/effective_directions.json')
+          cfg = json.loads(path.read_text(encoding='utf-8'))
+
+          required_principles = {
+              'DISCOVERY_CANDIDATE_NOT_TRUTH',
+              'PROVENANCE_BEFORE_INTERPRETATION',
+              'DEDUPE_BEFORE_STORAGE',
+              'CHECKPOINT_BEFORE_NEXT',
+              'NO_FULL_DOWNLOAD_WITHOUT_EXPLICIT_TASK_APPROVAL',
+              'FORWARD_REQUIRES_REVERSE_COUNTEREVIDENCE_AND_CONTROL_MIRRORS',
+              'PRIORITY_IS_ATTENTION_NOT_EVIDENCE',
+              'ROUTING_TO_REPO_MEMORY_IS_NOT_PROMOTION',
+          }
+          missing = sorted(required_principles - set(cfg.get('principles', [])))
+          if missing:
+              raise SystemExit(f'WORKER profile refused: missing guardrails: {missing}')
+
+          lenses = set(cfg.get('default_mirror_lenses', []))
+          required_lenses = {'FORWARD', 'REVERSE', 'COUNTEREVIDENCE', 'CONTROL'}
+          if not required_lenses.issubset(lenses):
+              raise SystemExit('WORKER profile refused: four-lens mirror invariant missing')
+
+          budget = cfg.setdefault('global_budget', {})
+          budget.update({
+              'max_requests_per_run': 72,
+              'max_new_candidates_per_run': 160,
+              'max_metadata_bytes_per_run': 15_000_000,
+          })
+
+          for task in cfg.get('grazer_tasks', []):
+              if not task.get('enabled', True):
+                  continue
+              task['max_bites_per_run'] = max(4, int(task.get('max_bites_per_run', 1)))
+              task['timeout_seconds'] = max(1200, int(task.get('timeout_seconds', 900)))
+
+          cfg['worker_profile'] = {
+              'schema': 'janus.universal_beetle.worker_profile.v1',
+              'mode': 'WORKER',
+              'cadence_minutes': 20,
+              'max_primary_directions': 10,
+              'max_mirror_lanes': 16,
+              'max_requests_per_run': 72,
+              'max_new_candidates_per_run': 160,
+              'max_metadata_bytes_per_run': 15_000_000,
+              'min_grazer_bites_per_run': 4,
+              'guardrail_policy': 'UNCHANGED_FAIL_CLOSED',
+              'epistemic_authority_delta': 0,
+          }
+          path.write_text(json.dumps(cfg, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+          print(json.dumps(cfg['worker_profile'], ensure_ascii=False, sort_keys=True))
+          PY
 
       - name: Run Universal Beetle
         env:
