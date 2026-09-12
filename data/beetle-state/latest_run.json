@@ -1,28 +1,39 @@
 {
-  "finished_at": "2026-09-12T12:57:20.098262Z",
+  "finished_at": "2026-09-12T16:13:47.727876Z",
   "graze": {
-    "finished_at": "2026-09-12T12:57:20.098249Z",
+    "finished_at": "2026-09-12T16:13:47.727857Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
         "returncode": 0,
         "stderr_tail": "",
-        "stdout_tail": "{\"event\": \"OPEN\", \"run_id\": \"uwa-channel-content-dc5d937c62b1\", \"disk_shape\": [2553, 12, 320], \"logical_shape\": [320, 12, 2553], \"params\": {\"fs_delay\": 9765.625, \"fs_time\": 48.828125, \"fc\": 13000.0, \"version\": 1.0}, \"resume_from\": 1600, \"stop\": 2553}\n{\"event\": \"BITE\", \"t0\": 1600, \"t1\": 1664, \"receipt_sha256\": \"d492554381f28031cb9c384319143c66ef2fe262f22d4cece696dc1c41a2b1aa\", \"next\": 1664, \"status\": \"IN_PROGRESS\"}\n{\"event\": \"BITE\", \"t0\": 1664, \"t1\": 1728, \"receipt_sha256\": \"9b7f3bff30a93d410767d8ef5e6484974f7c59dee962dd23985eec3a562e15c7\", \"next\": 1728, \"status\": \"IN_PROGRESS\"}\n{\"event\": \"BITE\", \"t0\": 1728, \"t1\": 1792, \"receipt_sha256\": \"68b8024787ddf16f4ce6d3228302ab71e13d4dd1fec4f88c39720d2b635ae847\", \"next\": 1792, \"status\": \"IN_PROGRESS\"}\n{\"event\": \"BITE\", \"t0\": 1792, \"t1\": 1856, \"receipt_sha256\": \"c7a5dccbaf07d60027ce997dd74a3dab50c1361cffeac58327ae3e08303ff50b\", \"next\": 1856, \"status\": \"IN_PROGRESS\"}\n{\"event\": \"PAUSED\", \"reason\": \"max_bites reached\", \"next\": 1856, \"checkpoint\": \"/home/runner/work/janus-lapis/janus-lapis/beetle-memory/data/beetle-state/grazers/uwa_blue_1_raw_channel/uwa-channel-content-dc5d937c62b1/checkpoint.json\"}\n",
+        "stdout_tail": "{\"event\": \"OPEN\", \"run_id\": \"uwa-channel-content-dc5d937c62b1\", \"disk_shape\": [2553, 12, 320], \"logical_shape\": [320, 12, 2553], \"params\": {\"fs_delay\": 9765.625, \"fs_time\": 48.828125, \"fc\": 13000.0, \"version\": 1.0}, \"resume_from\": 1856, \"stop\": 2553}\n{\"event\": \"BITE\", \"t0\": 1856, \"t1\": 1920, \"receipt_sha256\": \"938079d6894043119029dcd147a8565d7122b402c7cfb79c7da8e6201c1509cb\", \"next\": 1920, \"status\": \"IN_PROGRESS\"}\n{\"event\": \"BITE\", \"t0\": 1920, \"t1\": 1984, \"receipt_sha256\": \"58920a1f60bbf68a0abe946383afcbdeaae01d51a4bc3fb6eea5b014890c66c6\", \"next\": 1984, \"status\": \"IN_PROGRESS\"}\n{\"event\": \"BITE\", \"t0\": 1984, \"t1\": 2048, \"receipt_sha256\": \"1d834eae38a56a0c9d136d7829a7b7f604233700664090fad77df245b2e81010\", \"next\": 2048, \"status\": \"IN_PROGRESS\"}\n{\"event\": \"BITE\", \"t0\": 2048, \"t1\": 2112, \"receipt_sha256\": \"ccd76f681e7e7baef0c0616605bf03a2be3ec0cf7ddc75e57acbe5dd6d868a6f\", \"next\": 2112, \"status\": \"IN_PROGRESS\"}\n{\"event\": \"PAUSED\", \"reason\": \"max_bites reached\", \"next\": 2112, \"checkpoint\": \"/home/runner/work/janus-lapis/janus-lapis/beetle-memory/data/beetle-state/grazers/uwa_blue_1_raw_channel/uwa-channel-content-dc5d937c62b1/checkpoint.json\"}\n",
         "task_id": "uwa_blue_1_raw_channel"
       }
     ]
   },
   "mode": "both",
-  "receipt_head": "2b4fd7953e8d2331f0725389bf57296fdeefc8ca90bd20f8f588ea4e0c9b7619",
+  "receipt_head": "9a3e7a896ba3f605b46845ed694950dfb5a7cd884a61afaffc9205dbfe0af552",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-09-12T12:56:53.211081Z",
-    "metadata_bytes": 3302798,
-    "new_candidates": 9,
-    "requests": 35,
-    "started_at": "2026-09-12T12:56:37.044024Z"
+    "errors": [
+      {
+        "direction": "registry_provenance::COUNTEREVIDENCE",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22data+provenance%22+OR+all%3A%22research+reproducibility%22+OR+all%3A%22workflow+provenance%22%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "swarm_distributed_systems::COUNTEREVIDENCE",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28%28all%3A%22multi-agent%22+OR+all%3A%22distributed+agents%22%29+AND+%28all%3A%22fault+tolerance%22+OR+all%3A%22coordination%22%29%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      }
+    ],
+    "finished_at": "2026-09-12T16:13:25.205883Z",
+    "metadata_bytes": 639938,
+    "new_candidates": 10,
+    "requests": 36,
+    "started_at": "2026-09-12T16:12:10.707189Z"
   },
-  "started_at": "2026-09-12T12:56:37.043906Z",
+  "started_at": "2026-09-12T16:12:10.706996Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
