@@ -12,7 +12,7 @@ def now(): return now_dt().isoformat().replace('+00:00','Z')
 def load_local(p): return json.loads(pathlib.Path(p).read_text(encoding='utf-8'))
 def load_remote(url: str) -> dict[str,Any]:
     try:
-        r=requests.get(url,timeout=30,headers={'User-Agent':'JANUS-Beetle-Director-Overlay/1.2'})
+        r=requests.get(url,timeout=30,headers={'User-Agent':'JANUS-Beetle-Director-Overlay/1.3'})
         r.raise_for_status(); obj=r.json(); return obj if isinstance(obj,dict) else {}
     except Exception:
         return {}
@@ -70,6 +70,8 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('--base',required=True); ap.add_argument('--static-url',required=True); ap.add_argument('--live-url',required=True)
     ap.add_argument('--state-dir',required=True); ap.add_argument('--out',required=True)
+    ap.add_argument('--max-primary',type=int,default=None)
+    ap.add_argument('--max-lanes',type=int,default=None)
     a=ap.parse_args()
     base=load_local(a.base); static=load_remote(a.static_url); live=load_remote(a.live_url)
     state_dir=pathlib.Path(a.state_dir); sched_path=state_dir/'scheduler.json'
@@ -84,8 +86,10 @@ def main():
         targets=[x for x in ad.get('target_repositories',[]) if x in allow]
         if targets and ad.get('keywords'):
             z=dict(ad); z['target_repositories']=targets; directions.append(adhoc_to_direction(z)); priorities[z['id']]=float(z.get('priority',65))
-    max_primary=max(1,int(static.get('scheduling',{}).get('max_primary_directions_per_hour',5)))
-    max_lanes=max(1,int(static.get('scheduling',{}).get('max_mirror_lanes_per_hour',8)))
+    static_max_primary=int(static.get('scheduling',{}).get('max_primary_directions_per_hour',5))
+    static_max_lanes=int(static.get('scheduling',{}).get('max_mirror_lanes_per_hour',8))
+    max_primary=max(1,int(a.max_primary if a.max_primary is not None else static_max_primary))
+    max_lanes=max(1,int(a.max_lanes if a.max_lanes is not None else static_max_lanes))
     fairness=bool(static.get('scheduling',{}).get('reserve_one_fairness_slot',True))
     tnow=now_dt()
 
@@ -156,6 +160,7 @@ def main():
       'selected_lanes':[d['id'] for d in lanes], 'active_mirror_lenses':active_lenses,
       'all_four_mirror_lenses_present':all(x in active_lenses for x in MIRROR_ORDER) if max_lanes>=4 else False,
       'priority_semantics':'ATTENTION_ONLY_NOT_EVIDENCE','base_direction_fairness_slot':fairness,
+      'scheduler_width':{'max_primary':max_primary,'max_lanes':max_lanes,'static_max_primary':static_max_primary,'static_max_lanes':static_max_lanes},
       'mirror_invariant':'FORWARD_REVERSE_COUNTEREVIDENCE_CONTROL_EACH_CYCLE_WHEN_MAX_LANES_GE_4'
     }
     atomic(pathlib.Path(a.out),eff); print(json.dumps(eff['effective_meta'],ensure_ascii=False))
