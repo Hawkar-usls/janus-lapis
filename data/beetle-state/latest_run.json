@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-09-12T23:00:29.593004Z",
+  "finished_at": "2026-09-13T00:57:00.333070Z",
   "graze": {
-    "finished_at": "2026-09-12T23:00:29.592989Z",
+    "finished_at": "2026-09-13T00:57:00.333057Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,7 +13,7 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "f72683ae14d297e9c7cbc95764054064dc0c7ea7c0501b913bfcc96c78eac98c",
+  "receipt_head": "fb5535cbcac0a1be467a7afa52e6415e1db89f2fd61ec1886c079cd6227ab0af",
   "scout": {
     "errors": [
       {
@@ -23,22 +23,22 @@
       },
       {
         "direction": "mirror_bidirectional_provenance::REVERSE",
-        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
         "source": "arxiv"
       },
       {
         "direction": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
-        "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "mirror_bidirectional_provenance::CONTROL",
-        "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
         "source": "arxiv"
       },
       {
         "direction": "formal_proof_verification::COUNTEREVIDENCE",
-        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22proof+complexity%22+OR+all%3A%22SAT+solving%22+OR+all%3A%22proof+certificate%22%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
         "source": "arxiv"
       },
       {
@@ -58,37 +58,37 @@
       },
       {
         "direction": "registry_provenance::COUNTEREVIDENCE",
-        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22data+provenance%22+OR+all%3A%22research+reproducibility%22+OR+all%3A%22workflow+provenance%22%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22data+provenance%22+OR+all%3A%22research+reproducibility%22+OR+all%3A%22workflow+provenance%22%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "formal_proof_verification::REVERSE",
-        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22proof+complexity%22+OR+all%3A%22SAT+solving%22+OR+all%3A%22proof+certificate%22%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22proof+complexity%22+OR+all%3A%22SAT+solving%22+OR+all%3A%22proof+certificate%22%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "cognition_memory_reverse::REVERSE",
-        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22memory%22+OR+all%3A%22world+model%22+OR+all%3A%22inverse+model%22%29%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "registry_provenance::CONTROL",
-        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22data+provenance%22+OR+all%3A%22research+reproducibility%22+OR+all%3A%22workflow+provenance%22%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "swarm_distributed_systems::COUNTEREVIDENCE",
-        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28%28all%3A%22multi-agent%22+OR+all%3A%22distributed+agents%22%29+AND+%28all%3A%22fault+tolerance%22+OR+all%3A%22coordination%22%29%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=%28%28all%3A%22multi-agent%22+OR+all%3A%22distributed+agents%22%29+AND+%28all%3A%22fault+tolerance%22+OR+all%3A%22coordination%22%29%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "formal_proof_verification::FORWARD",
-        "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=all%3A%22proof+complexity%22+OR+all%3A%22SAT+solving%22+OR+all%3A%22proof+certificate%22&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=all%3A%22proof+complexity%22+OR+all%3A%22SAT+solving%22+OR+all%3A%22proof+certificate%22&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "cognition_memory_reverse::FORWARD",
-        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22memory%22+OR+all%3A%22world+model%22+OR+all%3A%22inverse+model%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
         "source": "arxiv"
       },
       {
@@ -97,13 +97,13 @@
         "source": "arxiv"
       }
     ],
-    "finished_at": "2026-09-12T23:00:26.215389Z",
-    "metadata_bytes": 370768,
-    "new_candidates": 11,
-    "requests": 34,
-    "started_at": "2026-09-12T22:57:16.491904Z"
+    "finished_at": "2026-09-13T00:56:55.435374Z",
+    "metadata_bytes": 306258,
+    "new_candidates": 13,
+    "requests": 32,
+    "started_at": "2026-09-13T00:50:44.758810Z"
   },
-  "started_at": "2026-09-12T22:57:16.491651Z",
+  "started_at": "2026-09-13T00:50:44.758698Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
