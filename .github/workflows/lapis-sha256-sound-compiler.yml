@@ -1,0 +1,80 @@
+name: Lapis SHA-256 Sound Compiler
+
+on:
+  push:
+    branches:
+      - research/lapis-sha256-sound-roundtrip-v1
+    paths:
+      - "tools/lapis_converter.py"
+      - "tools/lapis_sound_roundtrip.py"
+      - "tools/lapis_sha256_sound_compiler.py"
+      - "tests/test_lapis_sha256_sound_compiler.py"
+      - "examples/sha256_json_reference_machine.v1.json"
+      - ".github/workflows/lapis-sha256-sound-compiler.yml"
+  pull_request:
+    paths:
+      - "tools/lapis_converter.py"
+      - "tools/lapis_sound_roundtrip.py"
+      - "tools/lapis_sha256_sound_compiler.py"
+      - "tests/test_lapis_sha256_sound_compiler.py"
+      - "examples/sha256_json_reference_machine.v1.json"
+      - ".github/workflows/lapis-sha256-sound-compiler.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sha256-sound-compiler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compile all Lapis converter lanes
+        run: python -m py_compile tools/lapis_converter.py tools/lapis_sound_roundtrip.py tools/lapis_sha256_sound_compiler.py
+
+      - name: Run full converter tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Build exact SHA sound carrier
+        run: |
+          mkdir -p /tmp/lapis-sha-compile
+          python tools/lapis_sound_roundtrip.py json-to-exact-sound \
+            examples/sha256_json_reference_machine.v1.json \
+            -o /tmp/lapis-sha-compile/sha256.wav \
+            --repeat 4
+
+      - name: Compile sound to typed SHA algorithm and executable code
+        run: |
+          python tools/lapis_sha256_sound_compiler.py sound-to-sha256-algorithm \
+            /tmp/lapis-sha-compile/sha256.wav \
+            -o /tmp/lapis-sha-compile/sha256.algorithm.json \
+            --repeat 4
+          python tools/lapis_sha256_sound_compiler.py sound-to-sha256-code \
+            /tmp/lapis-sha-compile/sha256.wav \
+            -o /tmp/lapis-sha-compile/sha256.generated.py \
+            --repeat 4
+          python /tmp/lapis-sha-compile/sha256.generated.py
+
+      - name: Full sound compiler selftest
+        run: |
+          python tools/lapis_sha256_sound_compiler.py selftest-sound \
+            /tmp/lapis-sha-compile/sha256.wav \
+            --repeat 4 | tee /tmp/lapis-sha-compile/selftest.json
+          python - <<'PY'
+          import json
+          r=json.load(open('/tmp/lapis-sha-compile/selftest.json'))
+          assert r['terminal']=='LAPIS_SHA256_JSON_SOUND_ALGORITHM_CODE_SELFTEST_PASS'
+          assert r['vectors_passed']==3
+          assert r['abc_rounds']==64
+          assert r['abc_rank_transitions_verified']==64
+          assert r['abc_exact_match'] is True
+          assert r['max_working_words_observed'] <= 72
+          assert r['P_VS_NP']=='OPEN'
+          print('SHA256_JSON_TO_SOUND_TO_EXECUTABLE_ALGORITHM=PASS')
+          print('SAT_TRANSFER=NOT_CLAIMED')
+          PY
