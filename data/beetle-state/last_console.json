@@ -1,24 +1,24 @@
 {
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0",
-  "started_at": "2026-09-16T06:47:37.186659Z",
+  "started_at": "2026-09-16T12:33:43.919744Z",
   "mode": "both",
   "scout": {
-    "started_at": "2026-09-16T06:47:37.186755Z",
-    "finished_at": "2026-09-16T06:48:03.845758Z",
+    "started_at": "2026-09-16T12:33:43.919903Z",
+    "finished_at": "2026-09-16T12:35:19.864047Z",
     "requests": 36,
-    "metadata_bytes": 816527,
-    "new_candidates": 40,
+    "metadata_bytes": 806737,
+    "new_candidates": 19,
     "errors": [
       {
-        "direction": "cognition_memory_reverse::REVERSE",
-        "source": "arxiv",
-        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22memory%22+OR+all%3A%22world+model%22+OR+all%3A%22inverse+model%22%29%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending"
+        "direction": "mirror_bidirectional_provenance::REVERSE",
+        "source": "zenodo",
+        "error": "HTTPError: 504 Server Error: Gateway Time-out for url: https://zenodo.org/api/records?q=inverse+problem+identifiability+provenance+inverse+reverse+reconstruction&size=8&sort=mostrecent"
       }
     ]
   },
   "graze": {
-    "finished_at": "2026-09-16T06:48:10.686366Z",
+    "finished_at": "2026-09-16T12:36:45.784381Z",
     "tasks": [
       {
         "task_id": "uwa_blue_1_raw_channel",
@@ -29,6 +29,6 @@
       }
     ]
   },
-  "finished_at": "2026-09-16T06:48:10.686379Z",
-  "receipt_head": "3d453cfddb9192908448a3e7973d344dfddc87580dc8f3751ee7b49cd13ba87b"
+  "finished_at": "2026-09-16T12:36:45.784396Z",
+  "receipt_head": "c109eac7788487315e9a902bf13aa6052945a910084475c3f0af6b10a314f4b1"
 }
