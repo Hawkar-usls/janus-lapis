@@ -1,34 +1,44 @@
 {
-  "finished_at": "2026-09-16T12:36:45.784396Z",
+  "finished_at": "2026-09-16T17:20:23.794271Z",
   "graze": {
-    "finished_at": "2026-09-16T12:36:45.784381Z",
+    "finished_at": "2026-09-16T17:20:23.794257Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
-        "returncode": 0,
-        "stderr_tail": "",
-        "stdout_tail": "{\"event\": \"OPEN\", \"run_id\": \"uwa-channel-content-dc5d937c62b1\", \"disk_shape\": [2553, 12, 320], \"logical_shape\": [320, 12, 2553], \"params\": {\"fs_delay\": 9765.625, \"fs_time\": 48.828125, \"fc\": 13000.0, \"version\": 1.0}, \"resume_from\": 2553, \"stop\": 2553}\n{\"event\": \"COMPLETE\", \"bites\": 40, \"receipts\": \"/home/runner/work/janus-lapis/janus-lapis/beetle-memory/data/beetle-state/grazers/uwa_blue_1_raw_channel/uwa-channel-content-dc5d937c62b1/receipts.jsonl\", \"checkpoint\": \"/home/runner/work/janus-lapis/janus-lapis/beetle-memory/data/beetle-state/grazers/uwa_blue_1_raw_channel/uwa-channel-content-dc5d937c62b1/checkpoint.json\"}\n",
+        "returncode": 2,
+        "stderr_tail": "{\"event\": \"ERROR\", \"type\": \"RuntimeError\", \"message\": \"Range probe failed: HTTPSConnectionPool(host='zenodo.org', port=443): Read timed out. (read timeout=30)\"}\n",
+        "stdout_tail": "",
         "task_id": "uwa_blue_1_raw_channel"
       }
     ]
   },
   "mode": "both",
-  "receipt_head": "c109eac7788487315e9a902bf13aa6052945a910084475c3f0af6b10a314f4b1",
+  "receipt_head": "1226cb562a3a73b96d1cde645d24564da7e45304b6ea87a261cb70291ca88d77",
   "scout": {
     "errors": [
+      {
+        "direction": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+        "error": "HTTPError: 504 Server Error: Gateway Time-out for url: https://zenodo.org/api/records?q=inverse+problem+identifiability+provenance+failure+null+result+negative+result&size=8&sort=mostrecent",
+        "source": "zenodo"
+      },
+      {
+        "direction": "mirror_bidirectional_provenance::CONTROL",
+        "error": "HTTPError: 504 Server Error: Gateway Time-out for url: https://zenodo.org/api/records?q=inverse+problem+identifiability+provenance+replication+benchmark+baseline&size=8&sort=mostrecent",
+        "source": "zenodo"
+      },
       {
         "direction": "mirror_bidirectional_provenance::REVERSE",
         "error": "HTTPError: 504 Server Error: Gateway Time-out for url: https://zenodo.org/api/records?q=inverse+problem+identifiability+provenance+inverse+reverse+reconstruction&size=8&sort=mostrecent",
         "source": "zenodo"
       }
     ],
-    "finished_at": "2026-09-16T12:35:19.864047Z",
-    "metadata_bytes": 806737,
-    "new_candidates": 19,
-    "requests": 36,
-    "started_at": "2026-09-16T12:33:43.919903Z"
+    "finished_at": "2026-09-16T17:19:22.703161Z",
+    "metadata_bytes": 453267,
+    "new_candidates": 0,
+    "requests": 35,
+    "started_at": "2026-09-16T17:17:25.447114Z"
   },
-  "started_at": "2026-09-16T12:33:43.919744Z",
+  "started_at": "2026-09-16T17:17:25.446991Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
