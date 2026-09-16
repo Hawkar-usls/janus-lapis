@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-09-16T01:44:10.141824Z",
+  "finished_at": "2026-09-16T06:48:10.686379Z",
   "graze": {
-    "finished_at": "2026-09-16T01:44:10.141812Z",
+    "finished_at": "2026-09-16T06:48:10.686366Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,16 +13,22 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "5040dd80dd02007b7a553061309e3fdc4e2f943944105b3dae5b4f73e98a9692",
+  "receipt_head": "3d453cfddb9192908448a3e7973d344dfddc87580dc8f3751ee7b49cd13ba87b",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-09-16T01:44:04.187760Z",
-    "metadata_bytes": 678617,
-    "new_candidates": 60,
+    "errors": [
+      {
+        "direction": "cognition_memory_reverse::REVERSE",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22memory%22+OR+all%3A%22world+model%22+OR+all%3A%22inverse+model%22%29%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      }
+    ],
+    "finished_at": "2026-09-16T06:48:03.845758Z",
+    "metadata_bytes": 816527,
+    "new_candidates": 40,
     "requests": 36,
-    "started_at": "2026-09-16T01:43:33.133240Z"
+    "started_at": "2026-09-16T06:47:37.186755Z"
   },
-  "started_at": "2026-09-16T01:43:33.133088Z",
+  "started_at": "2026-09-16T06:47:37.186659Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
