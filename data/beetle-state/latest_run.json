@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-09-18T06:03:39.997757Z",
+  "finished_at": "2026-09-18T11:05:40.721124Z",
   "graze": {
-    "finished_at": "2026-09-18T06:03:39.997744Z",
+    "finished_at": "2026-09-18T11:05:40.721112Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,16 +13,22 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "f802c7d585650440c13a47e5cd463fe2d78d9244ef68895e92ea24b13f95311f",
+  "receipt_head": "11029edb25c7b231424b711f0620c81cfe354c702f022f5f5f96f79b4ef08858",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-09-18T06:03:34.323589Z",
-    "metadata_bytes": 775312,
-    "new_candidates": 37,
+    "errors": [
+      {
+        "direction": "swarm_distributed_systems::COUNTEREVIDENCE",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28%28all%3A%22multi-agent%22+OR+all%3A%22distributed+agents%22%29+AND+%28all%3A%22fault+tolerance%22+OR+all%3A%22coordination%22%29%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      }
+    ],
+    "finished_at": "2026-09-18T11:05:30.916489Z",
+    "metadata_bytes": 717188,
+    "new_candidates": 11,
     "requests": 36,
-    "started_at": "2026-09-18T06:03:18.248816Z"
+    "started_at": "2026-09-18T11:04:41.808204Z"
   },
-  "started_at": "2026-09-18T06:03:18.248721Z",
+  "started_at": "2026-09-18T11:04:41.808108Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
