@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-09-22T22:55:18.859406Z",
+  "finished_at": "2026-09-23T01:26:08.633819Z",
   "graze": {
-    "finished_at": "2026-09-22T22:55:18.859388Z",
+    "finished_at": "2026-09-23T01:26:08.633805Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,16 +13,27 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "0c25d0204a817f290bb3abc7400359c2029a094926862fb59ebc009e75f7339a",
+  "receipt_head": "da78646f80d2507ac19be4f35ba4a7e1fed38aea2c7f48d539be3d1288417e69",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-09-22T22:55:14.724890Z",
-    "metadata_bytes": 673973,
-    "new_candidates": 12,
+    "errors": [
+      {
+        "direction": "mirror_bidirectional_provenance::CONTROL",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "registry_provenance::COUNTEREVIDENCE",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22data+provenance%22+OR+all%3A%22research+reproducibility%22+OR+all%3A%22workflow+provenance%22%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      }
+    ],
+    "finished_at": "2026-09-23T01:26:01.222756Z",
+    "metadata_bytes": 758667,
+    "new_candidates": 53,
     "requests": 36,
-    "started_at": "2026-09-22T22:54:55.916407Z"
+    "started_at": "2026-09-23T01:25:13.420001Z"
   },
-  "started_at": "2026-09-22T22:54:55.916318Z",
+  "started_at": "2026-09-23T01:25:13.419920Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
