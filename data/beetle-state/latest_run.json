@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-09-30T02:12:47.114243Z",
+  "finished_at": "2026-09-30T08:46:48.011941Z",
   "graze": {
-    "finished_at": "2026-09-30T02:12:47.114223Z",
+    "finished_at": "2026-09-30T08:46:48.011921Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,16 +13,27 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "3fd5262a509808561c53569f27b15b0b77d33998c1d92b8bded87a7b26e3d5b2",
+  "receipt_head": "3f1a16dc2e41f63ccedb8b65f1693bff948a90f10f8a3dd3a5f029c7e91dd441",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-09-30T02:12:39.709239Z",
-    "metadata_bytes": 1137504,
-    "new_candidates": 76,
-    "requests": 37,
-    "started_at": "2026-09-30T02:12:24.455278Z"
+    "errors": [
+      {
+        "direction": "mirror_bidirectional_provenance::FORWARD",
+        "error": "HTTPError: 504 Server Error: Gateway Time-out for url: https://zenodo.org/api/records?q=inverse+problem+identifiability+provenance&size=8&sort=mostrecent",
+        "source": "zenodo"
+      },
+      {
+        "direction": "mirror_bidirectional_provenance::REVERSE",
+        "error": "HTTPError: 504 Server Error: Gateway Time-out for url: https://zenodo.org/api/records?q=inverse+problem+identifiability+provenance+inverse+reverse+reconstruction&size=8&sort=mostrecent",
+        "source": "zenodo"
+      }
+    ],
+    "finished_at": "2026-09-30T08:46:39.371547Z",
+    "metadata_bytes": 627961,
+    "new_candidates": 11,
+    "requests": 36,
+    "started_at": "2026-09-30T08:45:14.918248Z"
   },
-  "started_at": "2026-09-30T02:12:24.455150Z",
+  "started_at": "2026-09-30T08:45:14.918146Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
