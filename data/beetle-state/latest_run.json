@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-10-04T18:32:35.352652Z",
+  "finished_at": "2026-10-04T21:42:38.343100Z",
   "graze": {
-    "finished_at": "2026-10-04T18:32:35.352638Z",
+    "finished_at": "2026-10-04T21:42:38.343076Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,62 +13,97 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "185488dd719d69edd23f5190b3b859b2a805a19a733f1f9fe83190bc9a109f82",
+  "receipt_head": "eeccdafb27cbe51077afb2c7bb71f920bf87764ea185d223f196ba66d13cacab",
   "scout": {
     "errors": [
       {
+        "direction": "swarm_distributed_systems::FORWARD",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22multi-agent%22+OR+all%3A%22distributed+agents%22%29+AND+%28all%3A%22fault+tolerance%22+OR+all%3A%22coordination%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "swarm_distributed_systems::REVERSE",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28%28all%3A%22multi-agent%22+OR+all%3A%22distributed+agents%22%29+AND+%28all%3A%22fault+tolerance%22+OR+all%3A%22coordination%22%29%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "swarm_distributed_systems::COUNTEREVIDENCE",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28%28all%3A%22multi-agent%22+OR+all%3A%22distributed+agents%22%29+AND+%28all%3A%22fault+tolerance%22+OR+all%3A%22coordination%22%29%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "swarm_distributed_systems::CONTROL",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28%28all%3A%22multi-agent%22+OR+all%3A%22distributed+agents%22%29+AND+%28all%3A%22fault+tolerance%22+OR+all%3A%22coordination%22%29%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
         "direction": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
-        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "formal_proof_verification::COUNTEREVIDENCE",
-        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22proof+complexity%22+OR+all%3A%22SAT+solving%22+OR+all%3A%22proof+certificate%22%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "cognition_memory_reverse::COUNTEREVIDENCE",
-        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22memory%22+OR+all%3A%22world+model%22+OR+all%3A%22inverse+model%22%29%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "mirror_bidirectional_provenance::CONTROL",
-        "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "formal_proof_verification::CONTROL",
-        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22proof+complexity%22+OR+all%3A%22SAT+solving%22+OR+all%3A%22proof+certificate%22%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "cognition_memory_reverse::CONTROL",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22memory%22+OR+all%3A%22world+model%22+OR+all%3A%22inverse+model%22%29%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "registry_provenance::COUNTEREVIDENCE",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22data+provenance%22+OR+all%3A%22research+reproducibility%22+OR+all%3A%22workflow+provenance%22%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "mirror_bidirectional_provenance::REVERSE",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "formal_proof_verification::REVERSE",
-        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22proof+complexity%22+OR+all%3A%22SAT+solving%22+OR+all%3A%22proof+certificate%22%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "cognition_memory_reverse::REVERSE",
-        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22memory%22+OR+all%3A%22world+model%22+OR+all%3A%22inverse+model%22%29%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
         "direction": "registry_provenance::CONTROL",
-        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22data+provenance%22+OR+all%3A%22research+reproducibility%22+OR+all%3A%22workflow+provenance%22%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22data+provenance%22+OR+all%3A%22research+reproducibility%22+OR+all%3A%22workflow+provenance%22%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       },
       {
-        "direction": "cognition_memory_reverse::FORWARD",
-        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "direction": "mirror_bidirectional_provenance::FORWARD",
+        "error": "HTTPError: 406 Client Error: Not Acceptable for url: https://export.arxiv.org/api/query?search_query=all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
         "source": "arxiv"
       }
     ],
-    "finished_at": "2026-10-04T18:32:30.405704Z",
-    "metadata_bytes": 665261,
-    "new_candidates": 11,
-    "requests": 28,
-    "started_at": "2026-10-04T18:24:10.680198Z"
+    "finished_at": "2026-10-04T21:42:34.904020Z",
+    "metadata_bytes": 276562,
+    "new_candidates": 13,
+    "requests": 36,
+    "started_at": "2026-10-04T21:42:27.864671Z"
   },
-  "started_at": "2026-10-04T18:24:10.680073Z",
+  "started_at": "2026-10-04T21:42:27.864530Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
