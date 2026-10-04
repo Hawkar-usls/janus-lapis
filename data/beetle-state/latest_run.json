@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-10-04T14:45:10.140397Z",
+  "finished_at": "2026-10-04T18:32:35.352652Z",
   "graze": {
-    "finished_at": "2026-10-04T14:45:10.140376Z",
+    "finished_at": "2026-10-04T18:32:35.352638Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,16 +13,62 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "2ada0404c28c1d46e83154cf02d3085810147fa07fc7685ac3b5ae6c07001979",
+  "receipt_head": "185488dd719d69edd23f5190b3b859b2a805a19a733f1f9fe83190bc9a109f82",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-10-04T14:45:03.491638Z",
-    "metadata_bytes": 748266,
-    "new_candidates": 9,
-    "requests": 36,
-    "started_at": "2026-10-04T14:44:41.438204Z"
+    "errors": [
+      {
+        "direction": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "source": "arxiv"
+      },
+      {
+        "direction": "formal_proof_verification::COUNTEREVIDENCE",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "source": "arxiv"
+      },
+      {
+        "direction": "cognition_memory_reverse::COUNTEREVIDENCE",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "source": "arxiv"
+      },
+      {
+        "direction": "mirror_bidirectional_provenance::CONTROL",
+        "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "formal_proof_verification::CONTROL",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "source": "arxiv"
+      },
+      {
+        "direction": "formal_proof_verification::REVERSE",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "source": "arxiv"
+      },
+      {
+        "direction": "cognition_memory_reverse::REVERSE",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "source": "arxiv"
+      },
+      {
+        "direction": "registry_provenance::CONTROL",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22data+provenance%22+OR+all%3A%22research+reproducibility%22+OR+all%3A%22workflow+provenance%22%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "cognition_memory_reverse::FORWARD",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "source": "arxiv"
+      }
+    ],
+    "finished_at": "2026-10-04T18:32:30.405704Z",
+    "metadata_bytes": 665261,
+    "new_candidates": 11,
+    "requests": 28,
+    "started_at": "2026-10-04T18:24:10.680198Z"
   },
-  "started_at": "2026-10-04T14:44:41.438114Z",
+  "started_at": "2026-10-04T18:24:10.680073Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
