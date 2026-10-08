@@ -1,0 +1,164 @@
+{
+  "schema_id": "janus.lapis.pv11.genome_integrity_bridge.v1",
+  "artifact_id": "PV11_2026_HAPLOTYPE_SBLISS_GENOME_INTEGRITY_BRIDGE_2026-10-08",
+  "created": "2026-10-08",
+  "status": "ACTIVE_PUBLIC_EVIDENCE_BRIDGE_FAIL_CLOSED",
+  "purpose": "Bridge the 2026 clonal haplotype-resolved Pv11 genome and sBLISS DNA-break evidence into the existing Pv11Gofre recovery gate without conflating entry into anhydrobiosis with post-rehydration recovery.",
+  "paper": {
+    "title": "Haplotype-resolved genome of a dry-preservable cell line reveals chromosome evolution and DNA damage",
+    "authors": ["Yuki Yoshida", "Takahiro Kikawada"],
+    "journal": "Life Science Alliance",
+    "publication_date": "2026-10-06",
+    "volume": "9",
+    "issue": "12",
+    "article": "e202603719",
+    "doi": "10.26508/lsa.202603719",
+    "pmid": "42838755"
+  },
+  "new_public_evidence": {
+    "clonal_haplotype_resolved_assembly": {
+      "status": "SUPPORTED_BY_PUBLISHED_ABSTRACT",
+      "claim": "A high-quality chromosome-level, haplotype-resolved assembly was generated from a clonal Pv11 line.",
+      "importance": "This removes a known limitation of prior resources that mixed insect and cell-line DNA and creates a better future coordinate system for Pv11 genome-integrity analyses once the assembly and annotation accessions are resolved."
+    },
+    "chromosome_4": {
+      "status": "SUPPORTED_BY_PUBLISHED_ABSTRACT",
+      "claim": "Chromosome 4 shows markedly elevated heterozygosity and haplotype-specific genes.",
+      "analysis_caveat": "Any chromosome-level DSB comparison must normalize for mappability, gene density, expression and haplotype assignment before treating chromosome 4 as biologically exceptional for break burden."
+    },
+    "comparative_synteny": {
+      "status": "SUPPORTED_BY_PUBLISHED_ABSTRACT",
+      "claim": "Comparative synteny indicates extensive intrachromosomal rearrangement while broad chromosome identity is largely conserved across chironomid subfamily lineages."
+    },
+    "sBLISS_dsb_mapping": {
+      "status": "SUPPORTED_BY_PUBLISHED_ABSTRACT",
+      "claim": "Genome-wide sBLISS mapping reports that DNA double-strand breaks during trehalose pretreatment preferentially accumulate near highly expressed transcription start sites.",
+      "scope": "TREHALOSE_PRETREATMENT / ENTRY_INTO_ANHYDROBIOSIS",
+      "not_yet_resolved": [
+        "exact sBLISS condition/timepoint manifest",
+        "replicate structure",
+        "raw or processed sBLISS accession",
+        "normalization and peak/break calling details",
+        "whether post-rehydration sBLISS measurements exist outside the indexed abstract"
+      ]
+    }
+  },
+  "scope_firewall": {
+    "new_study_phase": "ENTRY_INTO_ANHYDROBIOSIS / TREHALOSE_PRETREATMENT",
+    "does_not_directly_establish": [
+      "R0-R72 post-rehydration DSB clearance kinetics",
+      "repair-first ordering after rehydration",
+      "first S phase",
+      "cell-cycle restart",
+      "BrdU incorporation",
+      "tissue regeneration",
+      "causal DNA-repair requirement for survival"
+    ],
+    "published_abstract_is_not_full_methods": true,
+    "unpublished_brdU_permission": "DO_NOT_PUBLISH_AND_EXCLUDED",
+    "unpublished_brdU_used_in_this_artifact": false
+  },
+  "public_accession_audit_2026_10_08": {
+    "article_metadata_and_abstract": "PUBLICLY_INDEXED",
+    "official_full_text": "NOT_RESOLVED_FROM_CURRENT_INDEXED_PUBLIC_SURFACES",
+    "supplementary_materials": "NOT_RESOLVED_FROM_CURRENT_INDEXED_PUBLIC_SURFACES",
+    "new_clonal_genome_assembly_accession": "NOT_RESOLVED_FROM_CURRENT_INDEXED_PUBLIC_SURFACES",
+    "new_annotation_accession": "NOT_RESOLVED_FROM_CURRENT_INDEXED_PUBLIC_SURFACES",
+    "sBLISS_accession": "NOT_RESOLVED_FROM_CURRENT_INDEXED_PUBLIC_SURFACES",
+    "do_not_guess_accessions": true,
+    "known_older_resources_are_not_assumed_to_be_the_2026_dataset": true
+  },
+  "existing_recovery_axis": {
+    "source": "Yamada et al. 2020, PLOS ONE, DOI 10.1371/journal.pone.0230218",
+    "accession": "DRA008948",
+    "conditions": {
+      "T0": "control",
+      "T12": "12 h in 600 mM trehalose",
+      "T24": "24 h in 600 mM trehalose",
+      "T36": "36 h in 600 mM trehalose",
+      "T48": "48 h in 600 mM trehalose",
+      "R0": "after 10 days desiccation at <10% RH",
+      "R3": "3 h after rehydration",
+      "R12": "12 h after rehydration",
+      "R24": "24 h after rehydration",
+      "R72": "72 h after rehydration"
+    },
+    "replication": "biological_triplicate",
+    "historical_reference_space": "Pv_5.2 / prior P. vanderplanki annotation space",
+    "firewall": "DRA008948 expression timepoints provide a bridge for expression context, not direct DSB measurements."
+  },
+  "bridge_hypotheses": [
+    {
+      "id": "PV11_DSB_TSS_EXPRESSION_COUPLING",
+      "status": "TESTABLE_WHEN_SBLISS_DATA_ACCESSIBLE",
+      "question": "Does DSB density around transcription start sites scale with matched Pv11 expression level during trehalose pretreatment?",
+      "planned_test": [
+        "Freeze exact sBLISS condition/timepoint/replicate manifest from the full paper or deposited metadata.",
+        "Map sBLISS break positions to the new haplotype-resolved assembly.",
+        "Quantify break density in predeclared TSS windows.",
+        "Map DRA008948 T0/T12/T24/T36/T48 expression into the new assembly through an explicit gene/orthology/liftover crosswalk.",
+        "Stratify genes by expression quantile and test preregistered break-enrichment contrasts.",
+        "Report chromosome 4 separately only after mappability/gene-density/expression normalization."
+      ]
+    },
+    {
+      "id": "PV11_ENTRY_BREAKS_TO_RECOVERY_CLEARANCE",
+      "status": "OPEN_CRITICAL_MISSING_AXIS",
+      "question": "Are trehalose-entry DSBs measurably cleared during R0/R3/R12/R24/R72 before direct cell-cycle restart?",
+      "current_answer": "UNKNOWN",
+      "required_evidence": "Public post-rehydration genome-wide DSB measurements or a prospective equivalent with matched reference, replicates and provenance.",
+      "importance": "This is the direct bridge needed before entry-stage DNA damage can strengthen the repair-first recovery hypothesis."
+    }
+  ],
+  "reference_migration_gate": {
+    "status": "BLOCKED_PENDING_2026_ASSEMBLY_ACCESSION_AND_ANNOTATION",
+    "rule": "Do not silently remap or numerically compare old Pv_5.2-based expression values against the new haplotype assembly.",
+    "required_crosswalk": [
+      "old Pv_5.2 transcript/gene identifier",
+      "new haplotype-resolved gene identifier",
+      "chromosome and haplotype",
+      "orthology/liftover confidence",
+      "one-to-one / one-to-many / unresolved status"
+    ]
+  },
+  "gate_delta": {
+    "GENOME_INTEGRITY_PRECONDITIONING": "NEW_SUPPORTED_LAYER",
+    "REPAIR_FIRST_POST_REHYDRATION": "UNCHANGED_OPEN",
+    "DIRECT_FIRST_S_PHASE": "UNCHANGED_MISSING",
+    "CELL_CYCLE_RELEASE": "UNCHANGED_BLOCKED_PENDING_DIRECT_MEASUREMENT",
+    "BRDU_PERMISSION": "DO_NOT_PUBLISH_UNCHANGED",
+    "PV11GOFRE_PROMOTION": false
+  },
+  "next_gates": [
+    {
+      "priority": 1,
+      "gate": "RESOLVE_2026_FULL_TEXT_SUPPLEMENTS_AND_ACCESSIONS",
+      "pass": "Official full text/supplement or authoritative repository record exposes assembly/annotation and sBLISS identifiers plus condition metadata."
+    },
+    {
+      "priority": 2,
+      "gate": "BUILD_PV5_2_TO_2026_HAPLOTYPE_CROSSWALK",
+      "pass": "Versioned mapping table with provenance and ambiguity classes is produced."
+    },
+    {
+      "priority": 3,
+      "gate": "RUN_TSS_EXPRESSION_DSB_BRIDGE",
+      "pass": "Preregistered TSS-break enrichment is replayable from deposited sBLISS data and matched public expression data."
+    },
+    {
+      "priority": 4,
+      "gate": "POST_REHYDRATION_DSB_CLEARANCE_AXIS",
+      "pass": "Public or prospective R0/R3/R12/R24/R72-equivalent DSB data establish damage persistence/clearance timing."
+    },
+    {
+      "priority": 5,
+      "gate": "CELL_CYCLE_RELEASE",
+      "pass": "Direct public first-S-phase/cell-cycle restart measurement; population growth or single DEG remains insufficient."
+    }
+  ],
+  "canonical_links": {
+    "existing_gate": "data/resolution_gate/PV11GOFRE_REPAIR_FIRST_EXIT_GATE_2026-08-25.json",
+    "recovery_rnaseq_accession": "DRA008948"
+  },
+  "anti_overclaim_rule": "The 2026 paper strengthens the mechanistic map of genome integrity during entry into anhydrobiosis. It does not, on current indexed evidence, demonstrate post-rehydration DSB clearance, repair-first ordering, S-phase restart, or permission to publish any unpublished BrdU observation."
+}
