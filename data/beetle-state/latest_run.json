@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-10-07T19:53:29.811440Z",
+  "finished_at": "2026-10-08T00:09:53.032550Z",
   "graze": {
-    "finished_at": "2026-10-07T19:53:29.811417Z",
+    "finished_at": "2026-10-08T00:09:53.032535Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,16 +13,22 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "0b8b157b66c517462377b1bc89e153f785912d6066219e073b5a3826c0cdceab",
+  "receipt_head": "afc8fab293e2430e0a3144591378ccc0bc25e28ab4824969e2b81b0120568c9b",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-10-07T19:53:23.019261Z",
-    "metadata_bytes": 785064,
-    "new_candidates": 25,
-    "requests": 36,
-    "started_at": "2026-10-07T19:53:00.282545Z"
+    "errors": [
+      {
+        "direction": "formal_proof_verification::FORWARD",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "source": "arxiv"
+      }
+    ],
+    "finished_at": "2026-10-08T00:09:47.550990Z",
+    "metadata_bytes": 3323704,
+    "new_candidates": 13,
+    "requests": 35,
+    "started_at": "2026-10-08T00:07:32.691559Z"
   },
-  "started_at": "2026-10-07T19:53:00.282412Z",
+  "started_at": "2026-10-08T00:07:32.691369Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }

@@ -1,18 +1,24 @@
 {
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0",
-  "started_at": "2026-10-07T19:53:00.282412Z",
+  "started_at": "2026-10-08T00:07:32.691369Z",
   "mode": "both",
   "scout": {
-    "started_at": "2026-10-07T19:53:00.282545Z",
-    "finished_at": "2026-10-07T19:53:23.019261Z",
-    "requests": 36,
-    "metadata_bytes": 785064,
-    "new_candidates": 25,
-    "errors": []
+    "started_at": "2026-10-08T00:07:32.691559Z",
+    "finished_at": "2026-10-08T00:09:47.550990Z",
+    "requests": 35,
+    "metadata_bytes": 3323704,
+    "new_candidates": 13,
+    "errors": [
+      {
+        "direction": "formal_proof_verification::FORWARD",
+        "source": "arxiv",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)"
+      }
+    ]
   },
   "graze": {
-    "finished_at": "2026-10-07T19:53:29.811417Z",
+    "finished_at": "2026-10-08T00:09:53.032535Z",
     "tasks": [
       {
         "task_id": "uwa_blue_1_raw_channel",
@@ -23,6 +29,6 @@
       }
     ]
   },
-  "finished_at": "2026-10-07T19:53:29.811440Z",
-  "receipt_head": "0b8b157b66c517462377b1bc89e153f785912d6066219e073b5a3826c0cdceab"
+  "finished_at": "2026-10-08T00:09:53.032550Z",
+  "receipt_head": "afc8fab293e2430e0a3144591378ccc0bc25e28ab4824969e2b81b0120568c9b"
 }
