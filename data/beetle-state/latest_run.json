@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-10-09T05:56:41.393648Z",
+  "finished_at": "2026-10-09T13:09:17.059640Z",
   "graze": {
-    "finished_at": "2026-10-09T05:56:41.393634Z",
+    "finished_at": "2026-10-09T13:09:17.059626Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,16 +13,32 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "bd9f70c0f26e180e2c433cd96298035d2fdd89bf6ec0c95ca56b3d4392f3b03b",
+  "receipt_head": "2195e40ebf6612c2c330650faf25d84f389c2ddb8504363c63165b6914952ed9",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-10-09T05:56:34.876598Z",
-    "metadata_bytes": 760683,
-    "new_candidates": 69,
-    "requests": 36,
-    "started_at": "2026-10-09T05:56:17.229337Z"
+    "errors": [
+      {
+        "direction": "formal_proof_verification::FORWARD",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
+        "source": "arxiv"
+      },
+      {
+        "direction": "mirror_bidirectional_provenance::REVERSE",
+        "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      }
+    ],
+    "finished_at": "2026-10-09T13:08:36.845367Z",
+    "metadata_bytes": 612713,
+    "new_candidates": 18,
+    "requests": 35,
+    "started_at": "2026-10-09T13:05:38.219096Z"
   },
-  "started_at": "2026-10-09T05:56:17.229247Z",
+  "started_at": "2026-10-09T13:05:38.218909Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
