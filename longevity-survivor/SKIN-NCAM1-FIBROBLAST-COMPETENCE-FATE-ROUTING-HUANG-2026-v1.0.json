@@ -3,7 +3,7 @@
   "artifact_id": "SKIN-NCAM1-FIBROBLAST-COMPETENCE-FATE-ROUTING-HUANG-2026-v1.0",
   "recorded_at": "2026-10-14",
   "branch": "LONGEVITY-SURVIVOR",
-  "status": "PREPRINT_ABSTRACT_VERIFIED_FULLTEXT_AND_RAW_DATA_EXTRACTION_OPEN_NOT_ADMITTED",
+  "status": "PRIMARY_SOURCE_ACCESS_BLOCKED_ABSTRACT_REPORTED_FINDINGS_ONLY_NO_GATE_PROMOTION",
   "source": {
     "title": "A regenerative fibroblast competence field supports multiple cell fates in adult skin regeneration",
     "first_author": "Chih-Han Huang",
@@ -96,7 +96,28 @@
     "effect_signs": "ABSTRACT_AUTHOR_REPORTED",
     "no_imputed_values": true,
     "quantitative_causal_gate": "OPEN",
-    "no_claim_of_newly_measured_numerical_effect_by_janus": true
+    "no_claim_of_newly_measured_numerical_effect_by_janus": true,
+    "raw_data_table": {
+      "comparator": "PERTURBATION_ARM_MATCHED_NEGATIVE_CONTROL_UNKNOWN",
+      "units": "UNKNOWN",
+      "partial_ncam1_dose": null,
+      "strong_ncam1_dose": null,
+      "partial_ncam1_vascular_effect_absolute": null,
+      "partial_ncam1_vascular_effect_percent": null,
+      "partial_ncam1_hair_neogenesis_effect_absolute": null,
+      "partial_ncam1_hair_neogenesis_effect_percent": null,
+      "stronger_ncam1_vascular_effect_absolute": null,
+      "stronger_ncam1_vascular_effect_percent": null,
+      "stronger_ncam1_hair_neogenesis_effect_absolute": null,
+      "stronger_ncam1_hair_neogenesis_effect_percent": null,
+      "n_animals_per_arm": null,
+      "n_independent_wounds_per_arm": null,
+      "replicates": null,
+      "error_metric": null,
+      "p_values": null,
+      "figure_panel_ids": null,
+      "status": "ALL_NUMERICAL_FIELDS_UNVERIFIED"
+    }
   },
   "time_course_audit": {
     "reported": "TIME_RESOLVED_ANALYSIS_EXISTS_ACCORDING_TO_ABSTRACT",
@@ -190,5 +211,108 @@
     "UNKNOWN_NE_PASS",
     "NO_SOURCE_FUSION_ACROSS_INDEPENDENT_STUDIES",
     "RESEARCH_EVIDENCE_RECORD_NOT_EXPERIMENTAL_DATASET_OR_CLINICAL_ADVICE"
-  ]
+  ],
+  "updated_at": "2026-10-14",
+  "source_access_audit_2026_10_14": {
+    "status": "PRIMARY_PDF_INDEXED_ACCESS_BLOCKED_SUPPLEMENTS_NOT_RETRIEVED",
+    "pdf_index": {
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.10.01.756129v1.full.pdf",
+      "indexed_by_search": true,
+      "indexed_page_count": 33,
+      "fetched_bytes": false,
+      "sha256": null,
+      "reason": "HTTP_403_FORBIDDEN_ON_DIRECT_PDF_FETCH_AND_DOWNLOAD",
+      "figure_text_verified": false,
+      "figure_images_verified": false
+    },
+    "attempted_fulltext_routes": [
+      {
+        "url": "https://www.biorxiv.org/content/10.64898/2026.10.01.756129v1.full",
+        "result": "NOT_ACCESSIBLE_IN_CURRENT_WEB_SESSION"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13648686/",
+        "result": "CAPTCHA_OR_BLOCKED"
+      },
+      {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13648686/fullTextXML",
+        "result": "NOT_ACCESSIBLE_IN_CURRENT_WEB_SESSION"
+      },
+      {
+        "url": "https://europepmc.org/articles/PMC13648686?pdf=render",
+        "result": "NOT_ACCESSIBLE_IN_CURRENT_WEB_SESSION"
+      }
+    ],
+    "supplement_route": {
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.01.756129v1.supplementary-material",
+      "retrievable": false,
+      "result": "NOT_ACCESSIBLE_IN_CURRENT_WEB_SESSION",
+      "statement": "UNRETRIEVABLE_DOES_NOT_PROVE_SUPPLEMENT_NONEXISTENCE"
+    },
+    "accessible_primary_level": "PUBMED_ABSTRACT_AND_PAPER_METADATA_ONLY",
+    "no_figure_or_supplement_numbers_fabricated": true,
+    "unblock_condition": "ACCESS_FULL_33_PAGE_PDF_AND_AUTHENTIC_SUPPLEMENTAL_FILES_THROUGH_PUBLIC_HOST_OR_USER_PROVIDED_FILE"
+  },
+  "temporal_causality_audit_2026_10_14": {
+    "status": "COMPONENTS_REPORTED_BUT_CAUSAL_TIME_ORDER_NOT_ESTABLISHED",
+    "abstract_reported_components": [
+      "SMALL_VS_LARGE_WOUND_COMPARISON",
+      "SINGLE_CELL_PROFILING_AND_TIME_RESOLVED_INFERENCE",
+      "PDGFRA_AND_NCAM1_LINEAGE_TRACING",
+      "PARTIAL_AND_STRONGER_NCAM1_PERTURBATION_WITH_FINAL_PHENOTYPES"
+    ],
+    "time_order_claim_limit": "TIME_RESOLVED_INFERENCE_IS_NOT_INTERVENTION_TIMING_OR_DIRECT_TIME_SERIES_OF_LINEAGE_EXIT",
+    "conditional_chain": [
+      {
+        "step": "WOUND_INDUCTION",
+        "timestamp": "UNVERIFIED",
+        "source_figure": null
+      },
+      {
+        "step": "NCAM1_REGULATORY_CHANGE_OR_PERTURBATION",
+        "timestamp": "UNVERIFIED",
+        "source_figure": null
+      },
+      {
+        "step": "FIBROBLAST_COMPETENCE_STATE_ENTRY",
+        "timestamp": "UNVERIFIED",
+        "source_figure": null
+      },
+      {
+        "step": "CELL_FATE_BRANCH_COMMITMENT_OR_TRANSITION",
+        "timestamp": "UNVERIFIED",
+        "source_figure": null
+      },
+      {
+        "step": "VASCULAR_HAIR_FOLLICLE_PHENOTYPE",
+        "timestamp": "UNVERIFIED",
+        "source_figure": null
+      },
+      {
+        "step": "LINEAGE_RESOLVED_EXIT_OR_CLEARANCE",
+        "timestamp": "NOT_ESTABLISHED",
+        "source_figure": null
+      }
+    ],
+    "causality_levels": {
+      "partial_vs_strong_perturbation_effect_on_outcome": "AUTHOR_REPORTED_INTERVENTION_CONTRAST_NOT_QUANTITATIVELY_REPLAYED",
+      "molecular_NCAM1_precedes_fate_commitment": "UNKNOWN",
+      "dose_effect_is_cell_autonomous_in_fibroblasts": "UNKNOWN",
+      "VEGF_mediates_NCAM1_to_endothelial_branch": "INFERRED_NETWORK_NOT_DIRECT_CAUSAL",
+      "NCAM1_state_reverses_after_wound_maturation": "UNKNOWN",
+      "direct_wound_state_EXIT_or_decay_constant": "NOT_ESTABLISHED"
+    },
+    "confounding_controls_requiring_readback": [
+      "WOUND_SIZE_TENSION_GEOMETRY_SITE_AND_STAGE_MATCHING",
+      "SHAM_OR_SCRAMBLE_OR_ISOTYPE_CONDITION",
+      "NCAM1_CELL_TYPE_SPECIFIC_KNOCKDOWN_VS_SYSTEMIC_OR_VASCULAR_DIRECT_EFFECT",
+      "EXPERIMENTAL_TIMING_VS_SC_RNA_PSEUDOTIME",
+      "CELL_PROLIFERATION_CELL_DEATH_AND_CELL_NUMBER_CONTROLS",
+      "REPLICATE_INDEPENDENCE_AND_BLINDING",
+      "GENETIC_RESCUE_OR_ORTHOGONAL_PERTURBATION",
+      "LINEAGE_PULSE_CHASE_TIMESTAMPS_VS_TERMINAL_TRACING"
+    ],
+    "strict_killer_test": "VERIFY_INTERVENTION_PRECEDES_BRANCH_SPECIFICATION_AND_READOUT_IN_SAME_EXPERIMENTAL_ARM_AND_TEST_TIME_RESOLVED_LINEAGE_MAPPED_FATE_OR_EXIT",
+    "verdict": "NO_STRICT_CAUSAL_TEMPORAL_PROMOTION"
+  }
 }
