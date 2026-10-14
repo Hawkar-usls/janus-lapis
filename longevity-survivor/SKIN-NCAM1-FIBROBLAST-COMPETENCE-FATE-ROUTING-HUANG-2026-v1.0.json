@@ -1,0 +1,191 @@
+{
+  "schema_id": "janus.longevity_survivor.skin_ncam1_fate_routing_preprint_evidence.v1",
+  "artifact_id": "SKIN-NCAM1-FIBROBLAST-COMPETENCE-FATE-ROUTING-HUANG-2026-v1.0",
+  "recorded_at": "2026-10-14",
+  "branch": "LONGEVITY-SURVIVOR",
+  "status": "PREPRINT_ABSTRACT_VERIFIED_FULLTEXT_AND_RAW_DATA_EXTRACTION_OPEN_NOT_ADMITTED",
+  "source": {
+    "title": "A regenerative fibroblast competence field supports multiple cell fates in adult skin regeneration",
+    "first_author": "Chih-Han Huang",
+    "authors": [
+      "Chih-Han Huang",
+      "Chih-Kuan Chen",
+      "Chen Yuan Kam",
+      "Ben Van Handel",
+      "Arijita Sarkar",
+      "Yen-Chun Ho",
+      "Denis Evseenko",
+      "Cheng-Ming Chuong",
+      "Hans I-Chen Harn"
+    ],
+    "publication_venue": "bioRxiv",
+    "publication_date_pubmed": "2026-10-04",
+    "doi": "10.64898/2026.10.01.756129",
+    "pmid": "42856553",
+    "pmcid": "PMC13648686",
+    "authoritative_abstract": "https://pubmed.ncbi.nlm.nih.gov/42856553/",
+    "doi_url": "https://doi.org/10.64898/2026.10.01.756129",
+    "review_status": "PREPRINT_NOT_PEER_REVIEWED",
+    "version": "PUBLIC_ABSTRACT_VERSION_DATE_2026_10_04",
+    "full_text_access": "NOT_RETRIEVED_IN_THIS_PASS",
+    "supplemental_figures_and_numeric_data": "NOT_RETRIEVED_IN_THIS_PASS",
+    "primary_data_accessions": "NOT_IDENTIFIED_IN_THIS_PASS",
+    "page_index_status": "PUBMED_BIORXIV_ABSTRACT_VERIFIED"
+  },
+  "differentiation_from_existing_evidence": {
+    "no_duplicate_source_found_in_checked_paths": true,
+    "existing_lapis_main": "data/resolution_gate/SKIN_MECHANICAL_RESOLUTION_COUPLING_CAUSAL_NODE_HUANG_2026.json",
+    "existing_lapis_main_doi": "10.1016/j.actbio.2026.07.032",
+    "warning": "The prior Huang 2026 Acta Biomaterialia node is a different paper, not a second independent NCAM1 experiment.",
+    "existing_mature_scar_search": "longevity-survivor/SKIN-MATURE-SCAR-APPENDAGE-REGENERATION-SEARCH-PASS-2026-08-31-v1.0.json",
+    "existing_mechanical_exit_hysteresis": "longevity-survivor/MECHANICAL-EXIT-HYSTERESIS-STRATIFICATION-RESULT-2026-08-31-v1.0.json",
+    "preserves_prior_gates": true
+  },
+  "design_facts_in_abstract": {
+    "comparison": "small non-regenerative versus large regenerative adult mammalian skin wounds",
+    "profiling": "integrated single-cell RNA sequencing and time-resolved inference",
+    "inference": "NCAM1-associated fibroblast competence manifold linked to dermal-condensate, endothelial, pericyte and glial-associated entry programs",
+    "communication": "inferred VEGF and ECM/adhesion signals; network inference is not causal proof of VEGF dependence",
+    "lineage_tracing": "PDGFRA- and NCAM1-expressing lineages reported in vascular and nerve/glial-associated compartments",
+    "perturbation": "partial versus stronger NCAM1 perturbation",
+    "model_species": "NOT_UNAMBIGUOUSLY_EXTRACTED_FROM_ABSTRACT",
+    "precise_wound_size": "UNKNOWN_IN_ABSTRACT",
+    "experimental_design_randomization_and_blinding": "UNKNOWN_IN_ABSTRACT"
+  },
+  "reported_directional_outcomes": [
+    {
+      "contrast": "PARTIAL_NCAM1_PERTURBATION_VS_RELEVANT_CONTROL",
+      "perturbation_intensity": "PARTIAL_REPORTED_NOT_NUMERICALLY_DEFINED",
+      "vascular_organization": "DECREASED_REPORTED",
+      "hair_follicle_neogenesis": "INCREASED_REPORTED",
+      "vascular_delta_value": null,
+      "vascular_delta_unit": null,
+      "neogenesis_delta_value": null,
+      "neogenesis_delta_unit": null,
+      "sample_size_n": null,
+      "replicate_unit": "UNKNOWN",
+      "confidence_interval": null,
+      "p_value": null,
+      "evidence_class": "AUTHOR_REPORTED_DIRECTION_IN_ABSTRACT_NOT_INDEPENDENT_QUANTITATIVE_REPLAY",
+      "figure_or_table_locator": "FULL_TEXT_PENDING"
+    },
+    {
+      "contrast": "STRONGER_NCAM1_INHIBITION_VS_RELEVANT_CONTROL",
+      "perturbation_intensity": "STRONGER_REPORTED_NOT_NUMERICALLY_DEFINED",
+      "vascular_organization": "IMPAIRED_REPORTED",
+      "hair_follicle_neogenesis": "IMPAIRED_REPORTED",
+      "vascular_delta_value": null,
+      "vascular_delta_unit": null,
+      "neogenesis_delta_value": null,
+      "neogenesis_delta_unit": null,
+      "sample_size_n": null,
+      "replicate_unit": "UNKNOWN",
+      "confidence_interval": null,
+      "p_value": null,
+      "evidence_class": "AUTHOR_REPORTED_DIRECTION_IN_ABSTRACT_NOT_INDEPENDENT_QUANTITATIVE_REPLAY",
+      "figure_or_table_locator": "FULL_TEXT_PENDING"
+    }
+  ],
+  "quantification_audit": {
+    "category": "QUALITATIVE_DIRECTION_ONLY",
+    "dose_values_and_perturbation_method": "NOT_VERIFIED",
+    "dose_response_curve": "NOT_RECONSTRUCTED",
+    "magnitude_and_error_bars": "NOT_VERIFIED",
+    "n_and_independence_unit": "NOT_VERIFIED",
+    "numeric_endpoints": "NOT_VERIFIED",
+    "effect_signs": "ABSTRACT_AUTHOR_REPORTED",
+    "no_imputed_values": true,
+    "quantitative_causal_gate": "OPEN",
+    "no_claim_of_newly_measured_numerical_effect_by_janus": true
+  },
+  "time_course_audit": {
+    "reported": "TIME_RESOLVED_ANALYSIS_EXISTS_ACCORDING_TO_ABSTRACT",
+    "exact_days_or_hours_after_wounding": [],
+    "sampling_timepoints_verified": false,
+    "recovery_or_regression_timepoints_verified": false,
+    "lineage_matched_exit_or_clearance_trajectory_verified": false,
+    "half_life_estimable": false,
+    "time_of_perturbation_relative_to_mature_scar": "UNKNOWN",
+    "temporal_gate": "OPEN_EXACT_TIMELINE_PENDING"
+  },
+  "controls_audit": {
+    "compared_conditions": [
+      "SMALL_NONREGENERATIVE_WOUNDS",
+      "LARGE_REGENERATIVE_WOUNDS"
+    ],
+    "scientific_status": "DESCRIBED_COMPARATOR_NOT_VERIFIED_NEGATIVE_CONTROL",
+    "sham_or_vehicle": "UNKNOWN",
+    "scrambled_RNA_or_isotype_control": "UNKNOWN",
+    "genetic_rescue": "UNKNOWN",
+    "independent_perturbation_modality": "UNKNOWN",
+    "fate_mapped_negative_lineage_controls": "UNKNOWN",
+    "matched_wound_geometry_tension_and_stage": "UNKNOWN",
+    "endothelial_direct_effect_controls": "UNKNOWN",
+    "blinded_quantification": "UNKNOWN",
+    "replicate_and_batch_effects": "UNKNOWN",
+    "negative_control_gate": "OPEN"
+  },
+  "cross_paper_prior_art_comparison": [
+    {
+      "doi": "10.1016/j.stem.2020.09.004",
+      "title": "Distinct Regulatory Programs Control the Latent Regenerative Potential of Dermal Fibroblasts during Wound Healing",
+      "relationship": "CONCEPTUAL_PRIOR_ART_HIC1_DERMAL_REGENERATIVE_COMPETENCE",
+      "evidence_ceiling": "RELATED_SKIN_MECHANISM_NOT_INDEPENDENT_REPLICATION_OF_NCAM1_DOSE_RESPONSE"
+    },
+    {
+      "doi": "10.1038/s41467-025-58906-z",
+      "existing_node": "data/resolution_gate/SKIN_CAUSAL_EXIT_NODE_FMOD_2025.json",
+      "relationship": "ACTIVATED_MYOFIBROBLAST_PERSISTENCE_AND_SCAR_REDUCTION_BY_FMOD",
+      "evidence_ceiling": "EXIT_RESOLUTION_MECHANISM_SEPARATE_FROM_NCAM1_FATE_ROUTING"
+    },
+    {
+      "doi": "10.1016/j.actbio.2026.07.032",
+      "existing_node": "data/resolution_gate/SKIN_MECHANICAL_RESOLUTION_COUPLING_CAUSAL_NODE_HUANG_2026.json",
+      "relationship": "MECHANICAL_RESOLUTION_TIMING_DIFFERENT_HUANG_2026_SOURCE",
+      "evidence_ceiling": "DO_NOT_CONFLATE_IDENTICAL_SURNAME"
+    },
+    {
+      "doi": "10.34133/research.1430",
+      "relationship": "HMMR_FIBROBLAST_NCAM1_FGFR1_HAIR_REGENERATION_CONCEPTUAL_RELATED_RESULT",
+      "evidence_ceiling": "DIFFERENT_CELL_CONTEXT_AND_INTERVENTION_NOT_REPLAYED_NOT_INDEPENDENT_NCAM1_DOSE_REPLICATION",
+      "source": "https://spj.science.org/doi/full/10.34133/research.1430"
+    }
+  ],
+  "frozen_gate_evaluation": {
+    "RESIDENT_REGENERATIVE_COMPETENCE_COLLAPSE": "PRELIMINARY_SAME_TISSUE_CANDIDATE_NOT_ADMITTED",
+    "WOUND_STATE_FATE_ROUTING": "REPORTED_NCAM1_DOSE_SENSITIVE_DIRECTIONAL_ASSOCIATION_WITH_PERTURBATION",
+    "WOUND_STATE_RESOLUTION_EXIT": "NOT_MEASURED_AS_SAME_LINEAGE_CLEARANCE",
+    "NICHE_ECM_MECHANICAL_MATURATION_LOCK": "MATRIX_NICHE_REPORTED_DIRECT_PHYSICAL_RETUNING_NOT_VERIFIED",
+    "STRICT_MATURE_SCAR_DE_NOVO_APPENDAGE_GATE": "NOT_ADMITTED_SCAR_MATURITY_BEFORE_INTERVENTION_NOT_VERIFIED",
+    "STRICT_CROSS_TISSUE_EXIT_COUNT_DELTA": 0,
+    "STRICT_MECHANICAL_CLOCK_TISSUE_COUNT_DELTA": 0,
+    "DURABLE_FUTURE_SET_REWRITE": "NOT_ESTABLISHED",
+    "SCIENTIFIC_BREAKTHROUGH": false,
+    "HUMAN_REGENERATION_THERAPY": "NOT_ESTABLISHED",
+    "SCIENTIFIC_GATE_PROMOTION": false
+  },
+  "next_killer_tests": [
+    "RETRIEVE_FULL_PAPER_FIGURES_SUPPLEMENTS_AND_VERSIONED_PDF_THEN_RECORD_SOURCE_DIGEST",
+    "EXTRACT_EXACT_PARTIAL_AND_STRONG_PERTURBATION_DOSE_METHODOLOGY_DURATION_AND_EFFECT_SIZES",
+    "EXTRACT_WOUND_SIZE_TENSION_STAGE_SAMPLE_UNIT_N_ERROR_BARS_P_VALUES_AND_RANDOMIZATION",
+    "EXTRACT_SC_RNA_TIMEPOINTS_AND_NEGATIVE_CONTROLS_WITH_FIGURE_TABLE_AND_SUPPLEMENT_LOCATORS",
+    "SEPARATE_NCAM1_FIBROBLAST_FATE_MODULATION_FROM_DIRECT_ENDOTHELIAL_OR_OTHER_LINEAGE_EFFECTS",
+    "CHECK_RESCUE_ORTHOGONAL_NCAM1_PERTURBATION_AND_LONGITUDINAL_LINEAGE_TRACING",
+    "TEST_SAME_ARM_MATURE_FIBROTIC_SCAR_BEFORE_DELAYED_INTERVENTION_IF_CLAIMED",
+    "CHECK_INDEPENDENT_REPLICATION_SAME_PERTURBATION_OUTCOMES_MATCHED_MODEL_AND_CONTROLS",
+    "KEEP_LONGEVITY_CROSS_TISSUE_GATES_OPEN_ABSENT_CAUSAL_EXIT_RESOLUTION_TIMELINE"
+  ],
+  "epistemic_firewalls": [
+    "PREPRINT_NOT_PEER_REVIEWED",
+    "AUTHOR_REPORTED_EFFECT_NOT_INDEPENDENT_REPLAY",
+    "PERTURBATION_OUTCOME_NOT_CELL_EXIT",
+    "TRANSIENT_COMPETENCE_FIELD_NOT_PROVEN_MATURE_SCAR_REPROGRAMMING",
+    "TIME_RESOLVED_INFERENCE_NOT_PROVEN_CELL_HALF_LIFE",
+    "LINEAGE_ASSOCIATION_NOT_PROOF_OF_ALL_PROPOSED_FATE_TRANSITIONS",
+    "DIFFERENT_SKIN_SOURCES_NOT_INDEPENDENT_ORGAN_REPLICATION",
+    "RELATED_NCAM1_HAIR_RESEARCH_NOT_SAME_DOSE_RESPONSE_REPLICATION",
+    "UNKNOWN_NE_PASS",
+    "NO_SOURCE_FUSION_ACROSS_INDEPENDENT_STUDIES",
+    "RESEARCH_EVIDENCE_RECORD_NOT_EXPERIMENTAL_DATASET_OR_CLINICAL_ADVICE"
+  ]
+}
