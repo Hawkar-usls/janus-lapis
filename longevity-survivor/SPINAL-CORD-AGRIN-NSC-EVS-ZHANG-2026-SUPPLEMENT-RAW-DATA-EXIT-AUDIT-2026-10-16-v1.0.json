@@ -1,0 +1,203 @@
+{
+  "schema_id": "janus.longevity_survivor.age_dependent_spinal_repair_source_audit.v1",
+  "artifact_id": "SPINAL-CORD-AGRIN-NSC-EVS-ZHANG-2026-SUPPLEMENT-RAW-DATA-EXIT-AUDIT-2026-10-16-v1.0",
+  "date_utc": "2026-10-16",
+  "target_repo": "Hawkar-usls/janus-lapis",
+  "target_branch": "LONGEVITY-SURVIVOR",
+  "evidence_rank": "PEER_REVIEWED_ABSTRACT_VERIFIED__SECONDARY_QUANTITIES_UNREPLAYED",
+  "provenance": {
+    "article": {
+      "title": "Agrin-Enriched Neonatal Spinal Cord-Derived Extracellular Vesicles Bypass Age Barriers to Organize Spinal Cord Repair",
+      "authors": "Zhang et al.",
+      "journal": "Journal of Extracellular Vesicles",
+      "year": 2026,
+      "volume": 15,
+      "issue": 10,
+      "article": "e70371",
+      "doi": "10.1002/jev2.70371",
+      "pmid": "42858301",
+      "pmcid": "PMC13653649",
+      "published_date_exact": "NOT_PRIMARY_VERIFIED"
+    },
+    "primary_source": "https://pubmed.ncbi.nlm.nih.gov/42858301/",
+    "primary_fulltext": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13653649/",
+    "publisher": "https://isevjournals.onlinelibrary.wiley.com/doi/10.1002/jev2.70371",
+    "secondary_review": "https://www.ebiotrade.com/newsf/2026-10/20261012000307320.htm",
+    "prior_observer": "The earlier 2026-10-16 Observer had already identified publication/PMC and described this as novel to the lane; adding it to repo is provenance persistence, NOT discovery of a new independent paper.",
+    "repo_baseline_commit": "d565600366833ae6ed6b0d5c2b1660553a439209",
+    "compared_nodes": [
+      "longevity-survivor/SPINAL-CORD-MECHANICAL-LOCK-CAUSAL-NODE-ZHENG-2026-v1.0.json",
+      "longevity-survivor/SPINAL-CORD-GATA4-LOXL2B-NOEL-2026-GEO-SRA-REPLAY-GATE-2026-10-16-v1.0.json",
+      "longevity-survivor/MECHANICAL-EXIT-COUPLING-GATE-2026-08-24-v0.1.json",
+      "longevity-survivor/RESOLUTION-GATE-KINETIC-KILLER-TEST-2026-08-23-v2.2.json"
+    ]
+  },
+  "verified_primary_abstract": {
+    "cohorts": "neonatal, adult and aged SCI mice",
+    "evidence": "integrated multi-omics comparison; neonatal spinal-cord-derived EVs nSC-EVs; EV perturbation and enhanced adult targeting reported",
+    "proposed_mechanisms": [
+      "Agrin (Agrn), enriched in nSC-EVs, involved in axon growth",
+      "Wnt/beta-catenin signaling implicated in neurogenesis",
+      "endothelial cells identified as major Agrin-expressing cells"
+    ],
+    "outcomes": "adult motor and bladder functional recovery reported after targeted nSC-EV delivery",
+    "caveat": "Results are authors' claims in published abstract; detailed controls and animal-level quantitative replay pending."
+  },
+  "secondary_report_only": {
+    "source": "https://www.ebiotrade.com/newsf/2026-10/20261012000307320.htm",
+    "certainty": "THIRD_PARTY_NARRATIVE_NOT_PRIMARY_TABLES",
+    "cohorts": [
+      {
+        "type": "neonatal",
+        "age": "P2"
+      },
+      {
+        "type": "adult",
+        "age": "8-10 weeks"
+      },
+      {
+        "type": "aged",
+        "age": "24 months"
+      }
+    ],
+    "injured_model": "spinal cord crush (secondary description; exact level/protocol not confirmed)",
+    "omics": {
+      "nuclei_total_claim": 82680,
+      "cell_classes_claim": 10,
+      "independent_animals_per_omics_group": "UNKNOWN",
+      "cell_nuclei_not_biological_replicates": true
+    },
+    "reported_dynamics": [
+      "immune infiltration reportedly peaks around 7 dpi",
+      "previous Observer referenced 1/3/7 days and behavioral tracking up to 42 days; primary figure assignment remains unverified"
+    ],
+    "reported_protein_fold_enrichment": {
+      "newborn_vs_adult": 1.98,
+      "newborn_vs_aged": 2.03,
+      "feature": "Agrin protein in EVs",
+      "denominator_or_normalization": "UNKNOWN"
+    },
+    "reported_motor_metric": {
+      "name": "Basso Mouse Scale",
+      "reported_values": [
+        3.2,
+        5.3
+      ],
+      "groups_and_exact_day": "UNKNOWN",
+      "difference_points": 2.1,
+      "p_value": "NOT_VERIFIED",
+      "n": "NOT_VERIFIED"
+    },
+    "reported_molecular_perturbation": "GW4869 EV-release inhibition; Agrn loss-of-function and rAgrin rescue according to secondary review",
+    "reported_histological_features": [
+      "NF-200 positive neurofilament",
+      "Collagen I positive scar area",
+      "5-HT; SYN1; MBP; MAP2"
+    ],
+    "caveat": "Numbers and timing are target claims for figure-level verification, not independent measurements or extracted raw data."
+  },
+  "data_acquisition": {
+    "primary_full_text_status": "PMC DOI page identified but fetch returned browser check/recaptcha; Wiley fulltext failed to load through research tool",
+    "supporting_info": "NOT_ACQUIRED",
+    "supporting_info_exact_filenames": "UNKNOWN__DO_NOT_GUESS_FROM_WILEY_NAMING",
+    "raw_source_data": "NOT_ACQUIRED",
+    "geo_sra_repository_accession": "NOT_FOUND_OR_NOT_VERIFIED_FOR_THIS_PAPER__DO_NOT_REUSE_NOEL_GSE316679",
+    "sample_manifest": "NOT_ACQUIRED",
+    "analysis_code": "NOT_VERIFIED",
+    "checksums": "NOT_COMPUTED",
+    "main_figures_with_legends": "NOT_INSPECTED",
+    "data_availability_statement": "NOT_READ",
+    "acquired_primary_files_count": 0,
+    "reproducibility_status": "BLOCKED_BY_PRIMARY_FILE_ACCESS"
+  },
+  "control_audit": {
+    "age_comparison": "NEONATAL_ADULT_AGED_REPORTED__AGE_N_VALUES_UNVERIFIED",
+    "uninjured_sham": "UNKNOWN_FULL_PAPER_REQUIRED",
+    "adult_SCI_vehicle": "UNKNOWN_FULL_PAPER_REQUIRED",
+    "adult_EV_unmodified_vs_targeted": "REPORTED_COMPARISON__EXACT_ARMS_UNVERIFIED",
+    "adult_EV_age_matched_control": "UNKNOWN",
+    "EV_depletion_replacement": "GW4869 perturbation reported in secondary only; compound specificity and rescue controls UNVERIFIED",
+    "agrin_necessity_rescue": "Agrn knockdown + recombinant rescue reported in secondary only; dosing/control sample sizes UNVERIFIED",
+    "randomization_blinding_and_exclusion": "UNKNOWN",
+    "sample_size_per_age_arm": "UNKNOWN",
+    "sample_size_per_behavior_arm": "UNKNOWN",
+    "sample_size_per_histology": "UNKNOWN",
+    "biological_vs_technical_replicates": "UNKNOWN",
+    "repeated_measures_statistical_plan": "UNKNOWN",
+    "independent_group_replication": "NOT_VERIFIED"
+  },
+  "intervention_and_timing": {
+    "exact_ev_injection_day_relative_to_SCI": "NOT_VERIFIED",
+    "injection_route": "NOT_VERIFIED",
+    "ev_dose_particle_count_or_mass": "NOT_VERIFIED",
+    "repeat_injections": "NOT_VERIFIED",
+    "agrin_knockdown_schedule": "NOT_VERIFIED",
+    "timepoints_described_secondary": [
+      "7 dpi for immune maximum",
+      "1,3,7 days previous Observer claim needs figure proof",
+      "behavioral tracking up to 42 days previous Observer claim needs figure proof"
+    ],
+    "intervention_after_established_scar": "NOT_ESTABLISHED",
+    "note": "Do not infer a delayed rescue of established mature fibrotic scar from post-SCI recovery endpoints."
+  },
+  "strict_fibrotic_cell_fate_audit": {
+    "profibrotic_cell_identity": "NO_VALIDATED_LINEAGE_FATE_MAP_INSPECTED",
+    "measured_cell_state_occupancy_over_time": "NOT_VERIFIED",
+    "alpha_sma_acta2_with_vessel_exclusion": "NOT_VERIFIED",
+    "fibroblast_lineage_tracing": "NOT_VERIFIED",
+    "apoptosis_or_clearance": "NOT_VERIFIED",
+    "state_conversion_to_regenerative_cell_type": "NOT_VERIFIED",
+    "lineage_retained_but_profibrotic_output_shuts_down": "NOT_VERIFIED",
+    "collagen_i_area_change": "SECONDARY_REPORTED__NOT_CELL_EXIT",
+    "tgf_beta_collagen_postn_loxl2_mmp_timp_trajectory": "NOT_VERIFIED",
+    "local_ecm_modulus_before_after": "NOT_VERIFIED",
+    "exact_exit_half_life": "NOT_CALCULABLE",
+    "marker_clearance_is_not_cell_clearance": true,
+    "scar_area_reduction_is_not_cell_fate_evidence": true,
+    "decision": "STRICT_CELL_EXIT_NOT_ESTABLISHED"
+  },
+  "relation_to_existing_work": {
+    "Zheng_2026": "rat biomaterial stiffness/Piezo1-RhoA immediate intervention; distinct mechanism and animal, same spinal-cord tissue",
+    "Noel_2026": "zebrafish endogenous Gata4-Loxl2b ECM crosslinking; distinct perturbation and animal, same spinal-cord tissue",
+    "Zhang_2026": "mouse age-dependent intercellular EV/Agrin/Wnt axis; mechanistically distinct, not replication of either Zheng or Noel",
+    "cross_tissue_independence": "NO__ALL_THREE_ARE_SPINAL_CORD",
+    "strict_mechanical_exit_coupling": "NOT_ESTABLISHED__no verified M1-M5 single experimental root",
+    "avoid_fusion": "Do not mix Zhang fate markers with Noel mechanical trajectory or Zheng softness results to manufacture a synthetic causal root."
+  },
+  "gate_assessment": {
+    "RESIDENT_REGENERATIVE_COMPETENCE_COLLAPSE": "SUPPORTIVE_EXTERNAL_AGE_STRATIFIED_EVIDENCE__NO_GLOBAL_PROMOTION",
+    "WOUND_STATE_FATE_ROUTING_RESOLUTION": "SUGGESTIVE_EV_SIGNALING__NOT_A_FATE_OR_EXIT_TRAJECTORY",
+    "NICHE_ECM_MECHANICAL_MATURATION_LOCK": "SCAR_ASSOCIATION_ONLY__NO_MEASURED_MECHANICAL_LOCK_REVERSAL",
+    "CAUSAL_AGRIN_EV_SUPPORT": "REPORTED_BY_AUTHORS__CONTROLS_AND_MAGNITUDES_PENDING",
+    "STRICT_CELL_EXIT": "NOT_ESTABLISHED",
+    "M1": "UNKNOWN",
+    "M2": "NOT_DEMONSTRATED_DELAYED_MECHANICAL_RETUNING",
+    "M3": "UNKNOWN",
+    "M4": "NO_QUALIFYING_TRAJECTORY",
+    "M5": "FUNCTIONAL_IMPROVEMENT_REPORTED__QUANTITATIVE_REPLAY_PENDING",
+    "MECHANICAL_EXIT_COUPLING": "NOT_ADMITTED",
+    "CROSS_TISSUE_REPLICATION": "NOT_ESTABLISHED",
+    "HUMAN_THERAPY": "NOT_ESTABLISHED",
+    "SCIENTIFIC_BREAKTHROUGH": "NOT_CLAIMED",
+    "overall": "SOURCE_REGISTERED_WITH_ACCESS_GAP__NO_GLOBAL_GATE_TRANSITION"
+  },
+  "next_TOPA_actions": [
+    "Acquire publisher/PMC full text and exact Supporting Information file manifest; record exact files, size, checksum and original public URLs before data extraction.",
+    "Check Data Availability Statement for actual GEO/SRA/ProteomeXchange/PRIDE accession(s), if any. Do not invent run IDs.",
+    "Map every main and supplemental figure to age, model, treatment arm, exact animal n, unit of analysis, exclusion rule, statistics and endpoint.",
+    "Verify timing of each injection relative to lesion, dose, route and need for repeated EV administration, and whether lesion/scar was established before intervention.",
+    "Verify Agrin EV fold-changes and BMS 3.2 vs 5.3 only against primary raw table or corresponding figure legend.",
+    "Test fate/EXIT specifically: cell-lineage identity, longitudinal cell occupancy, apoptosis/death, ECM synthesis cessation, deposited collagen clearance and timing; if unavailable, state M4=NO/UNKNOWN.",
+    "Only if primary source/raw data are unavailable from journal, prepare narrowly scoped author request for supplementary tables, raw behavior/histology values and sample manifest; do not send outreach automatically."
+  ],
+  "firewalls": [
+    "OBSERVER_REDISCOVERY != NOVEL_EXPERIMENT",
+    "PUBLIC_ABSTRACT != PRIMARY_RAW_DATA_REPLAY",
+    "SECONDARY_NUMBERS != VALIDATED_EFFECT_SIZES",
+    "82,680_NUCLEI != 82,680_INDEPENDENT_ANIMALS",
+    "REDUCED_COLLAGEN_I_SCAR_AREA != PROFIBROTIC_CELL_EXIT",
+    "ENDPOINT_IMPROVEMENT != DELAYED_ESTABLISHED_SCAR_REVERSAL",
+    "THREE_SPINAL_CORD_PAPERS != THREE_INDEPENDENT_TISSUES",
+    "EV_CAUSAL_HYPOTHESIS != HUMAN_SCI_TREATMENT"
+  ]
+}
