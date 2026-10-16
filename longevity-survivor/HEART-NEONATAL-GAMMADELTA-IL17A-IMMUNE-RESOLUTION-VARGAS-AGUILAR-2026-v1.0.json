@@ -1,0 +1,85 @@
+{
+  "schema_id": "janus.longevity_survivor.heart.neonatal_immune_resolution_evidence.v1",
+  "artifact_id": "HEART-NEONATAL-GAMMADELTA-IL17A-IMMUNE-RESOLUTION-VARGAS-AGUILAR-2026-v1.0",
+  "created_utc": "2026-10-16",
+  "evidence_root": "VARGAS_AGUILAR_CELL_REPORTS_2026_118100",
+  "source": {
+    "title": "A developmentally restricted γδ T cell-IL-17A axis supports mouse heart regeneration",
+    "authors": "Vargas Aguilar S et al.",
+    "journal": "Cell Reports",
+    "date": "2026-10-07",
+    "doi": "10.1016/j.celrep.2026.118100",
+    "pmid": "42842371",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42842371/",
+    "type": "PEER_REVIEWED_PRIMARY_ABSTRACT",
+    "fulltext_and_supplements": "NOT_INSPECTED",
+    "data_repository": "NOT_VERIFIED"
+  },
+  "observer_dedup": {
+    "compared_repo": "Hawkar-usls/janus-lapis LONGEVITY-SURVIVOR",
+    "compared_meta": "Hawkar-usls/janus-meta-registry main",
+    "search_terms": [
+      "IL-17A",
+      "42842371",
+      "gamma delta T cell heart regeneration"
+    ],
+    "result": "NO_MATCH_IN_CHECKED_BRANCH_FILENAMES_OR_SEARCHED_DEFAULT_BRANCH_INDEX",
+    "discovery_not_republication": true
+  },
+  "reported_study": {
+    "model": "neonatal versus older mouse cardiac injury",
+    "observation": "Neonatal injured hearts accumulate a γδ T-cell population not seen in older nonregenerative injured hearts.",
+    "causal_perturbations": [
+      "Genetic γδ T-cell ablation",
+      "Disruption of IL-17 signaling"
+    ],
+    "reported_results": "Reduced heart regeneration, altered immune infiltration, impaired cardiac function with perturbations.",
+    "mechanistic_interpretation": "γδ T cell-derived IL-17A acts on myeloid cells to promote rapid self-limited inflammation and clearance of apoptotic cells.",
+    "caveat": "Apoptotic cell clearance here is not demonstrated to be clearance of profibrotic fibroblast lineage.",
+    "quantitative_unknowns": [
+      "independent animal n by age and treatment",
+      "injury timing and location",
+      "longitudinal cytokine trajectory",
+      "cell clearance rate and half-life",
+      "functional effect size",
+      "controls and rescue specificity",
+      "multiple-testing corrections",
+      "raw datasets and supplements"
+    ]
+  },
+  "relation_to_prior": {
+    "heart_existing": "longevity-survivor/HEART-ADAM17-DELAYED-FIBROTIC-TIMING-LI-2026-v1.0.json",
+    "spinal_existing": [
+      "longevity-survivor/SPINAL-CORD-GATA4-LOXL2B-NOEL-2026-GEO-SRA-REPLAY-GATE-2026-10-16-v1.0.json",
+      "longevity-survivor/SPINAL-CORD-AGRIN-NSC-EVS-ZHANG-2026-SUPPLEMENT-RAW-DATA-EXIT-AUDIT-2026-10-16-v1.0.json"
+    ],
+    "independence": "INDEPENDENT_PAPER_AND_TISSUE_VS_SPINAL_STUDIES__NOT_REPLICATION_OF_THEIR_MECHANISMS",
+    "cross_tissue_global_replicated_mechanism": "NO",
+    "mechanical_root_fusion": "FORBIDDEN",
+    "biological_specificity": "Context-specific neonatal γδ IL-17A cannot be extrapolated to adult chronic inflammation, fibrosis, or human therapy."
+  },
+  "gate_status": {
+    "RESIDENT_REGENERATIVE_COMPETENCE_COLLAPSE": "SUPPORTIVE_DEVELOPMENTALLY_RESTRICTED_IMMUNE_AXIS",
+    "WOUND_STATE_FATE_ROUTING_RESOLUTION": "CAUSAL_SELF_LIMITED_IMMUNE_RESPONSE_REPORTED__FIBROBLAST_LINEAGE_EXIT_NOT_MEASURED",
+    "NICHE_ECM_MECHANICAL_MATURATION_LOCK": "NOT_DIRECTLY_TESTED",
+    "STRICT_PROFIBROTIC_CELL_EXIT": "NOT_ESTABLISHED",
+    "CAUSAL_MECHANICAL_EXIT_COUPLING": "NOT_ADMITTED",
+    "CROSS_TISSUE_MECHANISM_REPLICATION": "NOT_ESTABLISHED",
+    "HUMAN_TRANSLATION": "NOT_ESTABLISHED",
+    "overall": "NEW_REPO_EVIDENCE_NODE__NO_GLOBAL_GATE_PROMOTION"
+  },
+  "next_TOPA": [
+    "Obtain full article, figure legends, supplemental methods, source data and deposited accession IDs, if any.",
+    "Extract neonatal and older control groups, independent animal n, knockout and IL-17 perturbation details, timing and functional effects.",
+    "Check if IL-17A axis causes apoptotic debris clearance only or also fate-resolved loss of activated cardiac fibroblasts; do not equate the two.",
+    "Reconstruct self-limited immune-response time course and compare against chronic-inflammation controls.",
+    "Keep immune timing root independent of existing ADAM17 mechanical and spinal Gata4/EV roots."
+  ],
+  "firewalls": [
+    "PUBLISHED_ABSTRACT != REPLAYED_DATA",
+    "APOPTOTIC_DEBRIS_CLEARANCE != PROFIBROTIC_CELL_EXIT",
+    "NEONATAL_REPAIR != ADULT_SCAR_REVERSAL",
+    "IMMUNE_CAUSALITY != MECHANICAL_CAUSALITY",
+    "INDEPENDENT_TISSUE_PAPER != CROSS_TISSUE_REPLICATION"
+  ]
+}
