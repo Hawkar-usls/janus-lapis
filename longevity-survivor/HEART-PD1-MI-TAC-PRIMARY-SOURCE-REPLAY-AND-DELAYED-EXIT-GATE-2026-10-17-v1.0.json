@@ -1,0 +1,298 @@
+{
+  "schema_id": "janus.longevity_survivor.heart_pd1_two_study_source_replay_v1",
+  "artifact_id": "HEART-PD1-MI-TAC-PRIMARY-SOURCE-REPLAY-AND-DELAYED-EXIT-GATE-2026-10-17-v1.0",
+  "authored_utc_date": "2026-10-17",
+  "branch": "LONGEVITY-SURVIVOR",
+  "study_scope": "Chen 2026 MI versus Wu 2026 TAC: immune cell identity, transcriptomic acquisition, intervention timing and strict post-established-scar EXIT",
+  "evidence_status": "PRIMARY_PAPER_DESIGN_AUDIT_COMPLETED__GEO_ACCESSIONS_MAPPED__RAW_NUMERICAL_REPRODUCTION_NOT_COMPLETED",
+  "predecessor": {
+    "file": "longevity-survivor/HEART-PD1-CXCL9-CXCR3-MI-VS-TAC-OPPOSITE-SIGN-2026-10-17-v1.0.json",
+    "sha_at_comparison": "3523a5def5256c439c3a7dbe8ca124e073beb513",
+    "commit": "b48591b656d0c48f55f3e28fbfabdb4d84abc742",
+    "dedup_note": "These two published studies already registered and alerted. This artifact adds primary-method verification and disambiguates Wu's human versus mouse GEO roots; it must not be counted as independent discovery or replication."
+  },
+  "study_roots": {
+    "CHEN_MI": {
+      "source": "https://www.nature.com/articles/s41421-026-00924-2",
+      "doi": "10.1038/s41421-026-00924-2",
+      "pmid": "42838936",
+      "published": "2026-10-06",
+      "verified_tissue": "mouse heart after LAD myocardial infarction; also NHP MI and human peripheral-blood phenotype",
+      "cellular_atlas": {
+        "t_cells_total_in_described_clusters": 2118,
+        "pd1_positive_fraction_sham_percent": 4.97,
+        "pd1_positive_fraction_mi_percent": 22.02,
+        "number_of_independent_animals_underlying_fraction": "NOT_VERIFIED_BY_CELL_COUNT",
+        "pd1_expansion_maximum": "day 7 post MI",
+        "timing_flow_cytometry_days_post_mi": [
+          3,
+          7,
+          28
+        ],
+        "per_group_n_flow_fig1f": "6-7 mice",
+        "activated_t_cell_phenotypes": [
+          "gamma_delta_TRDC",
+          "CD4",
+          "CD8",
+          "Treg/FOXP3",
+          "other effector/naive T cells"
+        ],
+        "main_report": "gamma-delta-related T cells prominent among cardiac PD1-positive populations; PD1-positive CD4 and CD8 also expand, no single exclusive origin"
+      },
+      "gene_expression": {
+        "GSE292863": {
+          "design": "Mouse heart sorted PD1-positive vs PD1-negative T-cell bulk RNA-seq 7 days after MI",
+          "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292863",
+          "indexed_samples": 6,
+          "species": "Mus musculus",
+          "tissue": "heart / sorted T cells",
+          "sample_to_animal_crosswalk": "NOT_VERIFIED",
+          "status": "PUBLIC_RECORD_FOUND__NO_LOCAL_COUNT_MATRIX"
+        },
+        "GSE293489": {
+          "design": "Mouse post-MI/sham scRNA-seq and relevant T-cell study",
+          "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293489",
+          "source_validation": "CHEN_PRIMARY_DATA_AVAILABILITY",
+          "full_sample_manifest": "NOT_VERIFIED",
+          "status": "PUBLIC_ACCESSION_FOUND__NO_LOCAL_COUNT_MATRIX"
+        }
+      },
+      "intervention": {
+        "anti_pd1_mouse_pre_injury_start_day": -1,
+        "anti_pd1_mouse_dose_ug_per_mouse": 200,
+        "mouse_injection_interval_days": 2,
+        "mouse_endpoint_days": [
+          28,
+          56
+        ],
+        "mouse_28_day_function_n_per_group": 6,
+        "mouse_56_day_function_n_per_group": "6-7",
+        "mouse_56_day_fibrosis_n_per_group": "6-8",
+        "treatment_control": "anti-IgG isotype",
+        "NHP_pre_injury_day": -1,
+        "NHP_repeat_dose_post_mi_day": 14,
+        "NHP_treatment": "nivolumab 10 mg/kg",
+        "NHP_control": "saline",
+        "NHP_n_per_group": 6,
+        "NHP_MRI_days_post_mi": [
+          3,
+          28
+        ],
+        "note": "Day14 repeat dose is not a new randomized delayed-start arm because the same NHP already received pretreatment at day -1."
+      },
+      "fibroblast_mechanism": {
+        "proposed_source": "CXCL9 from cardiac PD1-positive activated T cells",
+        "proposed_target": "CXCR3 on cardiac fibroblasts",
+        "outcomes": [
+          "less Sirius-red fibrosis with pre-injury anti-PD1 or congenital knockout",
+          "lower bulk alpha-SMA, COL1, POSTN markers",
+          "better echocardiographic measurements after MI"
+        ],
+        "proof_of_existing_scar_before_intervention": false,
+        "longitudinal_fibroblast_lineage_exit_data_verified": false,
+        "alpha_sma_not_lineage_fate": true
+      },
+      "author_explicit_caveat": "The Discussion states delayed administration following acute inflammatory phase and optimal window require future studies.",
+      "supplemental_file": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41421-026-00924-2/MediaObjects/41421_2026_924_MOESM1_ESM.docx",
+      "supplemental_bytes_acquired": false
+    },
+    "WU_TAC": {
+      "source": "https://pubmed.ncbi.nlm.nih.gov/42677471/",
+      "doi": "10.1161/CIRCULATIONAHA.125.074024",
+      "pmid": "42677471",
+      "first_publication": "2026-09-01",
+      "print_issue_date": "2026-09-29",
+      "verified_model": "Mouse transverse-aortic constriction (TAC) and anti-PD1-related cardiac injury; separately observed human PBMC anti-PD1 side effects",
+      "mechanism": {
+        "chemokine_producer": "Cardiac fibroblasts make CXCL9/CXCL10 under TAC",
+        "recruited_receptor_cell": "CXCR3+ cytotoxic CD8+ T cells",
+        "injury_effectors": "GZMB / perforin, cardiomyocyte mitochondrial complex-I impairment and apoptosis",
+        "perturbations": [
+          "anti-PD1 antibodies",
+          "CD8- and T-cell Pdcd1 conditional genetic loss",
+          "Cxcr3 knockout/blockade",
+          "Gzmb knockout/blockade"
+        ],
+        "reported_consequence": "anti-PD1 worsens TAC-associated injury; CXCR3/GZMB interventions rescue injury in investigated settings",
+        "limitation": "rescue of immune cardiotoxicity is not demonstration of reversal of pre-existing mature myocardial fibrosis"
+      },
+      "study_datasets": {
+        "mouse_Tac": {
+          "accession": "GSE327655",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE327655",
+          "indexed_source": "https://www.omicsdi.org/dataset/geo/GSE327655",
+          "organism": "Mus musculus",
+          "assay": "RNA-seq with TAC context; GSM list, contrasts and sequencing unit require direct GEO inspection",
+          "status": "PUBLIC_RECORD_IDENTIFIED__SAMPLE_CROSSWALK_AND_MATRICES_NOT_ACQUIRED"
+        },
+        "human_anti_pd1_PBMC": {
+          "accession": "GSE328788",
+          "source": "https://www.ncbi.nlm.nih.gov/bioproject/1456524",
+          "bioproject": "PRJNA1456524",
+          "organism": "Homo sapiens",
+          "tissue": "peripheral blood mononuclear cells, NOT mouse hearts",
+          "assay": "14 public SRA experiments/scRNA libraries",
+          "cohort_current_metadata": "7 possible-myocarditis vs 7 anti-PD1-exposed without cardiac injury",
+          "caution": "Older GSM records report 4+3 cohort, but newer samples and BioProject support 7+7. Verify exact sample release/version before reanalysis, no blind merge or duplicated original libraries.",
+          "raw_sra_volume_approx_tb": 0.73,
+          "processed_geo_volume_approx_mb": 284,
+          "sample_biosample_examples": [
+            "GSM9689697",
+            "GSM9845485"
+          ],
+          "status": "PUBLIC_METADATA_VERIFIED__NOT_LOCALLY_REPLAYED"
+        },
+        "zenodo": {
+          "doi": "10.5281/zenodo.20983659",
+          "source": "https://zenodo.org/records/20983659",
+          "files": [
+            {
+              "name": "preprocess.R",
+              "approx_size_kb": 19.3,
+              "md5": "c09afc0f77fa13f63329de811f208f59"
+            },
+            {
+              "name": "cd8_subset.rds",
+              "approx_size_gb": 2.1,
+              "md5": "8955e2313400daba83346d602b20d3a0"
+            },
+            {
+              "name": "integrated_annotated.rds",
+              "approx_size_gb": 9.2,
+              "md5": "98e9adc758a2400e58156d15742a78cd"
+            },
+            {
+              "name": "integrated_sct.rds",
+              "approx_size_gb": 10.3,
+              "md5": "3cdba8194260e3cbd795f45c341f8f63"
+            },
+            {
+              "name": "merged_qc_singlets.rds",
+              "approx_size_gb": 10.3,
+              "md5": "1da0580acb8b1093a772e135661df3de"
+            }
+          ],
+          "total_reported_gb": 31.9,
+          "checksum_status": "PUBLISHER_LISTED_MD5__NOT_LOCALLY_VERIFIED",
+          "code_read_or_executed": false
+        }
+      },
+      "exact_TAC_anti_pd1_schedule": "NOT_VERIFIED_FULL_METHODS",
+      "exact_mouse_per_arm_n": "NOT_VERIFIED_FULL_METHODS",
+      "late_after_established_scar_intervention": "NOT_SHOWN_FROM_AVAILABLE_ABSTRACT"
+    }
+  },
+  "independent_replay_status": {
+    "executed_raw_or_processed_matrices": 0,
+    "verified_biological_replicates_by_disease_arm": 0,
+    "gene_level_diffexp_tables_regenerated": 0,
+    "source_figures_reproduced": 0,
+    "actual_files_downloaded": 0,
+    "reason": "Execution environment cannot reach NCBI FTP/Zenodo binaries through network; source indexes and published paper HTML were inspected but downloadable matrix bytes were not obtained.",
+    "attempt_note": "Direct HTTPS from container to ftp.ncbi.nlm.nih.gov, www.ncbi.nlm.nih.gov, zenodo.org failed with network connection errors; do not infer data are unavailable to the public.",
+    "quantitative_values_from_author_figures_only": true,
+    "scientific_conclusion": "EVIDENCE_AUDITED_BUT_INDEPENDENT_NUMERICAL_REPRODUCTION_BLOCKED"
+  },
+  "possible_comparison_after_acquisition": {
+    "model_separation": "Compute MI mouse and TAC mouse analyses separately; never pool conditions, endpoints or infer model×drug interaction without a factorial matched model.",
+    "preregistered_cell_markers": {
+      "T_cell": [
+        "Cd3d",
+        "Cd3e"
+      ],
+      "gamma_delta": [
+        "Trdc",
+        "Trgc1",
+        "Trgc2"
+      ],
+      "cytotoxic_CD8": [
+        "Cd8a",
+        "Cd8b1",
+        "Gzmb",
+        "Prf1",
+        "Nkg7"
+      ],
+      "helper": [
+        "Cd4"
+      ],
+      "Treg": [
+        "Foxp3",
+        "Il2ra"
+      ],
+      "checkpoint": [
+        "Pdcd1",
+        "Cd274"
+      ],
+      "chemokines": [
+        "Cxcl9",
+        "Cxcl10",
+        "Cxcr3"
+      ],
+      "fibroblast": [
+        "Pdgfra",
+        "Col1a1",
+        "Col3a1",
+        "Postn",
+        "Acta2"
+      ]
+    },
+    "cell_ontology": "Use full cell state reference plus orthogonal flow or TCR gating; do not equate one-marker RNA+ to a cell subtype and do not count cells as biological replicates.",
+    "statistical_unit": "individual independent mouse for mouse study; independently sampled human participant for PBMC study; unknown pooling blocks inferential p-values",
+    "plots": [
+      "per-mouse fraction TRDC-positive T cells and CD8 cytotoxic state, each with denominator",
+      "per-mouse CXCR3 and effector expression by T subtype",
+      "per-animal vs per-cell effect and confidence intervals",
+      "CXCL9/CXCL10 ligand source vs CXCR3 receptor recipient, separately by disease model"
+    ],
+    "recipient_source_direction": "CHEN proposed ligand source PD1+ T -> fibroblast CXCR3; WU proposed fibroblast CXCL9/10 -> CD8 CXCR3. Matching ligand-receptor family does not prove same directed mechanism.",
+    "type_caution": "Human GSE328788 PBMC cannot answer native murine cardiac fibroblast EXIT; species, tissue and sampling context differ."
+  },
+  "prior_art_context": {
+    "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE207289",
+    "claim": "Previous neonatal heart PD1/PD-L1 immune-regeneration study reports disruption of neonatal regeneration when PD1/PD-L1 is deleted; age/state context differs from adult MI and TAC",
+    "provenance": "2023 PRE_EXISTING_PRIOR_ART_CONTROL__NOT_A_NEW_OBSERVER_DISCOVERY",
+    "implication": "The sign of checkpoint signaling depends on development, injury model and cell-specific roles."
+  },
+  "strict_delayed_exit_gate": {
+    "definition": "To pass, recruit animals with VERIFIED scar/fibroblast-activation before treatment randomization; after intervention, track independent animal-level ECM, lineage-traced profibrotic-state occupancy, state fate/clearance, maintained myocardial integrity and functional rescue longitudinally.",
+    "chen_after_established_scar_start": "NO__starts day -1",
+    "wu_after_established_scar_start": "NOT_VERIFIED",
+    "fibroblast_cell_occupancy_before_after": "NOT_VERIFIED",
+    "apoptosis_clearance_of_activated_fibroblasts": "NOT_VERIFIED",
+    "profibrotic_output_shutdown": "NOT_VERIFIED",
+    "mature_scar_matrix_regression": "NOT_DEMONSTRATED",
+    "mechanostiffness_prepost_trajectory": "NOT_MEASURED_FROM_INSPECTED_SOURCES",
+    "delayed_reversal_proven": false,
+    "result": "STRICT_PROFIBROTIC_CELL_EXIT_NOT_ADMITTED"
+  },
+  "gate_state_after": {
+    "IMMUNE_CONTEXT_OPPOSITE_SIGN": "SUPPORTED_IN_DISTINCT_MI_VS_TAC_MODELS__NOT_SAME_MODEL_CONTRADICTION",
+    "PD1_UNIVERSALLY_CARDIOPROTECTIVE": "REJECTED",
+    "PD1_BLOCKADE_UNIVERSALLY_ANTIFIBROTIC": "REJECTED",
+    "CELL_TYPE_MATCHING": "HYPOTHESIS_DEFINED__NUMERICAL_REPLAY_BLOCKED",
+    "CANDIDATE_INTERVENTION_FOR_EXISTING_SCAR": "NOT_CONSTRUCTED_OR_VALIDATED",
+    "STRICT_CELL_EXIT": "NOT_ESTABLISHED",
+    "MECHANICAL_EXIT_COUPLING": "NOT_ADMITTED",
+    "CROSS_TISSUE_REPLICATION": "NOT_ESTABLISHED",
+    "CLINICAL_RECOMMENDATION": "NONE",
+    "OVERALL": "PRIMARY_DESIGN_AUDIT_ADVANCED__NO_GLOBAL_GATE_PROMOTION"
+  },
+  "next_actions": [
+    "Acquire Chen GSE292863 sorted-T-cell bulk and GSE293489 scRNA sample manifests and processed count matrices, including original true animal IDs; archive SHA256.",
+    "Acquire Wu GSE327655 mouse-TAC sample-level design/count matrices and separately 14 human PBMC GSM records; do not substitute one for the other.",
+    "Retrieve Zenodo preprocess.R first (19.3 kB), validate MD5 against c09afc0f77fa13f63329de811f208f59, inspect for sample and group mapping before fetching 31.9GB RDS.",
+    "Reproduce within-study differential expression and T subset proportions at biological-animal/participant unit; cross-compare only direction/specificity with explicitly different contexts.",
+    "Find or preregister delayed-start intervention in established scar with pre-randomization histology/imaging, time courses, lineage fate and ECM stiffness plus safety endpoints; neither 2026 paper qualifies for EXIT."
+  ],
+  "firewalls": [
+    "INDEXED_GEO_ACCESSION != DOWNLOADED_AND_REPRODUCED_COUNTS",
+    "CELLS_OR_READS != INDEPENDENT_ANIMAL_N",
+    "HUMAN_PBMC != MOUSE_TAC_HEART",
+    "OPPOSITE_MODEL_RESPONSES != DIRECT_INTRA_MODEL_CONTRADICTION",
+    "SAME_CXCL9_CXCR3_PAIR != SAME_CELL_TO_CELL_DIRECTION",
+    "PREVENTIVE_ANTI_PD1_AT_DAY_MINUS_1 != POST_ESTABLISHED_SCAR_REGRESSION",
+    "REDUCED_FIBROSIS_AREA != FIBROBLAST_CELL_EXIT",
+    "A_NEW_GITHUB_COMMIT != INDEPENDENT_SCIENTIFIC_REPLICATION",
+    "PD1_CHECKPOINT_BLOCKADE_IS_NOT_A_SAFE_SELF_EXPERIMENT"
+  ]
+}
