@@ -1,0 +1,208 @@
+{
+  "schema_id": "janus.longevity_survivor.dataset_acquisition_and_mechanical_exit_audit.v1",
+  "artifact_id": "SPINAL-CORD-GATA4-LOXL2B-NOEL-2026-GEO-SRA-REPLAY-GATE-2026-10-16-v1.0",
+  "created_utc_date": "2026-10-16",
+  "branch": "LONGEVITY-SURVIVOR",
+  "lane": "LONGEVITY_SURVIVOR",
+  "classification": "EXTERNAL_PUBLISHED_EVIDENCE_AND_METADATA_AUDIT__NOT_JANUS_EXPERIMENT",
+  "prior_observer_status": "Noel et al. and GEO/SRA availability were already surfaced in the 2026-10-16 Observer alert; this artifact adds a source-traceable design/control/replay audit and is not a second independent discovery or replication.",
+  "literature": {
+    "title": "A Gata4-Loxl2 axis controls ECM remodeling to enable scar-free spinal cord regeneration in zebrafish",
+    "authors_short": "Noel et al.",
+    "journal": "Cell Reports",
+    "publication_date": "2026-10-05",
+    "doi": "10.1016/j.celrep.2026.118050",
+    "pmid": "42837255",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42837255/",
+    "evidence_class": "PUBLISHED_ARTICLE_ABSTRACT_VERIFIED",
+    "abstract_level_inference": "In injured adult zebrafish spinal cord, loss of gata4 biases ERG glia toward ECM/fibroblast-like gene expression with higher loxl2b, collagen cross-linking and stiffness; pharmacological lysyl-oxidase inhibition was reported to improve bridging/functional recovery.",
+    "constraints": "The article reports causal perturbation and rescue, but original detailed figures, supplementary statistics and animal-level data have not been independently reproduced here."
+  },
+  "datasets": {
+    "GEO": {
+      "series": "GSE316679",
+      "series_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE316679",
+      "public_since": "2026-08-11",
+      "last_updated": "2026-08-12",
+      "design": "Adult zebrafish with complete spinal transection; wildtype vs gata4wcm6/wcm6; injury verified immediately and at 1 dpi; snRNA-seq performed at 2 weeks post-injury.",
+      "accession_sample": "GSM9458135",
+      "sample_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9458135",
+      "sample_label": "Pooled snRNAseq samples",
+      "detected_processed_named_libraries": [
+        "Sample_1_gata4mutant",
+        "Sample_2_gata4mutant",
+        "Sample_3_wildtype"
+      ],
+      "list_has_two_mutant_libraries_one_wildtype": true,
+      "biological_replicate_count_verified": false,
+      "experimental_unit_assigned": false,
+      "matrix_content_inspected": false,
+      "processed_file_kinds": [
+        "three gene lists CSV.gz",
+        "three cell metadata CSV.gz",
+        "three sparse counts MTX.gz",
+        "processed Seurat RDS"
+      ],
+      "supplementary_bundle": "GSE316679_RAW.tar",
+      "supplementary_bundle_approx_mb": 62.8,
+      "organism": "Danio rerio",
+      "platform": "GPL29008 DNBSEQ-G400",
+      "reference_genome": "GRCz11",
+      "reported_processing": "Trailmaker demultiplex/barcoding/count matrices; Seurat v5; filter >500 detected genes per cell; PCA/UMAP/annotation",
+      "file_availability": "PUBLIC_GEO_METADATA_AND_FILE_LINKS_VERIFIED",
+      "local_acquisition": "NOT_DOWNLOADED__NCBI_FTP_NETWORK_UNAVAILABLE_FROM_CURRENT_EXECUTION_ENVIRONMENT"
+    },
+    "SRA": {
+      "project": "PRJNA1403578",
+      "project_url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1403578",
+      "experiment": "SRX31828114",
+      "biosample": "SAMN54680170",
+      "biosample_url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN54680170",
+      "sample": "SRS27785695",
+      "approximate_total_mb": 64969,
+      "approximate_bases_gb": 84,
+      "raw_sequence_availability": "PUBLIC_SRA_REGISTRATION_AND_TOTAL_VOLUME_VERIFIED",
+      "run_id_SRR": "NOT_VERIFIED",
+      "local_fastq": "NOT_DOWNLOADED",
+      "raw_read_mapping_replay": "NOT_RUN"
+    }
+  },
+  "timepoint_audit": {
+    "GEO_snRNAseq_timepoints": [
+      "2 wpi"
+    ],
+    "injury_visual_control": [
+      "immediately post-injury",
+      "1 dpi"
+    ],
+    "longitudinal_state_fate_series_from_GEO": "NOT_PRESENT",
+    "separate_histol_functional_reported_timepoints": "MULTIPLE__MAIN_FIGURES_NOT_PRIMARY_INSPECTED",
+    "prohibited_interpretation": "2-wpi cross-sectional nuclei profiles cannot alone measure wound-state duration, lineage fate, cell clearance, collagen clearance or scar-resolution half-life."
+  },
+  "controls": {
+    "verified_metadata_controls": [
+      "WT complete spinal transection at 2 wpi",
+      "gata4 mutant complete spinal transection at 2 wpi"
+    ],
+    "reported_paper_level_controls": [
+      "uninjured comparison in abstract-level research context",
+      "gata4 loss-of-function",
+      "pharmacological inhibition of Loxl2b activity with rescue"
+    ],
+    "reported_primary_abstract_support": "Causal gene loss and pharmacological rescue are part of peer-reviewed abstract; exact animal-level balancing, vehicle-control setup, number of animals and inhibitor selectivity require full paper/supplement audit.",
+    "needed_for_expression_claim": [
+      "true biological replicate identifiers for each matrix",
+      "library-level pooling/animal identities",
+      "WT biological replication",
+      "batch balancing and genotype assignments",
+      "read-depth/mapping QC",
+      "pseudobulk by independent animal rather than treating nuclei as replicates"
+    ],
+    "needed_for_ecm_causal_claim": [
+      "vehicle-treated mutants and WT",
+      "off-target/specificity controls for BAPN or equivalent lysyl oxidase inhibitor",
+      "same-animal or controlled cohort stiffness, collagen, bridging and function",
+      "longitudinal delayed-after-lock intervention arm"
+    ]
+  },
+  "quantitative_publication_claims_to_replay_not_promoted": [
+    {
+      "feature": "ERG proliferation at 1 wpi",
+      "claimed_effect": "approximately 30% reduction in mutant",
+      "claimed_p": "0.0368",
+      "source_tier": "SECONDARY_SUMMARY_ONLY",
+      "independently_reproduced": false
+    },
+    {
+      "feature": "glial and axonal bridge size at 2 wpi",
+      "claimed_effect": "approximately 52.1% and 51.4% reductions in mutant",
+      "source_tier": "SECONDARY_SUMMARY_ONLY",
+      "independently_reproduced": false
+    },
+    {
+      "feature": "lesion mechanical stiffness",
+      "claimed_effect": "mutant 388.4 +/- 62.7 Pa vs wildtype 256.9 +/- 33.2 Pa",
+      "source_tier": "SECONDARY_SUMMARY_ONLY",
+      "independently_reproduced": false
+    },
+    {
+      "feature": "collagen crosslink staining",
+      "claimed_effect": "approximately 70% increase at 1 wpi and 108% increase at 2 wpi in mutants",
+      "source_tier": "SECONDARY_SUMMARY_ONLY",
+      "independently_reproduced": false
+    },
+    {
+      "feature": "bridging time-course vs functional recovery",
+      "claimed_effect": "bridging phenotype reportedly attenuates by 4 wpi while swimming impairment persists through 10 wpi",
+      "source_tier": "SECONDARY_SUMMARY_ONLY",
+      "independently_reproduced": false
+    }
+  ],
+  "source_tier_for_quantitative_candidates": {
+    "url": "https://www.ebiotrade.com/newsf/2026-10/20261007083546751.htm",
+    "tier": "THIRD_PARTY_SUMMARY",
+    "caveat": "Numbers are provisional extraction targets, not validated study values, because full article figures/supplementary raw data were not independently inspected."
+  },
+  "comparison_with_existing_JANUS": {
+    "existing_node": "longevity-survivor/SPINAL-CORD-MECHANICAL-LOCK-CAUSAL-NODE-ZHENG-2026-v1.0.json",
+    "existing_doi": "10.1002/adfm.202517284",
+    "existing_design": "Young rat transection with immediately placed stiffness-varied catechol-modified hydrogel and Piezo1/RhoA signal; mechanical stiffness manipulation confounded with hydrogel concentration/adhesion.",
+    "Noel_design": "Adult zebrafish endogenous Gata4-Loxl2b axis, loss-of-function, collagen cross-link/stiffness and lysyl oxidase rescue.",
+    "independent_groups_and_organisms": "YES_DIFFERENT_PAPERS_GROUPS_AND_SPECIES",
+    "tissue_independence": "NO_SAME_SPINAL_CORD_TISSUE_CATEGORY",
+    "exact_GATA4_LOXL2B_independent_replication": "NOT_ESTABLISHED",
+    "generic_mechanics_causal_support": "INDEPENDENT_DIRECTIONAL_SUPPORT_WITH_DIFFERENT_MECHANISM",
+    "delayed_post_established_scar_reversal": "NOT_SHOWN_FROM_VERIFIED_SOURCES",
+    "mechanical_modulus_universal_monotonic_rule": "NOT_SUPPORTED__EXISTING_ZHENG_NODE_HAS_FALSIFIER"
+  },
+  "gate_check": {
+    "resident_regenerative_competence_collapse": "NOT_TESTED_AS_DEVELOPMENTAL_PRE_AND_POST_LOCK_MECHANISM",
+    "wound_state_fate_routing_and_resolution": "SUPPORTIVE_TRANSCRIPTIONAL_STATE_ASSOCIATION__NO_LONGITUDINAL_EXIT_FATE_OR_CLEARANCE",
+    "niche_ecm_mechanical_maturation_lock": "SUPPORTIVE_CAUSAL_INJURY_ECM_NODE__NO_NATIVE_DEVELOPMENTAL_LOCK_OR_DELAYED_RESCUE_SHOWN",
+    "mechanical_exit_coupling_M1_established_before_retuning": "UNKNOWN",
+    "mechanical_exit_coupling_M2_delayed_physical_retuning": "NO",
+    "mechanical_exit_coupling_M3_mechanics_trajectory": "UNKNOWN",
+    "mechanical_exit_coupling_M4_lineage_state_exit_trajectory": "NO",
+    "mechanical_exit_coupling_M5_integrity_function": "REPORTED_RESCUE__QUANTITATIVE_REPLAY_PENDING",
+    "mechanical_exit_coupling_admission": "NOT_ADMITTED",
+    "strict_cell_EXIT": "NOT_ESTABLISHED",
+    "independent_cross_tissue_replication": "NOT_ESTABLISHED",
+    "human_translational_efficacy": "NOT_ESTABLISHED",
+    "overall": "NEW_EXTERNAL_EVIDENCE_NODE_ADDED_TO_TRACKER__NO_GLOBAL_GATE_PROMOTION"
+  },
+  "data_access_attempt": {
+    "platform": "GEO/NCBI",
+    "result": "GEO accession pages and NCBI BioProject metadata accessed and cross-checked; direct FTP binary attempt failed due to network/download access restriction.",
+    "downloaded_processed_matrices": 0,
+    "downloaded_raw_runs": 0,
+    "byte_level_checksums": "NOT_COMPUTED",
+    "binary_replay": "NOT_PERFORMED"
+  },
+  "next_TOPA_actions": [
+    "Acquire GSE316679_RAW.tar and record SHA256 for each extracted file; inspect sample metadata and link true independent animals to each of three processed libraries.",
+    "Resolve SRX31828114 into actual SRR run accession(s) from NCBI SRA Run Selector; acquire run manifest/size/checksums before optional large FASTQ download.",
+    "Replay cell-type annotations and per-genotype ECM/loxl2b expression using pseudobulk only when independent biological replicates are verified; if WT has one true sample, report descriptive analyses only.",
+    "Review primary Cell Reports figures and supplements for individual n, treatment schedule, effect sizes, error bars, p corrections and vehicle controls; do not promote third-party quantitative figures.",
+    "For EXIT gate require time series pre/during/after injury and treatment with lineage-resolved fibroblast-like ERG occupancy, output extinction, collagen clearance, stiffness and function.",
+    "Compare to Zheng 2026 separately, without cross-paper root fusion or shared tissue counted as new independent tissue; preserve previously recorded softness-direction falsifier."
+  ],
+  "source_urls": [
+    "https://pubmed.ncbi.nlm.nih.gov/42837255/",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE316679",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9458135",
+    "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1403578",
+    "https://www.ncbi.nlm.nih.gov/biosample/SAMN54680170",
+    "https://www.ebiotrade.com/newsf/2026-10/20261007083546751.htm"
+  ],
+  "provenance_firewall": [
+    "GEO_PUBLIC_ACCESS != LOCALLY_REPLAYED_DATA",
+    "PUBLICATION_CLAIM != INDEPENDENT_REPLICATION",
+    "CELLS_OR_NUCLEI != INDEPENDENT_ANIMALS",
+    "SAME_TISSUE_DIFFERENT_PAPER != CROSS_TISSUE_INDEPENDENCE",
+    "REPORTED_BRIDGE_RESCUE != VALIDATED_CELL_FATE_EXIT",
+    "LOSS_OF_MARKER != CELL_CLEARANCE",
+    "CHANGE_IN_STIFFNESS != DEVELOPMENTAL_LOCK_REVERSAL",
+    "NEW_REGISTRY_CHECKPOINT != NEW_SCIENTIFIC_DISCOVERY",
+    "ANIMAL_REGENERATION != HUMAN_THERAPY"
+  ]
+}
