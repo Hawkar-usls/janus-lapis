@@ -1,0 +1,151 @@
+{
+  "schema_id": "janus.longevity_survivor.context_specific_immune_fibrosis_countercontrol.v1",
+  "artifact_id": "HEART-PD1-CXCL9-CXCR3-MI-VS-TAC-OPPOSITE-SIGN-2026-10-17-v1.0",
+  "created_utc_date": "2026-10-17",
+  "evidence_class": "NEW_TO_BRANCH_EXTERNAL_PRIMARY_PUBLISHED_EVIDENCE_AND_OPPOSITE_DIRECTION_CONTROL",
+  "source_roots": [
+    {
+      "id": "CHEN_MI_2026",
+      "title": "Blocking PD1 prevents T-cell-promoted fibrosis in myocardial infarction",
+      "authors": "Chen et al.",
+      "published": "2026-10-06",
+      "journal": "Cell Discovery",
+      "doi": "10.1038/s41421-026-00924-2",
+      "pmid": "42838936",
+      "url": "https://www.nature.com/articles/s41421-026-00924-2",
+      "models": [
+        "murine myocardial infarction LAD ligation",
+        "nonhuman primate myocardial infarction",
+        "human post-MI patient phenotyping"
+      ],
+      "mechanism": "PD1+ activated T cells drive CXCL9/CXCR3-dependent cardiac fibroblast activation and fibrosis, largely independent of fibroblast PD-L1.",
+      "interventions": [
+        "global Pdcd1 knockout",
+        "PD1+ vs PD1- T-cell adoptive transfer",
+        "CXCR3 inhibition",
+        "anti-PD1 blockade"
+      ],
+      "timepoints_verified": [
+        "day 7 post-MI PD1+ T-cell peak",
+        "day 28 post-MI heart function/fibrosis",
+        "56-day extended antibody follow-up"
+      ],
+      "quantitative_primary_text": {
+        "pd1_T_cell_fraction_sham_percent": 4.97,
+        "pd1_T_cell_fraction_MI_percent": 22.02,
+        "figure_3_groups_n": [
+          6,
+          7,
+          6,
+          7
+        ],
+        "cytokine_array_n_per_group": 4,
+        "extended_antibody_fibrosis_n_range": "6-8 per group"
+      },
+      "raw_access": {
+        "bulk_GEO": "GSE292863",
+        "bulk_GEO_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292863",
+        "scRNA_GEO": "GSE293489",
+        "scRNA_GEO_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293489",
+        "supplementary_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41421-026-00924-2/MediaObjects/41421_2026_924_MOESM1_ESM.docx",
+        "supplementary_downloaded": false,
+        "raw_reads_downloaded": false,
+        "raw_replay": false
+      },
+      "limitations": [
+        "Article provides sample n only for selected panels; complete per-arm counts, effect-size extraction and individual animal-level tables not yet audited.",
+        "Anti-PD1 started around time of MI; delayed intervention after established mature scar is explicitly a future experiment.",
+        "Reduced scar or lower ACTA2/COL1A1/POSTN is not lineage-traced EXIT.",
+        "Authors explicitly note long-term checkpoint-inhibitor safety uncertain and possible immune-related myocarditis."
+      ]
+    },
+    {
+      "id": "WU_TAC_2026",
+      "title": "Inhibition of Programmed Cell Death-1 in Cytotoxic CD8+ T Cells Exacerbates Pressure Overload-Induced Cardiac Injury",
+      "authors": "Wu et al.",
+      "published_online": "2026-09-01",
+      "journal": "Circulation",
+      "doi": "10.1161/CIRCULATIONAHA.125.074024",
+      "pmid": "42677471",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42677471/",
+      "model": "mouse pressure-overload transverse aortic constriction (TAC); human checkpoint therapy associated cardiac injury scRNA-seq resources",
+      "mechanism": "PD1 blockade/deletion promotes CXCR3+ cytotoxic CD8+ recruitment driven by fibroblast CXCL9/CXCL10, GZMB/perforin injury to cardiomyocyte mitochondrial complex I.",
+      "interventions": [
+        "anti-PD1 antibody",
+        "T-cell and CD8-specific Pdcd1 knockout",
+        "Cxcr3 and Gzmb genetic/pharmacologic rescue"
+      ],
+      "effect_direction": "PD1 blockade worsens pressure-overload cardiac injury/heart failure, opposite to reported post-MI fibrosis benefit in CHEN_MI_2026.",
+      "raw_access": {
+        "GEO": "GSE328788",
+        "GEO_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE328788",
+        "other_GEO": "GSE327655",
+        "other_GEO_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE327655",
+        "zenodo": "10.5281/zenodo.20983659",
+        "zenodo_url": "https://zenodo.org/records/20983659",
+        "raw_downloaded": false,
+        "raw_replay": false
+      },
+      "limitations": [
+        "Distinct disease model, intervention context, immune cell subsets and readouts; not a direct same-model replication or formal logical contradiction.",
+        "Patient scRNA-seq Zenodo resource and GEO entries should be matched to exact assays before replay.",
+        "No evidence of therapeutic human MI safety/efficacy."
+      ]
+    }
+  ],
+  "comparison": {
+    "prior_heart": "longevity-survivor/HEART-NEONATAL-GAMMADELTA-IL17A-IMMUNE-RESOLUTION-VARGAS-AGUILAR-2026-v1.0.json",
+    "prior_heart_access_audit": "longevity-survivor/HEART-NEONATAL-GAMMADELTA-IL17A-GSE345008-SUPPLEMENT-REPLAY-AUDIT-2026-10-17-v1.0.json",
+    "three_distinct_roots": "Vargas Aguilar neonatal gamma-delta IL17A beneficial immune resolution; Chen adult MI activated PD1+ T-cell profibrotic axis; Wu TAC anti-PD1 adverse cytotoxic CXCR3+ CD8 T-cell axis.",
+    "core_constraint": "The sign of PD1 immune intervention cannot be generalized across cardiac injury models. The same CXCL9/CXCR3 family may act in distinct source->target directions and cell subsets.",
+    "not_a_direct_replication": true,
+    "not_an_automatic_global_theory_falsification": true,
+    "falsifies_naive_universal_claim": "ANTI_PD1_ALWAYS_REDUCES_CARDIAC_FIBROSIS_OR_IMPROVES_HEART_REPAIR",
+    "independent_study_groups": "YES",
+    "independent_tissue_category": "NO__HEART_IN_BOTH",
+    "patient_efficacy": "NOT_TESTED",
+    "human_clinical_recommendation": "NONE__anti-PD1 is a high-risk oncology immunotherapy class; no patient treatment inference from these animal experiments."
+  },
+  "strict_EXIT_gate": {
+    "fibrotic_fibroblast_lineage_fate": "NOT_MEASURED_AS_CLEARANCE_OR_TERMINAL_STATE_EXIT_IN_REVIEWED_PRIMARY_RESULTS",
+    "lineage_resolved_pre_post_intervention": "NO",
+    "fibrosis_output_reduction": "CHEN_REPORTED__MEASURABLE_BUT_NOT_CELL_EXIT",
+    "delayed_post_established_scar_treatment": "NOT_ESTABLISHED",
+    "tissue_mechanics_trajectory": "NOT_ESTABLISHED",
+    "cross_tissue_generalization": "NO",
+    "admission": "NOT_ADMITTED"
+  },
+  "gate_status": {
+    "CAUSAL_IMMUNE_TO_FIBROBLAST_FIBROSIS": "NEW_EXTERNAL_MECHANISTIC_SUPPORT_IN_MI",
+    "IMMUNE_CONTEXT_SIGN_REVERSAL": "INDEPENDENT_OPPOSITE_DIRECTION_TREATMENT_OUTCOME_ACROSS_MI_VS_TAC",
+    "RESIDENT_REGENERATIVE_COMPETENCE_COLLAPSE": "NOT_ESTABLISHED_BY_THESE_ADULT_MODELS",
+    "WOUND_STATE_FATE_ROUTING_RESOLUTION": "CONTEXT_SPECIFIC_SUPPORT__STRICT_EXIT_NOT_ESTABLISHED",
+    "NICHE_ECM_MECHANICAL_MATURATION_LOCK": "NOT_DIRECTLY_TESTED",
+    "STRICT_PROFIBROTIC_CELL_EXIT": "NOT_ESTABLISHED",
+    "MECHANICAL_EXIT_COUPLING": "NOT_ADMITTED",
+    "HUMAN_TRANSLATION": "NOT_ESTABLISHED",
+    "GLOBAL_SCIENTIFIC_GATE_PROMOTION": "NONE"
+  },
+  "next_TOPA": [
+    "Obtain GSE292863 bulk RNA-seq and GSE293489 scRNA-seq sample manifest, map exact animal IDs/MI timing and hash files; no cell-as-replicate inference.",
+    "Obtain GSE328788/GSE327655 and Zenodo Wu resources; verify assay/model linkage, independent sample n and provenance before cross-study comparisons.",
+    "Extract original source tables/figures for CHEN and WU, time-zero, dose, animal n, effect sizes, CI, and matching fibrosis and heart-function readouts.",
+    "Freeze MI versus TAC strata and immune-cell identity before testing effect sign; distinguish PD1+ T-cell subsets, IL17+ neonatal gamma-delta T cells, and cytotoxic CD8+ cells.",
+    "Search for delayed post-established-scar PD1/CXCR3 perturbation with lineage-resolved fibroblast fate and ECM clearance; absent this, maintain strict EXIT gate closed.",
+    "Never recommend anti-PD1 therapy for myocardial infarction based on animal findings; document myocarditis/cardiotoxicity and model-specific opposing effects."
+  ],
+  "provenance_firewall": [
+    "TWO_MODELS_OPPOSITE_SIGN != SAME_MODEL_REPLICATION",
+    "ANTI_PD1_FIBROSIS_PREVENTION != REVERSAL_OF_MATURE_SCAR",
+    "LOWER_ALPHA_SMA_OR_COLLAGEN != CELL_FATE_EXIT",
+    "DATASET_PUBLIC != DOWNLOADED_AND_REPLAYED",
+    "NEONATAL_GAMMA_DELTA_IL17A != ADULT_PD1_CYTOTOXIC_CD8",
+    "EXTERNAL_PAPER_NEW_TO_REGISTRY != NEWLY_PUBLISHED_TODAY",
+    "ANIMAL_FINDINGS != CLINICAL_RECOMMENDATION"
+  ],
+  "dedup": {
+    "lapis_branch_inspected": "LONGEVITY-SURVIVOR HEAD 829b05344a8db77f4ee586857f5555b4a0b35746",
+    "meta_main_tree_inspected": true,
+    "existing_PD1_CXCL9_CXCR3_node_found": false
+  }
+}
