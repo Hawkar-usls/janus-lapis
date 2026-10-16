@@ -1,0 +1,192 @@
+{
+  "schema_id": "janus.longevity_survivor.heart_immune_source_access_and_replay_gate.v1",
+  "artifact_id": "HEART-NEONATAL-GAMMADELTA-IL17A-GSE345008-SUPPLEMENT-REPLAY-AUDIT-2026-10-17-v1.0",
+  "created_utc_date": "2026-10-17",
+  "repository": "Hawkar-usls/janus-lapis",
+  "branch": "LONGEVITY-SURVIVOR",
+  "evidence_root": "VARGAS_AGUILAR_CELL_REPORTS_2026_118100",
+  "predecessor": {
+    "path": "longevity-survivor/HEART-NEONATAL-GAMMADELTA-IL17A-IMMUNE-RESOLUTION-VARGAS-AGUILAR-2026-v1.0.json",
+    "commit": "1a18328cc07070017db6b60675912a5dc401854c",
+    "preserved_as_prior_source": "Same publication, NOT a newly independent published experimental root",
+    "delta": "Resolved GEO dataset accession, one exact GEO/SRA sample, publisher supplementary file locators, scRNA pooled-donor caution and fail-closed raw quantitative/fibroblast-fate audit."
+  },
+  "primary": {
+    "authors": "Stephanie Vargas Aguilar et al.",
+    "title": "A developmentally restricted γδ T cell-IL-17A axis supports mouse heart regeneration",
+    "journal": "Cell Reports",
+    "published_ahead_online": "2026-10-07",
+    "issue_display_date": "2026-10-27",
+    "doi": "10.1016/j.celrep.2026.118100",
+    "pii": "S2211124726011794",
+    "pmid": "42842371",
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42842371/",
+    "primary_article_url": "https://www.sciencedirect.com/science/article/pii/S2211124726011794",
+    "article_access": "PubMed abstract directly inspectable; search index exposes figure text fragments. Direct publisher page fetch returned HTTP 403.",
+    "key_verified_abstract_result": "Neonatal injured murine hearts accumulate a gamma-delta T-cell population producing IL-17A. Genetic ablation of gamma-delta T cells or disruption of IL-17 signaling impairs regeneration and cardiac function. Authors propose the myeloid efferocytosis/short-lived inflammation mechanism.",
+    "quantitative_primary_figures": "NOT_RETRIEVED_OR_INDEPENDENTLY_REPLAYED"
+  },
+  "supplementary_manifest": {
+    "discovery_class": "PUBLISHER_INDEXED_LINKS_FOUND__BYTES_NOT_ACQUIRED",
+    "access_http_status": "403_FOR_DIRECT_FETCH",
+    "manifest": [
+      {
+        "filename": "mmc1.pdf",
+        "url": "https://www.cell.com/cms/10.1016/j.celrep.2026.118100/attachment/58c1a006-7cec-4f30-ba68-1a601996aba6/mmc1.pdf",
+        "indexed_fragment": "Quality control and cell-type identification from supplemental material",
+        "content_verified_by_primary_open": false,
+        "downloaded": false,
+        "sha256": null
+      },
+      {
+        "filename": "mmc2.xlsx",
+        "url": "https://www.cell.com/cms/10.1016/j.celrep.2026.118100/attachment/4ce3262a-8891-4897-9575-4ee47f2a4a6a/mmc2.xlsx",
+        "content_verified_by_primary_open": false,
+        "downloaded": false,
+        "sha256": null,
+        "table_purpose": "UNKNOWN"
+      },
+      {
+        "filename": "mmc3.pdf",
+        "url": "https://www.cell.com/cms/10.1016/j.celrep.2026.118100/attachment/bab5fee5-7698-4e34-98c8-ddaf4893a2cf/mmc3.pdf",
+        "indexed_fragment": "Antibody injections, MI/sham and harvest schedule pictured; actual times and panels not independently extracted",
+        "content_verified_by_primary_open": false,
+        "downloaded": false,
+        "sha256": null
+      }
+    ],
+    "figure_legends_inspected_with_figures": false,
+    "required_next_check": "Read original supplementary figures/tables and source tables; transcribe intervention clock and n per exact panel/arm before assigning numeric effects."
+  },
+  "public_omics": {
+    "accession": "GSE345008",
+    "linked_dataset_title": "A developmentally restricted γδ T cell–IL-17A axis supports mouse heart regeneration",
+    "geo_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE345008",
+    "exact_example_sample": {
+      "geo_sample": "GSM9990992",
+      "sample_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9990992",
+      "library_label": "SV61-P8",
+      "biosample": "SAMN62680718",
+      "sra_experiment": "SRX34946639",
+      "genome": "mm10/GRCm38",
+      "sequencing_analysis": "Cell Ranger single-cell 3' gene counts",
+      "matrix_filename": "GSM9990992_SV61_P8_filtered_feature_bc_matrix.h5",
+      "matrix_size_reported_mb": 21.1,
+      "source_tier": "NCBI GEO SAMPLE INDEXED_METADATA",
+      "downloadable_link_verified_as_working": false,
+      "bytes_received": 0,
+      "accession_important_note": "Do not infer complete age/sham/genotype/replicate assignment from library label alone."
+    },
+    "all_samples_complete_manifest": "NOT_ACQUIRED",
+    "SRA_run_SRR": "NOT_IDENTIFIED",
+    "SRA_raw_reads": "PUBLIC_LISTED__NOT_DOWNLOADED",
+    "processed_counts": "PUBLIC_LISTED__NOT_DOWNLOADED",
+    "cell_barcodes_to_animal_map": "UNKNOWN",
+    "animal_replicates": "UNKNOWN",
+    "transcriptome_data_replayed": false,
+    "true_replicate_test": "Before any pseudobulk DE claim, verify independent animals per condition; if samples pool animals into a single library, nuclei are not biological replicates and inferential genotype/age DE is not supported by treating cells as independent."
+  },
+  "animals_and_controls": {
+    "single_cell_sample_pooling": {
+      "source": "Publisher main article indexed figure caption",
+      "P2_MI_hearts_pooled": 6,
+      "P8_MI_hearts_pooled": 8,
+      "source_limit": "Numbers reflect donated hearts pooled into identified sequenced samples; they are NOT proved to be 6 and 8 independently sequenced biological replicates.",
+      "whether_GSM9990992_exactly_corresponds_to_that_pool": "NOT_CROSSWALK_VERIFIED"
+    },
+    "age_groups": "P2-MI vs P8-MI indexed; older non-regenerative group mentioned in abstract",
+    "sham_controls": "SHAM mentioned in indexed supplemental schematic; exact groups and n not confirmed",
+    "genetic_ablation": "gamma-delta T-cell loss reported by peer-reviewed abstract; strain, littermate controls, genotyping and n not extracted",
+    "il17_perturbation": "IL-17 pathway disruption reported by peer-reviewed abstract; receptor or cytokine conditionality and treatment timing unverified",
+    "injection_schedules": "SUPPLEMENT_SCHEMATIC_LOCATED__CLOCK_VALUES_NOT_INSPECTED",
+    "blinded_analysis": "UNKNOWN",
+    "animal_level_functional_n": "UNKNOWN",
+    "animal_level_histological_n": "UNKNOWN",
+    "p_values_or_confidence_intervals": "UNKNOWN",
+    "individual_animal_data": "NOT_ACQUIRED",
+    "confounds_to_test": [
+      "developmental age versus MI/sham baseline",
+      "pooled-heart transcriptome cannot support animal-replicate statistics",
+      "systemic absence of gamma-delta T cells vs cardiac-local mechanism",
+      "IL-17 effects potentially cell-type and time-dependent",
+      "efferocytosis versus remodeling of resident fibroblast lineages"
+    ]
+  },
+  "temporal_kinetics": {
+    "injury_clock": "Neonatal injury during regenerative window; exact P-day/time and method per assay not independently inspected.",
+    "il17a_expression_timepoints": "UNKNOWN_FROM_AVAILABLE_PRIMARY_FULL_TEXT",
+    "cell_infiltration_peak": "NOT_QUANTITATIVELY_ESTABLISHED",
+    "immune_resolution_half_life": "NOT_CALCULABLE",
+    "apoptotic_debris_clearance": "AUTHORS_MECHANISTICALLY_REPORT; rate/timecourse data not independently extracted",
+    "fibroblast_state_exit_timepoints": "NO_DIRECT_QUALIFYING_DATA_VERIFIED",
+    "mapping_required": [
+      "t=0 injury and time of antibody injections",
+      "early myeloid recruitment/IL-17A cell-by-cell time course",
+      "apoptotic cell clearance with cell-type identity",
+      "late collagen/ECM scar architecture",
+      "state/lineage fate of activated fibroblasts"
+    ]
+  },
+  "fibroblast_exit_audit": {
+    "target": "Does the gamma-delta T-cell/IL-17A axis causally shorten or terminate profibrotic fibroblast-state occupancy, or only accelerate apoptotic-debris removal by myeloid cells?",
+    "activated_fibroblast_lineage_labeling": "NOT_VERIFIED",
+    "activated_fibroblast_state_abundance_longitudinal": "NOT_VERIFIED",
+    "apoptosis_of_lineage_traced_fibroblasts": "NOT_VERIFIED",
+    "direct_col1a1_col3a1_postn_acta2_production_trajectory": "NOT_VERIFIED",
+    "matrix_scarring_timecourse": "NOT_VERIFIED_FROM_MAIN_FIGURES",
+    "macrophage_efferocytosis_of_dying_non_fibroblast_cells": "ARTICLE_ABSTRACT_REPORTED",
+    "profiler_sufficiency": "NOT_SUFFICIENT_FOR_STRICT_EXIT",
+    "decision": "STRICT_PROFIBROTIC_CELL_EXIT_NOT_ESTABLISHED",
+    "note": "Do not equate removal of dead cardiomyocytes/debris with disappearance of activated cardiac fibroblast lineages. Marker decay != cellular clearance; even fibroblast marker loss != ECM scar clearance."
+  },
+  "independence_and_prior_art": {
+    "heart_prior": "longevity-survivor/HEART-ADAM17-DELAYED-FIBROTIC-TIMING-LI-2026-v1.0.json",
+    "spinal_nodes": [
+      "longevity-survivor/SPINAL-CORD-MECHANICAL-LOCK-CAUSAL-NODE-ZHENG-2026-v1.0.json",
+      "longevity-survivor/SPINAL-CORD-GATA4-LOXL2B-NOEL-2026-GEO-SRA-REPLAY-GATE-2026-10-16-v1.0.json",
+      "longevity-survivor/SPINAL-CORD-AGRIN-NSC-EVS-ZHANG-2026-SUPPLEMENT-RAW-DATA-EXIT-AUDIT-2026-10-16-v1.0.json"
+    ],
+    "independent_heart_paper": "YES_DISTINCT_PAPER",
+    "same_mechanism_replicated_across_tissues": "NOT_ESTABLISHED",
+    "forbid_cross_paper_root_fusion": true
+  },
+  "gate_delta": {
+    "GEO_ACCESSION_FROM_NOT_VERIFIED": "GSE345008_IDENTIFIED",
+    "SUPPLEMENT_LOCATORS": "EXACT_LINKS_IDENTIFIED__BYTES_NOT_READ",
+    "pooled_n_constraint": "SINGLE_CELL_P2_MI_6_DONOR_HEARTS_AND_P8_MI_8_DONOR_HEARTS_POOLED__NO_INDEPENDENT_N",
+    "QUANTITATIVE_EFFECT_SIZES": "UNKNOWN",
+    "STRICT_PROFIBROTIC_CELL_EXIT": "NOT_ESTABLISHED",
+    "CAUSAL_MECHANICAL_EXIT_COUPLING": "NOT_ADMITTED",
+    "RESIDENT_REGENERATIVE_COMPETENCE_COLLAPSE": "SUPPORTIVE_ONLY_NO_GLOBAL_PROMOTION",
+    "WOUND_STATE_FATE_ROUTING_RESOLUTION": "NEONATAL_IMMUNE_CAUSAL_SUPPORT__NOT_FIBROBLAST_EXIT",
+    "NICHE_ECM_MECHANICAL_MATURATION_LOCK": "NOT_DIRECTLY_TESTED",
+    "P_VS_NP": "NOT_RELEVANT",
+    "overall": "PRIMARY_OMICS_ACCESSION_AND_SUPPLEMENT_LINKS_IDENTIFIED__REPLAY_GATE_STILL_OPEN"
+  },
+  "next_TOPA": [
+    "Acquire exact GSE345008 series metadata and all GSM entries, verify sample-to-age/injury/genotype and pooling structure; retrieve .h5 counts and SRR manifests with hashes.",
+    "Obtain three publisher supplemental files from a legitimate accessible mirror or institutional access; verify checksum, exact figure legend and n per animal/condition.",
+    "Extract antibody schedule, neonatal MI/sham injury and specimen collection ages from supplemental figure C without inferring from snippets.",
+    "Extract full primary figures plus source tables for gamma-delta T cell infiltration, IL-17A cytokine expression, macrophage efferocytosis, fibrosis and echocardiographic functional rescue.",
+    "Identify independent biological repeats for each omics condition; if one pooled library per condition, keep exploratory descriptive comparisons only.",
+    "Explicitly test fate-resolved activated fibroblast clearance and transcriptional profibrotic-output cessation before claiming EXIT; negative/unknown stays NOT_ESTABLISHED.",
+    "Retain the 2026-10-16 original paper checkpoint unchanged; add references to this access audit rather than repeating a new-science alert."
+  ],
+  "source_urls": [
+    "https://pubmed.ncbi.nlm.nih.gov/42842371/",
+    "https://www.sciencedirect.com/science/article/pii/S2211124726011794",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM9990992",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE345008",
+    "https://www.cell.com/cms/10.1016/j.celrep.2026.118100/attachment/58c1a006-7cec-4f30-ba68-1a601996aba6/mmc1.pdf",
+    "https://www.cell.com/cms/10.1016/j.celrep.2026.118100/attachment/4ce3262a-8891-4897-9575-4ee47f2a4a6a/mmc2.xlsx",
+    "https://www.cell.com/cms/10.1016/j.celrep.2026.118100/attachment/bab5fee5-7698-4e34-98c8-ddaf4893a2cf/mmc3.pdf"
+  ],
+  "explicit_no_claims": [
+    "Supplemental figures/data were not actually downloaded or inspected",
+    "No source-data replay completed",
+    "No per-arm n or real p values extracted",
+    "No quantitative IL-17A time series reconstructed",
+    "No proof of fibroblast lineage clearance or universal rejuvenation",
+    "This checkpoint is a data-acquisition advance, not new independent experimental confirmation"
+  ]
+}
