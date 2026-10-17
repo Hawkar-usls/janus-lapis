@@ -1,36 +1,7 @@
 {
-  "batch_id": "6c1dd20b83ee3e52f5fc",
+  "batch_id": "aff04cf3ef521e988194",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "items": [
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "cff56b368e0e7c21a95c49bf",
-      "context_id": "c399825fc9657d1f15c6617d",
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "parquet"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.2917,
-      "source": "zenodo",
-      "source_published": "2026-10-09",
-      "source_updated": null,
-      "summary": "nf-core/ampliseq version 3.0.0 - 2026-10-09 Summary of changes This is a major version update, several parameters and settings of previous versions are not compatible any more, so make sure to read this information and the current pipeline documentation carefully! Most interesting additions: Nanopore/ONT analysis support (R10.4 sequencing preferably with SUP basecalling) with Savont ASV calling Multi-database taxonomy classification with DADA2 with consolidation options via --consolidate_taxonomies Additional long-format summary tables to simplify downstream analysis Comparison of expected to computed sequences ( --expected_sequences ), abundances ( --expected_abundances ), and taxonomic profile ( --expected_abundances ) and related parameter Breaking usage changes: Folder input removed ( --input_folder , --extension , --multiple_sequencing_runs ) Legacy sample sheet support (see documentation) and SBDI export removed ( --sbdiexport ) Choose the sequencing raw data type with --sequencing_type (default: illumina_pe ) Choose the ASV calling tool with --asv_calling (default: auto , selects recommended tool accordint to data type) Primer input now via --primer_fwd &amp; --primer_rev instead of --FW_primer &amp; --RV_primer Default for --sample_inference was changed from independent to pooled , that means more sensitive ASV calling but also higher resource requirements, set to &quot;independent&quot; for previous behaviour Reverse strand mapping for DADA2 classification method with --dada_taxonomy_rc isnt enforced with IonTorrent and PacBio any more and needs to be set explicitly now Detailed changes Added #1021 , #1023 , #1025 , #1048 , #1054 , #1094 , #1102 , #1104 - Comparison of observed ASVs and taxonomic profiles against expected data is now available with --expected_* parameters (by @d4straub, reviewed by @erikrikarddaniel) #1022 - added new GloSED database for classification of Eukaryotic ITS. Not support for SH numbers as of yet. (by @tom-brekke) #1026 , #1046 , #1049 , #1079 , #1103 - Add support for Oxford Nanopore Technology (ONT) R10.4 sequencing (preferably with SUP basecalling) with Savont (by @d4straub &amp; @erikrikarddaniel) #1042 , #1045 , #1050 , #1108 - DADA2 taxonomy tables ( ASV_tax.*.tsv , ASV_tax_species.*.tsv ) now include one &lt;rank&gt;_confidence column per rank, in addition to the existing overall confidence column; they are left out of the phyloseq and TreeSummarizedExperiment objects (by @erikrikarddaniel) #1042 - Added CI test coverage for --addsh , which previously had none ( test_pacbio_its now also runs DADA2 taxonomy against the UNITE database it already uses for SINTAX) (by @erikrikarddaniel) #1052 , #1094 , #1116 - Added summary_tables/ampliseq.counts.tsv.gz , ASV counts in long format with consistent, lower-case column names, ready for analysis in R, Python or similar without pipeline-specific parsing; also written as Parquet by default, skip with --skip_parquet_summary (by @erikrikarddaniel) #1056 - --dada_ref_taxonomy now accepts a comma-separated list of databases (e.g. gtdb,silva ), running DADA2 taxonomic classification against each; one full set of output files is published per listed database, and the first-listed database feeds every downstream step that expects a single taxonomy (consolidating multiple databases into one is planned as a future addition) (by @erikrikarddaniel) #1062 , #1105 , #1112 - Added --consolidate_taxonomies ( first by default, most-specific or score ) to pick a per-ASV winning database across multiple --dada_ref_taxonomy databases, instead of always using the first-listed one; the winning result is published as dada2/ASV_tax.consolidated.&lt;method&gt;.tsv (by @erikrikarddaniel) #1063 , #1107 - Added summary_tables/ampliseq.taxonomy.&lt;classifier&gt;.&lt;database&gt;.tsv.gz , one taxonomy table per classifier and database, with per-ASV barrnap, decontam and filter annotations ( documentation ) (by @erikrikarddaniel) #1065 - New --max_ee_r overrides --max_ee f",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "nf-core/ampliseq: Ampliseq Version 3.0.0",
-      "url": "https://zenodo.org/records/23263578"
-    },
     {
       "base_direction_id": "large_data_methods",
       "candidate_id": "464f70be1500181823044885",
@@ -783,8 +754,8 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "08a7f2090780c08b7b2107a4",
-      "context_id": "ecc14749c225473d75958358",
+      "candidate_id": "0c17cec86aeb9e2629fac0a4",
+      "context_id": "74f2c4c67c88514d94f7c8d8",
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
       "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -796,35 +767,28 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "failure"
+        "null result"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
+      "score": 4.4583,
       "source": "zenodo",
       "source_published": "2026-10-17",
       "source_updated": null,
-      "summary": "The Mathematics of 3D Printing Slicing: STL Geometry, Ray-Casting &amp; Toolpaths is an open-access engineering monograph and interactive instructional module published by the Prep4Uni.Online OER Initiative . This work provides an analytical, undergraduate/postgraduate-level treatment of the computational geometry foundations required to translate three-dimensional surface meshes into layer-by-layer machine toolpaths. Aligned with international accreditation standards&mdash;specifically the Washington Accord (WA1&ndash;WA5) and EUR-ACE First/Second Cycle frameworks&mdash;this publication establishes the mathematical proofs, vector algorithms, and point-in-polygon logic governing modern additive manufacturing slicing software. Core Mathematical &amp; Computational Themes: STL Topology &amp; Facet Representation: Analysis of unstructured triangulated surface meshes, outward unit normal vectors (\\(\\mathbf{n}\\)), vertex coordinate systems, and planar boundary extraction. Parametric Facet-Plane Intersection: Step-by-step vector linear interpolation for deriving the intersection segment \\(S_k\\) formed by cutting planes at \\(z = z_k\\), addressing non-manifold edges, vertex touching, and numerical epsilon shifts. Jordan Curve Theorem &amp; Parity Logic: Formal implementation of the 2D Ray-Casting algorithm and Even-Odd Parity test for robust interior, exterior, and internal void classification across arbitrary closed slices. Toolpath Trajectory Generation: Comparative kinematics and geometry between continuous concentric perimeter offset loops and 45&deg; zigzag parallel hatch raster patterns. Formative Assessment Suite: A three-tier verification suite comprising 8 foundational concepts, 7 real-world slicer failure debugging scenarios, and 6 step-by-step quantitative engineering worked examples. Note: The full interactive web edition&mdash;featuring client-side HTML5 simulation canvas engines, dynamic parameter sliders, and real-time slice projection mathematics&mdash;is accessible at: https://prep4uni.online/stem/physical-technologies/industrial-and-manufacturing-technologies/additive-manufacturing-3d-printing/mathematics-of-slicing/",
+      "summary": "Scripts, dated analysis plans, run logs, and deal-level estimates for a study of 38,991 completed acquisitions by listed or delisted acquirers across 37 countries, rumored between 2007 and 2025. Version 2.1 accompanies a manuscript under double anonymized peer review; author identification is withheld during the review. It changes no script, log, plan, or data file of version 2.0: it updates the title of the manuscript and renumbers the exhibits in the index (NUMBERS.md) to those of the manuscript as submitted (Tables 1 to 6; Online Appendix S1 to S22). Licensed return series and deal and firm data cannot be redistributed and are documented rather than included (LICENSE_AND_DATA.md). Start with README.md. &nbsp;",
       "tags": [
-        "Additive Manufacturing",
-        "3D Printing",
-        "Slicing Mathematics",
-        "STL Geometry",
-        "Computational Geometry",
-        "Ray-Casting Algorithm",
-        "Even-Odd Parity Rule",
-        "Jordan Curve Theorem",
-        "Toolpath Generation",
-        "Facet-Plane Intersection",
-        "Linear Interpolation",
-        "G-code Generation",
-        "Infill Rasterization",
-        "Boundary Contour Offset",
-        "Washington Accord"
+        "mergers and acquisitions",
+        "systematic risk",
+        "measurement error",
+        "replication",
+        "null results",
+        "beta estimation",
+        "M&A",
+        "econometrics"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "The Mathematics of 3D Printing Slicing: STL Geometry, Ray-Casting & Toolpaths",
-      "url": "https://zenodo.org/records/23428277"
+      "title": "Replication package: Do acquisitions change systematic risk? Evidence on beta from 38,991 deals in 37 countries over 19 years",
+      "url": "https://zenodo.org/records/23433294"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1601,6 +1565,38 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "DropKV: Decoupling Residual-Output Perturbation for Near-Optimal KV-Cache Eviction",
       "url": "https://arxiv.org/abs/2610.22130v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "124f5cc588704141402d0bd3",
+      "context_id": "10fdc0da714e286b4cf29281",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7083,
+      "source": "arxiv",
+      "source_published": "2026-10-15T13:59:15Z",
+      "source_updated": "2026-10-15T13:59:15Z",
+      "summary": "As Vision-Language Models (VLMs) advance, they are increasingly expected to perform spatiotemporal reasoning over motion, actions, and view changes beyond what the input images show. Video World Models (VWMs) provide a natural unified engine for visual imagination by generating task-relevant visual content as additional evidence. However, existing approaches typically invoke a VWM through fixed pipelines centered on a predefined form of visual imagination, such as novel-view synthesis. To support flexible visual imagination for diverse reasoning tasks, we introduce CoWorld Reasoner, an agentic framework that uses a VWM as a unified visual reasoning engine. Its Video World Model-Driven Harness exposes multiple visual operations through tools and uses skills to guide the VLM in deciding whether to imagine, selecting an operation, constructing a generation request, and interpreting the resulting visual evidence. We further introduce VLM-VWM Harness Co-Evolution, which jointly revises tools, skills, and execution code based on execution feedback while keeping both model weights fixed. Across seven benchmarks spanning spatial intelligence, temporal and causal reasoning, and perceptual reasoning, CoWorld Reasoner outperforms direct reasoning with the same VLM. The strongest variant improves on all seven benchmarks, including relative accuracy gains of 11.8% on MMSI and 13.0% on ERQA, and outperforms all five evolving baselines using the same backbone across five benchmarks.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "CoWorld Reasoner: Agentic Multimodal Reasoning with the Evolving Video World Model-Driven Harness",
+      "url": "https://arxiv.org/abs/2610.21910v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",

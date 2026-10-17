@@ -1,5 +1,5 @@
 {
-  "batch_id": "88dd82a40b8be97aa1b0",
+  "batch_id": "39230756d67129053e8a",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "items": [
     {
@@ -917,6 +917,42 @@
     },
     {
       "base_direction_id": "registry_provenance",
+      "candidate_id": "347be8d4a4d4b4962d1023c3",
+      "context_id": "4027138babfe3557e5310b03",
+      "direction_id": "registry_provenance::COUNTEREVIDENCE",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.9167,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "Added Headline comparator configuration (Palomar follow-up item 5): a configuration naming the paper's main results, declared by lean-pkg formalization NAME --headline-config PATH ( --write records it), the registry field headline_config ( lean-pkg update NAME --headline-config PATH , '' clears) or the convention comparator.headline.json . Palomar's six keys only. formalization.yaml status.main_results then lists its theorems only, while the receipt and the gate keep binding the full comparison. Subset rule against the gate-bound comparator receipt validated at HEAD: every name covered (the --coverage rule) by a receipted configuration with the same Challenge and Solution modules, every definition hole signed in lean-pkg-signoff.json by such a configuration (the headline's own entry first; a main configuration's sign-off covers the same hole in the same modules); else refused, naming them. No receipt validating at HEAD: not applied, a warning, the old behaviour. palomar check runs the configuration checks on it and adds comparator.headline_uncovered (error) / comparator.headline_unjudged (warn), JSON headline ; palomar prepare bundles it under configs/ and README.txt names it for the main-results entry (Palomar: one configuration per submission). formalization --json gains headline . docs/comparator.md#headline-configuration-the-papers-main-results comparator host-check --routes [--json] : host and cluster planning before sbatch (field report #5). Per route ( judge : lake comparator in bwrap ; prepare : comparator-receipt --prepare ; transfer : build here, check the copied oleans with --verify-oleans , judge on a host that passes judge ), supported yes/no with the exact reason and the recommended command lines; executables resolved like type -P (the receipt slurm --template tool list read from the template), locale (a set locale that is not installed warns: the stderr warning a strict receipt refuses), ulimit -n and /proc/sys/fs/file-nr with the LEAN_NUM_THREADS=3 advice when tight, CPU affinity count and the cgroup v1/v2 memory limit. Additive JSON keys ( routes_schema host-routes/1 ); read-only, no network; never an unsandboxed route. comparator-receipt keeps earlier attempts. Before a run replaces an earlier run's stage files (it reruns the setup, or reruns the comparison after an earlier comparison, estimate or failure), it copies them to comparator-stages/attempts/NNN/ : stages.json , the stage logs, the olean manifest, the partial report and the per-unit files. The copy gets an attempt.json (schema comparator-attempt/1 : n , reason , commit , started_at , finished_at , failed_stage , verdict , olean_manifest_sha256 , and the sha256 of each kept file) and is made read-only. Before this, a rerun overwrote stages.json and cleared the logs of the failed run. Numbers are zero-padded and never reused ( attempts/NEXT survives a deleted attempt). lean-pkg never deletes an attempt or reads one back: resume, the slot cache and setup reuse read the current stage files, --from-prepared or --evidence-dir pointing into an attempt is refused, and receipts bind the current run only. A reused --prepare setup carries over without an attempt. stages.json gains started_at . comparator-receipt --attempts [DIR] [--json] lists the attempts read-only (exit 1 when a kept file changed or went missing). Nothing prunes attempts automatically; docs/comparator.md (Attempts) shows how to prune by hand. palomar port-modules NAME [--dry-run | --write] [--agent A] : the mechanical port of a package's tracked .lean files to Lean's module system, which Palomar requires. A dry run by default: from git objects at HEAD, a per-file report and a unified diff ( module first, after ordinary comments; import X to public import X , meta import to public meta import , never public import all ; the body in public section ... end , with no end when a scope stays open). Module-headed files are skipped, so a second run is a no-op; prelude files are refused with a reason",
+      "tags": [
+        "Lean 4",
+        "formal verification",
+        "Mathlib",
+        "reproducibility",
+        "registry"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "lean-pkg: a registry and trust gate for Lean 4 formalization packages",
+      "url": "https://zenodo.org/records/23433385"
+    },
+    {
+      "base_direction_id": "registry_provenance",
       "candidate_id": "6bfa00ff0ff13174989a3d07",
       "context_id": "15e788ad96ae288c2e495cd6",
       "direction_id": "registry_provenance::COUNTEREVIDENCE",
@@ -1437,39 +1473,6 @@
     },
     {
       "base_direction_id": "registry_provenance",
-      "candidate_id": "5f94f675c5067bc235454b12",
-      "context_id": "15c01259e3fac4a89a8d5d22",
-      "direction_id": "registry_provenance::CONTROL",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "arxiv",
-      "source_published": "2026-10-15T09:24:30Z",
-      "source_updated": "2026-10-15T09:24:30Z",
-      "summary": "Large language model (LLM) agents solve complex tasks by calling external tools over multiple turns. Recent work has proposed tool graph memory, which stores past experience as tool transitions to guide subsequent selection. However, it remains unclear whether this component consistently improves agents' tool use or undermines it. We evaluate tool graph memory on nine models and two benchmarks, finding that it seldom improves significantly over baselines, and that its gains, where present, cost over twice the LLM calls. The memory's guidance is often incorrect, and random or no guidance retains most of the gain, implying that the benefit stems from extra computation rather than the memory itself. Moreover, even with the correct next tool suggested, many failures remain, such as giving up without a tool call. Storing the same experience instead as textual insights outperforms tool graph memory with almost no extra LLM calls. This suggests that memory serves better as a soft prior than as a prescription of the next tool, leading to a more effective and generalizable solution.",
-      "tags": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "Rethinking the Role of Tool Graph Memory in Multi-Turn Tool Use",
-      "url": "https://arxiv.org/abs/2610.21571v1"
-    },
-    {
-      "base_direction_id": "registry_provenance",
       "candidate_id": "26a0aaff84cef4c532f3c51f",
       "context_id": "ef866950fda099ab6e5fe337",
       "direction_id": "registry_provenance::CONTROL",
@@ -1499,39 +1502,6 @@
       "target_repository": "Hawkar-usls/Janus-Demiurge",
       "title": "The Cost of Executability: Temporal Margins for Continuous-Time Multi-Agent Path Finding under Closed-Loop Control",
       "url": "https://arxiv.org/abs/2610.20118v1"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "d29cb1ce16e2a1ca41dd9078",
-      "context_id": "9d1fe4d5b74827ceca677526",
-      "direction_id": "registry_provenance::CONTROL",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "arxiv",
-      "source_published": "2026-10-14T14:04:48Z",
-      "source_updated": "2026-10-14T14:04:48Z",
-      "summary": "Agents pair reasoning models with harnesses that organize model calls, execute tools, load skill instructions, and retain history in memory. Understanding agent performance requires linking execution conditions to outcomes, behavior, and resource use. We introduce AlphaDiana, a measurement system with modular interfaces for datasets, agents, environments, and scorers. It preserves harness-native control loops while controlling file reuse and memory retention separately. AlphaDiana supports macro analyses of complete agents and micro interventions on agent components such as tools, skills, and memory under matched conditions. We study three open-source models and three open-source harnesses on five answer-based benchmarks, with two models also tested on two interactive benchmarks. We find that harnesses do not consistently improve the accuracy of reasoning: gains on questions unsolved by the model alone can be outweighed by losses on questions it answers correctly without tools. This inconsistency extends to component interventions: neither skill guidance nor retained history reliably improves accuracy. Behavior and output-token use must be assessed with correctness: low token entropy can accompany wrong answers, and less output per execution can mean more output tokens per correct answer when accuracy falls. AlphaDiana links answer correctness and execution status to traces and resource records for comparing agents and diagnosing failures under shared task and resource policies.",
-      "tags": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks",
-      "url": "https://arxiv.org/abs/2610.20675v1"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -1568,8 +1538,8 @@
     },
     {
       "base_direction_id": "registry_provenance",
-      "candidate_id": "5d6447797fb22ed8b911c908",
-      "context_id": "6543ee22bdbb4a965f440fc4",
+      "candidate_id": "4f9209d14ba821339993619c",
+      "context_id": "3ba310aeb0ade4049d6fdb6b",
       "direction_id": "registry_provenance::CONTROL",
       "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -1581,23 +1551,57 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "benchmark",
+        "baseline",
         "control"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
+      "score": 8.625,
       "source": "arxiv",
-      "source_published": "2026-10-14T10:17:47Z",
-      "source_updated": "2026-10-14T10:17:47Z",
-      "summary": "Segment Anything Model 3 (SAM 3) is a foundation model for image and video segmentation that sets the state of the art in visual object tracking. Its tracker, inherited from SAM 2, stores information from past frames in a memory bank, managed by a simple First-In-First-Out rule, allowing temporal consistency in complex videos. Several recent methods improve SAM 2 with hand-crafted memory update rules, each targeting a specific failure mode, such as distractors, occlusions, or object motion. However, their gains transfer only partially to the stronger SAM 3 backbone. We instead present a more general, data-driven approach that frames memory control as a sequential decision-making task. SAM3RL is an extension of the SAM 3 tracker with a lightweight memory controller, trained by reinforcement learning, that decides which frames enter the memory bank in order to maximize tracking performance. SAM3RL sets a new state of the art on 10 of 12 tracking and video object segmentation benchmarks, outperforming all hand-crafted rules without any runtime overhead. The same approach applied to SAM 2 gives SAM2RL, which outperforms hand-crafted rules on 9 of the 12 benchmarks, showing the generality of our method across model generations.",
+      "source_published": "2026-10-15T16:50:41Z",
+      "source_updated": "2026-10-15T16:50:41Z",
+      "summary": "Safe multi-agent coordination typically assumes what real-world, deployed, resource-constrained robots cannot provide: continuous, perfect state sharing. Robust control strategies must be complemented with robust communication strategies to deliver resilient deployments. In this work, we propose a unified control/communication strategy that provides safe control to guarantee inter-agent safety under intermittent communication and demonstrate its effectiveness in a pursuit-evasion scenario. Each agent computes the reachable set of neighboring agents based on the last state information received, then solves for a safe control input based on control barrier functions to ensure agents avoid collision. We prove that inter-agent collision avoidance is guaranteed provided communication staleness remains bounded. As the reachable set inflates between state transmissions, each agent reasons about when to preemptively transmit its state information to neighboring agents based on novel metrics characterizing uncertainty risk and kinematic risk. We implement and simulate a variety of pursuit-evasion scenarios and show that preemptive communication reduces messages by 77.5% compared to periodic and event-triggered baselines with zero collisions.",
       "tags": [
-        "cs.CV",
-        "cs.LG"
+        "eess.SY",
+        "cs.MA",
+        "cs.RO"
       ],
       "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "SAM3RL: Memory Control via Reinforcement Learning for Visual Object Tracking",
-      "url": "https://arxiv.org/abs/2610.19931v1"
+      "title": "Robust Multi-Agent Pursuit with Preemptive Communication via Reachability-Based Control Barrier Functions",
+      "url": "https://arxiv.org/abs/2610.22198v1"
+    },
+    {
+      "base_direction_id": "registry_provenance",
+      "candidate_id": "4d21a152220071c1d4323a11",
+      "context_id": "195124287dd93715174f340b",
+      "direction_id": "registry_provenance::CONTROL",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.625,
+      "source": "arxiv",
+      "source_published": "2026-10-15T04:39:57Z",
+      "source_updated": "2026-10-15T04:39:57Z",
+      "summary": "Centralized orchestration provides comprehensive multi-agent coordination but creates bottlenecks in scalability, adaptability, and collective performance. Decentralized approaches alleviate these bottlenecks by distributing coordination across agents, yet often leave responsibility for delegated dependencies and failure recovery unclear. To address this gap, we propose RCM, a responsibility-centered coordination mechanism that leverages commitments to couple task delegation with explicit responsibilities of the involved parties. Through recursive delegation, agents retain their upstream responsibilities while locally orchestrating downstream commitments, thereby preserving accountability across delegation chains, creating a network of local orchestration. We operationalize this mechanism locally through responsibility-constrained decision-making and a responsibility-oriented communication protocol (RCP), enabling agents to autonomously establish, manage, and terminate commitments. As agents act in parallel, their local actions continuously evolve the commitment graph, allowing global coordination to emerge and adapt toward a shared mission without centralized control. Experiments across reasoning, coding, and executable agent environments demonstrate that RCM outperforms strong centralized and decentralized coordination baselines by up to 18.7 points in task performance and 10.2 points in Responsibility, while improving failure and harm detection without task-specific training.",
+      "tags": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "A Responsibility-Centered Coordination Mechanism for Decentralized Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.21243v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",

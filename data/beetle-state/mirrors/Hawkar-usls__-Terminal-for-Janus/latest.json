@@ -1,36 +1,7 @@
 {
-  "batch_id": "f4fe6a6c833ac11c1f47",
+  "batch_id": "e0f3874fc6f577dd856c",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "items": [
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "cff56b368e0e7c21a95c49bf",
-      "context_id": "c399825fc9657d1f15c6617d",
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "parquet"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.2917,
-      "source": "zenodo",
-      "source_published": "2026-10-09",
-      "source_updated": null,
-      "summary": "nf-core/ampliseq version 3.0.0 - 2026-10-09 Summary of changes This is a major version update, several parameters and settings of previous versions are not compatible any more, so make sure to read this information and the current pipeline documentation carefully! Most interesting additions: Nanopore/ONT analysis support (R10.4 sequencing preferably with SUP basecalling) with Savont ASV calling Multi-database taxonomy classification with DADA2 with consolidation options via --consolidate_taxonomies Additional long-format summary tables to simplify downstream analysis Comparison of expected to computed sequences ( --expected_sequences ), abundances ( --expected_abundances ), and taxonomic profile ( --expected_abundances ) and related parameter Breaking usage changes: Folder input removed ( --input_folder , --extension , --multiple_sequencing_runs ) Legacy sample sheet support (see documentation) and SBDI export removed ( --sbdiexport ) Choose the sequencing raw data type with --sequencing_type (default: illumina_pe ) Choose the ASV calling tool with --asv_calling (default: auto , selects recommended tool accordint to data type) Primer input now via --primer_fwd &amp; --primer_rev instead of --FW_primer &amp; --RV_primer Default for --sample_inference was changed from independent to pooled , that means more sensitive ASV calling but also higher resource requirements, set to &quot;independent&quot; for previous behaviour Reverse strand mapping for DADA2 classification method with --dada_taxonomy_rc isnt enforced with IonTorrent and PacBio any more and needs to be set explicitly now Detailed changes Added #1021 , #1023 , #1025 , #1048 , #1054 , #1094 , #1102 , #1104 - Comparison of observed ASVs and taxonomic profiles against expected data is now available with --expected_* parameters (by @d4straub, reviewed by @erikrikarddaniel) #1022 - added new GloSED database for classification of Eukaryotic ITS. Not support for SH numbers as of yet. (by @tom-brekke) #1026 , #1046 , #1049 , #1079 , #1103 - Add support for Oxford Nanopore Technology (ONT) R10.4 sequencing (preferably with SUP basecalling) with Savont (by @d4straub &amp; @erikrikarddaniel) #1042 , #1045 , #1050 , #1108 - DADA2 taxonomy tables ( ASV_tax.*.tsv , ASV_tax_species.*.tsv ) now include one &lt;rank&gt;_confidence column per rank, in addition to the existing overall confidence column; they are left out of the phyloseq and TreeSummarizedExperiment objects (by @erikrikarddaniel) #1042 - Added CI test coverage for --addsh , which previously had none ( test_pacbio_its now also runs DADA2 taxonomy against the UNITE database it already uses for SINTAX) (by @erikrikarddaniel) #1052 , #1094 , #1116 - Added summary_tables/ampliseq.counts.tsv.gz , ASV counts in long format with consistent, lower-case column names, ready for analysis in R, Python or similar without pipeline-specific parsing; also written as Parquet by default, skip with --skip_parquet_summary (by @erikrikarddaniel) #1056 - --dada_ref_taxonomy now accepts a comma-separated list of databases (e.g. gtdb,silva ), running DADA2 taxonomic classification against each; one full set of output files is published per listed database, and the first-listed database feeds every downstream step that expects a single taxonomy (consolidating multiple databases into one is planned as a future addition) (by @erikrikarddaniel) #1062 , #1105 , #1112 - Added --consolidate_taxonomies ( first by default, most-specific or score ) to pick a per-ASV winning database across multiple --dada_ref_taxonomy databases, instead of always using the first-listed one; the winning result is published as dada2/ASV_tax.consolidated.&lt;method&gt;.tsv (by @erikrikarddaniel) #1063 , #1107 - Added summary_tables/ampliseq.taxonomy.&lt;classifier&gt;.&lt;database&gt;.tsv.gz , one taxonomy table per classifier and database, with per-ASV barrnap, decontam and filter annotations ( documentation ) (by @erikrikarddaniel) #1065 - New --max_ee_r overrides --max_ee f",
-      "tags": [],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "nf-core/ampliseq: Ampliseq Version 3.0.0",
-      "url": "https://zenodo.org/records/23263578"
-    },
     {
       "base_direction_id": "large_data_methods",
       "candidate_id": "464f70be1500181823044885",
@@ -721,73 +692,6 @@
       "url": "https://arxiv.org/abs/2610.21074v1"
     },
     {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "5d6447797fb22ed8b911c908",
-      "context_id": "b405b7284a731abf5f3cad5b",
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_published": "2026-10-14T10:17:47Z",
-      "source_updated": "2026-10-14T10:17:47Z",
-      "summary": "Segment Anything Model 3 (SAM 3) is a foundation model for image and video segmentation that sets the state of the art in visual object tracking. Its tracker, inherited from SAM 2, stores information from past frames in a memory bank, managed by a simple First-In-First-Out rule, allowing temporal consistency in complex videos. Several recent methods improve SAM 2 with hand-crafted memory update rules, each targeting a specific failure mode, such as distractors, occlusions, or object motion. However, their gains transfer only partially to the stronger SAM 3 backbone. We instead present a more general, data-driven approach that frames memory control as a sequential decision-making task. SAM3RL is an extension of the SAM 3 tracker with a lightweight memory controller, trained by reinforcement learning, that decides which frames enter the memory bank in order to maximize tracking performance. SAM3RL sets a new state of the art on 10 of 12 tracking and video object segmentation benchmarks, outperforming all hand-crafted rules without any runtime overhead. The same approach applied to SAM 2 gives SAM2RL, which outperforms hand-crafted rules on 9 of the 12 benchmarks, showing the generality of our method across model generations.",
-      "tags": [
-        "cs.CV",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "SAM3RL: Memory Control via Reinforcement Learning for Visual Object Tracking",
-      "url": "https://arxiv.org/abs/2610.19931v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "066b7de10cef97e4336fee39",
-      "context_id": "a1603b5a510f4512b21c6175",
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_published": "2026-10-15T01:23:57Z",
-      "source_updated": "2026-10-15T01:23:57Z",
-      "summary": "Computational biologists increasingly delegate substantial analyses to AI agents in long-horizon, multi-turn sessions, yet most benchmarks of agents' bioinformatics capabilities pose a single short task with a single-shot prompt. We present OmicsBench, a long-horizon, multi-turn bioinformatics benchmark for AI agents. Each of its 97 tasks links dependent subtasks into a directed acyclic graph, for 662 underlying subtasks in all. Each subtask is posed as one user turn and graded deterministically against an answer key, with optional in-context feedback on incorrect answers. Across 12 models on three harnesses, the slowest agent averages 3.6 hours per task, and no combination comes near saturating the benchmark, with mean scores of 0.43 to 0.57 out of a possible 1 without in-context feedback and 0.54 to 0.67 with it. Multi-turn evaluation also uncovers behavior that single-shot prompts cannot, as agents score lower on subtasks that depend on earlier subtasks, and in-context feedback helps agents recover some of that loss. Because deterministic scoring gives no qualitative account of how an agent failed, we also introduce an unsupervised failure mode discovery pipeline that describes, embeds, and clusters agents' failed attempts to surface emergent failure modes. Applied to OmicsBench, this pipeline exposes qualitative shortcomings in how agents carry out bioinformatics analyses, ranging from agents applying their own statistical filters in place of the specified ones to agents writing whole answers from memory.",
-      "tags": [
-        "cs.AI",
-        "q-bio.GN",
-        "q-bio.QM"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "OmicsBench: a long-horizon multi-turn benchmark of AI agents on research-study-scale bioinformatics",
-      "url": "https://arxiv.org/abs/2610.21074v1"
-    },
-    {
       "base_direction_id": "large_data_methods",
       "candidate_id": "5d6447797fb22ed8b911c908",
       "context_id": "a0e95c6aceb351e8da825566",
@@ -819,6 +723,73 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "SAM3RL: Memory Control via Reinforcement Learning for Visual Object Tracking",
       "url": "https://arxiv.org/abs/2610.19931v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "7caf07e8f01a78c2a5a39dc8",
+      "context_id": "9469741afad3b95d79c16ca4",
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-10-15T10:00:53Z",
+      "source_updated": "2026-10-15T10:00:53Z",
+      "summary": "Distilling vision-language features into 3D Gaussian Splatting yields a language map that can be queried with arbitrary text. In deployment, however, a small set of user-specified targets must be reliably located, which current distilled maps often miss, while open-vocabulary queryability for other words must remain intact. We propose a training-free, target-aware refinement of an already-distilled language map. Guided by a text-promptable segmenter, the visual embedding inside each detected target region is blended with the target text embedding, a convex combination whose coefficient sets the amount of injected prior, while non-target regions are left untouched. Injecting too much overwrites appearance cues and general queryability, so we seek, for each target, the smallest coefficient that still lets it win, and we obtain every coefficient in closed form, leaving no hyperparameters to tune. We further identify a failure mode of injection in language-goal localization. Text embeddings share a common component, and injecting them makes the standard cosine read-out query-agnostic, which a centering step in the read-out removes. Across three benchmarks, the refinement consistently improves open-vocabulary segmentation, roughly doubling the base mIoU on Replica, and localizes language goals more reliably than the base map. It also transfers as a plug-in to off-the-shelf field-based and object-level language maps and supports a real-world demonstration in which a legged robot navigates to natural-language goals. Project page and code: https://lab-of-ai-and-robotics.github.io/target-aware-langmap/",
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Training-Free Target-Aware Refinement of 3D Gaussian Language Map",
+      "url": "https://arxiv.org/abs/2610.21619v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "7c0a3d52732e9b9c94f18122",
+      "context_id": "8aae20dc9289b29b560d39fd",
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-10-15T16:58:12Z",
+      "source_updated": "2026-10-15T16:58:12Z",
+      "summary": "Agent memory benchmarks evaluate whether an agent's responses reflect correct knowledge, measuring downstream question-answering accuracy as a proxy for memory quality. We show this evaluation paradigm is incomplete: it conflates memory correctness with retrieval and generation quality, producing both false positives where correct responses mask broken memory and false negatives where incorrect responses blame correct memory for retrieval failures. We introduce FEB-30, a benchmark of 30 fact-evolution trajectories spanning 6 diagnostic categories and 3 difficulty levels, constructed via paradigm inversion: documents are generated from known fact trajectories, yielding deterministic ground truth without human annotation. Each trajectory defines how a fact should evolve across multi-author artifacts (documents, emails, conversations), enabling direct inspection of the memory store after each ingestion step. Applying FEB-30 to a representative memory system, we demonstrate that intrinsic and extrinsic evaluation diverge by an average of 16 percentage points, with 44% of trajectories exceeding meaningful divergence thresholds. Diagnostic decomposition reveals that the system correctly classifies memory operations (create, update, reinforce, supersede) only 20% of the time, a failure entirely invisible to extrinsic evaluation, and that failure modes differ systematically by category and difficulty. We release the benchmark, document generation pipeline, and scoring framework to support reproducible evaluation of agent memory systems.",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Beyond Downstream QA: Rethinking How We Evaluate Agent Memory",
+      "url": "https://arxiv.org/abs/2610.22209v1"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1595,6 +1566,38 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "DropKV: Decoupling Residual-Output Perturbation for Near-Optimal KV-Cache Eviction",
       "url": "https://arxiv.org/abs/2610.22130v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "124f5cc588704141402d0bd3",
+      "context_id": "10fdc0da714e286b4cf29281",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7083,
+      "source": "arxiv",
+      "source_published": "2026-10-15T13:59:15Z",
+      "source_updated": "2026-10-15T13:59:15Z",
+      "summary": "As Vision-Language Models (VLMs) advance, they are increasingly expected to perform spatiotemporal reasoning over motion, actions, and view changes beyond what the input images show. Video World Models (VWMs) provide a natural unified engine for visual imagination by generating task-relevant visual content as additional evidence. However, existing approaches typically invoke a VWM through fixed pipelines centered on a predefined form of visual imagination, such as novel-view synthesis. To support flexible visual imagination for diverse reasoning tasks, we introduce CoWorld Reasoner, an agentic framework that uses a VWM as a unified visual reasoning engine. Its Video World Model-Driven Harness exposes multiple visual operations through tools and uses skills to guide the VLM in deciding whether to imagine, selecting an operation, constructing a generation request, and interpreting the resulting visual evidence. We further introduce VLM-VWM Harness Co-Evolution, which jointly revises tools, skills, and execution code based on execution feedback while keeping both model weights fixed. Across seven benchmarks spanning spatial intelligence, temporal and causal reasoning, and perceptual reasoning, CoWorld Reasoner outperforms direct reasoning with the same VLM. The strongest variant improves on all seven benchmarks, including relative accuracy gains of 11.8% on MMSI and 13.0% on ERQA, and outperforms all five evolving baselines using the same backbone across five benchmarks.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "CoWorld Reasoner: Agentic Multimodal Reasoning with the Evolving Video World Model-Driven Harness",
+      "url": "https://arxiv.org/abs/2610.21910v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
