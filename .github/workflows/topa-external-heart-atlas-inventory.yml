@@ -1,0 +1,33 @@
+name: TOPA heart independent atlas inventory
+on:
+  push:
+    branches: [LONGEVITY-SURVIVOR]
+    paths:
+      - .github/workflows/topa-external-heart-atlas-inventory.yml
+      - longevity-survivor/tools/topa_external_mouse_heart_atlas_inventory.py
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify independent murine heart GEO/annotation barcode crosswalk and Chen supplementary
+        run: |
+          set -o pipefail
+          python longevity-survivor/tools/topa_external_mouse_heart_atlas_inventory.py 2>&1 | tee topa_external_ref.log
+      - name: Publish bounded reference source receipt (without bulky underlying matrices)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-external-heart-atlas-inventory
+          path: |
+            topa_pd1_external_reference/inventory.json
+            topa_external_ref.log
+          retention-days: 14
+          if-no-files-found: warn
