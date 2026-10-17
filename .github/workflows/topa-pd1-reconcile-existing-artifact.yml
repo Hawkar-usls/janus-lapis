@@ -41,3 +41,19 @@ jobs:
             pd1_audit.log
           if-no-files-found: error
           retention-days: 14
+
+      - name: Replay descriptive gene profiles from original 10x matrices
+        shell: bash
+        run: |
+          python -m pip install --disable-pip-version-check scipy
+          (cd prior && TOPA_OUTPUT=topa_pd1_acquisition TOPA_AUDIT_OUTPUT=../topa_pd1_expression python ../longevity-survivor/tools/audit_pd1_mi_tac_manifest.py) 2>&1 | tee topa_pd1_expression.log
+      - name: Publish compact independent MI expression audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-pd1-mi-10x-cxcl9-cxcr3-exploratory
+          path: |
+            topa_pd1_expression/
+            topa_pd1_expression.log
+          if-no-files-found: warn
+          retention-days: 14
