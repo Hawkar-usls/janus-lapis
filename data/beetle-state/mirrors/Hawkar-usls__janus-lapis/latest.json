@@ -1,396 +1,7 @@
 {
-  "batch_id": "fdde240066885bfdeea0",
+  "batch_id": "8b618664442b57a767f7",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "items": [
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "464f70be1500181823044885",
-      "context_id": "808a1a69c164034027e25f99",
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "bidirectional",
-        "inverse",
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.4167,
-      "source": "arxiv",
-      "source_published": "2026-10-08T17:46:03Z",
-      "source_updated": "2026-10-08T17:46:03Z",
-      "summary": "World action models (WAMs) predict actions and future observations, typically from a reconstruction-based representation that carries noisy, redundant information which can complicate downstream predictions. We introduce LeWAM, a bidirectional transformer for forward, backward, inverse dynamics and policy prediction, on a decoder-free JEPA latent trained end-to-end through all four modes. We see the following benefits: 1) Alignment: linear probes read robot and object state from LeWAM's latent better than from a regular Le World Model (a forward-only JEPA world model), while the latent ignores visual distractors as well as LeWM does and far better than a reconstruction-based WAM. 2) Acting: Closed-loop evaluations of LeWAM match a regular flow-matching policy trained on the same encoder at matched size, while also providing a world model. 3) Planning: Sampling raw actions when planning with WAMs lets MPC exploit dynamics-model inaccuracies; planning in the noise space of the policy head instead improves the closed-loop performance of these WAMs.",
-      "tags": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "LeWAM: A JEPA World Action Model with Diffusion-Steering-Based MPC",
-      "url": "https://arxiv.org/abs/2610.12407v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "4653b9dd5edd7ff668216670",
-      "context_id": "6a7f427ac043dbeab3f898c5",
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.875,
-      "source": "arxiv",
-      "source_published": "2026-10-08T15:03:38Z",
-      "source_updated": "2026-10-08T15:03:38Z",
-      "summary": "This paper develops a new predefined-time integral reinforcement learning framework for optimal control of unknown nonlinear systems. The unknown drift is first approximated by a radial basis function (RBF) neural network, together with a data-driven online identification law for updating the corresponding neural weights. After the identifier converges to a sufficiently small neighborhood of the true dynamics, the learned model is incorporated into the integral reinforcement learning (IRL) problem. Unlike conventional reinforcement-learning-based optimal control, the desired convergence time is introduced directly into the control objective: a Lyapunov function and its prescribed decay behavior are specified by the designer, and inverse-optimal control is then used to construct a compatible running cost whose optimal policy inherits the predefined-time stabilization property. The value function is approximated by a second RBF neural network, and a new critic update law is developed to impose predefined-time convergence on the critic weights. Finite informative learning data are stored in a replay buffer and reused during the critic update, thereby avoiding the need for persistent excitation throughout the closed-loop operation. Theoretical analysis proves that the critic-weight error enters a prescribed residual set within the allocated learning horizon, while the closed-loop state reaches a small neighborhood of the origin within the overall designer-specified deadline. Numerical simulations on an unknown nonlinear system verify accurate drift reconstruction, predefined-time critic learning, and closed-loop convergence.",
-      "tags": [
-        "eess.SY"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Predefined-Time Integral Reinforcement Learning for Unknown Nonlinear Systems via Inverse-Optimal Design",
-      "url": "https://arxiv.org/abs/2610.12103v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "3c0242f9b3169bba6dc3caf7",
-      "context_id": "4d9abe3519e3f68c6d652157",
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.875,
-      "source": "arxiv",
-      "source_published": "2026-10-08T12:20:24Z",
-      "source_updated": "2026-10-08T12:20:24Z",
-      "summary": "We study the relation between equal-weight circle quadrature, Gauss--Chebyshev quadrature, and planar Minkowski reconstruction. The regular $N$-point grid is an $\\mathbb S^1$-design of strength $N-1$; a half-step rotation of the $2M$-point grid projects to the classical $M$-point Gauss--Chebyshev rule. A common family of quadrature-error functionals gives exact identities for integration error, mixed-area error, and support-function error. For $N\\ge3$, the centered Minkowski polygon $P_N$ with perimeter $2π$ has the exact Hausdorff distance from the unit disk $B^2$ \\[ d_H(P_N,B^2)=1-\\fracπ{N}\\cot\\fracπ{N} =\\frac{π^2}{3N^2}+O(N^{-4}). \\] With Steiner centering, we obtain $d_H(K_μ,K_ν)\\leπW_1(μ,ν)$ for balanced, nondegenerate probability measures, where $W_1$ uses geodesic distance. Its exponent is sharp even for smooth positive densities near the uniform measure. The identity $W_1(ν_N,σ)=π/(2N)$ yields a general $O(N^{-1})$ bound for the regular grid. The sharper $O(N^{-2})$ rate follows from the sparse discrepancy spectrum and the inverse multiplier $(1-k^2)^{-1}$. Finally, a perturbation estimate gives sufficient conditions for preserving the quadratic rate and its leading constant.",
-      "tags": [
-        "math.NA",
-        "math.MG"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Gauss--Chebyshev Quadrature, $\\mathbb S^1$-Designs, and the Planar Minkowski Inverse Problem: A One-Dimensional Model for Design-Induced Convex Geometry",
-      "url": "https://arxiv.org/abs/2610.11814v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "4e15c34709b1ebff4f80816e",
-      "context_id": "e9d5c01bebd9b24f5d5a157d",
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "inversion"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "zenodo",
-      "source_published": "2026-10-09",
-      "source_updated": null,
-      "summary": "We establish the overarching mathematical physics framework underlying gravitational screening and electroweak mixing in Big Boot Gauge Theory (BBGT). To demonstrate that the transition from the bare gravitational constant G_bare = 6.514085763e-11 m^3 kg^-1 s^-2 (derived from CODATA 2022 constants under unit space-time momentum p = mc = 1 kg m s^-1) to the observed value G_obs = 6.67430e-11 m^3 kg^-1 s^-2 is a rigorous topological necessity rather than an arbitrary post-hoc adjustment, we formulate the screening dynamics using M&ouml;bius inversion on finite posets over the subgroup lattice of Poincar&eacute; Dodecahedral Space (S^3/I^*). We prove that non-associative transit across the e_4 Pati-Salam midpoint node acts as a M&ouml;bius topological twist, fixing the geometric inverse-square screening factor S_ZIP^-2 = (1 - 1/120)^-2 = 1.016877348. Combining this with longitudinal Z-leakage (delta_Z = 0.026892000) and non-associative midpoint transit corrections (Delta_assoc = 0.000092701) yields the exact screened laboratory constant without arbitrary tuning.&nbsp; Furthermore, we demonstrate that the weak mixing angle (sin^2 theta_W = 1/5 + 1/32 = 0.23125) originates from the pentagonal P_5 symmetry order of the dodecahedron combined with a 2^5 chiral energy cascade, agreeing with experiment (0.23122) to within 0.01%. Finally, we present the complete 8x8 Logical Transitive Index Matrix (T_{n-&gt;m}), showing how the 10^19 Planck-to-electroweak mass hierarchy is compressed down to a discrete compilation factor of 128.35 across the aethereal boot levels.",
-      "tags": [
-        "Big Boot Gauge Theory BBGT Gravitational Screening Möbius Inversion Finite Posets Poincaré Dodecahedral Space Binary Icosahedral Group Bare Gravitational Constant CODATA 2022 Weinberg Angle Electroweak Mixing Logical Transitive Index Non-Associative Geometry ZIP-Cayley Framework Darkon Research Laboratory Quantum Gravity Hierarchy Problem"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Topological Invariance of Gravitational Screening in Big Boot Gauge Theory: Möbius Poset Inversion, Pentagonal Mixing, and the T_{n->m} Transitive Hierarchy",
-      "url": "https://zenodo.org/records/23255065"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "ccc04c717cabe111fe3cdc54",
-      "context_id": "e5b1adbdbe3b98f253a18842",
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "inversion"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "zenodo",
-      "source_published": "2026-09-22",
-      "source_updated": null,
-      "summary": "Code, 2.5-D finite-wavelength forward solver, datasets, trained models and result files reproducing every number in the manuscript \"Source-Conditioned Neural Surrogates for Magnetotelluric Response Prediction Under Finite-Wavelength Excitation\" (S. Oh). The study makes the magnetotelluric source an explicit input of a neural forward surrogate. A validated 2.5-D scattered-field solver for a source of finite along-strike wavelength generates the training data; a conditional U-Net predicts the electromagnetic fields, from which impedance and tipper are reconstructed; an aliasing ratio quantifies how much of a source perturbation a plane-wave inversion re-images as conductivity; a surrogate-domain recoverability experiment returns a source estimate close to the known synthetic value, while a direct solver re-forward shows that the recovered conductivity and wavenumber are not together a solver-consistent inverse solution; and magnetometer arrays at three geomagnetic latitudes place real settings on the dimensionless axis that the model defines. CONTENTS: README.md, LICENSE, DATA_LICENSE.txt and requirements.txt are attached unpacked. The code archive holds the analysis scripts (top level and mt3d/) and the full solver source (solver/, with the dataset generator, the Jacobian dump, the re-forward program and the unit tests); it is MIT licensed except the third-party Triangle library, which is redistributed verbatim under its own terms. The data archive holds the three datasets (dataset_dense, dataset_freq, dataset40), the trained checkpoints (ckpt/, mt3d/ckpt/), the joint-inversion and layered-earth training data (mt3d/*.npz), the plane-wave Jacobian dump (phase3/), the solver sweeps (phase1_repro/) and the result files next to the scripts that write them, all under CC BY 4.0 (DATA_LICENSE.txt). Figures and figure-drawing scripts are not included; every figure is a direct plot of a listed result file. Comments have been removed from all code written for this study. Not included: the magnetometer-array time series, which are third-party open data (EarthScope/USArray MT through the IRIS/EarthScope Data Management Center; AusLAMP Musgraves/APY through AuScope and Geoscience Australia, CC BY 4.0) and are rebuilt from those sources by the archived fetch and conversion scripts; and the field-station file that supplies the period list of the two control tests of Section S-XVII (available from the author on request).",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Source-Conditioned Residual Learning for Magnetotelluric Responses Under Finite-Wavelength Excitation",
-      "url": "https://zenodo.org/records/22891331"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "470295c32d4324a2ea74a528",
-      "context_id": "80ad52a4b8ce2b131694f188",
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "inversion"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "arxiv",
-      "source_published": "2026-10-08T13:44:36Z",
-      "source_updated": "2026-10-08T13:44:36Z",
-      "summary": "Solutions to geophysical inverse problems are generally non-unique, and greatly benefit from additional geological prior information. Generative Neural Networks (GNNs) are commonly used to parametrise such information, typically restricting solutions to a lower-dimensional latent space. The final inversion result is obtained by mapping the latent space parameters to the original higher-dimensional model space using the GNNs. However, solutions then remain confined to a low-dimensional geological generative manifold; if the true Earth model lies outside of this manifold, standard latent space inversion fails. We propose a Bayesian model space inversion method that uses the generative manifold as a guide to find the solutions that lie outside this manifold. We validate our approach in non-linear travel-time tomography experiments on both simple and more geological structures. By comparing our method with model space inversion using uniform prior probabilities and standard latent-space inversion, we demonstrate that the less informative uniform prior fails to constrain the solution, while the latent space approach fails when the true Earth model lies outside of the generative manifold. Conversely, our new model-space inversion method successfully recovers complex off-manifold geological features while maintaining low solution uncertainty.",
-      "tags": [
-        "physics.geo-ph"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Escaping Geological Generative Prior Distributions in Bayesian Travel Time Tomography",
-      "url": "https://arxiv.org/abs/2610.11962v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "184a91076b56e4a34903cec1",
-      "context_id": "5bbbb504dae6a402b7bbf7ea",
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "inversion"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "zenodo",
-      "source_published": "2026-10-17",
-      "source_updated": null,
-      "summary": "Code and results for the manuscript *Identifying the Caputo order of time-fractional diffusion with physics-informed neural networks: a controlled benchmark against classical inversion* (A. Boucenna). All data are synthetic, generated from the exact Mittag-Leffler solution; no experimental or patient data are used.",
-      "tags": [
-        "time-fractional diffusion, Caputo derivative, physics-informed neural networks, inverse problem."
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Code and data for: Identifying the Caputo order of time-fractional diffusion with physics-informed neural networks",
-      "url": "https://zenodo.org/records/23434623"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "08874516a770789837a850d6",
-      "context_id": "79b9433b243b18ed8a678247",
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "reverse"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.5833,
-      "source": "zenodo",
-      "source_published": "2026-10-17",
-      "source_updated": null,
-      "summary": "This metadata entry record constitutes the fourth, concluding installment of a foundational cosmological paper tetralogy (complementing the preceding works registered under DOI:10.5281/zenodo.22763071, DOI:10.5281/zenodo.23153625, and DOI:10.5281/zenodo.23209528).&nbsp; In this final paper, we formalize the self-consistent microphysical scenarios and underlying relativistic field equations governing primordial lepto- and baryogenesis within a strictly deterministic, parameter-free Extremal Quantum Black Hole (EQBH) cosmological bounce framework occurring immediately post-turnaround. Operating within the rigid geometric boundaries of an effective N=1 supergravity (SUGRA) action and a q-deformed U_q(su(2)) horizon algebra, we trace the top-down reverse-engineering map from Planck-scale remnants to Standard Model matter fields without invoking highly tuned auxiliary fields or unconstrained post-bounce inflation boundaries. Crucially, this work resolves the long-standing flavor puzzle within the ansatz by introducing a top-down, two-stage Inverse Spin-Seesaw cascade for the charged lepton sector. We demonstrate that below the Riemann-regularized zero-spin vacuum threshold (M_crit &asymp; 0.5601 M_P), where both the asymptotic selectron and electron states obey the unshifted Casimir spin-algebraic relation, the discrete spin mismatch (&Delta;J = &radic;3/2) structurally locks the effective Yukawa coupling. This mechanism dynamically projects the heavy Planck-scale scalar selectron mass gap (M_e &asymp; 0.002584 M_P) down to the Standard Model electron mass scale (m_e &asymp; 0.511 MeV) via a single low-energy electroweak parameter (v_EW = 246.22 GeV), completely stripping the low-energy lepton flavor sector of arbitrary, adjustable inputs. Concurrently, the paper maps out: 1. Unified Lepto- and Baryogenesis Dynamics: Tracing the sub-Planckian three-body beta decays of dark-sector super-neutrons that seed the primary lepton background and active neutrino mass scales (m_nu_a &asymp; 0.05 eV, m_nu_s &asymp; 0.009 eV), paired with a laser-driven CP-violation mechanism that secures the observed baryon asymmetry. 2. Dual-Component Super-Atomic Dark Matter: Formalizing the freeze-out of unreacted sub-Planckian defects into single-charge ionic [M_0,0 x e]^- configurations regulated by an internal Coulomb blockade, and saturated neutral [M_0,0 x N&nu;] sneutrino super-atoms bounded by the strict Kaup-Ruffini-Bonazzola mass limit (M_max &asymp; 0.29 g). This multi-component partitioning naturally resolves the empirical dark sector allocations (&Omega;_&Lambda; &asymp; 68.3%, &Omega;_c &asymp; 26.9%). 3. Definitive Empirical Signatures: Providing explicit mappings onto next-generation polarization surveys, including a monochromatic microwave laser chirp (&nu;_now &asymp; 1.5 GHz) that naturally matches the ARCADE 2 cosmic radio excess, and a sub-kilohertz wide-bandwidth stochastic gravitational wave noise background centered at 310.3 Hz. As the definitive structural synthesis of the entire tetralogy, this concluding work establishes a unified cosmological paradigm that is fundamentally parameter-free, independent of localized baryon asymmetry signs, and structurally renormalizable across varying deep ultraviolet scales.",
-      "tags": [
-        "Cosmological Bounce, Zero-Spin Vacuum, Primordial Genesis,  Inverse Spin-Seesaw Mechanism, Low-Energy Electron Mass Assessment,  Supergravity Phenomelogies, Quantum Geometry of Isolated Horizons,  Non-Commutative Casimir Operators, Quantum Groups and Algebraic Mismatch,  Type-I Seesaw Neutrino Physics, Super-Neutron Three-Body Beta Decay,  Distributed Feedback (DFB) Axion-Photon Laser, Frame-Dragging CP-Violation,  Dual-Component Super-Atomic Dark Matter, Kaup-Ruffini-Bonazzola Limit,  Internal Coulomb Blockade Solitons, Dark Sector Perfect Fluid Partitions,  ARCADE 2 Cosmic Radio Background Anomaly, Stochastic Gravitational Wave Whisper,  Birefringence Narrow Corridor Telemetry, Parameter-Free Bouncing Cosmology,  Top-Down Renormalizable Scale Invariance, Multi-Field Conformal Metric Closure."
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Primordial Genesis in a Zero-Spin Vacuum Bouncing Cosmology",
-      "url": "https://zenodo.org/records/23434893"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "3c7db58e2f9984380eae7d3a",
-      "context_id": "f535d8e576e44aecda530175",
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "identifiability",
-        "inverse",
-        "recovery"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 7.25,
-      "source": "arxiv",
-      "source_published": "2026-10-15T13:59:45Z",
-      "source_updated": "2026-10-15T13:59:45Z",
-      "summary": "Understanding the objectives that drive agents' behavior is crucial in strategic environments, where multiple agents interact and adapt to one another. This challenge arises in domains such as cybersecurity, autonomous driving, and online markets, where agents' underlying incentives are typically unknown and must be inferred from their observed behavior. Inverse reinforcement learning (IRL) provides a natural framework for this problem, but extending IRL to strategic multi-agent settings introduces a fundamental challenge: a reward that explains observed behavior does not necessarily induce optimal strategies when used for decision-making. In this work, we study this problem through the lens of \\emph{strategic identifiability}, and show that learning from a fixed policy pair can be insufficient to strategically identify rewards, independent of the number of expert samples $K$. Motivated by this, we introduce an active IRL algorithm for two-player repeated Stackelberg games, in which the leader adaptively selects policies to elicit informative responses about the follower's reward. Combining maximum-likelihood estimation with experimental design, we derive finite-sample guarantees on the Stackelberg sub-optimality induced by the learned reward, matching up to polylogarithmic factors a new minimax learning rate of $K^{-1/2}$. Finally, we evaluate our approach in a realistic anti-poaching setting, demonstrating the benefits of active exploration for reward recovery and downstream strategic performance.",
-      "tags": [
-        "cs.GT",
-        "cs.AI",
-        "cs.LG",
-        "cs.MA"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Learning Rewards in Strategic Games",
-      "url": "https://arxiv.org/abs/2610.21912v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "c17a07b4c6d56c18c336450d",
-      "context_id": "fbbf7e14b6dbbc9c7355e388",
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "bidirectional",
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.125,
-      "source": "arxiv",
-      "source_published": "2026-10-15T17:59:07Z",
-      "source_updated": "2026-10-15T17:59:07Z",
-      "summary": "We introduce P$^{3}$-WAM, a unified world action model for egocentric dexterous manipulation that learns 3D perception, action-conditioned prediction, and goal-directed planning through three complementary modes: Perceive, which reconstructs articulated hand motion and camera trajectories from video; Predict, which generates visual futures under prescribed actions; and Plan, which jointly generates action trajectories and their anticipated visual consequences conditioned on an initial image, a language instruction, and an optional visual goal. Our model integrates a compact, structured 3D action representation into a pretrained video diffusion transformer through a mixture-of-transformers architecture with shared base weights, modality-specific adaptation, and bidirectional visual-action attention. Randomized modality visibility lets video and 3D actions serve as either conditioning context or prediction targets across the three modes. Experiments show that unified training improves all three capabilities over single-mode training, including gains in planning quality under a vision-language model evaluation. Through unified training, our model outperforms specialized baselines on 3D hand reconstruction and action-conditioned video prediction across four datasets, while producing goal-directed manipulation videos with stronger instruction adherence and action progression than video-generation baselines. Project Page: https://p3-wam.pages.dev/",
-      "tags": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Perceive, Predict, and Plan: a Unified World Action Model for Egocentric Dexterous Manipulation",
-      "url": "https://arxiv.org/abs/2610.22363v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "44940d67741bbeeada927c82",
-      "context_id": "8a0f32c75502f722c560b283",
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "recovery"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.9167,
-      "source": "zenodo",
-      "source_published": "2026-10-09",
-      "source_updated": null,
-      "summary": "What if an AI agent could not complete a consequential action until the real-world result of an earlier, bounded action had been independently verified&mdash;and that verification was required to unlock the next execution step? As frontier AI models and autonomous agents increasingly operate financial systems, cloud infrastructure, sensitive communications, autonomous machinery, and critical infrastructure, conventional security mechanisms face a fundamental limitation: authorization establishes what is permitted, but does not necessarily establish what actually happened along the real execution path. Audit logs may record a mistake after its consequences become irreversible. Simulations may succeed while the real destination, network route, transaction system, or physical actuator behaves differently. Even a successful initial authorization does not justify unlimited authority to execute subsequent actions. This paper develops a different architectural principle: &ldquo;Evidence is the key, not the log.&rdquo; Building on the distinction that computation is not authority to act , the proposed architecture makes independently validated evidence of a preceding real effect a technical prerequisite for later effectuation. The mechanism is called Receipt-Gated Staged Effectuation , supported by an Interim Effectuation Validator (IEV) . For selected consequential operations, the architecture authorizes a deliberately bounded but real first effect, rather than immediately releasing the complete consequence. A protected observer, destination, transaction system, network element, storage component, or hardware controller generates an Effect Confirmation Receipt (ECR) describing what actually occurred. The IEV independently verifies the receipt against the authorized Candidate Act, expected effect, phase, destination, sink identity, freshness, policy, revocation state, and authorized scope. Only after successful validation does the protected domain establish the Continuation Authority Object (CAO) required for the next phase. The critical distinction is that the next effect can be made technically impossible&mdash;not merely prohibited by policy&mdash;until validated evidence from the preceding real effect becomes available. Possible implementations include receipt-derived cryptographic keys, split-key reconstruction, protected internal state, hardware latches, pre-staged non-executable commands, and pre-delivered ciphertext whose final decryption material remains withheld. Unlike ordinary canary deployment or post-execution monitoring, the earlier phase's evidence becomes part of the causal authority chain. Its receipt is not merely information about the previous operation; it is a required input to the authority enabling the next operation. The paper develops: Three effectuation modes: Direct protected single-phase execution, bounded demonstration followed by full effectuation, and progressive multi-phase execution. Adaptive effectuation: Geometric and risk-dependent progression, reversibility-aware phase sizing, nested stages, and parallel effectuation. Cryptographic causal dependency: Receipt-derived execution material, split credentials, tokenless continuation, hardware-gated enablement, and protected state transitions. Protected evidence semantics: Proof of delivery versus proof of effect, negative receipts, receipt freshness, destination binding, cross-device protection, Merkle receipt structures, and privacy-preserving confirmation. Independent continuation authority: Human, automatic, hybrid, and multi-authority decisions separated from the potentially compromised AI-agent environment. Fail-closed recovery: Missing or conflicting receipts, uncertain outcomes, replay protection, atomic consumption, reconciliation, and prevention of blind retries. Anti-bypass enforcement: Protected execution boundaries, credential surrogation, taint and provenance controls, alternative-path closure, and software&ndash;hardware implementation ind",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Evidence Is the Key, Not the Log: Cryptographic Execution Control for AI Agents and Autonomous Systems",
-      "url": "https://zenodo.org/records/23254538"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "a46de0973b7121053addc6ca",
-      "context_id": "7a14849b8d8947c326e2f855",
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "recovery"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.9167,
-      "source": "arxiv",
-      "source_published": "2026-10-08T17:19:10Z",
-      "source_updated": "2026-10-08T17:19:10Z",
-      "summary": "Understanding a dynamical world calls for more than a latent state that summarizes its observations: the state should also be organized into the factors that stay shared across related observations and the factors that vary between them. For example, a robot pushing a cube to a goal should take the same action when the camera shifts or the lights dim, since nothing in the scene has moved. Existing approaches to this decomposition commonly obtain it through reconstruction, so the latent variables must first explain the entire observational world before their organization can be trusted. Joint embedding predictive architectures (JEPAs) model the latent state directly and never reconstruct, yet no existing result recovers the invariant and variant parts of the state they learn. How to learn the invariant-variant structure of the latent world without paying for its reconstruction therefore remains open. To close this gap, we introduce SplitJEPA, a JEPA that jointly recovers the latent state and its invariant and variant organization directly in representation space, without any reconstruction. We prove that, under stationary Gaussian predictive dynamics and a full-rank variation condition, SplitJEPA identifies the invariant and variant subspaces up to independent block-wise isometries, without introducing an observation decoder. Since the guarantee needs no decoder, the result extends reconstruction-free latent recovery to invariant-variant block identification. Experiments on synthetic nonlinear systems and robotic manipulation tasks support the theoretical results and show their practical value for both robustness and efficiency.",
-      "tags": [
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "SplitJEPA: Learning Invariant and Variant Latent Worlds without Reconstruction",
-      "url": "https://arxiv.org/abs/2610.12349v1"
-    },
     {
       "base_direction_id": "large_data_methods",
       "candidate_id": "066b7de10cef97e4336fee39",
@@ -754,8 +365,8 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "0c17cec86aeb9e2629fac0a4",
-      "context_id": "74f2c4c67c88514d94f7c8d8",
+      "candidate_id": "66e3d6f14eeb4019d12509c2",
+      "context_id": "3d2a52c343e9b18c15bbb153",
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
       "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -767,28 +378,40 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "null result"
+        "counterexample"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.4583,
+      "score": 4.5833,
       "source": "zenodo",
       "source_published": "2026-10-17",
       "source_updated": null,
-      "summary": "Scripts, dated analysis plans, run logs, and deal-level estimates for a study of 38,991 completed acquisitions by listed or delisted acquirers across 37 countries, rumored between 2007 and 2025. Version 2.1 accompanies a manuscript under double anonymized peer review; author identification is withheld during the review. It changes no script, log, plan, or data file of version 2.0: it updates the title of the manuscript and renumbers the exhibits in the index (NUMBERS.md) to those of the manuscript as submitted (Tables 1 to 6; Online Appendix S1 to S22). Licensed return series and deal and firm data cannot be redistributed and are documented rather than included (LICENSE_AND_DATA.md). Start with README.md. &nbsp;",
+      "summary": "We consider the three-dimensional Prandtl boundary layer equations near a smooth structured solution (u_s, K u_s) with &part;z K &equiv; 0. Under a monotone-or-degenerate profile assumption on u_s(&middot;), we prove local well-posedness, continuous dependence, and a priori estimates in the critical Sobolev space X^s = H^s_&gamma;(r) &times; H^s_&gamma;(q) &times; H^s_&gamma;(&nabla;{x,y} q), where r = u &minus; u_s and q = v &minus; K u. Our proof does not assume smallness of the data, monotonicity of &part;_z u_s, or Gevrey regularity. We also establish a nonlinear norm-inflation result showing that the raw H^s topology on q alone is insufficient, and we identify the minimal tangential derivative of q required. Several stress tests, counterexamples, and open problems are discussed.",
       "tags": [
-        "mergers and acquisitions",
-        "systematic risk",
-        "measurement error",
-        "replication",
-        "null results",
-        "beta estimation",
-        "M&A",
-        "econometrics"
+        "Three-dimensional Prandtl equations",
+        "Prandtl boundary layer",
+        "Sobolev well-posedness",
+        "boundary layer theory",
+        "structured solutions",
+        "ill-posedness",
+        "nonlinear norm inflation",
+        "critical Sobolev space",
+        "transverse derivative",
+        "Hardy inequality",
+        "Kato-Ponce commutator estimates",
+        "Gevrey regularity",
+        "monotone-or-degenerate profile",
+        "degenerate critical points",
+        "continuous dependence",
+        "a priori estimates",
+        "weighted Sobolev spaces",
+        "secondary flow",
+        "vanishing viscosity limit",
+        "incompressible Navier-Stokes equations"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Replication package: Do acquisitions change systematic risk? Evidence on beta from 38,991 deals in 37 countries over 19 years",
-      "url": "https://zenodo.org/records/23433294"
+      "title": "Sobolev Well-Posedness for Three-Dimensional Prandtl Boundary Layers Near Proportional Structures in a Critical Transverse Space",
+      "url": "https://zenodo.org/records/23437208"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1597,6 +1220,396 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "CoWorld Reasoner: Agentic Multimodal Reasoning with the Evolving Video World Model-Driven Harness",
       "url": "https://arxiv.org/abs/2610.21910v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "4f6f59c3f1801c351d9a972b",
+      "context_id": "0e47324217a5b09a349de28b",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7083,
+      "source": "arxiv",
+      "source_published": "2026-10-08T11:27:49Z",
+      "source_updated": "2026-10-08T11:27:49Z",
+      "summary": "Large language model (LLM) agents for portfolio management learn from experience: they credit each experience in their memory with the outcome of the decisions that used it. In financial markets, however, this outcome mostly reflects the market move shared by all decisions on that date, so the credit tracks the market rather than the experience, and these agents often do worse than simply holding the equal-weight (1/$N$) portfolio. We ask how an agent can credit an experience with what it changes, and answer it by putting memory on trial: drafts of the same decision with and without an experience face the same market, so the outcome they share cancels in their difference. Our agent, MemTrial, drafts each decision with eight combinations of its retrieved experiences, chosen by a fractional factorial design, and credits each experience with its Banzhaf value, the average of these differences. As each date occurs once and each draft is a noisy LLM sample, these credits are noisy and may not hold on new dates. MemTrial therefore pools them across dates and similar experiences with a hierarchical Bayesian model, acts on them only after they have predicted unseen dates, and otherwise stays anchored at a conservative reference such as 1/$N$. On four benchmarks, MemTrial not only benefits from experiences that matter (the best of 15 methods on a semi-synthetic benchmark with known experience quality) but also limits its losses when its values do not hold (at most 2.2\\% below 1/$N$ on PortBench and InvestorBench, against 15--38\\% for the best experience-learning agent). Averaged over five settings, it improves the utility of the best experience-learning agent by 21.2\\%, and with eight LLMs it beats every LLM-based baseline on InvestorBench.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "MemTrial: Learning When to Trust Memory in LLM Portfolio Agents",
+      "url": "https://arxiv.org/abs/2610.11732v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "2dea0f13da9ecc815c80e2d7",
+      "context_id": "fefcbd962ee5f573cdffbfc6",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_published": "2026-10-15T17:59:01Z",
+      "source_updated": "2026-10-15T17:59:01Z",
+      "summary": "Recent advances in multimodal large language models (MLLMs) and 3D generation have expanded 3D understanding and synthesis. However, beyond visual fidelity, task-specific correctness grounded in 3D evidence remains a major challenge. We argue that building reliable 3D systems requires not only stronger generation and reasoning, but also verification feedback that identifies unmet requirements and explains their violations, allowing systems to reflect on and refine their outputs. Such feedback must integrate multi-view observations and distinguish genuine inconsistencies from projection-dependent appearances. We make three contributions. First, we introduce 3DVerifierBench, a benchmark spanning 10 tasks that evaluates decisions, rejection explanations, and responses to controlled changes in specifications and candidates. A human study reveals a 21.6 percentage-point gap between humans and the strongest tested model, GPT-6 Astra, while explanation-aware analysis exposes weaknesses in rejection reliability. Second, we analyze verification across fine-grained factual categories, exposing errors in values and target binding. We develop a scalable pipeline combining multi-view fact extraction, controlled 3D editing, and native annotations to produce 14,126 training examples with contradiction explanations and linked counterfactuals. Third, we examine how verification could support 3D generation through candidate selection and recursive refinement. In human-labeled sixteen-candidate pools, oracle selection improves complete factual success from 26.7% to 90.0%. In a separate eight-input study, human-guided recursive refinement satisfies all seven requirements for every input, compared with three under parallel Oracle@8. Together, our benchmark, analysis, and data pipeline establish a foundation for models to reflect on 3D content through reliable verification feedback.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Grounding Generative Verification in 3D Content",
+      "url": "https://arxiv.org/abs/2610.22360v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "5d6447797fb22ed8b911c908",
+      "context_id": "f884699fe6e8efcd7d99318e",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_published": "2026-10-14T10:17:47Z",
+      "source_updated": "2026-10-14T10:17:47Z",
+      "summary": "Segment Anything Model 3 (SAM 3) is a foundation model for image and video segmentation that sets the state of the art in visual object tracking. Its tracker, inherited from SAM 2, stores information from past frames in a memory bank, managed by a simple First-In-First-Out rule, allowing temporal consistency in complex videos. Several recent methods improve SAM 2 with hand-crafted memory update rules, each targeting a specific failure mode, such as distractors, occlusions, or object motion. However, their gains transfer only partially to the stronger SAM 3 backbone. We instead present a more general, data-driven approach that frames memory control as a sequential decision-making task. SAM3RL is an extension of the SAM 3 tracker with a lightweight memory controller, trained by reinforcement learning, that decides which frames enter the memory bank in order to maximize tracking performance. SAM3RL sets a new state of the art on 10 of 12 tracking and video object segmentation benchmarks, outperforming all hand-crafted rules without any runtime overhead. The same approach applied to SAM 2 gives SAM2RL, which outperforms hand-crafted rules on 9 of the 12 benchmarks, showing the generality of our method across model generations.",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "SAM3RL: Memory Control via Reinforcement Learning for Visual Object Tracking",
+      "url": "https://arxiv.org/abs/2610.19931v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "056642761993bea71b4db0a4",
+      "context_id": "b08cc1227d22ef6c00daa750",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "zenodo",
+      "source_published": "2026-10-08",
+      "source_updated": null,
+      "summary": "EnCert is a compiler-level formal verification framework for checking Namespace-protected LLVM IR produced by the Zeno capability architecture. It decomposes post-transformation verification into two complementary stages: thoroughness verification, which checks that covered memory accesses use valid protected pointers with consistent Namespace size, lifetime, and replacement behavior, and functional-preservation verification, which uses normalization contracts and Alive2 to determine whether the protected program refines the original program for supported valid executions. The artifact includes the EnCert LLVM passes, evaluation scripts, benchmark inputs, controlled mutation infrastructure, and reference results used to reproduce the experiments on EnForge-protected MSET programs, including the detection of protection violations and functional corruptions reported in the paper.",
+      "tags": [
+        "Capability-Based Architectures",
+        "Memory Safety",
+        "Formal Verification",
+        "Compilers"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "EnCert",
+      "url": "https://zenodo.org/records/23250450"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "a1954edc6ae0594478835712",
+      "context_id": "a7723e6395f0a368ef20f7e4",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_published": "2026-10-09T12:54:11Z",
+      "source_updated": "2026-10-09T12:54:11Z",
+      "summary": "Long-horizon embodied agents must maintain task-relevant information, coordinate heterogeneous robots, and adapt their decisions as execution unfolds. Existing benchmarks investigate dynamic task execution and embodied multi-agent coordination, but provide limited evaluation of their intersection. We introduce MAGMA-Bench, an architecture-agnostic benchmark for persistent task reasoning in dynamic multi-robot environments. MAGMA-Bench evaluates agents across increasing task horizons and controlled online perturbations, including execution failures, task interruptions, and mission updates, with scenarios requiring coordination across robots with heterogeneous capabilities. It uses a structured skill-level interface to separate task-level reasoning from perception and low-level control. We evaluate locally deployable open-weight planners, multi-agent state-tracking strategies, and frontier models. Even the strongest evaluated models fail on a substantial fraction of clean episodes, and their success rates decrease further under online perturbations. Supervised adaptation greatly improves a small model, but performance remains substantially lower on longer and multi-robot missions. We release the benchmark, 261,646 task-level training examples, and an architecture-agnostic expert-trace generation pipeline.",
+      "tags": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "MAGMA-Bench: Evaluating Long-Horizon Embodied Agents under Dynamic Tasks and Execution Failures",
+      "url": "https://arxiv.org/abs/2610.13534v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "5cb27f34f70e58e417985e71",
+      "context_id": "a445182ee936ef72ce2c0f3f",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_published": "2026-10-08T15:18:26Z",
+      "source_updated": "2026-10-08T15:18:26Z",
+      "summary": "It is assumed that a natural way to improve the pedagogical quality of large language model tutors is to define a metric of instructional performance and fine-tune the model against it. To test this strategy, we designed a metric of pedagogical adaptivity that scores each instructional decision in a learning sequence against the conditions of the learning situation, which is the standard used for automated pedagogical scoring. We audited a frontier tutor across 2,000 learner scenarios, corrected its weakest cases by fine-tuning an open-weights proxy, and asked 31 trained educators to rate the pedagogical alignment of the outputs blind, before and after correction. The metric increased from +0.05 to +0.42 for the corrected cases, while the expert ratings decreased from 4.46 to 3.03, with the unmodified controls remaining unchanged and a base-proxy control ruling out the change of model. The tutor performed worse because any metric that scores decisions independently and averages them is maximized by repeating the single best decision, and the fine-tuned model collapsed to that exact optimum in every case, in and out of sample. Educators identified the repetition, which such metrics cannot represent, and preserving the learner's trajectory in the score reduced, but did not reverse, the metric's verdict. Weight analysis traced the correction to the model's output projection, where it had memorized its training strings rather than learned to adapt. We conclude that measurement validity does not imply optimization validity, and we derive design principles for benchmarks that assess or train AI-tutor instruction.",
+      "tags": [
+        "cs.CY"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "The learner who does not learn: when optimizing a pedagogical metric degrades LLM tutoring",
+      "url": "https://arxiv.org/abs/2610.12125v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "26a0aaff84cef4c532f3c51f",
+      "context_id": "8bf37cd9e19be13e7a4d422c",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_published": "2026-10-14T12:43:56Z",
+      "source_updated": "2026-10-14T12:43:56Z",
+      "summary": "Multi-agent path finding (MAPF) solvers are evaluated on the schedules they produce, not on how well those schedules can be executed. Specifically, continuous-time optimal solvers can achieve even lower cost than their discrete counterparts by scheduling agents with near-zero temporal/spatial separation, and by exploiting graphs with higher connectedness; however, such schedules may prove hard to execute under a realistic controller. We integrate AOC-CBS, an anytime-optimal continuous-time MAPF solver, into a fleet coordination framework in which each agent tracks its timed path using model predictive control, and we evaluate the resulting system on congested MovingAI benchmark instances with 21 to 40 agents. Without intervention, only a fraction of the instances complete execution. We then apply T-robustness by adding a time-margin, i.e., a minimum temporal gap between agents at shared locations, as well as spatial inflation of the agent footprint. Increasing either margin raises execution success, for a relatively small increase in the schedule's sum-of-costs; it also improves how closely agents adhere to the schedule: when tracking each agent's position throughout execution and comparing it against the position it should occupy according to the schedule, the mean discrepancy falls significantly as the margin increases. In general, the two margins have different effects; temporal margin decreases deviation, giving the controller room to stay on schedule. Spatial margin affects deviation less and instead increases the clearance between agents, so that the same deviation no longer leads to a blocking stall. They are nonetheless substitutes rather than complements: spatial inflation is almost free in schedule cost, but its effect on execution success is small and does not compound with a temporal margin already in place.",
+      "tags": [
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "The Cost of Executability: Temporal Margins for Continuous-Time Multi-Agent Path Finding under Closed-Loop Control",
+      "url": "https://arxiv.org/abs/2610.20118v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "5775d0981f0a041089f37b20",
+      "context_id": "55859397ad15d33ae9fb805b",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_published": "2026-10-07T13:48:27Z",
+      "source_updated": "2026-10-08T06:18:32Z",
+      "summary": "Offline MARL increasingly relies on generative policies to model multimodal joint behavior, typically by distilling a centralized teacher into decentralized one-step actors under the CTDE. We identify a failure mode at the teacher training stage: standard flow-based teachers pair noise with replay targets independently, so nearby noise samples can be routed toward conflicting coordination modes. The teacher then produces samples between valid modes, and because the distillation loss regresses each local actor onto the conditional mean of the teacher's output given local input, this error is not absorbed but propagated to the student. To remove this teacher-side artifact, we propose Mode-Support Semi-Discrete Optimal Transport (MoSDOT), which summarizes multimodal replay into a finite mode support with prescribed capacities and uses conditional semi-discrete optimal transport to assign each noise sample to a single mode before teacher training. We additionally study a shared-randomness variant that uses a shared noise component at execution to expose the residual gap intrinsic to strict-product execution. On controlled diagnostics and offline MARL benchmarks, MoSDOT improves endpoint quality and routing consistency, particularly on datasets exhibiting multimodal joint behavior.",
+      "tags": [
+        "cs.LG",
+        "cs.MA",
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Multi-Agent Coordination via Support-Preserving Distillation",
+      "url": "https://arxiv.org/abs/2610.10087v2"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "184a91076b56e4a34903cec1",
+      "context_id": "37517d0b2f355bf5fda8d459",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "Code and results for the manuscript *Identifying the Caputo order of time-fractional diffusion with physics-informed neural networks: a controlled benchmark against classical inversion* (A. Boucenna). All data are synthetic, generated from the exact Mittag-Leffler solution; no experimental or patient data are used.",
+      "tags": [
+        "time-fractional diffusion, Caputo derivative, physics-informed neural networks, inverse problem."
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Code and data for: Identifying the Caputo order of time-fractional diffusion with physics-informed neural networks",
+      "url": "https://zenodo.org/records/23434623"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "e80350ac9add350b0975035b",
+      "context_id": "28eadf52ebbbb7a95ed21e52",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_published": "2026-10-08T13:52:24Z",
+      "source_updated": "2026-10-08T13:52:24Z",
+      "summary": "We detail scalable methods for approximating the quadratic entropy $p^T d p$ for arbitrary distributions $p$ and common distances $d$ of negative type. We focus on the Euclidean and spherical geodesic cases, which both use random feature embeddings and projections to dramatically improve computational complexity within a simple framework. Amortization of a single large matrix multiplication and control variates further enable computation at large scale with low memory and runtime in situations where $d$ is held constant while $p$ varies. We demonstrate this with a comparison against direct pair sampling and bibliometric/scientometric examples on Open Graph Benchmark datasets, revealing papers, fields, and institutions with both particularly narrow and broad interdisciplinary reach from their citations and text features alone.",
+      "tags": [
+        "stat.ML",
+        "cs.LG",
+        "math.ST",
+        "stat.CO"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Efficient quadratic entropy with distance sketches",
+      "url": "https://arxiv.org/abs/2610.11976v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "1acb069c9ba848c1e0471373",
+      "context_id": "252a6fdb01de41a31316f859",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "AUTONOMOUS NANOROBOTIC NAVIGATION AND MISSION OBSERVABILITY AT THE LIMIT First-Generation Research Flagship 01 | NANO/MICRO ROBOTICS, POWER &amp; MISSION ENDURANCE Feng Cheng-en (33) x Starli This research atlas asks a difficult engineering question: when low-Reynolds-number microfluidic flows, Brownian orientation noise, boundary adhesion, external field actuation and incomplete sensing all influence a micro/nanorobot, what would justify calling its behavior autonomous navigation rather than externally assisted motion? The volume treats navigation as an auditable, bounded mission instead of an attractive trajectory. It develops a five-layer program spanning stochastic hydrodynamics, instrument and actuation provenance, uncertainty-calibrated belief-state estimation, blinded microfluidic challenges and independent requalification. Thirty linked mathematical stations differentiate physical relations, information-theoretic functionals and proposed navigation utility measures, with assumptions, dimensions and possible falsifiers. Eighty-two research chapters each open with a core mathematical relation, followed by five independent single-page research sections. Two hundred detailed Research Gates describe decisive comparisons, confounding explanations, evidence requirements, failure conditions and successor handoff artifacts. Thirty-three provisional Phoenix Answer Embryos offer revisionable research prototypes rather than predetermined conclusions. The key comparator is an equal-budget experiment: fixed-field sequences, microscope-assisted manual control, externally tracked predictive control and candidate fused navigation are evaluated under matched total energy, information access, geometry, time, collision limits and recovery obligations. The manuscript emphasizes blind targets, flow reversal, sensor dropouts, wall adhesion, correlated observations, full-system power accounting, censored failures and post-mission retrieval. A mission arriving at its target but leaving an unrecovered device is not counted as a fully closed success. This work is a hypothesis-generating Research Atlas v1.0, not an experimental report or a validated medical technology. External magnetic, acoustic, optical and microscope infrastructure must be disclosed; no in-vivo or clinical competence is inferred from bench-top movement. Foundational DOI-linked literature provides context, not proof of the proposed integrated system. Every major claim is designed to be revised, rejected or reconstructed by a successor team using raw evidence and pre-registered falsification rules. PARENT RESEARCH DOI https://doi.org/10.5281/zenodo.23046134 Original parent: NANO/MICRO ROBOTICS, POWER &amp; MISSION ENDURANCE AT THE LIMIT. Parent-chapter lineage: Ch. 06-11 (navigation), 47-51 (estimation/control), 65 and 68 (benchmarking and transfer). The current child manuscript does not yet have an independent DOI; one would be assigned only upon actual repository deposit. Editorial release note: the manuscript prioritizes non-duplicative research content and independent testability over an artificial word-count target. It is suitable as a research architecture for additional scientific review, not a substitute for physical validation.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "AUTONOMOUS NANOROBOTIC NAVIGATION AND MISSION OBSERVABILITY AT THE LIMIT First-Generation Research Flagship 01 | NANO/MICRO ROBOTICS, POWER & MISSION ENDURANCE Feng Cheng-en (33) x Starli This research atlas asks a difficult engineering question: when low-Reynolds-number microfluidic flows, Brownian orientation noise, boundary adhesion, external field actuation and incomplete sensing all influence a micro/nanorobot, what would justify calling its behavior autonomous navigation rather than externally assisted motion? The volume treats navigation as an auditable, bounded mission instead of an attractive trajectory. It develops a five-layer program spanning stochastic hydrodynamics, instrument and actuation provenance, uncertainty-calibrated belief-state estimation, blinded microfluidic challenges and independent requalification. Thirty linked mathematical stations differentiate physical relations, information-theoretic functionals and proposed navigation utility measures, with assumptions, dimensions and possible falsifiers. Eighty-two research chapters each open with a core mathematical relation, followed by five independent single-page research sections. Two hundred detailed Research Gates describe decisive comparisons, confounding explanations, evidence requirements, failure conditions and successor handoff artifacts. Thirty-three provisional Phoenix Answer Embryos offer revisionable research prototypes rather than predetermined conclusions. The key comparator is an equal-budget experiment: fixed-field sequences, microscope-assisted manual control, externally tracked predictive control and candidate fused navigation are evaluated under matched total energy, information access, geometry, time, collision limits and recovery obligations. The manuscript emphasizes blind targets, flow reversal, sensor dropouts, wall adhesion, correlated observations, full-system power accounting, censored failures and post-mission retrieval. A mission arriving at its target but leaving an unrecovered device is not counted as a fully closed success. This work is a hypothesis-generating Research Atlas v1.0, not an experimental report or a validated medical technology. External magnetic, acoustic, optical and microscope infrastructure must be disclosed; no in-vivo or clinical competence is inferred from bench-top movement. Foundational DOI-linked literature provides context, not proof of the proposed integrated system. Every major claim is designed to be revised, rejected or reconstructed by a successor team using raw evidence and pre-registered falsification rules. PARENT RESEARCH DOI https://doi.org/10.5281/zenodo.23046134 Original parent: NANO/MICRO ROBOTICS, POWER & MISSION ENDURANCE AT THE LIMIT. Parent-chapter lineage: Ch. 06-11 (navigation), 47-51 (estimation/control), 65 and 68 (benchmarking and transfer). The current child manuscript does not yet have an independent DOI; one would be assigned only upon actual repository deposit. Editorial release note: the manuscript prioritizes non-duplicative research content and independent testability over an artificial word-count target. It is suitable as a research architecture for additional scientific review, not a substitute for physical validation.",
+      "url": "https://zenodo.org/records/23428408"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "2306b48fb90ccae61fb79944",
+      "context_id": "1ef7fceca7a97e9bd18aa20b",
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "zenodo",
+      "source_published": "2026-10-09",
+      "source_updated": null,
+      "summary": "DSM&ndash;861 is best understood as a deterministic spectral computing architecture built from a rigid&nbsp;finite graph, a toroidal Hodge geometry, nonlinear KAN transport, vorton-inspired skew coupling, and&nbsp;associative-memory snapping. The arithmetic anchor is&nbsp;861 = 42,2= T41 = 3 &middot; 7 &middot; 41,&nbsp; while the interaction topology is exactly J(42, 2) with degree 80 and spectrum {80, 38, &minus;2}. The&nbsp;toroidal layer supplies a genuine discrete differential calculus. The finite-state theorem fixes the&nbsp;exact nine-qubit boundary of a single 861-dimensional core. The controllability theorem converts&nbsp;universal computation into a concrete Lie-algebra calculation. The snapping theorem supplies a&nbsp;mathematically correct route to non-accumulating numerical error through a deliberately constructed&nbsp;quadratic attractor. The resulting program is therefore executable as mathematics and engineering. Build the graph.&nbsp;Build the Hodge operators. Construct the control generators. Compute their Lie closure. Implement&nbsp;the nonlinear snap. Measure the ϵ2&nbsp;law. Synthesize the FPGA. Then benchmark complete circuits. If those tests succeed, DSM&ndash;861 becomes a demonstrated deterministic spectral processor rather than&nbsp;merely a conceptual analogy to quantum computing.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Deterministic Spectral Quantum Emulation on Classical Hardware",
+      "url": "https://zenodo.org/records/23269014"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
