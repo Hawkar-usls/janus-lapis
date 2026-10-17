@@ -1,0 +1,396 @@
+{
+  "schema": "janus.longevity_survivor.chen_animal_metadata_external_atlas_scrublet.v1",
+  "checkpoint_id": "HEART-PD1-MOUSE-IDENTITY-EXTERNAL-HEART-ATLAS-DOUBLET-GATE-2026-10-17-v1.2",
+  "record_date_utc": "2026-10-17",
+  "parent_checkpoint": "longevity-survivor/HEART-PD1-MI-TAC-SAMPLE-IDENTITY-AND-CELL-CLASSIFICATION-QUALITY-2026-10-17-v1.1.json",
+  "data_roots": [
+    {
+      "id": "CHEN_GSE293489",
+      "doi": "10.1038/s41421-026-00924-2",
+      "role": "primary public source"
+    },
+    {
+      "id": "WU_GSE327655",
+      "doi": "10.1161/CIRCULATIONAHA.125.074024",
+      "role": "primary public source"
+    },
+    {
+      "id": "TABULA_MURIS_GSM3040902",
+      "source": "GSM3040902 and czbiohub-sf Tabula Muris heart labels",
+      "role": "independent reference study, same preparation internal heldout not independent mice"
+    }
+  ],
+  "provenance": {
+    "locked_Chen_source_archive_run": 39026401715,
+    "independent_atlas_source_inventory_run": 39068208483,
+    "independent_atlas_source_inventory_artifact": 12114565379,
+    "independent_atlas_source_inventory_digest": "sha256:7cb35899757cee9234ff2952cc74fccd1902cc11f269c6793ba56a79da6c0f59",
+    "external_tabula_label_transfer_run": 39068393213,
+    "external_tabula_label_transfer_artifact": 12114127931,
+    "external_tabula_label_transfer_digest": "sha256:1df2c3275839c4b5bf0faf43a402ddef4ccc3457ce663baedbab42b5a7893e70",
+    "independent_Scrublet_run": 39068475470,
+    "independent_Scrublet_artifact": 12114381471,
+    "independent_Scrublet_digest": "sha256:b357bc93234112349f22b93b0cb1ad77b7f18a1c7370479dd6348d220bfe8cac",
+    "author_contact_from_primary_GEO_record_run": 39068588018,
+    "files": [
+      "longevity-survivor/tools/topa_external_mouse_heart_atlas_inventory.py",
+      "longevity-survivor/tools/topa_tabula_muris_chen_transfer.py",
+      "longevity-survivor/tools/topa_chen_scrublet_per_gsm.py",
+      "longevity-survivor/tools/topa_pd1_biosample_primary_metadata.py"
+    ]
+  },
+  "primary_supplement": {
+    "Chen_supplementary_document_sha256": "9fa7430f5aa98979eb7232898bf3f57f04786e5babdf94dd6c6989366fe40a11",
+    "bytes": 5476059,
+    "reviewed_paragraphs": 163,
+    "result": "AVAILABLE_AND_REVIEWED__EXPLICIT_4_GSM_TO_DISTINCT_PHYSICAL_MOUSE_CROSSWALK_NOT_FOUND",
+    "compare_with_other_figures": "FACS n=6–7 and other group n in supplementary are separate experiments, not proof of scRNA library N"
+  },
+  "animal_mapping": {
+    "CHEN_4_GSM": {
+      "gsm_names": [
+        "GSM8884015",
+        "GSM8884016",
+        "GSM8884017",
+        "GSM8884018"
+      ],
+      "individual_mice": "UNKNOWN",
+      "pooling_absent": "NOT_PROVEN",
+      "independent_animal_n": "BLOCKED"
+    },
+    "WU_6_GSM": {
+      "gsm_names": [
+        "GSM9662756",
+        "GSM9662757",
+        "GSM9662758",
+        "GSM9662759",
+        "GSM9662760",
+        "GSM9662761"
+      ],
+      "column_to_GSM": "ALREADY_PASS_DIRECT_GEO_!Sample_description",
+      "individual_mice": "UNKNOWN",
+      "pooling_absent": "NOT_PROVEN",
+      "independent_animal_n": "BLOCKED"
+    },
+    "archive_independence_warning": "Separate GEO/BioSample/SRA accession does not establish different physical source animals."
+  },
+  "external_atlas": {
+    "Tabula_Muris_source_sha256": "345c2d26904b83c1ec037f06be1f4177cceeb11a748c38dea22165705596c246",
+    "Tabula_Muris_annotated_source_sha256": "996433d9f9e7ed27b4a897e83d5b2379dc33530aa1dc0e7ca834bf23020cb405",
+    "exact_barcode_overlap": 624,
+    "reference_annotated_counts": {
+      "endothelial cell": 177,
+      "fibroblast": 226,
+      "NA": 98,
+      "endocardial cell": 63,
+      "cardiac muscle cell": 60
+    },
+    "eligible_model_classes": [
+      "fibroblast",
+      "endothelial cell",
+      "endocardial cell",
+      "cardiac muscle cell"
+    ],
+    "unsupported_classes": [
+      "T cells",
+      "gamma delta T cells",
+      "myeloid immune",
+      "B cells"
+    ],
+    "within_reference_holdout": {
+      "method": "reference-specific high-variance gene logistic multi-class; reference-only feature selection",
+      "feature_count": 1200,
+      "feature_list_sha256": "fc45a9ba5607276d5878790fb85059c0595a9447f46f653f9be2a20d4e2983e8",
+      "training_n": 368,
+      "holdout_n": 158,
+      "holdout_balanced_accuracy": 1,
+      "holdout_macro_f1": 1,
+      "confidence_abstain_threshold": 0.999187707901001,
+      "holdout_accuracy_without_abstain": 1,
+      "holdout_abstain_rate": 0.10126582278481013,
+      "holdout_confusion": {
+        "classes": [
+          "fibroblast",
+          "endothelial cell",
+          "endocardial cell",
+          "cardiac muscle cell"
+        ],
+        "matrix": [
+          [
+            68,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            53,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            19,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            18
+          ]
+        ]
+      }
+    },
+    "Chen_reference_projection": {
+      "GSM8884015": {
+        "group": "SHAM",
+        "n_QC": 11716,
+        "gene_intersection": 19676,
+        "selected_features_found": 1200,
+        "reference_prediction_counts": {
+          "fibroblast": {
+            "n": 7853,
+            "fraction": 0.6702799590303858
+          },
+          "endothelial cell": {
+            "n": 0,
+            "fraction": 0
+          },
+          "endocardial cell": {
+            "n": 8,
+            "fraction": 0.0006828269033799932
+          },
+          "cardiac muscle cell": {
+            "n": 0,
+            "fraction": 0
+          },
+          "ABSTAIN_OUT_OF_REFERENCE": {
+            "n": 3855,
+            "fraction": 0.3290372140662342
+          }
+        },
+        "label_type": "EXTERNAL_REFERENCE_PROVISIONAL_NOT_VALIDATED"
+      },
+      "GSM8884016": {
+        "group": "SHAM",
+        "n_QC": 15913,
+        "gene_intersection": 19676,
+        "selected_features_found": 1200,
+        "reference_prediction_counts": {
+          "fibroblast": {
+            "n": 10760,
+            "fraction": 0.6761767108653303
+          },
+          "endothelial cell": {
+            "n": 2,
+            "fraction": 0.00012568340350656697
+          },
+          "endocardial cell": {
+            "n": 17,
+            "fraction": 0.0010683089298058192
+          },
+          "cardiac muscle cell": {
+            "n": 0,
+            "fraction": 0
+          },
+          "ABSTAIN_OUT_OF_REFERENCE": {
+            "n": 5134,
+            "fraction": 0.3226292968013574
+          }
+        },
+        "label_type": "EXTERNAL_REFERENCE_PROVISIONAL_NOT_VALIDATED"
+      },
+      "GSM8884017": {
+        "group": "MI",
+        "n_QC": 8036,
+        "gene_intersection": 19676,
+        "selected_features_found": 1200,
+        "reference_prediction_counts": {
+          "fibroblast": {
+            "n": 1474,
+            "fraction": 0.1834245893479343
+          },
+          "endothelial cell": {
+            "n": 0,
+            "fraction": 0
+          },
+          "endocardial cell": {
+            "n": 0,
+            "fraction": 0
+          },
+          "cardiac muscle cell": {
+            "n": 0,
+            "fraction": 0
+          },
+          "ABSTAIN_OUT_OF_REFERENCE": {
+            "n": 6562,
+            "fraction": 0.8165754106520657
+          }
+        },
+        "label_type": "EXTERNAL_REFERENCE_PROVISIONAL_NOT_VALIDATED"
+      },
+      "GSM8884018": {
+        "group": "MI",
+        "n_QC": 9619,
+        "gene_intersection": 19676,
+        "selected_features_found": 1200,
+        "reference_prediction_counts": {
+          "fibroblast": {
+            "n": 2194,
+            "fraction": 0.2280902380704855
+          },
+          "endothelial cell": {
+            "n": 0,
+            "fraction": 0
+          },
+          "endocardial cell": {
+            "n": 0,
+            "fraction": 0
+          },
+          "cardiac muscle cell": {
+            "n": 1,
+            "fraction": 0.00010396091069757771
+          },
+          "ABSTAIN_OUT_OF_REFERENCE": {
+            "n": 7424,
+            "fraction": 0.7718058010188169
+          }
+        },
+        "label_type": "EXTERNAL_REFERENCE_PROVISIONAL_NOT_VALIDATED"
+      }
+    },
+    "interpretation": "The reference holdout cells are from same original heart/aorta sample; 100% heldout class accuracy is not independent-animal/generalization validation. Reference high-confidence threshold near 1 and disease-domain shift cause 77-82% MI abstention; do not label rejected cells pathological. T cells are absent from label universe.",
+    "gate": "REFERENCE_TRANSFER_EXECUTED__DISEASE_OOD_UNRESOLVED"
+  },
+  "doublets": {
+    "method": "Scrublet v0.2.3 simulated doublets, each original Chen 10x library run separately",
+    "expected_doublet_rate_is_ASSUMPTION": 0.06,
+    "per_GSM": {
+      "GSM8884015": {
+        "gsm": "GSM8884015",
+        "group": "SHAM",
+        "status": "AUTO_THRESHOLD_SCORES_NOT_PROVEN_DOUBLETS",
+        "cells_after_original_QC": 11716,
+        "auto_threshold": 0.2554675157578954,
+        "scrublet_predicted_doublets_at_assumed_rate": 367,
+        "scrublet_predicted_fraction": 0.031324684192557184,
+        "score_percentiles": {
+          "0": 0.000951776649746193,
+          "25": 0.017245095925846086,
+          "50": 0.036994877632327824,
+          "75": 0.06893819334389857,
+          "90": 0.11419068736141906,
+          "95": 0.1669128508124077,
+          "99": 0.48161764705882376,
+          "100": 0.7417582417582421
+        },
+        "cross_lineage_positive_markers_n": 711,
+        "cross_lineage_positive_markers_fraction": 0.060686241037896896,
+        "doublet_called_and_cross_lineage_positive_n": 216,
+        "not_a_doublet_truth_label": true
+      },
+      "GSM8884016": {
+        "gsm": "GSM8884016",
+        "group": "SHAM",
+        "status": "AUTO_THRESHOLD_SCORES_NOT_PROVEN_DOUBLETS",
+        "cells_after_original_QC": 15913,
+        "auto_threshold": 0.21733041992919422,
+        "scrublet_predicted_doublets_at_assumed_rate": 816,
+        "scrublet_predicted_fraction": 0.05127882863067932,
+        "score_percentiles": {
+          "0": 0.0013797198106661073,
+          "25": 0.0150459847984104,
+          "50": 0.037503840274436324,
+          "75": 0.0707610027542334,
+          "90": 0.12693730598728944,
+          "95": 0.21853089319770977,
+          "99": 0.4149428446414148,
+          "100": 0.6224948823988593
+        },
+        "cross_lineage_positive_markers_n": 1272,
+        "cross_lineage_positive_markers_fraction": 0.07993464463017659,
+        "doublet_called_and_cross_lineage_positive_n": 421,
+        "not_a_doublet_truth_label": true
+      },
+      "GSM8884017": {
+        "gsm": "GSM8884017",
+        "group": "MI",
+        "status": "AUTO_THRESHOLD_SCORES_NOT_PROVEN_DOUBLETS",
+        "cells_after_original_QC": 8036,
+        "auto_threshold": 0.6749920200647956,
+        "scrublet_predicted_doublets_at_assumed_rate": 7,
+        "scrublet_predicted_fraction": 0.0008710801393728223,
+        "score_percentiles": {
+          "0": 0.001544998068752414,
+          "25": 0.019261637239165328,
+          "50": 0.030018761726078792,
+          "75": 0.046689628779181015,
+          "90": 0.07297830374753451,
+          "95": 0.10227972889710411,
+          "99": 0.33175355450236954,
+          "100": 0.8278388278388267
+        },
+        "cross_lineage_positive_markers_n": 882,
+        "cross_lineage_positive_markers_fraction": 0.10975609756097561,
+        "doublet_called_and_cross_lineage_positive_n": 5,
+        "not_a_doublet_truth_label": true
+      },
+      "GSM8884018": {
+        "gsm": "GSM8884018",
+        "group": "MI",
+        "status": "AUTO_THRESHOLD_SCORES_NOT_PROVEN_DOUBLETS",
+        "cells_after_original_QC": 9619,
+        "auto_threshold": 0.31432733076866665,
+        "scrublet_predicted_doublets_at_assumed_rate": 146,
+        "scrublet_predicted_fraction": 0.015178292961846345,
+        "score_percentiles": {
+          "0": 0.0014164796115438301,
+          "25": 0.013986491890044857,
+          "50": 0.027949516105418327,
+          "75": 0.04913456701007281,
+          "90": 0.08203385957547674,
+          "95": 0.11321102621072412,
+          "99": 0.4156389675296854,
+          "100": 0.8395951108059158
+        },
+        "cross_lineage_positive_markers_n": 1389,
+        "cross_lineage_positive_markers_fraction": 0.14440170495893545,
+        "doublet_called_and_cross_lineage_positive_n": 101,
+        "not_a_doublet_truth_label": true
+      }
+    },
+    "provisional_status": "SCORES_AND_AUTO_THRESHOLD_CANDIDATES_ONLY",
+    "QC_impact": "NONE__NO_CELLS_REMOVED",
+    "threshold_quality": "AUTO_THRESHOLDS_DIFFER_MARKEDLY_ACROSS_GSM; MI1=0.675 WITH_7_OF_8036; UNCALIBRATED",
+    "next_sensitivity": "Compare fixed score thresholds and perturb expected doublet rate; manual diagnostic must be source-supported, no false TRUE label",
+    "cross_lineage_warning": "Marker co-positivity != doublet proof, and broad ambiguity in prior classifier != scrublet score"
+  },
+  "correspondence": {
+    "Gmail_prior_thread_search": "NO_EXISTING_CHEN_OR_WU_DISCUSSION_FOUND",
+    "Chen_primary_correspondence": "CONFIRMED_IN_PUBLISHER_ARTICLE",
+    "Wu_submission_contact": "CONFIRMED_IN_PUBLIC_GEO_SOFT",
+    "scientific_sample_metadata_requests": "TWO_GMAIL_DRAFTS_CREATED_NOT_SENT; no external reply or independent animal attestation",
+    "privacy": "No Gmail private thread/draft identifiers committed to public repository"
+  },
+  "gate_status": {
+    "INDEPENDENT_ATLAS_RAW_AND_LABEL_SHA256": "PASS",
+    "EXTERNAL_REFERENCE_HELDOUT_METRICS": "COMPUTED_NONINDEPENDENT",
+    "DISEASE_MI_CELL_LABEL_HIGH_CONFIDENCE": "NOT_ADMITTED_LARGE_OOD_ABSTENTION",
+    "T_SUBTYPE_INDEPENDENT_REFERENCE": "NOT_DONE_NO_T_CELL_LABELS_IN_HEART_REFERENCE",
+    "SCRUBLET_DOUBLETS_SCORES": "COMPUTED_PROVISIONAL",
+    "SCRUBLET_CONFIRMED_DOUBLETS": "NOT_ESTABLISHED",
+    "AUTHOR_ANIMAL_CROSSWALK": "PENDING_AUTHENTIC_SOURCE",
+    "ANIMAL_LEVEL_CELL_PROPORTIONS": "LOCKED",
+    "ANIMAL_LEVEL_STATISTICAL_CI_OR_P": "LOCKED",
+    "STRICT_PROFIBROTIC_FIBROBLAST_EXIT": "NOT_ESTABLISHED",
+    "MECHANICAL_EXIT_COUPLING": "NOT_ADMITTED"
+  },
+  "next_TOPA": [
+    "Send prepared precise scientific inquiry to GEO paper authors after user reviews; record exact sent thread and wait for physical-mouse/pooled yes/no response.",
+    "Inspect original Chen Seurat cell annotations and available immune-specific independent reference, including adult post-MI heart T-cell clusters.",
+    "Recalibrate Scrublet thresholds using sensitivity/diagnostic histograms; not solely variable automatic thresholds.",
+    "Only if independent animal N proven, compute replicate-level cell composition CI with per-animal units, plus cross-platform reference error."
+  ]
+}
