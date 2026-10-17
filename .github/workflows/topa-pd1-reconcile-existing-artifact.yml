@@ -6,6 +6,7 @@ on:
     paths:
       - .github/workflows/topa-pd1-reconcile-existing-artifact.yml
       - longevity-survivor/tools/audit_pd1_geo_acquired_manifest.py
+      - longevity-survivor/tools/probe_wu_tac_counts.py
   workflow_dispatch:
 
 permissions:
@@ -55,5 +56,20 @@ jobs:
           path: |
             topa_pd1_expression/
             topa_pd1_expression.log
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Probe Wu TAC processed counts from official GEO locations
+        shell: bash
+        run: |
+          WU_PROBE_OUT=topa_wu_processed_probe python longevity-survivor/tools/probe_wu_tac_counts.py 2>&1 | tee topa_wu_probe.log
+      - name: Publish Wu public data locator report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-wu-tac-official-processed-counts-probe
+          path: |
+            topa_wu_processed_probe/
+            topa_wu_probe.log
           if-no-files-found: warn
           retention-days: 14
