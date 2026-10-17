@@ -41,6 +41,12 @@ for gse in SERIES:
  rec={"url":url,"bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest()}
  report["sources"][gse]=rec
  series,samples=parse(raw)
+ report.setdefault("series_contact",{})[gse]={
+   "names":series.get("!Series_contact_name",[]),
+   "email_addresses":series.get("!Series_contact_email",[]),
+   "institute":series.get("!Series_contact_institute",[]),
+   "source_GEO_SOFT":url,
+   "disclaimer":"GEO submission contact may not be corresponding author of final publication"}
  report["samples"][gse]=[]
  for gsm,item in sorted(samples.items()):
   matches=[]
@@ -92,5 +98,5 @@ report["gates"]={"WU_EXACT_COUNT_COLUMN_TO_GSM":report["mapping_grade"],
 (OUT/"report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
 print("TOPA_SOURCE_FIELD_AUDIT_START")
 print(json.dumps({"gates":report["gates"],"mapping_evidence_by_GSM":report["mapping_evidence_by_GSM"],
-  "BioSample_statuses":{g:[{"gsm":x["gsm"],"relation":x["relation"],"BioSample":x["BioSample_details"]} for x in rows] for g,rows in report["samples"].items()}},ensure_ascii=False))
+  "series_contact":report["series_contact"],"BioSample_statuses":{g:[{"gsm":x["gsm"],"relation":x["relation"],"BioSample":x["BioSample_details"]} for x in rows] for g,rows in report["samples"].items()}},ensure_ascii=False))
 print("TOPA_SOURCE_FIELD_AUDIT_END")
