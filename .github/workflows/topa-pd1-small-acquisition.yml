@@ -54,3 +54,20 @@ jobs:
           assert any(r["status"] == "ACQUIRED" and "GSE293489" in r["path"] for r in a["files"]), "Chen GEO metadata missing"
           assert any(r["status"] == "ACQUIRED" and "GSE327655" in r["path"] for r in a["files"]), "Wu GEO metadata missing"
           PY
+
+      - name: Audit GEO manifest, true units and matrices (fail closed)
+        if: always()
+        shell: bash
+        run: |
+          python -m pip install --disable-pip-version-check scipy
+          TOPA_OUTPUT=topa_pd1_acquisition TOPA_AUDIT_OUTPUT=topa_pd1_audit python longevity-survivor/tools/audit_pd1_mi_tac_manifest.py 2>&1 | tee topa_pd1_audit.log
+      - name: Upload compact GSM, provenance and replay-gate audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-pd1-mi-tac-gsm-matrix-audit
+          path: |
+            topa_pd1_audit/
+            topa_pd1_audit.log
+          if-no-files-found: warn
+          retention-days: 14
