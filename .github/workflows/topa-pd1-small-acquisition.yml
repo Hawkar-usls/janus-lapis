@@ -1,0 +1,56 @@
+name: TOPA PD1 MI TAC public source acquisition
+
+on:
+  push:
+    branches: [LONGEVITY-SURVIVOR]
+    paths:
+      - .github/workflows/topa-pd1-small-acquisition.yml
+      - longevity-survivor/tools/acquire_pd1_geo_zenodo_small.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - name: Checkout exact branch
+        uses: actions/checkout@v4
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch bounded public sources with hashes
+        shell: bash
+        run: |
+          set +e
+          TOPA_OUTPUT=topa_pd1_acquisition python longevity-survivor/tools/acquire_pd1_geo_zenodo_small.py 2>&1 | tee topa_acquisition.log
+          code=${PIPESTATUS[0]}
+          echo "$code" > topa_exit_code.txt
+          exit 0
+      - name: Upload source bytes and provenance manifest
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-pd1-geo-zenodo-verified-public-bytes
+          path: |
+            topa_pd1_acquisition/
+            topa_acquisition.log
+            topa_exit_code.txt
+          if-no-files-found: error
+          retention-days: 7
+      - name: Enforce script completion and MD5 validity
+        shell: bash
+        run: |
+          test "$(cat topa_exit_code.txt)" = "0"
+          python - <<'PY'
+          import json
+          a = json.load(open("topa_pd1_acquisition/manifest.json"))
+          f = [r for r in a["files"] if r["path"].endswith("zenodo/preprocess.R")]
+          assert f and f[0]["status"] == "ACQUIRED", "Zenodo preprocess.R not obtained"
+          assert f[0]["md5"] == "c09afc0f77fa13f63329de811f208f59", "Zenodo checksum mismatch"
+          assert any(r["status"] == "ACQUIRED" and "GSE293489" in r["path"] for r in a["files"]), "Chen GEO metadata missing"
+          assert any(r["status"] == "ACQUIRED" and "GSE327655" in r["path"] for r in a["files"]), "Wu GEO metadata missing"
+          PY
