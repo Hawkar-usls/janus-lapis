@@ -1,0 +1,674 @@
+{
+  "schema_id": "janus.longevity_survivor.wu_tac_mouse_bulk_source_column_replay.v1",
+  "authored_utc_date": "2026-10-17",
+  "artifact_id": "HEART-PD1-WU-TAC-BULK-COUNT-REPLAY-2026-10-17-v1.0",
+  "dedup": "Same previously registered Wu Circulation study; independent computational recalculation of official deposited counts, not independent biological experiment.",
+  "provenance": {
+    "study": "Wu et al. DOI 10.1161/CIRCULATIONAHA.125.074024",
+    "accession": "GSE327655",
+    "sample_level_GEO_metadata": [
+      {
+        "gsm": "GSM9662756..GSM9662758",
+        "published_group": "TAC + anti-IgG",
+        "n_labelled_libraries": 3
+      },
+      {
+        "gsm": "GSM9662759..GSM9662761",
+        "published_group": "TAC + anti-PD1",
+        "n_labelled_libraries": 3
+      }
+    ],
+    "source_counts_and_FPKM": [
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE327nnn/GSE327655/suppl/GSE327655_counts_All_Samples.csv.gz",
+        "path": "topa_wu_bulk_replay/GSE327655_counts_All_Samples.csv.gz",
+        "size_bytes": 3438469,
+        "sha256": "ebf519149d26a2c77841fd945f5aca8f861ff61f68d38f8c2a896833be70f327"
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE327nnn/GSE327655/suppl/GSE327655_FPKM_All_Samples.csv.gz",
+        "path": "topa_wu_bulk_replay/GSE327655_FPKM_All_Samples.csv.gz",
+        "size_bytes": 4055945,
+        "sha256": "38880214327e0903649e5358355336d75fb0976de884fba786710268b7aaba7b"
+      }
+    ],
+    "source_processing_script": "longevity-survivor/tools/replay_wu_tac_bulk.py",
+    "source_processing_commit": "850d356fc349069a1d8fd06962066560079a6e9b",
+    "github_numeric_replay_run": 39028467288,
+    "github_numeric_replay_url": "https://github.com/Hawkar-usls/janus-lapis/actions/runs/39028467288",
+    "data_directly_retrieved_from": "Official NCBI GEO supplementary directory GSE327655",
+    "replay_source_kind": "downloaded raw counts + independent CPM calculation; not authors' plot transcription"
+  },
+  "source_numeric_table_schema": {
+    "genes": 54929,
+    "source_columns": [
+      "TAC1",
+      "TAC2",
+      "TAC3",
+      "TP1",
+      "TP2",
+      "TP3"
+    ],
+    "gene_name_column": "gene_name",
+    "original_gene_id_column": "gene_id",
+    "assay": "mouse left-ventricle bulk RNAseq",
+    "comparison_labels": "TAC vs TP, source column names only",
+    "explicit_GSM_crosswalk": "NOT_PRESENT_IN_COUNTS_TABLE_AND_NOT_INDEPENDENTLY_CONFIRMED",
+    "probable_but_not_admitted_mapping": "TAC1..3 might correspond to GEO anti-IgG three replicates, TP1..3 to anti-PD1 three replicates; do not assert without primary crosswalk",
+    "independent_mouse_ids": "NOT_VERIFIED",
+    "gene_expression_units": "count of gene / total column counts * 1e6 (CPM)",
+    "normalization_caution": "Library-size only, no TMM/DESeq2 size-factor adjustment, cell composition confounded; no differential p-values."
+  },
+  "source_column_per_GSM_unlinked": {
+    "TAC1": {
+      "source_column": "TAC1",
+      "group_label_in_data": "TAC",
+      "GSM_crosswalk": "NOT_VERIFIED",
+      "total_library_counts": 18063344,
+      "genes": {
+        "Cxcl9": {
+          "raw_count": 297,
+          "cpm": 16.442138
+        },
+        "Cxcl10": {
+          "raw_count": 34,
+          "cpm": 1.882265
+        },
+        "Cxcr3": {
+          "raw_count": 12,
+          "cpm": 0.664329
+        },
+        "Pdcd1": {
+          "raw_count": 2,
+          "cpm": 0.110721
+        },
+        "Gzmb": {
+          "raw_count": 3,
+          "cpm": 0.166082
+        },
+        "Prf1": {
+          "raw_count": 3,
+          "cpm": 0.166082
+        },
+        "Postn": {
+          "raw_count": 3616,
+          "cpm": 200.184418
+        },
+        "Col1a1": {
+          "raw_count": 2635,
+          "cpm": 145.875537
+        },
+        "Acta2": {
+          "raw_count": 2916,
+          "cpm": 161.431903
+        },
+        "Trdc": {
+          "raw_count": 10,
+          "cpm": 0.553607
+        },
+        "Cd8a": {
+          "raw_count": 9,
+          "cpm": 0.498247
+        },
+        "Cd3d": {
+          "raw_count": 4,
+          "cpm": 0.221443
+        },
+        "Pdgfra": {
+          "raw_count": 1343,
+          "cpm": 74.349467
+        }
+      }
+    },
+    "TAC2": {
+      "source_column": "TAC2",
+      "group_label_in_data": "TAC",
+      "GSM_crosswalk": "NOT_VERIFIED",
+      "total_library_counts": 18974921,
+      "genes": {
+        "Cxcl9": {
+          "raw_count": 284,
+          "cpm": 14.967124
+        },
+        "Cxcl10": {
+          "raw_count": 62,
+          "cpm": 3.267471
+        },
+        "Cxcr3": {
+          "raw_count": 9,
+          "cpm": 0.47431
+        },
+        "Pdcd1": {
+          "raw_count": 1,
+          "cpm": 0.052701
+        },
+        "Gzmb": {
+          "raw_count": 5,
+          "cpm": 0.263506
+        },
+        "Prf1": {
+          "raw_count": 8,
+          "cpm": 0.421609
+        },
+        "Postn": {
+          "raw_count": 14527,
+          "cpm": 765.589485
+        },
+        "Col1a1": {
+          "raw_count": 5222,
+          "cpm": 275.205362
+        },
+        "Acta2": {
+          "raw_count": 3343,
+          "cpm": 176.179917
+        },
+        "Trdc": {
+          "raw_count": 4,
+          "cpm": 0.210805
+        },
+        "Cd8a": {
+          "raw_count": 10,
+          "cpm": 0.527011
+        },
+        "Cd3d": {
+          "raw_count": 5,
+          "cpm": 0.263506
+        },
+        "Pdgfra": {
+          "raw_count": 1423,
+          "cpm": 74.993725
+        }
+      }
+    },
+    "TAC3": {
+      "source_column": "TAC3",
+      "group_label_in_data": "TAC",
+      "GSM_crosswalk": "NOT_VERIFIED",
+      "total_library_counts": 19708578,
+      "genes": {
+        "Cxcl9": {
+          "raw_count": 224,
+          "cpm": 11.365609
+        },
+        "Cxcl10": {
+          "raw_count": 30,
+          "cpm": 1.52218
+        },
+        "Cxcr3": {
+          "raw_count": 8,
+          "cpm": 0.405915
+        },
+        "Pdcd1": {
+          "raw_count": 4,
+          "cpm": 0.202957
+        },
+        "Gzmb": {
+          "raw_count": 4,
+          "cpm": 0.202957
+        },
+        "Prf1": {
+          "raw_count": 8,
+          "cpm": 0.405915
+        },
+        "Postn": {
+          "raw_count": 14018,
+          "cpm": 711.263897
+        },
+        "Col1a1": {
+          "raw_count": 8234,
+          "cpm": 417.787625
+        },
+        "Acta2": {
+          "raw_count": 5532,
+          "cpm": 280.689961
+        },
+        "Trdc": {
+          "raw_count": 8,
+          "cpm": 0.405915
+        },
+        "Cd8a": {
+          "raw_count": 12,
+          "cpm": 0.608872
+        },
+        "Cd3d": {
+          "raw_count": 10,
+          "cpm": 0.507393
+        },
+        "Pdgfra": {
+          "raw_count": 1114,
+          "cpm": 56.523611
+        }
+      }
+    },
+    "TP1": {
+      "source_column": "TP1",
+      "group_label_in_data": "TP",
+      "GSM_crosswalk": "NOT_VERIFIED",
+      "total_library_counts": 18664362,
+      "genes": {
+        "Cxcl9": {
+          "raw_count": 115,
+          "cpm": 6.161475
+        },
+        "Cxcl10": {
+          "raw_count": 35,
+          "cpm": 1.875232
+        },
+        "Cxcr3": {
+          "raw_count": 7,
+          "cpm": 0.375046
+        },
+        "Pdcd1": {
+          "raw_count": 1,
+          "cpm": 0.053578
+        },
+        "Gzmb": {
+          "raw_count": 10,
+          "cpm": 0.53578
+        },
+        "Prf1": {
+          "raw_count": 14,
+          "cpm": 0.750093
+        },
+        "Postn": {
+          "raw_count": 17769,
+          "cpm": 952.028256
+        },
+        "Col1a1": {
+          "raw_count": 9435,
+          "cpm": 505.508841
+        },
+        "Acta2": {
+          "raw_count": 1663,
+          "cpm": 89.100286
+        },
+        "Trdc": {
+          "raw_count": 1,
+          "cpm": 0.053578
+        },
+        "Cd8a": {
+          "raw_count": 19,
+          "cpm": 1.017983
+        },
+        "Cd3d": {
+          "raw_count": 10,
+          "cpm": 0.53578
+        },
+        "Pdgfra": {
+          "raw_count": 2189,
+          "cpm": 117.282337
+        }
+      }
+    },
+    "TP2": {
+      "source_column": "TP2",
+      "group_label_in_data": "TP",
+      "GSM_crosswalk": "NOT_VERIFIED",
+      "total_library_counts": 21093163,
+      "genes": {
+        "Cxcl9": {
+          "raw_count": 92,
+          "cpm": 4.361603
+        },
+        "Cxcl10": {
+          "raw_count": 7,
+          "cpm": 0.331861
+        },
+        "Cxcr3": {
+          "raw_count": 7,
+          "cpm": 0.331861
+        },
+        "Pdcd1": {
+          "raw_count": 3,
+          "cpm": 0.142226
+        },
+        "Gzmb": {
+          "raw_count": 7,
+          "cpm": 0.331861
+        },
+        "Prf1": {
+          "raw_count": 5,
+          "cpm": 0.237044
+        },
+        "Postn": {
+          "raw_count": 8277,
+          "cpm": 392.402031
+        },
+        "Col1a1": {
+          "raw_count": 5201,
+          "cpm": 246.572788
+        },
+        "Acta2": {
+          "raw_count": 2336,
+          "cpm": 110.746786
+        },
+        "Trdc": {
+          "raw_count": 8,
+          "cpm": 0.37927
+        },
+        "Cd8a": {
+          "raw_count": 22,
+          "cpm": 1.042992
+        },
+        "Cd3d": {
+          "raw_count": 5,
+          "cpm": 0.237044
+        },
+        "Pdgfra": {
+          "raw_count": 1411,
+          "cpm": 66.893713
+        }
+      }
+    },
+    "TP3": {
+      "source_column": "TP3",
+      "group_label_in_data": "TP",
+      "GSM_crosswalk": "NOT_VERIFIED",
+      "total_library_counts": 20571721,
+      "genes": {
+        "Cxcl9": {
+          "raw_count": 138,
+          "cpm": 6.708238
+        },
+        "Cxcl10": {
+          "raw_count": 32,
+          "cpm": 1.555533
+        },
+        "Cxcr3": {
+          "raw_count": 8,
+          "cpm": 0.388883
+        },
+        "Pdcd1": {
+          "raw_count": 2,
+          "cpm": 0.097221
+        },
+        "Gzmb": {
+          "raw_count": 2,
+          "cpm": 0.097221
+        },
+        "Prf1": {
+          "raw_count": 1,
+          "cpm": 0.04861
+        },
+        "Postn": {
+          "raw_count": 25341,
+          "cpm": 1231.836656
+        },
+        "Col1a1": {
+          "raw_count": 13980,
+          "cpm": 679.573673
+        },
+        "Acta2": {
+          "raw_count": 3291,
+          "cpm": 159.976893
+        },
+        "Trdc": {
+          "raw_count": 1,
+          "cpm": 0.04861
+        },
+        "Cd8a": {
+          "raw_count": 17,
+          "cpm": 0.826377
+        },
+        "Cd3d": {
+          "raw_count": 4,
+          "cpm": 0.194442
+        },
+        "Pdgfra": {
+          "raw_count": 2107,
+          "cpm": 102.422155
+        }
+      }
+    }
+  },
+  "descriptive_TP_vs_TAC_CPM": {
+    "Cxcl9": {
+      "TAC_CPM": [
+        16.442138,
+        14.967124,
+        11.365609
+      ],
+      "TP_CPM": [
+        6.161475,
+        4.361603,
+        6.708238
+      ],
+      "TAC_mean_CPM": 14.25829,
+      "TP_mean_CPM": 5.743772,
+      "TP_over_TAC_ratio": 0.402837
+    },
+    "Cxcl10": {
+      "TAC_CPM": [
+        1.882265,
+        3.267471,
+        1.52218
+      ],
+      "TP_CPM": [
+        1.875232,
+        0.331861,
+        1.555533
+      ],
+      "TAC_mean_CPM": 2.223972,
+      "TP_mean_CPM": 1.254209,
+      "TP_over_TAC_ratio": 0.56395
+    },
+    "Cxcr3": {
+      "TAC_CPM": [
+        0.664329,
+        0.47431,
+        0.405915
+      ],
+      "TP_CPM": [
+        0.375046,
+        0.331861,
+        0.388883
+      ],
+      "TAC_mean_CPM": 0.514851,
+      "TP_mean_CPM": 0.365263,
+      "TP_over_TAC_ratio": 0.709454
+    },
+    "Pdcd1": {
+      "TAC_CPM": [
+        0.110721,
+        0.052701,
+        0.202957
+      ],
+      "TP_CPM": [
+        0.053578,
+        0.142226,
+        0.097221
+      ],
+      "TAC_mean_CPM": 0.122126,
+      "TP_mean_CPM": 0.097675,
+      "TP_over_TAC_ratio": 0.799787
+    },
+    "Gzmb": {
+      "TAC_CPM": [
+        0.166082,
+        0.263506,
+        0.202957
+      ],
+      "TP_CPM": [
+        0.53578,
+        0.331861,
+        0.097221
+      ],
+      "TAC_mean_CPM": 0.210848,
+      "TP_mean_CPM": 0.321621,
+      "TP_over_TAC_ratio": 1.525365
+    },
+    "Prf1": {
+      "TAC_CPM": [
+        0.166082,
+        0.421609,
+        0.405915
+      ],
+      "TP_CPM": [
+        0.750093,
+        0.237044,
+        0.04861
+      ],
+      "TAC_mean_CPM": 0.331202,
+      "TP_mean_CPM": 0.345249,
+      "TP_over_TAC_ratio": 1.042412
+    },
+    "Postn": {
+      "TAC_CPM": [
+        200.184418,
+        765.589485,
+        711.263897
+      ],
+      "TP_CPM": [
+        952.028256,
+        392.402031,
+        1231.836656
+      ],
+      "TAC_mean_CPM": 559.0126,
+      "TP_mean_CPM": 858.755648,
+      "TP_over_TAC_ratio": 1.536201
+    },
+    "Col1a1": {
+      "TAC_CPM": [
+        145.875537,
+        275.205362,
+        417.787625
+      ],
+      "TP_CPM": [
+        505.508841,
+        246.572788,
+        679.573673
+      ],
+      "TAC_mean_CPM": 279.622841,
+      "TP_mean_CPM": 477.218434,
+      "TP_over_TAC_ratio": 1.70665
+    },
+    "Acta2": {
+      "TAC_CPM": [
+        161.431903,
+        176.179917,
+        280.689961
+      ],
+      "TP_CPM": [
+        89.100286,
+        110.746786,
+        159.976893
+      ],
+      "TAC_mean_CPM": 206.100594,
+      "TP_mean_CPM": 119.941322,
+      "TP_over_TAC_ratio": 0.581955
+    },
+    "Trdc": {
+      "TAC_CPM": [
+        0.553607,
+        0.210805,
+        0.405915
+      ],
+      "TP_CPM": [
+        0.053578,
+        0.37927,
+        0.04861
+      ],
+      "TAC_mean_CPM": 0.390109,
+      "TP_mean_CPM": 0.160486,
+      "TP_over_TAC_ratio": 0.411388
+    },
+    "Cd8a": {
+      "TAC_CPM": [
+        0.498247,
+        0.527011,
+        0.608872
+      ],
+      "TP_CPM": [
+        1.017983,
+        1.042992,
+        0.826377
+      ],
+      "TAC_mean_CPM": 0.54471,
+      "TP_mean_CPM": 0.962451,
+      "TP_over_TAC_ratio": 1.766905
+    },
+    "Cd3d": {
+      "TAC_CPM": [
+        0.221443,
+        0.263506,
+        0.507393
+      ],
+      "TP_CPM": [
+        0.53578,
+        0.237044,
+        0.194442
+      ],
+      "TAC_mean_CPM": 0.330781,
+      "TP_mean_CPM": 0.322422,
+      "TP_over_TAC_ratio": 0.97473
+    },
+    "Pdgfra": {
+      "TAC_CPM": [
+        74.349467,
+        74.993725,
+        56.523611
+      ],
+      "TP_CPM": [
+        117.282337,
+        66.893713,
+        102.422155
+      ],
+      "TAC_mean_CPM": 68.622268,
+      "TP_mean_CPM": 95.532735,
+      "TP_over_TAC_ratio": 1.392154
+    }
+  },
+  "FPKM_receipt": {
+    "status": "BLOCKED_UNRECOGNIZED_SOURCE_COUNT_COLUMNS",
+    "columns": [
+      "gene_id",
+      "TAC1",
+      "TAC2",
+      "TAC3",
+      "TP1",
+      "TP2",
+      "TP3",
+      "gene_name",
+      "gene_chr",
+      "gene_start",
+      "gene_end",
+      "gene_strand",
+      "gene_length",
+      "gene_biotype",
+      "gene_description",
+      "tf_family"
+    ],
+    "shape": [
+      54929,
+      16
+    ],
+    "quantitative_FPKM_reanalysis": "NOT_PERFORMED"
+  },
+  "interpretation": {
+    "claim_class": "DESCRIPTIVE_NUMERIC_RNA_REPLAY_ONLY",
+    "main_exploratory_direction": "TP-labelled columns have higher CD8A and GZMB CPM, lower CXCL9/CXCL10/CXCR3 CPM than TAC-labelled columns; independent group bridge, cell-type and biological variance not established.",
+    "no_cell_origin_inference": true,
+    "statistical_model": "NO_INFERENTIAL_TEST_UNTIL_EXPLICIT_GSM_CROSSWALK_AND_INDEPENDENT_MOUSE_UNIT",
+    "treatment_effect_validated": false,
+    "mechanistic_causality_validated": false,
+    "risk": "Bulk left ventricle counts mix immune, fibroblast and cardiomyocyte contributions; unknown cell composition alters observed levels."
+  },
+  "gates": {
+    "OFFICIAL_WU_RAW_COUNT_TABLE": "ACQUIRED_SHA256_RECEIPT",
+    "WU_BULK_RAW_COUNT_REPLAY": "PASS_DESCRIPTIVE_SIX_SOURCE_COLUMNS",
+    "WU_GSM_TO_SOURCE_COLUMN_CROSSWALK": "OPEN",
+    "WU_TRUE_ANIMAL_N": "OPEN",
+    "WU_CELL_TYPE_PROPORTIONS": "NOT_IDENTIFIABLE_FROM_BULK",
+    "MI_VS_TAC_POOLED_INFERENCE": "PROHIBITED",
+    "STRATIFIED_MI_TAC_GENE_INFERENTIAL_STATISTICS": "NOT_ADMITTED",
+    "STRICT_PROFIBROTIC_CELL_EXIT": "NOT_ESTABLISHED",
+    "MECHANICAL_EXIT_COUPLING": "NOT_ADMITTED"
+  },
+  "next_topa": [
+    "Verify author-specified TAC1..3 ↔ GSM9662756..8 and TP1..3 ↔ GSM9662759..61 exact mapping by original methods/supplementary; do not infer sole from column order.",
+    "Verify independent mouse identity and pooling, then compute mouse-level differential expression within Wu TAC antiIgG versus antiPD1 and Chen MI versus Sham, never pooled.",
+    "Chen four matrices: run QC, doublet removal, transcript contamination checks and cell subtype reference annotations before proportions.",
+    "Wu bulk: use immune-cell deconvolution only exploratory and validate with orthogonal flow or immunostaining, not as direct cell composition fact.",
+    "Seek longitudinal activated fibroblast fate/clearance and pre/post mature ECM stiffness after established-scar delayed intervention."
+  ]
+}
