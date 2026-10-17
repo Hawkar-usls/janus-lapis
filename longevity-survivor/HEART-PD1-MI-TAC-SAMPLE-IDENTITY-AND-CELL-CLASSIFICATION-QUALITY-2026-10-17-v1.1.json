@@ -1,0 +1,392 @@
+{
+  "schema_id": "janus.longevity_survivor.primary_biosample_independence_and_cell_classifier_robustness.v1",
+  "checkpoint_id": "HEART-PD1-MI-TAC-SAMPLE-IDENTITY-AND-CELL-CLASSIFICATION-QUALITY-2026-10-17-v1.1",
+  "created_utc": "2026-10-17",
+  "dedup": "This is a substantive extension of the same Chen/Wu studies, not another independent external experiment. Source-field mapping and BioSample IDs were not individually evidenced in previous gate.",
+  "authority": {
+    "GEO": "GSE293489 GSE327655 original GEO family SOFT metadata",
+    "Biosamples": "Linked public EMBL-EBI BioSample live records, one accession per GSM but not biological mouse identity proof",
+    "Chen_study": "DOI 10.1038/s41421-026-00924-2",
+    "Wu_study": "DOI 10.1161/CIRCULATIONAHA.125.074024",
+    "GEO_field_evidence_run": "https://github.com/Hawkar-usls/janus-lapis/actions/runs/39032714993",
+    "GEO_field_evidence_artifact_id": 12101057187,
+    "GEO_field_evidence_artifact_SHA256": "3aee73094aa25a72203caa60987481c25bc560c631f049e28d4cde62fc68decc",
+    "atlas_source_run": "https://github.com/Hawkar-usls/janus-lapis/actions/runs/39032379990",
+    "atlas_source_artifact_id": 12100213728,
+    "atlas_extraction_run": "https://github.com/Hawkar-usls/janus-lapis/actions/runs/39032818434",
+    "atlas_extraction_artifact_id": 12100947654,
+    "atlas_extraction_artifact_SHA256": "2a2d26f23f5631aa1cbd8e96b85f0c7e3bed3880f0d33012c06f2a06cb4aa207"
+  },
+  "Wu_exact_source_crosswalk": {
+    "GSM9662756": {
+      "evidence_field": "!Sample_description",
+      "matching_value": [
+        "Column name in counts_All_Samples.csv and FPKM_All_Samples.csv: TAC1"
+      ],
+      "corresponding_input_column": "TAC1"
+    },
+    "GSM9662757": {
+      "evidence_field": "!Sample_description",
+      "matching_value": [
+        "Column name in counts_All_Samples.csv and FPKM_All_Samples.csv: TAC2"
+      ],
+      "corresponding_input_column": "TAC2"
+    },
+    "GSM9662758": {
+      "evidence_field": "!Sample_description",
+      "matching_value": [
+        "Column name in counts_All_Samples.csv and FPKM_All_Samples.csv: TAC3"
+      ],
+      "corresponding_input_column": "TAC3"
+    },
+    "GSM9662759": {
+      "evidence_field": "!Sample_description",
+      "matching_value": [
+        "Column name in counts_All_Samples.csv and FPKM_All_Samples.csv: TP1"
+      ],
+      "corresponding_input_column": "TP1"
+    },
+    "GSM9662760": {
+      "evidence_field": "!Sample_description",
+      "matching_value": [
+        "Column name in counts_All_Samples.csv and FPKM_All_Samples.csv: TP2"
+      ],
+      "corresponding_input_column": "TP2"
+    },
+    "GSM9662761": {
+      "evidence_field": "!Sample_description",
+      "matching_value": [
+        "Column name in counts_All_Samples.csv and FPKM_All_Samples.csv: TP3"
+      ],
+      "corresponding_input_column": "TP3"
+    }
+  },
+  "Wu_exact_group_mapping": {
+    "TAC1": [
+      "GSM9662756",
+      "anti-IgG"
+    ],
+    "TAC2": [
+      "GSM9662757",
+      "anti-IgG"
+    ],
+    "TAC3": [
+      "GSM9662758",
+      "anti-IgG"
+    ],
+    "TP1": [
+      "GSM9662759",
+      "anti-PD-1"
+    ],
+    "TP2": [
+      "GSM9662760",
+      "anti-PD-1"
+    ],
+    "TP3": [
+      "GSM9662761",
+      "anti-PD-1"
+    ]
+  },
+  "biosample_identity": {
+    "GSE293489": [
+      {
+        "gsm": "GSM8884015",
+        "biosample_accessions": [
+          "SAMN47737843"
+        ],
+        "bioSample_status": [
+          "ACCESSIBLE"
+        ],
+        "sra_accessions": [
+          "SRX28216703"
+        ],
+        "independent_animal_id_in_biosample": false,
+        "pooling_proven_absent": false
+      },
+      {
+        "gsm": "GSM8884016",
+        "biosample_accessions": [
+          "SAMN47737842"
+        ],
+        "bioSample_status": [
+          "ACCESSIBLE"
+        ],
+        "sra_accessions": [
+          "SRX28216704"
+        ],
+        "independent_animal_id_in_biosample": false,
+        "pooling_proven_absent": false
+      },
+      {
+        "gsm": "GSM8884017",
+        "biosample_accessions": [
+          "SAMN47737841"
+        ],
+        "bioSample_status": [
+          "ACCESSIBLE"
+        ],
+        "sra_accessions": [
+          "SRX28216705"
+        ],
+        "independent_animal_id_in_biosample": false,
+        "pooling_proven_absent": false
+      },
+      {
+        "gsm": "GSM8884018",
+        "biosample_accessions": [
+          "SAMN47737840"
+        ],
+        "bioSample_status": [
+          "ACCESSIBLE"
+        ],
+        "sra_accessions": [
+          "SRX28216706"
+        ],
+        "independent_animal_id_in_biosample": false,
+        "pooling_proven_absent": false
+      }
+    ],
+    "GSE327655": [
+      {
+        "gsm": "GSM9662756",
+        "biosample_accessions": [
+          "SAMN57198891"
+        ],
+        "bioSample_status": [
+          "ACCESSIBLE"
+        ],
+        "sra_accessions": [
+          "SRX32890336"
+        ],
+        "independent_animal_id_in_biosample": false,
+        "pooling_proven_absent": false
+      },
+      {
+        "gsm": "GSM9662757",
+        "biosample_accessions": [
+          "SAMN57198890"
+        ],
+        "bioSample_status": [
+          "ACCESSIBLE"
+        ],
+        "sra_accessions": [
+          "SRX32890337"
+        ],
+        "independent_animal_id_in_biosample": false,
+        "pooling_proven_absent": false
+      },
+      {
+        "gsm": "GSM9662758",
+        "biosample_accessions": [
+          "SAMN57198889"
+        ],
+        "bioSample_status": [
+          "ACCESSIBLE"
+        ],
+        "sra_accessions": [
+          "SRX32890338"
+        ],
+        "independent_animal_id_in_biosample": false,
+        "pooling_proven_absent": false
+      },
+      {
+        "gsm": "GSM9662759",
+        "biosample_accessions": [
+          "SAMN57198888"
+        ],
+        "bioSample_status": [
+          "ACCESSIBLE"
+        ],
+        "sra_accessions": [
+          "SRX32890339"
+        ],
+        "independent_animal_id_in_biosample": false,
+        "pooling_proven_absent": false
+      },
+      {
+        "gsm": "GSM9662760",
+        "biosample_accessions": [
+          "SAMN57198887"
+        ],
+        "bioSample_status": [
+          "ACCESSIBLE"
+        ],
+        "sra_accessions": [
+          "SRX32890340"
+        ],
+        "independent_animal_id_in_biosample": false,
+        "pooling_proven_absent": false
+      },
+      {
+        "gsm": "GSM9662761",
+        "biosample_accessions": [
+          "SAMN57198886"
+        ],
+        "bioSample_status": [
+          "ACCESSIBLE"
+        ],
+        "sra_accessions": [
+          "SRX32890341"
+        ],
+        "independent_animal_id_in_biosample": false,
+        "pooling_proven_absent": false
+      }
+    ]
+  },
+  "biological_unit_conclusion": {
+    "separate_BioSample_records_confirmed": 10,
+    "mouse_origin_of_each_library": "UNPROVEN",
+    "pooled_material_absence": "UNPROVEN",
+    "per_animal_replicate_N": "NOT_ADMITTED",
+    "negative_evidence_principle": "GEO, SRA, BioSample each label accessions and libraries; distinct registry IDs alone cannot certify distinct source animals.",
+    "scientific_action": "ask source authors for direct library->mouse mapping and pooling status; do not fabricate 2+2 and 3+3 independent n"
+  },
+  "atlas": {
+    "study": "CHEN_MOUSE_MI",
+    "QC_author_filters": "genes>=300, UMIs<=40000, mt%<=5",
+    "QC_cells_total": 45284,
+    "per_group_ambiguity": {
+      "SHAM": {
+        "total_filtered_cells": 27629,
+        "ambiguous_count": 8452,
+        "fraction_ambiguous": 0.30591,
+        "unresolved_count": 291,
+        "strict_T_candidate_count": 409,
+        "strict_fibroblast_candidate_count": 14864
+      },
+      "MI": {
+        "total_filtered_cells": 17655,
+        "ambiguous_count": 10607,
+        "fraction_ambiguous": 0.600793,
+        "unresolved_count": 243,
+        "strict_T_candidate_count": 996,
+        "strict_fibroblast_candidate_count": 1718
+      }
+    },
+    "per_GSM_broad_candidates": {
+      "GSM8884015": {
+        "group": "SHAM",
+        "total_QC": 11716,
+        "candidate_cell_counts": {
+          "T_candidate": 233,
+          "B_candidate": 385,
+          "NK_candidate": 26,
+          "myeloid_candidate": 895,
+          "fibroblast_candidate": 6493,
+          "endothelial_candidate": 59,
+          "lymphatic_candidate": 1,
+          "pericyte_candidate": 116,
+          "smooth_muscle_candidate": 2,
+          "neutrophil_candidate": 284,
+          "cardiomyocyte_contaminant": 0,
+          "AMBIGUOUS": 3074,
+          "UNRESOLVED": 148
+        },
+        "qc_failures_not_mutually_exclusive": {
+          "gene_low": 258,
+          "UMI_high": 7,
+          "mito_high": 421
+        }
+      },
+      "GSM8884016": {
+        "group": "SHAM",
+        "total_QC": 15913,
+        "candidate_cell_counts": {
+          "T_candidate": 176,
+          "B_candidate": 403,
+          "NK_candidate": 29,
+          "myeloid_candidate": 970,
+          "fibroblast_candidate": 8371,
+          "endothelial_candidate": 64,
+          "lymphatic_candidate": 1,
+          "pericyte_candidate": 172,
+          "smooth_muscle_candidate": 19,
+          "neutrophil_candidate": 186,
+          "cardiomyocyte_contaminant": 1,
+          "AMBIGUOUS": 5378,
+          "UNRESOLVED": 143
+        },
+        "qc_failures_not_mutually_exclusive": {
+          "gene_low": 100,
+          "UMI_high": 5,
+          "mito_high": 1129
+        }
+      },
+      "GSM8884017": {
+        "group": "MI",
+        "total_QC": 8036,
+        "candidate_cell_counts": {
+          "T_candidate": 359,
+          "B_candidate": 801,
+          "NK_candidate": 39,
+          "myeloid_candidate": 616,
+          "fibroblast_candidate": 914,
+          "endothelial_candidate": 10,
+          "lymphatic_candidate": 0,
+          "pericyte_candidate": 6,
+          "smooth_muscle_candidate": 2,
+          "neutrophil_candidate": 522,
+          "cardiomyocyte_contaminant": 11,
+          "AMBIGUOUS": 4639,
+          "UNRESOLVED": 117
+        },
+        "qc_failures_not_mutually_exclusive": {
+          "gene_low": 43,
+          "UMI_high": 634,
+          "mito_high": 214
+        }
+      },
+      "GSM8884018": {
+        "group": "MI",
+        "total_QC": 9619,
+        "candidate_cell_counts": {
+          "T_candidate": 637,
+          "B_candidate": 649,
+          "NK_candidate": 99,
+          "myeloid_candidate": 905,
+          "fibroblast_candidate": 804,
+          "endothelial_candidate": 18,
+          "lymphatic_candidate": 0,
+          "pericyte_candidate": 5,
+          "smooth_muscle_candidate": 6,
+          "neutrophil_candidate": 384,
+          "cardiomyocyte_contaminant": 18,
+          "AMBIGUOUS": 5968,
+          "UNRESOLVED": 126
+        },
+        "qc_failures_not_mutually_exclusive": {
+          "gene_low": 25,
+          "UMI_high": 491,
+          "mito_high": 197
+        }
+      }
+    },
+    "warning": "Binary 2+ markers yields high multi-lineage ambiguity, particularly MI; no cross-cell-state interpretation or cell-type proportions admitted as validated."
+  },
+  "gates": {
+    "WU_SOURCE_COLUMN_TO_GSM": "PASS_DIRECT_PRIMARY_METADATA",
+    "EXTERNAL_SAMPLE_ACCESSIONS": "PASS_TEN_DISTINCT_BIOSAMPLE_RECORDS",
+    "TRUE_INDEPENDENT_ANIMAL_ID": "NOT_VERIFIED_BOTH_STUDIES",
+    "NO_POOLING_PROOF": "NOT_VERIFIED",
+    "CHEN_AUTHOR_QC": "PASS",
+    "CHEN_MULTIMARKER_CANDIDATE_COUNTS": "PASS_DESCRIPTIVE_PER_GSM",
+    "CELL_IDENTITY_HIGH_CONFIDENCE": "FAIL_HIGH_AMBIGUITY",
+    "ANIMAL_LEVEL_CELL_SUBTYPE_PROPORTIONS": "NOT_ADMITTED",
+    "ANIMAL_LEVEL_GENE_INFERENCE": "NOT_ADMITTED",
+    "STRICT_PROFIBROTIC_CELL_EXIT": "NOT_ESTABLISHED",
+    "MECHANICAL_EXIT_COUPLING": "NOT_ADMITTED"
+  },
+  "safeguards": [
+    "UNIQUENESS_OF_BIOSAMPLE_ACCESSION_NOT_UNIQUENESS_OF_ANIMAL",
+    "NO_GAMMA_DELTA_FROM_STRICT_MARKERS_NOT_NEGATIVE_BIOLOGY",
+    "RNA_PDCD1_NOT_FACS_PD1",
+    "AMBIGUOUS_MARKER_CELLS_NOT_AUTOMATICALLY_DOUBLETS",
+    "PUBLISHED_CAUSAL_STUDY_NOT_REPLICATED_BY_REANALYSIS"
+  ],
+  "next_topa": [
+    "Seek author primary supplementary or corresponding-author confirmation of physical mouse identity and possible pooling for GSE293489 and GSE327655.",
+    "Validate classifier with cluster-level marker enrichment, reference atlas, and independent doublet assessment; require ambiguity reduction or quantify sensitivity.",
+    "After independent animal mapping and cell annotation are defensible, calculate per-animal proportion CIs; never cell-level p-values with N=45k.",
+    "Maintain strict EXIT and mechanical reversion gates closed without pre-treatment scar and lineage fate."
+  ]
+}
