@@ -85,7 +85,7 @@ report={"schema":"janus.topa.gsm_independent_animal_crosswalk_v1",
 for gse in ("GSE293489","GSE327655"):
  p=ROOT/gse/(gse+"_family.soft.gz")
  if not p.exists():raise FileNotFoundError(str(p))
- rec=next((v for v in manifest["files"] if v.get("path","").endswith(str(p)) and v.get("status")=="ACQUIRED"),None)
+ rec=next((v for v in manifest["files"] if v.get("path","").endswith(str(p).removeprefix("prior/")) and v.get("status")=="ACQUIRED"),None)
  if rec is None or sha(p)!=rec.get("sha256"):raise ValueError("Invalid GEO source SHA for "+gse)
  se, sa=soft(p)
  report["series"][gse]={"series_overall_design":se.get("!Series_overall_design",[]),
