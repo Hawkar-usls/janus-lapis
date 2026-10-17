@@ -1,0 +1,44 @@
+name: TOPA Chen per-GSM Scrublet doublet audit
+on:
+  push:
+    branches: [LONGEVITY-SURVIVOR]
+    paths:
+      - .github/workflows/topa-chen-scrublet-doublets.yml
+      - longevity-survivor/tools/topa_chen_scrublet_per_gsm.py
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  scrublet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned Scrublet runtime
+        run: python -m pip install --disable-pip-version-check 'numpy<2' 'scipy<1.15' 'scikit-learn<1.6' 'scrublet==0.2.3'
+      - name: Load original immutable GEO source matrices
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p prior
+          gh run download 39026401715 --repo "${{ github.repository }}" --name topa-pd1-geo-zenodo-verified-public-bytes --dir prior
+          test -f prior/topa_pd1_acquisition/manifest.json
+      - name: Simulated-neighbor doublet score per independent 10x library
+        shell: bash
+        run: |
+          set -o pipefail
+          TOPA_PD1_ROOT=prior/topa_pd1_acquisition TOPA_DOUBLET_OUT=topa_pd1_doublet python longevity-survivor/tools/topa_chen_scrublet_per_gsm.py 2>&1 | tee topa_scrublet.log
+      - name: Publish compact per-GSM doublet scores and limitations
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-chen-provisional-scrublet-doublet-scores
+          path: |
+            topa_pd1_doublet/report.json
+            topa_scrublet.log
+          if-no-files-found: warn
+          retention-days: 14
