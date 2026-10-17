@@ -1,0 +1,1815 @@
+{
+  "batch_id": "b98bbebfb7c67d76660b",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "fragment_count": 1,
+  "fragment_index": 1,
+  "items": [
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "636e10b92dd9a6c8ed8aebca",
+      "context_id": "12ee588e6c809f2780d16533",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::FORWARD",
+      "direction_title": "Voice / acoustic representation / source preservation [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "speaker",
+        "speaker representation",
+        "speaker verification",
+        "voice"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.3333,
+      "source": "arxiv",
+      "source_context_sha256": "9b714b86e795a4b1d06d3261edbf57a72fdd6daed8fcd52b445811759e0494ae",
+      "source_published": "2026-10-08T02:13:07Z",
+      "source_updated": "2026-10-08T02:13:07Z",
+      "summary": "Speaker verification (SV) performance degrades under language mismatch due to the entanglement of speaker identity with language-specific acoustic cues. To address this problem, we leverage large-scale self-supervised pre-trained models (PTMs) to learn language-agnostic speaker representations. We utilize PTMs as robust front-end feature extractors, capitalizing on their rich acoustic and linguistic knowledge acquired from vast, diverse audio data. These generalized features are then used to train a downstream speaker embedding network, effectively disentangling speaker identity from language-specific characteristics. We validate our approach on the TidyVoice2026 benchmark, which benchmarks SV under language mismatch. Our proposed system (team T02) achieves equal error rates (EERs) of 2.21% on tv26_eval-A and 2.99% on tv26_eval-U.",
+      "tags": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Cross-Lingual Speaker Verification with Self-Supervised Pre-Trained Models",
+      "url": "https://arxiv.org/abs/2610.11099v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "86bfb38aa7429bfc1dd65949",
+      "context_id": "d653ba38d8f17f63c1a0fbe9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::FORWARD",
+      "direction_title": "Voice / acoustic representation / source preservation [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "source separation",
+        "speaker",
+        "speech"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.25,
+      "source": "arxiv",
+      "source_context_sha256": "055ab54d05d49a2d27b6b6b186a06a79739679acae7b66e95dadd69b976e61f2",
+      "source_published": "2026-10-07T02:50:56Z",
+      "source_updated": "2026-10-07T02:50:56Z",
+      "summary": "Blind Source Separation(BSS) is a fundamental problem in signal processing, aiming to separate multiple source signals from their mixtures without prior knowledge of the sources or the mixing process. Traditional approaches, such as Independent Vector Analysis (IVA) exploits statistical independence of sources. Recently, diffusion-based approaches have emerged as a promising alternative by leveraging powerful generative priors. Among them, ArrayDPS formulates BSS problem as a posterior sampling problem, and utilizes a pretrained speech diffusion model to guide the recovery of clean source signals. A key factor behind its separation capability is the multi-channel consistency (MC) objective, which enforces the estimated source signals to reconstruct the observed microphone mixtures through the estimated acoustic transfer functions. However, the number of microphones in the array is often limited, which constrains the performance of ArrayDPS. To address this issue, we propose VM-ArrayDPS, a novel method that augments the microphone array with virtual microphones with higher-SNR, these microphones can offer extra MC constraints to enhance the separation performance. Experimental results demonstrate that VM-ArrayDPS significantly outperforms ArrayDPS on both 2-speaker and 3-speaker datasets, showcasing the effectiveness of virtual microphone augmentation in improving BSS performance. We also did ablation studies to show the influence of the number of virtual microphones and weight of the MC objective brought by virtual microphones.",
+      "tags": [
+        "eess.AS",
+        "cs.LG",
+        "cs.MM",
+        "cs.SD",
+        "eess.SP"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "VM-ARRAYDPS: Virtual Microphone Augmented Diffusion Posterior Sampling for Unsupervised Blind Speech Separation",
+      "url": "https://arxiv.org/abs/2610.09334v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "0b87394e1563431e3e3d59dd",
+      "context_id": "91f518b586e1868c0cb19f7f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::FORWARD",
+      "direction_title": "Voice / acoustic representation / source preservation [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "source separation",
+        "speaker",
+        "speech"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.25,
+      "source": "arxiv",
+      "source_context_sha256": "9e97e71f87fe3a4dfd76ad4419cabbfef993fae12b7317cf82a649d306d0dd08",
+      "source_published": "2026-10-09T09:30:21Z",
+      "source_updated": "2026-10-09T09:30:21Z",
+      "summary": "This paper describes our systems for the Track 1 time-stamped speaker-attributed ASR task of the SmartGlasses Challenge. To handle overlapping speech, background noise and far-field conditions in two-person conversations, we employ SoulX-Transcriber, a multimodal large language model that takes full-length audio as input and generates structured transcriptions. In addition, we investigate the effect of speech frontend processing, including a rule-based Guided Source Separation method and a data-driven speech separation model, both of which improve performance on the validation set. Considering inference stability, our final submission uses the fine-tuned SoulX-Transcriber system, achieving a tcpCER of 6.22 on the test set.",
+      "tags": [
+        "eess.AS",
+        "cs.SD"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Frontend-Assisted Large Audio-Language Models for SLT2026 SmartGlasses Challenge",
+      "url": "https://arxiv.org/abs/2610.13282v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "85d0a0b1537015c40effdddb",
+      "context_id": "27505c6eaf68ed66d6957e2f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::FORWARD",
+      "direction_title": "Voice / acoustic representation / source preservation [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "source separation",
+        "speech",
+        "voice"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.1667,
+      "source": "arxiv",
+      "source_context_sha256": "7acca6be8d760377f1aa3f0ef3e365b977ebfe223f769fd442119bc36713418a",
+      "source_published": "2026-10-08T16:24:12Z",
+      "source_updated": "2026-10-08T16:24:12Z",
+      "summary": "Wearable augmented reality (AR) assistants are moving toward continuous real-world interaction, where they perceive the user's activity through first-person video and audio and provide timely spoken guidance without being explicitly asked. While proactive video assistants, spoken dialog systems, and egocentric task understanding have each advanced rapidly, existing systems do not address the joint problem of deciding when to speak and what to say from continuous first-person streams. We introduce EgoVoice, a framework for training and evaluating proactive egocentric spoken assistants. From HoloAssist video recordings of real human instructors, we construct clean audio streams through source separation and speech resynthesis, and convert each video session into a format where the model must decide at each moment whether to remain silent or provide spoken guidance. We fine-tune an omni-modal LLM with our data, and further improve its proactive intervention behavior with direct preference optimization. Experiments across closed and open-source models show that existing systems rarely produce well-timed, meaningful proactive interventions, while EgoVoice yields clear improvements in intervention timing, content relevance, and human preference over the zero-shot backbone.",
+      "tags": [
+        "cs.CL",
+        "cs.CV",
+        "cs.SD"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "EgoVoice: Proactive Spoken Assistance from Egocentric Multimodal Streams",
+      "url": "https://arxiv.org/abs/2610.12248v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "a831f32e8d535aa875c64de4",
+      "context_id": "fd4f80eef309d73355832d33",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::FORWARD",
+      "direction_title": "Voice / acoustic representation / source preservation [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "sound event",
+        "source separation"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.1667,
+      "source": "arxiv",
+      "source_context_sha256": "d1a3f571a506f8dcb86639f7b8f599fad5a1cb4eeb63941875658111c7e64035",
+      "source_published": "2025-09-21T21:44:10Z",
+      "source_updated": "2025-12-23T09:37:51Z",
+      "summary": "We propose DeepASA, a multi-purpose model for auditory scene analysis that performs multi-input multi-output (MIMO) source separation, dereverberation, sound event detection (SED), audio classification, and direction-of-arrival estimation (DoAE) within a unified framework. DeepASA is designed for complex auditory scenes where multiple, often similar, sound sources overlap in time and move dynamically in space. To achieve robust and consistent inference across tasks, we introduce an object-oriented processing (OOP) strategy. This approach encapsulates diverse auditory features into object-centric representations and refines them through a chain-of-inference (CoI) mechanism. The pipeline comprises a dynamic temporal kernel-based feature extractor, a transformer-based aggregator, and an object separator that yields per-object features. These features feed into multiple task-specific decoders. Our object-centric representations naturally resolve the parameter association ambiguity inherent in traditional track-wise processing. However, early-stage object separation can lead to failure in downstream ASA tasks. To address this, we implement temporal coherence matching (TCM) within the chain-of-inference, enabling multi-task fusion and iterative refinement of object features using estimated auditory parameters. We evaluate DeepASA on representative spatial audio benchmark datasets, including ASA2, MC-FUSS, and STARSS23. Experimental results show that our model achieves state-of-the-art performance across all evaluated tasks, demonstrating its effectiveness in both source separation and auditory parameter estimation under diverse spatial auditory scenes.",
+      "tags": [
+        "eess.AS",
+        "cs.SD"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "DeepASA: An Object-Oriented Multi-Purpose Network for Auditory Scene Analysis",
+      "url": "https://arxiv.org/abs/2509.17247v3"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "7d9d17f558d07d63c33ec1bf",
+      "context_id": "aa8b637f6badb63b472208a7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::FORWARD",
+      "direction_title": "Voice / acoustic representation / source preservation [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "source separation",
+        "speaker"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_context_sha256": "82c76e0c90bee848e51cd39be0322c64fd4ce084abe4145d443b7b3e6aafd201",
+      "source_published": "2026-09-24T13:01:20Z",
+      "source_updated": "2026-09-25T04:01:36Z",
+      "summary": "Although room impulse responses (RIRs) encode source-distance cues, conventional monaural source separation focuses on recovering audio content without estimating source-specific RIRs, losing the associated spatial information. To address this limitation, we propose Distance-Aware Monaural Source Separation using Multi-RIR Estimation (DAMSEP), the first end-to-end framework that is jointly trained for source separation and multi-source RIR estimation from a single-microphone mixture. DAMSEP integrates a separation backbone with shared dereverberation and RIR estimation modules to jointly recover clean sources and source-specific complex convolutive transfer functions under source estimation and reverberant reconstruction objectives, enabling relative near/far ordering through the direct-to-reverberant ratios of the corresponding RIRs. For comprehensive evaluation, we introduce HETMIXR, which spans heterogeneous source content and diverse simulated room conditions with source-specific RIRs and geometric distance annotations. Experiments on HETMIXR demonstrate superior performance in source separation, RIR estimation, and distance ordering. Ablation studies reveal the complementary benefits of source supervision and reverberant reconstruction, while additional evaluations show generalization to single-speaker inputs and mixtures generated using measured RIRs from an unseen room. Our code and dataset are available at https://github.com/Wenanzhi/DAMSEP.",
+      "tags": [
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "DAMSEP: Distance-Aware Monaural Source Separation using Multi-RIR Estimation",
+      "url": "https://arxiv.org/abs/2609.29749v2"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "e62e0404e69f8bf79dd66766",
+      "context_id": "efba6968b35c4f57702205d3",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::FORWARD",
+      "direction_title": "Voice / acoustic representation / source preservation [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "source separation",
+        "speech"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9583,
+      "source": "arxiv",
+      "source_context_sha256": "6d397afc51f0ef804fb3e1c09c13ac75f11ac4b9cc7cad888ae8041a5b64a59e",
+      "source_published": "2026-09-18T02:33:00Z",
+      "source_updated": "2026-09-18T02:33:00Z",
+      "summary": "Discrete audio tokenization has become the critical interface between raw waveforms and autoregressive modeling in recent music generation. As a result, music tokenizers must simultaneously support high-fidelity reconstruction and produce discrete sequences that remain amenable to language modeling. Existing reconstruction-oriented tokenizers often mix musical structure with fine acoustic details, producing high-entropy tokens that are hard to model. In contrast, semantics-guided alternatives are designed for speech and do not fit music well, often hurting reconstruction quality. We address these trade-offs by rethinking music tokenization around a measurable notion of music semantic content grounded in downstream Music Information Retrieval tasks. Guided by this definition, we propose MuSeC, a music semantic codec that factorizes semantic and acoustic content directly from mixed signals without source separation. MuSeC preserves information required for high-fidelity reconstruction while producing more LM-friendly discrete units. Empirically, it improves reconstruction quality and yields more predictable token sequences, providing a practical foundation toward high-fidelity LLM music generation. Demos are available at https://longwaytog0.github.io/MuSeC/.",
+      "tags": [
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Rethinking Music Tokenization: A Semantic Codec toward High-Fidelity LLM Music Generation",
+      "url": "https://arxiv.org/abs/2609.21240v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "51a3c8f6a362d958168959d2",
+      "context_id": "cbcae226c9be1baeee70facb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::FORWARD",
+      "direction_title": "Voice / acoustic representation / source preservation [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "source separation",
+        "speech"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9583,
+      "source": "arxiv",
+      "source_context_sha256": "36206c93e6be414d723566467b6e8801d90ba4fb36b825c2cbaa6caa2d6eabea",
+      "source_published": "2018-11-06T17:20:05Z",
+      "source_updated": "2018-11-06T17:20:05Z",
+      "summary": "In speech enhancement and source separation, signal-to-noise ratio is a ubiquitous objective measure of denoising/separation quality. A decade ago, the BSS_eval toolkit was developed to give researchers worldwide a way to evaluate the quality of their algorithms in a simple, fair, and hopefully insightful way: it attempted to account for channel variations, and to not only evaluate the total distortion in the estimated signal but also split it in terms of various factors such as remaining interference, newly added artifacts, and channel errors. In recent years, hundreds of papers have been relying on this toolkit to evaluate their proposed methods and compare them to previous works, often arguing that differences on the order of 0.1 dB proved the effectiveness of a method over others. We argue here that the signal-to-distortion ratio (SDR) implemented in the BSS_eval toolkit has generally been improperly used and abused, especially in the case of single-channel separation, resulting in misleading results. We propose to use a slightly modified definition, resulting in a simpler, more robust measure, called scale-invariant SDR (SI-SDR). We present various examples of critical failure of the original SDR that SI-SDR overcomes.",
+      "tags": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "SDR - half-baked or well done?",
+      "url": "https://arxiv.org/abs/1811.02508v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "8935c633c0c623b42f622a51",
+      "context_id": "d822cee08083322a30437234",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::FORWARD",
+      "direction_title": "Voice / acoustic representation / source preservation [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "speaker",
+        "speaker verification",
+        "speech",
+        "voice"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.5833,
+      "source": "arxiv",
+      "source_context_sha256": "f2ab84f8660606ea893a95bc0fbfb94b583f5ba157b2849a9591636282a12a2d",
+      "source_published": "2026-06-17T20:32:32Z",
+      "source_updated": "2026-06-17T20:32:32Z",
+      "summary": "Audio deepfakes generated by neural text-to-speech and voice-cloning systems threaten speaker verification and public discourse at scale. The core challenge is cross-dataset generalization: detectors trained on one synthesis pipeline collapse on unseen forgeries. We argue that this failure is primarily because of structural synthetic speech artifacts which are multi-timescale trajectory anomalies. Though every existing detector aggregates a fixed-window frame statistics, this misaligns the architecture with the signal. We propose FlowFake, a Liquid Time-Constant (LTC) architecture whose hidden state evolves via a learned ODE, with per-neuron adaptive time constants simultaneously resolving spectral (10ms) and prosodic (2s) cues. At only 34K parameters FlowFake achieves formal BIBO stability and O(dt^4) integration error. On a four-dataset cross domain benchmark (ASVspoof2019-LA, FakeOrReal, InTheWild, MLAAD), FlowFake reaches 75.29% on ASVspoof2019 trained only on FakeOrReal and 79.97% trained only on MLAAD. It outperforms RawGAT-ST and Whisper-DF on every evaluated pair and matching SSL Wav2vec2 (300x larger) at 0.01% of its parameter count. The source code is available on : https://github.com/GhostRider2023/FlowFake",
+      "tags": [
+        "cs.SD",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "FlowFake: Liquid Networks for Audio Deepfake Detection",
+      "url": "https://arxiv.org/abs/2606.19579v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "37c0339ad4a9a2b2d314dd43",
+      "context_id": "576563143fd1ab1466ca6b7a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::FORWARD",
+      "direction_title": "Voice / acoustic representation / source preservation [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "speaker",
+        "speaker verification",
+        "speech",
+        "voice"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.5833,
+      "source": "arxiv",
+      "source_context_sha256": "26f594947ab5d2eac1f35905d926570c4a3bb579d32de39782848b4225a93b1d",
+      "source_published": "2026-09-16T18:12:55Z",
+      "source_updated": "2026-09-16T18:12:55Z",
+      "summary": "We present DECAF, a privacy preserving neural speech codec that obfuscates a speaker's voice while preserving linguistic content while maintaining automatic speech recognition (ASR) performance at very low bitrates, inspired by decaffeination. At the transmitter end, speech is encoded into speaker independent content embeddings, which are compressed using residual vector quantization and transmitted without any speaker related information. At the receiver, a canonical speaker embedding, shared a priori between endpoints, is used for waveform reconstruction, enabling deterministic and consistent obfuscation of a speaker's voice. The proposed framework leverages an information bottleneck applied to self supervised representations, along with a separate speaker embedding branch, to achieve effective speaker content disentanglement. We further incorporate a CTC-based auxiliary objective, encouraging content representations that are well aligned with downstream ASR tasks. We show that DECAF operating at a bit rate of 0.5 kbps achieves an Equal Error Rate (EER) of up to 43.5% for a speaker verification system, while maintaining competitive ASR performance, yielding a relative reduction in word error rate of 33.2% compared to a state of the art method.",
+      "tags": [
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Decaf: A privacy preserving speech codec using speaker disentanglement and canonical voice conversion",
+      "url": "https://arxiv.org/abs/2609.19304v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "e2f46470453fdcc361c7e7aa",
+      "context_id": "ea434ab57765a50800cb46a7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::FORWARD",
+      "direction_title": "Voice / acoustic representation / source preservation [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "source separation"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.7083,
+      "source": "arxiv",
+      "source_context_sha256": "ccb1103a28c65f8a7cbe3c6157df1a2cf03ba9a1842b3a86be85642254523d13",
+      "source_published": "2026-10-13T06:43:47Z",
+      "source_updated": "2026-10-14T13:30:40Z",
+      "summary": "Music source separation (MSS) has been conventionally addressed by discriminative methods. Recently, flow matching has emerged as a strong generative paradigm for modeling complex data distributions, with successful applications across diverse domains. These advances motivate us to systematically investigate flow matching for MSS in a four-source (Vocals, Bass, Drums, Other) setting in full-band stereo. Specifically, we investigate prediction targets, flow paths, single-source versus multi-source modeling, and mixture consistency constraints. Beyond the signal-level metrics commonly used for MSS, such as signal-to-distortion ratio, we further evaluate MSS methods using embedding-based metrics, as well as a listening test, providing a comprehensive benchmark. On MUSDB18-HQ, our proposed model exhibits competitive performance in both objective and subjective tests, highlighting the potential of flow matching for generative MSS. Demo: https://ik4sumii.github.io/FLOMSS/",
+      "tags": [
+        "cs.SD"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "FLOMSS: Generative Music Source Separation by Flow Matching",
+      "url": "https://arxiv.org/abs/2610.17821v2"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "bdc15f7f7afe8a65d5f884f2",
+      "context_id": "93fb2140f25bfd5e6dc9f8b8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::FORWARD",
+      "direction_title": "Voice / acoustic representation / source preservation [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "source separation"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.7083,
+      "source": "arxiv",
+      "source_context_sha256": "3c090328eeb26e5dac6a165fc1b805bd4ee6573ab7b73eb49b0e8287d893a2bf",
+      "source_published": "2026-06-03T14:17:12Z",
+      "source_updated": "2026-06-03T14:17:12Z",
+      "summary": "The goal of single-channel source separation is to reconstruct $K$ sources given their mixture. In supervised settings where vast amounts of clean source data are available, this challenging, ill-posed problem has been addressed successfully by generative diffusion and flow-based prior models. However, access to such clean source samples is often limited, and even when available, supervised models are vulnerable to domain shifts. To bridge this gap, we present Separation via Unsupervised Remixing Flow (SURF), an unsupervised flow matching approach for source separation that learns directly from observed mixtures. This method relies on a novel combination of state-of-the-art supervised flow matching and regression-based self-supervised techniques. At a high level, starting from a teacher model, we utilize a \"remixing\" step to bootstrap the learning of a student flow model from the teacher's estimates. We provide insights into the objectives optimized by this approach and draw a novel connection to the Wake-Sleep algorithm. Empirical evaluations on image and audio benchmarks demonstrate that SURF establishes a new state-of-the-art, significantly outperforming existing unsupervised methods. See our demo page for examples. https://google.github.io/df-conformer/surf/",
+      "tags": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "SURF: Separation via Unsupervised Remixing Flow",
+      "url": "https://arxiv.org/abs/2606.04921v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "7d9d17f558d07d63c33ec1bf",
+      "context_id": "91086ff30dc4491293f6bc7c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::REVERSE",
+      "direction_title": "Voice / acoustic representation / source preservation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "source separation",
+        "speaker"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.5833,
+      "source": "arxiv",
+      "source_context_sha256": "06d752f789c634dcf1b6eb553cec341eecca8f442be9339fb17ffd943bd1cbc9",
+      "source_published": "2026-09-24T13:01:20Z",
+      "source_updated": "2026-09-25T04:01:36Z",
+      "summary": "Although room impulse responses (RIRs) encode source-distance cues, conventional monaural source separation focuses on recovering audio content without estimating source-specific RIRs, losing the associated spatial information. To address this limitation, we propose Distance-Aware Monaural Source Separation using Multi-RIR Estimation (DAMSEP), the first end-to-end framework that is jointly trained for source separation and multi-source RIR estimation from a single-microphone mixture. DAMSEP integrates a separation backbone with shared dereverberation and RIR estimation modules to jointly recover clean sources and source-specific complex convolutive transfer functions under source estimation and reverberant reconstruction objectives, enabling relative near/far ordering through the direct-to-reverberant ratios of the corresponding RIRs. For comprehensive evaluation, we introduce HETMIXR, which spans heterogeneous source content and diverse simulated room conditions with source-specific RIRs and geometric distance annotations. Experiments on HETMIXR demonstrate superior performance in source separation, RIR estimation, and distance ordering. Ablation studies reveal the complementary benefits of source supervision and reverberant reconstruction, while additional evaluations show generalization to single-speaker inputs and mixtures generated using measured RIRs from an unseen room. Our code and dataset are available at https://github.com/Wenanzhi/DAMSEP.",
+      "tags": [
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "DAMSEP: Distance-Aware Monaural Source Separation using Multi-RIR Estimation",
+      "url": "https://arxiv.org/abs/2609.29749v2"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "e62e0404e69f8bf79dd66766",
+      "context_id": "e07da048561d0afefa8ae2bb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::REVERSE",
+      "direction_title": "Voice / acoustic representation / source preservation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "source separation",
+        "speech"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.5417,
+      "source": "arxiv",
+      "source_context_sha256": "8a44c17654f99efcd7fa9a07ab95e88471b8abd3130174478a738250c6562556",
+      "source_published": "2026-09-18T02:33:00Z",
+      "source_updated": "2026-09-18T02:33:00Z",
+      "summary": "Discrete audio tokenization has become the critical interface between raw waveforms and autoregressive modeling in recent music generation. As a result, music tokenizers must simultaneously support high-fidelity reconstruction and produce discrete sequences that remain amenable to language modeling. Existing reconstruction-oriented tokenizers often mix musical structure with fine acoustic details, producing high-entropy tokens that are hard to model. In contrast, semantics-guided alternatives are designed for speech and do not fit music well, often hurting reconstruction quality. We address these trade-offs by rethinking music tokenization around a measurable notion of music semantic content grounded in downstream Music Information Retrieval tasks. Guided by this definition, we propose MuSeC, a music semantic codec that factorizes semantic and acoustic content directly from mixed signals without source separation. MuSeC preserves information required for high-fidelity reconstruction while producing more LM-friendly discrete units. Empirically, it improves reconstruction quality and yields more predictable token sequences, providing a practical foundation toward high-fidelity LLM music generation. Demos are available at https://longwaytog0.github.io/MuSeC/.",
+      "tags": [
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Rethinking Music Tokenization: A Semantic Codec toward High-Fidelity LLM Music Generation",
+      "url": "https://arxiv.org/abs/2609.21240v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "8c1277c283bb09b62b7e282a",
+      "context_id": "fa87bafd93a9da508f5b11c5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "voice_acoustic_signal::REVERSE",
+      "direction_title": "Voice / acoustic representation / source preservation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "identifiability",
+        "inverse",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.5,
+      "source": "zenodo",
+      "source_context_sha256": "e7a4988f63af30d651021feac3ab75820fa15ddf994a3fc945a215765ccd9774",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "NANOROBOT-ENHANCED DIGITAL TWINS OF BRAIN STATE AT THE LIMIT A multiscale, uncertainty-aware research atlas on microrobotic observations, neural inverse problems, active model discrimination and the limits of computational brain twins. This research monograph asks whether additional microscale observations or strictly bounded reversible experiments can distinguish competing neural-state models that explain conventional measurements equally well. The twin is explicitly defined as a versioned scientific belief, not a digital person, a mind reader or a clinically validated instrument. Its objective is not maximum model complexity but improved identifiability, calibrated prediction under new conditions and faithful retention of failed hypotheses. The work develops five layers: multiscale neural and microenvironment state representation; posterior equivalence and prior sensitivity; non-clinical safe experimental design; frozen-version forking, rollback and reference ancestry; and blind prospective validation against classical state-space systems and independently specified alternatives. Its research architecture includes 30 distinct mathematical derivation plates linked to later chapters, 82 chapters with five independently paginated research sections apiece, 200 detailed Research Gates and 33 revisable Phoenix Answer Embryos. A DOI evidence ledger identifies existing support for brain modeling, latent neural dynamics, experiment design and preclinical microrobot tracking while preventing those sources from being mistaken for evidence of the proposed integrated system. Key research questions include: Can two equally accurate virtual brains be separated by a small, permissible observation? How can the effect of a measurement itself be separated from neural change? When does a prior dominate the inferred brain state? Can the model predict unseen function rather than reconstruct a training signal? Can another laboratory reproduce a rejected twin and safely return to an earlier version? SCIENTIFIC STATUS AND LIMITATIONS This is a forward-looking, non-clinical research synthesis and experimental hypothesis architecture. It provides no personal medical advice, patient-specific interpretations or instruction to deliver neural interventions. Existing murine microrobot tracking and virtual-brain modeling studies do not establish autonomous neural nanorobot readout, human safety, privacy-sensitive mind inference or therapeutic efficacy. Proposed formulas, experiments, research gates and answer embryos are not newly validated biological laws or executed experiments. The work keeps independent safety vetoes, privacy, external reproducibility and explicit model retirement as first-class constraints. Research questions remain open to refutation, correction and reconstruction by future human and AI researchers.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "NANOROBOT-ENHANCED DIGITAL TWINS OF BRAIN STATE AT THE LIMIT A multiscale, uncertainty-aware research atlas on microrobotic observations, neural inverse problems, active model discrimination and the limits of computational brain twins. This research monograph asks whether additional microscale obser",
+      "url": "https://zenodo.org/records/23441410"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "464f70be1500181823044885",
+      "context_id": "6a3649b27f11b4f7781fd7a7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::REVERSE",
+      "direction_title": "Voice / acoustic representation / source preservation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bidirectional",
+        "inverse",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.4167,
+      "source": "arxiv",
+      "source_context_sha256": "07720e6355f8e42b37ce7a69201e2c6b5e3c8f91abfd4a1f4272f5f967a0bbf6",
+      "source_published": "2026-10-08T17:46:03Z",
+      "source_updated": "2026-10-08T17:46:03Z",
+      "summary": "World action models (WAMs) predict actions and future observations, typically from a reconstruction-based representation that carries noisy, redundant information which can complicate downstream predictions. We introduce LeWAM, a bidirectional transformer for forward, backward, inverse dynamics and policy prediction, on a decoder-free JEPA latent trained end-to-end through all four modes. We see the following benefits: 1) Alignment: linear probes read robot and object state from LeWAM's latent better than from a regular Le World Model (a forward-only JEPA world model), while the latent ignores visual distractors as well as LeWM does and far better than a reconstruction-based WAM. 2) Acting: Closed-loop evaluations of LeWAM match a regular flow-matching policy trained on the same encoder at matched size, while also providing a world model. 3) Planning: Sampling raw actions when planning with WAMs lets MPC exploit dynamics-model inaccuracies; planning in the noise space of the policy head instead improves the closed-loop performance of these WAMs.",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "LeWAM: A JEPA World Action Model with Diffusion-Steering-Based MPC",
+      "url": "https://arxiv.org/abs/2610.12407v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "37c0339ad4a9a2b2d314dd43",
+      "context_id": "6003ae5aa6104270ac0d0797",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::REVERSE",
+      "direction_title": "Voice / acoustic representation / source preservation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "speaker",
+        "speaker verification",
+        "speech",
+        "voice"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.1667,
+      "source": "arxiv",
+      "source_context_sha256": "b4a8fe70e6bf34f04e4d642b154b64641b4d9677aacd65367ab81e391351fe9a",
+      "source_published": "2026-09-16T18:12:55Z",
+      "source_updated": "2026-09-16T18:12:55Z",
+      "summary": "We present DECAF, a privacy preserving neural speech codec that obfuscates a speaker's voice while preserving linguistic content while maintaining automatic speech recognition (ASR) performance at very low bitrates, inspired by decaffeination. At the transmitter end, speech is encoded into speaker independent content embeddings, which are compressed using residual vector quantization and transmitted without any speaker related information. At the receiver, a canonical speaker embedding, shared a priori between endpoints, is used for waveform reconstruction, enabling deterministic and consistent obfuscation of a speaker's voice. The proposed framework leverages an information bottleneck applied to self supervised representations, along with a separate speaker embedding branch, to achieve effective speaker content disentanglement. We further incorporate a CTC-based auxiliary objective, encouraging content representations that are well aligned with downstream ASR tasks. We show that DECAF operating at a bit rate of 0.5 kbps achieves an Equal Error Rate (EER) of up to 43.5% for a speaker verification system, while maintaining competitive ASR performance, yielding a relative reduction in word error rate of 33.2% compared to a state of the art method.",
+      "tags": [
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Decaf: A privacy preserving speech codec using speaker disentanglement and canonical voice conversion",
+      "url": "https://arxiv.org/abs/2609.19304v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "34dff0aa7c7441bf6577027a",
+      "context_id": "fa5873b5c57e54ac1fe3f332",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::REVERSE",
+      "direction_title": "Voice / acoustic representation / source preservation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "source separation"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.2917,
+      "source": "arxiv",
+      "source_context_sha256": "374ef9293e0edb9888668397b1ed9447c61b0599280ee1929c9ae14e7d4a71c0",
+      "source_published": "2026-08-02T08:50:13Z",
+      "source_updated": "2026-08-02T08:50:13Z",
+      "summary": "Automatic Drum Transcription (ADT) is commonly formulated as a direct mapping from a music mixture to symbolic drum events. While effective for transcription, this formulation discards the acoustic stems that are useful for editing, remixing, and production. We revisit an alternative separate-and-detect formulation, where a drum source separation front end first produces five editable drum stems, and a fixed onset detector then converts each stem into symbolic events. The separator is built on a five-stem latent diffusion model that jointly generates kick, snare, toms, hi-hats, and cymbals in a compact VAE latent space. We further study two training-only auxiliary branches--an onset branch (OB) and a timbre branch (TB)--which shape the separator during learning but are discarded at inference. Trained on synthetic drum multitracks and evaluated on MDB Drums and ENST-Drums, the proposed pipeline consistently improves over a strong U-Net-based drum separation baseline in overall transcription F1. It also outperforms a representative end-to-end ADT system on kick and snare F1 under our evaluation protocol, while additionally providing separated audio stems. The ablation results show that OB gives the most stable transcription gains, whereas TB changes the trade-off between reconstruction, acoustic stem quality, and onset detection. These results suggest that generative drum demixing can serve not only as a source separation model, but also as a practical front end for interpretable drum transcription.",
+      "tags": [
+        "cs.SD"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Separate-and-Detect: Unified Drum Transcription and Stem Generation via Latent Diffusion",
+      "url": "https://arxiv.org/abs/2608.01093v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "743059b6dc1e36c34d1c9871",
+      "context_id": "1bc8600ae2cd16e12cd36afb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::REVERSE",
+      "direction_title": "Voice / acoustic representation / source preservation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inversion",
+        "source separation"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.0833,
+      "source": "arxiv",
+      "source_context_sha256": "2bdde6b93d3dbfb0ada7faee2b01612b837a664bbfd25f33aa05a9bb48720341",
+      "source_published": "2026-05-19T05:34:40Z",
+      "source_updated": "2026-05-19T05:34:40Z",
+      "summary": "Distributed microphone arrays composed of multiple subarrays enable blind source separation over a wide spatial area. Directly applying fast multichannel nonnegative matrix factorization (FastMNMF) to all subarrays can exploit observations from all subarrays, but it requires repeated inversions of large matrices spanning all microphones, causing the computational cost to increase rapidly as the number of microphones grows. In contrast, applying FastMNMF to one subarray reduces the matrix size but cannot exploit observations from other subarrays. We propose distributed FastMNMF, which imposes a block-diagonal structure on the source spatial covariance matrices, so that matrix inversions are performed within subarrays. The NMF-based source spectrogram model is shared across subarrays, allowing the method to aggregate source activity information while discarding inter-subarray covariance. In synchronized, noiseless simulations with fixed room and array/source geometry, the method required less computation time than conventional FastMNMF using all subarrays, achieved a higher average source-to-distortion ratio than conventional FastMNMF using one subarray, and was applicable in the tested five-source condition, where each four-microphone subarray was locally underdetermined.",
+      "tags": [
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Fast Multichannel NMF with Block-Diagonal Spatial Covariance Matrices for Efficient Blind Source Separation Using Distributed Microphone Arrays",
+      "url": "https://arxiv.org/abs/2605.19388v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "90aa5c80cdd07f9b429594ef",
+      "context_id": "e6afe6735fd9f70a66f60e5b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::REVERSE",
+      "direction_title": "Voice / acoustic representation / source preservation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "speaker",
+        "speaker verification",
+        "speech"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.9583,
+      "source": "arxiv",
+      "source_context_sha256": "9962928470846bbfdd5ea4411f3f40a6c4271974b4f34aee666a84c030b5cdac",
+      "source_published": "2020-03-21T00:56:05Z",
+      "source_updated": "2020-03-21T00:56:05Z",
+      "summary": "Automatic speaker verification (ASV) systems are highly vulnerable to presentation attacks, also called spoofing attacks. Replay is among the simplest attacks to mount - yet difficult to detect reliably. The generalization failure of spoofing countermeasures (CMs) has driven the community to study various alternative deep learning CMs. The majority of them are supervised approaches that learn a human-spoof discriminator. In this paper, we advocate a different, deep generative approach that leverages from powerful unsupervised manifold learning in classification. The potential benefits include the possibility to sample new data, and to obtain insights to the latent features of genuine and spoofed speech. To this end, we propose to use variational autoencoders (VAEs) as an alternative backend for replay attack detection, via three alternative models that differ in their class-conditioning. The first one, similar to the use of Gaussian mixture models (GMMs) in spoof detection, is to train independently two VAEs - one for each class. The second one is to train a single conditional model (C-VAE) by injecting a one-hot class label vector to the encoder and decoder networks. Our final proposal integrates an auxiliary classifier to guide the learning of the latent space. Our experimental results using constant-Q cepstral coefficient (CQCC) features on the ASVspoof 2017 and 2019 physical access subtask datasets indicate that the C-VAE offers substantial improvement in comparison to training two separate VAEs for each class. On the 2019 dataset, the C-VAE outperforms the VAE and the baseline GMM by an absolute 9 - 10% in both equal error rate (EER) and tandem detection cost function (t-DCF) metrics. Finally, we propose VAE residuals - the absolute difference of the original input and the reconstruction as features for spoofing detection.",
+      "tags": [
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Deep Generative Variational Autoencoding for Replay Spoof Detection in Automatic Speaker Verification",
+      "url": "https://arxiv.org/abs/2003.09542v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "5a35ea03b09454746c663cea",
+      "context_id": "a62e32fb6ab3f04b7bb6653d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::REVERSE",
+      "direction_title": "Voice / acoustic representation / source preservation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.875,
+      "source": "zenodo",
+      "source_context_sha256": "bd5b349cc2ff03144b987439f4f074a5e7f1f23d712d43fc9ced7a48897e3e04",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "This technical note documents a conditional mathematical correspondence between the static spatial kernel used in conventional electromagnetic potential theory and the fixed-source gravitational potential in Lisa Doumbouya&rsquo;s Harmonic Physics programme. Under supplied three-dimensional Euclidean geometry, spherical symmetry and stated boundary conditions, the derivation gives the static Green function 1/(4&pi;r). Applying the existing gravitational source normalization yields the potential &minus;&mu;/r, whose radial derivative gives the inward acceleration &minus;&mu;/r&sup2;. The note distinguishes potential, field amplitude, intensity, acceleration and optical measurement conversion, keeping geometric normalization separate from the distance exponent. The optical phase-ruler results are reviewed alongside the GRACE-FO forward forecasts. Calibrated reconstruction using measured phase retained micrometre-scale agreement with processed microwave ranging, while some forward models produced much larger errors. These results do not establish exponential error growth or identify a unique physical cause. The correspondence uses established mathematics and remains conditional on the supplied geometry, source calibration and physical interpretation. It does not establish an electromagnetic mechanism of gravity or derive spatial geometry from foundational Phase. The note includes the analytical proof, assumptions, evidence boundaries and requirements for a subsequent physical test. No new experimental data are introduced.",
+      "tags": [
+        "harmonic physics",
+        "inverse-radius potential",
+        "inverse-square law",
+        "green functions",
+        "electromagnetic potential",
+        "gravitational potential",
+        "mathematical correspondence",
+        "optical phase",
+        "interfermometry",
+        "phase-to-distance calibration",
+        "observer coupling",
+        "GRACE-FO",
+        "laser ranging",
+        "source calibration",
+        "relational geometry"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Inverse Radius Kernel and Optical Phase Registration",
+      "url": "https://zenodo.org/records/23437123"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "4653b9dd5edd7ff668216670",
+      "context_id": "875bd3a8e964ed6d5da72b77",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::REVERSE",
+      "direction_title": "Voice / acoustic representation / source preservation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.875,
+      "source": "arxiv",
+      "source_context_sha256": "1e48783ec0523e28c14628378f08043474ef7f13d0227ccabd4fed1e3942477f",
+      "source_published": "2026-10-08T15:03:38Z",
+      "source_updated": "2026-10-08T15:03:38Z",
+      "summary": "This paper develops a new predefined-time integral reinforcement learning framework for optimal control of unknown nonlinear systems. The unknown drift is first approximated by a radial basis function (RBF) neural network, together with a data-driven online identification law for updating the corresponding neural weights. After the identifier converges to a sufficiently small neighborhood of the true dynamics, the learned model is incorporated into the integral reinforcement learning (IRL) problem. Unlike conventional reinforcement-learning-based optimal control, the desired convergence time is introduced directly into the control objective: a Lyapunov function and its prescribed decay behavior are specified by the designer, and inverse-optimal control is then used to construct a compatible running cost whose optimal policy inherits the predefined-time stabilization property. The value function is approximated by a second RBF neural network, and a new critic update law is developed to impose predefined-time convergence on the critic weights. Finite informative learning data are stored in a replay buffer and reused during the critic update, thereby avoiding the need for persistent excitation throughout the closed-loop operation. Theoretical analysis proves that the critic-weight error enters a prescribed residual set within the allocated learning horizon, while the closed-loop state reaches a small neighborhood of the origin within the overall designer-specified deadline. Numerical simulations on an unknown nonlinear system verify accurate drift reconstruction, predefined-time critic learning, and closed-loop convergence.",
+      "tags": [
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Predefined-Time Integral Reinforcement Learning for Unknown Nonlinear Systems via Inverse-Optimal Design",
+      "url": "https://arxiv.org/abs/2610.12103v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "8aa538e1a9100f12fb7d0c66",
+      "context_id": "8040dee68251403eff7723e4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::REVERSE",
+      "direction_title": "Voice / acoustic representation / source preservation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "reverse"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.875,
+      "source": "zenodo",
+      "source_context_sha256": "954b7694933232688b5af5a1e34c05f0687e39b376acc939a624ab6f8ccfd4c7",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "Fisher information metric tensors for the 41 held-out SONICOM test subjects, as used in &ldquo;Evaluating Spatial Discriminability Preservation in HRTF Upsampling Using Fisher Information&rdquo; (D. Bassett). Code and reproduction instructions: https://github.com/domfrbassett/fisher-rao-hrtf-upsampling What the tensors are At each of the 793 directions of the SONICOM grid, the 2&times;2 tensor g = Jᵀ&Sigma;⁻&sup1;J describes how well the auditory cues separate that direction from its neighbours. J is the spatial Jacobian of the cues: Barumerli monaural PGE features, ILD and MaxIACCe-transformed ITD, each fitted with real spherical harmonics. &Sigma; holds the cue noise (&sigma;_mon = 1.25 dB, &sigma;_ILD = 1 dB, &sigma;_ITD = 0.569). All fields are low-pass filtered at 16 kHz before the cues are extracted. The tensor is expressed in a local tangent basis u₁ = a &times; r, u₂ = r &times; u₁, where a = z, or y when |r_z| &gt; 0.9, and its units are d&prime;&sup2; per rad&sup2;. Contents metric_tensors.zip has one folder per subject, metric_tensors/subject_####/ , containing 25 files per subject (1,025 in total): reference_metric_tensor.mat : the dense measured HRTF. &lt;METHOD&gt;_N###_metric_tensor.mat : one file per reconstruction. There are six methods: SUpDEq_SH , SUpDEq_MCA , SUpDEq_NN_MCA_6dB (SUpDEq-Natural-MCA in the paper), SUpDEq_Bary_MCA_6dB , RANF and FSP_AE . Each is reconstructed from N = 100, 19, 5 and 3 retained directions. The 164 natural-neighbour and barycentric files at N = 5 and 3 have status &ldquo; not_applicable &rdquo;. The interpolation is undefined for those masks, so these files carry no tensors. Variables in each file: metricTensor : the tensors at SH order 6 [2&times;2&times;793]. familyGram : per-cue-family Gram matrices JᵀJ before noise weighting, at SH orders 4, 6 and 8 [2&times;2&times;793&times;3 families&times;3 orders]. They let you recompute the tensors with other noise values or SH orders. In reconstruction files only: crossFamilyGram : the unsymmetrised cross terms J_refᵀ J_recon, same layout as familyGram . airmByDirection : the pointwise AIRM discrepancy from the reference. Metadata: coordinates (Cartesian and azimuth/elevation in degrees), cue band, noise values (reference files only), status (&ldquo; completed &rdquo; or &ldquo; not_applicable &rdquo;) and, for not-applicable files, a message giving the reason. SHA256SUMS.txt lists a checksum for every file. Format and use The files are MATLAB v7.3 (HDF5), so MATLAB, h5py or any HDF5 reader can open them. Note that h5py reverses MATLAB&rsquo;s axis order. scripts/fisher_lib.py in the repository reads them and recomputes tensors, AIRM and thresholds from the Gram matrices. To rerun the analysis scripts, unzip into results/evaluation/ so the subject folders sit in results/evaluation/metric_tensors/ . Provenance Produced with run_evaluation(\"tensors\") from the repository above. The values are numerically identical to the tensor files behind results/evaluation/full_evaluation_summary.csv ; this run additionally stores the cross terms. The tensors are derived from the SONICOM HRTF Dataset (Engel et al., J. Audio Eng. Soc. 71(5), 2023, doi:10.17743/jaes.2022.0066). The SONICOM HRTFs are released under the MIT licence. This work develops research begun for the author&rsquo;s B.Sc. dissertation at Birmingham City University.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Fisher information metric tensors for 'Evaluating Spatial Discriminability Preservation in HRTF Upsampling Using Fisher Information'",
+      "url": "https://zenodo.org/records/23439154"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "3c0242f9b3169bba6dc3caf7",
+      "context_id": "6904494fb43c3dbcdc9fffda",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::REVERSE",
+      "direction_title": "Voice / acoustic representation / source preservation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.875,
+      "source": "arxiv",
+      "source_context_sha256": "ccca7f20e69670e668f8bdfafa0dbaab97a17a198617679ae7b1e669f6deca37",
+      "source_published": "2026-10-08T12:20:24Z",
+      "source_updated": "2026-10-08T12:20:24Z",
+      "summary": "We study the relation between equal-weight circle quadrature, Gauss--Chebyshev quadrature, and planar Minkowski reconstruction. The regular $N$-point grid is an $\\mathbb S^1$-design of strength $N-1$; a half-step rotation of the $2M$-point grid projects to the classical $M$-point Gauss--Chebyshev rule. A common family of quadrature-error functionals gives exact identities for integration error, mixed-area error, and support-function error. For $N\\ge3$, the centered Minkowski polygon $P_N$ with perimeter $2π$ has the exact Hausdorff distance from the unit disk $B^2$ \\[ d_H(P_N,B^2)=1-\\fracπ{N}\\cot\\fracπ{N} =\\frac{π^2}{3N^2}+O(N^{-4}). \\] With Steiner centering, we obtain $d_H(K_μ,K_ν)\\leπW_1(μ,ν)$ for balanced, nondegenerate probability measures, where $W_1$ uses geodesic distance. Its exponent is sharp even for smooth positive densities near the uniform measure. The identity $W_1(ν_N,σ)=π/(2N)$ yields a general $O(N^{-1})$ bound for the regular grid. The sharper $O(N^{-2})$ rate follows from the sparse discrepancy spectrum and the inverse multiplier $(1-k^2)^{-1}$. Finally, a perturbation estimate gives sufficient conditions for preserving the quadratic rate and its leading constant.",
+      "tags": [
+        "math.NA",
+        "math.MG"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Gauss--Chebyshev Quadrature, $\\mathbb S^1$-Designs, and the Planar Minkowski Inverse Problem: A One-Dimensional Model for Design-Induced Convex Geometry",
+      "url": "https://arxiv.org/abs/2610.11814v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "a831f32e8d535aa875c64de4",
+      "context_id": "d30f5cfff58fb87d7e1daba9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::COUNTEREVIDENCE",
+      "direction_title": "Voice / acoustic representation / source preservation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "sound event",
+        "source separation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.4583,
+      "source": "arxiv",
+      "source_context_sha256": "6bbe593f0c30e3eea1dbf0a8c9abea393f540f932b6117e5993570e04cce4192",
+      "source_published": "2025-09-21T21:44:10Z",
+      "source_updated": "2025-12-23T09:37:51Z",
+      "summary": "We propose DeepASA, a multi-purpose model for auditory scene analysis that performs multi-input multi-output (MIMO) source separation, dereverberation, sound event detection (SED), audio classification, and direction-of-arrival estimation (DoAE) within a unified framework. DeepASA is designed for complex auditory scenes where multiple, often similar, sound sources overlap in time and move dynamically in space. To achieve robust and consistent inference across tasks, we introduce an object-oriented processing (OOP) strategy. This approach encapsulates diverse auditory features into object-centric representations and refines them through a chain-of-inference (CoI) mechanism. The pipeline comprises a dynamic temporal kernel-based feature extractor, a transformer-based aggregator, and an object separator that yields per-object features. These features feed into multiple task-specific decoders. Our object-centric representations naturally resolve the parameter association ambiguity inherent in traditional track-wise processing. However, early-stage object separation can lead to failure in downstream ASA tasks. To address this, we implement temporal coherence matching (TCM) within the chain-of-inference, enabling multi-task fusion and iterative refinement of object features using estimated auditory parameters. We evaluate DeepASA on representative spatial audio benchmark datasets, including ASA2, MC-FUSS, and STARSS23. Experimental results show that our model achieves state-of-the-art performance across all evaluated tasks, demonstrating its effectiveness in both source separation and auditory parameter estimation under diverse spatial auditory scenes.",
+      "tags": [
+        "eess.AS",
+        "cs.SD"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "DeepASA: An Object-Oriented Multi-Purpose Network for Auditory Scene Analysis",
+      "url": "https://arxiv.org/abs/2509.17247v3"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "51a3c8f6a362d958168959d2",
+      "context_id": "2496992e857f122ccde33d59",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::COUNTEREVIDENCE",
+      "direction_title": "Voice / acoustic representation / source preservation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "source separation",
+        "speech"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.25,
+      "source": "arxiv",
+      "source_context_sha256": "a10cb1a51a54bcd75fadfd261af16e2f255df2894ec4197394ed30b92382f47b",
+      "source_published": "2018-11-06T17:20:05Z",
+      "source_updated": "2018-11-06T17:20:05Z",
+      "summary": "In speech enhancement and source separation, signal-to-noise ratio is a ubiquitous objective measure of denoising/separation quality. A decade ago, the BSS_eval toolkit was developed to give researchers worldwide a way to evaluate the quality of their algorithms in a simple, fair, and hopefully insightful way: it attempted to account for channel variations, and to not only evaluate the total distortion in the estimated signal but also split it in terms of various factors such as remaining interference, newly added artifacts, and channel errors. In recent years, hundreds of papers have been relying on this toolkit to evaluate their proposed methods and compare them to previous works, often arguing that differences on the order of 0.1 dB proved the effectiveness of a method over others. We argue here that the signal-to-distortion ratio (SDR) implemented in the BSS_eval toolkit has generally been improperly used and abused, especially in the case of single-channel separation, resulting in misleading results. We propose to use a slightly modified definition, resulting in a simpler, more robust measure, called scale-invariant SDR (SI-SDR). We present various examples of critical failure of the original SDR that SI-SDR overcomes.",
+      "tags": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "SDR - half-baked or well done?",
+      "url": "https://arxiv.org/abs/1811.02508v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "8935c633c0c623b42f622a51",
+      "context_id": "d38571b55de9a736d70f07b1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::COUNTEREVIDENCE",
+      "direction_title": "Voice / acoustic representation / source preservation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "speaker",
+        "speaker verification",
+        "speech",
+        "voice"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.875,
+      "source": "arxiv",
+      "source_context_sha256": "69b46bbd381d40462a47c65c9517850f3c392a1c267024ab03b5cafe389d40e7",
+      "source_published": "2026-06-17T20:32:32Z",
+      "source_updated": "2026-06-17T20:32:32Z",
+      "summary": "Audio deepfakes generated by neural text-to-speech and voice-cloning systems threaten speaker verification and public discourse at scale. The core challenge is cross-dataset generalization: detectors trained on one synthesis pipeline collapse on unseen forgeries. We argue that this failure is primarily because of structural synthetic speech artifacts which are multi-timescale trajectory anomalies. Though every existing detector aggregates a fixed-window frame statistics, this misaligns the architecture with the signal. We propose FlowFake, a Liquid Time-Constant (LTC) architecture whose hidden state evolves via a learned ODE, with per-neuron adaptive time constants simultaneously resolving spectral (10ms) and prosodic (2s) cues. At only 34K parameters FlowFake achieves formal BIBO stability and O(dt^4) integration error. On a four-dataset cross domain benchmark (ASVspoof2019-LA, FakeOrReal, InTheWild, MLAAD), FlowFake reaches 75.29% on ASVspoof2019 trained only on FakeOrReal and 79.97% trained only on MLAAD. It outperforms RawGAT-ST and Whisper-DF on every evaluated pair and matching SSL Wav2vec2 (300x larger) at 0.01% of its parameter count. The source code is available on : https://github.com/GhostRider2023/FlowFake",
+      "tags": [
+        "cs.SD",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "FlowFake: Liquid Networks for Audio Deepfake Detection",
+      "url": "https://arxiv.org/abs/2606.19579v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "90aa5c80cdd07f9b429594ef",
+      "context_id": "7451fedcdc8803665c1b103c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::COUNTEREVIDENCE",
+      "direction_title": "Voice / acoustic representation / source preservation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "speaker",
+        "speaker verification",
+        "speech"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_context_sha256": "66fd6ce7705d080e3835b99a9b6ac50ea02d6fb08d3a00ec5eebe2bc7f1f86ff",
+      "source_published": "2020-03-21T00:56:05Z",
+      "source_updated": "2020-03-21T00:56:05Z",
+      "summary": "Automatic speaker verification (ASV) systems are highly vulnerable to presentation attacks, also called spoofing attacks. Replay is among the simplest attacks to mount - yet difficult to detect reliably. The generalization failure of spoofing countermeasures (CMs) has driven the community to study various alternative deep learning CMs. The majority of them are supervised approaches that learn a human-spoof discriminator. In this paper, we advocate a different, deep generative approach that leverages from powerful unsupervised manifold learning in classification. The potential benefits include the possibility to sample new data, and to obtain insights to the latent features of genuine and spoofed speech. To this end, we propose to use variational autoencoders (VAEs) as an alternative backend for replay attack detection, via three alternative models that differ in their class-conditioning. The first one, similar to the use of Gaussian mixture models (GMMs) in spoof detection, is to train independently two VAEs - one for each class. The second one is to train a single conditional model (C-VAE) by injecting a one-hot class label vector to the encoder and decoder networks. Our final proposal integrates an auxiliary classifier to guide the learning of the latent space. Our experimental results using constant-Q cepstral coefficient (CQCC) features on the ASVspoof 2017 and 2019 physical access subtask datasets indicate that the C-VAE offers substantial improvement in comparison to training two separate VAEs for each class. On the 2019 dataset, the C-VAE outperforms the VAE and the baseline GMM by an absolute 9 - 10% in both equal error rate (EER) and tandem detection cost function (t-DCF) metrics. Finally, we propose VAE residuals - the absolute difference of the original input and the reconstruction as features for spoofing detection.",
+      "tags": [
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Deep Generative Variational Autoencoding for Replay Spoof Detection in Automatic Speaker Verification",
+      "url": "https://arxiv.org/abs/2003.09542v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "76d882542b0ace26e1bc7198",
+      "context_id": "73a0d7991580866c50329a43",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::COUNTEREVIDENCE",
+      "direction_title": "Voice / acoustic representation / source preservation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "speaker",
+        "speaker verification",
+        "speech"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_context_sha256": "12eb6389cd09b037bbb85b0f80c9c4efccf7291ffe1a4703224c6950fe4cd09c",
+      "source_published": "2022-03-21T08:15:51Z",
+      "source_updated": "2022-03-21T08:15:51Z",
+      "summary": "The spoof speech detection (SSD) is the essential countermeasure for automatic speaker verification systems. Although SSD with magnitude features in the frequency domain has shown promising results, the phase information also can be important to capture the artefacts of certain types of spoofing attacks. Thus, both magnitude and phase features must be considered to ensure the generalization ability to diverse types of spoofing attacks. In this paper, we investigate the failure reason of feature-level fusion of the previous works through the entropy analysis from which we found that the randomness difference between magnitude and phase features is large, which can interrupt the feature-level fusion via backend neural network; thus, we propose a phase network to reduce that difference. Our SSD system: phase network equipped Res2Net achieved significant performance improvement, specifically in the spoofing attack for which the phase information is considered to be important. Also, we demonstrate our SSD system in both known- and unknown-kind SSD scenarios for practical applications.",
+      "tags": [
+        "cs.SD",
+        "cs.AI",
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Phase-Aware Spoof Speech Detection Based on Res2Net with Phase Network",
+      "url": "https://arxiv.org/abs/2203.10793v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "7d9d17f558d07d63c33ec1bf",
+      "context_id": "1b1998cc534f349567dea7a6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::COUNTEREVIDENCE",
+      "direction_title": "Voice / acoustic representation / source preservation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation",
+        "source separation",
+        "speaker"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.4167,
+      "source": "arxiv",
+      "source_context_sha256": "adc904d076cd93fafc513ced7959f50b2e3b164f4e35d2c77d6757d2dcb7a06d",
+      "source_published": "2026-09-24T13:01:20Z",
+      "source_updated": "2026-09-25T04:01:36Z",
+      "summary": "Although room impulse responses (RIRs) encode source-distance cues, conventional monaural source separation focuses on recovering audio content without estimating source-specific RIRs, losing the associated spatial information. To address this limitation, we propose Distance-Aware Monaural Source Separation using Multi-RIR Estimation (DAMSEP), the first end-to-end framework that is jointly trained for source separation and multi-source RIR estimation from a single-microphone mixture. DAMSEP integrates a separation backbone with shared dereverberation and RIR estimation modules to jointly recover clean sources and source-specific complex convolutive transfer functions under source estimation and reverberant reconstruction objectives, enabling relative near/far ordering through the direct-to-reverberant ratios of the corresponding RIRs. For comprehensive evaluation, we introduce HETMIXR, which spans heterogeneous source content and diverse simulated room conditions with source-specific RIRs and geometric distance annotations. Experiments on HETMIXR demonstrate superior performance in source separation, RIR estimation, and distance ordering. Ablation studies reveal the complementary benefits of source supervision and reverberant reconstruction, while additional evaluations show generalization to single-speaker inputs and mixtures generated using measured RIRs from an unseen room. Our code and dataset are available at https://github.com/Wenanzhi/DAMSEP.",
+      "tags": [
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "DAMSEP: Distance-Aware Monaural Source Separation using Multi-RIR Estimation",
+      "url": "https://arxiv.org/abs/2609.29749v2"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "636e10b92dd9a6c8ed8aebca",
+      "context_id": "5b56c9149fc71c952557fa50",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::COUNTEREVIDENCE",
+      "direction_title": "Voice / acoustic representation / source preservation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "speaker",
+        "speaker representation",
+        "speaker verification",
+        "voice"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.3333,
+      "source": "arxiv",
+      "source_context_sha256": "dda0806cc765dccc251a09cae948aec115ed5c84efbb5199e4aa46bd803d79a1",
+      "source_published": "2026-10-08T02:13:07Z",
+      "source_updated": "2026-10-08T02:13:07Z",
+      "summary": "Speaker verification (SV) performance degrades under language mismatch due to the entanglement of speaker identity with language-specific acoustic cues. To address this problem, we leverage large-scale self-supervised pre-trained models (PTMs) to learn language-agnostic speaker representations. We utilize PTMs as robust front-end feature extractors, capitalizing on their rich acoustic and linguistic knowledge acquired from vast, diverse audio data. These generalized features are then used to train a downstream speaker embedding network, effectively disentangling speaker identity from language-specific characteristics. We validate our approach on the TidyVoice2026 benchmark, which benchmarks SV under language mismatch. Our proposed system (team T02) achieves equal error rates (EERs) of 2.21% on tv26_eval-A and 2.99% on tv26_eval-U.",
+      "tags": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Cross-Lingual Speaker Verification with Self-Supervised Pre-Trained Models",
+      "url": "https://arxiv.org/abs/2610.11099v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "0b87394e1563431e3e3d59dd",
+      "context_id": "9974c1e401ca630e98e4f5c5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::COUNTEREVIDENCE",
+      "direction_title": "Voice / acoustic representation / source preservation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "source separation",
+        "speaker",
+        "speech"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.25,
+      "source": "arxiv",
+      "source_context_sha256": "bea19044dbfd15a4031cba7999f719fb18ae230c6227d645241262cb20b0c296",
+      "source_published": "2026-10-09T09:30:21Z",
+      "source_updated": "2026-10-09T09:30:21Z",
+      "summary": "This paper describes our systems for the Track 1 time-stamped speaker-attributed ASR task of the SmartGlasses Challenge. To handle overlapping speech, background noise and far-field conditions in two-person conversations, we employ SoulX-Transcriber, a multimodal large language model that takes full-length audio as input and generates structured transcriptions. In addition, we investigate the effect of speech frontend processing, including a rule-based Guided Source Separation method and a data-driven speech separation model, both of which improve performance on the validation set. Considering inference stability, our final submission uses the fine-tuned SoulX-Transcriber system, achieving a tcpCER of 6.22 on the test set.",
+      "tags": [
+        "eess.AS",
+        "cs.SD"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Frontend-Assisted Large Audio-Language Models for SLT2026 SmartGlasses Challenge",
+      "url": "https://arxiv.org/abs/2610.13282v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "86bfb38aa7429bfc1dd65949",
+      "context_id": "3ab3d9b1c9711aa0abaf322d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::COUNTEREVIDENCE",
+      "direction_title": "Voice / acoustic representation / source preservation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "source separation",
+        "speaker",
+        "speech"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.25,
+      "source": "arxiv",
+      "source_context_sha256": "eba962765859f726f8dacd467c9c4c3d00d610f1d0645aa576250443fa0109de",
+      "source_published": "2026-10-07T02:50:56Z",
+      "source_updated": "2026-10-07T02:50:56Z",
+      "summary": "Blind Source Separation(BSS) is a fundamental problem in signal processing, aiming to separate multiple source signals from their mixtures without prior knowledge of the sources or the mixing process. Traditional approaches, such as Independent Vector Analysis (IVA) exploits statistical independence of sources. Recently, diffusion-based approaches have emerged as a promising alternative by leveraging powerful generative priors. Among them, ArrayDPS formulates BSS problem as a posterior sampling problem, and utilizes a pretrained speech diffusion model to guide the recovery of clean source signals. A key factor behind its separation capability is the multi-channel consistency (MC) objective, which enforces the estimated source signals to reconstruct the observed microphone mixtures through the estimated acoustic transfer functions. However, the number of microphones in the array is often limited, which constrains the performance of ArrayDPS. To address this issue, we propose VM-ArrayDPS, a novel method that augments the microphone array with virtual microphones with higher-SNR, these microphones can offer extra MC constraints to enhance the separation performance. Experimental results demonstrate that VM-ArrayDPS significantly outperforms ArrayDPS on both 2-speaker and 3-speaker datasets, showcasing the effectiveness of virtual microphone augmentation in improving BSS performance. We also did ablation studies to show the influence of the number of virtual microphones and weight of the MC objective brought by virtual microphones.",
+      "tags": [
+        "eess.AS",
+        "cs.LG",
+        "cs.MM",
+        "cs.SD",
+        "eess.SP"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "VM-ARRAYDPS: Virtual Microphone Augmented Diffusion Posterior Sampling for Unsupervised Blind Speech Separation",
+      "url": "https://arxiv.org/abs/2610.09334v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "85d0a0b1537015c40effdddb",
+      "context_id": "a6acd89bf9d9e12f584202fd",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::COUNTEREVIDENCE",
+      "direction_title": "Voice / acoustic representation / source preservation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "source separation",
+        "speech",
+        "voice"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.1667,
+      "source": "arxiv",
+      "source_context_sha256": "058a1d565642cca6017339741fc0beaddeb1a8908e103b60d5009e2f74c13ae9",
+      "source_published": "2026-10-08T16:24:12Z",
+      "source_updated": "2026-10-08T16:24:12Z",
+      "summary": "Wearable augmented reality (AR) assistants are moving toward continuous real-world interaction, where they perceive the user's activity through first-person video and audio and provide timely spoken guidance without being explicitly asked. While proactive video assistants, spoken dialog systems, and egocentric task understanding have each advanced rapidly, existing systems do not address the joint problem of deciding when to speak and what to say from continuous first-person streams. We introduce EgoVoice, a framework for training and evaluating proactive egocentric spoken assistants. From HoloAssist video recordings of real human instructors, we construct clean audio streams through source separation and speech resynthesis, and convert each video session into a format where the model must decide at each moment whether to remain silent or provide spoken guidance. We fine-tune an omni-modal LLM with our data, and further improve its proactive intervention behavior with direct preference optimization. Experiments across closed and open-source models show that existing systems rarely produce well-timed, meaningful proactive interventions, while EgoVoice yields clear improvements in intervention timing, content relevance, and human preference over the zero-shot backbone.",
+      "tags": [
+        "cs.CL",
+        "cs.CV",
+        "cs.SD"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "EgoVoice: Proactive Spoken Assistance from Egocentric Multimodal Streams",
+      "url": "https://arxiv.org/abs/2610.12248v1"
+    },
+    {
+      "base_direction_id": "cognition_memory_reverse",
+      "candidate_id": "a5f22f39e3e1fb74baf2bf38",
+      "context_id": "71a90ad71e4b68d63092225a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "cognition_memory_reverse::COUNTEREVIDENCE",
+      "direction_title": "Cognition / memory / reverse models / representation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "representation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.1667,
+      "source": "zenodo",
+      "source_context_sha256": "0126e658215b0209cfd751bf1630c09f428efc403f75ff51dae84993a27eaeda",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "We develop a rigorous finite-dimensional mathematical framework connecting the renormalization group, gradient flows, Lyapunov stability, and noncooperative game theory. The central object is a renormalization-group flow written in gradient form, dg_i/dt = &beta;_i(g) = - &sum;_j G_ij(g) &part;&Gamma;/&part;g_j(g),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1) where g = (g_1, &hellip;, g_n) belongs to an open domain M &sub; ℝⁿ, &Gamma; is a C&sup2; function, and G(g) is a symmetric positive-definite matrix. We associate to this flow a common-payoff game whose payoff is U(g) = - &Gamma;(g).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2) We prove, with complete arguments, that ordinary Nash equilibria always imply renormalization-group fixed points, but the converse is false. We then identify the exact condition under which a fixed point becomes a genuine stable equilibrium of the game: a nondegenerate renormalization-group fixed point is asymptotically stable if and only if the Hessian of &Gamma; is positive definite, if and only if it is a strict local minimum of &Gamma;, if and only if it is a strict strong Nash equilibrium of U = -&Gamma;. The distinction between ordinary Nash equilibrium and strong Nash equilibrium is essential. Ordinary Nash equilibria allow only unilateral deviations, while strong Nash equilibria exclude all small joint deviations. We provide explicit counterexamples showing that fixed points need not be Nash equilibria, that ordinary Nash equilibria need not be stable, and that invertibility of G alone does not imply finiteness of equilibria. We also prove global existence results under compactness and finiteness results under Morse nondegeneracy. The paper is self-contained at the level of multivariable calculus, linear algebra, ordinary differential equations, and basic Lyapunov stability theory. The framework is intentionally conditional: it does not claim that the gradient-flow representation has been proven in four-dimensional QCD or in any specific quantum field theory. Those issues are placed in a final section of open problems.",
+      "tags": [
+        "renormalization group",
+        "gradient-flow renormalization group",
+        "Lyapunov function",
+        "Lyapunov stability",
+        "asymptotically stable fixed points",
+        "renormalization-group fixed points",
+        "Nash equilibrium",
+        "strong Nash equilibrium",
+        "common-payoff game",
+        "common-potential game",
+        "potential games",
+        "beta functions",
+        "Hessian positive definiteness",
+        "strict local minimum",
+        "nondegenerate critical points",
+        "Morse nondegeneracy",
+        "game theory",
+        "finite-dimensional dynamical systems",
+        "inverse function theorem",
+        "QCD gradient-flow open problem"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Gradient-Flow Renormalization Group as a Common-Potential Game: A Rigorous Equivalence Between Asymptotically Stable Fixed Points and Strict Strong Nash Equilibria",
+      "url": "https://zenodo.org/records/23442159"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "e62e0404e69f8bf79dd66766",
+      "context_id": "8a05acfd0692246e79919a2d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::COUNTEREVIDENCE",
+      "direction_title": "Voice / acoustic representation / source preservation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "source separation",
+        "speech"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9583,
+      "source": "arxiv",
+      "source_context_sha256": "c2d273950267d7d84ae593d03d3af19d8da2a12862faccddb1069547f39f5886",
+      "source_published": "2026-09-18T02:33:00Z",
+      "source_updated": "2026-09-18T02:33:00Z",
+      "summary": "Discrete audio tokenization has become the critical interface between raw waveforms and autoregressive modeling in recent music generation. As a result, music tokenizers must simultaneously support high-fidelity reconstruction and produce discrete sequences that remain amenable to language modeling. Existing reconstruction-oriented tokenizers often mix musical structure with fine acoustic details, producing high-entropy tokens that are hard to model. In contrast, semantics-guided alternatives are designed for speech and do not fit music well, often hurting reconstruction quality. We address these trade-offs by rethinking music tokenization around a measurable notion of music semantic content grounded in downstream Music Information Retrieval tasks. Guided by this definition, we propose MuSeC, a music semantic codec that factorizes semantic and acoustic content directly from mixed signals without source separation. MuSeC preserves information required for high-fidelity reconstruction while producing more LM-friendly discrete units. Empirically, it improves reconstruction quality and yields more predictable token sequences, providing a practical foundation toward high-fidelity LLM music generation. Demos are available at https://longwaytog0.github.io/MuSeC/.",
+      "tags": [
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Rethinking Music Tokenization: A Semantic Codec toward High-Fidelity LLM Music Generation",
+      "url": "https://arxiv.org/abs/2609.21240v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "b78dbd102b54d08aeeda8283",
+      "context_id": "56c6bdfc1ffed213c1bc252e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::CONTROL",
+      "direction_title": "Voice / acoustic representation / source preservation [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control",
+        "source separation"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.3333,
+      "source": "arxiv",
+      "source_context_sha256": "f69bac191a87b7947ac8bca83cafc51855433658e2b980308eb6fac92cd30a12",
+      "source_published": "2026-10-07T13:12:10Z",
+      "source_updated": "2026-10-07T13:12:10Z",
+      "summary": "Language-queried audio source separation (LASS) enables extracting any sound source using natural language. However, adapting LASS models to application-specific sound classes is challenging due to noisy training data and limited semantic coverage of the CLAP-based control signals. We propose a framework comprised of an automated data engine for training-data curation and a two-stage optimization process for class-specific CLAP control signals. Our objective evaluations across seven sound classes show that data refinement and control signal optimization consistently improve source separation performance. Subjective evaluation with 17 participants further demonstrates perceptual improvements of the model trained with optimized control signals over baseline and similar commercial models.",
+      "tags": [
+        "cs.SD"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "A Study on Improving Multi-class Audio Source Separation Via Decoupled CLAP Query Optimization and an Automated Data Engine",
+      "url": "https://arxiv.org/abs/2610.10025v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "9de2e8cc7dec17b5235d0a40",
+      "context_id": "e760c14dcdc7f075ca83f4fa",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::CONTROL",
+      "direction_title": "Voice / acoustic representation / source preservation [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.0,
+      "source": "zenodo",
+      "source_context_sha256": "f69e7508b5075299d3ec25c6b5f6f88354e11992514c1bbcd76a7012230dbf3e",
+      "source_published": "2026-10-09",
+      "source_updated": "",
+      "summary": "Self-contained computational materials accompanying \"Verifiable approval-release decisions for construction project management: A provenance-aware contract and automated evidence\" by Ahmad Baghdadi. Version 4.0.0 includes source code, complete generated inputs and results, schemas, exact witnesses, a de-identified calendar encoding, benchmark records and SHA-256 checksums. This version adds 83 conventional priority-list levelling comparisons under identical constraints: 72 tied peaks and 11 one-gate improvements, with sufficient exact certificates for all 83. A complete two-plan PROV-O example passes the domain and provenance SHACL profiles and preserves every decision field after RDF exchange. The suite comprises 145 automated tests. Earlier computational evidence includes generated extraction, 360 controlled record comparisons, exact wave bounds, nine calendar scenarios and 80 saved benchmark plans with renewed arithmetic audit. S14 preparation includes blank independent-annotation and approval registers plus a precision/recall evaluator with explicit denominators. No native baseline or independent annotations are available; field validation has not been executed. Case A remains historical aggregates only. Calendar B is a prior encoding with assumed review windows. Supplementary Table S1 identifies the deposited components and the supplement consolidates the evidence limits.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Reproducibility materials for verifiable approval-release decisions in construction project management",
+      "url": "https://zenodo.org/records/23263118"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "ae6d5c36a75fd641c620e3bd",
+      "context_id": "8f0ac7f72e9d6ef5c43c18bf",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::CONTROL",
+      "direction_title": "Voice / acoustic representation / source preservation [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.0,
+      "source": "zenodo",
+      "source_context_sha256": "81ba353e7580af47b8e1d597cb767de9c197aaca211f3b47a0f3c2105cf19932",
+      "source_published": "2026-10-09",
+      "source_updated": "",
+      "summary": "This record provides the public, non-confidential analytical and reproducibility materials supporting the manuscript &ldquo;When Does Seismic&ndash;Geotechnical Data Fusion Add Value? A Borehole-Aware Empirical-to-Synthetic Validation Framework for Urban Tunnelling.&rdquo; The study develops and audits a borehole-aware empirical-to-synthetic framework for evaluating whether adding downhole seismic information provides defensible incremental value in predicting the M&eacute;nard pressuremeter modulus under held-out validation. The empirical benchmark comprises 41 support-matched pressuremeter&ndash;seismic records across 21 independent boreholes from the Isfahan Metro Line 2 investigation. The framework compares a reference model, a geotechnical/geological-depth baseline, a seismic-only branch, naive multimodal fusion, and a dependence-aware fusion branch using leave-one-borehole-out validation. The public release contains a de-identified 41-record benchmark dataset, final manuscript Figure 1&ndash;5 assets, the current Supplementary Material and Supplementary Figure S1, released derived analytical outputs, provenance and reproducibility documentation, reproducibility and repository-audit scripts, computational-environment specifications, and SHA-256 integrity information. The de-identified dataset replaces source borehole identifiers with pseudonymous identifiers and excludes borehole coordinates and other spatially identifying source information. The underlying Isfahan Metro Line 2 geotechnical, geophysical, and pressuremeter source records are controlled by the Isfahan Urban Railway Organization and are not publicly redistributable. Original source workbooks, proprietary project documents, spatially identifying information, and other restricted source-derived materials are intentionally excluded from this public archive. Permission was obtained to use and publish the de-identified, non-confidential data extracted from the project report and the derived analytical information included in this release. The public code component provides scripts for reproducing the released manuscript-level benchmark metrics and verifying the integrity and consistency of the deposited files. These scripts do not contain the restricted original project records or proprietary source-data processing materials. The archive is intended to support transparent audit and reproducibility of the released derived analyses while preserving the access restrictions applying to the underlying project data.",
+      "tags": [
+        "data fusion",
+        "borehole-aware validation",
+        "downhole seismic",
+        "pressuremeter",
+        "Ménard modulus",
+        "small-strain stiffness",
+        "data-driven site characterization",
+        "geotechnical engineering",
+        "leave-one-borehole-out cross-validation",
+        "machine learning",
+        "geotechnical data fusion",
+        "empirical-synthetic validation",
+        "uncertainty quantification",
+        "data provenance",
+        "Isfahan Metro"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "When Does Seismic–Geotechnical Data Fusion Add Value? — Project 06 Data and Reproducibility Package",
+      "url": "https://zenodo.org/records/23249844"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "3a69185fc82ab04023cc703f",
+      "context_id": "4492b43807d251c3c731337f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::CONTROL",
+      "direction_title": "Voice / acoustic representation / source preservation [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.0,
+      "source": "arxiv",
+      "source_context_sha256": "9fac93a9c47ae2e9cd5f7dcdeb954a18e22ecb0d217b3c17d8b5f0686ede35ff",
+      "source_published": "2026-10-15T16:50:41Z",
+      "source_updated": "2026-10-15T16:50:41Z",
+      "summary": "Semiconductor spin qubits offer a promising route to compact and scalable quantum computers, combining long coherence times in isotopically purified silicon with compatibility with semiconductor manufacturing. Beyond computational speedup, their energy efficiency is an important consideration for future large-scale systems. We evaluate the power and energy requirements of a Loss-DiVincenzo spin-qubit quantum computer by analyzing the Quantum Fourier Transform (QFT) and benchmarking it against the classical Fast Fourier Transform (FFT). We develop a detailed energy budget, identifying cryogenic cooling as the dominant baseline contribution before quantum error correction (QEC). The comparison between the QFT and the classical FFT reveals that, for any quantum workload operating under a polynomially bounded sampling regime, the crossover in energy consumption occurs at smaller problem sizes than the crossover in execution time. Thus, quantum computing can become energetically competitive before achieving a speedup in execution time. We then incorporate surface-code QEC and analyze the energy costs of QEC cycles, gate synthesis, and decoding. At scale, instrumentation and decoding become dominant contributions, while cryogenic cooling imposes a constraint on scalability. We show that optimizing the control-signal demultiplexing ratio can reduce the overall energy cost by approximately two orders of magnitude. For a system with about one million physical qubits, we estimate a power consumption of approximately 100 kW, at least one order of magnitude below that of today's highest-performance classical computing systems.",
+      "tags": [
+        "quant-ph"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Energetics of Fault-Tolerant Spin-Qubit Quantum Computation",
+      "url": "https://arxiv.org/abs/2610.22199v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "95e044f9388055b9d9fdcf4e",
+      "context_id": "211fb0bd6fa265b3ba47478e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::CONTROL",
+      "direction_title": "Voice / acoustic representation / source preservation [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.0,
+      "source": "zenodo",
+      "source_context_sha256": "704a319d7a66289a10bf0cbe198f474286495e01331143432fd00aa628e564b2",
+      "source_published": "2026-10-08",
+      "source_updated": "",
+      "summary": "This data and code release accompanies &ldquo;Output rules and corpus preparation shape retrieval evaluation in a cross-language legal information audit&rdquo;. Version 3.0 brings together the current rule experiment, internal task benchmark, legal-version evidence and selected research exports from the published version 2.1 baseline. The collection contains 39 Peruvian legal-information records. The output-rule component applies eight combinations of no-match handling, document-support filtering and tie ordering to frozen scores for 32 retained queries and 58 designated-target exposures per language path. It includes 6,912 query-level results, 216 aggregate summaries and a 5,000-replicate shared-order negative control. The internal benchmark contains twelve tasks in six clusters, two formulations per task, 468 provisional content grades, the two returned coding sets, four retrieval configurations and corpus-repair comparisons. Current sensitivity files evaluate existing grade sets, all 27 assignments to three unknown returned grades and RETA-family aggregation. Preparation and judgment roles, prior-output exposure and missing values are retained. Content support is evaluated separately from temporal applicability. The legal-evidence component supplies dated official-source locators, checksums and version findings. The archive includes current Figures 1&ndash;3, source data, plotting code, component data dictionaries, a result/file map, portable standard-library recalculation code and a SHA-256 manifest. Exported score/rank aggregation and deterministic sensitivity checks have been reproduced. Fresh extraction and scoring require the exact source carriers, indexed text and pinned model resources documented in the manifests. Original legal PDFs, full-text/OCR caches, source-page images and model weights are not redistributed. Project-created data and documentation retain the existing CC BY 4.0 licence; project-created code retains the MIT licence. Third-party source materials remain subject to their respective access and reuse conditions. The preceding published baseline is identified by DOI 10.5281/zenodo.23094356, and the version series by DOI 10.5281/zenodo.23094355.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "CLIQ-R: Data and code for cross-language legal retrieval evaluation in Peru",
+      "url": "https://zenodo.org/records/23250366"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "d5b7eba33377ea57501cae2a",
+      "context_id": "7ee3fa17ab2208e55fac2c9c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::CONTROL",
+      "direction_title": "Voice / acoustic representation / source preservation [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control",
+        "speaker",
+        "speaker verification",
+        "voice"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 12.9583,
+      "source": "arxiv",
+      "source_context_sha256": "831e944c25587d7b3f32ac124c12fa34aaed69c909d3cc7deed1585cadd00ca4",
+      "source_published": "2026-10-05T16:53:39Z",
+      "source_updated": "2026-10-05T16:53:39Z",
+      "summary": "Embedding enhancement improves speaker verification under acoustic mismatch without modifying a frozen backbone. Recent work has established a practical label-free setting for this task, but often adopts increasingly structured formulations. Here, the clean target is directly observed during training, making enhancement a matching problem on the unit hypersphere. We model the clean target with a von Mises--Fisher (vMF) likelihood and profile out a sample-wise concentration parameter, yielding a simple closed-form objective with adaptive weighting. Across VoxCeleb1, VoxSRC23, CN-Celeb, VOiCES, and VC-Mix, the proposed method largely preserves the baseline and gives clearer gains on challenging mismatch sets. It also remains stable under a broad single-view recipe, where a recent diffusion baseline becomes less reliable in controlled comparisons. These results suggest that effective label-free embedding enhancement in this setting does not require a highly structured formulation.",
+      "tags": [
+        "cs.SD",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Revisiting Label-Free Speaker Embedding Enhancement with vMF Profile Likelihood",
+      "url": "https://arxiv.org/abs/2610.06691v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "636e10b92dd9a6c8ed8aebca",
+      "context_id": "2c1f0e75b79862e662caf13e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::CONTROL",
+      "direction_title": "Voice / acoustic representation / source preservation [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "speaker",
+        "speaker representation",
+        "speaker verification",
+        "voice"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 11.7083,
+      "source": "arxiv",
+      "source_context_sha256": "6817b9f718f36d2f00429262e548bd8ae1a18a4f0392ebf1dea8279c0bb68471",
+      "source_published": "2026-10-08T02:13:07Z",
+      "source_updated": "2026-10-08T02:13:07Z",
+      "summary": "Speaker verification (SV) performance degrades under language mismatch due to the entanglement of speaker identity with language-specific acoustic cues. To address this problem, we leverage large-scale self-supervised pre-trained models (PTMs) to learn language-agnostic speaker representations. We utilize PTMs as robust front-end feature extractors, capitalizing on their rich acoustic and linguistic knowledge acquired from vast, diverse audio data. These generalized features are then used to train a downstream speaker embedding network, effectively disentangling speaker identity from language-specific characteristics. We validate our approach on the TidyVoice2026 benchmark, which benchmarks SV under language mismatch. Our proposed system (team T02) achieves equal error rates (EERs) of 2.21% on tv26_eval-A and 2.99% on tv26_eval-U.",
+      "tags": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Cross-Lingual Speaker Verification with Self-Supervised Pre-Trained Models",
+      "url": "https://arxiv.org/abs/2610.11099v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "a831f32e8d535aa875c64de4",
+      "context_id": "7a1a2f5d66182728a33a9acc",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::CONTROL",
+      "direction_title": "Voice / acoustic representation / source preservation [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "sound event",
+        "source separation"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.5417,
+      "source": "arxiv",
+      "source_context_sha256": "3c9766846cd2da1e1ffe06121412effba7607c61ecf25315a54ac043156ebec1",
+      "source_published": "2025-09-21T21:44:10Z",
+      "source_updated": "2025-12-23T09:37:51Z",
+      "summary": "We propose DeepASA, a multi-purpose model for auditory scene analysis that performs multi-input multi-output (MIMO) source separation, dereverberation, sound event detection (SED), audio classification, and direction-of-arrival estimation (DoAE) within a unified framework. DeepASA is designed for complex auditory scenes where multiple, often similar, sound sources overlap in time and move dynamically in space. To achieve robust and consistent inference across tasks, we introduce an object-oriented processing (OOP) strategy. This approach encapsulates diverse auditory features into object-centric representations and refines them through a chain-of-inference (CoI) mechanism. The pipeline comprises a dynamic temporal kernel-based feature extractor, a transformer-based aggregator, and an object separator that yields per-object features. These features feed into multiple task-specific decoders. Our object-centric representations naturally resolve the parameter association ambiguity inherent in traditional track-wise processing. However, early-stage object separation can lead to failure in downstream ASA tasks. To address this, we implement temporal coherence matching (TCM) within the chain-of-inference, enabling multi-task fusion and iterative refinement of object features using estimated auditory parameters. We evaluate DeepASA on representative spatial audio benchmark datasets, including ASA2, MC-FUSS, and STARSS23. Experimental results show that our model achieves state-of-the-art performance across all evaluated tasks, demonstrating its effectiveness in both source separation and auditory parameter estimation under diverse spatial auditory scenes.",
+      "tags": [
+        "eess.AS",
+        "cs.SD"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "DeepASA: An Object-Oriented Multi-Purpose Network for Auditory Scene Analysis",
+      "url": "https://arxiv.org/abs/2509.17247v3"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "34dff0aa7c7441bf6577027a",
+      "context_id": "6f4de934d04d79aa2d68f7b1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::CONTROL",
+      "direction_title": "Voice / acoustic representation / source preservation [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline",
+        "source separation"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.375,
+      "source": "arxiv",
+      "source_context_sha256": "6ffbcc3cba940acce2cd7bf24ac6ecf0e5bb1a1d713a6a972e44ede5e413f9d4",
+      "source_published": "2026-08-02T08:50:13Z",
+      "source_updated": "2026-08-02T08:50:13Z",
+      "summary": "Automatic Drum Transcription (ADT) is commonly formulated as a direct mapping from a music mixture to symbolic drum events. While effective for transcription, this formulation discards the acoustic stems that are useful for editing, remixing, and production. We revisit an alternative separate-and-detect formulation, where a drum source separation front end first produces five editable drum stems, and a fixed onset detector then converts each stem into symbolic events. The separator is built on a five-stem latent diffusion model that jointly generates kick, snare, toms, hi-hats, and cymbals in a compact VAE latent space. We further study two training-only auxiliary branches--an onset branch (OB) and a timbre branch (TB)--which shape the separator during learning but are discarded at inference. Trained on synthetic drum multitracks and evaluated on MDB Drums and ENST-Drums, the proposed pipeline consistently improves over a strong U-Net-based drum separation baseline in overall transcription F1. It also outperforms a representative end-to-end ADT system on kick and snare F1 under our evaluation protocol, while additionally providing separated audio stems. The ablation results show that OB gives the most stable transcription gains, whereas TB changes the trade-off between reconstruction, acoustic stem quality, and onset detection. These results suggest that generative drum demixing can serve not only as a source separation model, but also as a practical front end for interpretable drum transcription.",
+      "tags": [
+        "cs.SD"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Separate-and-Detect: Unified Drum Transcription and Stem Generation via Latent Diffusion",
+      "url": "https://arxiv.org/abs/2608.01093v1"
+    },
+    {
+      "base_direction_id": "cognition_memory_reverse",
+      "candidate_id": "de7eb053556570c655d525a4",
+      "context_id": "012453fed81ea993c363cfa4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "cognition_memory_reverse::CONTROL",
+      "direction_title": "Cognition / memory / reverse models / representation [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "representation"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2917,
+      "source": "arxiv",
+      "source_context_sha256": "3cc26a52b9a273dfedcd1405def2a6c16fdcec9b873de4ba0175f8e6781b5117",
+      "source_published": "2025-09-17T14:55:21Z",
+      "source_updated": "2025-09-17T14:55:21Z",
+      "summary": "Singing Accompaniment Generation (SAG) is the process of generating instrumental music for a given clean vocal input. However, existing SAG techniques use source-separated vocals as input and overfit to separation artifacts. This creates a critical train-test mismatch, leading to failure on clean, real-world vocal inputs. We introduce AnyAccomp, a framework that resolves this by decoupling accompaniment generation from source-dependent artifacts. AnyAccomp first employs a quantized melodic bottleneck, using a chromagram and a VQ-VAE to extract a discrete and timbre-invariant representation of the core melody. A subsequent flow-matching model then generates the accompaniment conditioned on these robust codes. Experiments show AnyAccomp achieves competitive performance on separated-vocal benchmarks while significantly outperforming baselines on generalization test sets of clean studio vocals and, notably, solo instrumental tracks. This demonstrates a qualitative leap in generalization, enabling robust accompaniment for instruments - a task where existing models completely fail - and paving the way for more versatile music co-creation tools. Demo audio and code: https://anyaccomp.github.io",
+      "tags": [
+        "cs.SD",
+        "eess.SP"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "AnyAccomp: Generalizable Accompaniment Generation via Quantized Melodic Bottleneck",
+      "url": "https://arxiv.org/abs/2509.14052v1"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "1796f9dc4135113b4d28015e",
+      "context_id": "b2716fc212933dd55e86c0c7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::CONTROL",
+      "direction_title": "Voice / acoustic representation / source preservation [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "calibration"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.1667,
+      "source": "zenodo",
+      "source_context_sha256": "033a4f4300ffd4047ce31b381724d391e5ba103fc58e1831eed2e2304d422559",
+      "source_published": "2026-10-09",
+      "source_updated": "",
+      "summary": "This Zenodo record is a permanently preserved version of a comment on a PREreview. You can view the complete PREreview and comments at https://prereview.org/reviews/22745390 . Thank you, Evgenii, for the detailed and constructive PREreview. Your comments led us to substantially strengthen both the experimental design and the interpretation of the results. We have now released a revised version of the manuscript that addresses the main points raised in the review. The revision includes: A 30-seed robustness analysis rather than relying on a single simulation seed A correlation sweep for estimator errors from ρ = 0 to 0.8 Regression-fitted and test-set oracle aggregation baselines Shared-noise experiments for the model–collective calibration signal, reported with ROC-AUC and lift Explicit specification of the four-Wave rolling calibration window, software versions, and PCG64 RNG Portfolio scaling to 100 Feature Blocks using an exact binary MILP reference An explicit separation between budget-constrained portfolio selection and ODP's native dependency-aware sequencing role An exact and scaling benchmark for ODP sequencing under prerequisite constraints An explicit competing-interest disclosure A public reproducibility package containing the simulation code, deterministic seeds, generated data, analysis scripts, and validation material. One particularly useful outcome of the revision was that the stronger experiments narrowed some of our original claims. For example, inverse-MSE aggregation performs very strongly when estimator errors are independent, but its advantage collapses under strong shared error. We also found that ODP distance is not the strongest heuristic for budget-constrained portfolio selection, while it performs very differently in its native sequencing role, where ERS/BVS is exactly optimal for the declared objective without dependencies and remains close to the exact optimum under the tested prerequisite constraints. Revised manuscript: https://arxiv.org/abs/2609.10648 Reproducibility package: https://doi.org/10.5281/zenodo.23261325 Thank you again for the review. It improved the paper. Competing interests I am a co-author of the manuscript discussed in this PREreview and a contributor to the D-POAF framework evaluated in the study. I am also affiliated with Inovionix, which develops software implementing D-POAF concepts.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Comment on a PREreview of \"Governed Human-AI Prioritization Under Uncertainty: Adaptive Estimation and Dependency-Constrained Portfolio Selection\"",
+      "url": "https://zenodo.org/records/23263472"
+    },
+    {
+      "base_direction_id": "voice_acoustic_signal",
+      "candidate_id": "fb8cfa94419cd29709ea37ee",
+      "context_id": "4ba28cde20ff0ddf73d08a1a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "voice_acoustic_signal::CONTROL",
+      "direction_title": "Voice / acoustic representation / source preservation [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "benchmark",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.1667,
+      "source": "zenodo",
+      "source_context_sha256": "072a0408541d5d5f89d8c59b629d71ea2e9dc8cd018053da313e283753c6121f",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "This replication package contains the experimental artifacts, anonymized empirical benchmark dataset (N = 5,000 paired student-opportunity records), statistical verification scripts, database definitions, and microservices source code for the research paper: \"Hybrid Vector-Temporal Matching for Student Freelance Placement: An Empirical Study of Database-Level Vector Offloading\" Targeted for Information and Software Technology (IST, Elsevier). Package Contents: data/: Anonymized benchmark dataset (students_data_tesis_final.csv) featuring 168-hour weekly availability matrices and raw ablation output. benchmarks/: Automated Python scripts for Stratified 5-fold cross-validation ablation (C1 to C4), Wilcoxon Signed-Rank hypothesis testing, Cliff's Delta effect size calculation, and bootstrap confidence intervals. database/: PostgreSQL 16 schema and stored procedure definitions for HNSW Approximate Nearest Neighbor vector search (pgvector) and dynamic schedule intersection. turborepo-src/: Clean source code of the decoupled microservices monorepo (API Gateway, Matching Service, ML Engine, and shared Protocol Buffers). System Requirements: Python 3.10+ with NumPy, SciPy, Pandas, Scikit-Learn, and NLTK. Node.js v20+ / pnpm v9+ and Docker Engine for microservice orchestration.",
+      "tags": [
+        "Software Architecture",
+        "Microservices",
+        "Vector Databases",
+        "pgvector",
+        "CQRS",
+        "Recommender Systems",
+        "Replication Package"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Replication Package: Hybrid Vector-Temporal Matching for Student Freelance Placement",
+      "url": "https://zenodo.org/records/23428430"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "selection": "BALANCED_LENS_ROLLING_TOP",
+  "snapshot_cap": 48,
+  "snapshot_items_total": 48,
+  "target_repository": "Hawkar-usls/Hrain"
+}
