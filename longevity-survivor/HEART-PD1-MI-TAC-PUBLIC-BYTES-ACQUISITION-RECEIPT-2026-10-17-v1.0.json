@@ -1,0 +1,113 @@
+{
+  "schema_id": "janus.longevity_survivor.topa_public_bytes_receipt.v1",
+  "artifact_id": "HEART-PD1-MI-TAC-PUBLIC-BYTES-ACQUISITION-RECEIPT-2026-10-17-v1.0",
+  "created_utc_date": "2026-10-17",
+  "evidence_lane": "LONGEVITY_SURVIVOR",
+  "source_roots": [
+    {
+      "id": "CHEN_MI_2026",
+      "doi": "10.1038/s41421-026-00924-2",
+      "geo": "GSE293489",
+      "species": "Mus musculus",
+      "model": "post myocardial infarction non-cardiomyocyte scRNAseq"
+    },
+    {
+      "id": "WU_TAC_2026",
+      "doi": "10.1161/CIRCULATIONAHA.125.074024",
+      "geo": "GSE327655",
+      "species": "Mus musculus",
+      "model": "pressure-overload TAC related mouse RNA-seq"
+    },
+    {
+      "id": "WU_HUMAN_PBMC_2026",
+      "doi": "10.5281/zenodo.20983659",
+      "filename": "preprocess.R",
+      "species": "Homo sapiens",
+      "model": "7+7 human PBMC anti-PD1 cardiac injury versus control, not murine TAC tissue"
+    }
+  ],
+  "relevant_prior_checkpoint": "longevity-survivor/HEART-PD1-MI-TAC-PRIMARY-SOURCE-REPLAY-AND-DELAYED-EXIT-GATE-2026-10-17-v1.0.json",
+  "workflow": {
+    "file": ".github/workflows/topa-pd1-small-acquisition.yml",
+    "workflow_creation_commit": "3f50350954e2bc060c33f5e696f79016b8ac6fe2",
+    "downloader": "longevity-survivor/tools/acquire_pd1_geo_zenodo_small.py",
+    "downloader_commit": "ad3a79e911015a85995856e85fc5b59ebc78e6a7",
+    "github_run_id": 39026401715,
+    "run_url": "https://github.com/Hawkar-usls/janus-lapis/actions/runs/39026401715",
+    "trigger": "push",
+    "head_sha": "3f50350954e2bc060c33f5e696f79016b8ac6fe2",
+    "conclusion": "success",
+    "source_step": "Fetch bounded public sources with hashes: success",
+    "checksum_enforcement_step": "Enforce script completion and MD5 validity: success"
+  },
+  "acquired_artifact": {
+    "artifact_id": 12098558095,
+    "name": "topa-pd1-geo-zenodo-verified-public-bytes",
+    "artifact_archive_size_bytes": 570945034,
+    "downloaded_source_byte_total": 570780240,
+    "downloaded_files": 15,
+    "reported_errors": 0,
+    "zenodo_preprocess_R_md5_expected": "c09afc0f77fa13f63329de811f208f59",
+    "zenodo_preprocess_R_md5_verified": true,
+    "manifest_inside_archive": "topa_pd1_acquisition/manifest.json",
+    "checksum_policy": "SHA-256 per downloaded file stored in manifest; byte-level verification of other GEO files requires inspecting that manifest and original content.",
+    "direct_file_inventory_inspected_by_this_observer": false,
+    "source_type_coverage_note": "Both GEO family SOFT metadata receipts and Zenodo script required by CI hard-gate; number, nature and group mapping of acquired matrix files cannot be inferred from total count alone.",
+    "availability": "GITHUB_ACTIONS_ARTIFACT_PUBLIC_REPOSITORY__7_DAY_RETENTION"
+  },
+  "local_execution": {
+    "platform": "current assistant isolated container",
+    "metadata_fetch_attempt": "FAILED_NAME_RESOLUTION_TO_ZENODO_AND_FTP_NCBI",
+    "downloaded_source_bytes": 0,
+    "additional_local_tool": "/mnt/data/topa/acquire_pd1_mi_tac.py — local limited-acquisition helper (not necessarily exact version as GitHub CI script)",
+    "conclusion": "Successful acquisition was completed on GitHub-hosted runner, not in local sandbox."
+  },
+  "script_source_audit": {
+    "location": "https://zenodo.org/records/20983659/files/preprocess.R?download=1",
+    "controls": "Control_1..7",
+    "injured": "cardiac_injury_1..7 mapped to myocarditis_1..7 filename convention",
+    "filtering": "nFeature_RNA 400-6000 and percent.mt <=5",
+    "doublets": "scDblFinder",
+    "normalization": "SCTransform v2 and CCA integration",
+    "annotated_celltypes": [
+      "CD4 T",
+      "CD8 T",
+      "gamma delta T",
+      "NK",
+      "Monocytes",
+      "B"
+    ],
+    "gamma_delta_annotation": "manual label on Seurat cluster 19; needs independent marker validation, not accepted as TCR-confirmed just by cluster index",
+    "cd8_deseq2": "pseudobulk sums raw RNA count matrices by sample, 7+7 biological sample names for human PBMC, contrast Cardiac_Injury versus Control",
+    "critical_nontransferability": "Do not apply Wu human PBMC preprocessing labels/models to Chen MI or Wu mouse TAC expression as if same species/tissue/cell type.",
+    "script_execution_for_statistical_replay": "NOT_RUN"
+  },
+  "followup_protocol": [
+    "Open GitHub run artifact manifest.json, enumerate exact 15 file paths, bytes, SHA256, sample GEO IDs and verify all expected treatment/control replicates across both GSE series.",
+    "Inspect GEO SOFT sample characteristics including sham/MI and TAC/Pdcd1 perturbations, model, tissue, time and true experimental units; identify sample pooling.",
+    "Do not claim full matrix reconstruction until barcode/features/matrix triplets are complete for the same GSMs and verified.",
+    "Only after group crosswalk, run separate mouse MI and mouse TAC expression analyses; use animal-level replicates and do not collapse human PBMC into mouse cardiac data.",
+    "Review actual Zenodo R script’s fixed cluster labels; validate TRDC/TRGC1/2 against cytotoxic CD8 CD8A/B GZMB/PRF1 independently.",
+    "Require delayed-start established-scar intervention with lineage/state-fate resolved activated fibroblast EXIT before any strict RESOLUTION promotion."
+  ],
+  "gates": {
+    "GEO_PROCESSED_DOWNLOAD": "BYTES_ACQUIRED_PARTIAL_SAMPLE_COVERAGE_NOT_YET_AUDITED",
+    "ZENODO_SMALL_SOURCE": "ACQUIRED_MD5_PASS",
+    "ACQUISITION_CHECKPOINT": "GITHUB_RUN_SUCCESS_ARTIFACT_UPLOADED",
+    "BIOLOGICAL_REPLICATE_CROSSWALK": "NOT_DONE",
+    "INDEPENDENT_RNA_REPLAY": "NOT_DONE",
+    "CANDIDATE_DELAYED_FIBROSIS_REVERSAL": "NOT_ESTABLISHED",
+    "STRICT_PROFIBROTIC_CELL_EXIT": "NOT_ESTABLISHED",
+    "MECHANICAL_EXIT_COUPLING": "NOT_ADMITTED",
+    "HUMAN_THERAPY": "NOT_ESTABLISHED",
+    "GLOBAL_SCIENCE_PROMOTION": "NONE"
+  },
+  "firewall": [
+    "SOURCE_BYTES_ACQUIRED != ALL_PROCESSED_MATRICES_COMPLETE",
+    "CHECKSUM_PASS != BIOLOGICAL_REPLAY",
+    "HUMAN_PBMC != MOUSE_CARDIAC",
+    "SCAR_PREVENTION != DELAYED_SCAR_REVERSAL",
+    "CUTOFF_CLUSTERS != CELL_IDENTITY_PROOF",
+    "A_COMMIT_OR_CI_PASS != SCIENTIFIC_VALIDATION"
+  ]
+}
