@@ -1,0 +1,300 @@
+{
+  "schema_id": "janus.longevity_survivor.pd1_mi_10x_exploratory_replay.v1",
+  "authored_utc_date": "2026-10-17",
+  "artifact_id": "HEART-PD1-MI-SCRNA-CXCL9-CXCR3-DESCRIPTIVE-REPLAY-2026-10-17-v1.0",
+  "provenance": {
+    "original_scRNA": "GSE293489",
+    "study": "Chen et al. 2026 DOI 10.1038/s41421-026-00924-2",
+    "original_workflow_run": 39026401715,
+    "original_workflow_sha": "3f50350954e2bc060c33f5e696f79016b8ac6fe2",
+    "original_artifact_id": 12098558095,
+    "original_artifact_digest": "sha256:ef67e3209b6acd66a7e8f3f55b156f15df47e4f827fb99e1b5908f2b5cd62172",
+    "numerical_replay_workflow_run": 39028070341,
+    "numerical_replay_workflow_url": "https://github.com/Hawkar-usls/janus-lapis/actions/runs/39028070341",
+    "numerical_replay_artifact_id": 12099356884,
+    "numerical_replay_artifact_digest": "sha256:91f4c764720fe258fcbc166a1db5bf3f2f3aa4657f48d6265daefd18477ab6d8",
+    "audit_script": "longevity-survivor/tools/audit_pd1_mi_tac_manifest.py",
+    "source_gene_mtx": "4 source GSM-local cellranger 10x MTX+features+barcodes",
+    "integrity": "15/15 acquired source bytes SHA256 reverified, no download errors",
+    "dedup": "Same existing Chen GEO; algorithmic numeric replay, NOT independent experimental replication"
+  },
+  "computed_method": {
+    "data_type": "uncorrected gene-by-barcode UMI count matrix; Cell Ranger 10x",
+    "expression_unit": "gene total UMI / total library UMI × 1e6, per GSM/library",
+    "barcode_positive_fraction": "barcodes with gene UMI>0 / all sampled barcodes, per GSM",
+    "normalization_limitations": "No ambient RNA correction, doublet filtering, QC exclusions, cell-type stratification or biological unit verification in this pass",
+    "explicit_no_p_values": true,
+    "no_animal_crosswalk": true,
+    "gene_identity": "features.tsv.gz gene symbol column; ambiguous duplicated feature names need uniqueness audit before gene differential expression"
+  },
+  "mi_data": [
+    {
+      "gsm": "GSM8884015",
+      "source_group": "SHAM",
+      "barcodes": 12331,
+      "features": 32285,
+      "total_UMI": 118552022,
+      "per_gene_pseudobulk_CPM": {
+        "Col3a1": 1817.986706,
+        "Pdcd1": 0.809771,
+        "Postn": 152.481583,
+        "Pdgfra": 475.091011,
+        "Cxcl9": 0.826641,
+        "Cxcl10": 9.194276,
+        "Cd8b1": 6.115459,
+        "Cd8a": 3.315,
+        "Nkg7": 12.281528,
+        "Cd3d": 14.727712,
+        "Cd3e": 6.899924,
+        "Prf1": 4.327214,
+        "Col1a1": 1002.58096,
+        "Trdc": 1.644848,
+        "Gzmb": 5.432214,
+        "Acta2": 314.157442,
+        "Cxcr3": 0.447061
+      },
+      "per_gene_nonzero_barcode_fraction": {
+        "Col3a1": 0.749736,
+        "Pdcd1": 0.003163,
+        "Postn": 0.163815,
+        "Pdgfra": 0.65753,
+        "Cxcl9": 0.000649,
+        "Cxcl10": 0.023761,
+        "Cd8b1": 0.017679,
+        "Cd8a": 0.013219,
+        "Nkg7": 0.01922,
+        "Cd3d": 0.033087,
+        "Cd3e": 0.026437,
+        "Prf1": 0.012489,
+        "Col1a1": 0.695321,
+        "Trdc": 0.00592,
+        "Gzmb": 0.009407,
+        "Acta2": 0.119455,
+        "Cxcr3": 0.003568
+      },
+      "interpretation": "uncorrected all noncardiomyocytes; not specific immune or fibroblast subtype"
+    },
+    {
+      "gsm": "GSM8884016",
+      "source_group": "SHAM",
+      "barcodes": 17094,
+      "features": 32285,
+      "total_UMI": 140169165,
+      "per_gene_pseudobulk_CPM": {
+        "Col3a1": 1819.266028,
+        "Pdcd1": 1.105807,
+        "Postn": 149.811836,
+        "Pdgfra": 460.193938,
+        "Cxcl9": 0.770498,
+        "Cxcl10": 5.029637,
+        "Cd8b1": 4.851281,
+        "Cd8a": 2.375701,
+        "Nkg7": 15.096045,
+        "Cd3d": 14.325547,
+        "Cd3e": 6.392276,
+        "Prf1": 4.123589,
+        "Col1a1": 946.449242,
+        "Trdc": 1.21282,
+        "Gzmb": 4.672925,
+        "Acta2": 748.402832,
+        "Cxcr3": 0.856108
+      },
+      "per_gene_nonzero_barcode_fraction": {
+        "Col3a1": 0.78355,
+        "Pdcd1": 0.005031,
+        "Postn": 0.169943,
+        "Pdgfra": 0.662396,
+        "Cxcl9": 0.00117,
+        "Cxcl10": 0.010355,
+        "Cd8b1": 0.012753,
+        "Cd8a": 0.009126,
+        "Nkg7": 0.02223,
+        "Cd3d": 0.029601,
+        "Cd3e": 0.021645,
+        "Prf1": 0.012168,
+        "Col1a1": 0.710015,
+        "Trdc": 0.00392,
+        "Gzmb": 0.008307,
+        "Acta2": 0.231777,
+        "Cxcr3": 0.005265
+      },
+      "interpretation": "uncorrected all noncardiomyocytes; not specific immune or fibroblast subtype"
+    },
+    {
+      "gsm": "GSM8884017",
+      "source_group": "MI",
+      "barcodes": 8903,
+      "features": 32285,
+      "total_UMI": 147063646,
+      "per_gene_pseudobulk_CPM": {
+        "Col3a1": 6661.068365,
+        "Pdcd1": 4.87544,
+        "Postn": 1428.163967,
+        "Pdgfra": 101.119484,
+        "Cxcl9": 20.922914,
+        "Cxcl10": 110.108789,
+        "Cd8b1": 4.141064,
+        "Cd8a": 2.060332,
+        "Nkg7": 24.016812,
+        "Cd3d": 26.274338,
+        "Cd3e": 9.580886,
+        "Prf1": 3.0531,
+        "Col1a1": 5393.712325,
+        "Trdc": 7.404957,
+        "Gzmb": 6.038202,
+        "Acta2": 654.838926,
+        "Cxcr3": 2.563516
+      },
+      "per_gene_nonzero_barcode_fraction": {
+        "Col3a1": 0.821184,
+        "Pdcd1": 0.026283,
+        "Postn": 0.52443,
+        "Pdgfra": 0.359205,
+        "Cxcl9": 0.037965,
+        "Cxcl10": 0.163316,
+        "Cd8b1": 0.016624,
+        "Cd8a": 0.013928,
+        "Nkg7": 0.056947,
+        "Cd3d": 0.085814,
+        "Cd3e": 0.06481,
+        "Prf1": 0.020443,
+        "Col1a1": 0.755476,
+        "Trdc": 0.016287,
+        "Gzmb": 0.018533,
+        "Acta2": 0.378973,
+        "Cxcr3": 0.027968
+      },
+      "interpretation": "uncorrected all noncardiomyocytes; not specific immune or fibroblast subtype"
+    },
+    {
+      "gsm": "GSM8884018",
+      "source_group": "MI",
+      "barcodes": 10311,
+      "features": 32285,
+      "total_UMI": 157713643,
+      "per_gene_pseudobulk_CPM": {
+        "Col3a1": 6321.501305,
+        "Pdcd1": 6.207453,
+        "Postn": 2330.470548,
+        "Pdgfra": 105.082856,
+        "Cxcl9": 321.03754,
+        "Cxcl10": 217.939294,
+        "Cd8b1": 7.240972,
+        "Cd8a": 4.489149,
+        "Nkg7": 73.525662,
+        "Cd3d": 52.810904,
+        "Cd3e": 17.265469,
+        "Prf1": 9.31435,
+        "Col1a1": 5133.969291,
+        "Trdc": 10.278122,
+        "Gzmb": 23.333428,
+        "Acta2": 758.469576,
+        "Cxcr3": 5.408537
+      },
+      "per_gene_nonzero_barcode_fraction": {
+        "Col3a1": 0.834158,
+        "Pdcd1": 0.035593,
+        "Postn": 0.648046,
+        "Pdgfra": 0.373485,
+        "Cxcl9": 0.198138,
+        "Cxcl10": 0.241005,
+        "Cd8b1": 0.032296,
+        "Cd8a": 0.027543,
+        "Nkg7": 0.132868,
+        "Cd3d": 0.146252,
+        "Cd3e": 0.104743,
+        "Prf1": 0.047037,
+        "Col1a1": 0.744739,
+        "Trdc": 0.028901,
+        "Gzmb": 0.057802,
+        "Acta2": 0.437688,
+        "Cxcr3": 0.052177
+      },
+      "interpretation": "uncorrected all noncardiomyocytes; not specific immune or fibroblast subtype"
+    }
+  ],
+  "unweighted_sample_means_for_orientation_only": {
+    "Cxcl9": {
+      "sham_unweighted_mean_CPM": 0.7985694999999999,
+      "mi_unweighted_mean_CPM": 170.98022699999999,
+      "mi_over_sham_ratio": 214.10813586043545,
+      "reason_not_for_inference": "n=2 GEO libraries per group; independent mouse ID/pooled status unverified; cell composition unadjusted"
+    },
+    "Cxcl10": {
+      "sham_unweighted_mean_CPM": 7.1119565,
+      "mi_unweighted_mean_CPM": 164.0240415,
+      "mi_over_sham_ratio": 23.06313902510512,
+      "reason_not_for_inference": "n=2 GEO libraries per group; independent mouse ID/pooled status unverified; cell composition unadjusted"
+    },
+    "Cxcr3": {
+      "sham_unweighted_mean_CPM": 0.6515845,
+      "mi_unweighted_mean_CPM": 3.9860265,
+      "mi_over_sham_ratio": 6.117436034773694,
+      "reason_not_for_inference": "n=2 GEO libraries per group; independent mouse ID/pooled status unverified; cell composition unadjusted"
+    },
+    "Trdc": {
+      "sham_unweighted_mean_CPM": 1.4288340000000002,
+      "mi_unweighted_mean_CPM": 8.8415395,
+      "mi_over_sham_ratio": 6.187940306571651,
+      "reason_not_for_inference": "n=2 GEO libraries per group; independent mouse ID/pooled status unverified; cell composition unadjusted"
+    },
+    "Gzmb": {
+      "sham_unweighted_mean_CPM": 5.052569500000001,
+      "mi_unweighted_mean_CPM": 14.685815000000002,
+      "mi_over_sham_ratio": 2.9066032639432273,
+      "reason_not_for_inference": "n=2 GEO libraries per group; independent mouse ID/pooled status unverified; cell composition unadjusted"
+    },
+    "Postn": {
+      "sham_unweighted_mean_CPM": 151.1467095,
+      "mi_unweighted_mean_CPM": 1879.3172574999999,
+      "mi_over_sham_ratio": 12.433729213933036,
+      "reason_not_for_inference": "n=2 GEO libraries per group; independent mouse ID/pooled status unverified; cell composition unadjusted"
+    }
+  },
+  "wu_tac": {
+    "accession": "GSE327655",
+    "assay": "Mouse LV TAC bulk RNA-seq",
+    "groups": {
+      "TAC_ANTI_IGG": [
+        "GSM9662756",
+        "GSM9662757",
+        "GSM9662758"
+      ],
+      "TAC_ANTI_PD1": [
+        "GSM9662759",
+        "GSM9662760",
+        "GSM9662761"
+      ]
+    },
+    "published_geo_soft_samples": 6,
+    "numeric_matrices_in_source_artifact": 0,
+    "independent_animal_identity": "NOT_VERIFIED",
+    "treatment_expression_replay": "BLOCKED_NO_SOURCE_COUNTS",
+    "important": "TAC anti-IgG vs TAC anti-PD1, NOT TAC vs sham"
+  },
+  "scientific_inference": {
+    "descriptive_axis": "CXCL9/CXCL10/CXCR3 RNA signals higher in both MI libraries than both Sham libraries",
+    "rule": "Higher all-cell CPM can reflect cell composition, expression, depth or RNA contamination; not cell-cell ligand direction and not causal intervention effect",
+    "claim_class": "NUMERICALLY_REPLAYED_EXPLORATORY_NOT_STATISTICALLY_VALIDATED",
+    "independent_biological_replication": "NOT_ESTABLISHED"
+  },
+  "gates": {
+    "SOURCE_BYTES_INTEGRITY": "PASS",
+    "CHEN_10X_FOUR_MATRIX_PARSE": "PASS",
+    "CHEN_EXPLORATORY_CXCL9_CXCR3_NUMERIC_REPLAY": "PASS_DESCRIPTIVE_ONLY",
+    "ANIMAL_LEVEL_CELL_TYPE_PROPORTION": "NOT_ADMITTED",
+    "ANIMAL_LEVEL_GENE_DIFFERENTIAL_EXPRESSION": "NOT_ADMITTED",
+    "WU_TAC_BULK_EXPR_REPLAY": "BLOCKED_MISSING_COUNT_TABLE",
+    "STRICT_PROFIBROTIC_CELL_EXIT": "NOT_ESTABLISHED",
+    "MECHANICAL_EXIT_COUPLING": "NOT_ADMITTED",
+    "HUMAN_CLINICAL_INFERENCE": "NONE"
+  },
+  "next_topa": [
+    "Audit raw feature names for duplicate gene symbols and validate orientation/UMI QC, log residuals/mitochondrial fraction and ambient RNA.",
+    "Obtain true mouse/library and potential pooling crosswalk for Chen 4 GSM and Wu 6 GSM from primary methods or corresponding authors.",
+    "Run cell-type classification using multiple orthogonal markers and replicate-specific QC; compute per-mouse cell-type fractions only after animal crosswalk.",
+    "Locate GSE327655 processed series-level count matrix or SRA/submitter count table, with exact sample columns for TAC IgG versus PD1.",
+    "Only then reproduce per-independent-mouse/participant differential expression for each MI/TAC study independently; do not pool.",
+    "No fibroblast EXIT promotion without delayed intervention plus lineage-state fate and pre/post ECM mechanical evidence."
+  ]
+}
