@@ -34,6 +34,7 @@ import xml.etree.ElementTree as ET
 from typing import Any, Iterable
 
 import requests
+from beetle_shard_store import append as append_ledger, latest_row
 
 VERSION = "1.0.0"
 UA = "JANUS-Universal-Beetle/1.0 (+https://github.com/Hawkar-usls/janus-lapis)"
@@ -67,14 +68,6 @@ def atomic_json(path: pathlib.Path, obj: Any) -> None:
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(json.dumps(obj, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     os.replace(tmp, path)
-
-
-def append_jsonl(path: pathlib.Path, obj: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a", encoding="utf-8") as fh:
-        fh.write(json.dumps(obj, ensure_ascii=False, sort_keys=True) + "\n")
-        fh.flush()
-        os.fsync(fh.fileno())
 
 
 def safe_https(url: str) -> str:
@@ -127,27 +120,16 @@ class State:
         self.root.mkdir(parents=True, exist_ok=True)
         self.seen_path = root / "seen.json"
         self.cursor_path = root / "cursors.json"
-        self.candidates_path = root / "candidates.jsonl"
-        self.receipts_path = root / "receipts.jsonl"
+        self.candidates_path = root / "candidates.parts"
+        self.receipts_path = root / "receipts.parts"
         self.latest_path = root / "latest_run.json"
         self.seen: dict[str, dict[str, Any]] = load_json(self.seen_path, {})
         self.cursors: dict[str, Any] = load_json(self.cursor_path, {})
         self.prev_receipt = self._last_receipt_hash()
 
     def _last_receipt_hash(self) -> str | None:
-        if not self.receipts_path.exists():
-            return None
-        last = None
-        with self.receipts_path.open("r", encoding="utf-8", errors="replace") as fh:
-            for line in fh:
-                if line.strip():
-                    last = line
-        if not last:
-            return None
-        try:
-            return json.loads(last).get("receipt_sha256")
-        except Exception:
-            return None
+        last = latest_row(self.root, "receipts")
+        return last.get("receipt_sha256") if last else None
 
     def receipt(self, event: str, payload: dict[str, Any]) -> str:
         body = {
@@ -160,7 +142,7 @@ class State:
         }
         digest = sha256_obj(body)
         row = {"receipt_sha256": digest, **body}
-        append_jsonl(self.receipts_path, row)
+        append_ledger(self.root, "receipts", row)
         self.prev_receipt = digest
         return digest
 
@@ -205,7 +187,7 @@ def record_candidate(state: State, budget: Budget, direction: dict[str, Any], it
         "epistemic_status": "DISCOVERY_CANDIDATE__NOT_VERIFIED__NO_PROOF_AUTHORITY",
         **item,
     }
-    append_jsonl(state.candidates_path, row)
+    append_ledger(state.root, "candidates", row)
     state.seen[iid] = {
         "first_seen_at": row["discovered_at"],
         "direction_id": direction["id"],
@@ -370,6 +352,17 @@ def run_grazers(config: dict[str, Any], state: State, repo_root: pathlib.Path, o
                 if r.status_code == 200 and start > 0:
                     raise RuntimeError("server ignored Range on a resumed task")
                 body = r.content
+                if r.status_code == 206:
+                    content_range = r.headers.get("Content-Range", "")
+                    expected_prefix = f"bytes {start}-"
+                    if not content_range.startswith(expected_prefix):
+                        raise RuntimeError(f"invalid Content-Range for requested offset {start}")
+                    actual_range = re.fullmatch(r"bytes (\d+)-(\d+)/(\d+|\*)", content_range)
+                    if (not actual_range or int(actual_range.group(1)) != start
+                            or int(actual_range.group(2)) + 1 - start != len(body)):
+                        raise RuntimeError("HTTP partial range boundaries do not match returned bytes")
+                    if len(body) > bite_bytes:
+                        raise RuntimeError("HTTP partial response exceeded approved bite size")
                 if r.status_code == 200 and len(body) > bite_bytes:
                     raise RuntimeError("server ignored bounded byte request; refusing oversized body")
                 actual_end = start + len(body)

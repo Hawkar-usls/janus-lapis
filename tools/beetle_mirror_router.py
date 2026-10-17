@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 import argparse, datetime as dt, hashlib, json, pathlib, re
+from collections import deque
 from typing import Any
+from beetle_shard_store import iter_lines
 
 LENSES=("FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL")
 
@@ -44,20 +46,17 @@ def main():
     root=pathlib.Path(a.state_dir); cfg=load_json(pathlib.Path(a.effective_config),{})
     routes={d['id']:d.get('target_repositories',[]) for d in cfg.get('directions',[])}
     seen_path=root/'route_seen.json'; seen=load_json(seen_path,{})
-    context_path=root/'contexts.jsonl'; rows=[]
-    if context_path.exists():
-        with context_path.open(encoding='utf-8',errors='replace') as f:
-            for line in f:
-                if line.strip():
-                    try: rows.append(json.loads(line))
-                    except Exception: pass
-    rows=rows[-a.max_contexts:]
+    rows=deque(maxlen=a.max_contexts)
+    for line in iter_lines(root,'contexts'):
+        if line.strip():
+            try: rows.append(json.loads(line))
+            except Exception: pass
     eligible:dict[str,list[dict[str,Any]]]={}
     for c in rows:
         did=c.get('direction_id'); cid=c.get('candidate_id'); ctx=c.get('context_id')
         if not did or not cid or not ctx or did not in routes: continue
         for repo in routes[did]: eligible.setdefault(repo,[]).append(to_item(c,repo))
-    summary={'schema':'janus.beetle.mirror_router.run.v3','at':now(),'repositories':{},'total_snapshot_items':0,'total_newly_selected_contexts':0,'input':'contexts.jsonl','snapshot_cap_per_repo':a.max_items_per_repo}
+    summary={'schema':'janus.beetle.mirror_router.run.v3','at':now(),'repositories':{},'total_snapshot_items':0,'total_newly_selected_contexts':0,'input':'contexts.parts/','snapshot_cap_per_repo':a.max_items_per_repo}
     for repo,items in sorted(eligible.items()):
         selected=compact(items,a.max_items_per_repo)
         # Batch identity intentionally excludes wall-clock time so an unchanged snapshot is stable.
