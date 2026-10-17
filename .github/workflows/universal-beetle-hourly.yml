@@ -7,12 +7,14 @@ on:
     branches: [main]
     paths:
       - "tools/universal_beetle.py"
+      - "tools/beetle_shard_store.py"
       - "tools/beetle_director_overlay.py"
       - "tools/beetle_context_projector.py"
       - "tools/beetle_mirror_router.py"
       - "data/beetle/directions.json"
       - ".github/workflows/universal-beetle-hourly.yml"
       - "requirements-ocean-beetle.txt"
+      - "tests/test_beetle_shard_store.py"
   workflow_dispatch:
     inputs:
       mode:
@@ -64,6 +66,10 @@ jobs:
         working-directory: lapis
         run: python -m pip install -r requirements-ocean-beetle.txt
 
+      - name: Verify SPOILER storage and Genesis inbox contracts
+        working-directory: lapis
+        run: python -m unittest discover -s tests -p 'test_beetle_shard_store.py' -v
+
       - name: Ask Demiurge for current attention and build mirrored schedule
         run: |
           mkdir -p lapis/runtime beetle-memory/data/beetle-state
@@ -106,6 +112,13 @@ jobs:
           if not required_lenses.issubset(lenses):
               raise SystemExit('WORKER profile refused: four-lens mirror invariant missing')
 
+          active_lanes = cfg.get('directions', [])
+          actual_lenses = {lane.get('mirror_lens') for lane in active_lanes}
+          if not active_lanes or len(active_lanes) > 16 or actual_lenses != required_lenses:
+            raise SystemExit('WORKER profile refused: actual scheduled lanes violate four-lens budget')
+          if cfg.get('effective_meta', {}).get('all_four_mirror_lenses_present') is not True:
+            raise SystemExit('WORKER profile refused: director did not attest actual four-lens coverage')
+
           budget = cfg.setdefault('global_budget', {})
           budget.update({
               'max_requests_per_run': 72,
@@ -122,6 +135,7 @@ jobs:
           cfg['worker_profile'] = {
               'schema': 'janus.universal_beetle.worker_profile.v1',
               'mode': 'WORKER',
+            'janus_role': 'SPOILER_BACKGROUND_COLLECTOR',
               'cadence_minutes': 20,
               'max_primary_directions': 10,
               'max_mirror_lanes': 16,
@@ -131,10 +145,17 @@ jobs:
               'min_grazer_bites_per_run': 4,
               'guardrail_policy': 'UNCHANGED_FAIL_CLOSED',
               'epistemic_authority_delta': 0,
+            'external_effect_authority_delta': 0,
           }
           path.write_text(json.dumps(cfg, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
           print(json.dumps(cfg['worker_profile'], ensure_ascii=False, sort_keys=True))
           PY
+
+      - name: Recover and migrate durable Beetle ledgers without data loss
+        run: |
+          set -euo pipefail
+          python lapis/tools/beetle_shard_store.py migrate \
+            --state-dir beetle-memory/data/beetle-state
 
       - name: Run Universal Beetle
         env:
@@ -172,6 +193,13 @@ jobs:
             --effective-config lapis/runtime/effective_directions.json \
             | tee beetle-memory/data/beetle-state/last_routing_console.json
 
+      - name: Seal shard integrity and enforce GitHub blob limits
+        run: |
+          set -euo pipefail
+          python lapis/tools/beetle_shard_store.py seal \
+            --state-dir beetle-memory/data/beetle-state \
+            --max-file-bytes 80000000
+
       - name: Commit durable state and mirror outboxes
         working-directory: beetle-memory
         shell: bash
@@ -198,6 +226,7 @@ jobs:
             beetle-memory/data/beetle-state/latest_run.json
             beetle-memory/data/beetle-state/latest_context_projection.json
             beetle-memory/data/beetle-state/latest_routing.json
+            beetle-memory/data/beetle-state/latest_storage_health.json
             beetle-memory/data/beetle-state/last_console.json
             beetle-memory/data/beetle-state/last_context_console.json
             beetle-memory/data/beetle-state/last_routing_console.json
