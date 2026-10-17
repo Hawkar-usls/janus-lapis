@@ -1,0 +1,288 @@
+{
+  "schema_id": "janus.longevity_survivor.pd1_mi_tac_biological_crosswalk_and_sc_qc.v1",
+  "checkpoint_id": "HEART-PD1-CHEN-WU-EXPERIMENTAL-UNIT-AND-SC-QC-2026-10-17-v1.0",
+  "timestamp_utc": "2026-10-17",
+  "provenance": {
+    "branch": "LONGEVITY-SURVIVOR",
+    "input_original_public_archive_run": 39026401715,
+    "input_original_public_archive_artifact_id": 12098558095,
+    "source_provenance": "Sha-256 of 15 acquired files rechecked in the original prior-gate; source GEO SOFT and Wu counts were SHA-256 verified again.",
+    "execution_run_id": 39032379990,
+    "execution_run_url": "https://github.com/Hawkar-usls/janus-lapis/actions/runs/39032379990",
+    "execution_head_sha": "eae5e9a20c2d9b7534cbabf991ee03299cc9f424",
+    "output_artifact_id": 12100213728,
+    "output_artifact_sha256": "98138f547d2118a52d60f605ee6fa9e1f55f133e6995edc3b719e8ed38b639e5",
+    "source_study_DOIs": [
+      "10.1038/s41421-026-00924-2",
+      "10.1161/CIRCULATIONAHA.125.074024"
+    ],
+    "scripts": [
+      "longevity-survivor/tools/topa_pd1_biological_unit_crosswalk.py",
+      "longevity-survivor/tools/topa_chen_mi_qc_multimarker.py"
+    ],
+    "audit_replay_type": "INDEPENDENT_COMPUTATIONAL_REANALYSIS_OF_EXISTING_PUBLIC_STUDY_DATA_NOT_INDEPENDENT_BIOLOGICAL_REPLICATION"
+  },
+  "wu": {
+    "source_GEO": "GSE327655",
+    "exact_source_column_to_GSM": {
+      "TAC1": "GSM9662756",
+      "TAC2": "GSM9662757",
+      "TAC3": "GSM9662758",
+      "TP1": "GSM9662759",
+      "TP2": "GSM9662760",
+      "TP3": "GSM9662761"
+    },
+    "group_for_TAClabels": "TAC+anti-IgG",
+    "group_for_TPlabels": "TAC+anti-PD-1",
+    "mapping_evidence": "Direct six-way column tokens in individual GEO SOFT sample metadata and exact source bulk counts header; no join by bare replicate suffix only",
+    "dosage_or_therapy_schedule_from_series_overall_design": [
+      "WT C57BL/6 mice underwent TAC surgery and received anti-IgG antibody (10 mg/kg) or anti-PD-1 antibody (10 mg/kg) by intraperitoneal injection every 3 days after two weeks of TAC surgery (on day 14)."
+    ],
+    "author_publication_caution": "Intervention on day14 after TAC is not proof of scar maturation at treatment start nor scar reversal",
+    "experimental_mouse_ids": "NOT_VERIFIED",
+    "source_column_mapping_gate": "GEO_SAMPLE_EXPLICIT_MATCH",
+    "animal_level_unit_gate": "OPEN"
+  },
+  "chen": {
+    "source_GEO": "GSE293489",
+    "design_from_GEO": [
+      "Non-cardiomyocytes were respectively collected from Sham mouse heart and 7 days post MI mouse heart."
+    ],
+    "frozen_author_QC": {
+      "n_genes_min": 300,
+      "UMI_max": 40000,
+      "mitochondrial_fraction_max": 0.05
+    },
+    "total_cells_after_author_QC": 45284,
+    "units": "GSM/library only, not confirmed independent mouse",
+    "groups": {
+      "SHAM": {
+        "GSMs": [
+          "GSM8884015",
+          "GSM8884016"
+        ],
+        "sum_QC_cells": 27629,
+        "per_library_T_fraction": [
+          {
+            "gsm": "GSM8884015",
+            "fraction": 0.019887
+          },
+          {
+            "gsm": "GSM8884016",
+            "fraction": 0.01106
+          }
+        ],
+        "independent_mouse_n": "UNKNOWN__NOT_2"
+      },
+      "MI": {
+        "GSMs": [
+          "GSM8884017",
+          "GSM8884018"
+        ],
+        "sum_QC_cells": 17655,
+        "per_library_T_fraction": [
+          {
+            "gsm": "GSM8884017",
+            "fraction": 0.044674
+          },
+          {
+            "gsm": "GSM8884018",
+            "fraction": 0.066223
+          }
+        ],
+        "independent_mouse_n": "UNKNOWN__NOT_2"
+      }
+    },
+    "gsm_descriptive_marker_cell_results": [
+      {
+        "gsm": "GSM8884015",
+        "group": "SHAM",
+        "QC": 11716,
+        "T_candidate_n": 233,
+        "T_candidate_fraction": 0.019887,
+        "pd1_RNA_T_fraction": 0.04721,
+        "T_subtypes": {
+          "T_AMBIGUOUS_SUBTYPE": {
+            "n": 34,
+            "fraction_of_T_candidates": 0.145923
+          },
+          "T_CD4_CANDIDATE": {
+            "n": 54,
+            "fraction_of_T_candidates": 0.23176
+          },
+          "T_CD8_CANDIDATE": {
+            "n": 21,
+            "fraction_of_T_candidates": 0.090129
+          },
+          "T_CD8_CYTOTOXIC_CANDIDATE": {
+            "n": 31,
+            "fraction_of_T_candidates": 0.133047
+          },
+          "T_TREG_CANDIDATE": {
+            "n": 1,
+            "fraction_of_T_candidates": 0.004292
+          },
+          "T_UNRESOLVED_SUBTYPE": {
+            "n": 92,
+            "fraction_of_T_candidates": 0.39485
+          }
+        }
+      },
+      {
+        "gsm": "GSM8884016",
+        "group": "SHAM",
+        "QC": 15913,
+        "T_candidate_n": 176,
+        "T_candidate_fraction": 0.01106,
+        "pd1_RNA_T_fraction": 0.039773,
+        "T_subtypes": {
+          "T_AMBIGUOUS_SUBTYPE": {
+            "n": 13,
+            "fraction_of_T_candidates": 0.073864
+          },
+          "T_CD4_CANDIDATE": {
+            "n": 55,
+            "fraction_of_T_candidates": 0.3125
+          },
+          "T_CD8_CANDIDATE": {
+            "n": 11,
+            "fraction_of_T_candidates": 0.0625
+          },
+          "T_CD8_CYTOTOXIC_CANDIDATE": {
+            "n": 25,
+            "fraction_of_T_candidates": 0.142045
+          },
+          "T_TREG_CANDIDATE": {
+            "n": 1,
+            "fraction_of_T_candidates": 0.005682
+          },
+          "T_UNRESOLVED_SUBTYPE": {
+            "n": 71,
+            "fraction_of_T_candidates": 0.403409
+          }
+        }
+      },
+      {
+        "gsm": "GSM8884017",
+        "group": "MI",
+        "QC": 8036,
+        "T_candidate_n": 359,
+        "T_candidate_fraction": 0.044674,
+        "pd1_RNA_T_fraction": 0.220056,
+        "T_subtypes": {
+          "T_AMBIGUOUS_SUBTYPE": {
+            "n": 17,
+            "fraction_of_T_candidates": 0.047354
+          },
+          "T_CD4_CANDIDATE": {
+            "n": 102,
+            "fraction_of_T_candidates": 0.284123
+          },
+          "T_CD8_CANDIDATE": {
+            "n": 2,
+            "fraction_of_T_candidates": 0.005571
+          },
+          "T_CD8_CYTOTOXIC_CANDIDATE": {
+            "n": 33,
+            "fraction_of_T_candidates": 0.091922
+          },
+          "T_TREG_CANDIDATE": {
+            "n": 20,
+            "fraction_of_T_candidates": 0.05571
+          },
+          "T_UNRESOLVED_SUBTYPE": {
+            "n": 185,
+            "fraction_of_T_candidates": 0.51532
+          }
+        }
+      },
+      {
+        "gsm": "GSM8884018",
+        "group": "MI",
+        "QC": 9619,
+        "T_candidate_n": 637,
+        "T_candidate_fraction": 0.066223,
+        "pd1_RNA_T_fraction": 0.216641,
+        "T_subtypes": {
+          "T_AMBIGUOUS_SUBTYPE": {
+            "n": 26,
+            "fraction_of_T_candidates": 0.040816
+          },
+          "T_CD4_CANDIDATE": {
+            "n": 172,
+            "fraction_of_T_candidates": 0.270016
+          },
+          "T_CD8_CANDIDATE": {
+            "n": 7,
+            "fraction_of_T_candidates": 0.010989
+          },
+          "T_CD8_CYTOTOXIC_CANDIDATE": {
+            "n": 82,
+            "fraction_of_T_candidates": 0.128728
+          },
+          "T_TREG_CANDIDATE": {
+            "n": 27,
+            "fraction_of_T_candidates": 0.042386
+          },
+          "T_UNRESOLVED_SUBTYPE": {
+            "n": 323,
+            "fraction_of_T_candidates": 0.507064
+          }
+        }
+      }
+    ],
+    "multi_marker_caveat": "At least 2 markers for broad candidate, t-cell CD3 marker; strict subtype identities are conservative, dropout-sensitive and require external reference and flow/TCR validation.",
+    "gamma_delta_note": "No confirmed gamma-delta subtype detected by strict Trdc AND Trgc co-detection in the present report; do not infer true biological absence.",
+    "PD1_note": "Pdcd1 RNA detection among filtered multi-marker T candidates is not flow-cytometry PD1 protein positivity.",
+    "doublet_status": "NOT_REMOVED",
+    "immunophenotype_statistics": "DESCRIPTIVE_PER_LIBRARY_ONLY"
+  },
+  "experimental_unit_audit": {
+    "GSE293489": {
+      "GSM_count": 4,
+      "unique_explicit_mouse_IDs_present": false,
+      "pooling_excluded_by_direct_evidence": false,
+      "animal_level_inference_admitted": false,
+      "sample_metadata_contains_pooling_keyword": false,
+      "no_pooling_keyword_does_not_prove_no_pooling": true
+    },
+    "GSE327655": {
+      "GSM_count": 6,
+      "unique_explicit_mouse_IDs_present": false,
+      "pooling_excluded_by_direct_evidence": false,
+      "animal_level_inference_admitted": false,
+      "sample_metadata_contains_pooling_keyword": false,
+      "no_pooling_keyword_does_not_prove_no_pooling": true
+    }
+  },
+  "gates": {
+    "GEO_SOFT_SOURCE_INTEGRITY": "PASS",
+    "WU_EXACT_GSM_TO_SOURCE_COLUMN_BRIDGE": "PASS",
+    "CHEN_ORIGINAL_QC_THRESHOLDS": "PASS",
+    "CHEN_PROVISIONAL_MULTIMARKER_PROPORTIONS": "PASS_PER_LIBRARY_DESCRIPTIVE",
+    "CHEN_TRUE_INDEPENDENT_MOUSE_N": "NOT_VERIFIED",
+    "WU_TRUE_INDEPENDENT_MOUSE_N": "NOT_VERIFIED",
+    "PER_MOUSE_CELL_PROPORTIONS": "NOT_ADMITTED",
+    "CELL_SUBTYPE_VALIDATION": "NOT_ADMITTED",
+    "SC_CROSSTISSUE_REPLICATION": "NOT_ESTABLISHED",
+    "STRICT_PROFIBROTIC_FIBROBLAST_EXIT": "NOT_ESTABLISHED",
+    "MECHANICAL_EXIT_COUPLING": "NOT_ADMITTED",
+    "CLINICAL_RECOMMENDATION": "NONE"
+  },
+  "safeguards": [
+    "LIBRARY_GSM_NOT_INDEPENDENT_MOUSE",
+    "EXPLICIT_COLUMN_SOURCE_MATCH_NOT_ANIMAL_ID",
+    "SINGLE_CELL_MARKER_PRESENCE_NOT_FATE_OR_CYTOMETRY_PROOF",
+    "FILTERED_DATA_NOT_DOUBLET_VALIDATED",
+    "COMPUTATIONAL_REPLAY_NOT_INDEPENDENT_EXPERIMENT",
+    "D7_AFTER_MI_NOT_DELAYED_TREATMENT_POST_SCAR_PROVENANCE",
+    "NO_PVALUES_WITHOUT_INDEPENDENT_MOUSE_CROSSWALK"
+  ],
+  "next_topa": [
+    "Extract direct mapping field(s) in Wu GEO SOFT for publication-grade evidence location, not only token matching.",
+    "Retrieve original BioSample/SRA animal-level metadata and study Supplementary Methods; determine single-mouse versus pooled input for 4 Chen and 6 Wu libraries.",
+    "Re-audit Trdc/Trgc marker detection and doublet ambiguity with per-library transcript dropout rates.",
+    "If animal units proven, compute per-mouse subtype proportions and biological effect intervals; otherwise remain descriptive.",
+    "Require post-established-mature-scar lineage-state fate and ECM stiffness controls before any fibroblast EXIT promotion."
+  ]
+}
