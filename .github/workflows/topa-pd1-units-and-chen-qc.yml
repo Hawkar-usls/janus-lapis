@@ -1,0 +1,57 @@
+name: TOPA Chen and Wu experimental unit plus multi-marker QC
+on:
+  push:
+    branches: [LONGEVITY-SURVIVOR]
+    paths:
+      - .github/workflows/topa-pd1-units-and-chen-qc.yml
+      - longevity-survivor/tools/topa_pd1_biological_unit_crosswalk.py
+      - longevity-survivor/tools/topa_chen_mi_qc_multimarker.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  strict-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    steps:
+      - name: Checkout tracked source
+        uses: actions/checkout@v4
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy
+      - name: Download existing verified GEO source artifact without re-fetching raw SRA
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p prior
+          gh run download 39026401715 --repo "${{ github.repository }}" --name topa-pd1-geo-zenodo-verified-public-bytes --dir prior
+          test -f prior/topa_pd1_acquisition/manifest.json
+      - name: Audit published GEO soft experimental unit and TAC to TP bridge
+        shell: bash
+        run: |
+          set -o pipefail
+          TOPA_PD1_ROOT=prior/topa_pd1_acquisition TOPA_CROSSWALK_OUT=topa_pd1_biological_crosswalk python longevity-survivor/tools/topa_pd1_biological_unit_crosswalk.py 2>&1 | tee topa_pd1_biological_crosswalk.log
+      - name: Apply original 300 genes / 40000 UMI / 5 percent mitochondrial QC and marker candidates
+        shell: bash
+        run: |
+          set -o pipefail
+          (cd prior && TOPA_PD1_ROOT=topa_pd1_acquisition TOPA_CHEN_QC_OUT=../topa_chen_sc_qc python ../longevity-survivor/tools/topa_chen_mi_qc_multimarker.py) 2>&1 | tee topa_chen_qc.log
+      - name: Publish small provenance receipts and separate report artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-chen-wu-biological-units-multimarker-qc
+          path: |
+            topa_pd1_biological_crosswalk/report.json
+            topa_chen_sc_qc/report.json
+            topa_pd1_biological_crosswalk.log
+            topa_chen_qc.log
+          if-no-files-found: warn
+          retention-days: 14
