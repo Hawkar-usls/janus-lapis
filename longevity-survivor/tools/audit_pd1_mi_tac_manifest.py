@@ -30,9 +30,11 @@ def group(gse,s):
         sham=bool(re.search(r"\b(sham|control sham)\b",v))
         mi=bool(re.search(r"\b(myocardial infarction|infarcted|post[- ]?mi|mi group|mi[-_ ]?[0-9])\b",v))
         return "SHAM" if sham and not mi else "MI" if mi and not sham else "UNRESOLVED"
-    sham=bool(re.search(r"\b(sham|control sham)\b",v))
     tac=bool(re.search(r"\b(tac|transverse aortic constriction|pressure overload)\b",v))
-    return "SHAM" if sham and not tac else "TAC" if tac and not sham else "UNRESOLVED"
+    igg=bool(re.search(r"anti[- ]?igg|isotype",v))
+    pd1=bool(re.search(r"anti[- ]?pd[- ]?1|anti[- ]?pd[- ]?one",v))
+    if not tac:return "UNRESOLVED_NOT_TAC"
+    return "TAC_ANTI_IGG" if igg and not pd1 else "TAC_ANTI_PD1" if pd1 and not igg else "UNRESOLVED_TAC_CONTRAST"
 def animal(s):
     tokens=[s.get("title","")]+s.get("attributes",[])
     for t in tokens:
@@ -73,7 +75,9 @@ def gene_profile(files):
         row=m.getrow(i)
         sums[g]=float(row.sum())
         frac[g]=round(float(row.count_nonzero())/len(bb),6) if bb else None
-    return {"status":"DESCRIPTIVE_ONLY_NOT_CELL_TYPE_IDENTIFICATION","cells":len(bb),"features":len(ff),"gene_raw_counts_sum":sums,"fraction_barcodes_with_nonzero_transcript":frac,"assay_count_denominator":"all barcodes; not a gated T-cell population"}
+    total=float(m.sum())
+    cpm={g:round(1e6*value/total,6) if total>0 else None for g,value in sums.items()}
+    return {"status":"DESCRIPTIVE_ONLY_NOT_CELL_TYPE_IDENTIFICATION","cells":len(bb),"features":len(ff),"total_UMI":total,"gene_raw_counts_sum":sums,"pseudobulk_CPM_all_noncardiomyocytes":cpm,"fraction_barcodes_with_nonzero_transcript":frac,"assay_count_denominator":"all barcodes; not a gated T-cell population"}
 a=json.loads(MANIFEST.read_text())
 entries=[]
 files_by_sample=collections.defaultdict(list)
@@ -103,7 +107,7 @@ for gse in TARGET:
              "group_candidate":group(gse,item),"animal_id_explicit":animal(item),
              "geo_supplementary_urls":item.get("files",[]),
              "acquired_processed_paths":[str(p) for p in fs],"matrix_status":cls}
-        if cls=="10X_TRIPLET_CANDIDATE" and animal(item):
+        if cls=="10X_TRIPLET_CANDIDATE":
             try:rec["rna_descriptive"]=gene_profile(fs)
             except Exception as e:rec["rna_descriptive"]={"status":"ERROR","reason":str(e)[:300]}
         ss.append(rec)
