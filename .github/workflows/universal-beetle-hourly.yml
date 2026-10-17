@@ -11,10 +11,13 @@ on:
       - "tools/beetle_director_overlay.py"
       - "tools/beetle_context_projector.py"
       - "tools/beetle_mirror_router.py"
+      - "tools/beetle_memory_receiver.py"
+      - "tools/beetle_delivery_health.py"
       - "data/beetle/directions.json"
       - ".github/workflows/universal-beetle-hourly.yml"
       - "requirements-ocean-beetle.txt"
       - "tests/test_beetle_shard_store.py"
+      - "tests/test_beetle_delivery.py"
   workflow_dispatch:
     inputs:
       mode:
@@ -68,7 +71,9 @@ jobs:
 
       - name: Verify SPOILER storage and Genesis inbox contracts
         working-directory: lapis
-        run: python -m unittest discover -s tests -p 'test_beetle_shard_store.py' -v
+        run: |
+          python -m unittest discover -s tests -p 'test_beetle_shard_store.py' -v
+          python -m unittest discover -s tests -p 'test_beetle_delivery.py' -v
 
       - name: Ask Demiurge for current attention and build mirrored schedule
         run: |
@@ -193,6 +198,14 @@ jobs:
             --effective-config lapis/runtime/effective_directions.json \
             | tee beetle-memory/data/beetle-state/last_routing_console.json
 
+      - name: Observe persisted receiver ACKs and delivery lag
+        if: always()
+        run: |
+          python lapis/tools/beetle_delivery_health.py \
+            --state-dir beetle-memory/data/beetle-state \
+            --stale-minutes 180 \
+            | tee beetle-memory/data/beetle-state/last_delivery_console.json
+
       - name: Seal shard integrity and enforce GitHub blob limits
         run: |
           set -euo pipefail
@@ -227,8 +240,10 @@ jobs:
             beetle-memory/data/beetle-state/latest_context_projection.json
             beetle-memory/data/beetle-state/latest_routing.json
             beetle-memory/data/beetle-state/latest_storage_health.json
+            beetle-memory/data/beetle-state/latest_delivery_health.json
             beetle-memory/data/beetle-state/last_console.json
             beetle-memory/data/beetle-state/last_context_console.json
             beetle-memory/data/beetle-state/last_routing_console.json
+            beetle-memory/data/beetle-state/last_delivery_console.json
           if-no-files-found: warn
           retention-days: 14

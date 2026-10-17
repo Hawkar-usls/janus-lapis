@@ -19,6 +19,36 @@ The currently deployed route already exists:
    addressed packet into its separate `beetle-memory` branch. The batch stays
    unverified and never automatically mutates the repository's `main` branch.
 
+## End-to-end delivery (v1)
+
+The producer runs about every 20 minutes but receivers typically wake hourly.
+Reading only `latest.json` could silently skip two intermediate batches.  The
+router now publishes a durable per-repository `mirrors/<owner__repo>/delivery.json`
+alongside immutable `batches/<batch_id>.json`. Every distinct selection gets a
+contiguous sequence number and SHA-256 checksum in the manifest. `latest.json`
+remains for older consumers during migration, but is **not** a reliable inbox.
+
+The receiver loads the ordered queue and stages up to 96 missing batches per
+run into its separate `beetle-memory/data/beetle-inbox/batches/` directory.
+It validates destination, SHA-256, claim ceiling and unverified status before
+writing. The `ACK.json` advances in the **same git commit** as the new batches,
+so an interrupted runner cannot acknowledge data that it never pushed. An ACK
+also binds to the exact last sequence, batch ID and checksum. Repeated runs
+and transient failed downloads cannot advance that sequence incorrectly.
+
+On the producer, `latest_delivery_health.json` checks the publicly visible
+target `beetle-memory` branch, compares each ACK with the immutable outbox, and
+reports lag, missing ACKs, corruption/conflicts and age of the oldest queued
+batch. After 180 minutes, unconfirmed batches raise an Actions warning. It
+never pretends that an inbox receipt means scientific proof or that a live
+Genesis/Habitat process used the data; the ACK attests **inbox durability only**.
+
+The queue is append-only. Old acknowledged batches remain as immutable
+provenance records and cannot vanish due to queue compaction. GitHub blob size
+guards apply to the queue and health files too; overflow fails closed rather
+than truncating a backlog. The v1 queue begins at cutover, not at an invented
+sequence for historical pre-v1 snapshots.
+
 ## Durability and recovery
 
 The formerly monolithic `candidates.jsonl`, `contexts.jsonl`, and
@@ -46,6 +76,7 @@ byte-for-byte verified `tools/beetle_shard_store.py` mechanism.
 
 ```bash
 python -m unittest discover -s tests -p 'test_beetle_shard_store.py' -v
+python -m unittest discover -s tests -p 'test_beetle_delivery.py' -v
 python tools/beetle_shard_store.py migrate --state-dir /path/to/state
 python tools/beetle_shard_store.py seal --state-dir /path/to/state
 ```

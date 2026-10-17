@@ -16,6 +16,38 @@ def atomic(p:pathlib.Path,obj:Any):
     p.parent.mkdir(parents=True,exist_ok=True); tmp=p.with_suffix(p.suffix+'.tmp')
     tmp.write_text(json.dumps(obj,ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8'); tmp.replace(p)
 def canon(obj): return json.dumps(obj,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
+def queue_batch(directory:pathlib.Path,repo:str,payload:dict[str,Any],created_at:str)->int:
+    """Keep every new snapshot addressable until the receiver acknowledges it.
+
+    The queue and immutable batch are committed together on beetle-state.  A
+    receiver that wakes hourly can therefore replay all 20-minute snapshots.
+    """
+    path=directory/'delivery.json'; queue=load_json(path,{
+      'schema':'janus.beetle.delivery_queue.v1','target_repository':repo,
+      'next_sequence':1,'entries':[]})
+    if queue.get('schema')!='janus.beetle.delivery_queue.v1' or queue.get('target_repository')!=repo:
+        raise ValueError(f'invalid delivery queue for {repo}')
+    entries=queue.get('entries')
+    if not isinstance(entries,list) or queue.get('next_sequence')!=len(entries)+1:
+        raise ValueError(f'broken delivery sequence for {repo}')
+    for index,item in enumerate(entries,1):
+        if item.get('sequence')!=index: raise ValueError(f'noncontiguous delivery sequence for {repo}')
+    bid=payload['batch_id']; batch_path=directory/'batches'/f'{bid}.json'
+    if batch_path.exists():
+        if load_json(batch_path,None)!=payload:
+            raise ValueError(f'immutable batch collision: {repo}/{bid}')
+    else:
+        atomic(batch_path,payload)
+    digest=hashlib.sha256(batch_path.read_bytes()).hexdigest()
+    previous=next((e for e in entries if e['batch_id']==bid),None)
+    if previous:
+        if previous['sha256']!=digest: raise ValueError(f'batch hash drift: {repo}/{bid}')
+        return int(previous['sequence'])
+    sequence=queue['next_sequence']
+    entries.append({'sequence':sequence,'batch_id':bid,'sha256':digest,'created_at':created_at})
+    queue['next_sequence']=sequence+1
+    atomic(path,queue)
+    return sequence
 def to_item(c:dict[str,Any],repo:str)->dict[str,Any]:
     return {
       'schema':'janus.beetle.repo_memory_item.v2','target_repository':repo,
@@ -65,14 +97,16 @@ def main():
         payload={'schema':'janus.beetle.repo_memory_batch.v1','batch_id':bid,'target_repository':repo,'items':selected,
                  'selection':'BALANCED_LENS_ROLLING_TOP','snapshot_cap':a.max_items_per_repo,
                  'claim_ceiling':'DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY'}
-        d=root/'mirrors'/safe_repo(repo); atomic(d/'batches'/f'{bid}.json',payload); atomic(d/'latest.json',payload)
+        d=root/'mirrors'/safe_repo(repo)
+        sequence=queue_batch(d,repo,payload,summary['at'])
+        atomic(d/'latest.json',payload)  # legacy readers during the rollout
         new_count=0; lens_counts={lens:0 for lens in LENSES}
         for x in selected:
             lens=str(x.get('mirror_lens','FORWARD')); lens_counts[lens]=lens_counts.get(lens,0)+1
             token=f"{x['context_id']}|{repo}"
             if token not in seen:
                 new_count+=1; seen[token]={'first_selected_at':summary['at'],'direction_id':x.get('direction_id'),'context_id':x.get('context_id')}
-        summary['repositories'][repo]={'batch_id':bid,'snapshot_items':len(selected),'newly_selected_contexts':new_count,'lens_counts':lens_counts,'eligible_contexts':len(items)}
+        summary['repositories'][repo]={'batch_id':bid,'delivery_sequence':sequence,'snapshot_items':len(selected),'newly_selected_contexts':new_count,'lens_counts':lens_counts,'eligible_contexts':len(items)}
         summary['total_snapshot_items']+=len(selected); summary['total_newly_selected_contexts']+=new_count
     atomic(seen_path,seen); atomic(root/'latest_routing.json',summary); print(json.dumps(summary,ensure_ascii=False)); return 0
 if __name__=='__main__': raise SystemExit(main())
