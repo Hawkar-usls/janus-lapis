@@ -114,7 +114,8 @@ def main():
  hvorder=np.argsort(np.where(eligible,v,-1))[-1200:]
  selected=[common[int(i)] for i in hvorder if eligible[int(i)]]
  if len(selected)<400:raise ValueError("insufficient reference HVGs")
- refx=refx0[:,hvorder][:,np.isin(np.arange(len(common))[hvorder],np.array([common.index(g) for g in selected]))]
+ selected_idx=[int(i) for i in hvorder if eligible[int(i)]]
+ refx=refx0[:,selected_idx]
  if refx.shape[1]!=len(selected):raise RuntimeError("HVG selection misaligned")
  # stratified random heldout is optimistic for same mouse: just within-atlas diagnostic
  idx=np.arange(len(y))
@@ -164,7 +165,7 @@ def main():
   mask=(det>=300)&(umi<=40000)&(mtfrac<=.05)&(umi>0)
   xx=expression(m,genes,selected,mask).toarray()
   proba=clf.predict_proba(xx);maxprob=proba.max(axis=1)
-  predicted=clf.classes_[proba.argmax(axis=1)]
+  predicted=clf.classes_[proba.argmax(axis=1)].astype(object)
   predicted[maxprob<thr]="ABSTAIN_OUT_OF_REFERENCE"
   fraction={label:{"n":int(np.sum(predicted==label)),"fraction":float(np.mean(predicted==label))} for label in list(LABELS)+["ABSTAIN_OUT_OF_REFERENCE"]}
   result["Chen_projection"][gsm]={"group":"SHAM" if "Sh" in gsm or "sham" in str(gseitem.get("attributes")).lower() else "MI",
