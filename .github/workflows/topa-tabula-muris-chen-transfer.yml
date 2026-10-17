@@ -1,0 +1,44 @@
+name: TOPA independent Tabula Muris heart label transfer
+on:
+  push:
+    branches: [LONGEVITY-SURVIVOR]
+    paths:
+      - .github/workflows/topa-tabula-muris-chen-transfer.yml
+      - longevity-survivor/tools/topa_tabula_muris_chen_transfer.py
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 24
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install bounded sparse reference dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy scikit-learn
+      - name: Download exact established Chen source artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p prior
+          gh run download 39026401715 --repo "${{ github.repository }}" --name topa-pd1-geo-zenodo-verified-public-bytes --dir prior
+          test -f prior/topa_pd1_acquisition/manifest.json
+      - name: Independent source-verified reference holdout and Chen projection
+        shell: bash
+        run: |
+          set -o pipefail
+          TOPA_ATLAS_OUT=topa_atlas_transfer TOPA_PD1_ROOT=prior/topa_pd1_acquisition python longevity-survivor/tools/topa_tabula_muris_chen_transfer.py 2>&1 | tee topa_atlas_transfer.log
+      - name: Upload compact independent atlas transfer receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-chen-tabula-muris-external-label-transfer
+          path: |
+            topa_atlas_transfer/report.json
+            topa_atlas_transfer.log
+          if-no-files-found: warn
+          retention-days: 14
