@@ -1,0 +1,34 @@
+name: TOPA PD1 primary sample lineage metadata audit
+on:
+  push:
+    branches: [LONGEVITY-SURVIVOR]
+    paths:
+      - .github/workflows/topa-pd1-sample-records.yml
+      - longevity-survivor/tools/topa_pd1_biosample_primary_metadata.py
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify exact GEO sample field mapping and query linked BioSamples
+        shell: bash
+        run: |
+          set -o pipefail
+          TOPA_RECORDS_OUT=topa_pd1_records python longevity-survivor/tools/topa_pd1_biosample_primary_metadata.py 2>&1 | tee topa_pd1_records.log
+      - name: Publish compact primary metadata evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-pd1-primary-geo-biosample-source-fields
+          path: |
+            topa_pd1_records/report.json
+            topa_pd1_records.log
+          if-no-files-found: error
+          retention-days: 14
