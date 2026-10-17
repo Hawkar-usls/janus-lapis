@@ -1,9 +1,41 @@
 {
-  "batch_id": "a340da3903f3b345ddc4",
+  "batch_id": "c482faa5f7441e207855",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
   "items": [
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "8c1277c283bb09b62b7e282a",
+      "context_id": "fe5f85924e1f398f8332cb47",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "ocean_reader::FORWARD",
+      "direction_title": "Ocean Reader / transceiver / invertibility [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse problem"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.625,
+      "source": "zenodo",
+      "source_context_sha256": "5632c5fd4326e2164e81a3a0d9cddff1a52c1ac42e5b87f747ae1919f73e9bf0",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "NANOROBOT-ENHANCED DIGITAL TWINS OF BRAIN STATE AT THE LIMIT A multiscale, uncertainty-aware research atlas on microrobotic observations, neural inverse problems, active model discrimination and the limits of computational brain twins. This research monograph asks whether additional microscale observations or strictly bounded reversible experiments can distinguish competing neural-state models that explain conventional measurements equally well. The twin is explicitly defined as a versioned scientific belief, not a digital person, a mind reader or a clinically validated instrument. Its objective is not maximum model complexity but improved identifiability, calibrated prediction under new conditions and faithful retention of failed hypotheses. The work develops five layers: multiscale neural and microenvironment state representation; posterior equivalence and prior sensitivity; non-clinical safe experimental design; frozen-version forking, rollback and reference ancestry; and blind prospective validation against classical state-space systems and independently specified alternatives. Its research architecture includes 30 distinct mathematical derivation plates linked to later chapters, 82 chapters with five independently paginated research sections apiece, 200 detailed Research Gates and 33 revisable Phoenix Answer Embryos. A DOI evidence ledger identifies existing support for brain modeling, latent neural dynamics, experiment design and preclinical microrobot tracking while preventing those sources from being mistaken for evidence of the proposed integrated system. Key research questions include: Can two equally accurate virtual brains be separated by a small, permissible observation? How can the effect of a measurement itself be separated from neural change? When does a prior dominate the inferred brain state? Can the model predict unseen function rather than reconstruct a training signal? Can another laboratory reproduce a rejected twin and safely return to an earlier version? SCIENTIFIC STATUS AND LIMITATIONS This is a forward-looking, non-clinical research synthesis and experimental hypothesis architecture. It provides no personal medical advice, patient-specific interpretations or instruction to deliver neural interventions. Existing murine microrobot tracking and virtual-brain modeling studies do not establish autonomous neural nanorobot readout, human safety, privacy-sensitive mind inference or therapeutic efficacy. Proposed formulas, experiments, research gates and answer embryos are not newly validated biological laws or executed experiments. The work keeps independent safety vetoes, privacy, external reproducibility and explicit model retirement as first-class constraints. Research questions remain open to refutation, correction and reconstruction by future human and AI researchers.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Janus-Cosmos",
+      "title": "NANOROBOT-ENHANCED DIGITAL TWINS OF BRAIN STATE AT THE LIMIT A multiscale, uncertainty-aware research atlas on microrobotic observations, neural inverse problems, active model discrimination and the limits of computational brain twins. This research monograph asks whether additional microscale obser",
+      "url": "https://zenodo.org/records/23441410"
+    },
     {
       "base_direction_id": "ocean_reader",
       "candidate_id": "8c1277c283bb09b62b7e282a",
@@ -75,44 +107,6 @@
       "target_repository": "Hawkar-usls/Janus-Cosmos",
       "title": "Gauss--Chebyshev Quadrature, $\\mathbb S^1$-Designs, and the Planar Minkowski Inverse Problem: A One-Dimensional Model for Design-Induced Convex Geometry",
       "url": "https://arxiv.org/abs/2610.11814v1"
-    },
-    {
-      "base_direction_id": "ocean_reader",
-      "candidate_id": "464f70be1500181823044885",
-      "context_id": "cd92227575423c47c27bf4b2",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "ocean_reader::REVERSE",
-      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "bidirectional",
-        "inverse",
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.4167,
-      "source": "arxiv",
-      "source_context_sha256": "2e6cb44308075d7f4709486d7b1211951132b6530a566df78775838b0be2175c",
-      "source_published": "2026-10-08T17:46:03Z",
-      "source_updated": "2026-10-08T17:46:03Z",
-      "summary": "World action models (WAMs) predict actions and future observations, typically from a reconstruction-based representation that carries noisy, redundant information which can complicate downstream predictions. We introduce LeWAM, a bidirectional transformer for forward, backward, inverse dynamics and policy prediction, on a decoder-free JEPA latent trained end-to-end through all four modes. We see the following benefits: 1) Alignment: linear probes read robot and object state from LeWAM's latent better than from a regular Le World Model (a forward-only JEPA world model), while the latent ignores visual distractors as well as LeWM does and far better than a reconstruction-based WAM. 2) Acting: Closed-loop evaluations of LeWAM match a regular flow-matching policy trained on the same encoder at matched size, while also providing a world model. 3) Planning: Sampling raw actions when planning with WAMs lets MPC exploit dynamics-model inaccuracies; planning in the noise space of the policy head instead improves the closed-loop performance of these WAMs.",
-      "tags": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Cosmos",
-      "title": "LeWAM: A JEPA World Action Model with Diffusion-Steering-Based MPC",
-      "url": "https://arxiv.org/abs/2610.12407v1"
     },
     {
       "base_direction_id": "ocean_reader",
@@ -342,74 +336,6 @@
     },
     {
       "base_direction_id": "ocean_reader",
-      "candidate_id": "4e15c34709b1ebff4f80816e",
-      "context_id": "840d8e63712252df58910785",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "ocean_reader::REVERSE",
-      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "inversion"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "zenodo",
-      "source_context_sha256": "b509ac0a3cecbef61839afc1e7d4f39c0f9ad45d8a369dacd0e23b85b8b110f2",
-      "source_published": "2026-10-09",
-      "source_updated": "",
-      "summary": "We establish the overarching mathematical physics framework underlying gravitational screening and electroweak mixing in Big Boot Gauge Theory (BBGT). To demonstrate that the transition from the bare gravitational constant G_bare = 6.514085763e-11 m^3 kg^-1 s^-2 (derived from CODATA 2022 constants under unit space-time momentum p = mc = 1 kg m s^-1) to the observed value G_obs = 6.67430e-11 m^3 kg^-1 s^-2 is a rigorous topological necessity rather than an arbitrary post-hoc adjustment, we formulate the screening dynamics using M&ouml;bius inversion on finite posets over the subgroup lattice of Poincar&eacute; Dodecahedral Space (S^3/I^*). We prove that non-associative transit across the e_4 Pati-Salam midpoint node acts as a M&ouml;bius topological twist, fixing the geometric inverse-square screening factor S_ZIP^-2 = (1 - 1/120)^-2 = 1.016877348. Combining this with longitudinal Z-leakage (delta_Z = 0.026892000) and non-associative midpoint transit corrections (Delta_assoc = 0.000092701) yields the exact screened laboratory constant without arbitrary tuning.&nbsp; Furthermore, we demonstrate that the weak mixing angle (sin^2 theta_W = 1/5 + 1/32 = 0.23125) originates from the pentagonal P_5 symmetry order of the dodecahedron combined with a 2^5 chiral energy cascade, agreeing with experiment (0.23122) to within 0.01%. Finally, we present the complete 8x8 Logical Transitive Index Matrix (T_{n-&gt;m}), showing how the 10^19 Planck-to-electroweak mass hierarchy is compressed down to a discrete compilation factor of 128.35 across the aethereal boot levels.",
-      "tags": [
-        "Big Boot Gauge Theory BBGT Gravitational Screening Möbius Inversion Finite Posets Poincaré Dodecahed"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Cosmos",
-      "title": "Topological Invariance of Gravitational Screening in Big Boot Gauge Theory: Möbius Poset Inversion, Pentagonal Mixing, and the T_{n->m} Transitive Hierarchy",
-      "url": "https://zenodo.org/records/23255065"
-    },
-    {
-      "base_direction_id": "ocean_reader",
-      "candidate_id": "ccc04c717cabe111fe3cdc54",
-      "context_id": "26f86afbd1556a1b76df03e5",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "ocean_reader::REVERSE",
-      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "inversion"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "zenodo",
-      "source_context_sha256": "3db7ec168c0e3d2e9dff6c3db778c79290cfb8cdc747869d7854def588ebec3e",
-      "source_published": "2026-09-22",
-      "source_updated": "",
-      "summary": "Code, 2.5-D finite-wavelength forward solver, datasets, trained models and result files reproducing every number in the manuscript \"Source-Conditioned Neural Surrogates for Magnetotelluric Response Prediction Under Finite-Wavelength Excitation\" (S. Oh). The study makes the magnetotelluric source an explicit input of a neural forward surrogate. A validated 2.5-D scattered-field solver for a source of finite along-strike wavelength generates the training data; a conditional U-Net predicts the electromagnetic fields, from which impedance and tipper are reconstructed; an aliasing ratio quantifies how much of a source perturbation a plane-wave inversion re-images as conductivity; a surrogate-domain recoverability experiment returns a source estimate close to the known synthetic value, while a direct solver re-forward shows that the recovered conductivity and wavenumber are not together a solver-consistent inverse solution; and magnetometer arrays at three geomagnetic latitudes place real settings on the dimensionless axis that the model defines. CONTENTS: README.md, LICENSE, DATA_LICENSE.txt and requirements.txt are attached unpacked. The code archive holds the analysis scripts (top level and mt3d/) and the full solver source (solver/, with the dataset generator, the Jacobian dump, the re-forward program and the unit tests); it is MIT licensed except the third-party Triangle library, which is redistributed verbatim under its own terms. The data archive holds the three datasets (dataset_dense, dataset_freq, dataset40), the trained checkpoints (ckpt/, mt3d/ckpt/), the joint-inversion and layered-earth training data (mt3d/*.npz), the plane-wave Jacobian dump (phase3/), the solver sweeps (phase1_repro/) and the result files next to the scripts that write them, all under CC BY 4.0 (DATA_LICENSE.txt). Figures and figure-drawing scripts are not included; every figure is a direct plot of a listed result file. Comments have been removed from all code written for this study. Not included: the magnetometer-array time series, which are third-party open data (EarthScope/USArray MT through the IRIS/EarthScope Data Management Center; AusLAMP Musgraves/APY through AuScope and Geoscience Australia, CC BY 4.0) and are rebuilt from those sources by the archived fetch and conversion scripts; and the field-station file that supplies the period list of the two control tests of Section S-XVII (available from the author on request).",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Janus-Cosmos",
-      "title": "Source-Conditioned Residual Learning for Magnetotelluric Responses Under Finite-Wavelength Excitation",
-      "url": "https://zenodo.org/records/22891331"
-    },
-    {
-      "base_direction_id": "ocean_reader",
       "candidate_id": "08874516a770789837a850d6",
       "context_id": "0fd8f40573a79d5e774f559b",
       "delivery_preview_only": true,
@@ -442,6 +368,114 @@
       "target_repository": "Hawkar-usls/Janus-Cosmos",
       "title": "Primordial Genesis in a Zero-Spin Vacuum Bouncing Cosmology",
       "url": "https://zenodo.org/records/23434893"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "3c7db58e2f9984380eae7d3a",
+      "context_id": "0146c5d645ce10d324e35ed9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "identifiability",
+        "inverse",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.25,
+      "source": "arxiv",
+      "source_context_sha256": "4df72094b79853a9d2178dcfb293bc98eb02c66202b0645c4322c0e883eb4639",
+      "source_published": "2026-10-15T13:59:45Z",
+      "source_updated": "2026-10-15T13:59:45Z",
+      "summary": "Understanding the objectives that drive agents' behavior is crucial in strategic environments, where multiple agents interact and adapt to one another. This challenge arises in domains such as cybersecurity, autonomous driving, and online markets, where agents' underlying incentives are typically unknown and must be inferred from their observed behavior. Inverse reinforcement learning (IRL) provides a natural framework for this problem, but extending IRL to strategic multi-agent settings introduces a fundamental challenge: a reward that explains observed behavior does not necessarily induce optimal strategies when used for decision-making. In this work, we study this problem through the lens of \\emph{strategic identifiability}, and show that learning from a fixed policy pair can be insufficient to strategically identify rewards, independent of the number of expert samples $K$. Motivated by this, we introduce an active IRL algorithm for two-player repeated Stackelberg games, in which the leader adaptively selects policies to elicit informative responses about the follower's reward. Combining maximum-likelihood estimation with experimental design, we derive finite-sample guarantees on the Stackelberg sub-optimality induced by the learned reward, matching up to polylogarithmic factors a new minimax learning rate of $K^{-1/2}$. Finally, we evaluate our approach in a realistic anti-poaching setting, demonstrating the benefits of active exploration for reward recovery and downstream strategic performance.",
+      "tags": [
+        "cs.GT",
+        "cs.AI",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Cosmos",
+      "title": "Learning Rewards in Strategic Games",
+      "url": "https://arxiv.org/abs/2610.21912v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "b1a2526519295de16e04e87e",
+      "context_id": "0116e02d50f6cabc499bd622",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "inverse problem",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.25,
+      "source": "arxiv",
+      "source_context_sha256": "f13dd0921e7745b79a5ff1c40a33f8937b631055f84d4ab8bedad8dd0a0ba024",
+      "source_published": "2026-10-15T11:33:12Z",
+      "source_updated": "2026-10-15T11:33:12Z",
+      "summary": "We consider the inverse problem of recovering time-dependent coefficients in a system of Schrödinger equations with coupled nonlinear terms. We first address the well-posedness of the system for small boundary data and trivial initial data. Then, we show that the linearized Neumann data stably determines the nonlinear coefficients provided that, at any given time, they are known in some neighborhood of the boundary. The proof relies on linearization and complex geometric optics (CGO) solutions for the linear Schrödinger equation. We conclude by outlining an approach based on the direct use of Carleman estimates to recover time-independent coefficients in the setting of trivial boundary data but nontrivial initial data.",
+      "tags": [
+        "math.AP"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Cosmos",
+      "title": "Recovery of coefficients in a Schrödinger system with nonlinear coupling",
+      "url": "https://arxiv.org/abs/2610.21715v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "6eed379df1baec11f55b421b",
+      "context_id": "e6c3446722a92a14eae4e54d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "identifiability",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.2083,
+      "source": "zenodo",
+      "source_context_sha256": "e69b8e1850a0633a7ecc454bbd3206cd71e41be6d529f517e1d4bdb70222205a",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "SELF-CALIBRATING NANO-NEURAL INTERFACES AND REFERENCE LINEAGE AT THE LIMIT Built-In References &times; Drift Attribution &times; Independent Functional Requalification STARLI / Institute XXIII / Research Flagship 17 PUBLICATION DESCRIPTION When a long-running neural interface changes, is the cause the sensor, the surrounding tissue, or the decoder? An adaptive algorithm can restore predictive accuracy while obscuring the physical origin of its own correction. This book proposes a rigorous, falsifiable architecture for self-calibrating nano-neural interfaces that must retain the scientific history of every reference and every update. Its central axiom is that self-calibration does not imply self-certification: measurement claims, permission to change, electrode safety and functional benefit demand independent evidence. The first coupling is the existence of physically traceable internal references that can be challenged against electrically and temporally independent standards. The second is a source-aware drift-diagnostic process that distinguishes electronics gain, electrode-tissue transfer, tissue-like surrogate changes, changing source signals and model/feature drift, explicitly recording instances of nonidentifiability. The third is external functional requalification, which can reject an apparently successful update after hidden-domain testing, material or reference replacement, loss of selectivity, missing raw observations, or inability to reproduce the frozen predecessor. This research monograph is divided into seven causal layers and 82 chapters. Five major subsections of each chapter are assigned independent pages, yielding 410 separately paginated technical essays. Thirty gold mathematical derivations are linked from chapter-opening equations to discriminating experiments. The mathematics includes augmented state-space observability, nonlinear observation functions, source-separation Jacobians, Kalman innovations, impedance spectroscopy, covariance propagation, change-point statistics, conformal coverage, selective risk, hard-veto constrained update eligibility, reference-bridge covariance, exact rollback and cross-laboratory requalification. A displayed formula is a candidate analytical instrument with stated dimensions and assumptions, not a discovered biological law. Two hundred detailed Research Gates are preserved at the rear: 82 interrogate source identifiability, another 82 challenge independent physical and evidential hard vetoes, and 36 require third-party reconstruction of a frozen reference history. Thirty-three Phoenix Answer Embryos propose revisable architectures, beginning with the Neural Interface Calibration Passport. The Passport ties an interface's physical identity to the raw analog and digitized record, calibrated unit chain, hardware reference ancestors, model and feature checksums, reasons for changing any reference, failed updates, revoked permissions, blinded requalification and rollback. These are proposed evidence structures, not commercially validated devices. The DOI bibliography contains 18 unique external research records covering chronic intracortical signal instability, low-dimensional BCI stabilization, decoder adaptation, long-term electrode-tissue behavior, complex impedance metrology, electrochemical reference limits, neural interface materials and conformal uncertainty under covariate shift. Selected publisher and PubMed pages were consulted for source metadata. Their findings cannot establish efficacy of the new self-calibration architecture; source-specific claims and independent replication would be necessary.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Janus-Cosmos",
+      "title": "SELF-CALIBRATING NANO-NEURAL INTERFACES AND REFERENCE LINEAGE AT THE LIMIT Built-In References × Drift Attribution × Independent Functional Requalification STARLI / Institute XXIII / Research Flagship 17 PUBLICATION DESCRIPTION When a long-running neural interface changes, is the cause the sensor, t",
+      "url": "https://zenodo.org/records/23439263"
     },
     {
       "base_direction_id": "ocean_reader",
@@ -1120,90 +1154,6 @@
     },
     {
       "base_direction_id": "ocean_reader",
-      "candidate_id": "95e044f9388055b9d9fdcf4e",
-      "context_id": "7204c55138b0c1af6705ef27",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "ocean_reader::CONTROL",
-      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 13.0,
-      "source": "zenodo",
-      "source_context_sha256": "352da304694fba8b1a54071373300140b519e27e16eee4ccbd0d154454450009",
-      "source_published": "2026-10-08",
-      "source_updated": "",
-      "summary": "This data and code release accompanies &ldquo;Output rules and corpus preparation shape retrieval evaluation in a cross-language legal information audit&rdquo;. Version 3.0 brings together the current rule experiment, internal task benchmark, legal-version evidence and selected research exports from the published version 2.1 baseline. The collection contains 39 Peruvian legal-information records. The output-rule component applies eight combinations of no-match handling, document-support filtering and tie ordering to frozen scores for 32 retained queries and 58 designated-target exposures per language path. It includes 6,912 query-level results, 216 aggregate summaries and a 5,000-replicate shared-order negative control. The internal benchmark contains twelve tasks in six clusters, two formulations per task, 468 provisional content grades, the two returned coding sets, four retrieval configurations and corpus-repair comparisons. Current sensitivity files evaluate existing grade sets, all 27 assignments to three unknown returned grades and RETA-family aggregation. Preparation and judgment roles, prior-output exposure and missing values are retained. Content support is evaluated separately from temporal applicability. The legal-evidence component supplies dated official-source locators, checksums and version findings. The archive includes current Figures 1&ndash;3, source data, plotting code, component data dictionaries, a result/file map, portable standard-library recalculation code and a SHA-256 manifest. Exported score/rank aggregation and deterministic sensitivity checks have been reproduced. Fresh extraction and scoring require the exact source carriers, indexed text and pinned model resources documented in the manifests. Original legal PDFs, full-text/OCR caches, source-page images and model weights are not redistributed. Project-created data and documentation retain the existing CC BY 4.0 licence; project-created code retains the MIT licence. Third-party source materials remain subject to their respective access and reuse conditions. The preceding published baseline is identified by DOI 10.5281/zenodo.23094356, and the version series by DOI 10.5281/zenodo.23094355.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Janus-Cosmos",
-      "title": "CLIQ-R: Data and code for cross-language legal retrieval evaluation in Peru",
-      "url": "https://zenodo.org/records/23250366"
-    },
-    {
-      "base_direction_id": "ocean_reader",
-      "candidate_id": "ae6d5c36a75fd641c620e3bd",
-      "context_id": "373063518175e8b80b646469",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "ocean_reader::CONTROL",
-      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 13.0,
-      "source": "zenodo",
-      "source_context_sha256": "9daea1e4248c99ddbfb187618f449e709b4e54ac70eedff636eee16294a30b32",
-      "source_published": "2026-10-09",
-      "source_updated": "",
-      "summary": "This record provides the public, non-confidential analytical and reproducibility materials supporting the manuscript &ldquo;When Does Seismic&ndash;Geotechnical Data Fusion Add Value? A Borehole-Aware Empirical-to-Synthetic Validation Framework for Urban Tunnelling.&rdquo; The study develops and audits a borehole-aware empirical-to-synthetic framework for evaluating whether adding downhole seismic information provides defensible incremental value in predicting the M&eacute;nard pressuremeter modulus under held-out validation. The empirical benchmark comprises 41 support-matched pressuremeter&ndash;seismic records across 21 independent boreholes from the Isfahan Metro Line 2 investigation. The framework compares a reference model, a geotechnical/geological-depth baseline, a seismic-only branch, naive multimodal fusion, and a dependence-aware fusion branch using leave-one-borehole-out validation. The public release contains a de-identified 41-record benchmark dataset, final manuscript Figure 1&ndash;5 assets, the current Supplementary Material and Supplementary Figure S1, released derived analytical outputs, provenance and reproducibility documentation, reproducibility and repository-audit scripts, computational-environment specifications, and SHA-256 integrity information. The de-identified dataset replaces source borehole identifiers with pseudonymous identifiers and excludes borehole coordinates and other spatially identifying source information. The underlying Isfahan Metro Line 2 geotechnical, geophysical, and pressuremeter source records are controlled by the Isfahan Urban Railway Organization and are not publicly redistributable. Original source workbooks, proprietary project documents, spatially identifying information, and other restricted source-derived materials are intentionally excluded from this public archive. Permission was obtained to use and publish the de-identified, non-confidential data extracted from the project report and the derived analytical information included in this release. The public code component provides scripts for reproducing the released manuscript-level benchmark metrics and verifying the integrity and consistency of the deposited files. These scripts do not contain the restricted original project records or proprietary source-data processing materials. The archive is intended to support transparent audit and reproducibility of the released derived analyses while preserving the access restrictions applying to the underlying project data.",
-      "tags": [
-        "data fusion",
-        "borehole-aware validation",
-        "downhole seismic",
-        "pressuremeter",
-        "Ménard modulus",
-        "small-strain stiffness",
-        "data-driven site characterization",
-        "geotechnical engineering",
-        "leave-one-borehole-out cross-validation",
-        "machine learning",
-        "geotechnical data fusion",
-        "empirical-synthetic validation",
-        "uncertainty quantification",
-        "data provenance",
-        "Isfahan Metro"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Cosmos",
-      "title": "When Does Seismic–Geotechnical Data Fusion Add Value? — Project 06 Data and Reproducibility Package",
-      "url": "https://zenodo.org/records/23249844"
-    },
-    {
-      "base_direction_id": "ocean_reader",
       "candidate_id": "3a69185fc82ab04023cc703f",
       "context_id": "02b7fbc7ea3bf5ea4cdc32c5",
       "delivery_preview_only": true,
@@ -1576,39 +1526,6 @@
     },
     {
       "base_direction_id": "ocean_reader",
-      "candidate_id": "d59486e3e24cac93a0a40b47",
-      "context_id": "2b60c90f0b174fbf1f864f4c",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "ocean_reader::CONTROL",
-      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "replication"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.8333,
-      "source": "zenodo",
-      "source_context_sha256": "c5f657995e11d5884323cd5cfb6b613138217a3f8c86eccbd30838593f06a14d",
-      "source_published": "2026-10-09",
-      "source_updated": "",
-      "summary": "This repository contains the curated research inputs, analysis code, and reference outputs supporting the study &ldquo;Supplier identity can reverse estimates of global irrigation savings.&rdquo; The study examines whether estimates of global irrigation savings depend on which suppliers reduce production, even when displacement quantities are held fixed within each market. It combines crop production, trade, and water-use data with constrained allocation models, historical production-contraction benchmarks, alternative water accounts, and conditional future scenarios for 2050 and 2100. Repository contents 01_Research_Inputs.xlsx &mdash; Curated source observations, geographic and crop identifiers, variable definitions, and source citations. 02_Research_Data.sqlite &mdash; Larger input datasets, archived analytical outputs, numerical checks, optional derived checkpoints, and an index linking the release to the associated manuscript and supplementary material. Source inputs and computed outputs are explicitly distinguished. 03_Analysis.py &mdash; Consolidated Python code containing the analytical modules, dependency specifications, input verification, and reproduction workflow. 04_Readme.txt &mdash; Documentation of data provenance, units, assumptions, reproduction instructions, licensing, and file checksums. The release corresponds to six main-text figures, 16 supplementary figures, and 24 supplementary tables. The exact associated manuscript and supplementary document versions are identified by their SHA-256 fingerprints. Data sources include ACEA, FAOSTAT, CWASI, GCAM scenario outputs, USGS irrigation water-use estimates, Kansas irrigation-technology replication data, and complementary water-account datasets. Source-specific citations and attribution requirements are retained in the documentation. Reproduction and validation The documented workflow uses Python 3.11. Separate dependency environments are specified where required. Installing dependencies requires internet access; the numerical analyses use the deposited inputs. Instructions cover the complete workflow and targeted reproduction checks. For version 1.0.1, file checksums, database integrity, and embedded assets were verified. The full-routing analysis was rerun from the deposited GCAM inputs for all 50 future configurations, reproducing the archived global water bounds and joint conservation outcomes within numerical tolerance. This targeted validation does not constitute a new execution of every stage of the study. Interpretation and reuse The modeled water bounds are conditional on specified technology responses, market quantities, supplier availability, production constraints, and water-use coefficients. They are not confidence intervals or globally identified causal effects of irrigation-technology adoption. Future configurations are conditional stress tests, not probabilistic forecasts. Original data compilations and documentation are released under CC BY 4.0, and original analysis code under the MIT License. Third-party inputs retain their source-specific licenses and attribution requirements, as documented in the README. Please cite this repository and the relevant original data sources when reusing the materials.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Janus-Cosmos",
-      "title": "Data and code for \"Supplier identity can reverse estimates of global irrigation savings\"",
-      "url": "https://zenodo.org/records/23250229"
-    },
-    {
-      "base_direction_id": "ocean_reader",
       "candidate_id": "155adb9ada7613ae47013509",
       "context_id": "c7e6f882e43d682a34de7de0",
       "delivery_preview_only": true,
@@ -1793,8 +1710,48 @@
     },
     {
       "base_direction_id": "ocean_reader",
-      "candidate_id": "f1eef78dbf363b335fee9ab2",
-      "context_id": "c22f525fac43fa959859377a",
+      "candidate_id": "a5c59d4a6eea506170a451d0",
+      "context_id": "ba87e5c741b7be0d08e98501",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7083,
+      "source": "zenodo",
+      "source_context_sha256": "7f86cc7a99b8aa0f052a8e24e6ce2265664b16c563cd328eb563cf2ef523d99c",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "Pre-registration for a benchmark that tests whether frontier models can find struck-through text in documents as well as pdf-strikethrough-detect, an open-source package that detects struck-through text in PDFs and scanned pages, and at what cost. Ten models from Anthropic, Google, OpenAI and xAI run beside the package and two text-extraction baselines, on synthetic redlines, public redlined documents, US Congress bills and handwritten scans. This version holds the files tagged prereg-2, fixed after the dev runs and before any model sees a test page: PREREG.md: the rules, from the arms, inputs, prompts and scoring to the statistics, the four primary endpoints and the budget, now with the choices made on dev and the test run's cap. PLAN.md: the reasons behind them, unchanged since prereg-1. corpus_manifest.json: the source documents, each with its URL and sha256, unchanged. prereg1.json: what prereg-1 fixed, including the model IDs, page lists, file hashes and the prompts as drafted. prereg2.json: what prereg-2 fixes, including the sha256 of the code, prompts, config and every test page's ground truth, the choices made on dev, the model settings and the cap. PREREG.md sha256: 3d3c5d44579eeeae387660d682f6bcab8016b48dc048442634c16eeb7a22bcbc The same files are in the package's GitHub release prereg-2. Since prereg-1, PREREG.md has changed only by the values the dev runs chose and by three logged deviations. &nbsp;",
+      "tags": [
+        "strikethrough detection",
+        "document understanding",
+        "vision-language models",
+        "OCR",
+        "benchmark",
+        "pre-registration"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Cosmos",
+      "title": "Frontier benchmark for pdf-strikethrough-detect: pre-registration 2",
+      "url": "https://zenodo.org/records/23442237"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "5f94f675c5067bc235454b12",
+      "context_id": "b6b637277ba774ec699077d7",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "ocean_reader::CONTROL",
@@ -1815,17 +1772,52 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 8.7083,
       "source": "arxiv",
-      "source_context_sha256": "0d4db793b369855cfc73f52eab3796dafee6c7bd3a43a5167064c7395c3216e2",
-      "source_published": "2026-10-07T19:15:58Z",
-      "source_updated": "2026-10-07T19:15:58Z",
-      "summary": "Long-horizon robotic manipulation is often built by chaining independently trained skills. Although each skill can be reliable in isolation, performance degrades sharply when skills are chained: each downstream skill must start from the state its predecessor leaves behind rather than from its training distribution. We study this failure mode, Observation-Space Shift (OSS), and ask what causes these skill-seam failures. Using privileged simulator resets, we find that the dominant shift comes from displaced scene state (e.g., an open drawer or secondary objects left behind by earlier skills), not from the robot's joint configuration or the object the downstream skill manipulates. To test this diagnosis, we build a fully learned detect-restore-resume system: a task-progress monitor detects the stall, a learned policy restores the displaced scene components, and seam-robust fine-tuning lets the skill resume. It recovers the seam where every tested alternative fails, which we treat as evidence for the diagnosis rather than as a general-purpose method. On the BOSS-44 benchmark, the system improves full-chain success from 7.6% to 26.5%, a 3.5x improvement over the base policy and 51% of a privileged restoration oracle, whereas best-of-K resampling, a Diffusion Policy, and world-model baselines fail to recover from the evaluated seam states. On a real Franka arm running a fine-tuned $π_{0.5}$ policy, the same monitor is limited by exterior-camera observability, yet closing the loop still recovers some otherwise-terminal failures, motivating wrist and gripper sensing. These results suggest that some long-horizon composition failures are better addressed by restoring the scene before resuming the policy than by retrying from an off-support state.",
+      "source_context_sha256": "d458d46a0637598ef9eca44813c1b2f89e3256c19348a4a93cfd85a0a5505c80",
+      "source_published": "2026-10-15T09:24:30Z",
+      "source_updated": "2026-10-15T09:24:30Z",
+      "summary": "Large language model (LLM) agents solve complex tasks by calling external tools over multiple turns. Recent work has proposed tool graph memory, which stores past experience as tool transitions to guide subsequent selection. However, it remains unclear whether this component consistently improves agents' tool use or undermines it. We evaluate tool graph memory on nine models and two benchmarks, finding that it seldom improves significantly over baselines, and that its gains, where present, cost over twice the LLM calls. The memory's guidance is often incorrect, and random or no guidance retains most of the gain, implying that the benefit stems from extra computation rather than the memory itself. Moreover, even with the correct next tool suggested, many failures remain, such as giving up without a tool call. Storing the same experience instead as textual insights outperforms tool graph memory with almost no extra LLM calls. This suggests that memory serves better as a soft prior than as a prescription of the next tool, leading to a more effective and generalizable solution.",
       "tags": [
-        "cs.RO",
-        "cs.LG"
+        "cs.CL",
+        "cs.AI"
       ],
       "target_repository": "Hawkar-usls/Janus-Cosmos",
-      "title": "Diagnosing and Recovering from Observation-Space Shift at Long-Horizon Skill Seams",
-      "url": "https://arxiv.org/abs/2610.10810v1"
+      "title": "Rethinking the Role of Tool Graph Memory in Multi-Turn Tool Use",
+      "url": "https://arxiv.org/abs/2610.21571v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "9b3f1333e42a3045523dbeca",
+      "context_id": "a589ad22f82a2790afc9f978",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7083,
+      "source": "arxiv",
+      "source_context_sha256": "0fa211d9d7cc2a520093d0da10b9e9d14a44ac1c60ff4059aeec6c1965085758",
+      "source_published": "2026-10-10T03:24:05Z",
+      "source_updated": "2026-10-10T03:24:05Z",
+      "summary": "Long-horizon multi-agent collaboration requires memory that preserves both successful actions and the coordination structure underlying them. Existing memory systems support information sharing or procedural reuse, but often leave the evolution of shared procedures disconnected from the task dependencies and execution states of collaborating agents. This coupling also limits the direct transfer of procedural memory designed for individual agents to team settings. We propose Self-Evolving Procedural Memory (SEPM), a framework that uses task dependency graphs as a common representation for online coordination and procedural memory evolution. During execution, a lightweight shared blackboard records structured evidence alongside task dependencies, supporting the detection of goal, plan, and world-state divergence and evidence-based realignment. After execution, verified actions and dependencies are distilled into reusable procedures, while recurring failures inform warnings and constraints. The shared procedure pool evolves through creation, refinement, specialization, and retirement, guided by success and cost utility and constrained by evidence and safety requirements. Together, these mechanisms preserve the collaborative structure and applicability conditions needed to reuse experience across tasks. Evaluations on ALFWorld, WebArena, and OfficeBench under AutoGen and DyLAN show that SEPM achieves the highest task scores among the compared methods in all six benchmark settings. Under AutoGen, it improves task scores over the no-added-memory baseline by 29.85, 25.86, and 13.00 percentage points, respectively. The codebase is available at https://github.com/cookieApril/SEPM.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Cosmos",
+      "title": "SEPM: Self-Evolving Procedural Memory Grounded in Task Graphs for Multi-Agent Collaboration",
+      "url": "https://arxiv.org/abs/2610.14515v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
