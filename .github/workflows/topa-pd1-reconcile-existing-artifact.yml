@@ -1,0 +1,43 @@
+name: TOPA PD1 audit existing acquired GEO artifact
+
+on:
+  push:
+    branches: [LONGEVITY-SURVIVOR]
+    paths:
+      - .github/workflows/topa-pd1-reconcile-existing-artifact.yml
+      - longevity-survivor/tools/audit_pd1_geo_acquired_manifest.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout audit script
+        uses: actions/checkout@v4
+      - name: Download ONLY existing successful source-byte artifact
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p prior
+          gh run download 39026401715 --repo "${{ github.repository }}" --name topa-pd1-geo-zenodo-verified-public-bytes --dir prior
+          find prior -maxdepth 2 -name manifest.json -print
+      - name: Audit exact local files with SHA256 and GSM coverage
+        shell: bash
+        run: |
+          TOPA_PRIOR_DIR=prior TOPA_AUDIT_OUT=topa_pd1_manifest_audit python longevity-survivor/tools/audit_pd1_geo_acquired_manifest.py 2>&1 | tee pd1_audit.log
+      - name: Upload small audit receipt only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-pd1-gsm-provenance-audit
+          path: |
+            topa_pd1_manifest_audit/*.json
+            pd1_audit.log
+          if-no-files-found: error
+          retention-days: 14
