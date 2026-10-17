@@ -11,7 +11,7 @@ import unittest
 
 TOOLS = pathlib.Path(__file__).resolve().parents[1] / 'tools'
 sys.path.insert(0, str(TOOLS))
-from beetle_mirror_router import queue_batch, safe_repo
+from beetle_mirror_router import canon, queue_batch, queue_snapshot, safe_repo, to_item
 from beetle_memory_receiver import stage, INBOX_STATUS
 from beetle_delivery_health import inspect
 
@@ -140,6 +140,67 @@ class DeliveryTest(unittest.TestCase):
         r = self.receive()
         self.assertEqual(r['status'], 'NO_DELIVERY_QUEUE')
         self.assertFalse((self.inbox / 'ACK.json').exists())
+
+    def test_same_context_id_with_updated_metadata_gets_new_immutable_batch(self):
+        first = {'target_repository': REPO, 'epistemic_status': 'DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY',
+                 'context_id': 'stable-context-id', 'mirror_lens': 'FORWARD',
+                 'summary': 'old summary'}
+        one = queue_snapshot(self.mirror, REPO, [first], 48, TIME)
+        again = queue_snapshot(self.mirror, REPO, [first], 48, TIME)
+        self.assertEqual(one[0][0]['batch_id'], again[0][0]['batch_id'])
+        self.assertEqual(one[0][1], again[0][1])
+        changed = dict(first, summary='updated independently published summary')
+        two = queue_snapshot(self.mirror, REPO, [changed], 48, TIME)
+        self.assertNotEqual(one[0][0]['batch_id'], two[0][0]['batch_id'])
+        self.assertEqual(two[0][1], 2)
+        self.assertEqual(self.receive()['last_sequence'], 2)
+        self.assertEqual(len(list((self.inbox / 'batches').glob('*.json'))), 2)
+
+    def test_large_mirror_snapshot_is_split_losslessly_and_replayed(self):
+        selected = [{'target_repository': REPO,
+                     'epistemic_status': 'DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY',
+                     'context_id': f'context-{n}', 'mirror_lens': 'FORWARD',
+                     'summary': 'observational metadata ' * 22}
+                    for n in range(12)]
+        parts = queue_snapshot(self.mirror, REPO, selected, 48, TIME, max_bytes=1400)
+        self.assertGreater(len(parts), 1)
+        self.assertEqual(sum(len(packet['items']) for packet, _ in parts), len(selected))
+        self.assertEqual([seq for _, seq in parts], list(range(1, len(parts) + 1)))
+        self.assertTrue(all(len((self.mirror / 'batches' / f"{packet['batch_id']}.json").read_bytes()) <= 1400
+                            for packet, _ in parts))
+        self.assertEqual(self.receive()['new_batches'], len(parts))
+        recovered = []
+        for packet, _ in parts:
+            recovered.extend(json.loads((self.inbox / 'batches' / f"{packet['batch_id']}.json").read_bytes())['items'])
+        self.assertEqual(recovered, selected)
+
+    def test_unshardable_single_discovery_never_creates_partial_queue(self):
+        selected = [{'target_repository': REPO,
+                     'epistemic_status': 'DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY',
+                     'context_id': 'oversize', 'mirror_lens': 'FORWARD', 'summary': 'X' * 4000}]
+        with self.assertRaisesRegex(ValueError, 'single Beetle discovery'):
+            queue_snapshot(self.mirror, REPO, selected, 48, TIME, max_bytes=700)
+        self.assertFalse((self.mirror / 'delivery.json').exists())
+        self.assertFalse((self.mirror / 'batches').exists())
+
+    def test_untrusted_large_source_yields_bounded_preview_with_source_hash(self):
+        source = {'context_id': 'abcd' * 6, 'candidate_id': 'efgh' * 6,
+                  'direction_id': 'forward', 'mirror_lens': 'FORWARD',
+                  'source': 'arxiv', 'url': 'https://example.com/' + 'x' * 8000,
+                  'title': 'T' * 9000, 'summary': 'S' * 5_000_000,
+                  'tags': ['tag' * 100] * 400}
+        item = to_item(source, REPO)
+        self.assertEqual(item['source_context_sha256'], hashlib.sha256(canon(source)).hexdigest())
+        self.assertTrue(item['delivery_preview_only'])
+        self.assertTrue(item['delivery_preview_truncated'])
+        self.assertEqual(len(item['summary']), 6000)
+        self.assertEqual(len(item['title']), 300)
+        self.assertEqual(len(item['tags']), 32)
+        self.assertLess(len(json.dumps(item).encode()), 25_000)
+        packet, seq = queue_snapshot(self.mirror, REPO, [item], 48, TIME)[0]
+        self.assertEqual(seq, 1)
+        self.assertEqual(self.receive()['last_sequence'], 1)
+        self.assertEqual(packet['items'][0]['source_context_sha256'], item['source_context_sha256'])
 
 
 if __name__ == '__main__':
