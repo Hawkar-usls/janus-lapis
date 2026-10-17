@@ -1,0 +1,278 @@
+{
+  "schema_id": "janus.longevity_survivor.pd1_geo_gsm_byte_and_group_audit.v1",
+  "artifact_id": "HEART-PD1-MI-TAC-GSM-MANIFEST-AND-MATRIX-INTEGRITY-2026-10-17-v1.0",
+  "date_utc": "2026-10-17",
+  "lane": "LONGEVITY_SURVIVOR",
+  "duplicate_prevention": "Follow-up to previously registered Chen/Wu comparisons and 2026-10-17 first GEO/Zenodo receipt; no new independent research paper discovered.",
+  "source": {
+    "original_download_run": "https://github.com/Hawkar-usls/janus-lapis/actions/runs/39026401715",
+    "original_download_artifact_id": 12098558095,
+    "source_bytes_frozen_commit": "3f50350954e2bc060c33f5e696f79016b8ac6fe2",
+    "parent_downloaded_file_count": 15,
+    "recheck_run": "https://github.com/Hawkar-usls/janus-lapis/actions/runs/39027820257",
+    "recheck_artifact_id": 12098439106,
+    "recheck_artifact": "topa-pd1-gsm-provenance-audit",
+    "recheck_script": "longevity-survivor/tools/audit_pd1_geo_acquired_manifest.py",
+    "full_sha256_per_file_manifest": "topa_pd1_manifest_audit/reconciliation.json inside the small audit artifact",
+    "claimed_authority": "GITHUB_RUN_ARTIFACT_WITH_ACTUAL_SHA256_RECALCULATION"
+  },
+  "checksum_receipt": {
+    "source_files_reported": 15,
+    "files_acquired": 15,
+    "sha256_reverified": 15,
+    "file_hash_size_or_magic_failures": [],
+    "zenodo_preprocess_R_md5": "c09afc0f77fa13f63329de811f208f59",
+    "zenodo_preprocess_R_md5_valid": true,
+    "gate": "PASS_FULL_15_FILE_INTEGRITY"
+  },
+  "geo": {
+    "GSE293489": {
+      "model": "Mouse post-MI noncardiomyocyte scRNA-seq",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293489",
+      "gsm_samples": 4,
+      "explicit_groups": {
+        "WT_SHAM": [
+          "GSM8884015",
+          "GSM8884016"
+        ],
+        "WT_MI": [
+          "GSM8884017",
+          "GSM8884018"
+        ]
+      },
+      "acquired_verified_10x_triplets": 4,
+      "numeric_matrix_status": "COMPLETE_LOCAL_10X_BARCODE_FEATURE_MATRIX_TRIPLETS_FOR_ALL_FOUR_GSM",
+      "independent_animals_from_GSM_metadata": "NOT_VERIFIED",
+      "within_study_inferential_statistics": "LOCKED_UNTIL_BIOLOGICAL_N_AND_POOLING_KNOWN"
+    },
+    "GSE327655": {
+      "model": "Mouse left ventricle at 5 weeks after TAC with isotype anti-IgG versus anti-PD1",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE327655",
+      "gsm_samples": 6,
+      "explicit_groups": {
+        "WT_TAC_ISOTYPE_ANTI_IGG": [
+          "GSM9662756",
+          "GSM9662757",
+          "GSM9662758"
+        ],
+        "WT_TAC_ANTI_PD1": [
+          "GSM9662759",
+          "GSM9662760",
+          "GSM9662761"
+        ]
+      },
+      "acquired_processed_matrices": 0,
+      "this_archive_status": "NO_NUMERIC_MATRIX_FILES_FOR_THE_SIX_GSM",
+      "public_absence_not_proven": "GEO_SERIES_MATRIX_AND_SUPPLEMENTARY_DIRECTORY_NOT_YET_EXHAUSTIVELY_CHECKED",
+      "experimental_unit_and_n": "GSM_REPLICATE_LABELS_1_TO_3__INDEPENDENT_ANIMALS_NOT_PROVEN",
+      "within_study_inferential_statistics": "LOCKED_WITHOUT_SOURCE_COUNTS"
+    }
+  },
+  "samples": [
+    {
+      "gse": "GSE293489",
+      "gsm": "GSM8884015",
+      "geo_title": "Sh1",
+      "source_characteristics": [
+        "tissue: Heart",
+        "cell type: Non-cardiomyocyte cells",
+        "genotype: WT",
+        "treatment: sham"
+      ],
+      "experimental_group_from_explicit_source_metadata": "WT_SHAM",
+      "matrix_files_verified": 3,
+      "matrix_coverage": "COMPLETE_LOCAL_10X_TRIPLET",
+      "actual_independent_animal_or_pool_identity": "UNKNOWN_PENDING_PRIMARY_SAMPLE_TO_ANIMAL_MANIFEST",
+      "pooling": "UNKNOWN",
+      "inference_per_animal": "NOT_ADMITTED"
+    },
+    {
+      "gse": "GSE293489",
+      "gsm": "GSM8884016",
+      "geo_title": "Sh2",
+      "source_characteristics": [
+        "tissue: Heart",
+        "cell type: Non-cardiomyocyte cells",
+        "genotype: WT",
+        "treatment: sham"
+      ],
+      "experimental_group_from_explicit_source_metadata": "WT_SHAM",
+      "matrix_files_verified": 3,
+      "matrix_coverage": "COMPLETE_LOCAL_10X_TRIPLET",
+      "actual_independent_animal_or_pool_identity": "UNKNOWN_PENDING_PRIMARY_SAMPLE_TO_ANIMAL_MANIFEST",
+      "pooling": "UNKNOWN",
+      "inference_per_animal": "NOT_ADMITTED"
+    },
+    {
+      "gse": "GSE293489",
+      "gsm": "GSM8884017",
+      "geo_title": "M7h1",
+      "source_characteristics": [
+        "tissue: Heart",
+        "cell type: Non-cardiomyocyte cells",
+        "genotype: WT",
+        "treatment: myocardial infarction"
+      ],
+      "experimental_group_from_explicit_source_metadata": "WT_MI",
+      "matrix_files_verified": 3,
+      "matrix_coverage": "COMPLETE_LOCAL_10X_TRIPLET",
+      "actual_independent_animal_or_pool_identity": "UNKNOWN_PENDING_PRIMARY_SAMPLE_TO_ANIMAL_MANIFEST",
+      "pooling": "UNKNOWN",
+      "inference_per_animal": "NOT_ADMITTED"
+    },
+    {
+      "gse": "GSE293489",
+      "gsm": "GSM8884018",
+      "geo_title": "M7h2",
+      "source_characteristics": [
+        "tissue: Heart",
+        "cell type: Non-cardiomyocyte cells",
+        "genotype: WT",
+        "treatment: myocardial infarction"
+      ],
+      "experimental_group_from_explicit_source_metadata": "WT_MI",
+      "matrix_files_verified": 3,
+      "matrix_coverage": "COMPLETE_LOCAL_10X_TRIPLET",
+      "actual_independent_animal_or_pool_identity": "UNKNOWN_PENDING_PRIMARY_SAMPLE_TO_ANIMAL_MANIFEST",
+      "pooling": "UNKNOWN",
+      "inference_per_animal": "NOT_ADMITTED"
+    },
+    {
+      "gse": "GSE327655",
+      "gsm": "GSM9662756",
+      "geo_title": "TAC + anti-IgG-1",
+      "source_characteristics": [
+        "tissue: left ventricle",
+        "genotype: WT",
+        "treatment: TAC + anti-IgG antibody",
+        "time: 5 weeks"
+      ],
+      "experimental_group_from_explicit_source_metadata": "WT_TAC_ISOTYPE_ANTI_IGG",
+      "matrix_files_verified": 0,
+      "matrix_coverage": "NO_MATRIX_LOCAL",
+      "actual_independent_animal_or_pool_identity": "UNKNOWN_PENDING_PRIMARY_SAMPLE_TO_ANIMAL_MANIFEST",
+      "pooling": "UNKNOWN",
+      "inference_per_animal": "NOT_ADMITTED"
+    },
+    {
+      "gse": "GSE327655",
+      "gsm": "GSM9662757",
+      "geo_title": "TAC + anti-IgG-2",
+      "source_characteristics": [
+        "tissue: left ventricle",
+        "genotype: WT",
+        "treatment: TAC + anti-IgG antibody",
+        "time: 5 weeks"
+      ],
+      "experimental_group_from_explicit_source_metadata": "WT_TAC_ISOTYPE_ANTI_IGG",
+      "matrix_files_verified": 0,
+      "matrix_coverage": "NO_MATRIX_LOCAL",
+      "actual_independent_animal_or_pool_identity": "UNKNOWN_PENDING_PRIMARY_SAMPLE_TO_ANIMAL_MANIFEST",
+      "pooling": "UNKNOWN",
+      "inference_per_animal": "NOT_ADMITTED"
+    },
+    {
+      "gse": "GSE327655",
+      "gsm": "GSM9662758",
+      "geo_title": "TAC + anti-IgG-3",
+      "source_characteristics": [
+        "tissue: left ventricle",
+        "genotype: WT",
+        "treatment: TAC + anti-IgG antibody",
+        "time: 5 weeks"
+      ],
+      "experimental_group_from_explicit_source_metadata": "WT_TAC_ISOTYPE_ANTI_IGG",
+      "matrix_files_verified": 0,
+      "matrix_coverage": "NO_MATRIX_LOCAL",
+      "actual_independent_animal_or_pool_identity": "UNKNOWN_PENDING_PRIMARY_SAMPLE_TO_ANIMAL_MANIFEST",
+      "pooling": "UNKNOWN",
+      "inference_per_animal": "NOT_ADMITTED"
+    },
+    {
+      "gse": "GSE327655",
+      "gsm": "GSM9662759",
+      "geo_title": "TAC + anti-PD-1-1",
+      "source_characteristics": [
+        "tissue: left ventricle",
+        "genotype: WT",
+        "treatment: TAC + anti-PD-1 antibody",
+        "time: 5 weeks"
+      ],
+      "experimental_group_from_explicit_source_metadata": "WT_TAC_ANTI_PD1",
+      "matrix_files_verified": 0,
+      "matrix_coverage": "NO_MATRIX_LOCAL",
+      "actual_independent_animal_or_pool_identity": "UNKNOWN_PENDING_PRIMARY_SAMPLE_TO_ANIMAL_MANIFEST",
+      "pooling": "UNKNOWN",
+      "inference_per_animal": "NOT_ADMITTED"
+    },
+    {
+      "gse": "GSE327655",
+      "gsm": "GSM9662760",
+      "geo_title": "TAC + anti-PD-1-2",
+      "source_characteristics": [
+        "tissue: left ventricle",
+        "genotype: WT",
+        "treatment: TAC + anti-PD-1 antibody",
+        "time: 5 weeks"
+      ],
+      "experimental_group_from_explicit_source_metadata": "WT_TAC_ANTI_PD1",
+      "matrix_files_verified": 0,
+      "matrix_coverage": "NO_MATRIX_LOCAL",
+      "actual_independent_animal_or_pool_identity": "UNKNOWN_PENDING_PRIMARY_SAMPLE_TO_ANIMAL_MANIFEST",
+      "pooling": "UNKNOWN",
+      "inference_per_animal": "NOT_ADMITTED"
+    },
+    {
+      "gse": "GSE327655",
+      "gsm": "GSM9662761",
+      "geo_title": "TAC + anti-PD-1-3",
+      "source_characteristics": [
+        "tissue: left ventricle",
+        "genotype: WT",
+        "treatment: TAC + anti-PD-1 antibody",
+        "time: 5 weeks"
+      ],
+      "experimental_group_from_explicit_source_metadata": "WT_TAC_ANTI_PD1",
+      "matrix_files_verified": 0,
+      "matrix_coverage": "NO_MATRIX_LOCAL",
+      "actual_independent_animal_or_pool_identity": "UNKNOWN_PENDING_PRIMARY_SAMPLE_TO_ANIMAL_MANIFEST",
+      "pooling": "UNKNOWN",
+      "inference_per_animal": "NOT_ADMITTED"
+    }
+  ],
+  "critical_findings": [
+    "The original 15 acquired items decompose into 4×3 Chen matrix triplets, two GEO SOFT metadata files and one Zenodo R script; no Wu numeric matrices in this archive.",
+    "Chen group split is 2 sham versus 2 MI. Wu group split is 3 TAC+anti-IgG versus 3 TAC+anti-PD1 at five weeks.",
+    "Group strings from the six Wu GSM titles are metadata-level and should not be mistaken for confirmatory verification that every sample is a separate animal.",
+    "Separate transcriptomic modalities: Chen single-cell noncardiomyocyte 10x matrix; Wu TAC mouse left ventricle likely tissue-wide sequencing, matrix type must be confirmed.",
+    "Source receipt now contains true second-pass size/hash/format verification, but no expression calculations."
+  ],
+  "gate_status": {
+    "SOURCE_BYTE_ACQUISITION": "PASS",
+    "INDEPENDENT_SHA256_RECHECK": "PASS",
+    "ZENODO_R_SCRIPT_MD5": "PASS",
+    "CHEN_FOUR_GSM_MATRIX_COMPLETENESS": "PASS",
+    "WU_SIX_GSM_MATRIX_COMPLETENESS_IN_SAVED_ARCHIVE": "FAIL_MISSING",
+    "WU_PROCESSED_DATA_PUBLIC_AVAILABILITY": "UNKNOWN_REQUIRES_SERIES_MATRIX_SUPPL_CHECK",
+    "SAMPLE_TO_INDEPENDENT_ANIMAL_CROSSWALK": "OPEN",
+    "RNA_EXPRESSION_REPLAY": "NOT_PERFORMED",
+    "CROSS_STUDY_CD8_GAMMADELTA_COMPARISON": "BLOCKED_MODALITY_AND_BIOLOGICAL_UNIT_MISMATCH",
+    "STRICT_PROFIBROTIC_CELL_EXIT": "NOT_ESTABLISHED",
+    "GLOBAL_LIFESPAN_REGENERATION_CLAIM": "NOT_SUPPORTED"
+  },
+  "next_TOPA": [
+    "Inspect GSE327655 SOFT series-level supplementary files and GEO /matrix/ directory, then acquire gene-level processed counts or establish that only SRA raw reads are available.",
+    "Inspect GSE293489 and GSE327655 author Methods or public BioSample records for exact animal-to-library, per-animal sample pooling and independence.",
+    "Compute Chen four-10x-matrix basic QC after preserving cell barcode namespace, gene IDs, and mitochondrial fraction, but refrain from differential-expression p-values until independent biological units verified.",
+    "Do not merge Chen mouse heart scRNA with Wu mouse TAC bulk RNA expression or Wu human PBMC; test study-specific directional hypotheses using appropriate statistical unit.",
+    "The main delayed-after-established-scar fibroblast EXIT gate remains unproven; no anti-PD1 clinical implication."
+  ],
+  "firewalls": [
+    "15_SHA_PASS != ALL_GSM_MATRICES_COMPLETE",
+    "SHAM_2_MI_2 != VERIFIED_N_TWO_ANIMALS_PER_ARM",
+    "TAC_3_PD1_3 != VERIFIED_THREE_INDEPENDENT_ANIMALS_PER_ARM",
+    "SERIES_GEO_METADATA != PROCESSED_COUNT_MATRIX",
+    "CELL_COUNT != BIOLOGICAL_REPLICATE_COUNT",
+    "PREVENTION_OF_FIBROSIS != REVERSAL_OF_ESTABLISHED_SCAR"
+  ]
+}
