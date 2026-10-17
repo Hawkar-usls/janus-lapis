@@ -1,0 +1,73 @@
+name: TOPA PD1 audit compact atlas report
+on:
+  push:
+    branches: [LONGEVITY-SURVIVOR]
+    paths:
+      - .github/workflows/topa-pd1-compact-atlas-report.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download only existing bounded QC receipt
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p existing
+          gh run download 39032379990 --repo "${{ github.repository }}" --name topa-chen-wu-biological-units-multimarker-qc --dir existing
+          test -f existing/topa_chen_sc_qc/report.json
+      - name: Print per-library broad cell identities and source QC
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p atlas_result
+          python - <<'PY' 2>&1 | tee atlas_result/atlas_summary.log
+          import collections,json,pathlib
+          source=pathlib.Path("existing/topa_chen_sc_qc/report.json")
+          data=json.loads(source.read_text())
+          output={
+            "schema":"janus.topa.pd1_mi_broad_classification_summary.v1",
+            "source_run_id":39032379990,
+            "source_artifact_id":12100213728,
+            "rule":"all percentages per GSM, not per independently verified mouse",
+            "classes_per_GSM":{},
+            "per_group":{
+              "SHAM":collections.Counter(),
+              "MI":collections.Counter()
+            },
+            "gates":data["gates"]
+          }
+          for s in data["libraries"]:
+            keys=s["classification"]["broad"]
+            grouped={k:{"cells":v["n"],"fraction_of_filtered_barcodes":v["fraction"]} for k,v in keys.items()}
+            output["classes_per_GSM"][s["gsm"]]={
+              "group":s["author_geo_group"],
+              "QC_barcodes":s["QC"]["cells_after"],
+              "broad_classes":grouped,
+              "T_subtype_candidates":s["classification"]["T_subtypes"],
+              "QC_fail_genes":s["QC"]["fail_genes_below_300"],
+              "QC_fail_mito":s["QC"]["fail_mito_above_5pct"],
+              "QC_fail_UMIs":s["QC"]["fail_umi_above_40000"],
+              "doublets_removed":False
+            }
+            for k,v in keys.items():output["per_group"][s["author_geo_group"]][k]+=v["n"]
+          for k,v in output["per_group"].items():output["per_group"][k]=dict(v)
+          p=pathlib.Path("atlas_result/atlas_summary.json")
+          p.write_text(json.dumps(output,indent=2)+"\n")
+          print("TOPA_MULTI_MARKER_ATLAS_START")
+          print(json.dumps(output,ensure_ascii=False))
+          print("TOPA_MULTI_MARKER_ATLAS_END")
+          PY
+      - name: Upload independent compact atlas summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-pd1-multimarker-atlas-reconciled
+          path: atlas_result/
+          if-no-files-found: warn
+          retention-days: 14
