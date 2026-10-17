@@ -1,0 +1,35 @@
+name: JANUS Beetle SPOILER shard validation
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/beetle-spoiler-validation.yml'
+      - '.github/workflows/universal-beetle-hourly.yml'
+      - 'tools/universal_beetle.py'
+      - 'tools/beetle_shard_store.py'
+      - 'tools/beetle_context_projector.py'
+      - 'tools/beetle_mirror_router.py'
+      - 'tests/test_beetle_shard_store.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile storage and routing tools
+        run: |
+          python -m py_compile \
+            tools/universal_beetle.py \
+            tools/beetle_shard_store.py \
+            tools/beetle_context_projector.py \
+            tools/beetle_mirror_router.py
+      - name: Test lossless migration and Genesis receiver contract
+        run: python -m unittest discover -s tests -p 'test_beetle_shard_store.py' -v
