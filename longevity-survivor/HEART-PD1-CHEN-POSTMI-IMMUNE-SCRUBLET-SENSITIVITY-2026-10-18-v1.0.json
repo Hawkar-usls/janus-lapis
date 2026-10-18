@@ -43,6 +43,24 @@
       "script": "longevity-survivor/tools/topa_postmi_immune_reference_control.py",
       "workflow": ".github/workflows/topa-postmi-immune-reference-control.yml",
       "data_type": "independent-study CD45+ sham and post-infarct day 7 mouse heart, source SHA256 in run artifact"
+    },
+    "immune_ood_negative_control": {
+      "run": 39109872734,
+      "conclusion": "success",
+      "artifact_id": 12129813508,
+      "artifact_zip_sha256": "c334ac53fabee026eae4772b77a5a90d97b207f7615e6d880aa3a75b192b4187",
+      "code_commit": "b0cbacfc52aa39d771ad53f09d3c8527e944c5e4",
+      "frozen_reference_feature_sha256": "fc45a9ba5607276d5878790fb85059c0595a9447f46f653f9be2a20d4e2983e8",
+      "script": "longevity-survivor/tools/topa_tabula_immune_ood_negative_control.py",
+      "workflow": ".github/workflows/topa-tabula-postmi-immune-ood.yml",
+      "external_feature_coverage": "SEE_JSON_ARTIFACT__MISSING_EXTERNAL_FEATURES_EXPLICITLY_ZERO_IMPUTED_UP_TO_10_PERCENT",
+      "reference_model_classes": [
+        "fibroblast",
+        "endothelial cell",
+        "endocardial cell",
+        "cardiac muscle cell"
+      ],
+      "threshold_type": "VERY_HIGH_CONFIDENCE_REFERENCE_CALIBRATION__NOT_CROSS_DOMAIN_VALIDATED"
     }
   },
   "per_gsm_scrublet": {
@@ -144,7 +162,9 @@
     "ANIMAL_LEVEL_PROPORTIONS_AND_CONFIDENCE_INTERVALS": "LOCKED",
     "CAUSAL_PROFIBROTIC_EXIT": "NOT_ESTABLISHED",
     "MECHANICAL_EXIT_COUPLING": "NOT_ADMITTED",
-    "HUMAN_THERAPY": "NOT_CLAIMED"
+    "HUMAN_THERAPY": "NOT_CLAIMED",
+    "POSTMI_CD45_NEGATIVE_CONTROL_FROZEN_TABULA": "PASS_REPLAYABLE_HIGH_ABSTENTION__NOT_SUPERVISED_VALIDATION",
+    "FROZEN_TABULA_FOUR_CLASS_SUPPORTS_T_LABELING": "NO"
   },
   "audit_firewall": [
     "SOFTWARE_AUTO_CALL_NE_EXPERIMENTAL_DOUBLET_TRUTH",
@@ -157,9 +177,38 @@
     "NO_ANIMAL_LEVEL_INFERENCE_OR_CI_UNTIL_AUTHOR_CROSSWALK"
   ],
   "next_TOPA": [
+    "Recover exact author-barcode immune labels in a post-MI atlas; train a new immune-aware model and evaluate leave-one-mouse/study-out performance with actual biological source IDs.",
     "Obtain author-curated per-barcode cell-type annotations (or independently suitable annotated post-MI immune reference) with exact GEO/Seurat provenance and cross-study heldout evaluation.",
     "Use experimental loading/multiplex labels or orthogonal diagnostic evidence to calibrate doublet calls; report threshold/rate sensitivity, do not silently delete candidate cells.",
     "Seek primary source evidence mapping each Chen GSM to physical mice and explicitly auditing pooling; only then use independent animal as statistical unit.",
     "After independent labels + biological units are verified, quantify domain shift, genuine T subsets and only separately causal longitudinal profibrotic state exit."
-  ]
+  ],
+  "immune_model_negative_control": {
+    "source": "independent GSE163465 CD45+ vs frozen Tabula Muris 4-nonimmune-class model",
+    "GSM4985022": {
+      "qc_n": 2318,
+      "model_abstain_n": 2276,
+      "model_accept_nonimmune_n": 42,
+      "marker_supported_union_n": 2136,
+      "marker_supported_union_accepted_nonimmune_n": 27,
+      "T_pair_n": 402,
+      "T_pair_accepted_nonimmune_n": 1
+    },
+    "GSM4985024": {
+      "qc_n": 4462,
+      "model_abstain_n": 4447,
+      "model_accept_nonimmune_n": 15,
+      "marker_supported_union_n": 3846,
+      "marker_supported_union_accepted_nonimmune_n": 10,
+      "T_pair_n": 644,
+      "T_pair_accepted_nonimmune_n": 0
+    },
+    "interpretation": "98.19% and 99.66% of QC CD45+ samples are out-of-reference abstentions; test exposes reference class-space insufficiency and strict threshold, NOT T-cell supervised classification validity.",
+    "caveats": [
+      "CD45_SORT_NE_ALL_CELLS_AUTHOR_VALIDATED_IMMUNE_IDENTITY",
+      "STRICT_POSTERIOR_THRESHOLD_NE_ACCURACY",
+      "MISSING_EXTERNAL_FEATURES_ZERO_IMPUTED",
+      "CELL_MARKER_POSITIVITY_NE_TRUE_NEGATIVE_LABEL"
+    ]
+  }
 }
