@@ -1,0 +1,44 @@
+name: TOPA Chen Scrublet sensitivity by GSM
+on:
+  push:
+    branches: [LONGEVITY-SURVIVOR]
+    paths:
+      - .github/workflows/topa-chen-scrublet-sensitivity.yml
+      - longevity-survivor/tools/topa_chen_scrublet_sensitivity.py
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  sensitivity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 58
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned reference tools
+        run: python -m pip install --disable-pip-version-check 'numpy<2' 'scipy<1.15' 'scikit-learn<1.6' 'scrublet==0.2.3'
+      - name: Verify immutable source manifest from previously completed run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p prior
+          gh run download 39026401715 --repo "${{ github.repository }}" --name topa-pd1-geo-zenodo-verified-public-bytes --dir prior
+          test -f prior/topa_pd1_acquisition/manifest.json
+      - name: Re-run four 10X libraries at three explicitly assumed doublet rates
+        shell: bash
+        run: |
+          set -o pipefail
+          TOPA_PD1_ROOT=prior/topa_pd1_acquisition TOPA_DOUBLET_OUT=topa_pd1_sensitivity python longevity-survivor/tools/topa_chen_scrublet_sensitivity.py 2>&1 | tee topa_sensitivity.log
+      - name: Preserve reproducible sensitivity and fail-closed report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-chen-per-gsm-scrublet-prior-sensitivity
+          path: |
+            topa_pd1_sensitivity/report.json
+            topa_sensitivity.log
+          if-no-files-found: warn
+          retention-days: 21
