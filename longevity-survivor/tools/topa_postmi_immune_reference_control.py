@@ -66,6 +66,7 @@ report={"schema":"janus.topa.postmi_immune_reference_marker_control.v1",
  "primary_sources":{"Chen":"GSE293489","independent_immune_atlas":SERIES},
  "study_independence":"Different GEO series, not evidence of biological replicate independence",
  "reference_selection":"GSM4985022 CD45+ sham; GSM4985024 CD45+ day7 MI",
+ "sample_level_geo_url_fallback":"SAMPLE_URL_CONSTRUCTED_IF_FAMILY_SOFT_LACKS_PER_FILE_LINK__VALIDATE_HTTP_BYTES_HASH_AND_SHAPE",
  "source_bytes":{},"reference_metadata":{},"per_gsm":{},
  "method":{"QC":"detected genes >=300, UMI <=40000, mitochondrial <=5%",
   "marker_rule":"Both prespecified gene markers have >=1 UMI, descriptive only",
@@ -125,8 +126,16 @@ for gsm,group in SAMPLES.items():
  urls={}
  for suffix in ("_matrix.mtx.gz","_features.tsv.gz","_barcodes.tsv.gz"):
   matches=[x for x in entry["files"] if x.endswith(suffix)]
-  if len(matches)!=1:raise ValueError("not exact sample triplet "+gsm+" "+suffix+" "+str(matches))
-  urls[suffix]=matches[0]
+  if len(matches)==1:
+   urls[suffix]=matches[0]
+  elif len(matches)==0:
+   # GEO's family SOFT does not always list sample-level processed files.
+   # Use the canonical public sample supplementary naming, then validate
+   # actual HTTP response, byte limit, dimensions and SHA256 below.
+   stage="Sham" if gsm=="GSM4985022" else "Day_7"
+   urls[suffix]="https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4985nnn/"+gsm+"/suppl/"+gsm+"_"+stage+suffix
+  else:
+   raise ValueError("ambiguous source triplet "+gsm+" "+suffix+" "+str(matches))
  local={}
  for suffix,url in urls.items():
   target=OUT/(gsm+suffix)
