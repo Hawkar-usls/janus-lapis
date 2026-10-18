@@ -11,6 +11,10 @@ on:
       - 'tests/test_beetle_home_watchdog.py'
       - 'tools/beetle_incident_issues.py'
       - 'tests/test_beetle_incident_issues.py'
+      - 'tools/beetle_observation_blindness.py'
+      - 'tests/test_beetle_observation_blindness.py'
+      - 'tools/beetle_watchdog_receipt.py'
+      - 'tests/test_beetle_watchdog_receipt.py'
       - '.github/workflows/janus-beetle-home-watchdog.yml'
   pull_request:
     branches: [main]
@@ -19,6 +23,10 @@ on:
       - 'tests/test_beetle_home_watchdog.py'
       - 'tools/beetle_incident_issues.py'
       - 'tests/test_beetle_incident_issues.py'
+      - 'tools/beetle_observation_blindness.py'
+      - 'tests/test_beetle_observation_blindness.py'
+      - 'tools/beetle_watchdog_receipt.py'
+      - 'tests/test_beetle_watchdog_receipt.py'
       - '.github/workflows/janus-beetle-home-watchdog.yml'
 
 permissions:
@@ -32,6 +40,8 @@ jobs:
   observe:
     runs-on: ubuntu-24.04
     timeout-minutes: 8
+    outputs:
+      status: ${{ steps.classify.outputs.status }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,17 +50,25 @@ jobs:
         with:
           python-version: '3.12'
       - name: Verify normal and adversarial SLO scenarios
-        run: python -m unittest -v tests.test_beetle_home_watchdog tests.test_beetle_incident_issues
+        run: python -m unittest -v tests.test_beetle_home_watchdog tests.test_beetle_incident_issues tests.test_beetle_observation_blindness tests.test_beetle_watchdog_receipt
       - name: Check real durable ACK and Cloud HOME without writes
         shell: bash
         run: |
           set -euo pipefail
           python tools/beetle_home_watchdog.py | tee watchdog-run.txt "$GITHUB_STEP_SUMMARY"
+      - name: Classify receipt, keeping missing or malformed telemetry UNKNOWN
+        id: classify
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          status="$(python tools/beetle_watchdog_receipt.py --report watchdog-run.txt)"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
       - name: Preserve watcher receipt, even after ALERT
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: janus-watchdog-receipt-${{ github.run_id }}
+          name: janus-watchdog-${{ steps.classify.outputs.status }}-${{ github.run_id }}
           path: watchdog-run.txt
           if-no-files-found: warn
           retention-days: 14
@@ -69,15 +87,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.sha }}
           persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - uses: actions/download-artifact@v4
         with:
-          name: janus-watchdog-receipt-${{ github.run_id }}
+          name: janus-watchdog-${{ needs.observe.outputs.status }}-${{ github.run_id }}
       - name: Upsert one deduplicated durable issue on state transition
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python tools/beetle_incident_issues.py --report watchdog-run.txt
+      - name: Escalate only sustained UNKNOWN observation blindness
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/beetle_observation_blindness.py --report watchdog-run.txt
