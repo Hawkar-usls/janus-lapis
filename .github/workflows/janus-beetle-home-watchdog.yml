@@ -9,12 +9,16 @@ on:
     paths:
       - 'tools/beetle_home_watchdog.py'
       - 'tests/test_beetle_home_watchdog.py'
+      - 'tools/beetle_incident_issues.py'
+      - 'tests/test_beetle_incident_issues.py'
       - '.github/workflows/janus-beetle-home-watchdog.yml'
   pull_request:
     branches: [main]
     paths:
       - 'tools/beetle_home_watchdog.py'
       - 'tests/test_beetle_home_watchdog.py'
+      - 'tools/beetle_incident_issues.py'
+      - 'tests/test_beetle_incident_issues.py'
       - '.github/workflows/janus-beetle-home-watchdog.yml'
 
 permissions:
@@ -36,9 +40,44 @@ jobs:
         with:
           python-version: '3.12'
       - name: Verify normal and adversarial SLO scenarios
-        run: python -m unittest -v tests.test_beetle_home_watchdog
+        run: python -m unittest -v tests.test_beetle_home_watchdog tests.test_beetle_incident_issues
       - name: Check real durable ACK and Cloud HOME without writes
         shell: bash
         run: |
           set -euo pipefail
-          python tools/beetle_home_watchdog.py | tee "$GITHUB_STEP_SUMMARY"
+          python tools/beetle_home_watchdog.py | tee watchdog-run.txt "$GITHUB_STEP_SUMMARY"
+      - name: Preserve watcher receipt, even after ALERT
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: janus-watchdog-receipt-${{ github.run_id }}
+          path: watchdog-run.txt
+          if-no-files-found: warn
+          retention-days: 14
+
+  incident-ledger:
+    # Only trusted main-branch runs can modify Issues. The observer itself has
+    # no write credentials, and a PR cannot open/close public incidents.
+    if: ${{ always() && github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
+    needs: observe
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      contents: read
+      actions: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: janus-watchdog-receipt-${{ github.run_id }}
+      - name: Upsert one deduplicated durable issue on state transition
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/beetle_incident_issues.py --report watchdog-run.txt
