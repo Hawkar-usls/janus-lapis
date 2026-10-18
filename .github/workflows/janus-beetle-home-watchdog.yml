@@ -1,0 +1,44 @@
+name: JANUS Beetle → Genesis durable delivery watchdog
+
+on:
+  schedule:
+    - cron: '37 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/beetle_home_watchdog.py'
+      - 'tests/test_beetle_home_watchdog.py'
+      - '.github/workflows/janus-beetle-home-watchdog.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/beetle_home_watchdog.py'
+      - 'tests/test_beetle_home_watchdog.py'
+      - '.github/workflows/janus-beetle-home-watchdog.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: janus-beetle-home-watchdog
+  cancel-in-progress: false
+
+jobs:
+  observe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify normal and adversarial SLO scenarios
+        run: python -m unittest -v tests.test_beetle_home_watchdog
+      - name: Check real durable ACK and Cloud HOME without writes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/beetle_home_watchdog.py | tee "$GITHUB_STEP_SUMMARY"
