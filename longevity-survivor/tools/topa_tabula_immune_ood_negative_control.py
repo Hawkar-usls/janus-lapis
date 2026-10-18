@@ -83,7 +83,8 @@ report={"schema":"janus.topa.tabula_muris_classifier_postmi_cd45_ood_negative_co
   "CD45_ENRICHED_REFERENCE_MAY_HAVE_CONTAMINATING_NONIMMUNE_CELLS",
   "T_OR_MYELOID_MARKER_COPOSITIVITY_NOT_AUTHOR_GROUND_TRUTH",
   "ACCEPTANCE_OF_NONIMMUNE_LABEL_FOR_MARKER_SUPPORTED_CELL_NE_CONFIRMED_MISCLASSIFICATION",
-  "HIGH_SOFTMAX_CONFIDENCE_NE_POSTMI_IMMUNE_RELIABILITY"]}
+  "HIGH_SOFTMAX_CONFIDENCE_NE_POSTMI_IMMUNE_RELIABILITY",
+  "MISSING_EXTERNAL_FEATURES_ZERO_IMPUTED_WITH_COVERAGE_REPORT"]}
 for gsm,stage in ATLAS.items():
  d={}
  for suffix in ("_matrix.mtx.gz","_features.tsv.gz","_barcodes.tsv.gz"):
@@ -103,7 +104,16 @@ for gsm,stage in ATLAS.items():
  mtfrac=np.divide(mt,umi,out=np.zeros(len(umi),dtype=np.float32),where=umi>0)
  good=(detected>=300)&(umi<=40000)&(mtfrac<=.05)&(umi>0)
  gene_map,_=map_gene_indices(genes)
- if not set(selected).issubset(set(gene_map)):raise ValueError("reference feature mismatch "+gsm)
+ missing=[g for g in selected if g not in gene_map]
+ if len(missing)>int(0.10*len(selected)):
+  raise ValueError("external reference feature coverage <90% "+gsm+" missing="+str(len(missing)))
+ # Preserve frozen feature ORDER. Absent assay features are explicit zero
+ # imputations, never silently dropped or re-selected on test data.
+ report.setdefault("feature_coverage",{})[gsm]={
+  "frozen_feature_n":len(selected),"missing_n":len(missing),
+  "observed_fraction":(len(selected)-len(missing))/len(selected),
+  "missing_sha256":hashlib.sha256("\n".join(missing).encode()).hexdigest(),
+  "imputation":"ZERO_EXPLICIT_ASSAY_NOT_DETECTED__OOD_INTERPRETATION_ONLY"}
  def marker(a,b):
   if a.lower() not in gene_map or b.lower() not in gene_map:return None
   v1=np.asarray(mat[gene_map[a.lower()],:].toarray()).ravel()>0
@@ -112,7 +122,11 @@ for gsm,stage in ATLAS.items():
  t=marker("Cd3d","Cd3e")
  myel=marker("Lyz2","Tyrobp")
  if t is None or myel is None:raise ValueError("immune marker controls absent")
- x=expression(mat,genes,selected,good).toarray()
+ present=[g for g in selected if g in gene_map]
+ x=np.zeros((int(good.sum()),len(selected)),dtype=np.float32)
+ original=expression(mat,genes,present,good).toarray()
+ positions=[i for i,g in enumerate(selected) if g in gene_map]
+ x[:,positions]=original
  probs=clf.predict_proba(x)
  accepted=(probs.max(axis=1)>=threshold)
  pred=clf.classes_[probs.argmax(axis=1)]
