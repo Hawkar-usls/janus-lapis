@@ -19,6 +19,9 @@ import urllib.request
 
 
 REPOSITORY = 'Hawkar-usls/janus-lapis'
+# Repository owner is a GitHub user (not an organization). Assignment uses
+# native GitHub inbox/email settings; no personal address or bot token needed.
+INCIDENT_ASSIGNEE = 'Hawkar-usls'
 MARKER = '<!-- janus.beetle_home.incident.v1 -->'
 AUTO_START = '<!-- JANUS_WATCH_AUTO_START -->'
 AUTO_END = '<!-- JANUS_WATCH_AUTO_END -->'
@@ -90,6 +93,17 @@ def choose_issue(issues: list) -> dict | None:
     return marked[0] if marked else None
 
 
+def assignee_present(issue: dict) -> bool:
+    users = issue.get('assignees')
+    if not isinstance(users, list):
+        raise ValueError('GitHub did not return issue assignees')
+    if any(not isinstance(user, dict) or not isinstance(user.get('login'), str)
+           for user in users):
+        raise ValueError('invalid GitHub issue assignees')
+    return any(user['login'].casefold() == INCIDENT_ASSIGNEE.casefold()
+               for user in users)
+
+
 def decide(report: dict, issues: list) -> tuple[str, dict | None]:
     issue = choose_issue(issues)
     status = report['status']
@@ -157,9 +171,16 @@ def synchronize(report: dict, run_url: str, api: GitHubIssues) -> dict:
         body = '\n'.join([MARKER, '',
                           'Durable JANUS Beetle → Genesis delivery incident ledger.',
                           'This is a liveness alert, not admission of research evidence.',
+                          'Assigned at creation to the repository owner for native GitHub notifications.',
+                          'Email delivery depends on the owner\'s GitHub notification preferences.',
                           '', block, ''])
         created = api.request('POST', f'/repos/{REPOSITORY}/issues',
-                              {'title': TITLE, 'body': body})
+                              {'title': TITLE, 'body': body,
+                               'assignees': [INCIDENT_ASSIGNEE]})
+        # GitHub can silently ignore invalid issue assignees. Fail visibly
+        # instead of claiming a personal notification that was not configured.
+        if not assignee_present(created):
+            raise ValueError('GitHub did not assign incident to repository owner')
         return {'action': action, 'issue_number': created['number']}
     number = issue.get('number')
     if type(number) is not int or number < 1:
@@ -172,6 +193,8 @@ def synchronize(report: dict, run_url: str, api: GitHubIssues) -> dict:
         payload['state'] = 'closed'
     elif action != 'UPDATE_ALERT_SET':
         raise ValueError('unsupported issue state transition')
+    # Deliberately leave assignees unchanged after creation: a maintainer can
+    # opt out by unassigning themselves; repeated SLO polls must not override it.
     api.request('PATCH', f'/repos/{REPOSITORY}/issues/{number}', payload)
     return {'action': action, 'issue_number': number}
 
