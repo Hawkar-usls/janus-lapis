@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import copy
 import datetime as dt
+import hashlib
 import json
 import re
 import urllib.error
@@ -31,6 +32,10 @@ HOME_COMMIT_URL = ('https://api.github.com/repos/Hawkar-usls/Janus_Genesis/commi
                    'path=state%2Fhabitat_cloud_home%2FSTATE.json&per_page=1')
 QUEUE_ROOT = ('https://raw.githubusercontent.com/Hawkar-usls/janus-lapis/'
               'beetle-state/data/beetle-state/mirrors')
+HOME_RECEIPT_ROOT = ('https://raw.githubusercontent.com/Hawkar-usls/Janus_Genesis/'
+                     'janus/habitat-cloud-state/')
+RECEIPT_PATH = re.compile(
+    r'state/habitat_cloud_home/receipts/([0-9]{8})-([1-9][0-9]*)-([1-9][0-9]*)\.json\Z')
 
 
 def fetch_json(url: str, max_bytes: int = 500_000):
@@ -43,6 +48,87 @@ def fetch_json(url: str, max_bytes: int = 500_000):
     if len(raw) > max_bytes:
         raise ValueError('telemetry payload exceeds limit')
     return json.loads(raw)
+
+
+def fetch_receipt_bytes(url: str, max_bytes: int = 100_000) -> bytes:
+    request = urllib.request.Request(url, headers={
+        'User-Agent': 'JANUS-Beetle-HOME-SLO/1',
+        'Accept': 'application/octet-stream',
+    })
+    with urllib.request.urlopen(request, timeout=20) as response:
+        raw = response.read(max_bytes + 1)
+    if not raw or len(raw) > max_bytes:
+        raise ValueError('HOME receipt missing or oversized')
+    return raw
+
+
+def receipt_url(home: dict) -> str:
+    """Confine the fetched receipt to the state's expected durable branch path."""
+    if not isinstance(home, dict):
+        raise ValueError('invalid HOME state for receipt lookup')
+    path = home.get('checkpoint_head')
+    match = RECEIPT_PATH.fullmatch(path) if isinstance(path, str) else None
+    if not match or path != home.get('handoff_head'):
+        raise ValueError('untrusted HOME receipt path')
+    if type(home.get('sequence')) is not int or int(match.group(1)) != home['sequence']:
+        raise ValueError('HOME receipt path sequence disagreement')
+    if match.group(2) != home.get('last_run_id'):
+        raise ValueError('HOME receipt path run disagreement')
+    return HOME_RECEIPT_ROOT + path
+
+
+def verify_receipt(home: dict, raw: bytes) -> list[str]:
+    """Independently prove that the published HOME pointer has coherent bytes.
+
+    A fetched hash or provenance mismatch is positive evidence of an inconsistent
+    durable checkpoint (ALERT). Network/read failures cannot prove that (UNKNOWN).
+    """
+    expected = home.get('last_receipt_sha256')
+    if not isinstance(expected, str) or not re.fullmatch(r'[0-9a-f]{64}', expected):
+        raise ValueError('invalid HOME receipt SHA256 declaration')
+    if hashlib.sha256(raw).hexdigest() != expected:
+        return ['GENESIS_HOME_RECEIPT_SHA256_MISMATCH']
+    try:
+        receipt = json.loads(raw)
+    except (ValueError, UnicodeError):
+        return ['GENESIS_HOME_RECEIPT_INVALID_JSON']
+    if not isinstance(receipt, dict):
+        return ['GENESIS_HOME_RECEIPT_INVALID_JSON']
+    guards = ('pc_dependency_observed', 'remote_desktop_dependency_observed',
+              'nas_dependency_observed', 'hidden_session_context_used',
+              'source_writeback_observed', 'destructive_action')
+    if (type(receipt.get('authority_delta')) is not int or
+        receipt['authority_delta'] != 0 or
+        any(receipt.get(guard) is not False for guard in guards) or
+        receipt.get('execute_status') != 'CHECKPOINT_ONLY' or
+        receipt.get('load_status') != 'CONTEXT_STAGED_NOT_MODEL_LOADED'):
+        return ['GENESIS_HOME_RECEIPT_AUTHORITY_GUARD']
+    fields = {
+        'schema': 'JANUS_HABITAT_CLOUD_HOME_RECEIPT_V1',
+        'state_id': home.get('state_id'),
+        'sequence': home.get('sequence'),
+        'run_id': home.get('last_run_id'),
+        'event': home.get('last_event'),
+        'worker': home.get('last_worker'),
+        'source_main_sha': home.get('source_main_sha'),
+        'resident_identity': home.get('durable_identity'),
+        'beetle_memory': home.get('beetle_memory'),
+    }
+    event_id = (f'{home.get("last_run_id")}:{receipt.get("run_attempt")}:'
+                f'{home.get("last_event")}:{home.get("source_main_sha")}:'
+                f'{home.get("sequence")}')
+    match = RECEIPT_PATH.fullmatch(home.get('checkpoint_head', ''))
+    if (any(receipt.get(field) != value for field, value in fields.items()) or
+        type(receipt.get('sequence')) is not int or
+        type(receipt.get('run_attempt')) is not int or
+        receipt['run_attempt'] < 1 or
+        match is None or str(receipt['run_attempt']) != match.group(3) or
+        receipt.get('event_id') != event_id or
+        receipt.get('dedupe_key') != hashlib.sha256(event_id.encode()).hexdigest() or
+        receipt.get('admission_status') != 'ADMITTED_BOUNDED_CLOUD_HOME_TICK' or
+        receipt.get('parse_status') != 'PARSED'):
+        return ['GENESIS_HOME_RECEIPT_STATE_MISMATCH']
+    return []
 
 
 def elapsed_minutes(value: str, now: dt.datetime) -> float:
@@ -220,6 +306,15 @@ def main(now: dt.datetime | None = None) -> int:
         result = evaluate(*values, now or dt.datetime.now(dt.timezone.utc),
                           max_heartbeat_minutes=args.max_heartbeat_minutes,
                           max_genesis_lag_minutes=args.max_genesis_lag_minutes)
+        # A recent state commit is not evidence that its advertised receipt is
+        # present and byte-for-byte consistent. Read the pinned path directly.
+        receipt = fetch_receipt_bytes(receipt_url(values[1]))
+        receipt_alerts = verify_receipt(values[1], receipt)
+        result['alerts'].extend(receipt_alerts)
+        if receipt_alerts:
+            result['status'] = 'ALERT'
+        result['metrics']['home_receipt_integrity'] = (
+            'FAIL' if receipt_alerts else 'PASS')
         result['metrics']['live_rechecked_recipients'] = len(
             values[0]['live_rechecked_recipients'])
     except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError) as exc:
