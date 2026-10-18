@@ -8,7 +8,7 @@ import tempfile
 import unittest
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / 'tools'))
-from beetle_incident_issues import (AUTO_START, MARKER, TITLE,
+from beetle_incident_issues import (AUTO_START, INCIDENT_ASSIGNEE, MARKER, TITLE,
                                     choose_issue, decide, parse_report,
                                     replace_block, synchronize)
 
@@ -36,7 +36,8 @@ class FakeGitHubIssues:
         self.calls.append((method, path, copy.deepcopy(payload)))
         if method == 'POST':
             issue = {'number': 17, 'state': 'open', 'title': payload['title'],
-                     'body': payload['body']}
+                     'body': payload['body'],
+                     'assignees': [{'login': name} for name in payload.get('assignees', [])]}
             self.issues.append(issue)
             return copy.deepcopy(issue)
         if method == 'PATCH':
@@ -56,10 +57,33 @@ class IssueLedgerTests(unittest.TestCase):
         self.assertEqual(first, {'action': 'CREATE', 'issue_number': 17})
         self.assertEqual(self.api.issues[0]['title'], TITLE)
         self.assertIn(MARKER, self.api.issues[0]['body'])
+        self.assertEqual(self.api.calls[0][2]['assignees'], [INCIDENT_ASSIGNEE])
+        self.assertEqual(self.api.issues[0]['assignees'],
+                         [{'login': INCIDENT_ASSIGNEE}])
         before = len(self.api.calls)
         duplicate = synchronize(report(), RUN, self.api)
         self.assertEqual(duplicate['action'], 'REPEAT_NO_WRITE')
         self.assertEqual(len(self.api.calls), before)
+
+    def test_human_unassignment_is_not_overridden_by_later_alerts(self):
+        synchronize(report(), RUN, self.api)
+        self.api.issues[0]['assignees'] = []
+        self.assertEqual(synchronize(report(), RUN, self.api)['action'],
+                         'REPEAT_NO_WRITE')
+        synchronize(report(alerts=['GENESIS_HOME_CHECKPOINT_STALE']), RUN, self.api)
+        self.assertNotIn('assignees', self.api.calls[-1][2])
+        self.assertEqual(self.api.issues[0]['assignees'], [])
+
+    def test_create_fails_visibly_when_assignment_is_silently_dropped(self):
+        class DropsAssignees(FakeGitHubIssues):
+            def request(self, method, path, payload=None):
+                issue = super().request(method, path, payload)
+                if method == 'POST':
+                    issue['assignees'] = []
+                return issue
+
+        with self.assertRaisesRegex(ValueError, 'did not assign'):
+            synchronize(report(), RUN, DropsAssignees())
 
     def test_distinct_alert_set_updates_instead_of_new_issue(self):
         synchronize(report(), RUN, self.api)
