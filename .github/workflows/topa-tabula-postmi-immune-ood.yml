@@ -1,0 +1,44 @@
+name: TOPA frozen Tabula classifier immune OOD negative control
+on:
+  push:
+    branches: [LONGEVITY-SURVIVOR]
+    paths:
+      - .github/workflows/topa-tabula-postmi-immune-ood.yml
+      - longevity-survivor/tools/topa_tabula_immune_ood_negative_control.py
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  immune-ood:
+    runs-on: ubuntu-latest
+    timeout-minutes: 36
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install reproducible classifier tools
+        run: python -m pip install --disable-pip-version-check 'numpy<2' 'scipy<1.15' 'scikit-learn<1.6'
+      - name: Load source Chen fixture to reconstruct frozen reference feature universe
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p prior
+          gh run download 39026401715 --repo "${{ github.repository }}" --name topa-pd1-geo-zenodo-verified-public-bytes --dir prior
+          test -f prior/topa_pd1_acquisition/manifest.json
+      - name: Evaluate nonimmune classifier on immune reference markers
+        shell: bash
+        run: |
+          set -o pipefail
+          TOPA_PD1_ROOT=prior/topa_pd1_acquisition TOPA_ATLAS_OUT=topa_tabula_source TOPA_IMMUNE_OOD_OUT=topa_immune_ood python longevity-survivor/tools/topa_tabula_immune_ood_negative_control.py 2>&1 | tee topa_immune_ood.log
+      - name: Preserve four-class acceptance rates under independent immune OOD shift
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-tabula-postmi-cd45-immune-ood-negative-control
+          path: |
+            topa_immune_ood/report.json
+            topa_immune_ood.log
+          if-no-files-found: warn
+          retention-days: 21
