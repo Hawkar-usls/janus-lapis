@@ -1,5 +1,5 @@
 {
-  "batch_id": "716162fa2852395eec8a",
+  "batch_id": "3202303d44deec4a3188",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -763,6 +763,38 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "ab367f1d602d7b8198bbb375",
+      "context_id": "c37e3a04bcaca2a9187ed0a7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "d6117883b361635c702c9eb716f6e4584c6a66be25855cf3b2f2b6954b208298",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "Highlights Processing Squeak pipeline: detect-usv-squeaks classifies USV / squeak / overlap with squeak extents; squeaks are embedded in their own squeak QLVM ( infer-qlvm-squeak-latents ); a squeak spectrogram store backs the explorer's Squeaks map. QLVM training ported into the package ( train-qlvm , build-qlvm-training-set , build-qlvm-squeak-training-set ); conditional maps (duration, entropy, bandwidth, loudness); content-ridge QLVM categories ( build-qlvm-categories , assign-qlvm-categories ). Noise model retrained on the broadband memmap ( train-noise-model ); broadband line-noise filter step; absolute loudness_db in the USV summary. QLVM training and evaluation sets exclude the union of noise, the squeak flag and the reference strict squeak list ( squeak_exclusion_source: &quot;union&quot; ); single-session recording types go to training. Robustness: files that later steps read back are written atomically; subprocess failures and timeouts raise; ambiguous file matches are refused instead of silently taking the first; video concatenation always overwrites its output and copies a lone video into place. Analyses Vocal-bout occupancy decoding and bout-onset tuning per unit; neuronal tuning on every QLVM map. Inter-USV interval mixture tests: bootstrap p-values are (1 + k) / (B + 1); the tied peak-count LRT ladders its observed null; the session design effect resamples centred deltas; K=1 fits report their mode. Coactivity bootstrap subsamples trials without replacement ( bootstrap_subsample_fraction ). Modeling Vocal-class targets and predictors; B-spline lag basis with a lag-varying ridge; bout-offset target. Manifold selection gates the first feature against a training-fold intercept-only predictor and screens features with an exact sign-flip test over 20 folds ( manifold_n_cv_folds ). Behavioural-response silence controls reject windows touching any vocalization; onset negatives need the same clean history as positives. GLM-HMM: final EM log-likelihood, exact BIC parameter counts, fixed label set across folds. Neural modeling (new package) Kinematic encoding, behaviour control, vocal occurrence / gating / decoding, nested and category decoding, quiet-to-vocal transfer and shift-null inference. Visualizations, GUI, notebooks QLVM overview, map-quality and category figures, property-sweep and torus traversal videos, vocal-pose still and video, bout-decoding figure. Every figure and analysis tunable lives in the settings JSON and is documented; notebooks load imports in cell 1 and settings in cell 2. Code quality ruff clean across src and tests; every test documented; the full suite passes. Breaking changes Settings: many new keys; removed generate_spectrograms.noverlap ; strict_squeak_exclusion replaced by squeak_exclusion_source ; vocal_window value during_call renamed during_vocalization ; model-selection dispatcher no longer takes --pval / --target_variable (read from settings); --frame-restriction takes FIRST LAST. Stored keys renamed with legacy readers: call_type -&gt; vocal_class , n_calls -&gt; n_vocalizations . root_directory is required by the processing classes; first_match_or_raise raises on more than one match. Results to recompute Inter-USV interval archives and K selections; manifold selections and univariate manifold runs (20 folds); onset, behavioural-response and matched-divergence extractions; coactivity results; GLM-HMM log-likelihood/BIC columns; the behaviour-control artifact and nested decoding; gating and vocal-decoding sections; QLVM training sets built with the old exclusion; summaries built with the consensus remerge ( chs_count ).",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "bartulem/usv-playpen: v0.13.0",
+      "url": "https://zenodo.org/records/23460305"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "d9dfefdbdf1288a759e5e0fb",
       "context_id": "be5da9beaf89c8eb4411b5c2",
       "delivery_preview_only": true,
@@ -867,38 +899,6 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "Technical proofs and failure-boundary archive for action-qualified scientific computation — Round8",
       "url": "https://zenodo.org/records/23444284"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "2335a8cb4fd99fc35c03216a",
-      "context_id": "81b3f58913d8f1dfac28dc05",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "98a1a71063b10d6ee743dfe0da4527e4ff7b5d8a86081cec1b055bb726dc8c4e",
-      "source_published": "2026-10-17",
-      "source_updated": "",
-      "summary": "This report establishes an exact conditional mathematical correspondence between a specified two-component phase model and the sine-Gordon equation appearing in a classical string-theory reduction. Developed within the Harmonic Physics Research Programme, the model uses interacting phase components labelled expansion and contraction in the proposed physical interpretation. For a continuum action with a cosine interaction, constant coefficients and equal component propagation speeds, an invertible change of variables separates the dynamics into an exact nonlinear sine-Gordon equation for the normalized relative phase and a free wave equation for the common phase. The interaction potential can also be expressed through the squared magnitude of the difference between two complex phase components. The derivation retains the full nonlinearity, extending the correspondence beyond the small-angle approximation. Direct numerical evolution of the original component fields provides a reproducible check at finite relative-phase amplitude. The reported breather benchmark reaches a peak relative-phase excursion of approximately 2.574 radians, with a maximum sampled error of approximately 6.3 &times; 10⁻⁹ radians over two oscillation periods. Component amplitudes remain fixed. Interaction-removal and unequal-speed controls document the failure to recover the same target when the specified conditions are changed. The string-theory connection is examined through the Pohlmeyer reduction of classical strings on R_t &times; S&sup2;. A separate conventional kink embedding is checked against the local geometric constraints and string equations of motion. The evolved phase breather is not reconstructed as a string. The established result is a conditional correspondence between reduced classical equations; a full physical or quantum equivalence between the proposed phase model and string theory remains unestablished. Version 1.0 includes the standalone report and an accompanying reproducibility archive containing mathematical derivations, executable Python scripts, numerical settings, sampled synthetic data, control results, figures, source provenance, checksum manifests and reproduction instructions. A documented replay of the retained calculation and an AI-assisted computational audit support inspection and reuse of the reported results. Author: Lisa Doumbouya &nbsp; Research programme: Harmonic Physics Research Programme keywords: String theory; Sine-Gordon equation; Pohlmeyer reduction; Classical strings; Phase dynamics; Coupled phase fields; Relative phase; Cosine interaction; Breather solutions; Solitons; Nonlinear dynamics; Expansion and contraction; Computational reproducibility; Phase theory; Harmonic Physics",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "String Theory and Phase Dynamics: An Exact Conditional Sine-Gordon Correspondence",
-      "url": "https://zenodo.org/records/23435628"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1052,6 +1052,39 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "e1269449c34dae592857180b",
+      "context_id": "5ac87e6029f36996f25dd118",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "zenodo",
+      "source_context_sha256": "e6e2007a45388f65dc0238301d93e8e822708c53efe1e5302cd85d0b91e36859",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Space Semiconductor Fabrication and Starship Nanofoundries at the Limit English Description and Research Position This research monograph asks which semiconductor unit processes could achieve a defensible mission advantage in microgravity, vacuum, radiation, remote-operation, and closed-resource environments. It does not assume that a complete advanced fab can operate in space. Instead, it compares crystal growth, deposition, etching, lithography, metrology, bonding, packaging, repair, and recycling against ground manufacture plus transport, launched spares, on-orbit packaging, and local repair. Every claimed advantage must survive matched controls, full functional qualification, and explicit mass, energy, heat, crew, contamination, maintenance, waste, and return ledgers. The volume contains 82 chapters with five research sections per chapter, 30 linked formula derivations, 200 detailed Research Gates, DOI-anchored references, and a formula-chapter-experiment-Gate crosswalk. Its central contribution is a mission-scale evidence architecture that connects process physics to contained workcells, independent metrology, safe autonomy, repair, return, circular resources, cross-platform reproduction, and successor reconstruction. Safety and irreversible environmental harm operate as hard vetoes rather than compensable score components. The literature base includes peer-reviewed DOI sources on microgravity semiconductor growth, in-space manufacturing, additive nanomanufacturing, atomic-layer processing, radiation effects, lunar resource extraction, digital twins, autonomous laboratories, and reproducible science. Recent orbital results are treated as early evidence for specific mechanisms, not as confirmation of a complete space foundry. Core research question Under what physical and mission conditions can a semiconductor unit process performed in space outperform ground manufacture plus transport or a narrower in-space alternative while preserving safety, resource closure, qualification, and independent reconstruction? Research architecture &bull; Space-specific process advantage and strongest comparator &bull; Environmental physics and bounded process window &bull; Closed mass energy heat contamination and evidence ledgers &bull; Autonomy safeing repair return and independent qualification &bull; Cross-platform reproduction successor rebuild and retirement Recommended citation note This is an exploratory research architecture. Candidate equations are measurement and mission-decision instruments, not universal laws. Empirical use requires process-specific units, preregistration, matched controls, aerospace and semiconductor expertise, independent qualification, and cross-platform replication.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Space Semiconductor Fabrication and Starship Nanofoundries at the Limit English Description and Research Position This research monograph asks which semiconductor unit processes could achieve a defensible mission advantage in microgravity, vacuum, radiation, remote-operation, and closed-resource env",
+      "url": "https://zenodo.org/records/23460271"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "62cbddfbb95b7f58d877d6dd",
       "context_id": "2bfbd6f39f4f80a825436f21",
       "delivery_preview_only": true,
@@ -1084,6 +1117,45 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "A7A5 pilot data and model replication files for Bans versus Controlled Access",
       "url": "https://zenodo.org/records/23444486"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "4dc5238782bc042a14d96c32",
+      "context_id": "231566394d3c63394ad476ed",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "zenodo",
+      "source_context_sha256": "4779cbd3f352ee40b15b3b9d86e176e0c01c14d86d5f82bd69ee62629b249e69",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "This computational package accompanies the Neuro-Symbolic MAPE-K governance testbed for agentic retrieval-augmented generation at the edge. It provides Python source, experimental inputs, measured outputs, provenance manifests, analysis tables, figures and readable evidence reports for two related campaigns: the October 2026 MAPE-K controller campaign and the separate 18 October 2026 dense-retriever control campaign. The retriever control records 3,744 retrieval trials and 640 clean-validation query evaluations across sparse, pretrained dense and clean-fitted dense retrievers. It performs no new generator or controller evaluation. The package preserves campaign-specific directory layouts and historical execution records. A dependency-light deterministic template smoke test supports inspection without language-model downloads or CUDA. Full inference and fitting used NVIDIA Jetson Xavier NX 8 GB and platform-specific CUDA/PyTorch environments. Original host paths and observed package inventories are provenance records, not a universal portable lockfile; full main-campaign model weights are referenced by revision and checksum, while the retriever campaign includes its pretrained and clean-fitted checkpoints. A release verifier checks the curated file manifest and metadata. The original retrieval verifier also requires original source paths for its final host-specific integrity checks. Original project software is MIT licensed (SPDX: MIT), with collective copyright held by the MAPE-K contributors. Third-party terms remain applicable: O*NET 31.0 and UCI Adult-derived data and fixtures are CC BY 4.0 with attribution and modification notices; MiniLM model material and its clean-fitted derivative are Apache-2.0; BGE model material and its clean-fitted derivative are MIT with upstream attribution. File-specific notices, exact model revisions and checksums are retained. Experimental counts reuse base profiles and should not be interpreted as independent efficacy replications. The evidence does not establish population fairness, human-validated answer-quality superiority, or a guarantee of safe retrieved evidence.",
+      "tags": [
+        "MAPE-K",
+        "neuro-symbolic AI",
+        "agentic RAG",
+        "edge AI",
+        "computational reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Neuro-Symbolic MAPE-K: Computational Package and Retriever Control",
+      "url": "https://zenodo.org/records/23459940"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1740,83 +1812,6 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "Single-photon imaging is evidence of the possibility of mass traveling at the speed of light.",
       "url": "https://zenodo.org/records/23457949"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "3ba7b1c0808387bab9c18b6a",
-      "context_id": "a39f226f35d9fe26bdeb0b9b",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "zenodo",
-      "source_context_sha256": "0ed6b4b4d8c67708ef6741bbee5ee7663b9b576ab58dd824b54e36ee46dfbe18",
-      "source_published": "2026-10-16",
-      "source_updated": "",
-      "summary": "Hashing, signing, and timestamping establish that a document has not changed. When a legal document is produced by composition, from templates, clause libraries, shared definitions, and parameters that evolve independently, the governing text is a resolved state, and the integrity of the root document does not ensure that this state can be reconstructed. We treat this as a problem of ex post auditability. We define the resolved state as S_t = &rho;(A_0, R_t, C_t), derive five properties of its auditability from requirements established in archival science, legal document standards, and norm-change formalisms, and introduce a capture model K_t with a diagnostic procedure that reports which properties a capture fails. We implement the framework in cmacc-attest and apply it to the 175 instantiated contracts of the CommonAccord library. References resolve in 96.6% of contracts, yet none is auditable: no reference is version-locked, and 98.3% contain conflicts settled by an unattested precedence order. Replaying 194 commits of the library history shows that 88.5% of the changes in resolved contracts left the root file unchanged. Repository history narrows reconstruction when the time of resolution is known, but does not replace a capture.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Beyond Document Integrity: Auditing Resolved States of Formalized Legal Documents",
-      "url": "https://zenodo.org/records/23443043"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "8f43b827e5f36f0f50846f2b",
-      "context_id": "a214777583dc02e11d8f1417",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "zenodo",
-      "source_context_sha256": "1328f8e32739f0fe86814e37ce7f5d9ac27e698417bbf2af68afc6985587d310",
-      "source_published": "2026-10-17",
-      "source_updated": "",
-      "summary": "This replication package accompanies the paper \"An Exploratory Evaluation of Targeted Label Poisoning in a Client-Local Feature Federated Ensemble for Chest X-Ray Classification.\" It contains code and saved experimental results for an exploratory study of Pneumonia-to-Normal label poisoning in four-class chest X-ray classification. The study uses 20,795 images from three public sources, with 20,557 perceptual groups kept intact across experimental partitions. The package covers 212 completed training jobs, including main and component comparisons, classifier-head sensitivity, image-model references, candidate probability banks, and earlier-poisoning experiments. The main comparisons and image-model references use ten deterministic seeds. The classifier-head and GRU-structure study uses three seeds. Included materials comprise dataset manifests and image checksums, perceptual-group metadata, split assignments, seeds and configurations, held-out predictions, candidate probabilities, numerical summaries, result figures, analysis and verification scripts, and scientific execution-source snapshots. Additional fixed-model analyses examine validation availability, validation-label contamination, and artifact retention. The README and reproducibility guide explain verification, reanalysis, environment requirements, and dataset reconstruction. Dataset images and model checkpoints are not included. Obtain the source images separately under their applicable access and use terms: COVID-19 Radiography Database: https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database COVID19, Pneumonia, Normal Chest X-ray Images: https://www.kaggle.com/datasets/sachinkumar413/covid-pneumonia-normal-chest-xray-images Tuberculosis Chest X-ray Dataset: https://www.kaggle.com/datasets/tawsifurrahman/tuberculosis-tb-chest-xray-dataset The included metadata identify the exact study images for reconstruction from the original source bytes. Saved results can be checked without source images or retraining. The attack direction was selected exploratorily, perceptual grouping does not establish patient independence, and source-held-out generalization was not evaluated. Reuse rights are described in LICENSE_STATUS.txt. This work was supported by the Deanship of Scientific Research (DSR) at King Abdulaziz University, Jeddah, Saudi Arabia, under grant No. IPP: 455-611-2026.",
-      "tags": [
-        "federated learning",
-        "chest X-ray classification",
-        "medical imaging",
-        "data poisoning",
-        "targeted label poisoning",
-        "label flipping",
-        "replication package",
-        "reproducibility",
-        "client-local feature ensemble",
-        "ResNet18",
-        "GRU",
-        "validation sensitivity"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Replication Package for: An Exploratory Evaluation of Targeted Label Poisoning in a Client-Local Feature Federated Ensemble for Chest X-Ray Classification",
-      "url": "https://zenodo.org/records/23441636"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
