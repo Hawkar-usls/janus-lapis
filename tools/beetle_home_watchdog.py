@@ -8,10 +8,14 @@ never changes a repository, authorizes research claims, or advances an ACK.
 from __future__ import annotations
 
 import argparse
+import copy
 import datetime as dt
 import json
 import re
+import urllib.error
 import urllib.request
+
+from beetle_delivery_health import inspect_queue
 
 
 HEALTH_URL = ('https://raw.githubusercontent.com/Hawkar-usls/janus-lapis/'
@@ -25,6 +29,8 @@ ACK_URL = ('https://raw.githubusercontent.com/Hawkar-usls/Janus_Genesis/'
 HOME_COMMIT_URL = ('https://api.github.com/repos/Hawkar-usls/Janus_Genesis/commits'
                    '?sha=janus%2Fhabitat-cloud-state&'
                    'path=state%2Fhabitat_cloud_home%2FSTATE.json&per_page=1')
+QUEUE_ROOT = ('https://raw.githubusercontent.com/Hawkar-usls/janus-lapis/'
+              'beetle-state/data/beetle-state/mirrors')
 
 
 def fetch_json(url: str, max_bytes: int = 500_000):
@@ -49,6 +55,53 @@ def elapsed_minutes(value: str, now: dt.datetime) -> float:
     if minutes < -10:
         raise ValueError('telemetry timestamp unexpectedly in future')
     return max(0.0, minutes)
+
+
+def reconcile_stale(health: dict, now: dt.datetime, fetcher=fetch_json) -> dict:
+    """Recheck alerts against live ACKs; producer/receiver cron can race.
+
+    The producer can persist its health report seconds *before* a receiver's
+    atomic inbox+ACK push.  Re-evaluate only suspect recipients from the
+    immutable sender queue, never trust a newer ACK without matching its hash.
+    """
+    result = copy.deepcopy(health)
+    rows = result.get('repositories')
+    if not isinstance(rows, dict):
+        raise ValueError('missing delivery health rows')
+    rechecked = []
+    for repo, old in rows.items():
+        if not isinstance(old, dict) or old.get('status') not in ('STALE', 'ACK_CONFLICT'):
+            continue
+        if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repo):
+            raise ValueError('invalid recipient identity')
+        slug = repo.replace('/', '__')
+        queue = fetcher(f'{QUEUE_ROOT}/{slug}/delivery.json', 32_000_000)
+        if (not isinstance(queue, dict) or queue.get('target_repository') != repo or
+            not isinstance(queue.get('entries'), list) or
+            type(old.get('produced')) is not int or
+            len(queue['entries']) < old['produced']):
+            raise ValueError(f'{repo}: sender queue changed unexpectedly')
+        error = None
+        try:
+            ack = fetcher(f'https://raw.githubusercontent.com/{repo}/'
+                          'beetle-memory/data/beetle-inbox/ACK.json', 100_000)
+        except urllib.error.HTTPError as exc:
+            if exc.code != 404:
+                raise
+            ack, error = None, 'NO_ACK'
+        if ack is not None and (not isinstance(ack, dict) or
+                                ack.get('scientific_authority_delta') != 0):
+            live = {'status': 'ACK_CONFLICT', 'produced': len(queue['entries']),
+                    'confirmed': 0, 'pending': len(queue['entries']),
+                    'reason': 'receiver ACK authority guard invalid'}
+        else:
+            live = inspect_queue(queue, ack, error, now, stale_minutes=180)
+        rows[repo] = live
+        rechecked.append(repo)
+    if rechecked:
+        result['total_pending'] = sum(row['pending'] for row in rows.values())
+    result['live_rechecked_recipients'] = rechecked
+    return result
 
 
 def evaluate(health: dict, home: dict, cursor: dict, ack: dict,
@@ -163,9 +216,12 @@ def main(now: dt.datetime | None = None) -> int:
     sources = [HEALTH_URL, STATE_URL, CURSOR_URL, ACK_URL, HOME_COMMIT_URL]
     try:
         values = [fetch_json(url) for url in sources]
+        values[0] = reconcile_stale(values[0], now or dt.datetime.now(dt.timezone.utc))
         result = evaluate(*values, now or dt.datetime.now(dt.timezone.utc),
                           max_heartbeat_minutes=args.max_heartbeat_minutes,
                           max_genesis_lag_minutes=args.max_genesis_lag_minutes)
+        result['metrics']['live_rechecked_recipients'] = len(
+            values[0]['live_rechecked_recipients'])
     except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError) as exc:
         # A transport error cannot establish a delivery failure; flag separately.
         print(json.dumps({'schema': 'janus.beetle_home_watchdog.v1', 'status': 'UNKNOWN',

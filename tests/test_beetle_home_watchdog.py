@@ -11,7 +11,7 @@ import unittest
 from unittest import mock
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / 'tools'))
-from beetle_home_watchdog import evaluate, elapsed_minutes, main
+from beetle_home_watchdog import evaluate, elapsed_minutes, main, reconcile_stale
 
 
 NOW = dt.datetime(2026, 10, 17, 23, 0, tzinfo=dt.timezone.utc)
@@ -104,6 +104,71 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
             status='STALE', produced=3, confirmed=2, pending=1))
         sources[0]['total_pending'] = 2
         self.assertIn('Hawkar-usls/Echo-Pyramid: STALE', self.check(sources)['alerts'])
+
+    def stale_snapshot_and_live_queue(self, *, correct_ack=True):
+        health = copy.deepcopy(self.sources[0])
+        health['repositories']['Hawkar-usls/Echo-Pyramid'].update(
+            status='STALE', produced=2, confirmed=1, pending=1,
+            oldest_pending_minutes=240)
+        health['total_pending'] = 2
+        queue = {'schema': 'janus.beetle.delivery_queue.v1',
+                 'target_repository': 'Hawkar-usls/Echo-Pyramid',
+                 'next_sequence': 3,
+                 'entries': [
+                     {'sequence': 1, 'batch_id': 'a' * 20, 'sha256': 'a' * 64,
+                      'created_at': '2026-10-17T17:00:00Z'},
+                     {'sequence': 2, 'batch_id': 'b' * 20, 'sha256': 'b' * 64,
+                      'created_at': '2026-10-17T18:00:00Z'},
+                 ]}
+        ack = {'schema': 'janus.beetle.inbox_ack.v1',
+               'target_repository': 'Hawkar-usls/Echo-Pyramid',
+               'status': 'INBOX_DURABLE_UNVERIFIED__NOT_RUNTIME_CONSUMPTION',
+               'last_sequence': 2 if correct_ack else 1,
+               'batch_id': 'b' * 20 if correct_ack else 'a' * 20,
+               'sha256': 'b' * 64 if correct_ack else 'a' * 64,
+               'scientific_authority_delta': 0,
+               'acknowledged_at': '2026-10-17T22:55:00Z'}
+        return health, queue, ack
+
+    def test_live_ack_resolves_cron_race_without_faking_progress(self):
+        health, queue, ack = self.stale_snapshot_and_live_queue()
+        fetch = mock.Mock(side_effect=[queue, ack])
+        current = reconcile_stale(health, NOW, fetcher=fetch)
+        self.assertEqual(current['repositories']['Hawkar-usls/Echo-Pyramid']['status'],
+                         'UP_TO_DATE')
+        self.assertEqual(current['total_pending'], 1)
+        self.assertEqual(current['live_rechecked_recipients'], ['Hawkar-usls/Echo-Pyramid'])
+        self.assertEqual(health['repositories']['Hawkar-usls/Echo-Pyramid']['status'], 'STALE')
+        sources = [current, *self.sources[1:]]
+        self.assertEqual(self.check(sources)['status'], 'PASS')
+        self.assertEqual(fetch.call_count, 2)
+
+    def test_live_old_ack_does_not_suppress_real_stale_alert(self):
+        health, queue, ack = self.stale_snapshot_and_live_queue(correct_ack=False)
+        current = reconcile_stale(health, NOW, fetcher=mock.Mock(side_effect=[queue, ack]))
+        self.assertEqual(current['repositories']['Hawkar-usls/Echo-Pyramid']['status'], 'STALE')
+        self.assertIn('Hawkar-usls/Echo-Pyramid: STALE',
+                      self.check([current, *self.sources[1:]])['alerts'])
+
+    def test_live_mismatched_ack_sha_fails_conflict_not_silent_clear(self):
+        health, queue, ack = self.stale_snapshot_and_live_queue()
+        ack['sha256'] = 'f' * 64
+        current = reconcile_stale(health, NOW, fetcher=mock.Mock(side_effect=[queue, ack]))
+        self.assertEqual(current['repositories']['Hawkar-usls/Echo-Pyramid']['status'],
+                         'ACK_CONFLICT')
+
+    def test_live_authority_claim_cannot_clear_old_alarm(self):
+        health, queue, ack = self.stale_snapshot_and_live_queue()
+        ack['scientific_authority_delta'] = 1
+        current = reconcile_stale(health, NOW, fetcher=mock.Mock(side_effect=[queue, ack]))
+        self.assertEqual(current['repositories']['Hawkar-usls/Echo-Pyramid']['status'],
+                         'ACK_CONFLICT')
+
+    def test_no_suspected_lag_never_makes_extra_requests(self):
+        fetch = mock.Mock(side_effect=AssertionError('unexpected network request'))
+        current = reconcile_stale(self.sources[0], NOW, fetcher=fetch)
+        self.assertEqual(current['live_rechecked_recipients'], [])
+        fetch.assert_not_called()
 
     def test_conflicting_ack_triggers_alarm(self):
         sources = self.mutate(0, lambda h: h['repositories']['Hawkar-usls/Janus_Genesis'].update(
