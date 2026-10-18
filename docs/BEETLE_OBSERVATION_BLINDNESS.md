@@ -29,6 +29,21 @@ Untrusted PR runs cannot write public incidents. Machine updates preserve human
 notes and leave human-edited assignees alone. Native GitHub/email notifications
 depend on the assignee's GitHub notification preferences.
 
+## Independent durable receipt integrity
+
+The read-only watchdog also fetches the latest Genesis Cloud HOME receipt from
+the restricted path declared by `STATE.json`. It validates the path's sequence
+and run identity, compares the receipt's exact bytes against the SHA-256 stored
+in `STATE.json`, and cross-checks checkpoint identity, staged Beetle context,
+and the no-execution/no-external-effect guards. A demonstrable hash or receipt
+content contradiction is `ALERT` (`GENESIS_HOME_RECEIPT_*`), even when the
+checkpoint commit is recent. A GitHub read failure or unavailable receipt is
+`UNKNOWN`: it is not proof that the durable checkpoint was damaged.
+
+This is a *remote independent check* of the latest receipt. Genesis's own
+cloud-worker-B separately replays and hashes the cursor/context on each run;
+neither mechanism grants scientific or runtime authority to discovery packets.
+
 ## Important boundary
 
 The observer cannot detect GitHub Actions being completely disabled, an outage

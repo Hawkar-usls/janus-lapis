@@ -4,14 +4,17 @@ from __future__ import annotations
 import contextlib
 import copy
 import datetime as dt
+import hashlib
 import io
+import json
 import pathlib
 import sys
 import unittest
 from unittest import mock
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / 'tools'))
-from beetle_home_watchdog import evaluate, elapsed_minutes, main, reconcile_stale
+from beetle_home_watchdog import (evaluate, elapsed_minutes, main, receipt_url,
+                                  reconcile_stale, verify_receipt)
 
 
 NOW = dt.datetime(2026, 10, 17, 23, 0, tzinfo=dt.timezone.utc)
@@ -36,8 +39,13 @@ def sample():
     home = {
         'schema': 'JANUS_HABITAT_CLOUD_HOME_STATE_V1',
         'status': 'CLOUD_HOME_ACTIVE', 'sequence': 91, 'authority_delta': 0,
-        'checkpoint_head': 'state/habitat_cloud_home/receipts/00000091.json',
-        'handoff_head': 'state/habitat_cloud_home/receipts/00000091.json',
+        'checkpoint_head': 'state/habitat_cloud_home/receipts/00000091-123-1.json',
+        'handoff_head': 'state/habitat_cloud_home/receipts/00000091-123-1.json',
+        'last_run_id': '123', 'last_event': 'schedule',
+        'last_worker': 'github-actions:123:worker-a',
+        'source_main_sha': 'e' * 40,
+        'state_id': 'JANUS-HABITAT-CLOUD-HOME',
+        'durable_identity': 'JANUS_HABITAT_RESIDENT_V1',
         'beetle_memory': {
             'cursor_sequence': 6, 'context_sha256': 'a' * 64,
             'scientific_authority_delta': 0, 'command_authority': False,
@@ -58,6 +66,30 @@ def sample():
     }
     commits = [{'commit': {'committer': {'date': '2026-10-17T22:20:00Z'}}}]
     return health, home, cursor, ack, commits
+
+
+def sample_receipt(home):
+    event_id = (f'{home["last_run_id"]}:1:{home["last_event"]}:'
+                f'{home["source_main_sha"]}:{home["sequence"]}')
+    receipt = {
+        'schema': 'JANUS_HABITAT_CLOUD_HOME_RECEIPT_V1',
+        'state_id': home['state_id'], 'sequence': home['sequence'],
+        'run_id': home['last_run_id'], 'event': home['last_event'],
+        'worker': home['last_worker'], 'source_main_sha': home['source_main_sha'],
+        'resident_identity': home['durable_identity'],
+        'run_attempt': 1, 'event_id': event_id,
+        'dedupe_key': hashlib.sha256(event_id.encode()).hexdigest(),
+        'beetle_memory': home['beetle_memory'], 'authority_delta': 0,
+        'admission_status': 'ADMITTED_BOUNDED_CLOUD_HOME_TICK',
+        'parse_status': 'PARSED', 'execute_status': 'CHECKPOINT_ONLY',
+        'load_status': 'CONTEXT_STAGED_NOT_MODEL_LOADED',
+        'pc_dependency_observed': False, 'remote_desktop_dependency_observed': False,
+        'nas_dependency_observed': False, 'hidden_session_context_used': False,
+        'source_writeback_observed': False, 'destructive_action': False,
+    }
+    raw = (json.dumps(receipt, sort_keys=True) + '\n').encode()
+    home['last_receipt_sha256'] = hashlib.sha256(raw).hexdigest()
+    return receipt, raw
 
 
 class BeetleHomeWatchdogTests(unittest.TestCase):
@@ -195,6 +227,63 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'authority'):
             self.check(sources)
 
+    def test_home_receipt_sha_and_provenance_match(self):
+        home = self.sources[1]
+        _, raw = sample_receipt(home)
+        self.assertEqual(verify_receipt(home, raw), [])
+        self.assertTrue(receipt_url(home).endswith('/receipts/00000091-123-1.json'))
+
+    def test_home_receipt_hash_mismatch_is_confirmed_integrity_alert(self):
+        home = self.sources[1]
+        _, raw = sample_receipt(home)
+        self.assertEqual(verify_receipt(home, raw + b' '),
+                         ['GENESIS_HOME_RECEIPT_SHA256_MISMATCH'])
+
+    def test_home_receipt_matching_hash_but_wrong_state_is_alert(self):
+        home = self.sources[1]
+        receipt, _ = sample_receipt(home)
+        receipt['sequence'] = 90
+        raw = json.dumps(receipt).encode()
+        home['last_receipt_sha256'] = hashlib.sha256(raw).hexdigest()
+        self.assertEqual(verify_receipt(home, raw),
+                         ['GENESIS_HOME_RECEIPT_STATE_MISMATCH'])
+
+    def test_home_receipt_event_identity_is_bound_to_checkpoint(self):
+        home = self.sources[1]
+        receipt, _ = sample_receipt(home)
+        receipt['event_id'] = 'forged'
+        raw = json.dumps(receipt).encode()
+        home['last_receipt_sha256'] = hashlib.sha256(raw).hexdigest()
+        self.assertEqual(verify_receipt(home, raw),
+                         ['GENESIS_HOME_RECEIPT_STATE_MISMATCH'])
+
+    def test_home_receipt_authority_guard_is_alert(self):
+        home = self.sources[1]
+        receipt, _ = sample_receipt(home)
+        receipt['source_writeback_observed'] = True
+        raw = json.dumps(receipt).encode()
+        home['last_receipt_sha256'] = hashlib.sha256(raw).hexdigest()
+        self.assertEqual(verify_receipt(home, raw),
+                         ['GENESIS_HOME_RECEIPT_AUTHORITY_GUARD'])
+
+    def test_home_receipt_path_cannot_escape_expected_branch(self):
+        home = self.sources[1]
+        home['checkpoint_head'] = 'state/habitat_cloud_home/receipts/../STATE.json'
+        home['handoff_head'] = home['checkpoint_head']
+        with self.assertRaisesRegex(ValueError, 'untrusted HOME receipt path'):
+            receipt_url(home)
+
+    def test_home_receipt_path_sequence_and_run_id_are_bound(self):
+        home = self.sources[1]
+        home['checkpoint_head'] = 'state/habitat_cloud_home/receipts/00000092-123-1.json'
+        home['handoff_head'] = home['checkpoint_head']
+        with self.assertRaisesRegex(ValueError, 'sequence disagreement'):
+            receipt_url(home)
+        home['checkpoint_head'] = 'state/habitat_cloud_home/receipts/00000091-124-1.json'
+        home['handoff_head'] = home['checkpoint_head']
+        with self.assertRaisesRegex(ValueError, 'run disagreement'):
+            receipt_url(home)
+
     def test_tampered_pending_counts_rejected(self):
         sources = self.mutate(0, lambda h: h['repositories']['Hawkar-usls/Echo-Pyramid'].update(
             pending=True))
@@ -213,13 +302,38 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
         self.assertEqual(code, 2)
         self.assertIn('"status": "UNKNOWN"', output.getvalue())
 
+    def test_receipt_transport_failure_is_unknown_not_delivery_alert(self):
+        sources = self.sources
+        with mock.patch('beetle_home_watchdog.fetch_json', side_effect=sources), \
+                mock.patch('beetle_home_watchdog.fetch_receipt_bytes',
+                           side_effect=OSError('GitHub unavailable')):
+            with mock.patch.object(sys, 'argv', ['watch']):
+                with contextlib.redirect_stdout(io.StringIO()) as output:
+                    code = main(now=NOW)
+        self.assertEqual(code, 2)
+        self.assertIn('"status": "UNKNOWN"', output.getvalue())
+
     def test_alert_result_produces_nonzero_status(self):
         sources = self.mutate(0, lambda h: h.update(at='2026-10-17T18:00:00Z'))
-        with mock.patch('beetle_home_watchdog.fetch_json', side_effect=sources):
+        _, raw = sample_receipt(sources[1])
+        with mock.patch('beetle_home_watchdog.fetch_json', side_effect=sources), \
+                mock.patch('beetle_home_watchdog.fetch_receipt_bytes', return_value=raw):
             with mock.patch.object(sys, 'argv', ['watch']):
                 with contextlib.redirect_stdout(io.StringIO()):
                     code = main(now=NOW)
         self.assertEqual(code, 1)
+
+    def test_receipt_mismatch_turns_otherwise_pass_into_alert(self):
+        sources = copy.deepcopy(self.sources)
+        _, raw = sample_receipt(sources[1])
+        with mock.patch('beetle_home_watchdog.fetch_json', side_effect=sources), \
+                mock.patch('beetle_home_watchdog.fetch_receipt_bytes',
+                           return_value=raw + b'corrupted'):
+            with mock.patch.object(sys, 'argv', ['watch']):
+                with contextlib.redirect_stdout(io.StringIO()) as output:
+                    code = main(now=NOW)
+        self.assertEqual(code, 1)
+        self.assertIn('GENESIS_HOME_RECEIPT_SHA256_MISMATCH', output.getvalue())
 
 
 if __name__ == '__main__':
