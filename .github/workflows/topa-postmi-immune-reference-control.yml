@@ -1,0 +1,44 @@
+name: TOPA independent postMI immune atlas marker control
+on:
+  push:
+    branches: [LONGEVITY-SURVIVOR]
+    paths:
+      - .github/workflows/topa-postmi-immune-reference-control.yml
+      - longevity-survivor/tools/topa_postmi_immune_reference_control.py
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  external-immune:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install independent GEO matrix tools
+        run: python -m pip install --disable-pip-version-check 'numpy<2' 'scipy<1.15'
+      - name: Recover immutable source manifest and verify Chen matrices
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p prior
+          gh run download 39026401715 --repo "${{ github.repository }}" --name topa-pd1-geo-zenodo-verified-public-bytes --dir prior
+          test -f prior/topa_pd1_acquisition/manifest.json
+      - name: Cross-study independent CD45 sham / day7 MI 10X reference
+        shell: bash
+        run: |
+          set -o pipefail
+          TOPA_PD1_ROOT=prior/topa_pd1_acquisition TOPA_IMMUNE_OUT=topa_immune_reference python longevity-survivor/tools/topa_postmi_immune_reference_control.py 2>&1 | tee topa_postmi_immune.log
+      - name: Publish hashes, independent reference marker diagnostics and scientific limitations
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: topa-postmi-independent-immune-atlas-control
+          path: |
+            topa_immune_reference/report.json
+            topa_postmi_immune.log
+          if-no-files-found: warn
+          retention-days: 21
