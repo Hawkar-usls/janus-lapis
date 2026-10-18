@@ -1,5 +1,5 @@
 {
-  "batch_id": "43b4c27e96c5e81586ff",
+  "batch_id": "78ba1153f00e5d11a1dd",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -954,6 +954,40 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "070a7b100a9b5f2e96684706",
+      "context_id": "6141063abab0e86f974d4bdb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "calibration"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.1667,
+      "source": "zenodo",
+      "source_context_sha256": "3b75e239159226cb46bd56fd078e109cd798a4dda0cb7b77d27e8f97965b948e",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "XOPT v1.0.0 — Research Artifact Research artifact for sparse temporal counterfactual explanations in mixed-integer optimization with fixed continuous recourse. Included Components Source Code ( experiments/src/ ): Exact column-and-constraint generation algorithm ( XOPT.jl ). Anytime bounding and baseline initialization ( anytime.jl ). Stability radius estimation ( robustness.jl ). Auditing, calibration, and scenario separation ( audit.jl ). Unit and holding cost levers ( levers.jl , enumerate_levers.jl ). Unit commitment models on PGLib-UC instances ( uc.jl , uc2.jl ). Independent literature comparator implementation ( literature_cg.jl ). Datasets ( data/ ): Preprocessed and raw empirical benchmarks (NHS emergency attendance, Online Retail transactions). PGLib-UC power systems data ( experiments/data/pglib_uc/ ). Data provenance and SHA-256 verification records ( data/metadata/ ). Experimental Results ( experiments/results/ ): Complete primary benchmark records (320 runs) and supplementary evaluations (250 runs). Paired sensitivity and capacity classifications. Verification traces and numerical audit logs. Reproducibility : Pinned Julia environment ( Manifest.toml , Project.toml ). Automated reproduction script ( experiments/scripts/reproduce.sh ). Test suites ( experiments/test/ ). License Original Julia and Python code is licensed under the MIT License. Data sources retain their respective original licenses as documented in experiments/LICENSING.md .",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "MadBezoui/XOPT: XOPT v1.0.0: Research Artifact — Code, Data, and Experiments",
+      "url": "https://zenodo.org/records/23458562"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "edb1c7f53a8721f2db365409",
       "context_id": "7a5dfee1113c8049efa89344",
       "delivery_preview_only": true,
@@ -1128,46 +1162,6 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "Only Means Only: what a harmonization benchmark score averages over",
       "url": "https://zenodo.org/records/23451448"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "a5c59d4a6eea506170a451d0",
-      "context_id": "5d941d7de2d762824d4101dd",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::CONTROL",
-      "direction_title": "Universal large-data ingestion methods [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "zenodo",
-      "source_context_sha256": "9c2f495b4676234159bd59323355ab456a12551203a9e8df37992ac0482f44cc",
-      "source_published": "2026-10-17",
-      "source_updated": "",
-      "summary": "Pre-registration for a benchmark that tests whether frontier models can find struck-through text in documents as well as pdf-strikethrough-detect, an open-source package that detects struck-through text in PDFs and scanned pages, and at what cost. Ten models from Anthropic, Google, OpenAI and xAI run beside the package and two text-extraction baselines, on synthetic redlines, public redlined documents, US Congress bills and handwritten scans. This version holds the files tagged prereg-2, fixed after the dev runs and before any model sees a test page: PREREG.md: the rules, from the arms, inputs, prompts and scoring to the statistics, the four primary endpoints and the budget, now with the choices made on dev and the test run's cap. PLAN.md: the reasons behind them, unchanged since prereg-1. corpus_manifest.json: the source documents, each with its URL and sha256, unchanged. prereg1.json: what prereg-1 fixed, including the model IDs, page lists, file hashes and the prompts as drafted. prereg2.json: what prereg-2 fixes, including the sha256 of the code, prompts, config and every test page's ground truth, the choices made on dev, the model settings and the cap. PREREG.md sha256: 3d3c5d44579eeeae387660d682f6bcab8016b48dc048442634c16eeb7a22bcbc The same files are in the package's GitHub release prereg-2. Since prereg-1, PREREG.md has changed only by the values the dev runs chose and by three logged deviations. &nbsp;",
-      "tags": [
-        "strikethrough detection",
-        "document understanding",
-        "vision-language models",
-        "OCR",
-        "benchmark",
-        "pre-registration"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Frontier benchmark for pdf-strikethrough-detect: pre-registration 2",
-      "url": "https://zenodo.org/records/23442237"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1707,12 +1701,12 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "a5f22f39e3e1fb74baf2bf38",
-      "context_id": "b67b5838a223b2e8d753d23f",
+      "candidate_id": "1a4d7cb3d795387b9f5c74fd",
+      "context_id": "c0f75b27d748cece79eca8ee",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "direction_id": "large_data_methods::REVERSE",
+      "direction_title": "Universal large-data ingestion methods [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -1722,41 +1716,33 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "counterexample"
+        "reconstruction"
       ],
-      "mirror_lens": "COUNTEREVIDENCE",
+      "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.5833,
       "source": "zenodo",
-      "source_context_sha256": "729d1010053c1c792bef00f14ff7bba01a1a47bb1c6c888dfd8bcbccf2353d7a",
-      "source_published": "2026-10-17",
+      "source_context_sha256": "1213ac5f5cc2e0caeeb3d262d796fd2b5fc32fcf2537129f251b68cc225e0f94",
+      "source_published": "2026-10-18",
       "source_updated": "",
-      "summary": "We develop a rigorous finite-dimensional mathematical framework connecting the renormalization group, gradient flows, Lyapunov stability, and noncooperative game theory. The central object is a renormalization-group flow written in gradient form, dg_i/dt = &beta;_i(g) = - &sum;_j G_ij(g) &part;&Gamma;/&part;g_j(g),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1) where g = (g_1, &hellip;, g_n) belongs to an open domain M &sub; ℝⁿ, &Gamma; is a C&sup2; function, and G(g) is a symmetric positive-definite matrix. We associate to this flow a common-payoff game whose payoff is U(g) = - &Gamma;(g).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2) We prove, with complete arguments, that ordinary Nash equilibria always imply renormalization-group fixed points, but the converse is false. We then identify the exact condition under which a fixed point becomes a genuine stable equilibrium of the game: a nondegenerate renormalization-group fixed point is asymptotically stable if and only if the Hessian of &Gamma; is positive definite, if and only if it is a strict local minimum of &Gamma;, if and only if it is a strict strong Nash equilibrium of U = -&Gamma;. The distinction between ordinary Nash equilibrium and strong Nash equilibrium is essential. Ordinary Nash equilibria allow only unilateral deviations, while strong Nash equilibria exclude all small joint deviations. We provide explicit counterexamples showing that fixed points need not be Nash equilibria, that ordinary Nash equilibria need not be stable, and that invertibility of G alone does not imply finiteness of equilibria. We also prove global existence results under compactness and finiteness results under Morse nondegeneracy. The paper is self-contained at the level of multivariable calculus, linear algebra, ordinary differential equations, and basic Lyapunov stability theory. The framework is intentionally conditional: it does not claim that the gradient-flow representation has been proven in four-dimensional QCD or in any specific quantum field theory. Those issues are placed in a final section of open problems.",
+      "summary": "This article proposes a theoretical framework for transporting large physical masses at the speed of light C by analyzing the behavior of photons through advanced single-photon imaging techniques. By examining the temporal and spatial distribution of photons captured via Single-Photon Avalanche Diode (SPAD) cameras, we establish a correlation between the visual reconstruction of an object and its potential physical translation across space-time. We argue that light possesses an inherent volumetric, cell-like structure capable of carrying mass, provided an engineering mechanism can replicate its fundamental properties: diffraction, momentum, and precise synchronization.",
       "tags": [
-        "renormalization group",
-        "gradient-flow renormalization group",
-        "Lyapunov function",
-        "Lyapunov stability",
-        "asymptotically stable fixed points",
-        "renormalization-group fixed points",
-        "Nash equilibrium",
-        "strong Nash equilibrium",
-        "common-payoff game",
-        "common-potential game",
-        "potential games",
-        "beta functions",
-        "Hessian positive definiteness",
-        "strict local minimum",
-        "nondegenerate critical points",
-        "Morse nondegeneracy",
-        "game theory",
-        "finite-dimensional dynamical systems",
-        "inverse function theorem",
-        "QCD gradient-flow open problem"
+        "travel at light speed",
+        "proof of possible travel at light speed",
+        "single photon imaging",
+        "photograph",
+        "Optical Effects & Diffraction",
+        "Cube-Rhombus Cell Formations",
+        "Light-Volume & Conical Propagation",
+        "Photon Arrival Data & Timing Precision",
+        "Mass Transport & Physical Mass",
+        "Single-Photon Imaging / Single-Photon Avalanche Diode (SPAD)",
+        "Speed of Light (C)",
+        "the path of light"
       ],
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Gradient-Flow Renormalization Group as a Common-Potential Game: A Rigorous Equivalence Between Asymptotically Stable Fixed Points and Strict Strong Nash Equilibria",
-      "url": "https://zenodo.org/records/23442159"
+      "title": "Single-photon imaging is evidence of the possibility of mass traveling at the speed of light.",
+      "url": "https://zenodo.org/records/23457949"
     },
     {
       "base_direction_id": "large_data_methods",
