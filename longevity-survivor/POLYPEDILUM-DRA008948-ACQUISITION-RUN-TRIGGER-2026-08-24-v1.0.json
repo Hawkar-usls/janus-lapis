@@ -1,0 +1,16 @@
+{
+  "artifact_id": "POLYPEDILUM-DRA008948-ACQUISITION-RUN-TRIGGER-2026-08-24-v1.0",
+  "date": "2026-08-24",
+  "purpose": "Trigger the trusted-base Pv11 DRA008948 public-byte acquisition workflow after the acquisition infrastructure was merged into LONGEVITY-SURVIVOR.",
+  "expected_transition": "ACQUIRE_EXACT_BYTES -> SHA256 -> JOIN_EXPERIMENT_RUN_SAMPLE -> EXPLICIT_CONDITION_BINDING_CHECK -> XLSX_SCHEMA_EXTRACTION",
+  "claim_status_before_run": {
+    "CX_FIRST_CELL_CYCLE_ENTRY": "UNKNOWN",
+    "CELL_CYCLE_TRANSCRIPT_PROXY_RESULT": "NOT_RUN"
+  },
+  "hard_boundaries": [
+    "ACCESSION_ORDER_IS_NOT_CONDITION_BINDING",
+    "MODULE_ENRICHMENT_IS_NOT_TIMEPOINT_DIRECTION",
+    "CELL_CYCLE_TRANSCRIPT_PROXY_IS_NOT_DIRECT_S_PHASE_OR_MITOSIS",
+    "MISSING_DATA_STAYS_MISSING"
+  ]
+}
