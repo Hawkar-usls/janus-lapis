@@ -97,11 +97,10 @@ def verify_ancestry(compare: dict, record: dict, commit_sha: str) -> list[str]:
     """A higher sequence must DESCEND from the previously witnessed commit."""
     if (not isinstance(compare, dict) or
         not isinstance(compare.get('base_commit'), dict) or
-        not isinstance(compare.get('merge_base_commit'), dict) or
-        not isinstance(compare.get('head_commit'), dict)):
+        not isinstance(compare.get('merge_base_commit'), dict)):
         raise ValueError('no trustworthy Git comparison data')
     if (compare['base_commit'].get('sha') != record['home_commit_sha'] or
-        compare['head_commit'].get('sha') != commit_sha):
+        compare.get('url') != ancestry_url(record, commit_sha).split('?', 1)[0]):
         raise ValueError('Git comparison is not pinned to witnessed commits')
     if (compare.get('status') != 'ahead' or
         type(compare.get('ahead_by')) is not int or compare['ahead_by'] < 1 or
