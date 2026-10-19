@@ -44,6 +44,24 @@ This is a *remote independent check* of the latest receipt. Genesis's own
 cloud-worker-B separately replays and hashes the cursor/context on each run;
 neither mechanism grants scientific or runtime authority to discovery packets.
 
+## Checkpoint history and rollback detection
+
+The watchdog fetches the two newest commits *that changed* Genesis Cloud
+HOME `STATE.json`. It first binds the latest commit message to the current
+run ID/attempt, then reads the preceding state at its immutable commit SHA.
+It checks that `sequence` increased **exactly by one**, that the durable
+Beetle cursor did not decrease, and that the `(run_id, run_attempt)` identity
+was not reused (GitHub reruns with a higher attempt remain valid). Proven
+regression, sequence reuse/gap, and cursor rollback become separate `ALERT`
+codes. If GitHub returns a mixed branch/history snapshot during a concurrent
+checkpoint update, or the predecessor cannot be read, classify as `UNKNOWN`.
+
+This check catches a rollback written as a *new* checkpoint commit. A force
+rewrite which entirely removes newer Git commits can erase its own history;
+detecting that requires an independent high-water mark outside the mutable
+Cloud HOME branch. The external JANUS Silence Witness supplies an independent
+*scheduler* check, but is not yet such a permanent state-sequence anchor.
+
 ## Important boundary
 
 The observer cannot detect GitHub Actions being completely disabled, an outage
