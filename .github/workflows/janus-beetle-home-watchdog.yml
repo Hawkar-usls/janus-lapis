@@ -15,6 +15,8 @@ on:
       - 'tests/test_beetle_observation_blindness.py'
       - 'tools/beetle_watchdog_receipt.py'
       - 'tests/test_beetle_watchdog_receipt.py'
+      - 'tools/beetle_home_highwater.py'
+      - 'tests/test_beetle_home_highwater.py'
       - '.github/workflows/janus-beetle-home-watchdog.yml'
   pull_request:
     branches: [main]
@@ -27,6 +29,8 @@ on:
       - 'tests/test_beetle_observation_blindness.py'
       - 'tools/beetle_watchdog_receipt.py'
       - 'tests/test_beetle_watchdog_receipt.py'
+      - 'tools/beetle_home_highwater.py'
+      - 'tests/test_beetle_home_highwater.py'
       - '.github/workflows/janus-beetle-home-watchdog.yml'
 
 permissions:
@@ -50,7 +54,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Verify normal and adversarial SLO scenarios
-        run: python -m unittest -v tests.test_beetle_home_watchdog tests.test_beetle_incident_issues tests.test_beetle_observation_blindness tests.test_beetle_watchdog_receipt
+        run: python -m unittest -v tests.test_beetle_home_watchdog tests.test_beetle_incident_issues tests.test_beetle_observation_blindness tests.test_beetle_watchdog_receipt tests.test_beetle_home_highwater
       - name: Check real durable ACK and Cloud HOME without writes
         shell: bash
         # A real deployment SLO ALERT is operational evidence, not a code
@@ -103,6 +107,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python tools/beetle_incident_issues.py --report watchdog-run.txt
+      - name: Monotonically advance independent Genesis HOME high-water witness
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/beetle_home_highwater.py --report watchdog-run.txt
       - name: Escalate only sustained UNKNOWN observation blindness
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
