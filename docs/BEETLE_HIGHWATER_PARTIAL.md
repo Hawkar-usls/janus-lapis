@@ -39,10 +39,22 @@ The witness does not retroactively prove pre-bootstrap history.
    `beetle-state`. Sender queues, receiver ACKs, and unverified subprocess
    grazer output are not staged. The GitHub Actions run remains **failed**.
 
-A killed VM before its failure handler executes cannot commit these local
-bytes. This handler covers recoverable worker-step failures, not loss of the
-entire GitHub runner. Guaranteed hard-kill recovery would require durable
-mid-run writes to a separate checkpoint store.
+The worker additionally commits verified progress to the remote `beetle-state`
+branch **after every completed research direction and every grazer task**, not
+just at the end of a run. Each cut validates receipt ancestry, candidate
+pairing, bounded shards and grazer byte SHA before pushing. Failure to push
+aborts that worker instead of pretending the data was made durable. The next
+worker resumes from the latest committed candidate index and byte cursor.
+
+An isolated offline crash canary created a disposable Git remote, published a
+partial checkpoint, killed the worker process with SIGKILL, and confirmed the
+candidate and commit still existed on the remote; production files and queues
+were not touched by this test.
+
+A killed VM can still lose work produced **since the last completed source/task
+checkpoint**. Git push availability and remote repository continuity remain
+required. This is bounded recovery, not an impossible claim of fully lossless
+recovery from a crash in the middle of an uncommitted network request.
 
 Neither mechanism confers research proof, command authority or external
 effect permissions.

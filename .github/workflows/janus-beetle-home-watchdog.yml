@@ -4,6 +4,14 @@ on:
   schedule:
     - cron: '37 * * * *'
   workflow_dispatch:
+  # GitHub may defer or omit cron ticks. A successful producer or receiver
+  # gives the observer a second wake-up path without cross-repository tokens.
+  workflow_run:
+    workflows:
+      - 'JANUS Universal Beetle hourly'
+      - 'JANUS Beetle Memory Receiver'
+    types: [completed]
+    branches: [main]
   push:
     branches: [main]
     paths:
@@ -42,6 +50,11 @@ concurrency:
 
 jobs:
   observe:
+    if: >-
+      ${{ github.event_name != 'workflow_run' ||
+          (github.event.workflow_run.conclusion == 'success' &&
+           github.event.workflow_run.head_branch == 'main' &&
+           github.event.workflow_run.head_repository.full_name == github.repository) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 8
     outputs:
@@ -84,7 +97,9 @@ jobs:
   incident-ledger:
     # Only trusted main-branch runs can modify Issues. The observer itself has
     # no write credentials, and a PR cannot open/close public incidents.
-    if: ${{ always() && github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
+    if: >-
+      ${{ always() && github.ref == 'refs/heads/main' &&
+          github.event_name != 'pull_request' && needs.observe.result != 'skipped' }}
     needs: observe
     runs-on: ubuntu-24.04
     timeout-minutes: 8

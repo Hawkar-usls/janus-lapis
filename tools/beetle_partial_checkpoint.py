@@ -12,6 +12,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import subprocess
 
 from beetle_shard_store import iter_lines, seal
 
@@ -165,18 +166,79 @@ def salvage(root: Path, baseline: dict, run_id: str) -> dict:
     return summary
 
 
+def live_checkpoint(root: Path, baseline: dict, run_id: str, git_root: Path) -> dict:
+    """Commit a verified progress cut while the worker is STILL running.
+
+    A later SIGKILL/runner disappearance cannot erase an earlier remote Git
+    commit. Mirrored delivery queues and ACKs are never staged by this path.
+    """
+    repo = git_root.resolve(strict=True)
+    if root.resolve(strict=True) != repo / 'data/beetle-state':
+        raise ValueError('durable checkpoint root is outside Beetle state checkout')
+
+    def git(*args: str) -> str:
+        done = subprocess.run(['git', '-C', str(repo), *args], check=True,
+                              text=True, capture_output=True)
+        return done.stdout.strip()
+
+    if git('rev-parse', '--abbrev-ref', 'HEAD') != 'beetle-state':
+        raise ValueError('live checkpoint requires checked-out beetle-state branch')
+    summary = salvage(root, baseline, run_id)
+    summary['status'] = 'VALIDATED_MID_RUN__WORKER_STILL_ACTIVE'
+    summary['worker_interrupted'] = False
+    atomic_json(root / 'latest_partial_checkpoint.json', summary)
+    seal(root)
+
+    allowable = [
+        'data/beetle-state/seen.json',
+        'data/beetle-state/cursors.json',
+        'data/beetle-state/latest_partial_checkpoint.json',
+        'data/beetle-state/latest_storage_health.json',
+    ]
+    for ledger in ('candidates', 'receipts'):
+        path = repo / 'data/beetle-state' / f'{ledger}.parts'
+        if path.is_dir():
+            allowable.append(f'data/beetle-state/{ledger}.parts')
+    allowable.extend('data/beetle-state/' + name for name in summary['validated_chunks'])
+    git('add', '-A', '--', *allowable)
+
+    staged = git('diff', '--cached', '--name-only').splitlines()
+    shard_pattern = re.compile(
+        r'data/beetle-state/(candidates|receipts)\.parts/(part-[0-9]{6}\.jsonl|index\.json|migration\.json)\Z')
+    flat = set(allowable[:4])
+    chunks = {'data/beetle-state/' + name for name in summary['validated_chunks']}
+    if any(path not in flat and path not in chunks and not shard_pattern.fullmatch(path)
+           for path in staged):
+        raise ValueError('live checkpoint attempted to stage unverified output')
+    if not staged:
+        return {**summary, 'remote_action': 'NO_CHANGE'}
+    git('diff', '--cached', '--check')
+    git('commit', '-m', f'beetle: verified mid-run checkpoint {run_id}')
+    # Fail closed on failure to reach remote. Never silently claim a durable
+    # checkpoint based only on local runner Git state.
+    git('push', 'origin', 'HEAD:beetle-state')
+    return {**summary, 'remote_action': 'PUSH_CONFIRMED', 'commit': git('rev-parse', 'HEAD')}
+
+
 def main() -> int:
     p = argparse.ArgumentParser()
-    p.add_argument('action', choices=['snapshot', 'salvage'])
+    p.add_argument('action', choices=['snapshot', 'salvage', 'live'])
     p.add_argument('--state-dir', required=True, type=Path)
     p.add_argument('--baseline', required=True, type=Path)
     p.add_argument('--run-id', default='0')
+    p.add_argument('--git-root', type=Path, default=None)
     args = p.parse_args()
     if args.action == 'snapshot':
         atomic_json(args.baseline, snapshot(args.state_dir))
         result = {'status': 'BASELINE_STORED'}
-    else:
+    elif args.action == 'salvage':
         result = salvage(args.state_dir, json.loads(args.baseline.read_text()), args.run_id)
+    else:
+        if args.git_root is None:
+            p.error('--git-root is required for live durable checkpoint')
+        result = live_checkpoint(args.state_dir,
+                                 json.loads(args.baseline.read_text()),
+                                 args.run_id, args.git_root)
     print(json.dumps(result, ensure_ascii=False, sort_keys=True))
     return 0
 

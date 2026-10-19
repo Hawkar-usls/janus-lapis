@@ -287,7 +287,8 @@ def scout_feed(sess: requests.Session, state: State, budget: Budget, direction: 
 SCOUTERS = {"arxiv": scout_arxiv, "zenodo": scout_zenodo, "github": scout_github, "feed": scout_feed}
 
 
-def run_scout(config: dict[str, Any], state: State, only_direction: str | None) -> dict[str, Any]:
+def run_scout(config: dict[str, Any], state: State, only_direction: str | None,
+              checkpoint=None) -> dict[str, Any]:
     g = config.get("global_budget", {})
     budget = Budget(max_requests=int(g.get("max_requests_per_run", 24)), max_new_items=int(g.get("max_new_candidates_per_run", 40)), max_metadata_bytes=int(g.get("max_metadata_bytes_per_run", 4_000_000)))
     sess = session()
@@ -311,13 +312,18 @@ def run_scout(config: dict[str, Any], state: State, only_direction: str | None) 
                 err = {"direction": d.get("id", "?"), "source": str(src.get("kind")), "error": f"{type(exc).__name__}: {exc}"}
                 errors.append(err)
                 state.receipt("SCOUT_SOURCE_ERROR", err)
+        # A completed direction is an independently validated progress cut.
+        # Propagate persistence failures; never treat them as source errors.
+        if checkpoint is not None:
+            checkpoint()
     summary = {"started_at": started, "finished_at": now(), "requests": budget.requests, "metadata_bytes": budget.metadata_bytes, "new_candidates": budget.new_items, "errors": errors}
     state.receipt("SCOUT_RUN_COMPLETE", summary)
     state.save()
     return summary
 
 
-def run_grazers(config: dict[str, Any], state: State, repo_root: pathlib.Path, only_task: str | None) -> dict[str, Any]:
+def run_grazers(config: dict[str, Any], state: State, repo_root: pathlib.Path,
+                only_task: str | None, checkpoint=None) -> dict[str, Any]:
     results: list[dict[str, Any]] = []
     for task in config.get("grazer_tasks", []):
         if not task.get("enabled", True):
@@ -382,6 +388,8 @@ def run_grazers(config: dict[str, Any], state: State, repo_root: pathlib.Path, o
             payload = {"task_id": tid, "kind": str(kind), "error": "unsupported grazer kind"}
             state.receipt("GRAZER_ERROR", payload)
             results.append(payload)
+        if checkpoint is not None:
+            checkpoint()
     state.save()
     return {"finished_at": now(), "tasks": results}
 
@@ -394,6 +402,10 @@ def main() -> int:
     ap.add_argument("--direction", default=None)
     ap.add_argument("--grazer-task", default=None)
     ap.add_argument("--mode", choices=["scout", "graze", "both"], default="both")
+    ap.add_argument('--durable-state-git-root', default=None,
+                    help='optional isolated beetle-state checkout for mid-run pushes')
+    ap.add_argument('--checkpoint-baseline', default=None,
+                    help='pre-run verified baseline for durable mid-run checkpoint')
     args = ap.parse_args()
 
     repo_root = pathlib.Path(args.repo_root).resolve()
@@ -410,11 +422,27 @@ def main() -> int:
     state = State(state_dir)
     state.receipt("RUN_START", {"mode": args.mode, "direction": args.direction, "grazer_task": args.grazer_task, "config_sha256": hashlib.sha256(config_path.read_bytes()).hexdigest()})
 
+    checkpoint = None
+    if args.durable_state_git_root is not None or args.checkpoint_baseline is not None:
+        if args.durable_state_git_root is None or args.checkpoint_baseline is None:
+            raise ValueError('durable mid-run checkpoint requires Git root and baseline together')
+
+        def checkpoint() -> None:
+            state.save()
+            result = subprocess.run([
+                sys.executable, str(repo_root / 'tools' / 'beetle_partial_checkpoint.py'),
+                'live', '--state-dir', str(state.root),
+                '--baseline', args.checkpoint_baseline,
+                '--git-root', args.durable_state_git_root,
+                '--run-id', os.environ.get('GITHUB_RUN_ID', '0'),
+            ], cwd=repo_root, check=True, capture_output=True, text=True)
+            print(result.stdout.strip(), flush=True)
+
     out: dict[str, Any] = {"tool": "JANUS UNIVERSAL BEETLE", "version": VERSION, "started_at": now(), "mode": args.mode}
     if args.mode in {"scout", "both"}:
-        out["scout"] = run_scout(config, state, args.direction)
+        out["scout"] = run_scout(config, state, args.direction, checkpoint)
     if args.mode in {"graze", "both"}:
-        out["graze"] = run_grazers(config, state, repo_root, args.grazer_task)
+        out["graze"] = run_grazers(config, state, repo_root, args.grazer_task, checkpoint)
     out["finished_at"] = now()
     out["receipt_head"] = state.prev_receipt
     atomic_json(state.latest_path, out)
