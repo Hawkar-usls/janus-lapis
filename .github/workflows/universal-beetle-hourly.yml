@@ -12,12 +12,14 @@ on:
       - "tools/beetle_context_projector.py"
       - "tools/beetle_mirror_router.py"
       - "tools/beetle_memory_receiver.py"
+      - "tools/beetle_partial_checkpoint.py"
       - "tools/beetle_delivery_health.py"
       - "data/beetle/directions.json"
       - ".github/workflows/universal-beetle-hourly.yml"
       - "requirements-ocean-beetle.txt"
       - "tests/test_beetle_shard_store.py"
       - "tests/test_beetle_delivery.py"
+      - "tests/test_beetle_partial_checkpoint.py"
   workflow_dispatch:
     inputs:
       mode:
@@ -74,6 +76,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_beetle_shard_store.py' -v
           python -m unittest discover -s tests -p 'test_beetle_delivery.py' -v
+          python -m unittest discover -s tests -p 'test_beetle_partial_checkpoint.py' -v
 
       - name: Ask Demiurge for current attention and build mirrored schedule
         run: |
@@ -162,7 +165,15 @@ jobs:
           python lapis/tools/beetle_shard_store.py migrate \
             --state-dir beetle-memory/data/beetle-state
 
+      - name: Snapshot previous validated state before worker mutations
+        run: |
+          python lapis/tools/beetle_partial_checkpoint.py snapshot \
+            --state-dir beetle-memory/data/beetle-state \
+            --baseline lapis/runtime/beetle_partial_baseline.json
+
       - name: Run Universal Beetle
+        id: worker
+        continue-on-error: true
         env:
           GH_TOKEN_FOR_BEETLE: ${{ github.token }}
           MODE: ${{ github.event.inputs.mode || 'both' }}
@@ -182,8 +193,58 @@ jobs:
           if [[ -n "$GRAZER_TASK" ]]; then args+=(--grazer-task "$GRAZER_TASK"); fi
           python lapis/tools/universal_beetle.py "${args[@]}" | tee beetle-memory/data/beetle-state/last_console.json
 
+      - name: Validate interrupted run and salvage only complete records
+        if: ${{ steps.worker.outcome == 'failure' }}
+        run: |
+          set -euo pipefail
+          python lapis/tools/beetle_partial_checkpoint.py salvage \
+            --state-dir beetle-memory/data/beetle-state \
+            --baseline lapis/runtime/beetle_partial_baseline.json \
+            --run-id "$GITHUB_RUN_ID"
+
+      - name: Commit independently verified partial records (never queues or ACKs)
+        if: ${{ steps.worker.outcome == 'failure' }}
+        working-directory: beetle-memory
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "janus-beetle[bot]"
+          git config user.email "janus-beetle[bot]@users.noreply.github.com"
+          git add data/beetle-state/candidates.parts data/beetle-state/receipts.parts
+          git add data/beetle-state/seen.json data/beetle-state/cursors.json
+          git add data/beetle-state/latest_partial_checkpoint.json data/beetle-state/latest_storage_health.json
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          root = Path('data/beetle-state')
+          receipt = json.loads((root / 'latest_partial_checkpoint.json').read_text())
+          for path in receipt['validated_chunks']:
+              subprocess.run(['git', 'add', '--', str(root / path)], check=True)
+          staged = subprocess.run(['git', 'diff', '--cached', '--name-only'],
+                                  check=True, capture_output=True, text=True).stdout.splitlines()
+          # Never commit a sender queue, inbox ACK or unverified subprocess grazer file.
+          if any('/mirrors/' in '/' + path or path.endswith('/ACK.json') for path in staged):
+              raise SystemExit('partial checkpoint tried to publish delivery state')
+          PY
+          if git diff --cached --quiet; then
+            echo 'No validated partial state to preserve'
+          else
+            git diff --cached --check
+            git commit -m "beetle: validated interrupted run ${GITHUB_RUN_ID}"
+            git pull --rebase origin beetle-state
+            git push origin HEAD:beetle-state
+          fi
+
+      - name: Report interrupted worker after durable salvage
+        if: ${{ steps.worker.outcome == 'failure' }}
+        run: |
+          echo '::error::Beetle worker interrupted; validated partial state was preserved, normal delivery skipped'
+          exit 1
+
       - name: Project source identities through every active mirror lens
-        if: always()
+        if: ${{ steps.worker.outcome == 'success' }}
         run: |
           python lapis/tools/beetle_context_projector.py \
             --state-dir beetle-memory/data/beetle-state \
@@ -191,7 +252,7 @@ jobs:
             | tee beetle-memory/data/beetle-state/last_context_console.json
 
       - name: Route new mirror contexts into provenance-bound repo mirrors
-        if: always()
+        if: ${{ steps.worker.outcome == 'success' }}
         run: |
           python lapis/tools/beetle_mirror_router.py \
             --state-dir beetle-memory/data/beetle-state \
@@ -199,7 +260,7 @@ jobs:
             | tee beetle-memory/data/beetle-state/last_routing_console.json
 
       - name: Observe persisted receiver ACKs and delivery lag
-        if: always()
+        if: ${{ steps.worker.outcome == 'success' }}
         run: |
           python lapis/tools/beetle_delivery_health.py \
             --state-dir beetle-memory/data/beetle-state \
@@ -207,6 +268,7 @@ jobs:
             | tee beetle-memory/data/beetle-state/last_delivery_console.json
 
       - name: Seal shard integrity and enforce GitHub blob limits
+        if: ${{ steps.worker.outcome == 'success' }}
         run: |
           set -euo pipefail
           python lapis/tools/beetle_shard_store.py seal \
@@ -214,6 +276,7 @@ jobs:
             --max-file-bytes 80000000
 
       - name: Commit durable state and mirror outboxes
+        if: ${{ steps.worker.outcome == 'success' }}
         working-directory: beetle-memory
         shell: bash
         run: |
@@ -245,5 +308,6 @@ jobs:
             beetle-memory/data/beetle-state/last_context_console.json
             beetle-memory/data/beetle-state/last_routing_console.json
             beetle-memory/data/beetle-state/last_delivery_console.json
+            beetle-memory/data/beetle-state/latest_partial_checkpoint.json
           if-no-files-found: warn
           retention-days: 14
