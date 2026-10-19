@@ -128,6 +128,11 @@ class InterruptedBeetleTests(unittest.TestCase):
         git('add', 'data/beetle-state')
         git('commit', '-m', 'isolated test baseline')
         git('push', 'origin', 'HEAD:beetle-state')
+        # Match GitHub Actions: checkout has no local commit identity, and
+        # the worker leaves temporary files outside the checkpoint allowlist.
+        git('config', '--unset', 'user.email')
+        git('config', '--unset', 'user.name')
+        (isolated / 'last_console.json').write_text('{"transient": true}\n')
 
         self.root = isolated
         self.baseline = snapshot(isolated)
@@ -151,6 +156,7 @@ class InterruptedBeetleTests(unittest.TestCase):
             check=True, text=True, capture_output=True).stdout
         self.assertEqual(len(json.loads(saved_seen)), 1)
         self.assertFalse((isolated / 'mirrors').exists())
+        self.assertFalse(git('ls-files', '--', 'data/beetle-state/last_console.json'))
 
     def test_live_checkpoint_refuses_untrusted_git_branch(self):
         with self.assertRaises(ValueError):

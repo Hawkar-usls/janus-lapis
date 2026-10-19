@@ -213,7 +213,11 @@ def live_checkpoint(root: Path, baseline: dict, run_id: str, git_root: Path) -> 
     if not staged:
         return {**summary, 'remote_action': 'NO_CHANGE'}
     git('diff', '--cached', '--check')
-    git('commit', '-m', f'beetle: verified mid-run checkpoint {run_id}')
+    # A fresh actions/checkout repository has no author configured: the
+    # identity used by the *later* publish step is not available mid-run.
+    git('-c', 'user.name=janus-beetle[bot]',
+        '-c', 'user.email=janus-beetle[bot]@users.noreply.github.com',
+        'commit', '-m', f'beetle: verified mid-run checkpoint {run_id}')
     # Fail closed on failure to reach remote. Never silently claim a durable
     # checkpoint based only on local runner Git state.
     git('push', 'origin', 'HEAD:beetle-state')
