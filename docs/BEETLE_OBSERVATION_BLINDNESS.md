@@ -29,6 +29,13 @@ Untrusted PR runs cannot write public incidents. Machine updates preserve human
 notes and leave human-edited assignees alone. Native GitHub/email notifications
 depend on the assignee's GitHub notification preferences.
 
+The live SLO probe also runs on PRs as read-only evidence, but a **live
+operational** `ALERT` or `UNKNOWN` does not fail the PR's code-quality job.
+The status-named artifact is still retained. Tests remain hard failures; only
+trusted main-branch scheduled/push runs may fail their observer job and update
+the corresponding GitHub Issues. This separates a stalled Genesis producer
+from a regression in the proposed watchdog code.
+
 ## Independent durable receipt integrity
 
 The read-only watchdog also fetches the latest Genesis Cloud HOME receipt from
