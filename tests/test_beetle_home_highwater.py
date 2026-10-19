@@ -8,7 +8,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
-from beetle_home_highwater import advance, check, parse_issue, verify_ancestry
+from beetle_home_highwater import advance, ancestry_url, check, parse_issue, verify_ancestry
 
 
 def record(seq=101):
@@ -51,7 +51,7 @@ class HighwaterTests(unittest.TestCase):
     def test_anchor_ancestry_detects_complete_history_replacement(self):
         compare = {'status': 'ahead', 'ahead_by': 3,
                    'base_commit': {'sha': 'b' * 40},
-                   'head_commit': {'sha': 'c' * 40},
+                   'url': ancestry_url(record(), 'c' * 40).split('?', 1)[0],
                    'merge_base_commit': {'sha': 'b' * 40}}
         self.assertEqual(verify_ancestry(compare, record(), 'c' * 40), [])
         compare['merge_base_commit']['sha'] = 'd' * 40
