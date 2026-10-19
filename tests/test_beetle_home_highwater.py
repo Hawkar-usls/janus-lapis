@@ -48,6 +48,14 @@ class FakeGitHub:
 
 
 class HighwaterTests(unittest.TestCase):
+    def test_watchdog_has_safe_event_wakeup_if_cron_is_skipped(self):
+        workflow = (Path(__file__).resolve().parents[1] /
+                    '.github/workflows/janus-beetle-home-watchdog.yml').read_text()
+        self.assertIn("workflows:\n      - 'JANUS Universal Beetle hourly'", workflow)
+        self.assertIn("- 'JANUS Beetle Memory Receiver'", workflow)
+        self.assertIn("github.event.workflow_run.conclusion == 'success'", workflow)
+        self.assertIn('needs.observe.result != \'skipped\'', workflow)
+
     def test_anchor_ancestry_detects_complete_history_replacement(self):
         compare = {'status': 'ahead', 'ahead_by': 3,
                    'base_commit': {'sha': 'b' * 40},
