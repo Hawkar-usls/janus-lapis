@@ -17,6 +17,9 @@ import urllib.error
 import urllib.request
 
 from beetle_delivery_health import inspect_queue
+from beetle_home_highwater import (ISSUE_NUMBER, ancestry_url,
+                                   check as check_highwater, parse_issue,
+                                   verify_ancestry)
 
 
 HEALTH_URL = ('https://raw.githubusercontent.com/Hawkar-usls/janus-lapis/'
@@ -35,6 +38,7 @@ QUEUE_ROOT = ('https://raw.githubusercontent.com/Hawkar-usls/janus-lapis/'
 HOME_RECEIPT_ROOT = ('https://raw.githubusercontent.com/Hawkar-usls/Janus_Genesis/'
                      'janus/habitat-cloud-state/')
 HOME_COMMIT_ROOT = 'https://raw.githubusercontent.com/Hawkar-usls/Janus_Genesis/'
+HIGHWATER_URL = f'https://api.github.com/repos/Hawkar-usls/janus-lapis/issues/{ISSUE_NUMBER}'
 RECEIPT_PATH = re.compile(
     r'state/habitat_cloud_home/receipts/([0-9]{8})-([1-9][0-9]*)-([1-9][0-9]*)\.json\Z')
 
@@ -390,6 +394,19 @@ def main(now: dt.datetime | None = None) -> int:
         result['metrics']['home_sequence_integrity'] = (
             'FAIL' if progress_alerts else 'PASS')
         result['metrics'].update(progress_metrics)
+        highwater_issue = fetch_json(HIGHWATER_URL)
+        highwater, _, _ = parse_issue(highwater_issue)
+        highwater_alerts, highwater_metrics = check_highwater(
+            values[1], highwater, values[4][0]['sha'])
+        if highwater_metrics['home_highwater_status'] == 'ADVANCE_PENDING':
+            comparison = fetch_json(ancestry_url(highwater, values[4][0]['sha']))
+            highwater_alerts += verify_ancestry(comparison, highwater, values[4][0]['sha'])
+        highwater_metrics['home_highwater_history'] = (
+            'FAIL' if highwater_alerts else 'PASS')
+        result['alerts'].extend(highwater_alerts)
+        if highwater_alerts:
+            result['status'] = 'ALERT'
+        result['metrics'].update(highwater_metrics)
         result['metrics']['live_rechecked_recipients'] = len(
             values[0]['live_rechecked_recipients'])
     except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError) as exc:

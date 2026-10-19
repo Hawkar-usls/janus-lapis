@@ -110,6 +110,18 @@ def sample_receipt(home):
     return receipt, raw
 
 
+def sample_highwater(home):
+    record = {'schema': 'janus.genesis.home.highwater.v1',
+              'sequence': home['sequence'],
+              'receipt_sha256': home['last_receipt_sha256'],
+              'home_commit_sha': 'f' * 40,
+              'source_repository': 'Hawkar-usls/Janus_Genesis',
+              'scientific_authority_delta': 0}
+    return {'number': 21, 'state': 'open', 'body':
+            '<!-- janus.genesis.home.highwater.v1 -->\n```json\n' +
+            json.dumps(record) + '\n```'}
+
+
 class BeetleHomeWatchdogTests(unittest.TestCase):
     def setUp(self):
         self.sources = sample()
@@ -388,7 +400,7 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
         sources = self.mutate(0, lambda h: h.update(at='2026-10-17T18:00:00Z'))
         _, raw = sample_receipt(sources[1])
         with mock.patch('beetle_home_watchdog.fetch_json',
-                        side_effect=[*sources, sample_predecessor()]), \
+                        side_effect=[*sources, sample_predecessor(), sample_highwater(sources[1])]), \
                 mock.patch('beetle_home_watchdog.fetch_receipt_bytes', return_value=raw):
             with mock.patch.object(sys, 'argv', ['watch']):
                 with contextlib.redirect_stdout(io.StringIO()):
@@ -399,7 +411,7 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
         sources = copy.deepcopy(self.sources)
         _, raw = sample_receipt(sources[1])
         with mock.patch('beetle_home_watchdog.fetch_json',
-                        side_effect=[*sources, sample_predecessor()]), \
+                        side_effect=[*sources, sample_predecessor(), sample_highwater(sources[1])]), \
                 mock.patch('beetle_home_watchdog.fetch_receipt_bytes',
                            return_value=raw + b'corrupted'):
             with mock.patch.object(sys, 'argv', ['watch']):
