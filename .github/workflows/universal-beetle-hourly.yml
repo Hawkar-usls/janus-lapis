@@ -187,6 +187,8 @@ jobs:
             --repo-root "$GITHUB_WORKSPACE/lapis"
             --config runtime/effective_directions.json
             --state-dir "$GITHUB_WORKSPACE/beetle-memory/data/beetle-state"
+            --durable-state-git-root "$GITHUB_WORKSPACE/beetle-memory"
+            --checkpoint-baseline "$GITHUB_WORKSPACE/lapis/runtime/beetle_partial_baseline.json"
             --mode "$MODE"
           )
           if [[ -n "$DIRECTION" ]]; then args+=(--direction "$DIRECTION"); fi
