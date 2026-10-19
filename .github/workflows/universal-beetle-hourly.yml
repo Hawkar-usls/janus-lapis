@@ -235,7 +235,9 @@ jobs:
           else
             git diff --cached --check
             git commit -m "beetle: validated interrupted run ${GITHUB_RUN_ID}"
-            git pull --rebase origin beetle-state
+            # The worker leaves deliberately uncommitted telemetry. Rebasing
+            # here fails even after the validated cut was committed; a normal
+            # non-force push is safe and rejects a concurrent branch advance.
             git push origin HEAD:beetle-state
           fi
 
@@ -291,7 +293,8 @@ jobs:
             exit 0
           fi
           git commit -m "beetle: mirrored hourly research state ${GITHUB_RUN_ID}"
-          git pull --rebase origin beetle-state
+          # Never rebase while scratch telemetry is dirty. A non-force push
+          # fails closed if another writer advanced the durable branch.
           git push origin HEAD:beetle-state
 
       - name: Upload compact run receipt
