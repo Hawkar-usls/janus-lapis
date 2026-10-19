@@ -29,6 +29,13 @@ Untrusted PR runs cannot write public incidents. Machine updates preserve human
 notes and leave human-edited assignees alone. Native GitHub/email notifications
 depend on the assignee's GitHub notification preferences.
 
+The live SLO probe also runs on PRs as read-only evidence, but a **live
+operational** `ALERT` or `UNKNOWN` does not fail the PR's code-quality job.
+The status-named artifact is still retained. Tests remain hard failures; only
+trusted main-branch scheduled/push runs may fail their observer job and update
+the corresponding GitHub Issues. This separates a stalled Genesis producer
+from a regression in the proposed watchdog code.
+
 ## Independent durable receipt integrity
 
 The read-only watchdog also fetches the latest Genesis Cloud HOME receipt from
@@ -43,6 +50,24 @@ checkpoint commit is recent. A GitHub read failure or unavailable receipt is
 This is a *remote independent check* of the latest receipt. Genesis's own
 cloud-worker-B separately replays and hashes the cursor/context on each run;
 neither mechanism grants scientific or runtime authority to discovery packets.
+
+## Checkpoint history and rollback detection
+
+The watchdog fetches the two newest commits *that changed* Genesis Cloud
+HOME `STATE.json`. It first binds the latest commit message to the current
+run ID/attempt, then reads the preceding state at its immutable commit SHA.
+It checks that `sequence` increased **exactly by one**, that the durable
+Beetle cursor did not decrease, and that the `(run_id, run_attempt)` identity
+was not reused (GitHub reruns with a higher attempt remain valid). Proven
+regression, sequence reuse/gap, and cursor rollback become separate `ALERT`
+codes. If GitHub returns a mixed branch/history snapshot during a concurrent
+checkpoint update, or the predecessor cannot be read, classify as `UNKNOWN`.
+
+This check catches a rollback written as a *new* checkpoint commit. A force
+rewrite which entirely removes newer Git commits can erase its own history;
+detecting that requires an independent high-water mark outside the mutable
+Cloud HOME branch. The external JANUS Silence Witness supplies an independent
+*scheduler* check, but is not yet such a permanent state-sequence anchor.
 
 ## Important boundary
 

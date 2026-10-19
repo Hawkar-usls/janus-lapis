@@ -53,6 +53,10 @@ jobs:
         run: python -m unittest -v tests.test_beetle_home_watchdog tests.test_beetle_incident_issues tests.test_beetle_observation_blindness tests.test_beetle_watchdog_receipt
       - name: Check real durable ACK and Cloud HOME without writes
         shell: bash
+        # A real deployment SLO ALERT is operational evidence, not a code
+        # regression in an unrelated PR. Preserve the classified artifact,
+        # but only trusted main runs fail and open the incident journal.
+        continue-on-error: ${{ github.event_name == 'pull_request' }}
         run: |
           set -euo pipefail
           python tools/beetle_home_watchdog.py | tee watchdog-run.txt "$GITHUB_STEP_SUMMARY"

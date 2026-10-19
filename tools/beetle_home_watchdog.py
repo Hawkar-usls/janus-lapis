@@ -29,11 +29,12 @@ ACK_URL = ('https://raw.githubusercontent.com/Hawkar-usls/Janus_Genesis/'
            'beetle-memory/data/beetle-inbox/ACK.json')
 HOME_COMMIT_URL = ('https://api.github.com/repos/Hawkar-usls/Janus_Genesis/commits'
                    '?sha=janus%2Fhabitat-cloud-state&'
-                   'path=state%2Fhabitat_cloud_home%2FSTATE.json&per_page=1')
+                   'path=state%2Fhabitat_cloud_home%2FSTATE.json&per_page=2')
 QUEUE_ROOT = ('https://raw.githubusercontent.com/Hawkar-usls/janus-lapis/'
               'beetle-state/data/beetle-state/mirrors')
 HOME_RECEIPT_ROOT = ('https://raw.githubusercontent.com/Hawkar-usls/Janus_Genesis/'
                      'janus/habitat-cloud-state/')
+HOME_COMMIT_ROOT = 'https://raw.githubusercontent.com/Hawkar-usls/Janus_Genesis/'
 RECEIPT_PATH = re.compile(
     r'state/habitat_cloud_home/receipts/([0-9]{8})-([1-9][0-9]*)-([1-9][0-9]*)\.json\Z')
 
@@ -129,6 +130,75 @@ def verify_receipt(home: dict, raw: bytes) -> list[str]:
         receipt.get('parse_status') != 'PARSED'):
         return ['GENESIS_HOME_RECEIPT_STATE_MISMATCH']
     return []
+
+
+def predecessor_state_url(home: dict, commits: list) -> str:
+    """Pin historical state by a commit SHA, never by a mutable branch name.
+
+    The current HOME read and commit listing come from separate HTTP requests.
+    Require matching run provenance to classify a mixed-snapshot race UNKNOWN.
+    """
+    if not isinstance(commits, list) or len(commits) < 2:
+        raise ValueError('HOME predecessor commit history unavailable')
+    current, previous = commits[:2]
+    if not all(isinstance(item, dict) and isinstance(item.get('sha'), str) and
+               re.fullmatch(r'[0-9a-f]{40}', item['sha']) for item in (current, previous)):
+        raise ValueError('untrusted HOME commit SHAs')
+    match = RECEIPT_PATH.fullmatch(home.get('checkpoint_head', ''))
+    if match is None:
+        raise ValueError('untrusted HOME checkpoint for history comparison')
+    expected_subject = f'JANUS cloud HOME checkpoint {home.get("last_run_id")}/{match.group(3)}'
+    message = current.get('commit', {}).get('message')
+    if not isinstance(message, str) or message.splitlines()[0] != expected_subject:
+        raise ValueError('HOME branch and commit history not yet synchronized')
+    if current['sha'] == previous['sha']:
+        raise ValueError('duplicate HOME history commit identity')
+    return HOME_COMMIT_ROOT + previous['sha'] + '/state/habitat_cloud_home/STATE.json'
+
+
+def verify_checkpoint_progress(home: dict, predecessor: dict) -> tuple[list[str], dict]:
+    """Check append-only HOME sequence and non-regressing Beetle replay cursor."""
+    if (not isinstance(predecessor, dict) or
+        predecessor.get('schema') != 'JANUS_HABITAT_CLOUD_HOME_STATE_V1' or
+        predecessor.get('state_id') != home.get('state_id') or
+        predecessor.get('authority_delta') != 0 or
+        type(predecessor.get('sequence')) is not int or
+        predecessor['sequence'] < 1):
+        raise ValueError('untrusted previous HOME checkpoint')
+    current_seq, previous_seq = home['sequence'], predecessor['sequence']
+    alerts: list[str] = []
+    if current_seq < previous_seq:
+        alerts.append('GENESIS_HOME_SEQUENCE_ROLLBACK')
+    elif current_seq == previous_seq:
+        alerts.append('GENESIS_HOME_SEQUENCE_REUSED')
+    elif current_seq > previous_seq + 1:
+        alerts.append('GENESIS_HOME_SEQUENCE_GAP')
+    prev_memory = predecessor.get('beetle_memory')
+    if not isinstance(prev_memory, dict):
+        raise ValueError('previous HOME memory missing')
+    old_cursor = prev_memory.get('cursor_sequence')
+    new_cursor = home['beetle_memory']['cursor_sequence']
+    if (type(old_cursor) is not int or old_cursor < 1 or
+        type(new_cursor) is not int or new_cursor < 1):
+        raise ValueError('HOME cursor history malformed')
+    if new_cursor < old_cursor:
+        alerts.append('GENESIS_HOME_BEETLE_CURSOR_ROLLBACK')
+    # GitHub legitimately reuses a run ID for a higher run_attempt on rerun.
+    # Reject only a repeated or decreasing (run_id, attempt) identity.
+    current_path = home.get('checkpoint_head')
+    old_path = predecessor.get('checkpoint_head')
+    current_match = (RECEIPT_PATH.fullmatch(current_path)
+                     if isinstance(current_path, str) else None)
+    previous_match = (RECEIPT_PATH.fullmatch(old_path)
+                      if isinstance(old_path, str) else None)
+    if current_match is None or previous_match is None or \
+            previous_match.group(2) != predecessor.get('last_run_id'):
+        raise ValueError('untrusted HOME history receipt paths')
+    if (home.get('last_run_id') == predecessor.get('last_run_id') and
+        int(current_match.group(3)) <= int(previous_match.group(3))):
+        alerts.append('GENESIS_HOME_RUN_ATTEMPT_REUSED')
+    return alerts, {'home_previous_checkpoint': previous_seq,
+                    'home_previous_cursor_sequence': old_cursor}
 
 
 def elapsed_minutes(value: str, now: dt.datetime) -> float:
@@ -310,11 +380,16 @@ def main(now: dt.datetime | None = None) -> int:
         # present and byte-for-byte consistent. Read the pinned path directly.
         receipt = fetch_receipt_bytes(receipt_url(values[1]))
         receipt_alerts = verify_receipt(values[1], receipt)
-        result['alerts'].extend(receipt_alerts)
-        if receipt_alerts:
+        predecessor = fetch_json(predecessor_state_url(values[1], values[4]))
+        progress_alerts, progress_metrics = verify_checkpoint_progress(values[1], predecessor)
+        result['alerts'].extend(receipt_alerts + progress_alerts)
+        if receipt_alerts or progress_alerts:
             result['status'] = 'ALERT'
         result['metrics']['home_receipt_integrity'] = (
             'FAIL' if receipt_alerts else 'PASS')
+        result['metrics']['home_sequence_integrity'] = (
+            'FAIL' if progress_alerts else 'PASS')
+        result['metrics'].update(progress_metrics)
         result['metrics']['live_rechecked_recipients'] = len(
             values[0]['live_rechecked_recipients'])
     except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError) as exc:

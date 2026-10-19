@@ -13,8 +13,10 @@ import unittest
 from unittest import mock
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / 'tools'))
-from beetle_home_watchdog import (evaluate, elapsed_minutes, main, receipt_url,
-                                  reconcile_stale, verify_receipt)
+from beetle_home_watchdog import (evaluate, elapsed_minutes, main,
+                                  predecessor_state_url, receipt_url,
+                                  reconcile_stale, verify_checkpoint_progress,
+                                  verify_receipt)
 
 
 NOW = dt.datetime(2026, 10, 17, 23, 0, tzinfo=dt.timezone.utc)
@@ -64,8 +66,24 @@ def sample():
         'last_sequence': 6, 'acknowledged_at': '2026-10-17T22:00:00Z',
         'scientific_authority_delta': 0,
     }
-    commits = [{'commit': {'committer': {'date': '2026-10-17T22:20:00Z'}}}]
+    commits = [
+        {'sha': 'f' * 40, 'commit': {
+            'committer': {'date': '2026-10-17T22:20:00Z'},
+            'message': 'JANUS cloud HOME checkpoint 123/1'}},
+        {'sha': 'd' * 40, 'commit': {
+            'committer': {'date': '2026-10-17T21:20:00Z'},
+            'message': 'JANUS cloud HOME checkpoint 122/1'}},
+    ]
     return health, home, cursor, ack, commits
+
+
+def sample_predecessor():
+    home = copy.deepcopy(sample()[1])
+    home.update(sequence=90, last_run_id='122')
+    home['checkpoint_head'] = 'state/habitat_cloud_home/receipts/00000090-122-1.json'
+    home['handoff_head'] = home['checkpoint_head']
+    home['beetle_memory']['cursor_sequence'] = 5
+    return home
 
 
 def sample_receipt(home):
@@ -284,6 +302,58 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'run disagreement'):
             receipt_url(home)
 
+    def test_home_checkpoint_history_advances_once_and_cursor_never_regresses(self):
+        url = predecessor_state_url(self.sources[1], self.sources[4])
+        self.assertIn('d' * 40, url)
+        self.assertTrue(url.endswith('/state/habitat_cloud_home/STATE.json'))
+        alerts, metrics = verify_checkpoint_progress(self.sources[1], sample_predecessor())
+        self.assertEqual(alerts, [])
+        self.assertEqual(metrics['home_previous_checkpoint'], 90)
+        self.assertEqual(metrics['home_previous_cursor_sequence'], 5)
+
+    def test_home_history_snapshot_race_is_unknown_not_rollback_claim(self):
+        commits = copy.deepcopy(self.sources[4])
+        commits[0]['commit']['message'] = 'JANUS cloud HOME checkpoint 124/1'
+        with self.assertRaisesRegex(ValueError, 'not yet synchronized'):
+            predecessor_state_url(self.sources[1], commits)
+
+    def test_home_sequence_rollback_and_reuse_detected(self):
+        old = sample_predecessor()
+        old['sequence'] = 92
+        alerts, _ = verify_checkpoint_progress(self.sources[1], old)
+        self.assertIn('GENESIS_HOME_SEQUENCE_ROLLBACK', alerts)
+        old['sequence'] = 91
+        alerts, _ = verify_checkpoint_progress(self.sources[1], old)
+        self.assertIn('GENESIS_HOME_SEQUENCE_REUSED', alerts)
+
+    def test_home_sequence_gap_detected(self):
+        old = sample_predecessor()
+        old['sequence'] = 88
+        alerts, _ = verify_checkpoint_progress(self.sources[1], old)
+        self.assertIn('GENESIS_HOME_SEQUENCE_GAP', alerts)
+
+    def test_home_beetle_cursor_rollback_detected(self):
+        old = sample_predecessor()
+        old['beetle_memory']['cursor_sequence'] = 7
+        alerts, _ = verify_checkpoint_progress(self.sources[1], old)
+        self.assertIn('GENESIS_HOME_BEETLE_CURSOR_ROLLBACK', alerts)
+
+    def test_home_run_attempt_reuse_detected(self):
+        old = sample_predecessor()
+        old['last_run_id'] = self.sources[1]['last_run_id']
+        old['checkpoint_head'] = 'state/habitat_cloud_home/receipts/00000090-123-1.json'
+        alerts, _ = verify_checkpoint_progress(self.sources[1], old)
+        self.assertIn('GENESIS_HOME_RUN_ATTEMPT_REUSED', alerts)
+
+    def test_legitimate_github_rerun_higher_attempt_does_not_alert(self):
+        home = copy.deepcopy(self.sources[1])
+        home['checkpoint_head'] = 'state/habitat_cloud_home/receipts/00000091-123-2.json'
+        old = sample_predecessor()
+        old['last_run_id'] = home['last_run_id']
+        old['checkpoint_head'] = 'state/habitat_cloud_home/receipts/00000090-123-1.json'
+        alerts, _ = verify_checkpoint_progress(home, old)
+        self.assertEqual(alerts, [])
+
     def test_tampered_pending_counts_rejected(self):
         sources = self.mutate(0, lambda h: h['repositories']['Hawkar-usls/Echo-Pyramid'].update(
             pending=True))
@@ -304,7 +374,8 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
 
     def test_receipt_transport_failure_is_unknown_not_delivery_alert(self):
         sources = self.sources
-        with mock.patch('beetle_home_watchdog.fetch_json', side_effect=sources), \
+        with mock.patch('beetle_home_watchdog.fetch_json',
+                        side_effect=[*sources, sample_predecessor()]), \
                 mock.patch('beetle_home_watchdog.fetch_receipt_bytes',
                            side_effect=OSError('GitHub unavailable')):
             with mock.patch.object(sys, 'argv', ['watch']):
@@ -316,7 +387,8 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
     def test_alert_result_produces_nonzero_status(self):
         sources = self.mutate(0, lambda h: h.update(at='2026-10-17T18:00:00Z'))
         _, raw = sample_receipt(sources[1])
-        with mock.patch('beetle_home_watchdog.fetch_json', side_effect=sources), \
+        with mock.patch('beetle_home_watchdog.fetch_json',
+                        side_effect=[*sources, sample_predecessor()]), \
                 mock.patch('beetle_home_watchdog.fetch_receipt_bytes', return_value=raw):
             with mock.patch.object(sys, 'argv', ['watch']):
                 with contextlib.redirect_stdout(io.StringIO()):
@@ -326,7 +398,8 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
     def test_receipt_mismatch_turns_otherwise_pass_into_alert(self):
         sources = copy.deepcopy(self.sources)
         _, raw = sample_receipt(sources[1])
-        with mock.patch('beetle_home_watchdog.fetch_json', side_effect=sources), \
+        with mock.patch('beetle_home_watchdog.fetch_json',
+                        side_effect=[*sources, sample_predecessor()]), \
                 mock.patch('beetle_home_watchdog.fetch_receipt_bytes',
                            return_value=raw + b'corrupted'):
             with mock.patch.object(sys, 'argv', ['watch']):
@@ -334,6 +407,18 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
                     code = main(now=NOW)
         self.assertEqual(code, 1)
         self.assertIn('GENESIS_HOME_RECEIPT_SHA256_MISMATCH', output.getvalue())
+
+    def test_predecessor_fetch_failure_is_unknown(self):
+        sources = copy.deepcopy(self.sources)
+        _, raw = sample_receipt(sources[1])
+        with mock.patch('beetle_home_watchdog.fetch_json',
+                        side_effect=[*sources, OSError('commit 404')]), \
+                mock.patch('beetle_home_watchdog.fetch_receipt_bytes', return_value=raw):
+            with mock.patch.object(sys, 'argv', ['watch']):
+                with contextlib.redirect_stdout(io.StringIO()) as output:
+                    code = main(now=NOW)
+        self.assertEqual(code, 2)
+        self.assertIn('"status": "UNKNOWN"', output.getvalue())
 
 
 if __name__ == '__main__':
