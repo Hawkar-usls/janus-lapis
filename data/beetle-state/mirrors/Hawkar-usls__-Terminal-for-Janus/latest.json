@@ -1,5 +1,5 @@
 {
-  "batch_id": "ba1808a68e8f214cd2c9",
+  "batch_id": "16b64e12b631f851b306",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -931,38 +931,6 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "d9dfefdbdf1288a759e5e0fb",
-      "context_id": "be5da9beaf89c8eb4411b5c2",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "ddbe6cf3e732aefef4aaad3f89e87a8a89210bbeafeb988d4e8990cdfa616ef2",
-      "source_published": "2026-10-18",
-      "source_updated": "",
-      "summary": "The Juvenile Justice (Care and Protection of Children) Act, 2015 allows a child aged sixteen or seventeen who is alleged to have committed a heinous offence to be tried as an adult after a \"preliminary assessment\" by the Juvenile Justice Board. This paper argues that the transfer mechanism is less a principled answer to serious adolescent offending than a legislative compromise whose costs fall on the procedural guarantees the Act otherwise extends to children. It reads section 15 against the Supreme Court's decisions in Shilpa Mittal and Barun Chandra Thakur, the age-determination case law, and the developmental research on adolescent culpability, and it engages the retributive and victim-centred case for transfer on its own terms. Accountability and rehabilitation, the paper contends, are not two poles to be traded off at a single age threshold. Both depend on institutional capacity that the system has never been resourced to supply: functioning Boards, trained probation staff, individual care plans that are actually followed, and aftercare that reaches young people beyond eighteen. Reform should narrow and proceduralise transfer, introduce statutory diversion, decouple offence classification from the general penal code, and treat implementation failure as a rights violation rather than an administrative shortfall.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Reforming Juvenile Justice in India: Balancing Child Rights, Accountability, and Rehabilitation",
-      "url": "https://zenodo.org/records/23456778"
-    },
-    {
-      "base_direction_id": "large_data_methods",
       "candidate_id": "6171310be1a7ad874e671ce6",
       "context_id": "bd39a5e65ca0874a95c6f283",
       "delivery_preview_only": true,
@@ -1669,6 +1637,38 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "Counterfactual Evaluation by Reopening Information States",
       "url": "https://zenodo.org/records/23458038"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "b2adbb3920a4e03aa6dfd114",
+      "context_id": "1ac93d075c124b1473b714f3",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "f44716eb95668e45e79a1a0bcc4503f76e45218dcb6c6c9db4f91a435912ddae",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "Notes cover the changes since 0.5.0. pip install metabeta==0.6.0 Tutorials Three notebooks in demos/ replace intro.ipynb and priors.ipynb . Each runs on a CPU runtime in Colab. 01-quickstart : lme4's sleepstudy end to end, next to lme4's estimates. 02-families : Bernoulli ( cbpp ) and Poisson ( Salamanders ) fits, posterior predictive checks, and random-walk moves next to a NUTS reference. 03-priors : prior specification, prior sensitivity in one call, and model comparison by Bayes factors. New reports posteriorDraws(result) : posterior draws of the global parameters on the data's scale, as a DataFrame named as in posteriorSummary (#31). groupDraws(result) : each group's coefficients per draw, the fixed effect plus the group's deviation (#33). posteriorPredictive(result) : the observed responses and one replicate per posterior draw, in the data's units (#33). bayesFactor(result, reference) : the Bayes factor of one model over another, per prior, with its Kass–Raftery grade; both results come from sample(evidence=True) (#33). sample n_samples defaults to 1,000 draws (#19). seed= makes a call reproducible and leaves the caller's random stream untouched (#32). posteriorPredictive and plotPPD take seed= too (#26, #33). Every summary ends with a fit metric: R² (Gaussian), AUC (Bernoulli) or deviance (Poisson) (#29). loo=True adds PSIS-LOO to the summary; it replaces diagnostics=True (#29). random_walk=True runs silently and warns only below an IMH effective sample size (ESS) of 10 (#29). Warnings state the failure, its consequence and numbered remedies, and point at the user's call (#18, #29). The first call after loading costs about as much as a warm one; warmup() runs that pass explicitly (#19). Formulas, scales and names Formulas follow lme4: y ~ 1 + (1 | g) fits an intercept-only model, preprocessing reads only the columns the formula names, and column names keep their case (#15). The order of fixed terms no longer changes the fit; names are mapped back in every output (#16). Summaries default to x_scale='original' . Random-effect SDs, correlations and per-group effects are on the data's scale like the fixed effects, and so are the prior lines (#17). rfxSummary labels each group correctly (#17). Api.from_pretrained('gaussian') is an alias of 'normal' , in any case (#30). Reports pick a dataset row by prior_id , a prior's name or its index (#32). Errors Unsupported formula syntax raises NotImplementedError with a workaround: || , nested or crossed grouping factors, interactions ( : , * ) and function calls such as log() or factor() (#18). Data outside every submodel's range raises one ValueError that names the limits; a family mismatch names the checkpoint to load (#18). A named predictor dropped as collinear or near-constant raises an error that names it (#18). Formulas the pretrained models cannot fit raise an error that names the fix: a random intercept without a fixed one, or the reverse, and a random slope that is not a fixed term (#16). GPU from_pretrained(..., device='cuda') works on GPUs whose torch build lacks a cholesky_solve kernel, such as Colab's T4 with torch 2.11 for CUDA 13 (#26). plotParameters and sample(loo=True) work on a CUDA device (#26). Packaging Python 3.13 support, with dependency floors at Colab's preinstalled versions (#20). The code is licensed under Apache-2.0, previously CC BY-NC-SA 4.0 (#21). CITATION.cff drives GitHub's citation button (#21). Deprecated, removed in 0.7 Each alias still works and raises a FutureWarning (#29, #32). sample(diagnostics=True) : use loo=True . batch_index= in posteriorSummary and rfxSummary , and index= in plotParameters : use prior_id= . indices= in plotPPD : use prior_ids= .",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "metabeta: amortized Bayesian inference for generalized linear mixed-effects models",
+      "url": "https://zenodo.org/records/23458114"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",

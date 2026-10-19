@@ -1,5 +1,5 @@
 {
-  "batch_id": "c629a253de17e4ffed05",
+  "batch_id": "f2e12f48c98a38809dfe",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -171,6 +171,49 @@
     },
     {
       "base_direction_id": "registry_provenance",
+      "candidate_id": "aa69619ec7e065768f18bc82",
+      "context_id": "13ac6062e0119e6832c54429",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::COUNTEREVIDENCE",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "provenance",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2083,
+      "source": "zenodo",
+      "source_context_sha256": "3bb761ea1615c3a8362e8fa68ead67209bacade4d75ec77b9425d257c8f71369",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Code and data accompanying Pan, L., \"Where does detrital-zircon source unmixing break? An analytic identifiability criterion and its large-scale Monte-Carlo verification for NMF provenance unmixing\" (submitted to Sedimentary Geology). Reproduces every figure: the synthetic data generator, the HPC scan harness (supervised and unsupervised KL-NMF), the merge and figure-generation scripts, the identifiability-theory verification scripts (direct sigma_err measurement on the (rho, n) plane) and their bias/RMSE decomposition, the per-axis results, the per-cell 3D phase-atlas summary, and the real-sample a-priori screen (Fig. 8) with fifteen real per-grain detrital-zircon age samples (Cretaceous Songliao Basin; Jurassic-Lower Cretaceous northern North China Craton margin). Code and synthetic results: MIT licence. The real age samples are redistributed under their original CC BY 4.0 licences (OneDZ, Zenodo 10.5281/zenodo.15522949; Puetz et al., Figshare 10.6084/m9.figshare.24852987.v1) with per-sample attribution; they are not re-licensed as MIT. v1.2.1 adds selected supplementary numerical probes, small historical summaries, atlas generator/HPC wrapper/merge, explicit Fig.3 command and seed verification, BU21 bibliography, and the submitted-a Fig.1 label, source-verified real-sample record corrections (05FW007; 100821-1/-3) with a re-rendered Fig. 8, conditional in-figure wording for Figs 3 and 8, and verified dataset licences. Historical probe comments describe exploratory models; theory_checks/README.md states their current scope and verification limits. The full per-seed atlas raw (559 MB; 187 MB gzipped) is not included. No separate public archive DOI was found in the project records searched; these raw data are not publicly archived in a verified record and may be requested from the author.",
+      "tags": [
+        "detrital zircon",
+        "provenance unmixing",
+        "non-negative matrix factorization",
+        "identifiability",
+        "condition number",
+        "method applicability",
+        "high-performance computing",
+        "Monte-Carlo"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
+      "url": "https://zenodo.org/records/23475936"
+    },
+    {
+      "base_direction_id": "registry_provenance",
       "candidate_id": "80a0a56178cb664f4fab4f73",
       "context_id": "bca734473a1b517f8a89b608",
       "delivery_preview_only": true,
@@ -322,46 +365,6 @@
     },
     {
       "base_direction_id": "registry_provenance",
-      "candidate_id": "495fa966090febf96b9daf09",
-      "context_id": "48b28c0c6825983eba6481bf",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::COUNTEREVIDENCE",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "provenance",
-        "reproducibility"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.0417,
-      "source": "zenodo",
-      "source_context_sha256": "43b563333f33a41eb0ea659bde912c21cfef51bba63e00b98bfd701087b79a58",
-      "source_published": "2026-10-18",
-      "source_updated": "",
-      "summary": "Anonymous, AI-assisted, unrefereed candidate. A bounded audit of one published five-variable 2-SAT transformer separates semantic ranking, fixed-threshold fidelity, numerical effective-state geometry, agreement with the native answer, and Boolean clause-edit sufficiency. A fresh balanced bank of 4096 formulas supplies additional same-checkpoint evidence; it is not independently trained-model replication. The public package documents exact replay scope and exclusions. Some historical image-dependent checks cannot be reproduced from the public files. Native replay requires separately retrieved, hash-pinned upstream source dependencies that are not redistributed here. Short independent-training feasibility attempts did not meet the predeclared competence threshold and supply no confirmatory representation evidence. Internal AI-assisted review and producer replay are not external peer review, independent reproduction or formal verification. CC0 applies only to original research prose, diagrams and data. Original executable code is MIT-licensed; retained third-party components retain their own terms. Consult LICENSES.md and the dependency provenance for component-level boundaries.",
-      "tags": [
-        "mechanistic interpretability",
-        "2-SAT",
-        "semantic ranking",
-        "threshold fidelity",
-        "causal abstraction",
-        "reproducibility"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "Assignment-Aligned Effective States in a 2-SAT Transformer",
-      "url": "https://zenodo.org/records/23454637"
-    },
-    {
-      "base_direction_id": "registry_provenance",
       "candidate_id": "17485643e29593f704113ada",
       "context_id": "400607d825fe90fcfea526f9",
       "delivery_preview_only": true,
@@ -397,6 +400,48 @@
       "target_repository": "Hawkar-usls/Janus-Demiurge",
       "title": "The D170 Global Mother, Physical Collar, and Unified Dark-Sector Architecture",
       "url": "https://zenodo.org/records/23459389"
+    },
+    {
+      "base_direction_id": "registry_provenance",
+      "candidate_id": "e370bf399593bd75063d47b8",
+      "context_id": "274adb53990e0d0885a8d361",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::COUNTEREVIDENCE",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "provenance",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.0417,
+      "source": "zenodo",
+      "source_context_sha256": "98fd6e3cc0558e34993b36a247e4ddec15545eaf5c2e14a493773f8abf940d3e",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "This record contains the pair-level summaries, model-level matrices and analysis scripts for the manuscript Static Embeddings Are Poor Cross-Architecture Proxies: A Metric-Sensitive Reassessment . The archive covers 231 static pairs from 22 language models, a 153-pair multi-family static-to-contextual set from 18 models (Qwen 7, Gemma 4, SmolLM 4, Phi 3), and 91 layer-wise pairs from 14 models. The balanced set is analyzed with angular and Euclidean RDMs; the angular metric is primary. The archive includes the 22 x 22 Mantel, CKA, distance-correlation and Gromov-Wasserstein matrices, the 13 x 13 legacy proxy matrices, the 14 x 14 layer-wise Mantel and Procrustes matrices, the 153-pair extension table, the crossed random-effects inputs and outputs, and the scripts that reproduce them. Raw model weights, token-level distance matrices and cached hidden states are not included. The Procrustes values are shared-token subspace statistics, not full-width alignment. The static and multi-family sets are Qwen-heavy; the manuscript reports family-specific correlations and does not claim a uniform within-family effect. Code is released under GPL-3.0-or-later. Data and derived tables are released under CC BY 4.0. See README.md and PROVENANCE.md for file mapping, reproduction instructions and caveats.",
+      "tags": [
+        "static embeddings",
+        "contextual representations",
+        "representational similarity",
+        "Mantel test",
+        "Procrustes analysis",
+        "large language models",
+        "Qwen",
+        "reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "Code and derived data for: Static Embeddings Are Poor Cross-Architecture Proxies: A Contextual Reassessment",
+      "url": "https://zenodo.org/records/23475945"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -436,39 +481,6 @@
       "target_repository": "Hawkar-usls/Janus-Demiurge",
       "title": "Neuro-Symbolic MAPE-K: Computational Package and Retriever Control",
       "url": "https://zenodo.org/records/23459940"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "070a7b100a9b5f2e96684706",
-      "context_id": "1748c8d53cdf1df56ca4c40a",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::COUNTEREVIDENCE",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "provenance",
-        "reproducibility"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.0417,
-      "source": "zenodo",
-      "source_context_sha256": "3fbcc475bf64f76a97d08c41a10404d5df08aa80cf55d501809155f1a63e51b1",
-      "source_published": "2026-10-18",
-      "source_updated": "",
-      "summary": "XOPT v1.0.0 — Research Artifact Research artifact for sparse temporal counterfactual explanations in mixed-integer optimization with fixed continuous recourse. Included Components Source Code ( experiments/src/ ): Exact column-and-constraint generation algorithm ( XOPT.jl ). Anytime bounding and baseline initialization ( anytime.jl ). Stability radius estimation ( robustness.jl ). Auditing, calibration, and scenario separation ( audit.jl ). Unit and holding cost levers ( levers.jl , enumerate_levers.jl ). Unit commitment models on PGLib-UC instances ( uc.jl , uc2.jl ). Independent literature comparator implementation ( literature_cg.jl ). Datasets ( data/ ): Preprocessed and raw empirical benchmarks (NHS emergency attendance, Online Retail transactions). PGLib-UC power systems data ( experiments/data/pglib_uc/ ). Data provenance and SHA-256 verification records ( data/metadata/ ). Experimental Results ( experiments/results/ ): Complete primary benchmark records (320 runs) and supplementary evaluations (250 runs). Paired sensitivity and capacity classifications. Verification traces and numerical audit logs. Reproducibility : Pinned Julia environment ( Manifest.toml , Project.toml ). Automated reproduction script ( experiments/scripts/reproduce.sh ). Test suites ( experiments/test/ ). License Original Julia and Python code is licensed under the MIT License. Data sources retain their respective original licenses as documented in experiments/LICENSING.md .",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "MadBezoui/XOPT: XOPT v1.0.0: Research Artifact — Code, Data, and Experiments",
-      "url": "https://zenodo.org/records/23458562"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -603,8 +615,8 @@
     },
     {
       "base_direction_id": "registry_provenance",
-      "candidate_id": "495fa966090febf96b9daf09",
-      "context_id": "b9cf6dad6e7c14f0f313c846",
+      "candidate_id": "9065efbc788e2aeeadaa2d84",
+      "context_id": "53528b02d2b8345a5717afb1",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "registry_provenance::CONTROL",
@@ -618,29 +630,22 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "provenance",
+        "baseline",
         "replication",
         "reproducibility"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 13.5,
+      "score": 13.4167,
       "source": "zenodo",
-      "source_context_sha256": "c459c96cb7850cbb6906502de212ee8400ddfadf677986381ad3b7b19e1d931a",
-      "source_published": "2026-10-18",
+      "source_context_sha256": "472c2c6ac2f4be7f335ea583c2ee0c63bd0e04436394e6fc3b9a79aa58c21774",
+      "source_published": "2026-10-19",
       "source_updated": "",
-      "summary": "Anonymous, AI-assisted, unrefereed candidate. A bounded audit of one published five-variable 2-SAT transformer separates semantic ranking, fixed-threshold fidelity, numerical effective-state geometry, agreement with the native answer, and Boolean clause-edit sufficiency. A fresh balanced bank of 4096 formulas supplies additional same-checkpoint evidence; it is not independently trained-model replication. The public package documents exact replay scope and exclusions. Some historical image-dependent checks cannot be reproduced from the public files. Native replay requires separately retrieved, hash-pinned upstream source dependencies that are not redistributed here. Short independent-training feasibility attempts did not meet the predeclared competence threshold and supply no confirmatory representation evidence. Internal AI-assisted review and producer replay are not external peer review, independent reproduction or formal verification. CC0 applies only to original research prose, diagrams and data. Original executable code is MIT-licensed; retained third-party components retain their own terms. Consult LICENSES.md and the dependency provenance for component-level boundaries.",
-      "tags": [
-        "mechanistic interpretability",
-        "2-SAT",
-        "semantic ranking",
-        "threshold fidelity",
-        "causal abstraction",
-        "reproducibility"
-      ],
+      "summary": "This repository provides the reproducible analysis materials accompanying the research article &ldquo;Bitcoin and Sovereign Reserve Management: Portfolio Allocation, Model Sensitivity, and Downside Risk.&rdquo; The study examines the sensitivity of Bitcoin allocations within a sovereign reserve-related portfolio framework, with particular emphasis on measurement consistency, model specification, allocation stability and downside risk. The empirical framework combines U.S. official reserve positions, Treasury gold holdings valued at market prices, and Bitcoin market-price observations. The principal estimation period covers April 2016 to July 2026, comprising 124 consecutive monthly changes. An extended historical sample beginning in January 2013 is used for sensitivity analysis. The analysis applies a Black&ndash;Litterman allocation framework with explicit budget constraints and alternative portfolio specifications. The reproducibility framework covers baseline portfolio estimation, alternative Bitcoin views and confidence levels, long-only allocation constraints, covariance sensitivity, rolling-window estimation, joint stationary bootstrap resampling and historical and hypothetical stress scenarios. Risk analysis includes volatility, Value at Risk (VaR95) and Conditional Value at Risk (CVaR95), with particular attention to adverse Bitcoin market conditions. The associated materials document the empirical procedures used to examine the sensitivity of estimated Bitcoin weights to data construction, estimation windows, covariance assumptions and portfolio constraints. They support independent examination of the quantitative results, robustness analyses, tables and figures reported in the accompanying research. The study uses publicly available financial and institutional data from the Board of Governors of the Federal Reserve System, U.S. Treasury Fiscal Data, the World Bank and Coin Metrics. Associated research article: Bitcoin and Sovereign Reserve Management: Portfolio Allocation, Model Sensitivity, and Downside Risk. Research area: Financial Economics, Sovereign Reserve Management, Portfolio Optimization and Cryptocurrency Risk.",
+      "tags": [],
       "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "Assignment-Aligned Effective States in a 2-SAT Transformer",
-      "url": "https://zenodo.org/records/23454637"
+      "title": "Bitcoin and Sovereign Reserve Management: Reproducible Analysis and Replication Package",
+      "url": "https://zenodo.org/records/23475742"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -897,6 +902,49 @@
     },
     {
       "base_direction_id": "registry_provenance",
+      "candidate_id": "3451c293b90f5b211fa07533",
+      "context_id": "42447a8647474b776d79f39a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::CONTROL",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "replication",
+        "reproducibility"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.0833,
+      "source": "zenodo",
+      "source_context_sha256": "ace00b36144150d14128f8d1643c31c5b55f109ddc2a3f96e20871a1206d4077",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Reproducibility archive for the v14 revision (v1.2.0) of a multi-domain study of bone fragility in rheumatoid arthritis. The archive contains NHANES five-cycle analysis code and result tables, multi-dataset Mendelian randomization outputs, MHC specificity analyses, a post hoc DMARD-anchored sensitivity analysis (S31), an external T1D/AS MHC replication (S32 and Figure S10), the final manuscript and supplementary PDFs, and a data-source registry. Key findings: fracture history was associated with self-reported RA (OR 1.72, 1.27&ndash;2.32); the normal-BMD estimate was imprecise; OP diagnosis was diagnosis-dependent/ascertainment-sensitive; RA liability was associated with clinical OP and OP with pathological fracture, with borderline femur estimates; the MHC signal was shared for RA/T1D, whereas external AS instruments did not replicate. v1.2.0 (2026-10-19) corrects the pre-/post-harmonization SNP-count wording (Okada 45 selected, 37 analyzed for OP), describes the AS MHC estimate as nominally significant but not FDR-significant, and updates the word counts (abstract 239; main text 3,796). Raw third-party NHANES, FinnGen, and GWAS summary data are not redistributed; see data_sources/README_DATA_SOURCES.md.",
+      "tags": [
+        "rheumatoid arthritis",
+        "osteoporosis",
+        "bone mineral density",
+        "fracture",
+        "NHANES",
+        "Mendelian randomization",
+        "MHC",
+        "external replication",
+        "reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "Bone fragility in rheumatoid arthritis: phenotype-specific associations, a diagnosis-dependent osteoporosis signal, and a shared autoimmune MHC component",
+      "url": "https://zenodo.org/records/23475933"
+    },
+    {
+      "base_direction_id": "registry_provenance",
       "candidate_id": "2875370eb2619cc64c49d373",
       "context_id": "e8b4c63f181ac416c4b4a7d9",
       "delivery_preview_only": true,
@@ -1012,6 +1060,90 @@
     },
     {
       "base_direction_id": "registry_provenance",
+      "candidate_id": "e370bf399593bd75063d47b8",
+      "context_id": "80f2f5c3d53429a3d5d3959c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::CONTROL",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "provenance",
+        "reproducibility"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.0417,
+      "source": "zenodo",
+      "source_context_sha256": "0fd82a678d44b9926868ab97ab7c2ee441caca3306bc6dd61bb63c5485eaa3df",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "This record contains the pair-level summaries, model-level matrices and analysis scripts for the manuscript Static Embeddings Are Poor Cross-Architecture Proxies: A Metric-Sensitive Reassessment . The archive covers 231 static pairs from 22 language models, a 153-pair multi-family static-to-contextual set from 18 models (Qwen 7, Gemma 4, SmolLM 4, Phi 3), and 91 layer-wise pairs from 14 models. The balanced set is analyzed with angular and Euclidean RDMs; the angular metric is primary. The archive includes the 22 x 22 Mantel, CKA, distance-correlation and Gromov-Wasserstein matrices, the 13 x 13 legacy proxy matrices, the 14 x 14 layer-wise Mantel and Procrustes matrices, the 153-pair extension table, the crossed random-effects inputs and outputs, and the scripts that reproduce them. Raw model weights, token-level distance matrices and cached hidden states are not included. The Procrustes values are shared-token subspace statistics, not full-width alignment. The static and multi-family sets are Qwen-heavy; the manuscript reports family-specific correlations and does not claim a uniform within-family effect. Code is released under GPL-3.0-or-later. Data and derived tables are released under CC BY 4.0. See README.md and PROVENANCE.md for file mapping, reproduction instructions and caveats.",
+      "tags": [
+        "static embeddings",
+        "contextual representations",
+        "representational similarity",
+        "Mantel test",
+        "Procrustes analysis",
+        "large language models",
+        "Qwen",
+        "reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "Code and derived data for: Static Embeddings Are Poor Cross-Architecture Proxies: A Contextual Reassessment",
+      "url": "https://zenodo.org/records/23475945"
+    },
+    {
+      "base_direction_id": "registry_provenance",
+      "candidate_id": "aa69619ec7e065768f18bc82",
+      "context_id": "78140947fe83631abb95280d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::CONTROL",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "provenance",
+        "reproducibility"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.0417,
+      "source": "zenodo",
+      "source_context_sha256": "a39862ef4b7bfc45c960c1eabecea5b78ad40d101785a8b84b09fa27631d6501",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Code and data accompanying Pan, L., \"Where does detrital-zircon source unmixing break? An analytic identifiability criterion and its large-scale Monte-Carlo verification for NMF provenance unmixing\" (submitted to Sedimentary Geology). Reproduces every figure: the synthetic data generator, the HPC scan harness (supervised and unsupervised KL-NMF), the merge and figure-generation scripts, the identifiability-theory verification scripts (direct sigma_err measurement on the (rho, n) plane) and their bias/RMSE decomposition, the per-axis results, the per-cell 3D phase-atlas summary, and the real-sample a-priori screen (Fig. 8) with fifteen real per-grain detrital-zircon age samples (Cretaceous Songliao Basin; Jurassic-Lower Cretaceous northern North China Craton margin). Code and synthetic results: MIT licence. The real age samples are redistributed under their original CC BY 4.0 licences (OneDZ, Zenodo 10.5281/zenodo.15522949; Puetz et al., Figshare 10.6084/m9.figshare.24852987.v1) with per-sample attribution; they are not re-licensed as MIT. v1.2.1 adds selected supplementary numerical probes, small historical summaries, atlas generator/HPC wrapper/merge, explicit Fig.3 command and seed verification, BU21 bibliography, and the submitted-a Fig.1 label, source-verified real-sample record corrections (05FW007; 100821-1/-3) with a re-rendered Fig. 8, conditional in-figure wording for Figs 3 and 8, and verified dataset licences. Historical probe comments describe exploratory models; theory_checks/README.md states their current scope and verification limits. The full per-seed atlas raw (559 MB; 187 MB gzipped) is not included. No separate public archive DOI was found in the project records searched; these raw data are not publicly archived in a verified record and may be requested from the author.",
+      "tags": [
+        "detrital zircon",
+        "provenance unmixing",
+        "non-negative matrix factorization",
+        "identifiability",
+        "condition number",
+        "method applicability",
+        "high-performance computing",
+        "Monte-Carlo"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
+      "url": "https://zenodo.org/records/23475936"
+    },
+    {
+      "base_direction_id": "registry_provenance",
       "candidate_id": "80a0a56178cb664f4fab4f73",
       "context_id": "63d2184848a60d8bdf0c095d",
       "delivery_preview_only": true,
@@ -1082,6 +1214,39 @@
       "target_repository": "Hawkar-usls/Janus-Demiurge",
       "title": "The D170 Global Mother, Physical Collar, and Unified Dark-Sector Architecture",
       "url": "https://zenodo.org/records/23459389"
+    },
+    {
+      "base_direction_id": "registry_provenance",
+      "candidate_id": "070a7b100a9b5f2e96684706",
+      "context_id": "1748c8d53cdf1df56ca4c40a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::COUNTEREVIDENCE",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "provenance",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.0417,
+      "source": "zenodo",
+      "source_context_sha256": "3fbcc475bf64f76a97d08c41a10404d5df08aa80cf55d501809155f1a63e51b1",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "XOPT v1.0.0 — Research Artifact Research artifact for sparse temporal counterfactual explanations in mixed-integer optimization with fixed continuous recourse. Included Components Source Code ( experiments/src/ ): Exact column-and-constraint generation algorithm ( XOPT.jl ). Anytime bounding and baseline initialization ( anytime.jl ). Stability radius estimation ( robustness.jl ). Auditing, calibration, and scenario separation ( audit.jl ). Unit and holding cost levers ( levers.jl , enumerate_levers.jl ). Unit commitment models on PGLib-UC instances ( uc.jl , uc2.jl ). Independent literature comparator implementation ( literature_cg.jl ). Datasets ( data/ ): Preprocessed and raw empirical benchmarks (NHS emergency attendance, Online Retail transactions). PGLib-UC power systems data ( experiments/data/pglib_uc/ ). Data provenance and SHA-256 verification records ( data/metadata/ ). Experimental Results ( experiments/results/ ): Complete primary benchmark records (320 runs) and supplementary evaluations (250 runs). Paired sensitivity and capacity classifications. Verification traces and numerical audit logs. Reproducibility : Pinned Julia environment ( Manifest.toml , Project.toml ). Automated reproduction script ( experiments/scripts/reproduce.sh ). Test suites ( experiments/test/ ). License Original Julia and Python code is licensed under the MIT License. Data sources retain their respective original licenses as documented in experiments/LICENSING.md .",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "MadBezoui/XOPT: XOPT v1.0.0: Research Artifact — Code, Data, and Experiments",
+      "url": "https://zenodo.org/records/23458562"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -1299,6 +1464,42 @@
       "target_repository": "Hawkar-usls/Janus-Demiurge",
       "title": "Benchmark datasets, trained models, and molecular-dynamics trajectories for MACE–FNO",
       "url": "https://zenodo.org/records/23459503"
+    },
+    {
+      "base_direction_id": "registry_provenance",
+      "candidate_id": "ac02bfa81a3345cc644187a9",
+      "context_id": "2dbff6c05313cf43a7943180",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::CONTROL",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "provenance"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7917,
+      "source": "zenodo",
+      "source_context_sha256": "deff67891e6e3985256e0620247982a21d1af4e95e94edce55410eeeaaa73b5d",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "This dataset accompanies the manuscript Neural-network energy follows implementation, not arithmetic. &nbsp; The companion code record could be found at https://doi.org/10.5281/zenodo.23331365 . It contains the raw measurements and processed statistics underlying the paper: raw_logs/ &nbsp;&mdash; original GPU-Z board-power telemetry logs (gb18030-encoded, sensor index 13) for four GPUs: RTX 3090 (all dynamic operators,&nbsp;NN1/NN2&nbsp;training,&nbsp;FFN/Transformer&nbsp;inference, idle series), RTX A2000, UHD 770 and RTX 4080 (idle/static&nbsp;series). These logs are the sole measurement source of every per-operation energy in the paper. processed_statistics/ &nbsp;&mdash; replicate-group statistics (mean, standard deviation, count, 95% CI) for each operator underlying SI Tables S1&ndash;S7; benchmark validation data (NN1, NN2, FFN, Transformer); Arrhenius static-power fit parameters (Extended Data Fig. 1); and GPT-4 architectural reconstruction data (Extended Data Tables 1&ndash;3). source_data/ &nbsp;&mdash; Source Data files for every table and figure of the manuscript (Table 1, Tables S1&ndash;S9, Extended Data Tables 1&ndash;3). metadata/ &nbsp;&mdash; full measurement protocol (tensor shapes, batch sizes, sampling scheme, replicate-group formation) and a data dictionary for all files. Provenance: &nbsp;raw logs &rarr; companion processing scripts &rarr; per-operation statistics &rarr; SI Tables S1&ndash;S7 &rarr; all manuscript figures. License:&nbsp; CC-BY-4.0 .",
+      "tags": [
+        "GPU energy measurement",
+        "neural network energy"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "Board-power telemetry logs and per-operation energy statistics for neural-network energy estimation",
+      "url": "https://zenodo.org/records/23474994"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -1649,179 +1850,6 @@
       "target_repository": "Hawkar-usls/Janus-Demiurge",
       "title": "Beyond Marginal Influence: Interaction-Aware Memory Selection for LLM Agents",
       "url": "https://arxiv.org/abs/2610.23266v1"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "a81dd724a4c0e7e394ef2cd0",
-      "context_id": "6e926f1949563b79d542beb9",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::CONTROL",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "control",
-        "provenance"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "zenodo",
-      "source_context_sha256": "4e54d69481e3506389bbabdf7843808f02e65d75d89fb9e3f7b0dbb0cfe829c5",
-      "source_published": "2026-10-19",
-      "source_updated": "",
-      "summary": "Algorithmic systems increasingly allocate tasks, rank performance, flag anomalies, and recommend decisions that affect employment conditions. This critical integrative review examines how algorithmic management may reshape employee voice and perceptions of procedural justice in AI-assisted organizations. It distinguishes automated recommendations from fully automated decisions, information disclosure from effective contestability, and worker participation from symbolic consultation. Established research on algorithmic control, organizational justice, algorithmic transparency, and human-AI decision structures provides the conceptual basis. The article develops an accountability chain linking data provenance, decision rights, reviewability, employee explanation, correction pathways, and evaluation of organizational outcomes. It argues that the mere presence of a human reviewer does not demonstrate meaningful oversight; review authority, adequate information, and the ability to change an outcome are separate requirements. Potential benefits of automation include consistency and early detection of harmful errors, while risks include opaque sanctions, strategic data manipulation, and the displacement of responsibility. No primary interviews, experimental observations, or quantitative effect estimates are reported. The proposed empirical agenda combines process tracing, employee surveys, decision-log audits, scenario-based experiments, and organizational comparisons. The framework can be supported only if its specified safeguards improve measurable fairness, accuracy, employee trust, and organizational performance beyond existing governance practices. algorithmic management; employee voice; procedural justice; AI governance; human oversight; organizational accountability",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "Algorithmic Management, Employee Voice, and Procedural Justice: A Governance Framework for Accountable AI-Assisted Organizations",
-      "url": "https://zenodo.org/records/23461185"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "660992174476aa934ffd5cf9",
-      "context_id": "69d5774dba9a1676d90502a4",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::COUNTEREVIDENCE",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "provenance"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "zenodo",
-      "source_context_sha256": "3791322a551c157fff9c0c228a62ad9f4981908a9b67ae0535ef6b79f61dc275",
-      "source_published": "2026-10-19",
-      "source_updated": "",
-      "summary": "Reviewed computational reproduction artifact for Fixed-Reference Scoring for Task-Consistent RUL Model Selection under Tunable Target Capping , version 2026.10.18-rc1. The archive contains author software, study configurations and selection records, 210 successful result records representing 320 fits, derived validation and standard-test predictions, thirteen reproducible manuscript summaries, and eight predefined checkpoint-audit cases. The eight distributed weights reproduced 1,414 archived inference outputs exactly in the recorded environment. Recomputing the reported summaries requires no raw NASA data. Fresh inference and training require separately obtained, hash-checked NASA C-MAPSS data; official links and checksums are included. Raw NASA files, preprocessed sensor features, installed dependencies, private logs and the other 632 weights are excluded. License scope: author software and software documentation are licensed under MIT. Author-derived predictions, configuration datasets and the eight selected weights are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). These licenses apply to their respective components, as specified in LICENSE and DATA_AND_WEIGHTS_LICENSE.md; NASA and other third-party rights remain separate. The standard test data had been inspected during earlier development. These outcomes are conditional descriptive evidence. Fixed-reference scoring is not consistently better than fixed cap125, model-seed tests do not establish conventional significance, and the 30-cycle maintenance-delay proxy does not improve. The original-precision FD002 cap125 failure and separate FP32-attention sensitivity are retained distinctly. Historical paths and preparation-status files are preserved as build provenance, not claims about current publication status. AI assistance is documented in the included assistance record. Code repository: https://github.com/KKevinZhou/fixed-reference-rul-model-selection",
-      "tags": [
-        "Remaining Useful Life",
-        "C-MAPSS"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "Fixed-Reference Scoring for Task-Consistent RUL Model Selection under Tunable Target Capping — Code and Derived Predictions",
-      "url": "https://zenodo.org/records/23464274"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "dee0351695dbec6c5e9cbfc8",
-      "context_id": "fcfce12ccb40928514725567",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::CONTROL",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "arxiv",
-      "source_context_sha256": "a53feec20ca58c500456f442c9f10b295864990f1c5c8bf24bcaeaa6e58309bf",
-      "source_published": "2026-10-16T16:20:46Z",
-      "source_updated": "2026-10-16T16:20:46Z",
-      "summary": "Quantum kernels are among the most promising methods in quantum machine learning, providing a natural way to embed data into high-dimensional Hilbert spaces via quantum circuits and capturing non-linear relationships in data. Their learning behaviour is governed by the function class they represent, which is formally characterized by the structure of the associated Reproducing Kernel Hilbert Space (RKHS). However, a theoretical characterization of this function class, and of how it depends on the choice of feature map and its hyperparameters, is still lacking. In this work, we focus on the Instantaneous Quantum Polynomial (IQP) feature map and derive a Fourier representation of the associated RKHS generators as finite sums of trigonometric functions evaluated on polynomially transformed input variables, with a finite set of accessible frequencies determined by the circuit construction and scaled by the bandwidth hyperparameter. This representation identifies three bandwidth regimes with qualitatively distinct expressive properties from localised, through multimodal, to periodic. Numerical experiments on synthetic datasets with controlled periodic and multimodal structure, across data dimensions and feature-map configurations, reproduce the three regimes in both supervised classification and unsupervised anomaly detection, benchmarked against a classical Gaussian kernel. These results make the relationship between expressivity and data structure explicit for IQP kernels: expressive power translates into a practical benefit only when the accessible frequencies match with the structure of the data, which provides a criterion for selecting the bandwidth when the periodic or multimodal structure of data is known.",
-      "tags": [
-        "quant-ph",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "Expressivity of IQP Feature-Map Quantum Kernels via Reproducing Kernel Hilbert Spaces",
-      "url": "https://arxiv.org/abs/2610.23692v1"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "ca58b44cfce547502ee0b948",
-      "context_id": "f97014a7d15a0c87307285b9",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::CONTROL",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "arxiv",
-      "source_context_sha256": "2bb582dd09a4ed73146914e92dbb7b086469a7762949b1ac0347896571a0c51a",
-      "source_published": "2026-10-16T17:33:01Z",
-      "source_updated": "2026-10-16T17:33:01Z",
-      "summary": "Lyapunov exponents (LEs) are fundamental metrics from nonlinear dynamical systems theory that quantify the average exponential rate of divergence or convergence of nearby trajectories in phase space. Over the past three decades, LEs have emerged as powerful tools across a wide range of power system problems, including transient and voltage stability assessment, chaos detection and mitigation, short-term load and renewable energy forecasting, and fault diagnosis. This paper presents a comprehensive review of these applications, covering more than 165 publications spanning from the early demonstrations of chaos in simplified machine models (1990s) to the most recent data-driven and machine-learning-augmented approaches applied to inverter-based resource (IBR)-dominated grids (2024--2026). The review is organized into four principal application domains: (i) stability analysis and real-time monitoring, (ii) chaos characterization and control, (iii) forecasting and predictability analysis, and (iv) protection, fault diagnosis, and condition monitoring. For each domain, we trace the evolution of methods, compare model-based and data-driven LE estimation strategies, identify key benchmarks and validation gaps, and outline the most pressing open research problems.",
-      "tags": [
-        "eess.SY"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "Lyapunov Exponents in Power Systems: A Survey of Theory and Applications in Stability, Control, Forecasting, and Protection",
-      "url": "https://arxiv.org/abs/2610.23809v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "ab367f1d602d7b8198bbb375",
-      "context_id": "5f3aed9cd89441ea68d9edfd",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "consensus",
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "zenodo",
-      "source_context_sha256": "28fe85544858f2683ad30082bdb28527741b035cd5bdc8470ee237196df638cb",
-      "source_published": "2026-10-18",
-      "source_updated": "",
-      "summary": "Highlights Processing Squeak pipeline: detect-usv-squeaks classifies USV / squeak / overlap with squeak extents; squeaks are embedded in their own squeak QLVM ( infer-qlvm-squeak-latents ); a squeak spectrogram store backs the explorer's Squeaks map. QLVM training ported into the package ( train-qlvm , build-qlvm-training-set , build-qlvm-squeak-training-set ); conditional maps (duration, entropy, bandwidth, loudness); content-ridge QLVM categories ( build-qlvm-categories , assign-qlvm-categories ). Noise model retrained on the broadband memmap ( train-noise-model ); broadband line-noise filter step; absolute loudness_db in the USV summary. QLVM training and evaluation sets exclude the union of noise, the squeak flag and the reference strict squeak list ( squeak_exclusion_source: &quot;union&quot; ); single-session recording types go to training. Robustness: files that later steps read back are written atomically; subprocess failures and timeouts raise; ambiguous file matches are refused instead of silently taking the first; video concatenation always overwrites its output and copies a lone video into place. Analyses Vocal-bout occupancy decoding and bout-onset tuning per unit; neuronal tuning on every QLVM map. Inter-USV interval mixture tests: bootstrap p-values are (1 + k) / (B + 1); the tied peak-count LRT ladders its observed null; the session design effect resamples centred deltas; K=1 fits report their mode. Coactivity bootstrap subsamples trials without replacement ( bootstrap_subsample_fraction ). Modeling Vocal-class targets and predictors; B-spline lag basis with a lag-varying ridge; bout-offset target. Manifold selection gates the first feature against a training-fold intercept-only predictor and screens features with an exact sign-flip test over 20 folds ( manifold_n_cv_folds ). Behavioural-response silence controls reject windows touching any vocalization; onset negatives need the same clean history as positives. GLM-HMM: final EM log-likelihood, exact BIC parameter counts, fixed label set across folds. Neural modeling (new package) Kinematic encoding, behaviour control, vocal occurrence / gating / decoding, nested and category decoding, quiet-to-vocal transfer and shift-null inference. Visualizations, GUI, notebooks QLVM overview, map-quality and category figures, property-sweep and torus traversal videos, vocal-pose still and video, bout-decoding figure. Every figure and analysis tunable lives in the settings JSON and is documented; notebooks load imports in cell 1 and settings in cell 2. Code quality ruff clean across src and tests; every test documented; the full suite passes. Breaking changes Settings: many new keys; removed generate_spectrograms.noverlap ; strict_squeak_exclusion replaced by squeak_exclusion_source ; vocal_window value during_call renamed during_vocalization ; model-selection dispatcher no longer takes --pval / --target_variable (read from settings); --frame-restriction takes FIRST LAST. Stored keys renamed with legacy readers: call_type -&gt; vocal_class , n_calls -&gt; n_vocalizations . root_directory is required by the processing classes; first_match_or_raise raises on more than one match. Results to recompute Inter-USV interval archives and K selections; manifold selections and univariate manifold runs (20 folds); onset, behavioural-response and matched-divergence extractions; coactivity results; GLM-HMM log-likelihood/BIC columns; the behaviour-control artifact and nested decoding; gating and vocal-decoding sections; QLVM training sets built with the old exclusion; summaries built with the consensus remerge ( chs_count ).",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "bartulem/usv-playpen: v0.13.0",
-      "url": "https://zenodo.org/records/23460305"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",

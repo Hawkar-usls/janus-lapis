@@ -1,5 +1,5 @@
 {
-  "batch_id": "c8ea4e7878fbdfad7019",
+  "batch_id": "2b4c19dd775535bb17a2",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -82,6 +82,48 @@
       "target_repository": "Hawkar-usls/Demi_Head",
       "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
       "url": "https://zenodo.org/records/23470807"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "aa69619ec7e065768f18bc82",
+      "context_id": "57918f3903f6648b4b890cc1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::FORWARD",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "identifiability",
+        "provenance"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.0417,
+      "source": "zenodo",
+      "source_context_sha256": "2b903bbfa6f1542916e21ba2262a2da87812fc8025ac2549ceefb63d9ce55b32",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Code and data accompanying Pan, L., \"Where does detrital-zircon source unmixing break? An analytic identifiability criterion and its large-scale Monte-Carlo verification for NMF provenance unmixing\" (submitted to Sedimentary Geology). Reproduces every figure: the synthetic data generator, the HPC scan harness (supervised and unsupervised KL-NMF), the merge and figure-generation scripts, the identifiability-theory verification scripts (direct sigma_err measurement on the (rho, n) plane) and their bias/RMSE decomposition, the per-axis results, the per-cell 3D phase-atlas summary, and the real-sample a-priori screen (Fig. 8) with fifteen real per-grain detrital-zircon age samples (Cretaceous Songliao Basin; Jurassic-Lower Cretaceous northern North China Craton margin). Code and synthetic results: MIT licence. The real age samples are redistributed under their original CC BY 4.0 licences (OneDZ, Zenodo 10.5281/zenodo.15522949; Puetz et al., Figshare 10.6084/m9.figshare.24852987.v1) with per-sample attribution; they are not re-licensed as MIT. v1.2.1 adds selected supplementary numerical probes, small historical summaries, atlas generator/HPC wrapper/merge, explicit Fig.3 command and seed verification, BU21 bibliography, and the submitted-a Fig.1 label, source-verified real-sample record corrections (05FW007; 100821-1/-3) with a re-rendered Fig. 8, conditional in-figure wording for Figs 3 and 8, and verified dataset licences. Historical probe comments describe exploratory models; theory_checks/README.md states their current scope and verification limits. The full per-seed atlas raw (559 MB; 187 MB gzipped) is not included. No separate public archive DOI was found in the project records searched; these raw data are not publicly archived in a verified record and may be requested from the author.",
+      "tags": [
+        "detrital zircon",
+        "provenance unmixing",
+        "non-negative matrix factorization",
+        "identifiability",
+        "condition number",
+        "method applicability",
+        "high-performance computing",
+        "Monte-Carlo"
+      ],
+      "target_repository": "Hawkar-usls/Demi_Head",
+      "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
+      "url": "https://zenodo.org/records/23475936"
     },
     {
       "base_direction_id": "cognition_memory_reverse",
@@ -314,6 +356,46 @@
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "49c0e02cd4ae0d44c91a8e52",
+      "context_id": "2e067b7cbb0b9a704aabab58",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::FORWARD",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "mirror",
+        "provenance"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.6667,
+      "source": "zenodo",
+      "source_context_sha256": "a5d9f8f5c29fd0fd44a77e584bac2cab787b7fb7e105a771edab9acaad910de6",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Cross-Lingual Jailbreak Evaluation &mdash; Final Thesis Data and Outputs This archive accompanies the master's thesis Multilingual Jailbreaks in Language-Specific Large Language Models (Gabriel de Jesus Coelho da Silva; advisor Carlos Becker Westphall; Universidade Federal de Santa Catarina, 2026). It contains the study's frozen source-run files and the final thesis analysis release. The source-run files remain unchanged. The study evaluates eight instruction-tuned assistants in four language-matched pairs aligned with Portuguese, Italian, Swedish, and Bulgarian, plus a separate English reference model. StrongREJECT harmful prompts were translated into thirteen attack languages with NLLB-200, submitted to the models, and scored using the official StrongREJECT evaluator after response back-translation where applicable. The analysis combines URIEL+ featural angular distance, BELEBELE-derived IF/CONS/SPEC, and tokenizer diagnostics. The final behavioral results report the graded StrongREJECT score. The choice of this graded outcome and its fractional-logit GEE analysis followed inspection of results and was not pre-specified. Historical binary outputs remain available as provenance, not as the reported thesis results. Files added in this version File Contents final_analysis_dataset.parquet Final prompt/model/language analysis dataset, including scored responses, graded outcomes, joined predictors, coverage, and exclusion fields. final_analysis_dataset.jsonl.gz Compressed JSONL form of the same analysis release. belebele_canonical_mapping.csv Mapping of saved BELEBELE prediction rows to canonical question identities. belebele_specialization.jsonl Per-model/language IF, CONS, and SPEC from the saved generation-parsed predictions. final_analysis_supporting.zip Quality and coverage records, graded result tables and diagnostics, inference robustness analyses, translation and scoring provenance, and reported BELEBELE examples. Paths mirror the evaluation repository. README_FINAL_DATA.md , PROVENANCE.json , SHA256SUMS.txt Reading guide, source-file and archive-member provenance, and SHA-256 checksums. Frozen source-run files retained from the first version File Contents dataset_frozen.parquet Original frozen run dataset with StrongREJECT scores and historical binary labels, distance, IF/CONS/SPEC, tokenizer and translation QC fields, and exclusions. frozen_jsonl_artifacts.zip JSONL views of the original dataset and evaluator records. belebele_predictions_jsonl.zip Saved per-item generation-parsed BELEBELE predictions and original specialization summaries. tables.zip Historical binary tables and diagnostics; these are not the final graded thesis results. audit.zip LLM scalar XSTS decisions and manifests for the BLASER-flagged translation queue; these are not human judgments. translations.zip NLLB-200 prompt translations, BLASER scores, round-trip diagnostics, and recorded automatic audit decisions. configs_frozen.zip Configuration snapshot for the frozen run. model_artifacts_{MODEL_NAME}.zip Per-model generation, back-translation, scoring, and BELEBELE artifacts, including available request metadata. For the reported graded results, use the release folders under outputs/releases/2026-09-29-graded-reporting/ and outputs/releases/2026-10-16-inference-robustness/ in final_analysis_supporting.zip . The companion evaluation code is at https://github.com/gabrieljcs/ufsc-thesis (commit 4a9a84a36342f022bf99eeb1dc4e7606028bf7d4 ). PROVENANCE.json identifies the local source and SHA-256 digest for each new upload and each file inside the supporting archive. Measurement and validation limits. BELEBELE option-likelihood rescoring is specified in code but was not run for this thesis; the supplied IF/CONS/SPEC values use the generation-parsed instrument. The completed prompt QC used a BLASER gate and an uncalibrated LLM scalar audit of flagged translations. Human bilingual prompt and response audits, trusted-reference spBLEU, and MultiJail validation ",
+      "tags": [
+        "jailbreak",
+        "large language models",
+        "large language model",
+        "nlp",
+        "natural language processing",
+        "safety alignment"
+      ],
+      "target_repository": "Hawkar-usls/Demi_Head",
+      "title": "Cross-Lingual Jailbreak Evaluation",
+      "url": "https://zenodo.org/records/23473765"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
       "candidate_id": "3eb926869cde9e25799fa81b",
       "context_id": "bd1f9f1c7657c6542ef9cd7a",
       "delivery_preview_only": true,
@@ -386,79 +468,6 @@
       "target_repository": "Hawkar-usls/Demi_Head",
       "title": "Regularized free deconvolution for spectral repair of resampling distortion in high-dimensional particle filters",
       "url": "https://arxiv.org/abs/2610.23448v1"
-    },
-    {
-      "base_direction_id": "mirror_bidirectional_provenance",
-      "candidate_id": "cdeda9fc04194531441c80f5",
-      "context_id": "9d12a5921fc1397de4e885b8",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "mirror_bidirectional_provenance::FORWARD",
-      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "identifiability"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.625,
-      "source": "arxiv",
-      "source_context_sha256": "d3a5f6da4fef23888d521e0c00e07b2b11ea72210431a457c841bfc171cb8734",
-      "source_published": "2026-10-16T17:58:07Z",
-      "source_updated": "2026-10-16T17:58:07Z",
-      "summary": "We study Independent Component Analysis (ICA) mixture models. These models consist of mixtures of ICA densities. An ICA density is associated with a random vector whose coordinates become mutually independent after an invertible linear transformation. ICA mixture models are nonparametric extensions of the celebrated family of Gaussian mixtures. We show that in many cases the ICA mixtures are identifiable from the collection of the observed moment tensors, that is, the mixing coefficients, linear transformations, and source moments of order up to $d$ can be identified from the moment tensors of order up to $d$ for generic parameters. We address the problem by studying the corresponding secant varieties and their algebraic properties such as dimensions and Gauss maps. In particular, for $n$-variate distributions, we establish that generically and up to the trivial scaling and permutation symmetries, when $d\\geq 5$, the parameters can be recovered uniquely for asymptotically up to $n^{d-2}/d!$ mixture components. For $d=3,4$, we show identifiability up to a finite equivalence class for asymptotically up to $n^{d-2}/d!$ and $0.5 n^{d-2}/d!$ components respectively, where for $d=4$ the mixing coefficients need to be known a priori. The obtained bounds on the component numbers have the maximum possible orders in $n$, and for $d = 3$ and $d\\geq 5$, they are also asymptotically sharp.",
-      "tags": [
-        "math.ST",
-        "math.AG"
-      ],
-      "target_repository": "Hawkar-usls/Demi_Head",
-      "title": "Identifiability from Moments in Independent Component Analysis Mixture Models",
-      "url": "https://arxiv.org/abs/2610.23846v1"
-    },
-    {
-      "base_direction_id": "mirror_bidirectional_provenance",
-      "candidate_id": "5fb26aca6484cbb8995b32c3",
-      "context_id": "5eeb9be934dd4ab73c454264",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "mirror_bidirectional_provenance::FORWARD",
-      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "identifiability"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.625,
-      "source": "zenodo",
-      "source_context_sha256": "29fb47e8bc030e79e6f87dc7eae1a0f7d52c2bae5145e4c0624f72e2c69bc755",
-      "source_published": "2026-10-19",
-      "source_updated": "",
-      "summary": "Python package and Jupyter notebooks that estimate the yield and the elemental composition (CHxOy) of the tar released in biomass pyrolysis from routine measurements (thermogram, proximate and ultimate analyses and permanent-gas composition), with closed-form elimination of the C/H/O balances, admissibility constraints, profile-likelihood intervals at three levels of evidence, a CRECK benchmark and the energy balance of a small unit.",
-      "tags": [
-        "pyrolysis",
-        "tar",
-        "data reconciliation",
-        "profile likelihood",
-        "identifiability"
-      ],
-      "target_repository": "Hawkar-usls/Demi_Head",
-      "title": "ccpyro: conservation-constrained estimation of pyrolysis products and tar composition",
-      "url": "https://zenodo.org/records/23460932"
     },
     {
       "base_direction_id": "cognition_memory_reverse",
@@ -870,10 +879,10 @@
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
-      "candidate_id": "172164e03ed308ce09303bde",
-      "context_id": "949fa6000df8d2543fd202c1",
+      "candidate_id": "aa69619ec7e065768f18bc82",
+      "context_id": "41b589dac98b0db4353e74fd",
       "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
+      "delivery_preview_truncated": false,
       "direction_id": "mirror_bidirectional_provenance::REVERSE",
       "direction_title": "Mirrors / bidirectionality / provenance / identifiability [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -885,21 +894,30 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "provenance",
-        "reconstruction"
+        "identifiability",
+        "provenance"
       ],
       "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.0,
+      "score": 9.0417,
       "source": "zenodo",
-      "source_context_sha256": "e8975cee8a6314dc5f16798a3bcb164a6198d5fb2655d3a188178fcfabeaaa37",
+      "source_context_sha256": "0408d578353f60d24ade39c0c5137582bb4cb676dd88fd0cfa9e547a9c540f8d",
       "source_published": "2026-10-19",
       "source_updated": "",
-      "summary": "Living Concept Embodiment and Real World Action Translation at the Limit English Description and Research Position This research monograph investigates how an abstract concept becomes an observable, measurable, and revisable pattern of action. It follows the full translation chain from a sourced proposition to operational rules, interfaces, institutional conduct, distributed outcomes, protected dissent, correction, rollback, and successor reconstruction. The book does not treat concepts as physical organisms or assume that institutional adoption proves success. Embodiment is framed as a falsifiable socio-technical claim: independent reviewers should be able to identify the mechanism, distinguish it from rhetoric and attention effects, observe who benefits and who bears hidden costs, and determine when a branch must be revised or stopped. The volume contains 82 chapters with five research sections per chapter, 30 linked formula derivations, 200 detailed Research Gates, DOI-anchored references, and a formula-chapter-experiment-Gate crosswalk. Its central contribution is an Embodiment Ledger that separates source meaning, interpretation, authority, action, outcome, burden distribution, feedback, remedy, and exit. Rights and irreversible-harm boundaries operate as hard vetoes rather than compensable score components. The monograph uses the Zenodo record below as its mother research ancestor and provenance anchor, while grounding scientific methods in external DOI-bearing literature from implementation science, causal inference, institutional research, participatory governance, human-computer interaction, and reproducible science. Mother research DOI: https://doi.org/10.5281/zenodo.23297856 Core research question How can an abstract concept move from language, value, or philosophical principle into observable conduct without losing its meaning, hiding its burdens, or becoming impossible to challenge? Research architecture &bull; Semantic source and protected invariants &bull; Operational translation and actor mapping &bull; Observation causal challenge and uncertainty &bull; Feedback correction rollback and remedy &bull; Successor reconstruction branching and retirement Recommended citation note This is an exploratory research architecture. Candidate equations are measurement and decision instruments, not universal laws. Empirical use requires local operational definitions, preregistration, domain expertise, affected-party governance, and independent replication.",
-      "tags": [],
+      "summary": "Code and data accompanying Pan, L., \"Where does detrital-zircon source unmixing break? An analytic identifiability criterion and its large-scale Monte-Carlo verification for NMF provenance unmixing\" (submitted to Sedimentary Geology). Reproduces every figure: the synthetic data generator, the HPC scan harness (supervised and unsupervised KL-NMF), the merge and figure-generation scripts, the identifiability-theory verification scripts (direct sigma_err measurement on the (rho, n) plane) and their bias/RMSE decomposition, the per-axis results, the per-cell 3D phase-atlas summary, and the real-sample a-priori screen (Fig. 8) with fifteen real per-grain detrital-zircon age samples (Cretaceous Songliao Basin; Jurassic-Lower Cretaceous northern North China Craton margin). Code and synthetic results: MIT licence. The real age samples are redistributed under their original CC BY 4.0 licences (OneDZ, Zenodo 10.5281/zenodo.15522949; Puetz et al., Figshare 10.6084/m9.figshare.24852987.v1) with per-sample attribution; they are not re-licensed as MIT. v1.2.1 adds selected supplementary numerical probes, small historical summaries, atlas generator/HPC wrapper/merge, explicit Fig.3 command and seed verification, BU21 bibliography, and the submitted-a Fig.1 label, source-verified real-sample record corrections (05FW007; 100821-1/-3) with a re-rendered Fig. 8, conditional in-figure wording for Figs 3 and 8, and verified dataset licences. Historical probe comments describe exploratory models; theory_checks/README.md states their current scope and verification limits. The full per-seed atlas raw (559 MB; 187 MB gzipped) is not included. No separate public archive DOI was found in the project records searched; these raw data are not publicly archived in a verified record and may be requested from the author.",
+      "tags": [
+        "detrital zircon",
+        "provenance unmixing",
+        "non-negative matrix factorization",
+        "identifiability",
+        "condition number",
+        "method applicability",
+        "high-performance computing",
+        "Monte-Carlo"
+      ],
       "target_repository": "Hawkar-usls/Demi_Head",
-      "title": "Living Concept Embodiment and Real World Action Translation at the Limit English Description and Research Position This research monograph investigates how an abstract concept becomes an observable, measurable, and revisable pattern of action. It follows the full translation chain from a sourced pro",
-      "url": "https://zenodo.org/records/23460216"
+      "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
+      "url": "https://zenodo.org/records/23475936"
     },
     {
       "base_direction_id": "cognition_memory_reverse",
@@ -1014,6 +1032,49 @@
       "target_repository": "Hawkar-usls/Demi_Head",
       "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
       "url": "https://zenodo.org/records/23470807"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "aa69619ec7e065768f18bc82",
+      "context_id": "0ac260aee75f1ec95164fe8c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "identifiability",
+        "provenance"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2083,
+      "source": "zenodo",
+      "source_context_sha256": "0a57b5fe4a760d61dc955784d5e4ab3430c5ca5bc401a94cd4e1d03a2e3ae2e7",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Code and data accompanying Pan, L., \"Where does detrital-zircon source unmixing break? An analytic identifiability criterion and its large-scale Monte-Carlo verification for NMF provenance unmixing\" (submitted to Sedimentary Geology). Reproduces every figure: the synthetic data generator, the HPC scan harness (supervised and unsupervised KL-NMF), the merge and figure-generation scripts, the identifiability-theory verification scripts (direct sigma_err measurement on the (rho, n) plane) and their bias/RMSE decomposition, the per-axis results, the per-cell 3D phase-atlas summary, and the real-sample a-priori screen (Fig. 8) with fifteen real per-grain detrital-zircon age samples (Cretaceous Songliao Basin; Jurassic-Lower Cretaceous northern North China Craton margin). Code and synthetic results: MIT licence. The real age samples are redistributed under their original CC BY 4.0 licences (OneDZ, Zenodo 10.5281/zenodo.15522949; Puetz et al., Figshare 10.6084/m9.figshare.24852987.v1) with per-sample attribution; they are not re-licensed as MIT. v1.2.1 adds selected supplementary numerical probes, small historical summaries, atlas generator/HPC wrapper/merge, explicit Fig.3 command and seed verification, BU21 bibliography, and the submitted-a Fig.1 label, source-verified real-sample record corrections (05FW007; 100821-1/-3) with a re-rendered Fig. 8, conditional in-figure wording for Figs 3 and 8, and verified dataset licences. Historical probe comments describe exploratory models; theory_checks/README.md states their current scope and verification limits. The full per-seed atlas raw (559 MB; 187 MB gzipped) is not included. No separate public archive DOI was found in the project records searched; these raw data are not publicly archived in a verified record and may be requested from the author.",
+      "tags": [
+        "detrital zircon",
+        "provenance unmixing",
+        "non-negative matrix factorization",
+        "identifiability",
+        "condition number",
+        "method applicability",
+        "high-performance computing",
+        "Monte-Carlo"
+      ],
+      "target_repository": "Hawkar-usls/Demi_Head",
+      "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
+      "url": "https://zenodo.org/records/23475936"
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
@@ -1319,41 +1380,6 @@
       "target_repository": "Hawkar-usls/Demi_Head",
       "title": "Unitary $S^1$-Manifolds with Four Fixed Points and Kosniowski's Conjecture",
       "url": "https://arxiv.org/abs/2610.23855v1"
-    },
-    {
-      "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "cd618667bbb26f6e7d2df3c5",
-      "context_id": "8ff8a5622c4a993d9de3f5db",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "cognition_memory_reverse::COUNTEREVIDENCE",
-      "direction_title": "Cognition / memory / reverse models / representation [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "representation",
-        "world model"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.0417,
-      "source": "arxiv",
-      "source_context_sha256": "c1e82948c10fb51c8646db8719e53919565998f1e301d35c041c5f19b9915501",
-      "source_published": "2026-10-16T16:42:11Z",
-      "source_updated": "2026-10-16T16:42:11Z",
-      "summary": "Understanding and simulating how subjective cognition and mental states emerge, evolve, and shape behavior is essential for advancing artificial intelligence toward deeper social cognition and general intelligence. Existing large language models (LLMs) and Theory of Mind (ToM) methods primarily infer mental states from linguistic information, lacking unified mechanisms for subjective world construction, cognitive-psychological interactions, dynamic evolution, and historical dependencies. This paper introduces the Mental World Model (MWM) and its implementation, the Multi-Branch Mental Evolution Architecture (MMEA), which explicitly constructs subjective worlds, models interactions between cognition and mental states, and simulates continuous mental evolution shaped by historical experiences. On DynToM and RecToM, MMEA achieves 96.48% and 94.00% accuracy, respectively, outperforming leading LLMs and specialized ToM methods. Additional experiments demonstrate improvements of 28.7, 39.3, and 16.6 percentage points in mental state and behavior prediction, long-sequence prediction, and implicit mental state inference, respectively. The results demonstrate that MMEA provides an interpretable framework for continuous mental modeling, enabling AI to move beyond surface-level semantic representations to infer individuals' underlying mental states from linguistic information and dynamically simulate their internal cognitive processes and evolution over time. MWM also provides a promising foundation for causal reasoning, personalized AI, sustained human-AI interaction, and future advances toward artificial general intelligence (AGI).",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Demi_Head",
-      "title": "Beyond Large Language Models: A Mental World Model Framework for Mental Modeling, Simulation, Evolution, and Interpretability",
-      "url": "https://arxiv.org/abs/2610.23722v1"
     },
     {
       "base_direction_id": "cognition_memory_reverse",

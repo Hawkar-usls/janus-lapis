@@ -1,5 +1,5 @@
 {
-  "batch_id": "28cbf6deb2c190d93d02",
+  "batch_id": "be17ccd81b46847e89b1",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -1073,6 +1073,49 @@
     },
     {
       "base_direction_id": "registry_provenance",
+      "candidate_id": "aa69619ec7e065768f18bc82",
+      "context_id": "13ac6062e0119e6832c54429",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::COUNTEREVIDENCE",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "provenance",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2083,
+      "source": "zenodo",
+      "source_context_sha256": "3bb761ea1615c3a8362e8fa68ead67209bacade4d75ec77b9425d257c8f71369",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Code and data accompanying Pan, L., \"Where does detrital-zircon source unmixing break? An analytic identifiability criterion and its large-scale Monte-Carlo verification for NMF provenance unmixing\" (submitted to Sedimentary Geology). Reproduces every figure: the synthetic data generator, the HPC scan harness (supervised and unsupervised KL-NMF), the merge and figure-generation scripts, the identifiability-theory verification scripts (direct sigma_err measurement on the (rho, n) plane) and their bias/RMSE decomposition, the per-axis results, the per-cell 3D phase-atlas summary, and the real-sample a-priori screen (Fig. 8) with fifteen real per-grain detrital-zircon age samples (Cretaceous Songliao Basin; Jurassic-Lower Cretaceous northern North China Craton margin). Code and synthetic results: MIT licence. The real age samples are redistributed under their original CC BY 4.0 licences (OneDZ, Zenodo 10.5281/zenodo.15522949; Puetz et al., Figshare 10.6084/m9.figshare.24852987.v1) with per-sample attribution; they are not re-licensed as MIT. v1.2.1 adds selected supplementary numerical probes, small historical summaries, atlas generator/HPC wrapper/merge, explicit Fig.3 command and seed verification, BU21 bibliography, and the submitted-a Fig.1 label, source-verified real-sample record corrections (05FW007; 100821-1/-3) with a re-rendered Fig. 8, conditional in-figure wording for Figs 3 and 8, and verified dataset licences. Historical probe comments describe exploratory models; theory_checks/README.md states their current scope and verification limits. The full per-seed atlas raw (559 MB; 187 MB gzipped) is not included. No separate public archive DOI was found in the project records searched; these raw data are not publicly archived in a verified record and may be requested from the author.",
+      "tags": [
+        "detrital zircon",
+        "provenance unmixing",
+        "non-negative matrix factorization",
+        "identifiability",
+        "condition number",
+        "method applicability",
+        "high-performance computing",
+        "Monte-Carlo"
+      ],
+      "target_repository": "Hawkar-usls/Janus_Genesis",
+      "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
+      "url": "https://zenodo.org/records/23475936"
+    },
+    {
+      "base_direction_id": "registry_provenance",
       "candidate_id": "80a0a56178cb664f4fab4f73",
       "context_id": "bca734473a1b517f8a89b608",
       "delivery_preview_only": true,
@@ -1224,46 +1267,6 @@
     },
     {
       "base_direction_id": "registry_provenance",
-      "candidate_id": "495fa966090febf96b9daf09",
-      "context_id": "48b28c0c6825983eba6481bf",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::COUNTEREVIDENCE",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "provenance",
-        "reproducibility"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.0417,
-      "source": "zenodo",
-      "source_context_sha256": "43b563333f33a41eb0ea659bde912c21cfef51bba63e00b98bfd701087b79a58",
-      "source_published": "2026-10-18",
-      "source_updated": "",
-      "summary": "Anonymous, AI-assisted, unrefereed candidate. A bounded audit of one published five-variable 2-SAT transformer separates semantic ranking, fixed-threshold fidelity, numerical effective-state geometry, agreement with the native answer, and Boolean clause-edit sufficiency. A fresh balanced bank of 4096 formulas supplies additional same-checkpoint evidence; it is not independently trained-model replication. The public package documents exact replay scope and exclusions. Some historical image-dependent checks cannot be reproduced from the public files. Native replay requires separately retrieved, hash-pinned upstream source dependencies that are not redistributed here. Short independent-training feasibility attempts did not meet the predeclared competence threshold and supply no confirmatory representation evidence. Internal AI-assisted review and producer replay are not external peer review, independent reproduction or formal verification. CC0 applies only to original research prose, diagrams and data. Original executable code is MIT-licensed; retained third-party components retain their own terms. Consult LICENSES.md and the dependency provenance for component-level boundaries.",
-      "tags": [
-        "mechanistic interpretability",
-        "2-SAT",
-        "semantic ranking",
-        "threshold fidelity",
-        "causal abstraction",
-        "reproducibility"
-      ],
-      "target_repository": "Hawkar-usls/Janus_Genesis",
-      "title": "Assignment-Aligned Effective States in a 2-SAT Transformer",
-      "url": "https://zenodo.org/records/23454637"
-    },
-    {
-      "base_direction_id": "registry_provenance",
       "candidate_id": "17485643e29593f704113ada",
       "context_id": "400607d825fe90fcfea526f9",
       "delivery_preview_only": true,
@@ -1302,8 +1305,8 @@
     },
     {
       "base_direction_id": "registry_provenance",
-      "candidate_id": "4dc5238782bc042a14d96c32",
-      "context_id": "1bb1f07e668c9ed9bc652e47",
+      "candidate_id": "e370bf399593bd75063d47b8",
+      "context_id": "274adb53990e0d0885a8d361",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "registry_provenance::COUNTEREVIDENCE",
@@ -1324,20 +1327,23 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 9.0417,
       "source": "zenodo",
-      "source_context_sha256": "537328f32b4078e2c585787346eff98f13b03add3399d7477677c5070efa0d94",
-      "source_published": "2026-10-18",
+      "source_context_sha256": "98fd6e3cc0558e34993b36a247e4ddec15545eaf5c2e14a493773f8abf940d3e",
+      "source_published": "2026-10-19",
       "source_updated": "",
-      "summary": "This computational package accompanies the Neuro-Symbolic MAPE-K governance testbed for agentic retrieval-augmented generation at the edge. It provides Python source, experimental inputs, measured outputs, provenance manifests, analysis tables, figures and readable evidence reports for two related campaigns: the October 2026 MAPE-K controller campaign and the separate 18 October 2026 dense-retriever control campaign. The retriever control records 3,744 retrieval trials and 640 clean-validation query evaluations across sparse, pretrained dense and clean-fitted dense retrievers. It performs no new generator or controller evaluation. The package preserves campaign-specific directory layouts and historical execution records. A dependency-light deterministic template smoke test supports inspection without language-model downloads or CUDA. Full inference and fitting used NVIDIA Jetson Xavier NX 8 GB and platform-specific CUDA/PyTorch environments. Original host paths and observed package inventories are provenance records, not a universal portable lockfile; full main-campaign model weights are referenced by revision and checksum, while the retriever campaign includes its pretrained and clean-fitted checkpoints. A release verifier checks the curated file manifest and metadata. The original retrieval verifier also requires original source paths for its final host-specific integrity checks. Original project software is MIT licensed (SPDX: MIT), with collective copyright held by the MAPE-K contributors. Third-party terms remain applicable: O*NET 31.0 and UCI Adult-derived data and fixtures are CC BY 4.0 with attribution and modification notices; MiniLM model material and its clean-fitted derivative are Apache-2.0; BGE model material and its clean-fitted derivative are MIT with upstream attribution. File-specific notices, exact model revisions and checksums are retained. Experimental counts reuse base profiles and should not be interpreted as independent efficacy replications. The evidence does not establish population fairness, human-validated answer-quality superiority, or a guarantee of safe retrieved evidence.",
+      "summary": "This record contains the pair-level summaries, model-level matrices and analysis scripts for the manuscript Static Embeddings Are Poor Cross-Architecture Proxies: A Metric-Sensitive Reassessment . The archive covers 231 static pairs from 22 language models, a 153-pair multi-family static-to-contextual set from 18 models (Qwen 7, Gemma 4, SmolLM 4, Phi 3), and 91 layer-wise pairs from 14 models. The balanced set is analyzed with angular and Euclidean RDMs; the angular metric is primary. The archive includes the 22 x 22 Mantel, CKA, distance-correlation and Gromov-Wasserstein matrices, the 13 x 13 legacy proxy matrices, the 14 x 14 layer-wise Mantel and Procrustes matrices, the 153-pair extension table, the crossed random-effects inputs and outputs, and the scripts that reproduce them. Raw model weights, token-level distance matrices and cached hidden states are not included. The Procrustes values are shared-token subspace statistics, not full-width alignment. The static and multi-family sets are Qwen-heavy; the manuscript reports family-specific correlations and does not claim a uniform within-family effect. Code is released under GPL-3.0-or-later. Data and derived tables are released under CC BY 4.0. See README.md and PROVENANCE.md for file mapping, reproduction instructions and caveats.",
       "tags": [
-        "MAPE-K",
-        "neuro-symbolic AI",
-        "agentic RAG",
-        "edge AI",
-        "computational reproducibility"
+        "static embeddings",
+        "contextual representations",
+        "representational similarity",
+        "Mantel test",
+        "Procrustes analysis",
+        "large language models",
+        "Qwen",
+        "reproducibility"
       ],
       "target_repository": "Hawkar-usls/Janus_Genesis",
-      "title": "Neuro-Symbolic MAPE-K: Computational Package and Retriever Control",
-      "url": "https://zenodo.org/records/23459940"
+      "title": "Code and derived data for: Static Embeddings Are Poor Cross-Architecture Proxies: A Contextual Reassessment",
+      "url": "https://zenodo.org/records/23475945"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -1510,8 +1516,8 @@
     },
     {
       "base_direction_id": "registry_provenance",
-      "candidate_id": "495fa966090febf96b9daf09",
-      "context_id": "b9cf6dad6e7c14f0f313c846",
+      "candidate_id": "9065efbc788e2aeeadaa2d84",
+      "context_id": "53528b02d2b8345a5717afb1",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "registry_provenance::CONTROL",
@@ -1525,29 +1531,22 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "provenance",
+        "baseline",
         "replication",
         "reproducibility"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 13.5,
+      "score": 13.4167,
       "source": "zenodo",
-      "source_context_sha256": "c459c96cb7850cbb6906502de212ee8400ddfadf677986381ad3b7b19e1d931a",
-      "source_published": "2026-10-18",
+      "source_context_sha256": "472c2c6ac2f4be7f335ea583c2ee0c63bd0e04436394e6fc3b9a79aa58c21774",
+      "source_published": "2026-10-19",
       "source_updated": "",
-      "summary": "Anonymous, AI-assisted, unrefereed candidate. A bounded audit of one published five-variable 2-SAT transformer separates semantic ranking, fixed-threshold fidelity, numerical effective-state geometry, agreement with the native answer, and Boolean clause-edit sufficiency. A fresh balanced bank of 4096 formulas supplies additional same-checkpoint evidence; it is not independently trained-model replication. The public package documents exact replay scope and exclusions. Some historical image-dependent checks cannot be reproduced from the public files. Native replay requires separately retrieved, hash-pinned upstream source dependencies that are not redistributed here. Short independent-training feasibility attempts did not meet the predeclared competence threshold and supply no confirmatory representation evidence. Internal AI-assisted review and producer replay are not external peer review, independent reproduction or formal verification. CC0 applies only to original research prose, diagrams and data. Original executable code is MIT-licensed; retained third-party components retain their own terms. Consult LICENSES.md and the dependency provenance for component-level boundaries.",
-      "tags": [
-        "mechanistic interpretability",
-        "2-SAT",
-        "semantic ranking",
-        "threshold fidelity",
-        "causal abstraction",
-        "reproducibility"
-      ],
+      "summary": "This repository provides the reproducible analysis materials accompanying the research article &ldquo;Bitcoin and Sovereign Reserve Management: Portfolio Allocation, Model Sensitivity, and Downside Risk.&rdquo; The study examines the sensitivity of Bitcoin allocations within a sovereign reserve-related portfolio framework, with particular emphasis on measurement consistency, model specification, allocation stability and downside risk. The empirical framework combines U.S. official reserve positions, Treasury gold holdings valued at market prices, and Bitcoin market-price observations. The principal estimation period covers April 2016 to July 2026, comprising 124 consecutive monthly changes. An extended historical sample beginning in January 2013 is used for sensitivity analysis. The analysis applies a Black&ndash;Litterman allocation framework with explicit budget constraints and alternative portfolio specifications. The reproducibility framework covers baseline portfolio estimation, alternative Bitcoin views and confidence levels, long-only allocation constraints, covariance sensitivity, rolling-window estimation, joint stationary bootstrap resampling and historical and hypothetical stress scenarios. Risk analysis includes volatility, Value at Risk (VaR95) and Conditional Value at Risk (CVaR95), with particular attention to adverse Bitcoin market conditions. The associated materials document the empirical procedures used to examine the sensitivity of estimated Bitcoin weights to data construction, estimation windows, covariance assumptions and portfolio constraints. They support independent examination of the quantitative results, robustness analyses, tables and figures reported in the accompanying research. The study uses publicly available financial and institutional data from the Board of Governors of the Federal Reserve System, U.S. Treasury Fiscal Data, the World Bank and Coin Metrics. Associated research article: Bitcoin and Sovereign Reserve Management: Portfolio Allocation, Model Sensitivity, and Downside Risk. Research area: Financial Economics, Sovereign Reserve Management, Portfolio Optimization and Cryptocurrency Risk.",
+      "tags": [],
       "target_repository": "Hawkar-usls/Janus_Genesis",
-      "title": "Assignment-Aligned Effective States in a 2-SAT Transformer",
-      "url": "https://zenodo.org/records/23454637"
+      "title": "Bitcoin and Sovereign Reserve Management: Reproducible Analysis and Replication Package",
+      "url": "https://zenodo.org/records/23475742"
     },
     {
       "base_direction_id": "registry_provenance",

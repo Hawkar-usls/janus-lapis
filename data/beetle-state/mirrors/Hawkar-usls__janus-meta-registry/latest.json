@@ -1,5 +1,5 @@
 {
-  "batch_id": "fea965f6264a2782e155",
+  "batch_id": "33d16139062234a9c3cc",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -45,6 +45,48 @@
       "target_repository": "Hawkar-usls/janus-meta-registry",
       "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
       "url": "https://zenodo.org/records/23470807"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "aa69619ec7e065768f18bc82",
+      "context_id": "57918f3903f6648b4b890cc1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::FORWARD",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "identifiability",
+        "provenance"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.0417,
+      "source": "zenodo",
+      "source_context_sha256": "2b903bbfa6f1542916e21ba2262a2da87812fc8025ac2549ceefb63d9ce55b32",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Code and data accompanying Pan, L., \"Where does detrital-zircon source unmixing break? An analytic identifiability criterion and its large-scale Monte-Carlo verification for NMF provenance unmixing\" (submitted to Sedimentary Geology). Reproduces every figure: the synthetic data generator, the HPC scan harness (supervised and unsupervised KL-NMF), the merge and figure-generation scripts, the identifiability-theory verification scripts (direct sigma_err measurement on the (rho, n) plane) and their bias/RMSE decomposition, the per-axis results, the per-cell 3D phase-atlas summary, and the real-sample a-priori screen (Fig. 8) with fifteen real per-grain detrital-zircon age samples (Cretaceous Songliao Basin; Jurassic-Lower Cretaceous northern North China Craton margin). Code and synthetic results: MIT licence. The real age samples are redistributed under their original CC BY 4.0 licences (OneDZ, Zenodo 10.5281/zenodo.15522949; Puetz et al., Figshare 10.6084/m9.figshare.24852987.v1) with per-sample attribution; they are not re-licensed as MIT. v1.2.1 adds selected supplementary numerical probes, small historical summaries, atlas generator/HPC wrapper/merge, explicit Fig.3 command and seed verification, BU21 bibliography, and the submitted-a Fig.1 label, source-verified real-sample record corrections (05FW007; 100821-1/-3) with a re-rendered Fig. 8, conditional in-figure wording for Figs 3 and 8, and verified dataset licences. Historical probe comments describe exploratory models; theory_checks/README.md states their current scope and verification limits. The full per-seed atlas raw (559 MB; 187 MB gzipped) is not included. No separate public archive DOI was found in the project records searched; these raw data are not publicly archived in a verified record and may be requested from the author.",
+      "tags": [
+        "detrital zircon",
+        "provenance unmixing",
+        "non-negative matrix factorization",
+        "identifiability",
+        "condition number",
+        "method applicability",
+        "high-performance computing",
+        "Monte-Carlo"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
+      "url": "https://zenodo.org/records/23475936"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -181,6 +223,46 @@
       "target_repository": "Hawkar-usls/janus-meta-registry",
       "title": "String Scattering in Amplitude and Phase",
       "url": "https://zenodo.org/records/23471245"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "49c0e02cd4ae0d44c91a8e52",
+      "context_id": "2e067b7cbb0b9a704aabab58",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::FORWARD",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "mirror",
+        "provenance"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.6667,
+      "source": "zenodo",
+      "source_context_sha256": "a5d9f8f5c29fd0fd44a77e584bac2cab787b7fb7e105a771edab9acaad910de6",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Cross-Lingual Jailbreak Evaluation &mdash; Final Thesis Data and Outputs This archive accompanies the master's thesis Multilingual Jailbreaks in Language-Specific Large Language Models (Gabriel de Jesus Coelho da Silva; advisor Carlos Becker Westphall; Universidade Federal de Santa Catarina, 2026). It contains the study's frozen source-run files and the final thesis analysis release. The source-run files remain unchanged. The study evaluates eight instruction-tuned assistants in four language-matched pairs aligned with Portuguese, Italian, Swedish, and Bulgarian, plus a separate English reference model. StrongREJECT harmful prompts were translated into thirteen attack languages with NLLB-200, submitted to the models, and scored using the official StrongREJECT evaluator after response back-translation where applicable. The analysis combines URIEL+ featural angular distance, BELEBELE-derived IF/CONS/SPEC, and tokenizer diagnostics. The final behavioral results report the graded StrongREJECT score. The choice of this graded outcome and its fractional-logit GEE analysis followed inspection of results and was not pre-specified. Historical binary outputs remain available as provenance, not as the reported thesis results. Files added in this version File Contents final_analysis_dataset.parquet Final prompt/model/language analysis dataset, including scored responses, graded outcomes, joined predictors, coverage, and exclusion fields. final_analysis_dataset.jsonl.gz Compressed JSONL form of the same analysis release. belebele_canonical_mapping.csv Mapping of saved BELEBELE prediction rows to canonical question identities. belebele_specialization.jsonl Per-model/language IF, CONS, and SPEC from the saved generation-parsed predictions. final_analysis_supporting.zip Quality and coverage records, graded result tables and diagnostics, inference robustness analyses, translation and scoring provenance, and reported BELEBELE examples. Paths mirror the evaluation repository. README_FINAL_DATA.md , PROVENANCE.json , SHA256SUMS.txt Reading guide, source-file and archive-member provenance, and SHA-256 checksums. Frozen source-run files retained from the first version File Contents dataset_frozen.parquet Original frozen run dataset with StrongREJECT scores and historical binary labels, distance, IF/CONS/SPEC, tokenizer and translation QC fields, and exclusions. frozen_jsonl_artifacts.zip JSONL views of the original dataset and evaluator records. belebele_predictions_jsonl.zip Saved per-item generation-parsed BELEBELE predictions and original specialization summaries. tables.zip Historical binary tables and diagnostics; these are not the final graded thesis results. audit.zip LLM scalar XSTS decisions and manifests for the BLASER-flagged translation queue; these are not human judgments. translations.zip NLLB-200 prompt translations, BLASER scores, round-trip diagnostics, and recorded automatic audit decisions. configs_frozen.zip Configuration snapshot for the frozen run. model_artifacts_{MODEL_NAME}.zip Per-model generation, back-translation, scoring, and BELEBELE artifacts, including available request metadata. For the reported graded results, use the release folders under outputs/releases/2026-09-29-graded-reporting/ and outputs/releases/2026-10-16-inference-robustness/ in final_analysis_supporting.zip . The companion evaluation code is at https://github.com/gabrieljcs/ufsc-thesis (commit 4a9a84a36342f022bf99eeb1dc4e7606028bf7d4 ). PROVENANCE.json identifies the local source and SHA-256 digest for each new upload and each file inside the supporting archive. Measurement and validation limits. BELEBELE option-likelihood rescoring is specified in code but was not run for this thesis; the supplied IF/CONS/SPEC values use the generation-parsed instrument. The completed prompt QC used a BLASER gate and an uncalibrated LLM scalar audit of flagged translations. Human bilingual prompt and response audits, trusted-reference spBLEU, and MultiJail validation ",
+      "tags": [
+        "jailbreak",
+        "large language models",
+        "large language model",
+        "nlp",
+        "natural language processing",
+        "safety alignment"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Cross-Lingual Jailbreak Evaluation",
+      "url": "https://zenodo.org/records/23473765"
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
@@ -397,76 +479,6 @@
       "target_repository": "Hawkar-usls/janus-meta-registry",
       "title": "Bayesian Geophysical Inversion using Stein Mixture Variational Inference for Multimodal or Complex Solutions",
       "url": "https://arxiv.org/abs/2610.23603v1"
-    },
-    {
-      "base_direction_id": "mirror_bidirectional_provenance",
-      "candidate_id": "6ae16ed79cf2173ef52f34f4",
-      "context_id": "21606dc9c1f5560aa149b5fb",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "mirror_bidirectional_provenance::FORWARD",
-      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "identifiability"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.625,
-      "source": "arxiv",
-      "source_context_sha256": "551852934c63fb75b3a6a74b0ebc7722faea3aa5e39e5f4b3bf35a3761581141",
-      "source_published": "2026-10-16T14:37:57Z",
-      "source_updated": "2026-10-16T14:37:57Z",
-      "summary": "Learning causal structure from data requires assumptions about mechanisms, noises, observation schemes, and interventions. Historically, causal discovery has relied primarily on conditional independence. This review focuses on modern causal discovery methods that exploit properties of distributions beyond conditional independence. Our organizing principle separates the source of identification from the statistical estimator and its computational implementation. This perspective connects conditional-independence methods with distributional asymmetries, conditional-moment restrictions, and variation across environments or individuals. We examine discovery under latent confounding and feedback, distinguishing causal information about observed variables from reconstruction of latent structure and emphasizing the additional semantics required by cyclic models. We also distinguish population identification, frequentist and Bayesian consistency, uncertainty quantification, and algorithmic guarantees. Throughout, examples show why the same observational distribution can support different conclusions under different model classes. We conclude with guidance for comparing methods at their identifiable targets and a research agenda for uncertainty, heterogeneous populations, non-scalar variables, and the intersection of discrete data, feedback, and hidden confounding.",
-      "tags": [
-        "stat.ME",
-        "cs.LG",
-        "stat.ML"
-      ],
-      "target_repository": "Hawkar-usls/janus-meta-registry",
-      "title": "Causal Discovery beyond Conditional Independence: Identifiability, Algorithms, and Statistical Inference for Directed Acyclic and Cyclic Graphs",
-      "url": "https://arxiv.org/abs/2610.23543v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "e5ca4f5f09bfee059b514226",
-      "context_id": "260bc6f44969452050040e97",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::FORWARD",
-      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "counterexample"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "arxiv",
-      "source_context_sha256": "62b665d9a4d520ddf49fc1a43c0168a9f8dcad2bb4657b75d1b189ba872412bd",
-      "source_published": "2026-10-16T17:59:48Z",
-      "source_updated": "2026-10-16T17:59:48Z",
-      "summary": "We study unitary \\(S^1\\)-manifolds with four isolated fixed points in relation to Kosniowski's conjectural inequality \\(4χ(M)>\\dim M\\). For every integer \\(m\\ge3\\), we show that there exists a unitary \\(S^1\\)-manifold \\(M_m^{18}\\) with exactly four isolated fixed points, and these manifolds are pairwise distinct and nonzero in ordinary complex bordism. Since \\(χ(M_m^{18})=4\\), they give an infinite family of counterexamples to \\(4χ(M)>\\dim M\\). By gluing two blocks formed by \\(G_2/SU(3)\\cong S^6\\) and the unit disk $D(V)$ of 12- dimensional real $S^1$-representation $V$ along their equivariantly identified free boundaries, we explicitly construct such a manifold $M^{18}_3$. We also prove that the four-point case is null-bordant in real dimension \\(16\\) and in every real dimension greater than \\(18\\); hence \\(18\\) is the smallest dimension in which such a counterexample occurs.",
-      "tags": [
-        "math.AT"
-      ],
-      "target_repository": "Hawkar-usls/janus-meta-registry",
-      "title": "Unitary $S^1$-Manifolds with Four Fixed Points and Kosniowski's Conjecture",
-      "url": "https://arxiv.org/abs/2610.23855v1"
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
@@ -765,6 +777,84 @@
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "aa69619ec7e065768f18bc82",
+      "context_id": "41b589dac98b0db4353e74fd",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::REVERSE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "identifiability",
+        "provenance"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.0417,
+      "source": "zenodo",
+      "source_context_sha256": "0408d578353f60d24ade39c0c5137582bb4cb676dd88fd0cfa9e547a9c540f8d",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Code and data accompanying Pan, L., \"Where does detrital-zircon source unmixing break? An analytic identifiability criterion and its large-scale Monte-Carlo verification for NMF provenance unmixing\" (submitted to Sedimentary Geology). Reproduces every figure: the synthetic data generator, the HPC scan harness (supervised and unsupervised KL-NMF), the merge and figure-generation scripts, the identifiability-theory verification scripts (direct sigma_err measurement on the (rho, n) plane) and their bias/RMSE decomposition, the per-axis results, the per-cell 3D phase-atlas summary, and the real-sample a-priori screen (Fig. 8) with fifteen real per-grain detrital-zircon age samples (Cretaceous Songliao Basin; Jurassic-Lower Cretaceous northern North China Craton margin). Code and synthetic results: MIT licence. The real age samples are redistributed under their original CC BY 4.0 licences (OneDZ, Zenodo 10.5281/zenodo.15522949; Puetz et al., Figshare 10.6084/m9.figshare.24852987.v1) with per-sample attribution; they are not re-licensed as MIT. v1.2.1 adds selected supplementary numerical probes, small historical summaries, atlas generator/HPC wrapper/merge, explicit Fig.3 command and seed verification, BU21 bibliography, and the submitted-a Fig.1 label, source-verified real-sample record corrections (05FW007; 100821-1/-3) with a re-rendered Fig. 8, conditional in-figure wording for Figs 3 and 8, and verified dataset licences. Historical probe comments describe exploratory models; theory_checks/README.md states their current scope and verification limits. The full per-seed atlas raw (559 MB; 187 MB gzipped) is not included. No separate public archive DOI was found in the project records searched; these raw data are not publicly archived in a verified record and may be requested from the author.",
+      "tags": [
+        "detrital zircon",
+        "provenance unmixing",
+        "non-negative matrix factorization",
+        "identifiability",
+        "condition number",
+        "method applicability",
+        "high-performance computing",
+        "Monte-Carlo"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
+      "url": "https://zenodo.org/records/23475936"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "ac02bfa81a3345cc644187a9",
+      "context_id": "aee0acedbbf8a99458e66002",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::REVERSE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "provenance",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.0,
+      "source": "zenodo",
+      "source_context_sha256": "5ae9c55b62662a6f2f47e3692a6faef89dffc53d627c1ac91410a2becb913868",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "This dataset accompanies the manuscript Neural-network energy follows implementation, not arithmetic. &nbsp; The companion code record could be found at https://doi.org/10.5281/zenodo.23331365 . It contains the raw measurements and processed statistics underlying the paper: raw_logs/ &nbsp;&mdash; original GPU-Z board-power telemetry logs (gb18030-encoded, sensor index 13) for four GPUs: RTX 3090 (all dynamic operators,&nbsp;NN1/NN2&nbsp;training,&nbsp;FFN/Transformer&nbsp;inference, idle series), RTX A2000, UHD 770 and RTX 4080 (idle/static&nbsp;series). These logs are the sole measurement source of every per-operation energy in the paper. processed_statistics/ &nbsp;&mdash; replicate-group statistics (mean, standard deviation, count, 95% CI) for each operator underlying SI Tables S1&ndash;S7; benchmark validation data (NN1, NN2, FFN, Transformer); Arrhenius static-power fit parameters (Extended Data Fig. 1); and GPT-4 architectural reconstruction data (Extended Data Tables 1&ndash;3). source_data/ &nbsp;&mdash; Source Data files for every table and figure of the manuscript (Table 1, Tables S1&ndash;S9, Extended Data Tables 1&ndash;3). metadata/ &nbsp;&mdash; full measurement protocol (tensor shapes, batch sizes, sampling scheme, replicate-group formation) and a data dictionary for all files. Provenance: &nbsp;raw logs &rarr; companion processing scripts &rarr; per-operation statistics &rarr; SI Tables S1&ndash;S7 &rarr; all manuscript figures. License:&nbsp; CC-BY-4.0 .",
+      "tags": [
+        "GPU energy measurement",
+        "neural network energy"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Board-power telemetry logs and per-operation energy statistics for neural-network energy estimation",
+      "url": "https://zenodo.org/records/23474994"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
       "candidate_id": "172164e03ed308ce09303bde",
       "context_id": "949fa6000df8d2543fd202c1",
       "delivery_preview_only": true,
@@ -831,76 +921,6 @@
       "target_repository": "Hawkar-usls/janus-meta-registry",
       "title": "DriveWorld3D Evidence Constrained 3D World Modeling and Generative Simulation for Real-World Autonomous Driving",
       "url": "https://arxiv.org/abs/2610.22450v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "6eaa3912cc9e4a31c40b1734",
-      "context_id": "74df72881856b2ae3b8ee08c",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.875,
-      "source": "arxiv",
-      "source_context_sha256": "c1164c29c7090ccb2e0b4f4dfab016ba3bd3a454e69ae37949cba3595445f5a2",
-      "source_published": "2026-10-16T12:49:58Z",
-      "source_updated": "2026-10-16T12:49:58Z",
-      "summary": "Extracting generalized parton distributions (GPDs) from experimental observables, the convolution structures denoted as Compton form factors (CFFs), requires solving an intrinsic inverse problem. We presented results using NNGPD, a flexible regression method based on a physics-informed neural-network framework, for reconstructing GPDs using integral constraints -- including CFFs and Mellin moments -- and symmetry and endpoint constraints. The approach does not require pointwise training information on the underlying GPDs. Closure tests using pseudodata generated from a phenomenological model demonstrate the ability of the framework to reproduce the principal features of the underlying distributions across a range of kinematics. A Bayesian neural-network formulation is also introduced to address uncertainties associated with the reconstruction. Finally, we discussed a broader question in GPD phenomenology: whether the complete momentum-fraction dependence of GPDs is necessary to extract physical quantities such as partonic angular momentum. This motivates investigating approaches that infer Mellin moments directly from experimentally constrained CFFs, while quantifying the remaining ambiguities.",
-      "tags": [
-        "hep-ph"
-      ],
-      "target_repository": "Hawkar-usls/janus-meta-registry",
-      "title": "Neural Network Representation of Generalized Parton Distributions (NNGPD)",
-      "url": "https://arxiv.org/abs/2610.23390v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "ecfa02b7da440cc9bfaac5fb",
-      "context_id": "cbe64d6f136253adcf130617",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "inversion"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "arxiv",
-      "source_context_sha256": "33e9132008361e8f8950d9d06e4dd9031cb30a9c43ec7434856121e1fa62f5d4",
-      "source_published": "2026-10-16T13:30:52Z",
-      "source_updated": "2026-10-16T13:30:52Z",
-      "summary": "Resampling is the standard remedy for weight degeneracy in particle filters, but in high dimensions it distorts the spectrum of the ensemble covariance in a way that is computable from the importance weights. This paper studies the inverse problem: recovering the pre-resampling spectrum from the observed weights and the empirical spectrum alone, and using it without biasing the filter. We first show that the forward spectral law extends to random importance weights once one conditions on the weights together with the realized offspring counts, rather than on the weights alone. We then construct a regularized free-deconvolution estimator, prove its consistency with an explicit error budget at a fixed resolution scale, and certify model mismatch through a computable forward residual. The repaired spectrum enters the filter only as the preconditioner of a Metropolis-adjusted rejuvenation move, so that spectral error affects mixing efficiency but not the invariant target. For the full filtering cycle, we derive a geometrically summable error recursion under stable scalar dynamics and an explicit law for the cost of abstaining from repair. Pre-registered simulations show that the inversion reduces the spectral error by an order of magnitude, that the corrected preconditioner recovers about 90% of the oracle's sampling efficiency in an anisotropic regime, and that the cost of abstention depends on when abstentions occur rather than on how many. The repair recovers eigenvalue laws, not eigenvectors, and is certified only within an explicitly stated exogenous-weight regime.",
-      "tags": [
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/janus-meta-registry",
-      "title": "Regularized free deconvolution for spectral repair of resampling distortion in high-dimensional particle filters",
-      "url": "https://arxiv.org/abs/2610.23448v1"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -1146,6 +1166,92 @@
     },
     {
       "base_direction_id": "registry_provenance",
+      "candidate_id": "aa69619ec7e065768f18bc82",
+      "context_id": "13ac6062e0119e6832c54429",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::COUNTEREVIDENCE",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "provenance",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2083,
+      "source": "zenodo",
+      "source_context_sha256": "3bb761ea1615c3a8362e8fa68ead67209bacade4d75ec77b9425d257c8f71369",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Code and data accompanying Pan, L., \"Where does detrital-zircon source unmixing break? An analytic identifiability criterion and its large-scale Monte-Carlo verification for NMF provenance unmixing\" (submitted to Sedimentary Geology). Reproduces every figure: the synthetic data generator, the HPC scan harness (supervised and unsupervised KL-NMF), the merge and figure-generation scripts, the identifiability-theory verification scripts (direct sigma_err measurement on the (rho, n) plane) and their bias/RMSE decomposition, the per-axis results, the per-cell 3D phase-atlas summary, and the real-sample a-priori screen (Fig. 8) with fifteen real per-grain detrital-zircon age samples (Cretaceous Songliao Basin; Jurassic-Lower Cretaceous northern North China Craton margin). Code and synthetic results: MIT licence. The real age samples are redistributed under their original CC BY 4.0 licences (OneDZ, Zenodo 10.5281/zenodo.15522949; Puetz et al., Figshare 10.6084/m9.figshare.24852987.v1) with per-sample attribution; they are not re-licensed as MIT. v1.2.1 adds selected supplementary numerical probes, small historical summaries, atlas generator/HPC wrapper/merge, explicit Fig.3 command and seed verification, BU21 bibliography, and the submitted-a Fig.1 label, source-verified real-sample record corrections (05FW007; 100821-1/-3) with a re-rendered Fig. 8, conditional in-figure wording for Figs 3 and 8, and verified dataset licences. Historical probe comments describe exploratory models; theory_checks/README.md states their current scope and verification limits. The full per-seed atlas raw (559 MB; 187 MB gzipped) is not included. No separate public archive DOI was found in the project records searched; these raw data are not publicly archived in a verified record and may be requested from the author.",
+      "tags": [
+        "detrital zircon",
+        "provenance unmixing",
+        "non-negative matrix factorization",
+        "identifiability",
+        "condition number",
+        "method applicability",
+        "high-performance computing",
+        "Monte-Carlo"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
+      "url": "https://zenodo.org/records/23475936"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "aa69619ec7e065768f18bc82",
+      "context_id": "0ac260aee75f1ec95164fe8c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "identifiability",
+        "provenance"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2083,
+      "source": "zenodo",
+      "source_context_sha256": "0a57b5fe4a760d61dc955784d5e4ab3430c5ca5bc401a94cd4e1d03a2e3ae2e7",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Code and data accompanying Pan, L., \"Where does detrital-zircon source unmixing break? An analytic identifiability criterion and its large-scale Monte-Carlo verification for NMF provenance unmixing\" (submitted to Sedimentary Geology). Reproduces every figure: the synthetic data generator, the HPC scan harness (supervised and unsupervised KL-NMF), the merge and figure-generation scripts, the identifiability-theory verification scripts (direct sigma_err measurement on the (rho, n) plane) and their bias/RMSE decomposition, the per-axis results, the per-cell 3D phase-atlas summary, and the real-sample a-priori screen (Fig. 8) with fifteen real per-grain detrital-zircon age samples (Cretaceous Songliao Basin; Jurassic-Lower Cretaceous northern North China Craton margin). Code and synthetic results: MIT licence. The real age samples are redistributed under their original CC BY 4.0 licences (OneDZ, Zenodo 10.5281/zenodo.15522949; Puetz et al., Figshare 10.6084/m9.figshare.24852987.v1) with per-sample attribution; they are not re-licensed as MIT. v1.2.1 adds selected supplementary numerical probes, small historical summaries, atlas generator/HPC wrapper/merge, explicit Fig.3 command and seed verification, BU21 bibliography, and the submitted-a Fig.1 label, source-verified real-sample record corrections (05FW007; 100821-1/-3) with a re-rendered Fig. 8, conditional in-figure wording for Figs 3 and 8, and verified dataset licences. Historical probe comments describe exploratory models; theory_checks/README.md states their current scope and verification limits. The full per-seed atlas raw (559 MB; 187 MB gzipped) is not included. No separate public archive DOI was found in the project records searched; these raw data are not publicly archived in a verified record and may be requested from the author.",
+      "tags": [
+        "detrital zircon",
+        "provenance unmixing",
+        "non-negative matrix factorization",
+        "identifiability",
+        "condition number",
+        "method applicability",
+        "high-performance computing",
+        "Monte-Carlo"
+      ],
+      "target_repository": "Hawkar-usls/janus-meta-registry",
+      "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
+      "url": "https://zenodo.org/records/23475936"
+    },
+    {
+      "base_direction_id": "registry_provenance",
       "candidate_id": "80a0a56178cb664f4fab4f73",
       "context_id": "bca734473a1b517f8a89b608",
       "delivery_preview_only": true,
@@ -1294,84 +1400,6 @@
       "target_repository": "Hawkar-usls/janus-meta-registry",
       "title": "Grain-Scale Radiation Transport and the Robustness of Radiolytic H₂–Sulfate Imbalance in the Revell Crystalline-Rock System",
       "url": "https://zenodo.org/records/23459461"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "495fa966090febf96b9daf09",
-      "context_id": "48b28c0c6825983eba6481bf",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::COUNTEREVIDENCE",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "provenance",
-        "reproducibility"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.0417,
-      "source": "zenodo",
-      "source_context_sha256": "43b563333f33a41eb0ea659bde912c21cfef51bba63e00b98bfd701087b79a58",
-      "source_published": "2026-10-18",
-      "source_updated": "",
-      "summary": "Anonymous, AI-assisted, unrefereed candidate. A bounded audit of one published five-variable 2-SAT transformer separates semantic ranking, fixed-threshold fidelity, numerical effective-state geometry, agreement with the native answer, and Boolean clause-edit sufficiency. A fresh balanced bank of 4096 formulas supplies additional same-checkpoint evidence; it is not independently trained-model replication. The public package documents exact replay scope and exclusions. Some historical image-dependent checks cannot be reproduced from the public files. Native replay requires separately retrieved, hash-pinned upstream source dependencies that are not redistributed here. Short independent-training feasibility attempts did not meet the predeclared competence threshold and supply no confirmatory representation evidence. Internal AI-assisted review and producer replay are not external peer review, independent reproduction or formal verification. CC0 applies only to original research prose, diagrams and data. Original executable code is MIT-licensed; retained third-party components retain their own terms. Consult LICENSES.md and the dependency provenance for component-level boundaries.",
-      "tags": [
-        "mechanistic interpretability",
-        "2-SAT",
-        "semantic ranking",
-        "threshold fidelity",
-        "causal abstraction",
-        "reproducibility"
-      ],
-      "target_repository": "Hawkar-usls/janus-meta-registry",
-      "title": "Assignment-Aligned Effective States in a 2-SAT Transformer",
-      "url": "https://zenodo.org/records/23454637"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "17485643e29593f704113ada",
-      "context_id": "400607d825fe90fcfea526f9",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::COUNTEREVIDENCE",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "provenance",
-        "reproducibility"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.0417,
-      "source": "zenodo",
-      "source_context_sha256": "2995fc1e142c7e1ed9794084a966fe71dd82255f90ffd3615bc3e2c58c619eeb",
-      "source_published": "2026-10-18",
-      "source_updated": "",
-      "summary": "REPORT 16&nbsp; develops the D170 dark-sector architecture from a common finite Global Mother and an active physical collar. It constructs a protected positive-energy non-luminous sector, a distinct collective saturation mechanism, an internally owned late-sector abundance map, and an effective collisionless astronomical closure linking the same dark-state dynamics to gravitational and lensing observables. The report emphasizes explicit provenance, reproducibility, and strict separation between established finite results, declared physical completions, and remaining open microscopic and cosmological extensions.",
-      "tags": [
-        "D170",
-        "dark sector",
-        "Dark energy",
-        "gravitational lensing"
-      ],
-      "target_repository": "Hawkar-usls/janus-meta-registry",
-      "title": "The D170 Global Mother, Physical Collar, and Unified Dark-Sector Architecture",
-      "url": "https://zenodo.org/records/23459389"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -1541,8 +1569,8 @@
     },
     {
       "base_direction_id": "registry_provenance",
-      "candidate_id": "495fa966090febf96b9daf09",
-      "context_id": "b9cf6dad6e7c14f0f313c846",
+      "candidate_id": "9065efbc788e2aeeadaa2d84",
+      "context_id": "53528b02d2b8345a5717afb1",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "registry_provenance::CONTROL",
@@ -1556,29 +1584,22 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "provenance",
+        "baseline",
         "replication",
         "reproducibility"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 13.5,
+      "score": 13.4167,
       "source": "zenodo",
-      "source_context_sha256": "c459c96cb7850cbb6906502de212ee8400ddfadf677986381ad3b7b19e1d931a",
-      "source_published": "2026-10-18",
+      "source_context_sha256": "472c2c6ac2f4be7f335ea583c2ee0c63bd0e04436394e6fc3b9a79aa58c21774",
+      "source_published": "2026-10-19",
       "source_updated": "",
-      "summary": "Anonymous, AI-assisted, unrefereed candidate. A bounded audit of one published five-variable 2-SAT transformer separates semantic ranking, fixed-threshold fidelity, numerical effective-state geometry, agreement with the native answer, and Boolean clause-edit sufficiency. A fresh balanced bank of 4096 formulas supplies additional same-checkpoint evidence; it is not independently trained-model replication. The public package documents exact replay scope and exclusions. Some historical image-dependent checks cannot be reproduced from the public files. Native replay requires separately retrieved, hash-pinned upstream source dependencies that are not redistributed here. Short independent-training feasibility attempts did not meet the predeclared competence threshold and supply no confirmatory representation evidence. Internal AI-assisted review and producer replay are not external peer review, independent reproduction or formal verification. CC0 applies only to original research prose, diagrams and data. Original executable code is MIT-licensed; retained third-party components retain their own terms. Consult LICENSES.md and the dependency provenance for component-level boundaries.",
-      "tags": [
-        "mechanistic interpretability",
-        "2-SAT",
-        "semantic ranking",
-        "threshold fidelity",
-        "causal abstraction",
-        "reproducibility"
-      ],
+      "summary": "This repository provides the reproducible analysis materials accompanying the research article &ldquo;Bitcoin and Sovereign Reserve Management: Portfolio Allocation, Model Sensitivity, and Downside Risk.&rdquo; The study examines the sensitivity of Bitcoin allocations within a sovereign reserve-related portfolio framework, with particular emphasis on measurement consistency, model specification, allocation stability and downside risk. The empirical framework combines U.S. official reserve positions, Treasury gold holdings valued at market prices, and Bitcoin market-price observations. The principal estimation period covers April 2016 to July 2026, comprising 124 consecutive monthly changes. An extended historical sample beginning in January 2013 is used for sensitivity analysis. The analysis applies a Black&ndash;Litterman allocation framework with explicit budget constraints and alternative portfolio specifications. The reproducibility framework covers baseline portfolio estimation, alternative Bitcoin views and confidence levels, long-only allocation constraints, covariance sensitivity, rolling-window estimation, joint stationary bootstrap resampling and historical and hypothetical stress scenarios. Risk analysis includes volatility, Value at Risk (VaR95) and Conditional Value at Risk (CVaR95), with particular attention to adverse Bitcoin market conditions. The associated materials document the empirical procedures used to examine the sensitivity of estimated Bitcoin weights to data construction, estimation windows, covariance assumptions and portfolio constraints. They support independent examination of the quantitative results, robustness analyses, tables and figures reported in the accompanying research. The study uses publicly available financial and institutional data from the Board of Governors of the Federal Reserve System, U.S. Treasury Fiscal Data, the World Bank and Coin Metrics. Associated research article: Bitcoin and Sovereign Reserve Management: Portfolio Allocation, Model Sensitivity, and Downside Risk. Research area: Financial Economics, Sovereign Reserve Management, Portfolio Optimization and Cryptocurrency Risk.",
+      "tags": [],
       "target_repository": "Hawkar-usls/janus-meta-registry",
-      "title": "Assignment-Aligned Effective States in a 2-SAT Transformer",
-      "url": "https://zenodo.org/records/23454637"
+      "title": "Bitcoin and Sovereign Reserve Management: Reproducible Analysis and Replication Package",
+      "url": "https://zenodo.org/records/23475742"
     },
     {
       "base_direction_id": "registry_provenance",
