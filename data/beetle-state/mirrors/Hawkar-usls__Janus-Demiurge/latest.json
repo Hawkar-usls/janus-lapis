@@ -1,5 +1,5 @@
 {
-  "batch_id": "87ebd91317c2e515e05b",
+  "batch_id": "c629a253de17e4ffed05",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -43,6 +43,57 @@
     },
     {
       "base_direction_id": "registry_provenance",
+      "candidate_id": "1a7781c71f81a7d8476cd460",
+      "context_id": "8fb1c4cc55c8e4ba38f3c60c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::COUNTEREVIDENCE",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation",
+        "provenance",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.4583,
+      "source": "zenodo",
+      "source_context_sha256": "dec2ead26ac2955d1a0d6ab949a69c487aa97a6fbb378eb7e058fcb64c958b29",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "This report consolidates six numerical and derived consistency checks examining amplitude&ndash;phase representations of string-theory scattering within the Harmonic Physics research programme. The calculations cover two-magnon Bethe&ndash;Yang quantization in the AFS approximation (BY01), three-particle Yang&ndash;Baxter consistency for a supplied string-frame su(2|2) matrix (YB01), fundamental BES dressing-factor crossing (CP01), scalar bound-state fusion (BF01), bound-state crossing (BC01), and derived double-crossing consistency (DC01). The report presents 31 referenced equations, declared sample sets, numerical results, convergence checks and deliberately altered controls. Particular attention is given to preserving calculated amplitudes alongside phases, distinguishing coherent channel sums from scalar products, and retaining matrix-frame conventions and analytic continuation information. All six entries satisfy their declared numerical acceptance criteria. The fundamental and bound-state crossing calculations construct the continued factors independently of their target crossing equations. Double crossing is explicitly classified as a derived consistency check because its second continuation is imposed through the crossing functional equation. The accompanying reproducibility package includes the original calculation scripts, protocols, result tables, equation sources, checksums and a combined runner. A fresh integrated run successfully reproduced all five checkpoint programs covering the six entries. These results establish bounded mathematical correspondences with supplied string-theory models over the tested domains. They do not independently derive Phase dynamics, predict formation probabilities, or validate an internal nesting wavefunction. The report provides a compact equation register for carrying the supported correspondences into the broader Phase framework while preserving their provenance and limitations.",
+      "tags": [
+        "harmonic physics",
+        "phase theory",
+        "amplitude-phase representation",
+        "string theory",
+        "AdS/CFT integrabtility",
+        "magnonscattering",
+        "Bethe-Yang equations",
+        "S-Matrix",
+        "Yang-Baxter equation",
+        "S-Matrix approximation",
+        "crossing symmetry",
+        "bound-state fusion",
+        "analystic continuation",
+        "double crossing monodromy",
+        "numerical consistency",
+        "reproducible research"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "String Scattering in Amplitude and Phase",
+      "url": "https://zenodo.org/records/23471245"
+    },
+    {
+      "base_direction_id": "registry_provenance",
       "candidate_id": "92bb5edfd0bfde7db9daab1a",
       "context_id": "b0dd08bae0a7b8008abec6a8",
       "delivery_preview_only": true,
@@ -74,6 +125,49 @@
       "target_repository": "Hawkar-usls/Janus-Demiurge",
       "title": "AllenNeuralDynamics/ComputationalReviewTemplate: v1.1.0",
       "url": "https://zenodo.org/records/23456674"
+    },
+    {
+      "base_direction_id": "registry_provenance",
+      "candidate_id": "02a1063cc1982febb7f6dd8c",
+      "context_id": "903fbe903439a6f48c2693fc",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::COUNTEREVIDENCE",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "provenance",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2083,
+      "source": "zenodo",
+      "source_context_sha256": "31f2136dc36d83a55cd4dfc96a010c6790258017fb7bf5071788198915b48b8d",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Code and data accompanying Pan, L., \"Where does detrital-zircon source unmixing break? An analytic identifiability criterion and its large-scale Monte-Carlo verification for NMF provenance unmixing\" (submitted to Sedimentary Geology). Reproduces every figure: the synthetic data generator, the HPC scan harness (supervised and unsupervised KL-NMF), the merge and figure-generation scripts, the identifiability-theory verification scripts (direct sigma_err measurement on the (rho, n) plane) and their bias/RMSE decomposition, the per-axis results, the per-cell 3D phase-atlas summary, and the real-sample a-priori screen (Fig. 8) with fifteen real per-grain detrital-zircon age samples (Cretaceous Songliao Basin; Jurassic-Lower Cretaceous northern North China Craton margin). Code and synthetic results: MIT licence. The real age samples are redistributed under their original open licences (CC-BY or equivalent) with per-sample attribution; they are not re-licensed as MIT. v1.2.0 adds analysis/bias_rmse.py, analysis/pop_kl_example.py, the graphical-abstract script, corrected figure scripts (Fig. 2 cell edges, Fig. 5 1-sigma noise label, Fig. 8 annotation) and re-rendered figures; see CHANGELOG.md. The full per-seed atlas raw (559 MB; 187 MB gzipped) is archived as a separate data record.",
+      "tags": [
+        "detrital zircon",
+        "provenance unmixing",
+        "non-negative matrix factorization",
+        "identifiability",
+        "condition number",
+        "method applicability",
+        "high-performance computing",
+        "Monte-Carlo"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
+      "url": "https://zenodo.org/records/23470807"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -378,72 +472,6 @@
     },
     {
       "base_direction_id": "registry_provenance",
-      "candidate_id": "062320fc11b65750a4d8d0aa",
-      "context_id": "45971030b2722d08409a26b9",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "registry_provenance::COUNTEREVIDENCE",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "reproducibility"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.9167,
-      "source": "zenodo",
-      "source_context_sha256": "100302ad93368541442fbaa3b36a00bc6c28f2ebc7570f3b5ff3ae888c7caa81",
-      "source_published": "2026-10-19",
-      "source_updated": "",
-      "summary": "INTEGRATED PHOTONIC MICROROBOTIC SYSTEMS AT THE LIMIT FLAGSHIP 16 / 30 | STARLI RESEARCH INSTITUTE XXIV This prospective research monograph investigates whether silicon-photonic light distribution, optofluidic packaging, independent metrology, and feedback positioning can be integrated into a compact research station that reliably captures, transports, releases, and recovers microscopic proxy agents. Its central hypothesis is system-level rather than decorative: reducing external optics is a meaningful advance only when delivered optical power, fluid transport, sample heating, task outcomes, and failure responses remain independently observable and reproducible across fabricated chip and package lots. The study develops a five-layer research architecture encompassing packaged optical and fluidic paths; a physically bounded optical-power and thermal ledger; external tracking capable of challenging on-chip estimates; reversible multi-agent tasks under staged fault injection; and repair, requalification, cost, and cross-laboratory transfer. It separates electromagnetic optical force from thermal convection, surface adhesion, Brownian motion, and sensor-induced artefacts. Strong comparators include calibrated free-space optical tweezers and spatial-light-modulator trapping configurations at matched specimen exposure and operational throughput. The book contains 30 mathematics-linked derivational routes, 82 chapters with 410 independently paginated research sections, 200 detailed future Research Gates, and 33 provisional Phoenix Answer Embryos. A companion Excel atlas links each research chapter, quantitative candidate, test protocol, falsifier and external DOI evidence record. Publisher-identified publications on integrated optical phased arrays, silicon-photonic trapping, and photonics packaging inform the research boundary but are not treated as proof that the integrated microrobotic platform proposed here has already been demonstrated. The primary design principle is independent reproducibility: a controller should never be allowed to certify its own sensor output, ignore lost agents, or authorize a restart after a failed optical-power or thermal ledger. Negative studies, matched classical successes, and failed module integrations are retained as useful successor research evidence. This work offers testable possibilities for future investigation; it is not a claim of experimentally demonstrated autonomous nanorobots, and it has not undergone external peer review.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "INTEGRATED PHOTONIC MICROROBOTIC SYSTEMS AT THE LIMIT FLAGSHIP 16 / 30 | STARLI RESEARCH INSTITUTE XXIV This prospective research monograph investigates whether silicon-photonic light distribution, optofluidic packaging, independent metrology, and feedback positioning can be integrated into a compac",
-      "url": "https://zenodo.org/records/23461127"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "062320fc11b65750a4d8d0aa",
-      "context_id": "6e452a379e256b6c73b96dad",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "multi-agent"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.75,
-      "source": "zenodo",
-      "source_context_sha256": "8071aedcf08c4a03c002b25e47bce5b68cb1141af83f3aa7a506c75adb517b22",
-      "source_published": "2026-10-19",
-      "source_updated": "",
-      "summary": "INTEGRATED PHOTONIC MICROROBOTIC SYSTEMS AT THE LIMIT FLAGSHIP 16 / 30 | STARLI RESEARCH INSTITUTE XXIV This prospective research monograph investigates whether silicon-photonic light distribution, optofluidic packaging, independent metrology, and feedback positioning can be integrated into a compact research station that reliably captures, transports, releases, and recovers microscopic proxy agents. Its central hypothesis is system-level rather than decorative: reducing external optics is a meaningful advance only when delivered optical power, fluid transport, sample heating, task outcomes, and failure responses remain independently observable and reproducible across fabricated chip and package lots. The study develops a five-layer research architecture encompassing packaged optical and fluidic paths; a physically bounded optical-power and thermal ledger; external tracking capable of challenging on-chip estimates; reversible multi-agent tasks under staged fault injection; and repair, requalification, cost, and cross-laboratory transfer. It separates electromagnetic optical force from thermal convection, surface adhesion, Brownian motion, and sensor-induced artefacts. Strong comparators include calibrated free-space optical tweezers and spatial-light-modulator trapping configurations at matched specimen exposure and operational throughput. The book contains 30 mathematics-linked derivational routes, 82 chapters with 410 independently paginated research sections, 200 detailed future Research Gates, and 33 provisional Phoenix Answer Embryos. A companion Excel atlas links each research chapter, quantitative candidate, test protocol, falsifier and external DOI evidence record. Publisher-identified publications on integrated optical phased arrays, silicon-photonic trapping, and photonics packaging inform the research boundary but are not treated as proof that the integrated microrobotic platform proposed here has already been demonstrated. The primary design principle is independent reproducibility: a controller should never be allowed to certify its own sensor output, ignore lost agents, or authorize a restart after a failed optical-power or thermal ledger. Negative studies, matched classical successes, and failed module integrations are retained as useful successor research evidence. This work offers testable possibilities for future investigation; it is not a claim of experimentally demonstrated autonomous nanorobots, and it has not undergone external peer review.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "INTEGRATED PHOTONIC MICROROBOTIC SYSTEMS AT THE LIMIT FLAGSHIP 16 / 30 | STARLI RESEARCH INSTITUTE XXIV This prospective research monograph investigates whether silicon-photonic light distribution, optofluidic packaging, independent metrology, and feedback positioning can be integrated into a compac",
-      "url": "https://zenodo.org/records/23461127"
-    },
-    {
-      "base_direction_id": "registry_provenance",
       "candidate_id": "070a7b100a9b5f2e96684706",
       "context_id": "2380cb4ddc097a1face9621e",
       "delivery_preview_only": true,
@@ -697,6 +725,142 @@
     },
     {
       "base_direction_id": "registry_provenance",
+      "candidate_id": "1a7781c71f81a7d8476cd460",
+      "context_id": "8408299579e57934b85984ba",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::CONTROL",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "provenance",
+        "reproducibility"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.3333,
+      "source": "zenodo",
+      "source_context_sha256": "e48e49c505b23e25ff34c9f6f8d2e9c19efc6aad6b078f5722952de662282ede",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "This report consolidates six numerical and derived consistency checks examining amplitude&ndash;phase representations of string-theory scattering within the Harmonic Physics research programme. The calculations cover two-magnon Bethe&ndash;Yang quantization in the AFS approximation (BY01), three-particle Yang&ndash;Baxter consistency for a supplied string-frame su(2|2) matrix (YB01), fundamental BES dressing-factor crossing (CP01), scalar bound-state fusion (BF01), bound-state crossing (BC01), and derived double-crossing consistency (DC01). The report presents 31 referenced equations, declared sample sets, numerical results, convergence checks and deliberately altered controls. Particular attention is given to preserving calculated amplitudes alongside phases, distinguishing coherent channel sums from scalar products, and retaining matrix-frame conventions and analytic continuation information. All six entries satisfy their declared numerical acceptance criteria. The fundamental and bound-state crossing calculations construct the continued factors independently of their target crossing equations. Double crossing is explicitly classified as a derived consistency check because its second continuation is imposed through the crossing functional equation. The accompanying reproducibility package includes the original calculation scripts, protocols, result tables, equation sources, checksums and a combined runner. A fresh integrated run successfully reproduced all five checkpoint programs covering the six entries. These results establish bounded mathematical correspondences with supplied string-theory models over the tested domains. They do not independently derive Phase dynamics, predict formation probabilities, or validate an internal nesting wavefunction. The report provides a compact equation register for carrying the supported correspondences into the broader Phase framework while preserving their provenance and limitations.",
+      "tags": [
+        "harmonic physics",
+        "phase theory",
+        "amplitude-phase representation",
+        "string theory",
+        "AdS/CFT integrabtility",
+        "magnonscattering",
+        "Bethe-Yang equations",
+        "S-Matrix",
+        "Yang-Baxter equation",
+        "S-Matrix approximation",
+        "crossing symmetry",
+        "bound-state fusion",
+        "analystic continuation",
+        "double crossing monodromy",
+        "numerical consistency",
+        "reproducible research"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "String Scattering in Amplitude and Phase",
+      "url": "https://zenodo.org/records/23471245"
+    },
+    {
+      "base_direction_id": "registry_provenance",
+      "candidate_id": "db38973caf2c4a74db4c63ae",
+      "context_id": "786e00dac41e7800dd8ed46f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::CONTROL",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "reproducibility"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.3333,
+      "source": "zenodo",
+      "source_context_sha256": "ded7df49824a83eae7b02ae49daa09c79d0f09396fe21e8f21c84781e4b980f5",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Reproducibility bundle (artefact C4) for the paper Online Routing for Next-Action Prediction (Langiu &amp; Pilato). Contains the full benchmark: the three corpus builders (D1 UCI Unix shell, D3 Eclipse UDC, D4 WebLINX), the seven classical pool predictors (PST, PPM, CTW leaf-KT, Lempel-Ziv, Markov-1/2/3), the three static CTW variants including the faithful binary mixture (the confirmatory baseline), the regret-bounded Hedge/Fixed-Share router, the learned GRU expert and the router-8 driver that adds it to the pool, the three negative mechanism probes with recorded decisions, the paired-statistics helper (bootstrap CI, Wilcoxon, Holm, TOST), and all seeds. Leave-one-user-out protocol. Code is MIT; the derived D4 (WebLINX) files inherit CC BY-NC-SA 4.0 from McGill-NLP/WebLINX (L&#249; et al. 2024); raw datasets are not redistributed and are refetchable from their public sources per the SOURCE.md files. v1.0.1 (2026-10-19): five scripts ( run_d5*.py , weight_trace.py , fewshot_llm_probe.py ) no longer carry machine-specific defaults (a local home path and a LAN endpoint); they now read D5_TRANSCRIPTS_ROOT / OLLAMA_ENDPOINT or use repository-relative paths. Data and results are unchanged.",
+      "tags": [
+        "next-action prediction",
+        "online learning",
+        "prediction with expert advice",
+        "Hedge",
+        "Fixed-Share",
+        "variable-order Markov models",
+        "Context-Tree Weighting",
+        "sequence prediction",
+        "reproducible benchmark",
+        "deployment rule"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "cdt-prediction-bench: reproducibility bundle for Online Routing for Next-Action Prediction",
+      "url": "https://zenodo.org/records/23472088"
+    },
+    {
+      "base_direction_id": "registry_provenance",
+      "candidate_id": "2adc28931037b0e9e7ecda4a",
+      "context_id": "39929fa53ff368b9cc09c9ee",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::CONTROL",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "provenance"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.125,
+      "source": "zenodo",
+      "source_context_sha256": "3d5b6443e73d7e6edb49a59978a15d9562043b02e42a7eb6a66f9d745e43655d",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "annotations4all is a schema-first Python library for LLM-assisted span annotation, including named entity recognition. Users define their own tag schemas; the library generates chat prompts, parses annotated model responses and maps annotations to character offsets in the original text. The library keeps annotation mechanics separate from research workflows: it bundles no corpus or fixed ontology, performs no evaluation, and does not promise model quality. Provider support uses explicit OpenAI-compatible routes rather than native SDKs. What the library provides Schema-first prompt generation and response parsing. Configurable taggers, German and English prompt templates, metadata-bearing spans and structured parser warnings. Per-label annotation and deterministic merge. Independent label runs can be combined using containment-derived hierarchy, explicit conflict reports and bounded anchoring. One request per run has a corresponding inference cost; merge is not a semantic error repair. Provider policies and capability evidence. A generic OpenAI-compatible client, provider-policy clients, explicit reasoning activation and effort, request limits, packaged hints and offline capability reports. Remote verification requires opt-in; metadata does not prove account access or successful inference. Optional read-only terminal viewer. Browse saved annotations, inspect nested spans and compare two sources using synchronized split or compact diff views. The viewer does not modify annotation files or run inference. Release notes 0.3.0 Provider-policy clients and automatic selection for documented endpoint routes; separate reasoning activation and effort, validated request conflicts, and configurable request limits. Capability reporting and packaged provider/model hints with explicit evidence boundaries. Optional Textual viewer with disjoint source selection, semantic gold-layer deduplication, split/diff views, mouse navigation, responsive legends and local diff inspection. Data-dependent contrast optimization in an isolated subprocess, opaque light/dark themes and persistent theme selection with conflict-safe settings. Deprecation warnings on construction of the old native llama.cpp and Ollama wrappers, for removal in 0.4.0. Public provider-policy clients are not deprecated. Complete versioned release notes, reproducible 160-by-48 terminal screenshots, four identical views in different themes, tests and validation scripts in the source distribution. Full 0.3 release notes and screenshots ; initial 0.2 feature baseline . Installation, documentation and verification Python 3.11 or newer. Install with pip install annotations4all==0.3.0 ; add the optional viewer with pip install 'annotations4all[view]==0.3.0' . The tutorial, API guides, release notes and screenshot provenance are included with the source archive. Verification: 982 passing tests, 92.86% coverage, Ruff lint/format checks, warning-free Markdownlint, package metadata checks and fresh-environment installation tests. Viewer checks include real optimization subprocesses and terminal restoration. These are code and packaging checks, not live-provider benchmarks. Versioning, license and citation Version 0.3.0 . MIT license. The source archive includes machine-readable CITATION.cff metadata. Version DOI: 10.5281/zenodo.23471533 . The unchanged concept DOI 10.5281/zenodo.22011370 identifies the software across versions. Source code and issues ; Python package .",
+      "tags": [
+        "ner",
+        "llm",
+        "nlp",
+        "span-annotation",
+        "tagger"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "annotations4all",
+      "url": "https://zenodo.org/records/23471533"
+    },
+    {
+      "base_direction_id": "registry_provenance",
       "candidate_id": "3aade279b3540ea5caa1b855",
       "context_id": "ac4212214bca7d37b74f4e3f",
       "delivery_preview_only": true,
@@ -770,6 +934,48 @@
       "target_repository": "Hawkar-usls/Janus-Demiurge",
       "title": "sourceledger",
       "url": "https://zenodo.org/records/23460695"
+    },
+    {
+      "base_direction_id": "registry_provenance",
+      "candidate_id": "02a1063cc1982febb7f6dd8c",
+      "context_id": "c55c4599dff61d2bda92ccb1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::CONTROL",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "provenance",
+        "reproducibility"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.0417,
+      "source": "zenodo",
+      "source_context_sha256": "6bdcee3b31613073eb3410ad3176baa52bcc165d97355563fc58b7a491bc6c65",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Code and data accompanying Pan, L., \"Where does detrital-zircon source unmixing break? An analytic identifiability criterion and its large-scale Monte-Carlo verification for NMF provenance unmixing\" (submitted to Sedimentary Geology). Reproduces every figure: the synthetic data generator, the HPC scan harness (supervised and unsupervised KL-NMF), the merge and figure-generation scripts, the identifiability-theory verification scripts (direct sigma_err measurement on the (rho, n) plane) and their bias/RMSE decomposition, the per-axis results, the per-cell 3D phase-atlas summary, and the real-sample a-priori screen (Fig. 8) with fifteen real per-grain detrital-zircon age samples (Cretaceous Songliao Basin; Jurassic-Lower Cretaceous northern North China Craton margin). Code and synthetic results: MIT licence. The real age samples are redistributed under their original open licences (CC-BY or equivalent) with per-sample attribution; they are not re-licensed as MIT. v1.2.0 adds analysis/bias_rmse.py, analysis/pop_kl_example.py, the graphical-abstract script, corrected figure scripts (Fig. 2 cell edges, Fig. 5 1-sigma noise label, Fig. 8 annotation) and re-rendered figures; see CHANGELOG.md. The full per-seed atlas raw (559 MB; 187 MB gzipped) is archived as a separate data record.",
+      "tags": [
+        "detrital zircon",
+        "provenance unmixing",
+        "non-negative matrix factorization",
+        "identifiability",
+        "condition number",
+        "method applicability",
+        "high-performance computing",
+        "Monte-Carlo"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "Applicability boundaries of NMF detrital-zircon unmixing — reproducibility package",
+      "url": "https://zenodo.org/records/23470807"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -902,6 +1108,39 @@
       "score": 8.9167,
       "source": "zenodo",
       "source_context_sha256": "59cab9b355d1a00d2d45a92f2932af3700daa117c9e1a9afb2f3b46efba83d0f",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "INTEGRATED PHOTONIC MICROROBOTIC SYSTEMS AT THE LIMIT FLAGSHIP 16 / 30 | STARLI RESEARCH INSTITUTE XXIV This prospective research monograph investigates whether silicon-photonic light distribution, optofluidic packaging, independent metrology, and feedback positioning can be integrated into a compact research station that reliably captures, transports, releases, and recovers microscopic proxy agents. Its central hypothesis is system-level rather than decorative: reducing external optics is a meaningful advance only when delivered optical power, fluid transport, sample heating, task outcomes, and failure responses remain independently observable and reproducible across fabricated chip and package lots. The study develops a five-layer research architecture encompassing packaged optical and fluidic paths; a physically bounded optical-power and thermal ledger; external tracking capable of challenging on-chip estimates; reversible multi-agent tasks under staged fault injection; and repair, requalification, cost, and cross-laboratory transfer. It separates electromagnetic optical force from thermal convection, surface adhesion, Brownian motion, and sensor-induced artefacts. Strong comparators include calibrated free-space optical tweezers and spatial-light-modulator trapping configurations at matched specimen exposure and operational throughput. The book contains 30 mathematics-linked derivational routes, 82 chapters with 410 independently paginated research sections, 200 detailed future Research Gates, and 33 provisional Phoenix Answer Embryos. A companion Excel atlas links each research chapter, quantitative candidate, test protocol, falsifier and external DOI evidence record. Publisher-identified publications on integrated optical phased arrays, silicon-photonic trapping, and photonics packaging inform the research boundary but are not treated as proof that the integrated microrobotic platform proposed here has already been demonstrated. The primary design principle is independent reproducibility: a controller should never be allowed to certify its own sensor output, ignore lost agents, or authorize a restart after a failed optical-power or thermal ledger. Negative studies, matched classical successes, and failed module integrations are retained as useful successor research evidence. This work offers testable possibilities for future investigation; it is not a claim of experimentally demonstrated autonomous nanorobots, and it has not undergone external peer review.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "INTEGRATED PHOTONIC MICROROBOTIC SYSTEMS AT THE LIMIT FLAGSHIP 16 / 30 | STARLI RESEARCH INSTITUTE XXIV This prospective research monograph investigates whether silicon-photonic light distribution, optofluidic packaging, independent metrology, and feedback positioning can be integrated into a compac",
+      "url": "https://zenodo.org/records/23461127"
+    },
+    {
+      "base_direction_id": "registry_provenance",
+      "candidate_id": "062320fc11b65750a4d8d0aa",
+      "context_id": "45971030b2722d08409a26b9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "registry_provenance::COUNTEREVIDENCE",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.9167,
+      "source": "zenodo",
+      "source_context_sha256": "100302ad93368541442fbaa3b36a00bc6c28f2ebc7570f3b5ff3ae888c7caa81",
       "source_published": "2026-10-19",
       "source_updated": "",
       "summary": "INTEGRATED PHOTONIC MICROROBOTIC SYSTEMS AT THE LIMIT FLAGSHIP 16 / 30 | STARLI RESEARCH INSTITUTE XXIV This prospective research monograph investigates whether silicon-photonic light distribution, optofluidic packaging, independent metrology, and feedback positioning can be integrated into a compact research station that reliably captures, transports, releases, and recovers microscopic proxy agents. Its central hypothesis is system-level rather than decorative: reducing external optics is a meaningful advance only when delivered optical power, fluid transport, sample heating, task outcomes, and failure responses remain independently observable and reproducible across fabricated chip and package lots. The study develops a five-layer research architecture encompassing packaged optical and fluidic paths; a physically bounded optical-power and thermal ledger; external tracking capable of challenging on-chip estimates; reversible multi-agent tasks under staged fault injection; and repair, requalification, cost, and cross-laboratory transfer. It separates electromagnetic optical force from thermal convection, surface adhesion, Brownian motion, and sensor-induced artefacts. Strong comparators include calibrated free-space optical tweezers and spatial-light-modulator trapping configurations at matched specimen exposure and operational throughput. The book contains 30 mathematics-linked derivational routes, 82 chapters with 410 independently paginated research sections, 200 detailed future Research Gates, and 33 provisional Phoenix Answer Embryos. A companion Excel atlas links each research chapter, quantitative candidate, test protocol, falsifier and external DOI evidence record. Publisher-identified publications on integrated optical phased arrays, silicon-photonic trapping, and photonics packaging inform the research boundary but are not treated as proof that the integrated microrobotic platform proposed here has already been demonstrated. The primary design principle is independent reproducibility: a controller should never be allowed to certify its own sensor output, ignore lost agents, or authorize a restart after a failed optical-power or thermal ledger. Negative studies, matched classical successes, and failed module integrations are retained as useful successor research evidence. This work offers testable possibilities for future investigation; it is not a claim of experimentally demonstrated autonomous nanorobots, and it has not undergone external peer review.",
@@ -1093,6 +1332,39 @@
       "target_repository": "Hawkar-usls/Janus-Demiurge",
       "title": "Space Semiconductor Fabrication and Starship Nanofoundries at the Limit English Description and Research Position This research monograph asks which semiconductor unit processes could achieve a defensible mission advantage in microgravity, vacuum, radiation, remote-operation, and closed-resource env",
       "url": "https://zenodo.org/records/23460271"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "062320fc11b65750a4d8d0aa",
+      "context_id": "6e452a379e256b6c73b96dad",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "zenodo",
+      "source_context_sha256": "8071aedcf08c4a03c002b25e47bce5b68cb1141af83f3aa7a506c75adb517b22",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "INTEGRATED PHOTONIC MICROROBOTIC SYSTEMS AT THE LIMIT FLAGSHIP 16 / 30 | STARLI RESEARCH INSTITUTE XXIV This prospective research monograph investigates whether silicon-photonic light distribution, optofluidic packaging, independent metrology, and feedback positioning can be integrated into a compact research station that reliably captures, transports, releases, and recovers microscopic proxy agents. Its central hypothesis is system-level rather than decorative: reducing external optics is a meaningful advance only when delivered optical power, fluid transport, sample heating, task outcomes, and failure responses remain independently observable and reproducible across fabricated chip and package lots. The study develops a five-layer research architecture encompassing packaged optical and fluidic paths; a physically bounded optical-power and thermal ledger; external tracking capable of challenging on-chip estimates; reversible multi-agent tasks under staged fault injection; and repair, requalification, cost, and cross-laboratory transfer. It separates electromagnetic optical force from thermal convection, surface adhesion, Brownian motion, and sensor-induced artefacts. Strong comparators include calibrated free-space optical tweezers and spatial-light-modulator trapping configurations at matched specimen exposure and operational throughput. The book contains 30 mathematics-linked derivational routes, 82 chapters with 410 independently paginated research sections, 200 detailed future Research Gates, and 33 provisional Phoenix Answer Embryos. A companion Excel atlas links each research chapter, quantitative candidate, test protocol, falsifier and external DOI evidence record. Publisher-identified publications on integrated optical phased arrays, silicon-photonic trapping, and photonics packaging inform the research boundary but are not treated as proof that the integrated microrobotic platform proposed here has already been demonstrated. The primary design principle is independent reproducibility: a controller should never be allowed to certify its own sensor output, ignore lost agents, or authorize a restart after a failed optical-power or thermal ledger. Negative studies, matched classical successes, and failed module integrations are retained as useful successor research evidence. This work offers testable possibilities for future investigation; it is not a claim of experimentally demonstrated autonomous nanorobots, and it has not undergone external peer review.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "INTEGRATED PHOTONIC MICROROBOTIC SYSTEMS AT THE LIMIT FLAGSHIP 16 / 30 | STARLI RESEARCH INSTITUTE XXIV This prospective research monograph investigates whether silicon-photonic light distribution, optofluidic packaging, independent metrology, and feedback positioning can be integrated into a compac",
+      "url": "https://zenodo.org/records/23461127"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -1550,221 +1822,6 @@
       "target_repository": "Hawkar-usls/Janus-Demiurge",
       "title": "bartulem/usv-playpen: v0.13.0",
       "url": "https://zenodo.org/records/23460305"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "6171310be1a7ad874e671ce6",
-      "context_id": "4a50d2433ace1ad4ad03d07b",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::CONTROL",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "arxiv",
-      "source_context_sha256": "d776ad1599b974b46541438b0f0dc97dfd2dad571e9b98102cdd53240ae8fbac",
-      "source_published": "2026-10-16T10:22:00Z",
-      "source_updated": "2026-10-16T10:22:00Z",
-      "summary": "Relational out-of-distribution errors are easy to describe and hard to evaluate cleanly. An image may be natural, a caption may be fluent, and all mentioned objects may be common, yet the caption may describe the wrong relation in the image. Many evaluations intended to test this behavior can be solved without checking the pairing at all, because negatives differ in caption style, template, length, object frequency, or image statistics. We propose counterfactual pairing cycles, a blocked evaluation primitive that reuses the same two images and the same two captions on both sides of the comparison, changing only which image is paired with which caption. This makes image-only, text-only, and additive component shortcuts cancel exactly in finite samples. The same contrast also gives a training loss for relational outlier exposure and a diagnostic for bilinear vision-language scores. Across synthetic controls, GQA, and COCO, cycles separate coarse image-caption matching from directional role-binding failures, while also identifying geometric size relations that remain strongly visible in global features. In a shortcut-contaminated COCO outlier-exposure stress test, a model selected by a near-perfect shortcut validation AUROC retains substantial relational signal but remains below cycle training on exact cycles; cycle training improves CycleAcc from 0.882 to 0.927. The main lesson is simple: to test whether a model understands a pairing, the benchmark should keep the parts fixed, change the pairing, and ask only about coupling. The official implementation is available online.",
-      "tags": [
-        "cs.CV",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "Can the Parts Fool the Test? Counterfactual Pairing Cycles for Relational OOD",
-      "url": "https://arxiv.org/abs/2610.23248v1"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "6398d561e6e5fd21d8573b18",
-      "context_id": "16887a61037ac61c02ac7b95",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::CONTROL",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "arxiv",
-      "source_context_sha256": "e67162681a999a4778299d7649e67f711c23ffcb089ec81662cedbae83cbeaf4",
-      "source_published": "2026-10-16T16:54:35Z",
-      "source_updated": "2026-10-16T16:54:35Z",
-      "summary": "Recent large audio language models (LALMs) have extended their capabilities beyond lexical speech understanding to tasks requiring paralinguistic and non-linguistic audio understanding, such as emotion recognition. However, these models still struggle to reliably utilize acoustic information, particularly when it co-occurs with spoken linguistic content. Existing benchmarks do not clearly distinguish acoustic perception from higher-level reasoning, making it difficult to identify the source of these failures. To address this issue, we introduce VocalGrad, a benchmark designed to evaluate LALMs' ability to perceive low-level acoustic variations. VocalGrad formulates this problem as a simple binary classification of temporal change direction, enabling evaluation largely independent of higher-level reasoning or semantic understanding. Our benchmark results reveal a substantial gap in acoustic perception between human annotators and state-of-the-art LALMs: while human annotators achieve high accuracy, LALMs perform at near-chance levels. We further conduct linear probing to identify structural bottlenecks in these models. Our analysis reveals two distinct failure modes: for some categories, task-relevant information is preserved in internal representations but not utilized by the language model head; for others, the information becomes progressively less linearly decodable across model layers. Overall, our results reveal substantial limitations of LALMs in modeling acoustic variation under controlled settings and expose representation differences not observable from text outputs.",
-      "tags": [
-        "cs.SD",
-        "cs.CL"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "VocalGrad: Evaluating Acoustic Perception in Audio Language Models",
-      "url": "https://arxiv.org/abs/2610.23745v1"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "77108f7c0fbd131acc1f8f33",
-      "context_id": "0983caec6f3b0f60787882d8",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::CONTROL",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.625,
-      "source": "arxiv",
-      "source_context_sha256": "f209b97a0b43795133840dc73b3904939a4a540d8a94ea89059e027f6b276c59",
-      "source_published": "2026-10-16T11:42:29Z",
-      "source_updated": "2026-10-16T11:42:29Z",
-      "summary": "Modern deep learning systems increasingly rely on high-dimensional vector operations, in which large input and parameter vectors are repeatedly stored, transferred, and processed. Although substantial research has focused on reducing neural-network model size through pruning, quantization, knowledge distillation, and efficient architectures, the storage, memory-traffic, and communication costs associated with repeatedly presented high-dimensional input vectors remain important practical considerations, particularly in distributed and edge-computing environments. This paper proposes the SETAREH (Sorting-assisted Energy-concentrating Transform for Approximate Representation using Haar wavelets) transform, a Haar-wavelet-based sparsification approach for approximating the inner product between a fixed high-dimensional coefficient vector and successive input vectors. By applying the same sequence of permutations and Haar transforms to both vectors, SETAREH preserves the exact inner product before truncation. It then retains only a subset of the transformed coefficient-input pairs, reducing their representation cost while introducing a controllable approximation error. To evaluate SETAREH, we consider two complementary experimental settings: a synthetic Gaussian-vector baseline and a real apparent-age estimation task using a convolutional neural network on the APPA-REAL dataset. The results show that SETAREH can approximate the evaluated inner products using substantially fewer transformed coefficient-input pairs than the original vector dimension. The findings support its use as a potential structured data-representation method for repeated inner products with fixed weights, while the practical benefit depends on approximation accuracy and the cost of storing or transmitting permutation metadata.",
-      "tags": [
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "SETAREH Transform: A Sorting-Assisted Haar-Wavelet Sparsification Method for Approximate Inner-Product Computation",
-      "url": "https://arxiv.org/abs/2610.23338v1"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "6398d561e6e5fd21d8573b18",
-      "context_id": "d6eb6e0c5b3e6d59af2cabf4",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::COUNTEREVIDENCE",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode",
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 7.2083,
-      "source": "arxiv",
-      "source_context_sha256": "1b03ebcd3ea2df538b388f014b7b97219891c6537a8bc99565387aa27aa36650",
-      "source_published": "2026-10-16T16:54:35Z",
-      "source_updated": "2026-10-16T16:54:35Z",
-      "summary": "Recent large audio language models (LALMs) have extended their capabilities beyond lexical speech understanding to tasks requiring paralinguistic and non-linguistic audio understanding, such as emotion recognition. However, these models still struggle to reliably utilize acoustic information, particularly when it co-occurs with spoken linguistic content. Existing benchmarks do not clearly distinguish acoustic perception from higher-level reasoning, making it difficult to identify the source of these failures. To address this issue, we introduce VocalGrad, a benchmark designed to evaluate LALMs' ability to perceive low-level acoustic variations. VocalGrad formulates this problem as a simple binary classification of temporal change direction, enabling evaluation largely independent of higher-level reasoning or semantic understanding. Our benchmark results reveal a substantial gap in acoustic perception between human annotators and state-of-the-art LALMs: while human annotators achieve high accuracy, LALMs perform at near-chance levels. We further conduct linear probing to identify structural bottlenecks in these models. Our analysis reveals two distinct failure modes: for some categories, task-relevant information is preserved in internal representations but not utilized by the language model head; for others, the information becomes progressively less linearly decodable across model layers. Overall, our results reveal substantial limitations of LALMs in modeling acoustic variation under controlled settings and expose representation differences not observable from text outputs.",
-      "tags": [
-        "cs.SD",
-        "cs.CL"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "VocalGrad: Evaluating Acoustic Perception in Audio Language Models",
-      "url": "https://arxiv.org/abs/2610.23745v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "6398d561e6e5fd21d8573b18",
-      "context_id": "94c83e36d1f383f59532eea6",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode",
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 7.2083,
-      "source": "arxiv",
-      "source_context_sha256": "e55cb329ca97e195c26758fc577cc31937c86f85920af385c05d55bc4ceb9708",
-      "source_published": "2026-10-16T16:54:35Z",
-      "source_updated": "2026-10-16T16:54:35Z",
-      "summary": "Recent large audio language models (LALMs) have extended their capabilities beyond lexical speech understanding to tasks requiring paralinguistic and non-linguistic audio understanding, such as emotion recognition. However, these models still struggle to reliably utilize acoustic information, particularly when it co-occurs with spoken linguistic content. Existing benchmarks do not clearly distinguish acoustic perception from higher-level reasoning, making it difficult to identify the source of these failures. To address this issue, we introduce VocalGrad, a benchmark designed to evaluate LALMs' ability to perceive low-level acoustic variations. VocalGrad formulates this problem as a simple binary classification of temporal change direction, enabling evaluation largely independent of higher-level reasoning or semantic understanding. Our benchmark results reveal a substantial gap in acoustic perception between human annotators and state-of-the-art LALMs: while human annotators achieve high accuracy, LALMs perform at near-chance levels. We further conduct linear probing to identify structural bottlenecks in these models. Our analysis reveals two distinct failure modes: for some categories, task-relevant information is preserved in internal representations but not utilized by the language model head; for others, the information becomes progressively less linearly decodable across model layers. Overall, our results reveal substantial limitations of LALMs in modeling acoustic variation under controlled settings and expose representation differences not observable from text outputs.",
-      "tags": [
-        "cs.SD",
-        "cs.CL"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "VocalGrad: Evaluating Acoustic Perception in Audio Language Models",
-      "url": "https://arxiv.org/abs/2610.23745v1"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "eb9806ed73699dc08e607417",
-      "context_id": "6cc85fddd15b670fbd3ff96c",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::CONTROL",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "ablation",
-        "baseline",
-        "calibration"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 7.125,
-      "source": "zenodo",
-      "source_context_sha256": "c1c8cbf4a08369d32023ecb0902b1c620a1280ae2da1633012470e208d8ca091",
-      "source_published": "2026-10-17",
-      "source_updated": "",
-      "summary": "Research compendium for the article \"Climate warming is projected to reduce and redistribute Aedes albopictus abundance, away from Po Valley hotspots towards Alpine margins\" (M. C. Darılmaz, Science of the Total Environment; manuscript STOTEN-D-26-01129R1). The study predicts weekly ovitrap egg counts of the Asian tiger mosquito at 149 monitoring stations in Italy, Albania, Switzerland and France (VectAbundance, 2010&ndash;2022). The framework has four layers: a mechanistic life-history model (dynamAedes 2.2.9); gradient-boosted trees (XGBoost) and random forests with climate, remote-sensing, land-use, demographic and population-genetic predictors; an ablation of the population-genetic layer; and projections under 48 CMIP6 combinations (four General Circulation Models, three Shared Socioeconomic Pathways, four periods to 2100). The archive contains: - 48 Python, 8 R and 1 Google Earth Engine scripts, with PIPELINE.md giving the order in which they run; - the processed station-level data and the final modelling tables (42,118 station&ndash;week records), with the station-to-fold assignment used by every cross-validated analysis; - the trained XGBoost and Random Forest models with their cross-validation predictions, feature importance and SHAP values; - the outputs of the ablation and sensitivity analyses: mechanistic and genetic ablations, genetic structure versus geographic position, fold-count sensitivity, fold-level inference, feature correlation and VIF, spatio-temporal and leave-one-year-out cross-validation, remote-sensing gap-filling, baseline period, calibration and validation detail, treatment of the year predictor, inputs that carry the projected change, and the fill of weeks without mechanistic output; - the inputs and outputs of the 48-scenario projection, per climate model, as ensemble and at station level. Main results reproduced by the archive: cross-validated R&sup2; of the full model 0.534 &plusmn; 0.093 (XGBoost; pooled 0.539) and 0.544 &plusmn; 0.081 (Random Forest). Projected change in mean active-season abundance over the 12 SSP&ndash;period combinations: &minus;4 to &minus;27 % at Hot lowland stations (&minus;6 to &minus;44 % in the Po Valley) and +10 to +106 % at Cool upland and Alpine margin stations. Raw inputs that are publicly available from their primary archives (ERA5-Land, WorldClim 2.1 and its CMIP6 projections, satellite imagery, GHS-POP, the population-genetic source data and GenBank sequences) are not redistributed; README.md lists the sources and how the scripts locate them. Licence: CC BY 4.0.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "Climate warming is projected to reduce and redistribute Aedes albopictus abundance, away from Po Valley hotspots towards Alpine margins",
-      "url": "https://zenodo.org/records/23432195"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
