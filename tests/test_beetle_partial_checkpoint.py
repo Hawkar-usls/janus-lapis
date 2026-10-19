@@ -4,12 +4,15 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
+import shutil
+import signal
+import subprocess
 import sys
 import tempfile
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
-from beetle_partial_checkpoint import item_id, salvage, snapshot, sha256_obj
+from beetle_partial_checkpoint import item_id, live_checkpoint, salvage, snapshot, sha256_obj
 from beetle_shard_store import append
 
 
@@ -101,6 +104,57 @@ class InterruptedBeetleTests(unittest.TestCase):
     def test_invalid_run_identity_rejected(self):
         with self.assertRaisesRegex(ValueError, 'baseline'):
             salvage(self.root, self.baseline, 'unsafe/checkout')
+
+    def test_midrun_checkpoint_survives_abrupt_worker_process_death(self):
+        """Only throw away an isolated disposable runner; never production."""
+        outer = Path(self.tmp.name)
+        repo = outer / 'isolated-runner'
+        bare = outer / 'independent-remote.git'
+        subprocess.run(['git', 'init', '--bare', str(bare)], check=True,
+                       capture_output=True)
+        subprocess.run(['git', 'init', '-b', 'beetle-state', str(repo)], check=True,
+                       capture_output=True)
+
+        def git(*args):
+            return subprocess.run(['git', '-C', str(repo), *args], check=True,
+                                  text=True, capture_output=True).stdout.strip()
+
+        git('config', 'user.email', 'beetle-test@example.invalid')
+        git('config', 'user.name', 'Beetle Test')
+        git('remote', 'add', 'origin', str(bare))
+        isolated = repo / 'data' / 'beetle-state'
+        isolated.parent.mkdir(parents=True)
+        shutil.copytree(self.root, isolated)
+        git('add', 'data/beetle-state')
+        git('commit', '-m', 'isolated test baseline')
+        git('push', 'origin', 'HEAD:beetle-state')
+
+        self.root = isolated
+        self.baseline = snapshot(isolated)
+        self.add_candidate()
+        result = live_checkpoint(isolated, self.baseline, '999', repo)
+        self.assertEqual(result['remote_action'], 'PUSH_CONFIRMED')
+        verified_commit = result['commit']
+
+        # Simulate abrupt SIGKILL of the runner's active worker process. The
+        # previously pushed Git commit must still be fetchable from the remote.
+        dying_worker = subprocess.Popen([sys.executable, '-c',
+                                         'import time; time.sleep(60)'])
+        dying_worker.kill()
+        self.assertEqual(dying_worker.wait(), -signal.SIGKILL)
+        mirror_commit = subprocess.run(
+            ['git', '--git-dir', str(bare), 'rev-parse', 'refs/heads/beetle-state'],
+            check=True, text=True, capture_output=True).stdout.strip()
+        self.assertEqual(mirror_commit, verified_commit)
+        saved_seen = subprocess.run(
+            ['git', '--git-dir', str(bare), 'show', 'beetle-state:data/beetle-state/seen.json'],
+            check=True, text=True, capture_output=True).stdout
+        self.assertEqual(len(json.loads(saved_seen)), 1)
+        self.assertFalse((isolated / 'mirrors').exists())
+
+    def test_live_checkpoint_refuses_untrusted_git_branch(self):
+        with self.assertRaises(ValueError):
+            live_checkpoint(self.root, self.baseline, '999', self.root)
 
 
 if __name__ == '__main__':
