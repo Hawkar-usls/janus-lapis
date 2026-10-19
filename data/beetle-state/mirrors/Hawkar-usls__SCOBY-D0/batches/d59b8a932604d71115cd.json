@@ -1,0 +1,1845 @@
+{
+  "batch_id": "d59b8a932604d71115cd",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "fragment_count": 1,
+  "fragment_index": 1,
+  "items": [
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "6398d561e6e5fd21d8573b18",
+      "context_id": "b43a84e27cb1a0077b86c0fb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.2083,
+      "source": "arxiv",
+      "source_context_sha256": "e60ec9a6f83d9792f8eb94678413c2420b1794bb6429c38403e2a129aa614f33",
+      "source_published": "2026-10-16T16:54:35Z",
+      "source_updated": "2026-10-16T16:54:35Z",
+      "summary": "Recent large audio language models (LALMs) have extended their capabilities beyond lexical speech understanding to tasks requiring paralinguistic and non-linguistic audio understanding, such as emotion recognition. However, these models still struggle to reliably utilize acoustic information, particularly when it co-occurs with spoken linguistic content. Existing benchmarks do not clearly distinguish acoustic perception from higher-level reasoning, making it difficult to identify the source of these failures. To address this issue, we introduce VocalGrad, a benchmark designed to evaluate LALMs' ability to perceive low-level acoustic variations. VocalGrad formulates this problem as a simple binary classification of temporal change direction, enabling evaluation largely independent of higher-level reasoning or semantic understanding. Our benchmark results reveal a substantial gap in acoustic perception between human annotators and state-of-the-art LALMs: while human annotators achieve high accuracy, LALMs perform at near-chance levels. We further conduct linear probing to identify structural bottlenecks in these models. Our analysis reveals two distinct failure modes: for some categories, task-relevant information is preserved in internal representations but not utilized by the language model head; for others, the information becomes progressively less linearly decodable across model layers. Overall, our results reveal substantial limitations of LALMs in modeling acoustic variation under controlled settings and expose representation differences not observable from text outputs.",
+      "tags": [
+        "cs.SD",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "VocalGrad: Evaluating Acoustic Perception in Audio Language Models",
+      "url": "https://arxiv.org/abs/2610.23745v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "7caf07e8f01a78c2a5a39dc8",
+      "context_id": "df065a5f0d08e715cc758f6c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "7387fcf331244057e4e513c4efbbb0f6a9ea2f024346b1f0ddf519c1d5026dcc",
+      "source_published": "2026-10-15T10:00:53Z",
+      "source_updated": "2026-10-15T10:00:53Z",
+      "summary": "Distilling vision-language features into 3D Gaussian Splatting yields a language map that can be queried with arbitrary text. In deployment, however, a small set of user-specified targets must be reliably located, which current distilled maps often miss, while open-vocabulary queryability for other words must remain intact. We propose a training-free, target-aware refinement of an already-distilled language map. Guided by a text-promptable segmenter, the visual embedding inside each detected target region is blended with the target text embedding, a convex combination whose coefficient sets the amount of injected prior, while non-target regions are left untouched. Injecting too much overwrites appearance cues and general queryability, so we seek, for each target, the smallest coefficient that still lets it win, and we obtain every coefficient in closed form, leaving no hyperparameters to tune. We further identify a failure mode of injection in language-goal localization. Text embeddings share a common component, and injecting them makes the standard cosine read-out query-agnostic, which a centering step in the read-out removes. Across three benchmarks, the refinement consistently improves open-vocabulary segmentation, roughly doubling the base mIoU on Replica, and localizes language goals more reliably than the base map. It also transfers as a plug-in to off-the-shelf field-based and object-level language maps and supports a real-world demonstration in which a legged robot navigates to natural-language goals. Project page and code: https://lab-of-ai-and-robotics.github.io/target-aware-langmap/",
+      "tags": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Training-Free Target-Aware Refinement of 3D Gaussian Language Map",
+      "url": "https://arxiv.org/abs/2610.21619v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "f08cd5c4c21de0923d86cae6",
+      "context_id": "ca0f139ee760288402648ca4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "0c877150784bd3288dee5cad8224cda275a1e12c444d5a8c663ab68cf5b123b1",
+      "source_published": "2026-10-14T02:17:07Z",
+      "source_updated": "2026-10-14T02:17:07Z",
+      "summary": "LLM system capabilities depend not only on model parameters but also on the executable harnesses that organize information acquisition, tool use, reasoning, and memory. Recursive harness evolution can automate their design, but how it can reliably discover generalizable systems from limited, noisy, and repeatedly reused feedback remains unclear. We study this question in agentic video understanding, where rich multimodal evidence and coupled mechanisms make harness optimization challenging. We first introduce VideoHarness-BRSI, a recursive self-improvement framework that evolves video harnesses around a frozen vision-language model. Analyzing over 4,000 evolved candidates, we find it competitive with hand-engineered systems but identify three interconnected failure modes: validation overfitting, search-budget dilution, and the early-experience trap. We trace all three to a common root: the same imperfect validation evidence drives both harness revisions and the proposer's search strategy. We therefore propose VideoHarness-SRSI, an evidence-governed framework in which every search decision rests on evidence that is transferable, sufficient, and gathered before the search commits. It restricts the proposer to content-free feedback, informs exploration with instrumented warm-up experiments, and develops mechanisms in isolated probe-race branches before factorial composition and joint refinement. Across four video understanding benchmarks, VideoHarness-SRSI improves the equally weighted mean held-out score by 6.2% relative to VideoHarness-BRSI and reduces the mean validation-test gap by 37.9%. Reliable harness evolution thus depends on how search is organized and informed, not only on how well it optimizes validation performance.",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "VideoHarness-SRSI: Structured Recursive Self-Improvement for Video Understanding Harness",
+      "url": "https://arxiv.org/abs/2610.19424v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "066b7de10cef97e4336fee39",
+      "context_id": "c45c78776355bba8f90659fe",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "97ec8590a73aa9af6698932965df831182da056f069975126f08d4f0099a9801",
+      "source_published": "2026-10-15T01:23:57Z",
+      "source_updated": "2026-10-15T01:23:57Z",
+      "summary": "Computational biologists increasingly delegate substantial analyses to AI agents in long-horizon, multi-turn sessions, yet most benchmarks of agents' bioinformatics capabilities pose a single short task with a single-shot prompt. We present OmicsBench, a long-horizon, multi-turn bioinformatics benchmark for AI agents. Each of its 97 tasks links dependent subtasks into a directed acyclic graph, for 662 underlying subtasks in all. Each subtask is posed as one user turn and graded deterministically against an answer key, with optional in-context feedback on incorrect answers. Across 12 models on three harnesses, the slowest agent averages 3.6 hours per task, and no combination comes near saturating the benchmark, with mean scores of 0.43 to 0.57 out of a possible 1 without in-context feedback and 0.54 to 0.67 with it. Multi-turn evaluation also uncovers behavior that single-shot prompts cannot, as agents score lower on subtasks that depend on earlier subtasks, and in-context feedback helps agents recover some of that loss. Because deterministic scoring gives no qualitative account of how an agent failed, we also introduce an unsupervised failure mode discovery pipeline that describes, embeds, and clusters agents' failed attempts to surface emergent failure modes. Applied to OmicsBench, this pipeline exposes qualitative shortcomings in how agents carry out bioinformatics analyses, ranging from agents applying their own statistical filters in place of the specified ones to agents writing whole answers from memory.",
+      "tags": [
+        "cs.AI",
+        "q-bio.GN",
+        "q-bio.QM"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "OmicsBench: a long-horizon multi-turn benchmark of AI agents on research-study-scale bioinformatics",
+      "url": "https://arxiv.org/abs/2610.21074v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "321d8144fd716c05d9d5f37a",
+      "context_id": "7bd58f5ba9b2f0de2c2e64b7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "c434971fbbd7d54494cc3399f4a60f658b9abc8352aaa936812e4ac42aa0ad9d",
+      "source_published": "2026-10-14T01:31:59Z",
+      "source_updated": "2026-10-14T01:31:59Z",
+      "summary": "Large language model (LLM) agents can self-evolve at test time by accumulating experience: retrieving relevant memories before acting and writing new lessons back afterwards. Yet most are single-level: trajectories, distilled workflows and reasoning items all land in one undifferentiated pool indexed by embedding similarity, with no typed abstraction hierarchy. They never forget or deduplicate, and are prone to negative transfer, where a superficially similar but directionally opposite experience is recalled and its concrete steps are copied verbatim, actively harming the agent. We introduce STRATA, a structured, outcome-grounded, self-maintaining memory that organizes experience into a three-layer graph of atomic skills and code snippets, task workflows and generalized meta-frameworks, connected by typed edges. STRATA maintains itself through five mechanisms sharing one similarity geometry: a multi-dimensional similarity that scores retrieval by operation and target; a typed reflector crystallizing procedures from successes and pitfalls from failures; community detection that induces meta-frameworks; pressure-triggered garbage collection with articulation-point protection; and contrast edges that flag confusable, direction-opposite experiences. Across four interactive benchmarks (AppWorld, WebArena, ALFWorld, ScienceWorld), two frozen backbones and seven baselines, STRATA attains the best average score while simultaneously using the lowest latency and fewest environment steps of any memory-augmented method, and 44% fewer lines of injected memory than the most context-hungry baseline. We isolate two failure modes of prior memories: single-level memory degrades sharply as the task set grows, and single-level concrete memories suffer catastrophic negative transfer, which contrast edges repair, lifting ScienceWorld from 78.7 to 96.7 within the same system.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "STRATA: Self-Maintaining Structured Experience Graphs for Self-Evolving Language Agents",
+      "url": "https://arxiv.org/abs/2610.19386v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "40c289f6e738b0f52b9e44c4",
+      "context_id": "732732df51d4fae845af3390",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "zenodo",
+      "source_context_sha256": "7c2db8cb54dc49082eba03c14a10bec81fe52d128e12c8da52f9dd857ab84efe",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Emergency-stop circuits built by engineering technology students are routinely treated as safe once they pass a functional test at commissioning, yet the relay contact welding that dominates their failure modes is invisible to such tests and accumulates silently across the workshop's operating life. The framework represents a student-built circuit as a series safety function whose integrity is degraded by contact welding, and derives the conditions under which a welded contact converts a demanded stop into an undetected loss of safety function. A replication-based evaluation of the before-after-control-impact estimator was conducted under a declared variance structure with a between-cluster standard deviation of 6.0, a residual standard deviation of 4.5 and an intraclass correlation of 0.64, across 2000 replications per design cell for cluster counts of 8, 16, 24 and 32 and effect sizes of 3, 5 and 8 percentage points. The evaluation indicates that 54 clusters are required to detect a 5-percentage-point effect at 80% power, and that the minimum detectable effect at 80% power falls as the number of clusters rises. The framework proposes that workshop safety assurance should shift from commissioning-time functional testing to integrity monitoring that is sensitive to contact welding, and the design analysis implies that cluster-level evaluations of such interventions require cluster counts well above those typical of single-institution studies.",
+      "tags": [
+        "emergency-stop circuits; functional safety; relay contact welding; fault injection; injury-risk expo"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Functional-Safety-Integrity Degradation of Student-Built Emergency-Stop Circuits in Engineering Technology Education Workshops: A Fault-Injection Evaluation Linking Relay Contact Welding to Operator Injury-Risk Exposure",
+      "url": "https://zenodo.org/records/23460823"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "7c0a3d52732e9b9c94f18122",
+      "context_id": "6bb9bc3320701fb7c625dd32",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "6da9c94c6e728c42072eefa61d27f26852191cf69f07829978ea4e14c4c57dc1",
+      "source_published": "2026-10-15T16:58:12Z",
+      "source_updated": "2026-10-15T16:58:12Z",
+      "summary": "Agent memory benchmarks evaluate whether an agent's responses reflect correct knowledge, measuring downstream question-answering accuracy as a proxy for memory quality. We show this evaluation paradigm is incomplete: it conflates memory correctness with retrieval and generation quality, producing both false positives where correct responses mask broken memory and false negatives where incorrect responses blame correct memory for retrieval failures. We introduce FEB-30, a benchmark of 30 fact-evolution trajectories spanning 6 diagnostic categories and 3 difficulty levels, constructed via paradigm inversion: documents are generated from known fact trajectories, yielding deterministic ground truth without human annotation. Each trajectory defines how a fact should evolve across multi-author artifacts (documents, emails, conversations), enabling direct inspection of the memory store after each ingestion step. Applying FEB-30 to a representative memory system, we demonstrate that intrinsic and extrinsic evaluation diverge by an average of 16 percentage points, with 44% of trajectories exceeding meaningful divergence thresholds. Diagnostic decomposition reveals that the system correctly classifies memory operations (create, update, reinforce, supersede) only 20% of the time, a failure entirely invisible to extrinsic evaluation, and that failure modes differ systematically by category and difficulty. We release the benchmark, document generation pipeline, and scoring framework to support reproducible evaluation of agent memory systems.",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Beyond Downstream QA: Rethinking How We Evaluate Agent Memory",
+      "url": "https://arxiv.org/abs/2610.22209v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "b6a2a10dedc35d5ba4392129",
+      "context_id": "4f49ae4e966770f35f2a6162",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "5a44065b0dd8d2be51cf41ed2cd602ab582926d9367c03078b2fed048c7282ae",
+      "source_published": "2026-10-14T02:17:07Z",
+      "source_updated": "2026-10-16T03:45:20Z",
+      "summary": "LLM system capabilities depend not only on model parameters but also on the executable harnesses that organize information acquisition, tool use, reasoning, and memory. Recursive harness evolution can automate their design, but how it can reliably discover generalizable systems from limited, noisy, and repeatedly reused feedback remains unclear. We study this question in agentic video understanding, where rich multimodal evidence and coupled mechanisms make harness optimization challenging. We first introduce VHarness-BRSI, a recursive self-improvement framework that evolves video harnesses around a frozen vision-language model. Analyzing over 4,000 evolved candidates, we find it competitive with hand-engineered systems but identify three interconnected failure modes: validation overfitting, search-budget dilution, and the early-experience trap. We trace all three to a common root: the same imperfect validation evidence drives both harness revisions and the proposer's search strategy. We therefore propose VHarness-SRSI, an evidence-governed framework in which every search decision rests on evidence that is transferable, sufficient, and gathered before the search commits. It restricts the proposer to content-free feedback, informs exploration with instrumented warm-up experiments, and develops mechanisms in isolated probe-race branches before factorial composition and joint refinement. Across four video understanding benchmarks, VideoHarness-SRSI improves the equally weighted mean held-out score by 6.2% relative to VideoHarness-BRSI and reduces the mean validation-test gap by 37.9%. Reliable harness evolution thus depends on how search is organized and informed, not only on how well it optimizes validation performance.",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "VideoHarness-SRSI: Structured Recursive Self-Improvement for Video Understanding Harness",
+      "url": "https://arxiv.org/abs/2610.19424v2"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "5d6447797fb22ed8b911c908",
+      "context_id": "3d0ebcca11c687cc18bca4be",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "3239f8035bf2a5566696c74e13105b21d14b59550b223348022a248edbb0ed2d",
+      "source_published": "2026-10-14T10:17:47Z",
+      "source_updated": "2026-10-14T10:17:47Z",
+      "summary": "Segment Anything Model 3 (SAM 3) is a foundation model for image and video segmentation that sets the state of the art in visual object tracking. Its tracker, inherited from SAM 2, stores information from past frames in a memory bank, managed by a simple First-In-First-Out rule, allowing temporal consistency in complex videos. Several recent methods improve SAM 2 with hand-crafted memory update rules, each targeting a specific failure mode, such as distractors, occlusions, or object motion. However, their gains transfer only partially to the stronger SAM 3 backbone. We instead present a more general, data-driven approach that frames memory control as a sequential decision-making task. SAM3RL is an extension of the SAM 3 tracker with a lightweight memory controller, trained by reinforcement learning, that decides which frames enter the memory bank in order to maximize tracking performance. SAM3RL sets a new state of the art on 10 of 12 tracking and video object segmentation benchmarks, outperforming all hand-crafted rules without any runtime overhead. The same approach applied to SAM 2 gives SAM2RL, which outperforms hand-crafted rules on 9 of the 12 benchmarks, showing the generality of our method across model generations.",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "SAM3RL: Memory Control via Reinforcement Learning for Visual Object Tracking",
+      "url": "https://arxiv.org/abs/2610.19931v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "cd39b207acfa5dcdebfd04bd",
+      "context_id": "37945e2cc74535e4ddc4d8f3",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "df6928ac91686f44651121f67476c7c28ecc367ebc6374f7b47639e4961a4e82",
+      "source_published": "2026-10-14T00:36:08Z",
+      "source_updated": "2026-10-15T17:38:29Z",
+      "summary": "Agents are increasingly interacting with other agents that act for different principals (people or organizations on whose behalf they work), such as a buyer's personal agent negotiating with an enterprise's seller agent. In such agent-to-agent (A2A) scenarios, each agent has its own environment and holds information and authority that the other cannot see. Moreover, the interests of each agent may be aligned (cooperative), partly aligned (mixed-motive), or opposed (competitive). Existing multi-agent system failure studies assume one orchestrator, shared workspace, or single principal. We ask how A2A systems fail when these assumptions are removed. We study more than 2,500 recorded runs of A2A systems built from different agent harnesses and models, spanning 488 scenarios across eight families (legal, CRM, security, commerce, etc.). From these traces, we derive $A^2$-Failures, a taxonomy of 20 A2A failure modes in four categories: (i) discovery and delegation, (ii) grounding and record consistency, (iii) verification, and (iv) conduct and fidelity. Three findings hold across every harness, model, and scenario studied: (1) discovery and interaction are driven by the phrasing of the task rather than the availability of peer agents; (2) no agent verifies a peer's factual claim on its own initiative, so an A2A system inherits the reliability of its least reliable participant unless the protocol or mechanism performs the check; and (3) the aggregate outcome score credits the agent completing the task while staying blind to the coordination, verification, and conduct failures beneath it, so A2A systems must be evaluated per agent, against each agent's own principal. We release the run logs behind the taxonomy at https://huggingface.co/datasets/a2a-salesforce/a2-failures.",
+      "tags": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Why Do Agent Teams Fail Across Boundaries? A Failure Taxonomy for Agent-to-Agent Systems with Private States",
+      "url": "https://arxiv.org/abs/2610.19342v2"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "92bb5edfd0bfde7db9daab1a",
+      "context_id": "281297252b03fbce82f87087",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "zenodo",
+      "source_context_sha256": "0f33d433a2235bab605a496a70cda8f1e1341964cf1fe784b21bccd85a5aba8d",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "Sixteen commits since v1.0.0 (2026-07-05). The pipeline was run end to end for the first time on the current Claude Science product in this window — ComputationalReviewSSTdisease — and most of what follows comes from defects that run exposed. Runtime Runs with nothing to install: the coordinator saves skills/*.md as artifacts at session start and hands sub-agents the skill files they need (new &quot;Runtime: Claude Science&quot; section in the orchestrator). LITREVIEW and DATAML are roles delegated to default sub-agents, not profiles. Legacy delegate_to / operon.* / pipeline.* calls updated to host.* (#5). All 20 skills carry name / description frontmatter. Fixes found by running the pipeline Authorship widget published empty. The Phase 14 instruction said :authors: ../authors.yml ; the plugin resolves that path relative to the document directory, and 00_frontmatter.md and authors.yml both live in content/ . Corrected to ./authors.yml , with the silent-failure mode documented (#5). Evidence Database page published empty from a complete evidence set, with a green build. Four independent faults: the plugin never followed the v29 evidence_section_NN.json rename, looped sections 02..13 , read argument_groups.*.supporting_findings cite-key strings as finding records, and swallowed every read failure in catch { continue } . It now discovers the section files present, accepts all three historical naming conventions, prefers ev.findings , and throws rather than publishing empty (#6). Build failed on an un-instantiated evidence directory. A directory with no JSON at all is now treated as a template awaiting a run and renders a placeholder; JSON present but matching no package name stays fatal (#8). comprev-scoping.md 's description frontmatter was truncated mid-sentence (#5). Version management The pipeline generation number lived in a filename and in ~20 loose strings, while the only release tag described itself as &quot;Expert Review Pipeline v29&quot;. The generation now lives solely in skills/manifest.json , which also records the sha256 and byte count of every skill file; the release version lives solely in git tags and is written into no file (#7). scripts/build_skill_manifest.py generates and verifies the manifest — standard library only — and a Skill manifest workflow runs --check on every push and pull request. It fails on a skill edited without a manifest regeneration, a version-bearing skill filename, a frontmatter name that disagrees with its filename, a description quoting the wrong generation, or a README naming a generation the manifest does not. Session setup writes provenance/pipeline_version.json into each review (generation, template commit, template tag, manifest hash, per-skill artifact ids). Phase 1's review_request.md header, Methods M.8 and pipeline_metrics.json read the version from that file instead of carrying a typed-in number. Renamed skills/comprev-orchestrator-v29.md → skills/comprev-orchestrator.md . Update saved prompts that name the old path. Nothing depends on this repository programmatically, and reviews already produced carry their own copy of skills/ , so they are unaffected.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "AllenNeuralDynamics/ComputationalReviewTemplate: v1.1.0",
+      "url": "https://zenodo.org/records/23456674"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "d49dc261e891361a33bde374",
+      "context_id": "1c1facc2b49884b3010ba85c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "34f3a85f606bc3f56dfc9471aa574f987954921264bab5addc68c16bf9933bd1",
+      "source_published": "2026-10-15T16:35:26Z",
+      "source_updated": "2026-10-15T16:35:26Z",
+      "summary": "We present an algorithm that computes the structural signature and the mean time-to-failure (MTTF) of a monotone binary system at every one of its states, rather than only at the state in which all components work. It makes no assumption on the structure function and evaluates it exactly once per state, as many times as needed for the signature of the complete system alone, so computing the MTTF everywhere costs only a factor polynomial in the number of components over computing it once. As a by-product, it identifies all minimal path sets. We assume exchangeable component failure times whose survivor count is a continuous-time Markov chain. This setting admits simultaneous failures, as in the Lévy-frailty Marshall-Olkin, binomial failure rate and lethal-shock models, where the simplifications available for single failures do not apply. We use the per-state MTTF to define threshold repair policies. We show that the per-state signature is a strictly finer decision criterion than the MTTF: signature dominance at a common failure count implies MTTF dominance, but not conversely. Under the Lévy-frailty Marshall-Olkin model the MTTF is monotone in the state, which yields the long-run cost rate of every threshold policy in a single pass. Experiments on 22 benchmark networks with up to 30 components and 31 failure models show that the best MTTF-threshold policy has a median excess cost of 0.36% over the optimal state-based policy, and that it is never worse than the best policy that repairs after a fixed number of failures.",
+      "tags": [
+        "cs.DS",
+        "math.OC",
+        "math.PR"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Per-State Signatures and Mean Time-to-Failure: An Algorithm for Systems With Simultaneous Failures",
+      "url": "https://arxiv.org/abs/2610.22181v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "66167b40066655cde4059d1d",
+      "context_id": "020ae61c94b681e29a063b24",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "zenodo",
+      "source_context_sha256": "fc7a77b4bb45e414bc07094ecf0ebf1b2c4edcaf64eea94bf5c3006b67acd7c0",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Finite-element models, extracted results, analysis scripts and figure scripts supporting the article \"Competing Failure Modes in Residually Stressed Thin Films on Flexible Substrates: Wrinkling, Channel Cracking, and Their Coupling\" (International Journal of Solids and Structures). All finite-element calculations are carried out with ABAQUS/Standard 2021: the plane-strain linear-buckling benchmark and the geometrically nonlinear post-buckling sweep (imperfection, phase and mesh), the channel-crack factor and stress field, the J-integral and cohesive-zone crest-crack models, the three-dimensional stripe, checkerboard, hexagonal and herringbone wrinkle patterns, and the Al/Al2O3 equi-biaxial unit cell. The archive contains the input-generation scripts, input files, ODB post-processing scripts, results in JSON format, solver logs, the Python scripts that reproduce Figures 1&ndash;17 of the article, the figures, a README, a figure-to-source map, software versions and a SHA-256 file manifest. The three zip files unpack into one folder, thin_film_failure_modes_data.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Data and code for \"Competing Failure Modes in Residually Stressed Thin Films on Flexible Substrates: Wrinkling, Channel Cracking, and Their Coupling\"",
+      "url": "https://zenodo.org/records/23463415"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "1acb069c9ba848c1e0471373",
+      "context_id": "be3e39c6f2f00908b8095d21",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "confound",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.625,
+      "source": "zenodo",
+      "source_context_sha256": "306191ed98cd868cd549d55dbd3820e6fd3fb3817bb84565ccff8f364308bd23",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "AUTONOMOUS NANOROBOTIC NAVIGATION AND MISSION OBSERVABILITY AT THE LIMIT First-Generation Research Flagship 01 | NANO/MICRO ROBOTICS, POWER &amp; MISSION ENDURANCE Feng Cheng-en (33) x Starli This research atlas asks a difficult engineering question: when low-Reynolds-number microfluidic flows, Brownian orientation noise, boundary adhesion, external field actuation and incomplete sensing all influence a micro/nanorobot, what would justify calling its behavior autonomous navigation rather than externally assisted motion? The volume treats navigation as an auditable, bounded mission instead of an attractive trajectory. It develops a five-layer program spanning stochastic hydrodynamics, instrument and actuation provenance, uncertainty-calibrated belief-state estimation, blinded microfluidic challenges and independent requalification. Thirty linked mathematical stations differentiate physical relations, information-theoretic functionals and proposed navigation utility measures, with assumptions, dimensions and possible falsifiers. Eighty-two research chapters each open with a core mathematical relation, followed by five independent single-page research sections. Two hundred detailed Research Gates describe decisive comparisons, confounding explanations, evidence requirements, failure conditions and successor handoff artifacts. Thirty-three provisional Phoenix Answer Embryos offer revisionable research prototypes rather than predetermined conclusions. The key comparator is an equal-budget experiment: fixed-field sequences, microscope-assisted manual control, externally tracked predictive control and candidate fused navigation are evaluated under matched total energy, information access, geometry, time, collision limits and recovery obligations. The manuscript emphasizes blind targets, flow reversal, sensor dropouts, wall adhesion, correlated observations, full-system power accounting, censored failures and post-mission retrieval. A mission arriving at its target but leaving an unrecovered device is not counted as a fully closed success. This work is a hypothesis-generating Research Atlas v1.0, not an experimental report or a validated medical technology. External magnetic, acoustic, optical and microscope infrastructure must be disclosed; no in-vivo or clinical competence is inferred from bench-top movement. Foundational DOI-linked literature provides context, not proof of the proposed integrated system. Every major claim is designed to be revised, rejected or reconstructed by a successor team using raw evidence and pre-registered falsification rules. PARENT RESEARCH DOI https://doi.org/10.5281/zenodo.23046134 Original parent: NANO/MICRO ROBOTICS, POWER &amp; MISSION ENDURANCE AT THE LIMIT. Parent-chapter lineage: Ch. 06-11 (navigation), 47-51 (estimation/control), 65 and 68 (benchmarking and transfer). The current child manuscript does not yet have an independent DOI; one would be assigned only upon actual repository deposit. Editorial release note: the manuscript prioritizes non-duplicative research content and independent testability over an artificial word-count target. It is suitable as a research architecture for additional scientific review, not a substitute for physical validation.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "AUTONOMOUS NANOROBOTIC NAVIGATION AND MISSION OBSERVABILITY AT THE LIMIT First-Generation Research Flagship 01 | NANO/MICRO ROBOTICS, POWER & MISSION ENDURANCE Feng Cheng-en (33) x Starli This research atlas asks a difficult engineering question: when low-Reynolds-number microfluidic flows, Brownian",
+      "url": "https://zenodo.org/records/23428408"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "e659ea165434623778492d9b",
+      "context_id": "c0e7986aeb95d31eba69b444",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "arxiv",
+      "source_context_sha256": "2e1eaba25e40ac47c005215da89a959d3f3d7f2cca3d67c3f0ba833e6ffabb84",
+      "source_published": "2026-10-09T00:02:59Z",
+      "source_updated": "2026-10-12T20:41:24Z",
+      "summary": "Multi-agent systems are increasingly used to solve coding tasks by coordinating agents that share code and plans. These agents are often optimized with reinforcement learning (RL) using automated evaluators, but bypassing evaluation can earn reward without producing a genuine solution. Prior work has largely treated reward hacking as a single-agent failure. In this work, we show that a reward-hacking strategy elicited in one agent can propagate to others and affect system coordination. Across four open-weight backbones, coding RL elicits and amplifies reward hacking in two settings: explicit mechanism descriptions in the system prompt and mid-training that models upstream exposure to facts about the coding environment. Using post-RL agents from the mid-training setting as sources, we observe propagation through code and shared memory, and across roles through natural-language plans. Even agents based on small open-weight models induce reward hacking in stronger closed-weight targets. On hard tasks, propagation can intensify along a transmission chain after the original source leaves as the code acquires more persuasive justifications. We also theoretically analyze conditions under which reward hacking amplifies, persists, or decays across agent interactions. Beyond propagation, reward hacking can bias task routing toward reward-hacking agents and survive candidate aggregation. As potential mitigations, we evaluate code review by the coder or a separate verifier, both of which reduce delivered hacks. Together, these results establish reward hacking as a transmissible strategy whose effects extend beyond the agent in which it first emerges.",
+      "tags": [
+        "cs.AI",
+        "cs.CR",
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Reward Hacking as a Transmissible Strategy in Multi-Agent Coding Systems",
+      "url": "https://arxiv.org/abs/2610.12822v2"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "15288e05ffd42a2eab8d9cd9",
+      "context_id": "c2502453015939fa32b9ea39",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "negative result"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.625,
+      "source": "zenodo",
+      "source_context_sha256": "2283a55e2ba23404d11b872ae1a0eec7db3d2a625d2ce56eb57a189a2f853b2e",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "Code, configurations, datasets and per-run experimental results for reproducing every table and figure of the paper \"Knowledge or Correlation? How Large Language Models Choose Features\"&nbsp;",
+      "tags": [
+        "feature selection",
+        "large language models",
+        "reproducibility",
+        "nested cross-validation",
+        "negative results"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Replication package for \"Knowledge or Correlation? How Large Language Models Choose Features\"",
+      "url": "https://zenodo.org/records/23432850"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "82ebe541ad24ad602525b91a",
+      "context_id": "43f03c3f6def72fc621362d2",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "negative result"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.625,
+      "source": "zenodo",
+      "source_context_sha256": "14375441d5cda93f7e836a8e2c9e21e43e78780b4781c86677c5e1b0fe104a6e",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "Version 2.0 is a substantive revision of version 1.0 (DOI 10.5281/zenodo.19174862). It supersedes the earlier procedural interpretation and its exclusion of competing explanations. The revised title is Structural Organization and Interpretive Limits of the Phaistos Disc. Reproduced descriptive findings are retained; failed model comparisons and photographic uncertainties are reported explicitly. The earlier version remains available through the record version history. We examine whether reproducible structural observations on the Phaistos Disc support a procedural interpretation. A pinned numerical transcription contains 242 main-sign positions, including one unreadable position, 45 readable sign types, 61 divider-defined groups and 18 supplementary stroke annotations. Source review reconciles counting and numbering conventions while retaining unresolved photographic uncertainty. The 02-to-12 side contrast persists after exact-family collapse. Adding side to a fixed position-only pairing predictor improves held-family loss by 0.082738 nats, but its exact conditional tail of 0.075 fails the frozen support rule. A positional mixture fails to outperform a bigram baseline. A separate directional test of the proposed 07-to-27 recovery relationship fails, with a one-sided permutation tail of 0.884. Supplementary-stroke comparisons have insufficient controlled overlap for the specified exact test. The work documents organization and constrains specific interpretations without establishing procedural functions or phonetic values. Corpus, code, protocols, full results and uncertainty ledgers accompany the paper.",
+      "tags": [
+        "Phaistos Disk",
+        "procedural encoding",
+        "control flow",
+        "Bronze Age systems",
+        "symbolic systems",
+        "non-linguistic encoding",
+        "archaeological theory",
+        "structural analysis",
+        "ancient scripts",
+        "systems theory",
+        "negative results",
+        "epigraphy",
+        "reproducibility",
+        "sequence analysis",
+        "permutation tests",
+        "procedural hypothesis",
+        "Phaistos Disc"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Structural Organization and Interpretive Limits of the Phaistos Disc",
+      "url": "https://zenodo.org/records/23443924"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "d624fc06c6d4febc60c57044",
+      "context_id": "e9f0d7621ea44fc3b0ca245d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "0cb1fea1549b427fbb4e2ebf31ba26d546aecae846fbc742ad81de89a9a0b004",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "Initial public release of the code and data accompanying the manuscript Reusable Löwner Bounds for Elliptic Problems with Moving Inclusions . Includes numerical experiments, raw benchmark results, theorem verification scripts, counterexamples, and reproducibility instructions. The repository provides the computational materials supporting the SISC submission.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "loewner-moving-inclusions: code and raw results for reusable Löwner bounds with moving inclusions",
+      "url": "https://zenodo.org/records/23442339"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "b45d6a77a097cc58ca21aed3",
+      "context_id": "d3483027f8e75423d43d3952",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "a6313e4276637d34ac6448f6a427d5106cc72ea1d6848df5eacd8dae28272750",
+      "source_published": "2026-10-10",
+      "source_updated": "",
+      "summary": "We give a written counterexample to the arbitrary-positive-mass statement of Heilman 2019 Conjecture 1.16. For every 0&lt;p&lt;1/4, the mass vector (p,(1-p)/3,(1-p)/3,(1-p)/3) has a strict non-regular improvement. The equal-mass tetrahedral problem is untouched. The record contains the frozen PDF, source package, exact Q(sqrt(2)) diagnostics, partial Lean algebra, and a targeted prior-work comparison. No external peer review or worldwide priority claim is made.",
+      "tags": [
+        "Gaussian partitions",
+        "Gaussian first moments",
+        "simplex conjecture",
+        "counterexample",
+        "mass-constrained optimization"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "A facet-exchange counterexample to the fixed-mass regular-simplex conjecture",
+      "url": "https://zenodo.org/records/23272760"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "66e3d6f14eeb4019d12509c2",
+      "context_id": "9ee35ed473ea16265c223478",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "2f4b514a503c0702546426ef4359319711483be8e037435c4a7e246024c26a00",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "We consider the three-dimensional Prandtl boundary layer equations near a smooth structured solution (u_s, K u_s) with &part;z K &equiv; 0. Under a monotone-or-degenerate profile assumption on u_s(&middot;), we prove local well-posedness, continuous dependence, and a priori estimates in the critical Sobolev space X^s = H^s_&gamma;(r) &times; H^s_&gamma;(q) &times; H^s_&gamma;(&nabla;{x,y} q), where r = u &minus; u_s and q = v &minus; K u. Our proof does not assume smallness of the data, monotonicity of &part;_z u_s, or Gevrey regularity. We also establish a nonlinear norm-inflation result showing that the raw H^s topology on q alone is insufficient, and we identify the minimal tangential derivative of q required. Several stress tests, counterexamples, and open problems are discussed.",
+      "tags": [
+        "Three-dimensional Prandtl equations",
+        "Prandtl boundary layer",
+        "Sobolev well-posedness",
+        "boundary layer theory",
+        "structured solutions",
+        "ill-posedness",
+        "nonlinear norm inflation",
+        "critical Sobolev space",
+        "transverse derivative",
+        "Hardy inequality",
+        "Kato-Ponce commutator estimates",
+        "Gevrey regularity",
+        "monotone-or-degenerate profile",
+        "degenerate critical points",
+        "continuous dependence",
+        "a priori estimates",
+        "weighted Sobolev spaces",
+        "secondary flow",
+        "vanishing viscosity limit",
+        "incompressible Navier-Stokes equations"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Sobolev Well-Posedness for Three-Dimensional Prandtl Boundary Layers Near Proportional Structures in a Critical Transverse Space",
+      "url": "https://zenodo.org/records/23437208"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "aa6b135e4b9c32761b79c975",
+      "context_id": "8a426b29d6d19ab1ac7648e8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "e99d1e3ec330ff3e4695cea0c9718ae45b61f019605f89d92b1d38fdf964a381",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "Explicit three-species mass-action counterexamples to general isolated-intermediate reduction conjectures, with exact symbolic certificates. The restricted source theorem and motivating dual-phosphorylation question are outside scope. No human-peer-review or formal-verification claim is made.",
+      "tags": [
+        "reaction networks",
+        "Hopf bifurcation",
+        "mass action",
+        "counterexample"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "A reverse reaction can create attracting oscillations",
+      "url": "https://zenodo.org/records/23446981"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "95dbfadbe9ae619f5ba9f4b4",
+      "context_id": "7a3608996e9b6d988cdb7c4c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "606b7f0a3e55d77f9521776f326ef556327449f8f26a61ff8d7c2bb6487f3b5b",
+      "source_published": "2026-10-15T14:21:21Z",
+      "source_updated": "2026-10-15T14:21:21Z",
+      "summary": "In the paper, we establish congruences for twisted Dirac indices and signatures on closed string manifolds by specializing the two-parameter modular forms of Liu and Wang to the tangent bundle. Fourier coefficient comparisons yield uniform congruences modulo $3$ in dimensions $4k$, $1\\leq k\\leq7$. Suitable parameter choices give explicit formulas involving only genuine twisting bundles in dimensions $8,12,16,20,24,$ and $28$, and recover the comparisons of Chen and Han in dimension $24$. The level-one Witten genus further strengthens selected Dirac congruences to moduli $729,27,27,$ and $9$ in dimensions $16,20,24,$ and $28$, respectively. The proofs use Fourier expansions in reduced $K$-theory and integer identities obtained by clearing powers of two from the denominators before reduction modulo $3$. We also construct non-string spin counterexamples in each of the six listed dimensions and identify the additional coefficient that obstructs extending the uniform argument to dimension $32$ without further information.",
+      "tags": [
+        "math.DG"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Mod 3 Congruence Families for twisted signatures of string manifolds in dimensions up to twenty-eight",
+      "url": "https://arxiv.org/abs/2610.21959v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "7477660ce8ce4cfd357b2287",
+      "context_id": "738187f18712d22c73be6d9d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "8844425186930b9703b1facfcdbc748795b69d3c80830cfc4c74e3fe0ef58385",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "We investigate the rigidity of smooth stationary solutions to the incompressible Navier&ndash;Stokes equations in ℝⁿ with singularities along a linear subspace &Sigma; &cong; ℝᵏ. Assuming the scale-invariant transverse bound ‖u(x)‖ &le; C‖x&prime;‖⁻&sup1;, where x&prime; &isin; ℝᵐ represents the transverse coordinates and m = n &minus; k is the codimension of the singularity, we prove that u &equiv; 0 provided m &ge; 4 and 1 &le; k &lt; m. This result generalizes the recent theorem of Gui, Liu, Wang, and Xie (2026), which corresponds to the case k = 1 and n &ge; 5. Our proof relies on a quantitative local regularity theorem showing that the transverse bound implies the removability of the singularity along &Sigma;. The argument combines weak extension across the subspace, approximate Green functions for the adjoint drift operator, a one-sided bound for the total head pressure, and a localized Frehse&ndash;Růžička weighted estimate followed by a finite Stokes&ndash;Morrey bootstrap. Furthermore, we establish the sharpness of the codimension threshold m &ge; 4 by constructing non-trivial counterexamples for m = 1, m = 2, and m = 3 via trivial extensions of Jeffery&ndash;Hamel and Landau solutions, together with a new explicit family of non-trivial solutions in the borderline case m = 1. Finally, we discuss the technical obstruction preventing the immediate removal of the condition k &lt; m and propose a conditional rigidity result under additional integrability assumptions.",
+      "tags": [
+        "Navier-Stokes equations",
+        "stationary Navier-Stokes",
+        "rigidity",
+        "transverse bound",
+        "removable singularities",
+        "higher-codimensional singular sets",
+        "singular subspaces",
+        "scale-invariant bounds",
+        "quantitative local regularity",
+        "weak extension",
+        "total head pressure",
+        "Morrey spaces",
+        "Green functions",
+        "adjoint drift operator",
+        "Frehse-Růžička weighted estimate",
+        "Stokes-Morrey bootstrap",
+        "Jeffery-Hamel solutions",
+        "Landau solutions",
+        "counterexamples",
+        "sharp codimension threshold"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "RIGIDITY OF STATIONARY NAVIER–STOKES SOLUTIONS WITH TRANSVERSE BOUNDS NEAR HIGHER-CODIMENSIONAL SINGULAR SUBSPACES",
+      "url": "https://zenodo.org/records/23439595"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "3b366e4bf60a6dfb2f4eb4a2",
+      "context_id": "701887c02cd810b2e90746c2",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "7ab1aa01d9636d7e4a2eb8121eaa5592131817e3609923b1afe326a94f2e7691",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Anaxia, the BLLM engine, with the source, the Lean development and the checks of the paper BLLM: Beyond the LLM with Deep Human-Mind-AI by D. Bhattacharjee and U. Bhattacharya. The engine is the Python package eBLLM (command anaxia ), a Lean 4 library and the container image ghcr.io/creelie/bllm-engine, which carries no model weights. The paper proves, in a model with independent runs, that certifying self-modifications costs an entropy (the entropy law), that a sound infinite self-improvement of finite cost exists exactly when one series converges, that a proposer needs a number of proposals set by a R&eacute;nyi entropy of order one half, and that n verified layers sharing one budget cost at least n log(n/&theta;). Sixty-five of its theorems are proved in Lean 4 with Mathlib, each depending only on the three standard axioms. The engine combines known constructions in a typed crossing network with a program check and a refuter for every candidate, a shared memory and five target agents, and builds new objects in construction mode: a goal-directed builder and an exists-forall search, each followed by an independent gate. From the rules of Steinberg's problem it rebuilds the gadgets of the 2016 counterexample of Cohen-Addad, Hebdige, Kr&aacute;l', Li and Salgado; it finds nothing on Erd&#337;s's question for cycles of length 4 to 6. Layer towers of depth one to three, a ladder and a mesh, are compared with the crossing loop at the same number of checks. A Hodge-only run of twelve rounds leaves every target point at the same gap. None of the five benchmark problems (the lattice Yang&ndash;Mills mass gap, the Hodge conjecture, the standard conjecture of Lefschetz type, Chowla's conjecture, Erd&#337;s problem 1183) is solved. The registry of the systems, methods and collections the engine draws on, with what it takes from each and what it leaves, is src/ebllm/bllm/data/sources.json and Appendix D of the paper.",
+      "tags": [
+        "BLLM",
+        "Anaxia",
+        "recursive self-improvement",
+        "verification",
+        "entropy",
+        "construction mode",
+        "Steinberg's conjecture",
+        "formal verification",
+        "Lean 4",
+        "crossing network",
+        "layer tower",
+        "benchmark",
+        "Hodge conjecture",
+        "Yang–Mills",
+        "Erdős problem 1183",
+        "Python package",
+        "container image"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "BLLM: Beyond the LLM with Deep Human-Mind-AI",
+      "url": "https://zenodo.org/records/23464490"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "68e4ed3d7e0823a04e671768",
+      "context_id": "57dae8c94ced134bd05cc2b1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "8b49f59eeb1f5877616761dc22a5ecf0ada18c47deaf9683aeb2c575884a8175",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "This archive is provided as artifact material for the article \"Synthesis and Verification of Register Automata over Data Sequences\" for SETTA 2026. Abstract: Data sequences, such as time series, traces, and sensor streams, are words over large or infinite data domains. Their properties often depend on comparisons between values at different positions, which finite automata cannot express directly. We study synthesis and verification for Deterministic Register Automata (DRAs) over ordered data sequences. DRAs combine finite control with registers for remembered data values, providing compact symbolic descriptions of quantitative sequence languages. Our technical core is a local-search synthesis procedure and an exact robustness checker for DRAs. We fix the alphabet theory to ordered rationals $(\\Q;&lt;,=)$ with rational guard constants and use non-negative affine accumulator costs. For a fixed number of DRA registers, the checker runs in polynomial time; its dependence on that number is exponential. It reduces robustness to coverability and then to a shortest-path problem. Since the search ranges over $\\Q^+$, it produces variable-length witnesses and, for RAA-definable alignment costs such as DTW, explores a counterexample space with no a priori length bound. As an application, we use learned DRAs as interpretable surrogates for queried neural sequence classifiers. A probably approximately correct (PAC) validation loop refines rejected candidates, returns genuine non-robustness witnesses for the classifier when found, and accepts a surrogate only with statistical guarantees for fidelity and local stability. We implement the framework in \\textit{RAExc}, enabling the synthesis of interpretable automata and the verification of their robustness. We evaluate the approach on benchmark languages and sequentialized MNIST, demonstrating high accuracy while verifying the robustness of the learned automata.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Synthesis and Verification of Transformer Programs",
+      "url": "https://zenodo.org/records/23451085"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "e5ca4f5f09bfee059b514226",
+      "context_id": "16343cf63edf51512a95b1ad",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "93811a13922f75ba507024e98e7070711727012f312110b4c084244ff5fc8801",
+      "source_published": "2026-10-16T17:59:48Z",
+      "source_updated": "2026-10-16T17:59:48Z",
+      "summary": "We study unitary \\(S^1\\)-manifolds with four isolated fixed points in relation to Kosniowski's conjectural inequality \\(4χ(M)>\\dim M\\). For every integer \\(m\\ge3\\), we show that there exists a unitary \\(S^1\\)-manifold \\(M_m^{18}\\) with exactly four isolated fixed points, and these manifolds are pairwise distinct and nonzero in ordinary complex bordism. Since \\(χ(M_m^{18})=4\\), they give an infinite family of counterexamples to \\(4χ(M)>\\dim M\\). By gluing two blocks formed by \\(G_2/SU(3)\\cong S^6\\) and the unit disk $D(V)$ of 12- dimensional real $S^1$-representation $V$ along their equivariantly identified free boundaries, we explicitly construct such a manifold $M^{18}_3$. We also prove that the four-point case is null-bordant in real dimension \\(16\\) and in every real dimension greater than \\(18\\); hence \\(18\\) is the smallest dimension in which such a counterexample occurs.",
+      "tags": [
+        "math.AT"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Unitary $S^1$-Manifolds with Four Fixed Points and Kosniowski's Conjecture",
+      "url": "https://arxiv.org/abs/2610.23855v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "a5f22f39e3e1fb74baf2bf38",
+      "context_id": "041b78d4436a5e08d1fd1746",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "cbb06488e9de3b38f7e53dc10e3c409990fc305e14bd92e503edaa6266cfaeb5",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "We develop a rigorous finite-dimensional mathematical framework connecting the renormalization group, gradient flows, Lyapunov stability, and noncooperative game theory. The central object is a renormalization-group flow written in gradient form, dg_i/dt = &beta;_i(g) = - &sum;_j G_ij(g) &part;&Gamma;/&part;g_j(g),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1) where g = (g_1, &hellip;, g_n) belongs to an open domain M &sub; ℝⁿ, &Gamma; is a C&sup2; function, and G(g) is a symmetric positive-definite matrix. We associate to this flow a common-payoff game whose payoff is U(g) = - &Gamma;(g).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2) We prove, with complete arguments, that ordinary Nash equilibria always imply renormalization-group fixed points, but the converse is false. We then identify the exact condition under which a fixed point becomes a genuine stable equilibrium of the game: a nondegenerate renormalization-group fixed point is asymptotically stable if and only if the Hessian of &Gamma; is positive definite, if and only if it is a strict local minimum of &Gamma;, if and only if it is a strict strong Nash equilibrium of U = -&Gamma;. The distinction between ordinary Nash equilibrium and strong Nash equilibrium is essential. Ordinary Nash equilibria allow only unilateral deviations, while strong Nash equilibria exclude all small joint deviations. We provide explicit counterexamples showing that fixed points need not be Nash equilibria, that ordinary Nash equilibria need not be stable, and that invertibility of G alone does not imply finiteness of equilibria. We also prove global existence results under compactness and finiteness results under Morse nondegeneracy. The paper is self-contained at the level of multivariable calculus, linear algebra, ordinary differential equations, and basic Lyapunov stability theory. The framework is intentionally conditional: it does not claim that the gradient-flow representation has been proven in four-dimensional QCD or in any specific quantum field theory. Those issues are placed in a final section of open problems.",
+      "tags": [
+        "renormalization group",
+        "gradient-flow renormalization group",
+        "Lyapunov function",
+        "Lyapunov stability",
+        "asymptotically stable fixed points",
+        "renormalization-group fixed points",
+        "Nash equilibrium",
+        "strong Nash equilibrium",
+        "common-payoff game",
+        "common-potential game",
+        "potential games",
+        "beta functions",
+        "Hessian positive definiteness",
+        "strict local minimum",
+        "nondegenerate critical points",
+        "Morse nondegeneracy",
+        "game theory",
+        "finite-dimensional dynamical systems",
+        "inverse function theorem",
+        "QCD gradient-flow open problem"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Gradient-Flow Renormalization Group as a Common-Potential Game: A Rigorous Equivalence Between Asymptotically Stable Fixed Points and Strict Strong Nash Equilibria",
+      "url": "https://zenodo.org/records/23442159"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "3a5efb17e890d510c17d895c",
+      "context_id": "dd662f1add1040737cbb47cf",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "null result"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "zenodo",
+      "source_context_sha256": "21e32e057de962d866e7d588dcb2440206eead7e1507e7fe504332dcafc35b77",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "Version 1.6 adds four preregistered analyses of LEGA-C star-forming discs at z ~ 0.8 and of SPARC: KCAL, a calibration of the gas pressure coefficient against stellar JAM masses; PIPE-6, a0 at R_e and 2R_e from ionized gas; PIPE-7, a local SPARC control; and PIPE-8, JAM-gas offsets and a0 at both radii. It also adds two analyses that were designed but not run (PIPE-5, GAP). Combined reading: in the same galaxies the gas a0 rises outward (+0.30 dex on 40), the JAM a0 does not (&minus;0.08, no pre-stated reading), and the JAM-gas mass offset falls outward (&minus;0.16). With measured mass models local discs show no rise; with the LEGA-C stellar recipe the 53 massive discs show none, but all 138 rise by +0.14. Preregistrations and code were drafted with Claude (Anthropic) and audited by fresh Claude sessions; locks are self-recorded SHA-256 manifests with UTC times. See README_v1.6.md for contents, provenance, hashes and every post-score edit. &nbsp; Version 1.5 adds a synthesis note, \"What the a0(z) tests say together: a falling g_obs/g_bar where the errors allow a test, and a fitted scale set by the baryonic and pressure inputs at R_e\" (a0z_synthesis_note.pdf; scripts, outputs, figures, searches and audits in a0z_v1.5_SYNTHESIS.zip). It is exploratory and post hoc: it was designed after every result in the record was known, it is not preregistered, and it changes no scored label. It uses the record's frozen PIPE-2 and PIPE-3 code unchanged as a library. What it finds: - Shape. LEGA-C (147 galaxies), the one sample whose errors allow a shape test, prefers a ratio g_obs/g_bar that falls with g_bar (PIPE-3's R; classical margin 12, about one jackknife standard error above the threshold of 4) across gas multipliers 0-2, pressure multipliers 0.5-2 and stellar shifts -0.2 to +0.1 dex. MSA-3D's flat trend (18 galaxies) does not reappear. - Scale. No sample measures a0. At LEGA-C's accelerations the fitted a0 responds about three times as fast as the baryonic mass at R_e: locally d ln a0/d ln M* = -2.2, d ln a0/d ln M_gas = -0.6, d ln a0/d ln k_press = +0.8, explained by the interpolation function's leverage (L = 2.96). Shifts of +/-0.1 dex in stellar mass span a0 = 0.78-2.25. A universal a0 = 1.2 and an evolving a0 = 2.2 differ by about 0.13 dex in stellar mass, or a factor of four in inner gas. Every record value except MSA-3D's lies inside the ranges these inputs produce. - Matched in stellar mass, LEGA-C, KROSS and RC100 have median offsets from one RAR that are not distinguishable, although direct fits in the window differ. No dependence of a0 on stellar mass is detected inside any sample. - Reading: the record does not require an evolving a0; a0 at z ~ 1 cannot be read off until the baryonic mass at R_e is known to a few hundredths of a dex. - Can it be tested now? Searches (identifiers and counts only) found almost no CO or dust detections in the high-a0 samples (MSA-3D 0 of 23; MUSE-DARK 6 of its 126-galaxy parent). For the nine RC100 galaxies with PHIBSS CO, a preregistered test would decide with probability 0.07-0.13 (PIPE4_FEASIBILITY.md), so no test was run. Audits: three independent fresh-session audits. Round 1: 1 BLOCKER (the draft attributed the scale to cold gas; the stellar masses are the stronger lever), 7 MAJOR; round 2: 1 MAJOR (Table I's SPARC row); round 3: 0 BLOCKER, 0 MAJOR, 3 MINOR, all fixed. Every script and figure was reproduced byte for byte in each round. Findings and change logs are in synthesis/audit_r1-r3/. Files added in v1.5: a0z_synthesis_note.pdf (SHA-256 7b4493a02a8e857aa1f415f923b82fa088adf5b1df92b2b51febd1c4b9942606) and a0z_v1.5_SYNTHESIS.zip (SHA-256 be552c3bc715090559ef4e68500e5d5b8aabbdfb6243954b387d0a0b5f97f72f). Input catalogues are those already in v1.0 (RC100), v1.3 (KROSS) and v1.4 (LEGA-C). This computes the thermometer, not the engine; the inertia coupling remains unsolved. &nbsp; Version 1.4 adds PIPE-3 (scored 13 October 2026; folder pipe3/ inside a0z_v1.4_PIPE3.zip). PIPE-3 is a pr",
+      "tags": [
+        "MOND",
+        "acceleration scale",
+        "radial acceleration relation",
+        "galaxy rotation curves",
+        "preregistration",
+        "reproducability",
+        "SPARC",
+        "dark matter",
+        "cosmology",
+        "null result",
+        "LEGA-C",
+        "VLT",
+        "VIMOS",
+        "ionised-gas kinematics",
+        "LEGA-C DR3",
+        "BaStA",
+        "stellar population synthesis",
+        "aperture correction",
+        "pressure support",
+        "asymmetric drift",
+        "Berkson error",
+        "PIPE-3",
+        "MSA-3D",
+        "JWST",
+        "NIRSpec",
+        "DysmalPy",
+        "dark matter fraction",
+        "PIPE-1",
+        "KROSS",
+        "KMOS",
+        "Berkson error",
+        "PIPE-2"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "The a0(z) tests: does the MOND acceleration scale track the cosmic horizon? A preregistered record",
+      "url": "https://zenodo.org/records/23444426"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "0c17cec86aeb9e2629fac0a4",
+      "context_id": "787ddc33b0649b44329d8387",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "null result"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "zenodo",
+      "source_context_sha256": "5257455fe357c89492774187f6001d066af315664583ee07f332de23ea9283de",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "Scripts, dated analysis plans, run logs, and deal-level estimates for a study of 38,991 completed acquisitions by listed or delisted acquirers across 37 countries, rumored between 2007 and 2025. Version 2.1 accompanies a manuscript under double anonymized peer review; author identification is withheld during the review. It changes no script, log, plan, or data file of version 2.0: it updates the title of the manuscript and renumbers the exhibits in the index (NUMBERS.md) to those of the manuscript as submitted (Tables 1 to 6; Online Appendix S1 to S22). Licensed return series and deal and firm data cannot be redistributed and are documented rather than included (LICENSE_AND_DATA.md). Start with README.md. &nbsp;",
+      "tags": [
+        "mergers and acquisitions",
+        "systematic risk",
+        "measurement error",
+        "replication",
+        "null results",
+        "beta estimation",
+        "M&A",
+        "econometrics"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Replication package: Do acquisitions change systematic risk? Evidence on beta from 38,991 deals in 37 countries over 19 years",
+      "url": "https://zenodo.org/records/23433294"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "660992174476aa934ffd5cf9",
+      "context_id": "fe9842b4c3f935a46352bcb2",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "be791b6a4de6b9720918ac6b0b23b677261e1813ce0d5fb53e092f579fb92cb0",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Reviewed computational reproduction artifact for Fixed-Reference Scoring for Task-Consistent RUL Model Selection under Tunable Target Capping , version 2026.10.18-rc1. The archive contains author software, study configurations and selection records, 210 successful result records representing 320 fits, derived validation and standard-test predictions, thirteen reproducible manuscript summaries, and eight predefined checkpoint-audit cases. The eight distributed weights reproduced 1,414 archived inference outputs exactly in the recorded environment. Recomputing the reported summaries requires no raw NASA data. Fresh inference and training require separately obtained, hash-checked NASA C-MAPSS data; official links and checksums are included. Raw NASA files, preprocessed sensor features, installed dependencies, private logs and the other 632 weights are excluded. License scope: author software and software documentation are licensed under MIT. Author-derived predictions, configuration datasets and the eight selected weights are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). These licenses apply to their respective components, as specified in LICENSE and DATA_AND_WEIGHTS_LICENSE.md; NASA and other third-party rights remain separate. The standard test data had been inspected during earlier development. These outcomes are conditional descriptive evidence. Fixed-reference scoring is not consistently better than fixed cap125, model-seed tests do not establish conventional significance, and the 30-cycle maintenance-delay proxy does not improve. The original-precision FD002 cap125 failure and separate FP32-attention sensitivity are retained distinctly. Historical paths and preparation-status files are preserved as build provenance, not claims about current publication status. AI assistance is documented in the included assistance record. Code repository: https://github.com/KKevinZhou/fixed-reference-rul-model-selection",
+      "tags": [
+        "Remaining Useful Life",
+        "C-MAPSS"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Fixed-Reference Scoring for Task-Consistent RUL Model Selection under Tunable Target Capping — Code and Derived Predictions",
+      "url": "https://zenodo.org/records/23464274"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "76d882542b0ace26e1bc7198",
+      "context_id": "fa76b60ed53a850e07e36163",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "9634589acc9c096f4c8a23792c20e8df8340310123d393b98a453e81d180aef3",
+      "source_published": "2022-03-21T08:15:51Z",
+      "source_updated": "2022-03-21T08:15:51Z",
+      "summary": "The spoof speech detection (SSD) is the essential countermeasure for automatic speaker verification systems. Although SSD with magnitude features in the frequency domain has shown promising results, the phase information also can be important to capture the artefacts of certain types of spoofing attacks. Thus, both magnitude and phase features must be considered to ensure the generalization ability to diverse types of spoofing attacks. In this paper, we investigate the failure reason of feature-level fusion of the previous works through the entropy analysis from which we found that the randomness difference between magnitude and phase features is large, which can interrupt the feature-level fusion via backend neural network; thus, we propose a phase network to reduce that difference. Our SSD system: phase network equipped Res2Net achieved significant performance improvement, specifically in the spoofing attack for which the phase information is considered to be important. Also, we demonstrate our SSD system in both known- and unknown-kind SSD scenarios for practical applications.",
+      "tags": [
+        "cs.SD",
+        "cs.AI",
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Phase-Aware Spoof Speech Detection Based on Res2Net with Phase Network",
+      "url": "https://arxiv.org/abs/2203.10793v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "f14954bde91c14858a2d1cd3",
+      "context_id": "fa7634e4c36f9155f61feb00",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "6fdae84ee11c37bea1124f535e1510aef6e913ab2ea73d82ad43b8530a486108",
+      "source_published": "2026-10-15T11:33:01Z",
+      "source_updated": "2026-10-15T11:33:01Z",
+      "summary": "Quantum programs pass through compilers, transpilers and vendor services before execution. However, the distance between what was written and what runs is rarely measured. We call this distance realization divergence: the observable difference in how an identical source circuit is realized and behaves across quantum software stacks. We report a hardware study across three vendors and four devices, combining pre-registered predictions with explicitly identified exploratory analyses and amendments. In a compilation experiment with assigned placement policies, embedding radius correlates with two-qubit overhead at Spearman 0.805, against 0.492 for circuit size. Under a fixed lowest-index policy, an eight-qubit Bernstein-Vazirani circuit exhibits greater execution divergence than a twelve-qubit circuit on IQM Emerald. The opposite ordering occurs on IQM Garnet. Both comparisons replicate across two repetitions with disjoint confidence intervals. These results support a placement-dependent explanation, without isolating individual hardware noise mechanisms. The same ordering inversion is absent on the all-to-all IonQ control. On Rigetti Cepheus, a follow-up using topology-aware native placement found no consistent advantage in correct-answer probability for either submission track, but did not establish equivalence between the tracks. Structural comparisons depend on metric weighting, placement and device generation. Provider interfaces also limit observability: Rigetti's supported-operation list remained unchanged across a device generation that replaced the native entangler. We classify silent interface failures in composed toolchains and identify checks at toolchain boundaries, connecting valid cross-provider comparisons with concrete software-quality practices.",
+      "tags": [
+        "cs.SE",
+        "quant-ph"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Realization Divergence in Multi-Provider Quantum Computing: A Pre-Registered Study of What Survives Measurement",
+      "url": "https://arxiv.org/abs/2610.21714v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "458b18e45359c3b2b2311869",
+      "context_id": "f91afe277e17e1c26e35585f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "c209fc6f00ace1a61699e435a7f947740f930d0f4d3e7c8e054c04f6c7e923a0",
+      "source_published": "2026-10-14T08:17:05Z",
+      "source_updated": "2026-10-14T08:17:05Z",
+      "summary": "Medical prescribing errors for multimorbid patients, who require complex drug regimens, are a major patient safety concern. These errors often stem from fragmented decision-making across medical specialties, a critical coordination failure that leads to adverse drug events and rehospitalizations. To address this coordination challenge, we introduce PRISMATIC, a multi-agent architecture where specialized agents, each representing a workflow role, collaboratively generate and refine treatment plans. Operating on a blackboard architecture, the system first structures patient information from clinical notes, then iteratively develops safe, rational, and interpretable drug regimens. The agents' collaboration is governed by two novel adaptive coordination mechanisms: (1) Dynamic Self-Updating Weight Adjustment (DSWA), a long-term mechanism that adjusts the influence weights of agents based on historical case outcomes, enabling the system to adapt and trust more reliable specialists over time. (2) Discrepancy Feedback Precise Calibration (DFPC), a short-term mechanism where agents provide iterative feedback to resolve disagreements and eliminate prescription conflicts for the current patient. Experiments on patient records from the MIMIC-IV database show that PRISMATIC significantly reduces drug conflicts, improves prescription coverage, and enhances treatment consistency compared to strong LLM baselines. Our work demonstrates that structuring clinical co-treatment as a multi-agent coordination problem offers a promising path toward safer and more coherent multidisease management.",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "PRISMATIC : Prescription Risk Inspection System for Multi-Agent Treatment Interaction in Clinical Decision-Making",
+      "url": "https://arxiv.org/abs/2610.19762v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "b2adbb3920a4e03aa6dfd114",
+      "context_id": "f4924ccabd17900a19c1f49d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "2b55eb6bb6498d6e05827fa08e9d7da25d4d7da89c9139175a3be734adeff5f8",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "Notes cover the changes since 0.5.0. pip install metabeta==0.6.0 Tutorials Three notebooks in demos/ replace intro.ipynb and priors.ipynb . Each runs on a CPU runtime in Colab. 01-quickstart : lme4's sleepstudy end to end, next to lme4's estimates. 02-families : Bernoulli ( cbpp ) and Poisson ( Salamanders ) fits, posterior predictive checks, and random-walk moves next to a NUTS reference. 03-priors : prior specification, prior sensitivity in one call, and model comparison by Bayes factors. New reports posteriorDraws(result) : posterior draws of the global parameters on the data's scale, as a DataFrame named as in posteriorSummary (#31). groupDraws(result) : each group's coefficients per draw, the fixed effect plus the group's deviation (#33). posteriorPredictive(result) : the observed responses and one replicate per posterior draw, in the data's units (#33). bayesFactor(result, reference) : the Bayes factor of one model over another, per prior, with its Kass–Raftery grade; both results come from sample(evidence=True) (#33). sample n_samples defaults to 1,000 draws (#19). seed= makes a call reproducible and leaves the caller's random stream untouched (#32). posteriorPredictive and plotPPD take seed= too (#26, #33). Every summary ends with a fit metric: R² (Gaussian), AUC (Bernoulli) or deviance (Poisson) (#29). loo=True adds PSIS-LOO to the summary; it replaces diagnostics=True (#29). random_walk=True runs silently and warns only below an IMH effective sample size (ESS) of 10 (#29). Warnings state the failure, its consequence and numbered remedies, and point at the user's call (#18, #29). The first call after loading costs about as much as a warm one; warmup() runs that pass explicitly (#19). Formulas, scales and names Formulas follow lme4: y ~ 1 + (1 | g) fits an intercept-only model, preprocessing reads only the columns the formula names, and column names keep their case (#15). The order of fixed terms no longer changes the fit; names are mapped back in every output (#16). Summaries default to x_scale='original' . Random-effect SDs, correlations and per-group effects are on the data's scale like the fixed effects, and so are the prior lines (#17). rfxSummary labels each group correctly (#17). Api.from_pretrained('gaussian') is an alias of 'normal' , in any case (#30). Reports pick a dataset row by prior_id , a prior's name or its index (#32). Errors Unsupported formula syntax raises NotImplementedError with a workaround: || , nested or crossed grouping factors, interactions ( : , * ) and function calls such as log() or factor() (#18). Data outside every submodel's range raises one ValueError that names the limits; a family mismatch names the checkpoint to load (#18). A named predictor dropped as collinear or near-constant raises an error that names it (#18). Formulas the pretrained models cannot fit raise an error that names the fix: a random intercept without a fixed one, or the reverse, and a random slope that is not a fixed term (#16). GPU from_pretrained(..., device='cuda') works on GPUs whose torch build lacks a cholesky_solve kernel, such as Colab's T4 with torch 2.11 for CUDA 13 (#26). plotParameters and sample(loo=True) work on a CUDA device (#26). Packaging Python 3.13 support, with dependency floors at Colab's preinstalled versions (#20). The code is licensed under Apache-2.0, previously CC BY-NC-SA 4.0 (#21). CITATION.cff drives GitHub's citation button (#21). Deprecated, removed in 0.7 Each alias still works and raises a FutureWarning (#29, #32). sample(diagnostics=True) : use loo=True . batch_index= in posteriorSummary and rfxSummary , and index= in plotParameters : use prior_id= . indices= in plotPPD : use prior_ids= .",
+      "tags": [],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "metabeta: amortized Bayesian inference for generalized linear mixed-effects models",
+      "url": "https://zenodo.org/records/23458114"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "b2f498a9d8fc837ec710b710",
+      "context_id": "f17b416908702a7895fc0daa",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "8fa27de1f54be47a2bf0caad1b1d9f511f8aeb2705572c485be1e5c98c5c93c1",
+      "source_published": "2026-10-15T05:00:58Z",
+      "source_updated": "2026-10-15T05:00:58Z",
+      "summary": "Modern agents select tools from registries, but exposing entire registries incurs high token costs and can impair selection as they grow. We present TRACER, a retrieval front-end that indexes observed tool-call sequences in a trie and ranks continuations using a learned blend of empirical and contextual priors. On a mixed retail-and-telecom $τ^2$ environment, TRACER improves GPT-5.4's tool-selection accuracy by 4.7 points while reducing input tokens per step by 80%, exposing just 5 of 128 tools. In autonomous full-turn execution, it matches GPT-5.4's full-registry task success with 61% fewer input tokens per step. Across six environments and four models, TRACER improves tool-selection accuracy over full-registry selection in 21 of 24 model-environment pairs, with average gains of 6 to 10 points; the three exceptions trail by at most 2.2. We analyze failures in both regimes to identify directions for future work.",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "TRACER: Trajectory-Aware Tool Retrieval for LLM Agents",
+      "url": "https://arxiv.org/abs/2610.21267v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "9fe251897f8e1149096136e0",
+      "context_id": "eebb1c225264b97711c12627",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "a341f0f7f7c1162d91397a817d891eb8f9dd60308f6d3374c24402a980f9b8b7",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "This repository provides the official reproduction software, numerical simulation datasets, and empirical input fixtures for the manuscript: Song, X., Xu, H., &amp; Bai, Y. (2026). Width Oscillations Regulate Event-Driven Bank Collapse and Point-Bar Growth in Transitional Meanders. Journal of Geophysical Research: Earth Surface. ( Under Review ) ABSTRACT Alluvial meanders dynamically adjust their planform and channel geometry, yet classical meander theory assumes a spatially uniform, constant channel width and continuous bank retreat, failing to capture episodic bank collapse and non-uniform width adjustments in transitional meandering rivers. Situated along the geomorphic continuum between single-thread and wandering streams, transitional meanders exhibit pronounced spatial width variations that break cross-sectional symmetry. Here, we develop a physically closed, reduced-complexity morphodynamic framework coupling a three-parameter asymptotic expansion of the three-dimensional Reynolds-averaged flow equations, continuous basal toe scour with transient pore-water suction, threshold-governed cantilever limit equilibrium, and a mass-conserving sediment partition driving inner point-bar progradation. The formulation demonstrates that the spatial phase relationship between channel width oscillations and centerline curvature steers the spatial displacement of outer-bank shear stress hotspots: channel constriction upstream of the bend apex amplifies cutbank shear stress, whereas channel expansion decelerates flow and promotes point-bar accretion. Discrete slump-block deposits provide self-adaptive hydraulic shielding that stabilizes the toe and regulates decadal channel relaxation. Hindcasting the 40-year morphodynamic evolution of the transitional Powder River, Montana, across 34 monumented cross sections reproduces post-flood channel widening and subsequent multi-decadal recovery narrowing across 228 discrete collapse events, while in the limit of uniform width the model recovers classical constant-width meander theory with first-order convergence along the meandering Juru&aacute; River. Global parameter sweeps quantitatively encompass observed erosion-to-accretion balance ratios across 84 worldwide natural rivers, providing a multiscale morphodynamic framework that links event-scale geotechnical failure to multi-decadal width evolution in alluvial channels. ARCHIVE CONTENTS - src/: Python source code implementing the three-parameter asymptotic hydrodynamic solver, local generalized Orr-Sommerfeld and Squire spectral eigenvalue stability diagnostics, two-stage geotechnical bank failure engine with slump-block hydraulic shielding, and Exner point-bar morphodynamic progradation coupler. - data/: Processed empirical input fixtures, including the 40-year Powder River cross-sectional monitoring dataset (powder_river.json) and the Juru&aacute;-A remote sensing centerline profile (Jurua-A_mask1_link_sBCMn_flat.npz). - results/simulations/: Pre-computed numerical simulation output arrays (.npz) enabling instant reproduction of Figures 2&ndash;9 without re-running intensive multi-hour sweeps. - figures/: Standalone publication figure plotting scripts (plot_fig1.py through plot_fig9.py) and AGU-style formatting utilities (figure_utils.py). - run_all_reproductions.py: Master execution script that automatically reproduces all nine publication figures in vector PDF format in under two minutes. HOW TO REPRODUCE ALL FIGURES 1. Unzip zenodo_release.zip and navigate into the archive root directory. 2. Ensure the required Python environment is activated: &nbsp; &nbsp;- Python 3.13 &nbsp; &nbsp;- NumPy 2.3.2 &nbsp; &nbsp;- SciPy 1.17.1 &nbsp; &nbsp;- Matplotlib 3.10.8 3. Run the master reproduction script: &nbsp; &nbsp;python run_all_reproductions.py 4. All nine publication figures will be generated and verified in figures/output/. LICENSE - Software (src/, figures/, run_all_reproductions.py): MIT License. - Data and figures (data/, results/, gener",
+      "tags": [
+        "fluvial morphodynamics",
+        "transitional meanders",
+        "width oscillations",
+        "secondary circulation",
+        "cantilever bank collapse",
+        "slump-block shielding",
+        "point-bar progradation",
+        "Powder River",
+        "asymptotic expansion",
+        "Orr-Sommerfeld stability"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Data and code for: Width Oscillations Regulate Event-Driven Bank Collapse and Point-Bar Growth in Transitional Meanders",
+      "url": "https://zenodo.org/records/23406587"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "761e967864d5354c6677268a",
+      "context_id": "eca41f2ef822d3abe1bf5754",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "268bea4bde499beeabf9f1e5f2d3e1737e7bdaefad759575938e7f2ea8bafec4",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "Coding agents can now interpret a specification, implement it, write and execute tests, repair failures, and declare the result ready for release. When the same agentic system produces both the software and the evidence of its correctness, a passing test suite no longer constitutes independent evidence. Visible tests become an optimization target, and code, tests, and oracles may share a single misinterpretation of the specification. This paper argues that agent-produced software requires an assurance plane that is structurally independent of the build plane. We first characterize four gaps along the chain from stakeholder intent to production, namely the requirement, conformance, evaluation, and model gaps, and identify which of them verification can close. We then propose a framework that separates building from verifying, introduces a Verification Contract stating what must be demonstrated before release, and organizes verification in two phases: a specification-first phase designed without access to the implementation, and an implementation-aware phase that strengthens the evidence through mutation analysis, property-based testing, and fuzzing. The resulting evidence is consolidated into an assurance report that makes residual uncertainty explicit and leaves the release decision to a human. We evaluate the framework in a pre-registered study on three stateful services, two of them written by third-party models, and an EvalPlus pilot, comparing self-validation with independent verification under context-level and model-level independence. The builder's programs were correct, but its own tests missed subtle interactions: a verifier in a fresh context detected more of the 46 seeded faults than the builder's tests (Holm-corrected p = 0.006), and surfaced the ambiguities of the specification, at the price of rare false oracles. A verifier from another provider did not add detection. The framework and the study provide a basis for governing the release of software produced by agents.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Who Verifies the Builder? Toward Independent Assurance for Agent-Produced Software",
+      "url": "https://zenodo.org/records/23442776"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "2e982ff3f959b8c47488f770",
+      "context_id": "e991f4d084bbb3878638b23d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "617935533c02e7703865ea7e07cb537cc04f1aef5ebcfb50773841003e6bb7e3",
+      "source_published": "2026-10-16",
+      "source_updated": "",
+      "summary": "Climate change affects human well-being through interacting physical, ecological, infrastructural, and socioeconomic processes rather than through a single exposure or disease pathway. Major assessments identify observed harms to health, food and water security, livelihoods, settlements, and ecosystems, alongside increasing risks with additional warming (IPCC, 2022a). This narrative review develops a cross-sector framework from a source inventory of 154 human-impact pathways in 14 domains, supported by major assessments, selected peer-reviewed studies, and institutional datasets. Literature selection used targeted web-index searches and source verification through 2 October 2026; the review does not estimate pooled effects or claim exhaustive systematic coverage. The synthesis distinguishes direct injury and illness, ecosystem-mediated harms, failures of essential services, financial transmission, and losses of social and cultural continuity. Representative quantitative findings illustrate substantial existing burdens, but attribution studies, ecological associations, exposure models, displacement records, and conditional forecasts measure different quantities and cannot be combined into a universal five-year trajectory (Vicedo-Cabrera et al., 2021; Wang et al., 2026; Clement et al., 2021). Compound hazards and service interdependencies can increase losses beyond the directly affected sector, while repeated shocks can reduce the capacity to recover or adapt (Zscheischler et al., 2018; IPCC, 2023). A reporting framework is proposed that records the outcome, population, baseline, geography, time horizon, emissions and development assumptions, adaptation, and uncertainty for each indicator. The central contribution is an integrated interpretation and measurement architecture, not a new forecast of global mortality, migration, or societal collapse. Effective assessment should preserve evidence of serious and interacting harms without converting uncertain thresholds or heterogeneous studies into unsupported calendar-specific predictions.",
+      "tags": [
+        "Climate change",
+        "Human health",
+        "Climate risk",
+        "Impact pathways",
+        "Cascading risks",
+        "Compound hazards",
+        "Food and water security",
+        "Climate-related displacement",
+        "Infrastructure resilience",
+        "Adaptation",
+        "Social vulnerability",
+        "Climate inequality",
+        "Risk quantification",
+        "Narrative review"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Climate change impacts humans: A cross-sector narrative review of impact pathways, cascading risks, and accountable quantification",
+      "url": "https://zenodo.org/records/23428939"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "f59d49b361163e3f602f435d",
+      "context_id": "e82563c6d4a450eb10242ba6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "92f3676b6848b0ac0f151d5188abf9e0c252210776a6f08453306a23d79d208d",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Code, independent checks and the record of the Anaxia engine for the paper Which String Vibrations Become Which Generations on the Dwork Quintic by Deep Bhattacharjee and Ushashi Bhattacharya. The paper determines, for the heterotic string with the standard embedding on the one-parameter family of quintic threefolds, which vibration modes become which families of charged particles. The 101 families are labelled by 101 distinct characters of the symmetry group (Z/5)^3, and the 24 characters that do not occur are the classes of the permutations of (0,1,2,3,4). Every Yukawa coupling allowed by the symmetry is a power of the modulus, psi^r with r = 0, 1, 2, 3 on 566, 425, 280 and 160 unordered triples, and every other coupling vanishes. The invariant deformation pairs each family with exactly one partner, so that the mass matrix has determinant psi^70, full rank away from the Fermat point and rank 51 there, where the masses are given in closed form by the Gamma function. The Geometric Selection Conjecture is shown to be equivalent to the existence of one viable vacuum fixed by mirror symmetry, and no smooth quintic and no free quotient of one carries three families. The existence of a viable vacuum is open. The archive holds 64 independent checks: a C program for the labels, the couplings allowed by the group and the mass map, a C++ expansion of the Hessian over its 120 permutations, Python checks of the socle, the Hessian, the intersection form of the Fermat quintic and the Gamma values, a Julia check of the Hodge norms, a Macaulay2 computation of the Jacobian ring at two rational values of the modulus with the socle functional on all 3876 monomials of degree fifteen, and 11 Lean 4 theorems on the counts and the arithmetic of the Hessian, each axiom-free or depending on propext only. code/run_checks.sh runs them all. code/bllm/ holds the failure, change and retry record of the four targets on the Anaxia engine (release 3.0.5, doi:10.5281/zenodo.23469389).",
+      "tags": [
+        "heterotic string",
+        "quintic threefold",
+        "Yukawa couplings",
+        "Calabi-Yau threefolds",
+        "mirror symmetry",
+        "Dwork pencil",
+        "formal verification"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Which String Vibrations Become Which Generations on the Dwork Quintic: code, checks and engine record",
+      "url": "https://zenodo.org/records/23480492"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "1d9e867dae494d44bb1eec56",
+      "context_id": "e6e49ce1c864932f926573ef",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "81c5eb5eeb920e09b9d615c4672b93e991ef0dec3ddcd459c12dc984681d5139",
+      "source_published": "2026-10-15T04:49:49Z",
+      "source_updated": "2026-10-15T04:49:49Z",
+      "summary": "Language models are often asked to make judgments: whether a proposed answer is correct, whether one statement follows logically from another, or whether a response is safe. Yet changing the instructions that specify how the judgment should be expressed can make the final answer less reliable, even for the same input. We ask whether this reflects a change in internal judgment or a failure to express it. Comparing hidden-state vectors for the same input under different instructions, we find that their differences concentrate in a low-dimensional expression subspace. We identify this subspace without benchmark labels and remove its contribution from a linear predictor to obtain an isolated judgment. Across correctness, entailment, and safety, the isolated judgment remains reliable under instructions not used to identify the subspace, even when the model's final answer and the original predictor degrade. When the judgment question is negated, isolation raises the predictor's AUROC from 0.504 to 0.825 for entailment and from 0.480 to 0.891 for safety. We also find that judgment is readable in earlier layers, before the expression subspace begins to disrupt the predictor. Together, these results provide a way to separate judgment from expression and recover internal judgments even when the model's final answers are unreliable.",
+      "tags": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Isolating a Language Model's Judgment with a Label-Free Subspace",
+      "url": "https://arxiv.org/abs/2610.21256v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "3400d057da1f3449f1283d8d",
+      "context_id": "e19f707fa053de6429f34c29",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "cc54b4e2d1b1ce699384c480255b82cb07f7d9f641ee1e4ecb218c02a64f8c8d",
+      "source_published": "2026-10-15T03:27:34Z",
+      "source_updated": "2026-10-15T03:27:34Z",
+      "summary": "Agent memory architectures define how LLM agents store and reuse experience across tasks, but they are typically fixed after deployment, limiting their adaptability across task types. Recent self-evolving approaches instead adapt these memory architectures using execution feedback, typically represented as evaluation scores or compressed summaries. However, such coarse-grained feedback is insufficient for precise failure localization in current agent systems, where long-horizon task execution involves multiple interacting components. Without a precise failure location, existing approaches lack a clear code-level target for modification, leaving the update scope weakly constrained and often leading to large-scale rewrites of an otherwise capable memory architecture. We propose MemScope, a framework for evidence-grounded, localized evolution of an existing memory architecture. Its tool-using Patch Agent jointly inspects raw execution traces, runtime memory state, and current architecture code to identify repair targets and apply bounded, in-place edits under provider-identity and memory-compatibility constraints. On GAIA, the trace-and-memory inspection variant achieves 86.67% accuracy, compared with 70.00% for trace-only and 63.33% for summary-only feedback. Under xBench tasks, the evolved memory architecture improves over its original version from 49 to 55 correct answers with DeepSeek V3.2 and from 50 to 53 with Kimi K2.7 Code. On disjoint ALFWorld unseen tasks, success rises from 50.75% to 71.64%. Across archived architecture-snapshot transitions, the median code-change ratio is 4.4%. These results support fine-grained execution evidence as a basis for localized, in-place memory-architecture evolution.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "MemScope: Evolving Agent Memory Architectures through Localized Code Repair",
+      "url": "https://arxiv.org/abs/2610.21170v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "4d21a152220071c1d4323a11",
+      "context_id": "e19cc9b5d0be9d353327cd90",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "ea8a0cc7372cd4a27168ef4fd4699f0da0fcb2550ebb315648e796ecd7e23c02",
+      "source_published": "2026-10-15T04:39:57Z",
+      "source_updated": "2026-10-15T04:39:57Z",
+      "summary": "Centralized orchestration provides comprehensive multi-agent coordination but creates bottlenecks in scalability, adaptability, and collective performance. Decentralized approaches alleviate these bottlenecks by distributing coordination across agents, yet often leave responsibility for delegated dependencies and failure recovery unclear. To address this gap, we propose RCM, a responsibility-centered coordination mechanism that leverages commitments to couple task delegation with explicit responsibilities of the involved parties. Through recursive delegation, agents retain their upstream responsibilities while locally orchestrating downstream commitments, thereby preserving accountability across delegation chains, creating a network of local orchestration. We operationalize this mechanism locally through responsibility-constrained decision-making and a responsibility-oriented communication protocol (RCP), enabling agents to autonomously establish, manage, and terminate commitments. As agents act in parallel, their local actions continuously evolve the commitment graph, allowing global coordination to emerge and adapt toward a shared mission without centralized control. Experiments across reasoning, coding, and executable agent environments demonstrate that RCM outperforms strong centralized and decentralized coordination baselines by up to 18.7 points in task performance and 10.2 points in Responsibility, while improving failure and harm detection without task-specific training.",
+      "tags": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "A Responsibility-Centered Coordination Mechanism for Decentralized Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.21243v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "51a3c8f6a362d958168959d2",
+      "context_id": "d9f01fa253021a69ed8d062e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "bbd0884b3532f5d43954a21d5b131c4ae4975787c060d3568d578a7441207398",
+      "source_published": "2018-11-06T17:20:05Z",
+      "source_updated": "2018-11-06T17:20:05Z",
+      "summary": "In speech enhancement and source separation, signal-to-noise ratio is a ubiquitous objective measure of denoising/separation quality. A decade ago, the BSS_eval toolkit was developed to give researchers worldwide a way to evaluate the quality of their algorithms in a simple, fair, and hopefully insightful way: it attempted to account for channel variations, and to not only evaluate the total distortion in the estimated signal but also split it in terms of various factors such as remaining interference, newly added artifacts, and channel errors. In recent years, hundreds of papers have been relying on this toolkit to evaluate their proposed methods and compare them to previous works, often arguing that differences on the order of 0.1 dB proved the effectiveness of a method over others. We argue here that the signal-to-distortion ratio (SDR) implemented in the BSS_eval toolkit has generally been improperly used and abused, especially in the case of single-channel separation, resulting in misleading results. We propose to use a slightly modified definition, resulting in a simpler, more robust measure, called scale-invariant SDR (SI-SDR). We present various examples of critical failure of the original SDR that SI-SDR overcomes.",
+      "tags": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "SDR - half-baked or well done?",
+      "url": "https://arxiv.org/abs/1811.02508v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "6171310be1a7ad874e671ce6",
+      "context_id": "d3435d47c1415f1feb4aeb67",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "b2b6113f97a7f7e104359214b921d6915ac759eeed85f5af4c7346fcac7000cc",
+      "source_published": "2026-10-16T10:22:00Z",
+      "source_updated": "2026-10-16T10:22:00Z",
+      "summary": "Relational out-of-distribution errors are easy to describe and hard to evaluate cleanly. An image may be natural, a caption may be fluent, and all mentioned objects may be common, yet the caption may describe the wrong relation in the image. Many evaluations intended to test this behavior can be solved without checking the pairing at all, because negatives differ in caption style, template, length, object frequency, or image statistics. We propose counterfactual pairing cycles, a blocked evaluation primitive that reuses the same two images and the same two captions on both sides of the comparison, changing only which image is paired with which caption. This makes image-only, text-only, and additive component shortcuts cancel exactly in finite samples. The same contrast also gives a training loss for relational outlier exposure and a diagnostic for bilinear vision-language scores. Across synthetic controls, GQA, and COCO, cycles separate coarse image-caption matching from directional role-binding failures, while also identifying geometric size relations that remain strongly visible in global features. In a shortcut-contaminated COCO outlier-exposure stress test, a model selected by a near-perfect shortcut validation AUROC retains substantial relational signal but remains below cycle training on exact cycles; cycle training improves CycleAcc from 0.882 to 0.927. The main lesson is simple: to test whether a model understands a pairing, the benchmark should keep the parts fixed, change the pairing, and ask only about coupling. The official implementation is available online.",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Can the Parts Fool the Test? Counterfactual Pairing Cycles for Relational OOD",
+      "url": "https://arxiv.org/abs/2610.23248v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "4d352b674b8c61570df9d942",
+      "context_id": "c05201f251374a284283d711",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "2ec8da08e8b7d7de0a6ee25a942193993144dab16d8a6cf754a54d06bf4a30f4",
+      "source_published": "2026-10-17",
+      "source_updated": "",
+      "summary": "EHR2Trace converts local hospital EHR extracts (delimited text and spreadsheets) into OMOP CDM 5.4 and MEDS. The two targets are derived independently from a single canonical layer rather than one from the other, every published row carries a link back to the source rows it came from, and fifty-five checks encode the properties a conversion must satisfy before it can be used as training data, including the leakage failures that are invisible to schema validation. Where the data does not answer a question, the converter blocks and says so instead of substituting a default. Companion paper: EHR2Trace: Auditable EHR Data Infrastructure for Patient World Models and Clinical Agents (arXiv:2609.38193).",
+      "tags": [
+        "OMOP CDM",
+        "MEDS",
+        "electronic health records",
+        "data provenance",
+        "ETL validation",
+        "clinical machine learning",
+        "MIMIC-IV"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "EHR2Trace: a deterministic converter from local EHR exports to OMOP CDM 5.4 and MEDS, with row-level lineage",
+      "url": "https://zenodo.org/records/23430727"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "005523476b810af6404ff2d0",
+      "context_id": "bf8369b967ed14fc0e6b5acb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "bc9c6db39185b7445f6f1dc3dcf68436cefbeaaed2261c6ca97653bc6dcf8f97",
+      "source_published": "2026-10-16T16:08:30Z",
+      "source_updated": "2026-10-16T16:08:30Z",
+      "summary": "Physical plausibility is essential for realistic video generation. Existing methods impose physical guidance before synthesis via simulations or refined prompts, but this can limit dynamic diversity, miss errors that emerge only after generation, and require repeated regeneration when inconsistencies remain. We therefore study a generate-diagnose-repair paradigm that preserves the original generation capability and selectively repairs physical inconsistencies afterward, raising two key questions: what to repair and how to repair? To address them, we introduce PhysRepair, an agentic video generation framework that combines causal reasoning over the observed physical failure with prior repair experience to enable localized and adaptive correction. Specifically, Spatiotemporal Causal Constraints identify the first invalid physical state and its causally affected states, producing a repair specification that guides physically plausible local regeneration while preserving unaffected content. Experience-augmented In-context Learning combines the ongoing repair context with relevant experience from previous repairs, allowing the agent to adapt its repair decisions across diverse physical failures and accumulate completed trajectories for future cases. Experiments on Physics-IQ Verified across solid mechanics, fluid dynamics, optics, thermodynamics, and magnetism demonstrate that PhysRepair consistently improves the physical plausibility of generated videos over existing methods. Our project page is available at https://xxkkxxx.github.io/PhysRepair-Website/.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Agentic Physics-Grounded Video Generation via Memory-Augmented In-Context Reasoning",
+      "url": "https://arxiv.org/abs/2610.23677v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "8935c633c0c623b42f622a51",
+      "context_id": "be2213440116a84b7f543eea",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "dbbf990a5eef5a355e64ae6f1cac10492d26f3d430d5a7ef11419f7d029d75f9",
+      "source_published": "2026-06-17T20:32:32Z",
+      "source_updated": "2026-06-17T20:32:32Z",
+      "summary": "Audio deepfakes generated by neural text-to-speech and voice-cloning systems threaten speaker verification and public discourse at scale. The core challenge is cross-dataset generalization: detectors trained on one synthesis pipeline collapse on unseen forgeries. We argue that this failure is primarily because of structural synthetic speech artifacts which are multi-timescale trajectory anomalies. Though every existing detector aggregates a fixed-window frame statistics, this misaligns the architecture with the signal. We propose FlowFake, a Liquid Time-Constant (LTC) architecture whose hidden state evolves via a learned ODE, with per-neuron adaptive time constants simultaneously resolving spectral (10ms) and prosodic (2s) cues. At only 34K parameters FlowFake achieves formal BIBO stability and O(dt^4) integration error. On a four-dataset cross domain benchmark (ASVspoof2019-LA, FakeOrReal, InTheWild, MLAAD), FlowFake reaches 75.29% on ASVspoof2019 trained only on FakeOrReal and 79.97% trained only on MLAAD. It outperforms RawGAT-ST and Whisper-DF on every evaluated pair and matching SSL Wav2vec2 (300x larger) at 0.01% of its parameter count. The source code is available on : https://github.com/GhostRider2023/FlowFake",
+      "tags": [
+        "cs.SD",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "FlowFake: Liquid Networks for Audio Deepfake Detection",
+      "url": "https://arxiv.org/abs/2606.19579v1"
+    },
+    {
+      "base_direction_id": "bio_material_scoby",
+      "candidate_id": "90aa5c80cdd07f9b429594ef",
+      "context_id": "b7dd65b85f19dd6aba2632cb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "bio_material_scoby::COUNTEREVIDENCE",
+      "direction_title": "SCOBY / cellulose biomaterials / absorption / barrier materials [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "ba8cc711125e916213f1824e34a7eba77837111a64a683d456aa6b726aa205d2",
+      "source_published": "2020-03-21T00:56:05Z",
+      "source_updated": "2020-03-21T00:56:05Z",
+      "summary": "Automatic speaker verification (ASV) systems are highly vulnerable to presentation attacks, also called spoofing attacks. Replay is among the simplest attacks to mount - yet difficult to detect reliably. The generalization failure of spoofing countermeasures (CMs) has driven the community to study various alternative deep learning CMs. The majority of them are supervised approaches that learn a human-spoof discriminator. In this paper, we advocate a different, deep generative approach that leverages from powerful unsupervised manifold learning in classification. The potential benefits include the possibility to sample new data, and to obtain insights to the latent features of genuine and spoofed speech. To this end, we propose to use variational autoencoders (VAEs) as an alternative backend for replay attack detection, via three alternative models that differ in their class-conditioning. The first one, similar to the use of Gaussian mixture models (GMMs) in spoof detection, is to train independently two VAEs - one for each class. The second one is to train a single conditional model (C-VAE) by injecting a one-hot class label vector to the encoder and decoder networks. Our final proposal integrates an auxiliary classifier to guide the learning of the latent space. Our experimental results using constant-Q cepstral coefficient (CQCC) features on the ASVspoof 2017 and 2019 physical access subtask datasets indicate that the C-VAE offers substantial improvement in comparison to training two separate VAEs for each class. On the 2019 dataset, the C-VAE outperforms the VAE and the baseline GMM by an absolute 9 - 10% in both equal error rate (EER) and tandem detection cost function (t-DCF) metrics. Finally, we propose VAE residuals - the absolute difference of the original input and the reconstruction as features for spoofing detection.",
+      "tags": [
+        "eess.AS"
+      ],
+      "target_repository": "Hawkar-usls/SCOBY-D0",
+      "title": "Deep Generative Variational Autoencoding for Replay Spoof Detection in Automatic Speaker Verification",
+      "url": "https://arxiv.org/abs/2003.09542v1"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "selection": "BALANCED_LENS_ROLLING_TOP",
+  "snapshot_cap": 48,
+  "snapshot_items_total": 48,
+  "target_repository": "Hawkar-usls/SCOBY-D0"
+}
