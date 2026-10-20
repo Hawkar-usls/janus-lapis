@@ -1,9 +1,42 @@
 {
-  "batch_id": "bba6af203e66c259d377",
+  "batch_id": "38a60221388ada4c323b",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
   "items": [
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "4a907cee89a3a9659449a1c7",
+      "context_id": "5b28a985f7f5c013dd86177d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::FORWARD",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "identifiability",
+        "provenance"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.0417,
+      "source": "zenodo",
+      "source_context_sha256": "3012c71dddc3306c9fcfc47e9a731069782d4b52137a252488fe72bf48dd18a8",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "This repository provides the reproducibility package supporting the study &ldquo;Self-Diagnosing Reliability of Neutron&ndash;Gamma Pulse-Shape Discrimination under Operational Drift.&rdquo; The study experimentally evaluates a reliability framework for neutron&ndash;gamma pulse-shape discrimination (PSD) under controlled operational drift. Rather than proposing a new PSD observable or classifier, the framework distinguishes PSD separability, calibration validity, and decision reliability through controlled perturbation experiments, label-free waveform-health monitoring, identifiability assessment, conditional adaptive recalibration, verification, and fail-safe refusal when the available unlabeled evidence is insufficient to support trusted autonomous correction. The package contains the final analysis and figure-generation scripts, derived numerical tables, and six final manuscript figures. The analyses include independent reconstruction and validation of a frequency-domain classification index (FCI), controlled baseline, gain, additive-noise, timing, and clipping perturbations, label-free degradation diagnosis, identifiability-based recalibration, class-prior robustness testing, and an independent NE213A PSD-domain audit. The primary experimental CLYC&ndash;SiPM waveform data are publicly available from Zenodo record 8037239 (DOI: 10.5281/zenodo.8037239) . The independent NE213A experimental dataset is publicly available from Zenodo record 14305929 (DOI: 10.5281/zenodo.14305929) . Raw experimental data are not redistributed in this package. The NE213A dataset is used as an independent detector- and PSD-domain audit. Waveform-level drift and recovery are deliberately not claimed for NE213A because the acquisition-specific QDC quantities could not be reconstructed from the released waveforms with sufficient held-out fidelity. The repository includes documentation describing data provenance, analysis order, software dependencies, and the scope and limitations of the reproducibility workflow.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Reproducibility Package for Self-Diagnosing Reliability of Neutron–Gamma Pulse-Shape Discrimination under Operational Drift",
+      "url": "https://zenodo.org/records/23512177"
+    },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
       "candidate_id": "47984b36f342e71eef9bcd1d",
@@ -389,12 +422,12 @@
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
-      "candidate_id": "acdaafc5e04f3a47cf63447c",
-      "context_id": "446e8955fa9fbbd23d5c49fa",
+      "candidate_id": "4a907cee89a3a9659449a1c7",
+      "context_id": "0467ba1e449f3c91e96fa974",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "mirror_bidirectional_provenance::FORWARD",
-      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [FORWARD]",
+      "direction_id": "mirror_bidirectional_provenance::REVERSE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -404,22 +437,23 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "bidirectional"
+        "identifiability",
+        "provenance",
+        "reconstruction",
+        "recovery"
       ],
-      "mirror_lens": "FORWARD",
+      "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5417,
-      "source": "arxiv",
-      "source_context_sha256": "2d77ddf04f6529a07e79b4e9c80b270eb00ad4a88c68fcecd8aecb7a3374e769",
-      "source_published": "2026-10-19T17:38:05Z",
-      "source_updated": "2026-10-19T17:38:05Z",
-      "summary": "Traditional evaluation benchmarks reduce inherently interconnected scientific knowledge in life sciences into flat lists of questions, disregarding the underlying topological structure of the knowledge. We introduce, the first graph-structured benchmark for life sciences, featuring over 10,000 high-quality multiple-choice questions across medicine, biology, and chemistry. Our approach constructs a weighted evaluation graph using bidirectional matching and semantic similarity algorithms, where nodes represent questions and edge weights capture their semantic relationships. Leveraging this graph topology, we design two novel evaluation metrics. The Global Coherence Score (GCS) measures a model's consistency within semantically related neighborhoods, while Knowledge Balance Score (KBS) analyzes how model errors are distributed across the graph to reveal conceptual blind spots. LG-Bench facilitates fine-grained comparison of LLMs by surfacing differences in conceptual coherence and patterns of knowledge organization across models. Our framework shifts the evaluation paradigm from flat accuracy metrics to structure-aware analysis, offering a new lens for diagnosing and improving LLM performance in the life sciences domain.",
-      "tags": [
-        "cs.AI"
-      ],
+      "score": 14.9583,
+      "source": "zenodo",
+      "source_context_sha256": "9d54308cd18e36a8d1ca1b238dd8716b1bf0a298ef012a069102f77876602a5a",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "This repository provides the reproducibility package supporting the study &ldquo;Self-Diagnosing Reliability of Neutron&ndash;Gamma Pulse-Shape Discrimination under Operational Drift.&rdquo; The study experimentally evaluates a reliability framework for neutron&ndash;gamma pulse-shape discrimination (PSD) under controlled operational drift. Rather than proposing a new PSD observable or classifier, the framework distinguishes PSD separability, calibration validity, and decision reliability through controlled perturbation experiments, label-free waveform-health monitoring, identifiability assessment, conditional adaptive recalibration, verification, and fail-safe refusal when the available unlabeled evidence is insufficient to support trusted autonomous correction. The package contains the final analysis and figure-generation scripts, derived numerical tables, and six final manuscript figures. The analyses include independent reconstruction and validation of a frequency-domain classification index (FCI), controlled baseline, gain, additive-noise, timing, and clipping perturbations, label-free degradation diagnosis, identifiability-based recalibration, class-prior robustness testing, and an independent NE213A PSD-domain audit. The primary experimental CLYC&ndash;SiPM waveform data are publicly available from Zenodo record 8037239 (DOI: 10.5281/zenodo.8037239) . The independent NE213A experimental dataset is publicly available from Zenodo record 14305929 (DOI: 10.5281/zenodo.14305929) . Raw experimental data are not redistributed in this package. The NE213A dataset is used as an independent detector- and PSD-domain audit. Waveform-level drift and recovery are deliberately not claimed for NE213A because the acquisition-specific QDC quantities could not be reconstructed from the released waveforms with sufficient held-out fidelity. The repository includes documentation describing data provenance, analysis order, software dependencies, and the scope and limitations of the reproducibility workflow.",
+      "tags": [],
       "target_repository": "Hawkar-usls/Hrain",
-      "title": "LG-Bench: A Graph-Structured Evaluation Benchmark for Life Sciences",
-      "url": "https://arxiv.org/abs/2610.26787v1"
+      "title": "Reproducibility Package for Self-Diagnosing Reliability of Neutron–Gamma Pulse-Shape Discrimination under Operational Drift",
+      "url": "https://zenodo.org/records/23512177"
     },
     {
       "base_direction_id": "cognition_memory_reverse",
@@ -657,6 +691,40 @@
       "url": "https://zenodo.org/records/23504942"
     },
     {
+      "base_direction_id": "cognition_memory_reverse",
+      "candidate_id": "4a907cee89a3a9659449a1c7",
+      "context_id": "d9632ef9d3ec0cd1128579cc",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "cognition_memory_reverse::REVERSE",
+      "direction_title": "Cognition / memory / reverse models / representation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "identifiability",
+        "reconstruction",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.5417,
+      "source": "zenodo",
+      "source_context_sha256": "5447d2dbcd0d9766bad4d903fc0d9c5bc421eae0b73deb7eea52ee052e1b7a22",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "This repository provides the reproducibility package supporting the study &ldquo;Self-Diagnosing Reliability of Neutron&ndash;Gamma Pulse-Shape Discrimination under Operational Drift.&rdquo; The study experimentally evaluates a reliability framework for neutron&ndash;gamma pulse-shape discrimination (PSD) under controlled operational drift. Rather than proposing a new PSD observable or classifier, the framework distinguishes PSD separability, calibration validity, and decision reliability through controlled perturbation experiments, label-free waveform-health monitoring, identifiability assessment, conditional adaptive recalibration, verification, and fail-safe refusal when the available unlabeled evidence is insufficient to support trusted autonomous correction. The package contains the final analysis and figure-generation scripts, derived numerical tables, and six final manuscript figures. The analyses include independent reconstruction and validation of a frequency-domain classification index (FCI), controlled baseline, gain, additive-noise, timing, and clipping perturbations, label-free degradation diagnosis, identifiability-based recalibration, class-prior robustness testing, and an independent NE213A PSD-domain audit. The primary experimental CLYC&ndash;SiPM waveform data are publicly available from Zenodo record 8037239 (DOI: 10.5281/zenodo.8037239) . The independent NE213A experimental dataset is publicly available from Zenodo record 14305929 (DOI: 10.5281/zenodo.14305929) . Raw experimental data are not redistributed in this package. The NE213A dataset is used as an independent detector- and PSD-domain audit. Waveform-level drift and recovery are deliberately not claimed for NE213A because the acquisition-specific QDC quantities could not be reconstructed from the released waveforms with sufficient held-out fidelity. The repository includes documentation describing data provenance, analysis order, software dependencies, and the scope and limitations of the reproducibility workflow.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Reproducibility Package for Self-Diagnosing Reliability of Neutron–Gamma Pulse-Shape Discrimination under Operational Drift",
+      "url": "https://zenodo.org/records/23512177"
+    },
+    {
       "base_direction_id": "mirror_bidirectional_provenance",
       "candidate_id": "47984b36f342e71eef9bcd1d",
       "context_id": "91d827448f095eb54b37be04",
@@ -806,13 +874,13 @@
       "url": "https://arxiv.org/abs/2610.26796v1"
     },
     {
-      "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "121c6789fba3f6b04723975e",
-      "context_id": "ef2a46fbebd762b4ab0e020f",
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "4a907cee89a3a9659449a1c7",
+      "context_id": "c05ec95649b2864bde4ec125",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "cognition_memory_reverse::REVERSE",
-      "direction_title": "Cognition / memory / reverse models / representation [REVERSE]",
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -822,60 +890,22 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "memory",
-        "reconstruction"
+        "identifiability",
+        "limitation",
+        "provenance"
       ],
-      "mirror_lens": "REVERSE",
+      "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.8333,
-      "source": "arxiv",
-      "source_context_sha256": "03ca8f0e65deb16f4c407655cb98a731e1e6c8af4d45d40037f33a01dcb45eb2",
-      "source_published": "2026-10-19T05:17:36Z",
-      "source_updated": "2026-10-19T05:17:36Z",
-      "summary": "In reservoir computing, performance depends on whether the fixed dynamics of the reservoir suit the task, and the appropriate memory length and frequency response differ across tasks. The reservoir settings are found by a search on each task, and driving the reservoir with the input and collecting its states for every candidate setting dominates the cost of the search. In a reservoir with a linear recurrence, the dynamics decompose into modes, one per eigenvalue, and the eigenvalue distribution becomes a design variable. We propose the Sector-Ring Linear Reservoir (SRLR), in which the eigenvalue angles are fixed at evenly spaced positions around a circle and one decay timescale, chosen from a few values, is assigned to each sector of consecutive angles. To keep the scale of each mode's state equal across candidates, the input weights are scaled using the power spectrum of the training input. To reduce the cost of the search, the states of the modes for each decay-timescale value are computed once and reused across candidates. On prediction and reconstruction benchmarks built from chaotic systems, the SRLR achieved, in all eight cases, a lower mean test error than a reference model in which all modes share one decay timescale, and was competitive with nonlinear echo state network and leaky-integrator echo state network baselines. The selected decay-timescale profiles changed with the prediction target and horizon. The state reuse reduced the number of computed mode trajectories in the search by 99.8% relative to per-candidate recomputation.",
-      "tags": [
-        "cs.LG",
-        "cs.NE"
-      ],
+      "score": 10.4583,
+      "source": "zenodo",
+      "source_context_sha256": "4453cb8d8ac5df191a7ba0fc65639c323bd37d57140307de4615f52c7aee4e5b",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "This repository provides the reproducibility package supporting the study &ldquo;Self-Diagnosing Reliability of Neutron&ndash;Gamma Pulse-Shape Discrimination under Operational Drift.&rdquo; The study experimentally evaluates a reliability framework for neutron&ndash;gamma pulse-shape discrimination (PSD) under controlled operational drift. Rather than proposing a new PSD observable or classifier, the framework distinguishes PSD separability, calibration validity, and decision reliability through controlled perturbation experiments, label-free waveform-health monitoring, identifiability assessment, conditional adaptive recalibration, verification, and fail-safe refusal when the available unlabeled evidence is insufficient to support trusted autonomous correction. The package contains the final analysis and figure-generation scripts, derived numerical tables, and six final manuscript figures. The analyses include independent reconstruction and validation of a frequency-domain classification index (FCI), controlled baseline, gain, additive-noise, timing, and clipping perturbations, label-free degradation diagnosis, identifiability-based recalibration, class-prior robustness testing, and an independent NE213A PSD-domain audit. The primary experimental CLYC&ndash;SiPM waveform data are publicly available from Zenodo record 8037239 (DOI: 10.5281/zenodo.8037239) . The independent NE213A experimental dataset is publicly available from Zenodo record 14305929 (DOI: 10.5281/zenodo.14305929) . Raw experimental data are not redistributed in this package. The NE213A dataset is used as an independent detector- and PSD-domain audit. Waveform-level drift and recovery are deliberately not claimed for NE213A because the acquisition-specific QDC quantities could not be reconstructed from the released waveforms with sufficient held-out fidelity. The repository includes documentation describing data provenance, analysis order, software dependencies, and the scope and limitations of the reproducibility workflow.",
+      "tags": [],
       "target_repository": "Hawkar-usls/Hrain",
-      "title": "Sector-Ring Linear Reservoirs: Sector-Wise Decay-Timescale Allocation With State Reuse Across Candidate Settings",
-      "url": "https://arxiv.org/abs/2610.25806v1"
-    },
-    {
-      "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "19eadad366a53aa0c02f9afb",
-      "context_id": "196f6175056f5f94d058b63c",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "cognition_memory_reverse::REVERSE",
-      "direction_title": "Cognition / memory / reverse models / representation [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "memory",
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.8333,
-      "source": "arxiv",
-      "source_context_sha256": "d2c1a7381fdf06f7a9df749b6bb42a505f01f89f02c1a11b75f0d232e15a8d09",
-      "source_published": "2026-10-17T02:39:54Z",
-      "source_updated": "2026-10-17T02:39:54Z",
-      "summary": "Financial time series exhibit multi-scale, high-noise, and non-stationary volatility dynamics. Decomposition--integration frameworks built on complete ensemble empirical mode decomposition with adaptive noise (CEEMDAN) have advanced this field, yet existing CEEMDAN hybrids remain unstable: high-frequency mode mixing contaminates downstream predictors, and the heterogeneous volatility of decomposed components is not matched by any volatility-adaptive mechanism. To address these gaps, this paper proposes CEEMDAN-SE-SSA-VMGL. CEEMDAN adaptively decomposes the original series, and sample-entropy-driven K-means clustering groups the intrinsic mode functions into high-, mid-, and low-frequency and residual components. Singular spectrum analysis (SSA) is then applied to the high-frequency group, whose singular-value decomposition of the trajectory matrix and principal-component reconstruction decouple intertwined pseudo-oscillatory modes and alleviate mode mixing. We further design a plug-and-play robust LSTM variant, the volatility-modulated GARCH-LSTM (VMGL), which embeds a differentiable GARCH(1,1) layer inside the LSTM cell as a risk gate; the estimated conditional volatility multiplicatively scales the forget-gate activation, letting memory decay adapt to the instantaneous volatility while remaining fully end-to-end trainable. Component predictions are linearly combined. On five US and Chinese financial series (CSI 300, CSI 500, AAPL, GOOGL, S&P 500), the proposed model is compared with eleven benchmark architectures, lowering the forecasting error by 9% to 24% relative to the best benchmark and by 60% to 70% relative to a standard LSTM. Diebold--Mariano and model-confidence-set (MCS) tests confirm the statistical significance and stability of the gains, spectral analyses verify the SSA denoising efficacy, and backtesting demonstrates the framework's economic utility.",
-      "tags": [
-        "cs.CE",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Hrain",
-      "title": "A decomposition-integration framework coupling singular spectrum analysis with a volatility-adaptive LSTM for stock price forecasting",
-      "url": "https://arxiv.org/abs/2610.24384v1"
+      "title": "Reproducibility Package for Self-Diagnosing Reliability of Neutron–Gamma Pulse-Shape Discrimination under Operational Drift",
+      "url": "https://zenodo.org/records/23512177"
     },
     {
       "base_direction_id": "cognition_memory_reverse",
@@ -1060,42 +1090,6 @@
       "url": "https://arxiv.org/abs/2610.25078v1"
     },
     {
-      "base_direction_id": "mirror_bidirectional_provenance",
-      "candidate_id": "eb3f42d97fc09ee4e07d0b09",
-      "context_id": "9aa9ef8aa1725c8320ee0078",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
-      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "provenance"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "arxiv",
-      "source_context_sha256": "3c3ad120e7405800f1eb3c91f18b9b5665fddab03d7d61ba631b8b044bfde01b",
-      "source_published": "2026-10-19T09:50:57Z",
-      "source_updated": "2026-10-19T09:50:57Z",
-      "summary": "Autonomous clinical-modeling agents can optimize predictive performance while violating conditions that make a model usable. We introduce LeakBench, an executable, guideline-derived audit suite that tests agent decisions for prediction-time leakage, calibration, site-level evaluation, support awareness, and decision-curve net benefit. LeakBench combines a synthetic task with known failure structure and two real-data settings: MIMIC-IV (430k admissions) and governed multi-hospital inpatient record front-page (MHFP) data. Our primary analysis uses reward hacking descriptively, without attributing intent: an agent selects prediction-time-invalid inputs because they improve its validation reward. A deterministic optimizer and every evaluated unconstrained local-model configuration select a fatal leaking feature. In fully logged September 2026 A/B runs, DeepSeek Flash and GPT-6-astra each leak in 10/10 unconstrained runs and 0/10 runs with an explicit admission-time constraint. This contrast is version-sensitive: a blinded Claude/Fable-5.1 chat run does not leak in either condition, while explicit-constraint violations appear only in a historical August 2026 slice lacking raw trajectories. Replacing AUROC with AUPRC does not remove leakage selection. Renaming or disguising the leaking inputs changes neither selection nor provenance-based detection; a name-based filter fails. A deterministic provenance verifier-in-loop removes the leak, making the LLM repair loop defense-in-depth. Specific verifier feedback clears fatal leakage in a hosted agent, and a three-seed ablation finds principle-only feedback clears decision-level defects, though these mitigation results are limited. LeakBench treats trustworthy clinical prediction as a property of an agent's modeling process, not merely its score; it is an audit testbed with known-failure controls, not yet an expert-validated benchmark.",
-      "tags": [
-        "cs.CR",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Hrain",
-      "title": "LeakBench: Auditing Reward Hacking through Prediction-Time Leakage in Clinical Modeling Agents",
-      "url": "https://arxiv.org/abs/2610.26088v1"
-    },
-    {
       "base_direction_id": "cognition_memory_reverse",
       "candidate_id": "5cc3c05425044782df8872e2",
       "context_id": "8b93f0a0e503af61b216e3a5",
@@ -1168,42 +1162,6 @@
     },
     {
       "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "617db659cdd63f8534937c5b",
-      "context_id": "ae3c896a09e2163f53fb373e",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "cognition_memory_reverse::COUNTEREVIDENCE",
-      "direction_title": "Cognition / memory / reverse models / representation [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode",
-        "memory"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 7.0417,
-      "source": "arxiv",
-      "source_context_sha256": "f7c5463f35c4749f9cde98f94c72532d4aa64f6e98ca373fd7cdd102462013e1",
-      "source_published": "2026-10-19T13:53:38Z",
-      "source_updated": "2026-10-19T13:53:38Z",
-      "summary": "Rubric-based reinforcement learning (RL) trains policies for open-ended generation with natural-language criteria as rewards, but these rewards can become ineffective as training progresses. We identify two failure modes. Under non-discriminative rewards, scores collapse to uniformly low or high values due to insufficient exploration or a mismatch between task difficulty and policy capability. Under spurious rewards, higher scores do not correspond to better responses. Both reflect a training configuration whose task sampling, exploration, and evaluation stay fixed as the policy evolves. We introduce HarnessRL, a training-time harness that co-evolves with the policy through three interfaces for task sampling, rollout guidance, and rubric criteria. HarnessRL maintains a training-time memory from which a harness evolver retrieves within-task history and cross-task evidence. Using this evidence, the evolver attributes each reward failure to the interface whose update can address it. It then runs a proposer and just-in-time critic loop in which the critic accepts a candidate update only after measuring its effect on the current frozen policy, returning rejected candidates for revision. We also curate Rubric-Mix-10k, a five-domain training and evaluation suite for open-ended RL across medical, science, writing, role-play, and instruction-following tasks. On Rubric-Mix-10k, HarnessRL outperforms the strongest baselines by 2.8 to 3.1 points across both 4B and 9B model scales and nearly halves the training steps to its best checkpoint. Code and data are available at https://github.com/Tongyi-ConvAI/Qwen-Character/tree/main/HarnessRL.",
-      "tags": [
-        "cs.CL"
-      ],
-      "target_repository": "Hawkar-usls/Hrain",
-      "title": "HarnessRL: Co-Evolving Policies with a Just-in-Time Training Harness for Open-Ended RL",
-      "url": "https://arxiv.org/abs/2610.26426v1"
-    },
-    {
-      "base_direction_id": "cognition_memory_reverse",
       "candidate_id": "87d3624fb7b0e319e82599d0",
       "context_id": "7e2452db9e8e3852446fd717",
       "delivery_preview_only": true,
@@ -1241,42 +1199,6 @@
       "target_repository": "Hawkar-usls/Hrain",
       "title": "Reliability-Preserving Compression for Deployable Medical Image Segmentation",
       "url": "https://arxiv.org/abs/2610.25460v1"
-    },
-    {
-      "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "261c9792be053e5df00878b2",
-      "context_id": "79b91be4e54af03acdd186eb",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "cognition_memory_reverse::COUNTEREVIDENCE",
-      "direction_title": "Cognition / memory / reverse models / representation [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "memory",
-        "retrieval"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.9167,
-      "source": "arxiv",
-      "source_context_sha256": "e3e002acef303d8ea420c9a458489f6909511183c79fd8b11f41d30f4a35d0dc",
-      "source_published": "2026-10-19T17:59:39Z",
-      "source_updated": "2026-10-19T17:59:39Z",
-      "summary": "Distributed LLM serving relies on a global index to locate reusable key-value cache (KVCache) blocks through prefix matching. Losing the index after a crash or restart forces affected requests to recompute existing KVCache on GPUs. Persisting the index restores access after a failure. Existing persistent indexes face a tension between prefix-matching performance and recovery time. A snapshot-backed in-memory index supports fast prefix matching, but rebuilding the full index delays recovery. An on-SSD index avoids this rebuild, but adds storage accesses to prefix matching. Our core insight is that extending a matched prefix over a short span typically requires distinguishing only a few token sequences, suggesting that sparse in-memory routing state may suffice. Prefix matching also accesses block metadata in sequence order, allowing metadata for consecutive blocks to be retrieved together. We present SARP (Sparse Adaptive Routing and Packing), an on-SSD KVCache index for fast recovery and prefix matching. SARP groups consecutive block IDs and metadata into segments to amortize storage accesses across multiple blocks. A compact in-memory routing directory identifies candidate segments using entries at selected block positions. SARP limits segment retrievals and uses compact filters to prioritize candidates with longer potential matches. After retrieval, SARP verifies block IDs against the query and reuses only KVCache blocks covered by the verified prefix. After a restart, SARP restores the sparse routing directory from a snapshot. Across four multi-turn chat and agentic workloads, SARP recovers 8.0x to 77.5x faster than the in-memory index baselines and delivers 1.15x to 66.6x the request throughput of the on-SSD index baselines, while reusing only 0.0030% to 0.029% fewer tokens than exact prefix matching.",
-      "tags": [
-        "cs.DB"
-      ],
-      "target_repository": "Hawkar-usls/Hrain",
-      "title": "SARP: An On-SSD Index for KVCache with Fast Prefix Matching and Recovery",
-      "url": "https://arxiv.org/abs/2610.26849v1"
     },
     {
       "base_direction_id": "cognition_memory_reverse",
@@ -1319,6 +1241,114 @@
     },
     {
       "base_direction_id": "cognition_memory_reverse",
+      "candidate_id": "87300c7bc67819631a6a84dd",
+      "context_id": "6e9bc5ac2989dbc0af4bfe92",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "cognition_memory_reverse::COUNTEREVIDENCE",
+      "direction_title": "Cognition / memory / reverse models / representation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "representation",
+        "world model"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0417,
+      "source": "arxiv",
+      "source_context_sha256": "e8afca8678c7796eea6836155f822b0a851c8240ee606f18c04dd41a225e3da2",
+      "source_published": "2026-10-17T07:54:17Z",
+      "source_updated": "2026-10-17T07:54:17Z",
+      "summary": "Reliable long-horizon prediction remains a central challenge for embodied world models. Although recent generative models can synthesize visually plausible action-conditioned futures, their latent dynamics are typically learned through unconstrained transition modules, which may gradually deviate from coherent physical evolution as predictions are recursively rolled forward. We investigate whether explicitly structuring latent state evolution can improve the stability and utility of such imagined trajectories. To this end, we introduce HWM, a structured dynamics framework that represents backbone latents in a learned phase space consisting of generalized coordinates and momenta. Future states are propagated through dissipative Hamiltonian dynamics and mapped back to the original latent representation through a learnable inverse interface. The resulting formulation can be integrated into existing world-model architectures without redesigning their perception or decoding components, while multi-step transition supervision encourages the structured rollout to remain aligned with the latent trajectories induced by real observations. Controlled simulation experiments show that HWM produces more accurate estimates of velocity, acceleration, and jerk and substantially reduces long-horizon energy drift relative to unstructured latent dynamics. We further evaluate the approach across three distinct embodied world-model settings, covering single-arm multi-view prediction with Ctrl-World, dual-arm single-view prediction with EVAC, and task-oriented single-arm prediction with Cosmos-Predict2.5-2B. On RoboCasa, incorporating HWM into Cosmos-Predict2.5-2B yields a 2.7% relative improvement in task success. On real-world AgiBot World trajectories, it improves nDTW by 9.7% with Ctrl-World and Logic by 8.4% with EVAC.",
+      "tags": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Structured Latent Dynamics for Long-Horizon Embodied World Models",
+      "url": "https://arxiv.org/abs/2610.24534v1"
+    },
+    {
+      "base_direction_id": "cognition_memory_reverse",
+      "candidate_id": "501d1c88ef0d78115566f82f",
+      "context_id": "9cb8c520d19ceed06fc54de7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "cognition_memory_reverse::COUNTEREVIDENCE",
+      "direction_title": "Cognition / memory / reverse models / representation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "memory",
+        "representation",
+        "representation learning"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.8333,
+      "source": "arxiv",
+      "source_context_sha256": "9f2e7a39e29c4802e14b1cf994b96276905f3e847bd18eaa904cd3f1cc366c76",
+      "source_published": "2026-10-17T06:52:49Z",
+      "source_updated": "2026-10-17T06:52:49Z",
+      "summary": "Irregular time series require models to answer temporal queries at arbitrary coordinates, yet existing approaches typically retain observation-dependent representations that must be repeatedly resolved for each query. We introduce HiPPO Functional Memory (HiPPO-FM), a functional-memory attention operator that compiles an irregular history into a reusable coordinate-addressable state. Instead of storing observation-indexed tokens or latent trajectories, HiPPO-FM writes observations into a fixed-rank functional space and performs direct coordinate evaluation through matched functional geometry. Kernel-smoothed HiPPO coordinates and Gram-based readout define a shared write/read mechanism, while observed-support self-attention enables content-dependent representations before compression. We characterize the induced finite-dimensional query space and derive an error decomposition separating functional geometry approximation from learned-memory mismatch. Across continuous-coordinate reconstruction, irregular representation learning, real-world extrapolation, and event-sequence prediction, HiPPO-FM consistently improves strong irregular time-series baselines, achieving strong reconstruction accuracy on Spiral, competitive performance across 20 UEA datasets, improved real-world extrapolation, and superior results on several irregular event benchmarks. After encoding, the compact functional state can be reused across different query sets without reprocessing the observation history.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "HiPPO Functional Memory: Coordinate-Queryable Attention for Irregular Time Series",
+      "url": "https://arxiv.org/abs/2610.24501v1"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "4a907cee89a3a9659449a1c7",
+      "context_id": "871bfc68bd48f59921864dfe",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "calibration",
+        "control",
+        "identifiability",
+        "provenance"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 19.125,
+      "source": "zenodo",
+      "source_context_sha256": "63aa71755462354a673cc35fe58b096d5322e1de244ed5808aedc59d67a83971",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "This repository provides the reproducibility package supporting the study &ldquo;Self-Diagnosing Reliability of Neutron&ndash;Gamma Pulse-Shape Discrimination under Operational Drift.&rdquo; The study experimentally evaluates a reliability framework for neutron&ndash;gamma pulse-shape discrimination (PSD) under controlled operational drift. Rather than proposing a new PSD observable or classifier, the framework distinguishes PSD separability, calibration validity, and decision reliability through controlled perturbation experiments, label-free waveform-health monitoring, identifiability assessment, conditional adaptive recalibration, verification, and fail-safe refusal when the available unlabeled evidence is insufficient to support trusted autonomous correction. The package contains the final analysis and figure-generation scripts, derived numerical tables, and six final manuscript figures. The analyses include independent reconstruction and validation of a frequency-domain classification index (FCI), controlled baseline, gain, additive-noise, timing, and clipping perturbations, label-free degradation diagnosis, identifiability-based recalibration, class-prior robustness testing, and an independent NE213A PSD-domain audit. The primary experimental CLYC&ndash;SiPM waveform data are publicly available from Zenodo record 8037239 (DOI: 10.5281/zenodo.8037239) . The independent NE213A experimental dataset is publicly available from Zenodo record 14305929 (DOI: 10.5281/zenodo.14305929) . Raw experimental data are not redistributed in this package. The NE213A dataset is used as an independent detector- and PSD-domain audit. Waveform-level drift and recovery are deliberately not claimed for NE213A because the acquisition-specific QDC quantities could not be reconstructed from the released waveforms with sufficient held-out fidelity. The repository includes documentation describing data provenance, analysis order, software dependencies, and the scope and limitations of the reproducibility workflow.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "Reproducibility Package for Self-Diagnosing Reliability of Neutron–Gamma Pulse-Shape Discrimination under Operational Drift",
+      "url": "https://zenodo.org/records/23512177"
+    },
+    {
+      "base_direction_id": "cognition_memory_reverse",
       "candidate_id": "ed46ef7ac79e83ba11f3115d",
       "context_id": "4e1bd748ff8be73cc1fd3d75",
       "delivery_preview_only": true,
@@ -1354,45 +1384,6 @@
       "target_repository": "Hawkar-usls/Hrain",
       "title": "Operator-Mismatch Contrastive Learning for World-Relative Trajectory Coherence",
       "url": "https://arxiv.org/abs/2610.25360v1"
-    },
-    {
-      "base_direction_id": "mirror_bidirectional_provenance",
-      "candidate_id": "eb3f42d97fc09ee4e07d0b09",
-      "context_id": "28d57c13525aa12dcc143127",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "mirror_bidirectional_provenance::CONTROL",
-      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "ablation",
-        "benchmark",
-        "calibration",
-        "control",
-        "provenance"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 15.875,
-      "source": "arxiv",
-      "source_context_sha256": "e0bddb51bded0c357d10f74c6eb6df77b390eb37aa024c181784c6e917cfd269",
-      "source_published": "2026-10-19T09:50:57Z",
-      "source_updated": "2026-10-19T09:50:57Z",
-      "summary": "Autonomous clinical-modeling agents can optimize predictive performance while violating conditions that make a model usable. We introduce LeakBench, an executable, guideline-derived audit suite that tests agent decisions for prediction-time leakage, calibration, site-level evaluation, support awareness, and decision-curve net benefit. LeakBench combines a synthetic task with known failure structure and two real-data settings: MIMIC-IV (430k admissions) and governed multi-hospital inpatient record front-page (MHFP) data. Our primary analysis uses reward hacking descriptively, without attributing intent: an agent selects prediction-time-invalid inputs because they improve its validation reward. A deterministic optimizer and every evaluated unconstrained local-model configuration select a fatal leaking feature. In fully logged September 2026 A/B runs, DeepSeek Flash and GPT-6-astra each leak in 10/10 unconstrained runs and 0/10 runs with an explicit admission-time constraint. This contrast is version-sensitive: a blinded Claude/Fable-5.1 chat run does not leak in either condition, while explicit-constraint violations appear only in a historical August 2026 slice lacking raw trajectories. Replacing AUROC with AUPRC does not remove leakage selection. Renaming or disguising the leaking inputs changes neither selection nor provenance-based detection; a name-based filter fails. A deterministic provenance verifier-in-loop removes the leak, making the LLM repair loop defense-in-depth. Specific verifier feedback clears fatal leakage in a hosted agent, and a three-seed ablation finds principle-only feedback clears decision-level defects, though these mitigation results are limited. LeakBench treats trustworthy clinical prediction as a property of an agent's modeling process, not merely its score; it is an audit testbed with known-failure controls, not yet an expert-validated benchmark.",
-      "tags": [
-        "cs.CR",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Hrain",
-      "title": "LeakBench: Auditing Reward Hacking through Prediction-Time Leakage in Clinical Modeling Agents",
-      "url": "https://arxiv.org/abs/2610.26088v1"
     },
     {
       "base_direction_id": "cognition_memory_reverse",
@@ -1602,42 +1593,6 @@
       "url": "https://zenodo.org/records/23494842"
     },
     {
-      "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "a12d0f111966b5d22a7db59e",
-      "context_id": "8be15f366d1ab3a214249eba",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "cognition_memory_reverse::CONTROL",
-      "direction_title": "Cognition / memory / reverse models / representation [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 13.0,
-      "source": "arxiv",
-      "source_context_sha256": "87c5c4058545da7fca921f7b59614bf1e017708f160f5aa62049f4195c891751",
-      "source_published": "2026-10-19T17:59:17Z",
-      "source_updated": "2026-10-19T17:59:17Z",
-      "summary": "Recent advances in multimodal models have enabled GPT-6 Astra to perform robotic manipulation through in-context learning. Yet contact-rich control and tactile perception are often regarded as strengths of specialist policies, leaving open whether Astra can directly understand and use tactile observations. We provide, to our knowledge, the first demonstration that Astra directly interprets vision-based tactile images and uses their contact cues for manipulation. Tactile RGB images enter through its existing visual interface, enabling few-shot closed-loop control on nineteen simulated UniVTAC and OpenViTac tasks with 210 sampled scene seeds per setting. With visuo-tactile input, Astra achieves mean success rates of 93.8% and 81.8%, exceeding the strongest reported specialist baselines in our comparison by 22.9 and 13.1 percentage points, respectively. Vision-only performance also leads these baselines, reaching 76.3% and 80.6%. Trajectory analysis reveals active probing, cautious grasping, contact-guided alignment, and recovery, alongside difficulties with tangential loading and corrective execution. Our findings challenge the exclusivity of specialist policies in contact-rich manipulation and show that fine-grained vision can partially compensate for missing touch. They also identify vision-based tactile sensing as an interface for scaling contact understanding with foundation models and reveal signs of benchmark saturation. These results motivate joint visual-tactile pretraining, harder contact-rich evaluations, and physical-robot validation.",
-      "tags": [
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/Hrain",
-      "title": "GPT-6 Astra Is a Native Visuo-Tactile Policy for Contact-Rich Manipulation",
-      "url": "https://arxiv.org/abs/2610.26846v1"
-    },
-    {
       "base_direction_id": "mirror_bidirectional_provenance",
       "candidate_id": "ed46ef7ac79e83ba11f3115d",
       "context_id": "3cfd72f532a4d94387ac7baa",
@@ -1672,42 +1627,6 @@
       "target_repository": "Hawkar-usls/Hrain",
       "title": "Operator-Mismatch Contrastive Learning for World-Relative Trajectory Coherence",
       "url": "https://arxiv.org/abs/2610.25360v1"
-    },
-    {
-      "base_direction_id": "mirror_bidirectional_provenance",
-      "candidate_id": "a12d0f111966b5d22a7db59e",
-      "context_id": "32324faf419b0071c15d499a",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "mirror_bidirectional_provenance::CONTROL",
-      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 13.0,
-      "source": "arxiv",
-      "source_context_sha256": "a11880ea30c8ae6b84eb2564a1ba661382d1b04c436882c741a81556884f5693",
-      "source_published": "2026-10-19T17:59:17Z",
-      "source_updated": "2026-10-19T17:59:17Z",
-      "summary": "Recent advances in multimodal models have enabled GPT-6 Astra to perform robotic manipulation through in-context learning. Yet contact-rich control and tactile perception are often regarded as strengths of specialist policies, leaving open whether Astra can directly understand and use tactile observations. We provide, to our knowledge, the first demonstration that Astra directly interprets vision-based tactile images and uses their contact cues for manipulation. Tactile RGB images enter through its existing visual interface, enabling few-shot closed-loop control on nineteen simulated UniVTAC and OpenViTac tasks with 210 sampled scene seeds per setting. With visuo-tactile input, Astra achieves mean success rates of 93.8% and 81.8%, exceeding the strongest reported specialist baselines in our comparison by 22.9 and 13.1 percentage points, respectively. Vision-only performance also leads these baselines, reaching 76.3% and 80.6%. Trajectory analysis reveals active probing, cautious grasping, contact-guided alignment, and recovery, alongside difficulties with tangential loading and corrective execution. Our findings challenge the exclusivity of specialist policies in contact-rich manipulation and show that fine-grained vision can partially compensate for missing touch. They also identify vision-based tactile sensing as an interface for scaling contact understanding with foundation models and reveal signs of benchmark saturation. These results motivate joint visual-tactile pretraining, harder contact-rich evaluations, and physical-robot validation.",
-      "tags": [
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/Hrain",
-      "title": "GPT-6 Astra Is a Native Visuo-Tactile Policy for Contact-Rich Manipulation",
-      "url": "https://arxiv.org/abs/2610.26846v1"
     },
     {
       "base_direction_id": "cognition_memory_reverse",
@@ -1757,8 +1676,8 @@
     },
     {
       "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "eb3f42d97fc09ee4e07d0b09",
-      "context_id": "66c4451dbe224e6faa0700ed",
+      "candidate_id": "87300c7bc67819631a6a84dd",
+      "context_id": "5cac8006917ad475c5d90351",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "cognition_memory_reverse::CONTROL",
@@ -1772,26 +1691,105 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "ablation",
-        "benchmark",
-        "calibration",
-        "control"
+        "control",
+        "representation",
+        "world model"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 11.4583,
+      "score": 10.3333,
       "source": "arxiv",
-      "source_context_sha256": "186f2671bde508500645b150c970a57de9a4c80594ebfe29481ec8a682562f44",
-      "source_published": "2026-10-19T09:50:57Z",
-      "source_updated": "2026-10-19T09:50:57Z",
-      "summary": "Autonomous clinical-modeling agents can optimize predictive performance while violating conditions that make a model usable. We introduce LeakBench, an executable, guideline-derived audit suite that tests agent decisions for prediction-time leakage, calibration, site-level evaluation, support awareness, and decision-curve net benefit. LeakBench combines a synthetic task with known failure structure and two real-data settings: MIMIC-IV (430k admissions) and governed multi-hospital inpatient record front-page (MHFP) data. Our primary analysis uses reward hacking descriptively, without attributing intent: an agent selects prediction-time-invalid inputs because they improve its validation reward. A deterministic optimizer and every evaluated unconstrained local-model configuration select a fatal leaking feature. In fully logged September 2026 A/B runs, DeepSeek Flash and GPT-6-astra each leak in 10/10 unconstrained runs and 0/10 runs with an explicit admission-time constraint. This contrast is version-sensitive: a blinded Claude/Fable-5.1 chat run does not leak in either condition, while explicit-constraint violations appear only in a historical August 2026 slice lacking raw trajectories. Replacing AUROC with AUPRC does not remove leakage selection. Renaming or disguising the leaking inputs changes neither selection nor provenance-based detection; a name-based filter fails. A deterministic provenance verifier-in-loop removes the leak, making the LLM repair loop defense-in-depth. Specific verifier feedback clears fatal leakage in a hosted agent, and a three-seed ablation finds principle-only feedback clears decision-level defects, though these mitigation results are limited. LeakBench treats trustworthy clinical prediction as a property of an agent's modeling process, not merely its score; it is an audit testbed with known-failure controls, not yet an expert-validated benchmark.",
+      "source_context_sha256": "093e8a944da0f19d3eb855a32b43f19a1c55640fa1d8bbe259d788f92a3b3d9b",
+      "source_published": "2026-10-17T07:54:17Z",
+      "source_updated": "2026-10-17T07:54:17Z",
+      "summary": "Reliable long-horizon prediction remains a central challenge for embodied world models. Although recent generative models can synthesize visually plausible action-conditioned futures, their latent dynamics are typically learned through unconstrained transition modules, which may gradually deviate from coherent physical evolution as predictions are recursively rolled forward. We investigate whether explicitly structuring latent state evolution can improve the stability and utility of such imagined trajectories. To this end, we introduce HWM, a structured dynamics framework that represents backbone latents in a learned phase space consisting of generalized coordinates and momenta. Future states are propagated through dissipative Hamiltonian dynamics and mapped back to the original latent representation through a learnable inverse interface. The resulting formulation can be integrated into existing world-model architectures without redesigning their perception or decoding components, while multi-step transition supervision encourages the structured rollout to remain aligned with the latent trajectories induced by real observations. Controlled simulation experiments show that HWM produces more accurate estimates of velocity, acceleration, and jerk and substantially reduces long-horizon energy drift relative to unstructured latent dynamics. We further evaluate the approach across three distinct embodied world-model settings, covering single-arm multi-view prediction with Ctrl-World, dual-arm single-view prediction with EVAC, and task-oriented single-arm prediction with Cosmos-Predict2.5-2B. On RoboCasa, incorporating HWM into Cosmos-Predict2.5-2B yields a 2.7% relative improvement in task success. On real-world AgiBot World trajectories, it improves nDTW by 9.7% with Ctrl-World and Logic by 8.4% with EVAC.",
       "tags": [
-        "cs.CR",
-        "cs.LG"
+        "cs.LG",
+        "cs.CV"
       ],
       "target_repository": "Hawkar-usls/Hrain",
-      "title": "LeakBench: Auditing Reward Hacking through Prediction-Time Leakage in Clinical Modeling Agents",
-      "url": "https://arxiv.org/abs/2610.26088v1"
+      "title": "Structured Latent Dynamics for Long-Horizon Embodied World Models",
+      "url": "https://arxiv.org/abs/2610.24534v1"
+    },
+    {
+      "base_direction_id": "cognition_memory_reverse",
+      "candidate_id": "d0264db967fd42ddd1089b4b",
+      "context_id": "a701d8e284cb2500d8b54269",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "cognition_memory_reverse::CONTROL",
+      "direction_title": "Cognition / memory / reverse models / representation [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control",
+        "representation"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.25,
+      "source": "zenodo",
+      "source_context_sha256": "51ac2b46079478a156a25108be281a15a29508e25932f66416af5a4b9ebb608c",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "annotations-orchestration is a Python library for configuring and running LLM annotation and evaluation experiments. It combines a resumable, manifest-driven scheduler with an optional terminal editor and a declarative annotation runner. Span metrics are computed by annotations-evaluate ; annotation clients, taggers, provider capabilities and hints come from annotations4all . Scope and architecture Base scheduler: experiment YAMLs and optional controller manifests define runs, defaults, execution settings and ordering. The default legacy runner uses a subprocess CLI contract and does not require an annotation library. Optional editor: the tui extra provides annotations-tui , a Textual editor for single-run and multi-run experiments and controllers. Editing, inspection and effective-run previews do not execute experiments. Optional standard runner: the annotate extra uses annotations4all&gt;=0.3.1,&lt;1 to annotate from a declarative annotation block without a custom consumer frontend. Metrics: this package adapts run records and writes reports; it does not implement metric counting. Run reports use the SemEval-compatible flat scenarios of annotations-evaluate ; that library also provides a nested standard report. Release notes 0.3.0 This release adds the editor, standard runner and provider-aware configuration layer to the 0.2 scheduler. Existing state files, PID locks, graceful shutdown, resume planning, manifest-key validation and the metric definitions remain supported. Manifest editor: structured forms, full YAML editing and effective-run previews share a common side-effect-free resolver with the CLI. New, duplicate, remove, reorder and Save As workflows preserve comments and quotes where supported. Saves show a diff and use atomic replacement with conflict detection; ambiguous YAML falls back to raw editing. Read-only mode and unsaved-change dialogs protect documents. Inheritance and responsive forms: Experiment → Defaults → Runs shows effective values and their origin without materializing inherited overrides. New runs stay empty. Legacy-header migration requires explicit diff confirmation. Run cards group model/prompting, annotation/input and connection settings. Provider/model configuration: a packaged catalog and startup-directory overlay provide presets and manual IDs. Explicit Refresh reads metadata only for the selected provider/key context. Capability evidence is field-specific and session-only; custom endpoints require trust confirmation before receiving a key. Credentials and display: the editor manages only the startup directory's .env , masks values and uses explicit atomic writes. Secrets do not enter manifests, settings or diffs. F9 controls NerdFont icons and persistent themes; --theme overrides the session and Ctrl+P opens the command palette. Reasoning and hints: reasoning and effort are separate inherited fields. Contradictory settings are rejected; live-reported effort choices constrain selection while incompatible stored values remain diagnostic. Contextual hints cite sources and change no settings. Declarative annotation: runner: standard supports configurable and per-label tagging with schema-validated label/description pairs, context, German or English prompts and message splitting. A no-inference preflight validates inputs and a fresh output destination. Input and gold semantics: the runner and directory inspector share non-mutating normalization for top-level Prodigy spans and ground_truth.prodigy/tags . Missing gold produces an annotation-only completion; explicitly empty gold remains evaluable. Conflicting gold representations are rejected before inference. Scheduling and pacing: ordinary remote runs share a configurable pool; self-hosted runs are sequential per host. The exact HU endpoint has a dedicated serial lane capped at 10 requests per minute, independent of scheduling mode. Other explicitly paced endpoints share endpoint-scoped state below the results directory. Request-level policy belo",
+      "tags": [
+        "llm",
+        "evaluation",
+        "orchestration",
+        "ner",
+        "nlp",
+        "benchmark",
+        "Project: annotations4all 🥼",
+        "Type: Software 💾"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "annotations-orchestration",
+      "url": "https://zenodo.org/records/23495464"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "b0eab7e3497e7436d79d13e4",
+      "context_id": "1a6c2f49e669942fa77a8cf8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "duality",
+        "inverse problem"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2083,
+      "source": "arxiv",
+      "source_context_sha256": "3eaca7e192387638af3a7ad839c3d6200a0a650a457cf7b7fcb92df3b14f3b6b",
+      "source_published": "2026-10-19T01:12:20Z",
+      "source_updated": "2026-10-19T01:12:20Z",
+      "summary": "The macroscopic capabilities of intelligent systems arise from the local interactions of many simple units. When such systems are deployed in the real world, their behaviour must nevertheless be constrained, leaving designers caught between releasing adaptability and preventing loss of control, yet without formal tools to resolve the dilemma. This paper proposes a unified research program for controlled emergence that restates this tension as a pair of dual problems: the forward problem explains macroscopic behaviour from local rules, and the inverse problem solves for controllable rules and readout mechanisms from a desired target. We take an augmented quintuple as the formal object shared by both ends, and decompose ``engineering'' into three independently measurable coordinates: controllability, reproducibility, and degree of formalizability. On this basis we give three testable working hypotheses (critical scale; the cooperation and trade-off between constraint and adaptability; minimal constraint) and one feasibility criterion, which reduce inverse design from unconstrained optimization to interval checking. The program takes explicit failure boundaries as its premise, does not pursue complete control, and always preserves the system's room for self-organization. The reduced pilot experiment attached to this paper serves only to verify the executability of the research protocol and does not constitute a statistical test of the working hypotheses. This design language generalizes to multi-agent artificial intelligence, the industrial internet, and emergency response systems, all of which must confront emergence and controllability at once.",
+      "tags": [
+        "cs.AI",
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/Hrain",
+      "title": "The Forward/Inverse Duality of Controlled Emergence:A Computational Design Program from Explanation to Engineering",
+      "url": "https://arxiv.org/abs/2610.25630v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",

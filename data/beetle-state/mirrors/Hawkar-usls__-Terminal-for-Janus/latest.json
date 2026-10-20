@@ -1,5 +1,5 @@
 {
-  "batch_id": "5e6ec8eeb8b9b267cb5e",
+  "batch_id": "37b89a14d8c10a7db151",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -187,41 +187,6 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "617db659cdd63f8534937c5b",
-      "context_id": "31e84dd61ef164be0734db7e",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "d4ee724690321366e2ed8cfc7ee387ac9134c41bcdcf0443fe2fb559a6e08d5d",
-      "source_published": "2026-10-19T13:53:38Z",
-      "source_updated": "2026-10-19T13:53:38Z",
-      "summary": "Rubric-based reinforcement learning (RL) trains policies for open-ended generation with natural-language criteria as rewards, but these rewards can become ineffective as training progresses. We identify two failure modes. Under non-discriminative rewards, scores collapse to uniformly low or high values due to insufficient exploration or a mismatch between task difficulty and policy capability. Under spurious rewards, higher scores do not correspond to better responses. Both reflect a training configuration whose task sampling, exploration, and evaluation stay fixed as the policy evolves. We introduce HarnessRL, a training-time harness that co-evolves with the policy through three interfaces for task sampling, rollout guidance, and rubric criteria. HarnessRL maintains a training-time memory from which a harness evolver retrieves within-task history and cross-task evidence. Using this evidence, the evolver attributes each reward failure to the interface whose update can address it. It then runs a proposer and just-in-time critic loop in which the critic accepts a candidate update only after measuring its effect on the current frozen policy, returning rejected candidates for revision. We also curate Rubric-Mix-10k, a five-domain training and evaluation suite for open-ended RL across medical, science, writing, role-play, and instruction-following tasks. On Rubric-Mix-10k, HarnessRL outperforms the strongest baselines by 2.8 to 3.1 points across both 4B and 9B model scales and nearly halves the training steps to its best checkpoint. Code and data are available at https://github.com/Tongyi-ConvAI/Qwen-Character/tree/main/HarnessRL.",
-      "tags": [
-        "cs.CL"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "HarnessRL: Co-Evolving Policies with a Just-in-Time Training Harness for Open-Ended RL",
-      "url": "https://arxiv.org/abs/2610.26426v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "9502e4e98255cf3d342bc9d7",
       "context_id": "1bb8e1bf9b21f45bed55e017",
       "delivery_preview_only": true,
@@ -404,43 +369,6 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "0bff0f4cb6c6eac4fd277473",
-      "context_id": "ad1d955569d294ba954753ec",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "multi-agent"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.4583,
-      "source": "arxiv",
-      "source_context_sha256": "732c7de0f6e0ee9be04e7c85eadadc836d25d8c8b2ffe456344e73d99e075915",
-      "source_published": "2026-10-19T17:38:36Z",
-      "source_updated": "2026-10-19T17:38:36Z",
-      "summary": "A market maker provides liquidity by quoting prices to buy and sell an asset, earning the spread while managing inventory risk. We study market makers trained with multi-agent reinforcement learning on prediction markets, specifically Polymarket, whose thin order books pose distinct challenges. Three challenges underpin this research: adverse selection may cause a policy trained on real data to stop quoting; the consequences of a quote can arrive many steps after the action; and prediction-market L2 data does not identify individual orders needed for simulation. We address these challenges by reconstructing order-level LOBSTER-format data from Polymarket and training agents in JaxMARL-HFT on 417 real markets. We enrich the baseline market maker's observation space with the book and recent flow, redesign its actions and inventory controls, and propose a cooperative multi-agent decomposition into a quoter and a risk manager trained using recurrent Independent Proximal Policy Optimisation (IPPO) with RNN policies. We investigate reward shaping, particularly reward blending and post-fill markout, to mitigate credit-assignment difficulties between the agents. Our redesigned single-agent market maker quotes more frequently and incurs smaller held-out losses than the retrained JaxMARL-HFT baseline, although the contributions of jointly changed observations, actions and risk constraints are not separately identified. Decomposition alone performs poorly; careful reward design substantially improves the desk relative to the unshaped split and yields our best result. Models are evaluated on realised end-of-episode portfolio value on held-out markets. None establishes positive average portfolio value in periodic held-out evaluation, and each configuration was trained with one seed. The environment, data and protocol lay a foundation for makers that quote many linked markets at once.",
-      "tags": [
-        "stat.ML",
-        "cs.LG",
-        "cs.MA",
-        "q-fin.TR"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Cooperative Multi-Agent Reinforcement Learning for Market Making on Prediction-Market Order Books",
-      "url": "https://arxiv.org/abs/2610.26789v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "4742adb043942060ac990585",
       "context_id": "93cad91c831d4a24dd447e07",
       "delivery_preview_only": true,
@@ -614,40 +542,6 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "28d1479acb9c80d80cd07b82",
-      "context_id": "f6c41f28a5e9b6126d1df7ec",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "c28d414bca44b4665ba700e9f71eee238370a241aae5e51d78450b93dadc0b4d",
-      "source_published": "2026-10-19T16:43:22Z",
-      "source_updated": "2026-10-19T16:43:22Z",
-      "summary": "Serverless computing is increasingly used to run complex DAG workflows across diverse applications, and individual function execution times have grown to support them, pushing workflow makespans to hours. Open-source serverless platforms, deployed on a pool of VMs, typically use on-demand instances, and their cost increases with the makespan. Spot instances are far cheaper, but a preemption is likely before the workflow finishes. A preemption at a fan-out node or a task feeding a fan-in node stalls every parallel branch, cascading a single preemption into a workflow-wide failure. Prior systems address this challenge by migrating high-impact tasks to reliable, non-spot resources, sacrificing spot's cost advantage. We present FaaSpot, a serverless workflow execution system that runs every workflow task on spot instances with no on-demand fallback. Our key insight is that cascade-prone positions are determined by the DAG's topology and can be identified before execution. Therefore, FaaSpot analyzes the workflow DAG once at submission time and classifies each task by the impact of its preemption. Selective checkpointing, survival-aware scaling, and lineage-based retry then act on this single classification, with no runtime coordination. We evaluate FaaSpot on a trace-driven spot emulator with eight DAG workflows against four state-of-the-art baselines. FaaSpot completes 89.03% of runs at $0.018 per successful run, 21pp (percentage points) above the average baseline success rate and at a lower cost per success than every baseline, while reducing mean latency by 2.3x.",
-      "tags": [
-        "cs.DC"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "FaaSpot: Fault-Tolerant Serverless Workflow Execution on Spot Instances",
-      "url": "https://arxiv.org/abs/2610.26709v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "63b27994b5955c2e5de0d4d8",
       "context_id": "d26b660e0f570e4932754f69",
       "delivery_preview_only": true,
@@ -681,287 +575,6 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "Efficiency Measured in English: Tokeniser Coverage Bounds Small Language Models on Indic Scripts",
       "url": "https://arxiv.org/abs/2610.24818v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "23a992cd91dbf7cf8d82314a",
-      "context_id": "c0a90ce84e3e8590329023c4",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "1192422f2b3e443da4232cad67e5a93ec7474ddd1094f68c15ef929cb61a3172",
-      "source_published": "2026-10-19T14:15:50Z",
-      "source_updated": "2026-10-19T14:15:50Z",
-      "summary": "Large language models (LLMs) are increasingly used to generate Verus contracts for Rust programs together with the proofs that establish them. Yet verifier acceptance, the common measure of success, shows only that the implementation satisfies the generated contract, so it leaves open whether the contract captures the intended behavior. Assessing specification generation therefore requires an evaluation methodology, not a single metric. We present VerusEval, a framework that evaluates generated contracts along six dimensions, including Verus-native checks for semantic triviality, validated input-output (I/O) suites, and contract equivalence, and that relates them so that the strength and blind spots of each become measurable. Evaluating 13,716 artifacts from four workflows, five LLMs, and two prompting settings on 762 tasks, we find that acceptance overstates quality: only 42.3\\% of the accepted artifacts complete all three semantic checks without a flag, and across workflows and models, higher acceptance does not consistently come with more correct contracts. I/O evaluation rejects 23.6\\% of the accepted artifacts, yet only 63.2\\% of those that pass it are proved equivalent. Of the accepted artifacts flagged by contract comparison, 84.1\\% have a rejected completeness obligation, and the direction of a failure prioritizes inspection of the generated contract or the reference; it does not by itself establish which artifact is defective. Screening and review further identify 36 candidate defects among 61 selected reference contracts, and repairing one of them makes 10 of its 11 failing artifacts equivalent. Based on these findings, we derive four actionable lessons for evaluation, generation, and benchmark maintenance.",
-      "tags": [
-        "cs.SE"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "VerusEval: Evaluating LLM-Generated Verus Specifications Beyond Verifier Acceptance",
-      "url": "https://arxiv.org/abs/2610.26464v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "528fbcf9e0fd1905d06b8cb1",
-      "context_id": "bf409ea00a6939e672076ea4",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "949e24a0fb031a6adf7e2f7912b27242735dab9afed03188c88074b4c339cfdc",
-      "source_published": "2026-10-19T16:27:14Z",
-      "source_updated": "2026-10-19T16:27:14Z",
-      "summary": "Evaluating an agent's planning ability remains challenging for open-domain tasks, where verifying procedures through execution is often impractical. Existing evaluations typically assess only the final plan and do not distinguish procedural errors such as missing, incorrect, or misordered actions. We introduce STEPBENCH, a benchmark of 6,885 verified procedures crawled from wikiHow across 81 open-domain categories. From each procedure, we derive 5 diagnostic tasks: four with deterministic answers involving withheld, incorrect, or shuffled steps, and one requiring next-step generation. We additionally evaluate full-plan generation to examine how diagnostic performance correlates with end-to-end plan validity. Using the same procedures across tasks lets us directly compare different planning capabilities. For generation, STEPEVAL identifies critical failures that prevent goal completion. Across 14 configurations of 12 models, we find substantial differences across planning capabilities, with step ordering proving the most difficult: the strongest model correctly orders only 63.0% of procedures, dropping to 33.1% for those with nine or more steps. Incorrect-step detection also predicts judged plan validity across models, suggesting a lower-cost alternative for evaluating generation quality. On STEPBENCH-Val, comprising 214 procedures published in 2026, comprehension scores and rankings remain stable, suggesting limited influence from memorisation.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "StebBench: Diagnosing Real-World Procedural Understanding in AI Agents",
-      "url": "https://arxiv.org/abs/2610.26679v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "6f1b9710f97238bf99b031ba",
-      "context_id": "b2d04f7624b37cae8e407edc",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "af317e29e73ddd1ee4f0444812a8f2b8128df75c27f6cbb1bc10c8b2c964dca0",
-      "source_published": "2026-10-19T06:20:44Z",
-      "source_updated": "2026-10-19T06:20:44Z",
-      "summary": "A small justification for a rule-based conclusion may disappear when a source is withdrawn, and multiple derivations need not provide independent evidence. We study minimum-cost certificates that preserve a Horn conclusion under every withdrawal of at most k source domains. Evidence records remain distinct from asserted facts, supporting replicated attestations and overlapping failure dependencies. Transversals of minimal-support footprints characterize robustness and explain why disjoint-proof requirements can reject valid certificates. An exact procedure alternates weighted evidence selection with a source-failure oracle. A rule-closed counterinterpretation yields a globally valid selection cut without enumerating supports or failure scenarios. We prove correctness, finite termination, and cost optimality, establish coNP-completeness of unrestricted verification and NP-completeness of synthesis for every fixed budget, and identify a tractable reachability restriction. Experiments on controlled benchmarks, reachability graphs, and ontology-derived instances demonstrate that our counterinterpretation-guided synthesis achieves up to 92% optimum coverage within practical resource bounds, outperforming scenario expansion and general abduction while confirming the necessity of transversal-based reasoning over proof-packing heuristics.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Minimum-Cost Robust Evidence Certificates for Horn Reasoning under Correlated Source Failures",
-      "url": "https://arxiv.org/abs/2610.25865v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "261c9792be053e5df00878b2",
-      "context_id": "aeac4f1fa06c0ed4f1d4d835",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "2295c6b5f3daef1ed857202a38c6b6538806794a5ff493744c02a1080a946c7b",
-      "source_published": "2026-10-19T17:59:39Z",
-      "source_updated": "2026-10-19T17:59:39Z",
-      "summary": "Distributed LLM serving relies on a global index to locate reusable key-value cache (KVCache) blocks through prefix matching. Losing the index after a crash or restart forces affected requests to recompute existing KVCache on GPUs. Persisting the index restores access after a failure. Existing persistent indexes face a tension between prefix-matching performance and recovery time. A snapshot-backed in-memory index supports fast prefix matching, but rebuilding the full index delays recovery. An on-SSD index avoids this rebuild, but adds storage accesses to prefix matching. Our core insight is that extending a matched prefix over a short span typically requires distinguishing only a few token sequences, suggesting that sparse in-memory routing state may suffice. Prefix matching also accesses block metadata in sequence order, allowing metadata for consecutive blocks to be retrieved together. We present SARP (Sparse Adaptive Routing and Packing), an on-SSD KVCache index for fast recovery and prefix matching. SARP groups consecutive block IDs and metadata into segments to amortize storage accesses across multiple blocks. A compact in-memory routing directory identifies candidate segments using entries at selected block positions. SARP limits segment retrievals and uses compact filters to prioritize candidates with longer potential matches. After retrieval, SARP verifies block IDs against the query and reuses only KVCache blocks covered by the verified prefix. After a restart, SARP restores the sparse routing directory from a snapshot. Across four multi-turn chat and agentic workloads, SARP recovers 8.0x to 77.5x faster than the in-memory index baselines and delivers 1.15x to 66.6x the request throughput of the on-SSD index baselines, while reusing only 0.0030% to 0.029% fewer tokens than exact prefix matching.",
-      "tags": [
-        "cs.DB"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "SARP: An On-SSD Index for KVCache with Fast Prefix Matching and Recovery",
-      "url": "https://arxiv.org/abs/2610.26849v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "e0635d16ff5236f36423bb2e",
-      "context_id": "a9fbb1625d80da76a65cb314",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "f2f833df3f79bf3087d330cca3d8fa67e33b594d682534cf21e6f7ed6213c2d1",
-      "source_published": "2026-10-19T05:43:24Z",
-      "source_updated": "2026-10-19T05:43:24Z",
-      "summary": "Fault localization (FL) aims to identify code locations responsible for software failures and is commonly evaluated by how accurately it ranks known fault locations. Large language model (LLM) agents are changing program repair and are increasingly used to search and reason over repositories. Although recent LLM-based FL methods have improved localization accuracy, their impact on agentic repair remains unclear. To address this gap, we conduct a systematic empirical study of FL in agentic repair. We evaluate six recent FL methods on SWE-bench Verified and Defects4J with three LLMs under a common repair framework and analyze 16,248 repair trajectories. We also examine gold locations and bug-cause descriptions as forms of FL guidance across different repair contexts. The studied FL methods do not consistently improve repair success, and higher localization accuracy does not consistently lead to larger repair gains. Yet FL guides agents' early search and helps them reach relevant code sooner. Accurate locations can reduce repair token use by up to 39.2\\%, but current FL methods often consume more tokens than they save during repair. Experiments with gold guidance suggest that FL has greater potential when bug inputs contain fewer location clues. Providing bug causes can further improve repair success beyond locations alone. We also find that ground truth from a single reference patch does not fully capture the locations used by successful repairs. These findings help clarify the value of FL in agentic repair and inform future work on its design and evaluation.",
-      "tags": [
-        "cs.SE"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "From Finding to Fixing: How Useful is Fault Localization for Agentic Program Repair?",
-      "url": "https://arxiv.org/abs/2610.25826v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "a470cfd45bebba8c64c4aaf5",
-      "context_id": "a85f4b2013c5885a1fd8e250",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "59450eb11d6b0a59229440c50ad0da1b96d9bb808f39589c37953728522f0502",
-      "source_published": "2026-10-19",
-      "source_updated": "",
-      "summary": "Version 2.3 of Adversarial Multi-AI Falsification is a bounded case study of AI-assisted scholarly workflow governance. It distinguishes selected public verbatim excerpts and message/line maps from author-reported recovery findings and hashes identifying internal artifacts. The public deposit does not contain the full captured transcripts or executed rubric. Four process-failure types required exclusion or downgrading: semantic drift with unsupported process certification; assignment-scope expansion; prior-task substitution; and unverified or misdescribed legal citations. E2 remains partial. The principal execution/adjudication sequence remains author-reconstructed, and panel unanimity cannot be independently recomputed from the public deposit. The operational proposition remains untested; this revision does not establish it as true. The paper proposes a three-field outcome record and six workflow controls, including a two-turn assignment-echo checkpoint. These are unvalidated design propositions, not demonstrated interventions. This is a case report and protocol demonstration, not a benchmark, product comparison, prevalence estimate or complete reproducibility study. AMAF_v2_3.pdf is the current controlling manuscript, with AMAF_v2_3.docx as its editable counterpart. All seven v2.2 files are retained unchanged as historical records, including the old preparation-candidate manuscript, README, manifest and checksum list. Read 00_README_AMAF_v2_3_RELEASE.txt for the current controlling-version guide; AMAF_v2_3_SHA256SUMS.txt lists this release's file identities. The historical v1.8 paper is retained only for its Section C dual-track summary. No additional private records, new experiment or new empirical validation are released. Generative AI systems were used for structured literature discovery, comparative issue mapping, adversarial review, source-check planning, language editing and revision support. They are not authors. The human author retains responsibility for the sources, interpretations, arguments and conclusions.",
-      "tags": [
-        "AI-assisted research",
-        "large language models",
-        "research integrity",
-        "human-AI decision making",
-        "falsification",
-        "peer review",
-        "correlated errors",
-        "citation verification"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Adversarial Multi-AI Falsification in Research Workflows: A Bounded Case Study of Scope Error, Verification Failure, and Human Adjudication",
-      "url": "https://zenodo.org/records/23489600"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "eb3f42d97fc09ee4e07d0b09",
-      "context_id": "9aa8120025d2146eae3e79c0",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "a2335ce028f931551480d178c1f7fd95198403bdd34eac6b04eba8eb30abd911",
-      "source_published": "2026-10-19T09:50:57Z",
-      "source_updated": "2026-10-19T09:50:57Z",
-      "summary": "Autonomous clinical-modeling agents can optimize predictive performance while violating conditions that make a model usable. We introduce LeakBench, an executable, guideline-derived audit suite that tests agent decisions for prediction-time leakage, calibration, site-level evaluation, support awareness, and decision-curve net benefit. LeakBench combines a synthetic task with known failure structure and two real-data settings: MIMIC-IV (430k admissions) and governed multi-hospital inpatient record front-page (MHFP) data. Our primary analysis uses reward hacking descriptively, without attributing intent: an agent selects prediction-time-invalid inputs because they improve its validation reward. A deterministic optimizer and every evaluated unconstrained local-model configuration select a fatal leaking feature. In fully logged September 2026 A/B runs, DeepSeek Flash and GPT-6-astra each leak in 10/10 unconstrained runs and 0/10 runs with an explicit admission-time constraint. This contrast is version-sensitive: a blinded Claude/Fable-5.1 chat run does not leak in either condition, while explicit-constraint violations appear only in a historical August 2026 slice lacking raw trajectories. Replacing AUROC with AUPRC does not remove leakage selection. Renaming or disguising the leaking inputs changes neither selection nor provenance-based detection; a name-based filter fails. A deterministic provenance verifier-in-loop removes the leak, making the LLM repair loop defense-in-depth. Specific verifier feedback clears fatal leakage in a hosted agent, and a three-seed ablation finds principle-only feedback clears decision-level defects, though these mitigation results are limited. LeakBench treats trustworthy clinical prediction as a property of an agent's modeling process, not merely its score; it is an audit testbed with known-failure controls, not yet an expert-validated benchmark.",
-      "tags": [
-        "cs.CR",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "LeakBench: Auditing Reward Hacking through Prediction-Time Leakage in Clinical Modeling Agents",
-      "url": "https://arxiv.org/abs/2610.26088v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "66490daf7cf07a94a0ff68d0",
-      "context_id": "8d9900730e8da3cd9a8fcdb9",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "6f5f7e76b60e1716ce59f8955861f3e267c99bb980c89c6a78e1ba6a749f70f3",
-      "source_published": "2026-10-19T06:12:28Z",
-      "source_updated": "2026-10-19T06:12:28Z",
-      "summary": "Direct Preference Optimization (DPO) learns from pairwise preferences through a logistic objective whose score-difference parameterization follows the Bradley--Terry model. We study how failure of this modeling assumption limits DPO, distinguishing structural misspecification from limited model capacity and finite-sample estimation. Our main contribution is a characterization of structural approximation error through the triangle-curl of the preference log-odds, which vanishes exactly when preferences admit a Bradley--Terry representation. We upper bound the achievable excess logistic risk by a score-class approximation term and a triangle-curl term, and establish a lower bound proportional to triangle-curl under additional boundedness assumptions. For ReLU score models, including clipped models, we derive explicit approximation rates showing that increasing capacity can eliminate the score-approximation term while leaving the structural obstruction unchanged. We further establish finite-sample bounds for clipped empirical risk minimizers that separate network approximation, structural misspecification, and estimation error. We place these results within a surrogate-risk framework by identifying contextual preference accuracy (CPA) as a natural measure of agreement between preference judgments and changes in pairwise probability ratios relative to the reference policy. Standard logistic consistency and calibration results connect DPO's objective to this policy property and transfer our excess-risk upper bounds to CPA, without treating CPA as a complete measure of generated-response quality.",
-      "tags": [
-        "cs.LG",
-        "stat.ML"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Statistical Learning Theory for Direct Preference Optimization",
-      "url": "https://arxiv.org/abs/2610.25856v1"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -1177,109 +790,6 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "6814e2f55f972c60946dbb2d",
-      "context_id": "2c8fda6da97556b7b196df45",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "3802b0d4b4fa40d950aa9ef90cbd788f7d657386841ea54cacf2045f23ba1964",
-      "source_published": "2026-10-19T16:19:08Z",
-      "source_updated": "2026-10-19T16:19:08Z",
-      "summary": "Robotic value models assess task execution from visual observations and instructions, providing feedback for policy learning and execution monitoring. However, existing evaluations cover only selected aspects of execution understanding, leaving the reliability of value feedback insufficiently tested. We introduce RoboValue, a fine-grained sim-and-real benchmark for unified evaluation of robotic value models. Its framework evaluates four complementary capability dimensions through shared interfaces: task-state understanding, temporal progress monitoring, failure and recovery reasoning, and value consistency. Diagnostic trajectories and instruction variations test whether value judgments accurately reflect task requirements and changes throughout execution. RoboValue-Dataset covers 15 simulation and 20 real-world manipulation tasks, providing expert demonstrations for training and annotated trajectories for fine-grained evaluation. We evaluate representative robotic value models in zero-shot and one-shot settings under standard conditions and separate shifts in robot embodiment and environment. Our results reveal errors in fine-grained instruction grounding, history-dependent progress tracking, and recovery assessment, even in models with strong outcome and forward-progress scores. The same semantic subtask can also receive substantially different value gains across valid execution orders. These findings identify concrete targets for value supervision, while the dataset and public leaderboard support continued assessment of feedback reliability. The website is available at https://robovalue-benchmark.github.io/.",
-      "tags": [
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "RoboValue: A Fine-Grained Sim-and-Real Benchmark for Unified Evaluation of Robotic Value Models",
-      "url": "https://arxiv.org/abs/2610.26663v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "2df601c6a58bd71191d0d8dc",
-      "context_id": "1b90963af8ca4d05dd9dc6c9",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "5999d97219a7bbcc7161d1672145e95fa55ec83e568c66cf6885b76f590ab9b8",
-      "source_published": "2026-10-19T05:43:27Z",
-      "source_updated": "2026-10-19T05:43:27Z",
-      "summary": "Language models increasingly use skills that provide reusable instructions and procedures for task execution. After a relevant skill has been selected, the model may need to apply its governing procedure together with retrieved task context. When the retrieved context is useful but contains cues that violate the skill, the model must retain compatible information while rejecting the conflicting cues. We study failures in which the model adopts such cues and produces a retrieval-supported but skill-invalid answer, which we call procedural hallucination. We introduce SourceClash, a matched benchmark with 1,271 bundles and 6,355 prompts across ten procedural domains. Each bundle fixes the task, skill specification, and answer space while varying the relation between the skill and retrieval. Across nine models, valid-answer rates average 25.7% under conflicting retrieval, compared with 78.2% and 72.8% under two supportive retrieval settings. Mechanistic analysis of open-weight models shows that the answer-preference difference typically reaches its maximum shortly after generation begins. Residual replacement moves the model toward valid answers, while attention decomposition attributes most of the repair to value vectors. Intervention at the identified value pathway also improves final answer validity. These results characterize how partly conflicting retrieval changes skill-guided generation.",
-      "tags": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "When Retrieval Partially Conflicts with Skills: Understanding Procedural Hallucination in Language Models",
-      "url": "https://arxiv.org/abs/2610.25827v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "c8ee3a443af821d600b763b8",
-      "context_id": "13f1cf13b29c44267deef7de",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "13494f808f61841eab7d3ebc1e9ee1f404f1441136c6605d66f9b41d9542d8ae",
-      "source_published": "2026-10-19T13:48:35Z",
-      "source_updated": "2026-10-19T13:48:35Z",
-      "summary": "Modeling cascading failure across interdependent critical infrastructure requires either a composable physical simulator per domain or a topological abstraction that discards quantity awareness. Simulators are costly, data-hungry, and require detailed calibration per domain; topological abstractions stay data-parsimonious while missing quantity-based behaviors that govern real dynamics. We present, instead, a knowledge-driven propagation architecture in which heterogeneous service dependencies are identified by categories: a general logical propagation resolves multi-dependency and redundancy structures purely from how nodes are categorized, while quantity-aware categories plug in dedicated mechanisms - here, a max-min fair-share flow module for water distribution. Both share one discrete functionality scale and a monotonic update algorithm guaranteeing convergence in finitely many rounds. We assess the flow module by comparing its results with those we get from preexisting pressure-driven simulation with WNTR (Water Network Tool for Resilience) on eight realistic networks across four failure families (clustered damage, capacity-targeted attack, source failure, tank loss). Under capacity-targeted attack and source failure a topological-reachability baseline misses 46% of the truly critical junctions, where the flow module misses 10% and 8% at an average critical-class precision of 0.73. Supplementary materials, code and results are available at: https://github.com/cascade-platform-org/CASCADE",
-      "tags": [
-        "cs.CE"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Composable, Knowledge-Driven Disservice Propagation for Complex Interdependent Services with a Flow-Allocation Module Validated Against Hydraulic Simulation",
-      "url": "https://arxiv.org/abs/2610.26417v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "f850e3d7b09929c1fa9e0f59",
       "context_id": "e2221a0310b0eb7cd826e5e1",
       "delivery_preview_only": true,
@@ -1340,8 +850,8 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "dd7e9386fcfbba3f7beda310",
-      "context_id": "a9f2ddc78498a6360cab6615",
+      "candidate_id": "4a907cee89a3a9659449a1c7",
+      "context_id": "beb453ecac9c09d890e6f32a",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
@@ -1360,52 +870,15 @@
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 1.4167,
-      "source": "arxiv",
-      "source_context_sha256": "e3715e5a71b95c1c0cc8a17884f70bbb98c0bf324ebde7e4f6bdf5131bce1f87",
-      "source_published": "2026-10-19T16:19:44Z",
-      "source_updated": "2026-10-19T16:19:44Z",
-      "summary": "AI agents deployed inside organizations can pose an insider threat if they make mistakes, are compromised by an attacker, or pursue misaligned objectives. We propose honeypots as an AI control method to improve the security of internal agent deployments. Rather than only using honeypots for pre-deployment evaluations, defenders should plant decoy opportunities for harmful actions throughout the production environment to detect misbehavior, incriminate malicious agents, and deter attacks. Such honeypots can elicit misbehavior under real deployment conditions, identify malicious agents even if chain-of-thought monitorability degrades, provide reliable warnings about agent misbehavior to security teams, and scale cheaply to many agent instances. The presence of honeypots also introduces uncertainty about which opportunities are real, thus deterring malicious agents from attacking and reducing the rate of misbehavior. We discuss the limitations of honeypots and give reasons to expect them to remain effective as agent capabilities increase. Finally, we outline key research questions to measure and improve the effectiveness of honeypots: testing the robustness of honeypots, comparing their detection effectiveness with other monitoring methods, understanding their incrimination and deterrence effects, and building supporting infrastructure.",
-      "tags": [
-        "cs.AI"
-      ],
+      "source": "zenodo",
+      "source_context_sha256": "597a1bd5bb8e81f06bd7c11d801264abd30ce3b1b55d983d29e642fa68dc4646",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "This repository provides the reproducibility package supporting the study &ldquo;Self-Diagnosing Reliability of Neutron&ndash;Gamma Pulse-Shape Discrimination under Operational Drift.&rdquo; The study experimentally evaluates a reliability framework for neutron&ndash;gamma pulse-shape discrimination (PSD) under controlled operational drift. Rather than proposing a new PSD observable or classifier, the framework distinguishes PSD separability, calibration validity, and decision reliability through controlled perturbation experiments, label-free waveform-health monitoring, identifiability assessment, conditional adaptive recalibration, verification, and fail-safe refusal when the available unlabeled evidence is insufficient to support trusted autonomous correction. The package contains the final analysis and figure-generation scripts, derived numerical tables, and six final manuscript figures. The analyses include independent reconstruction and validation of a frequency-domain classification index (FCI), controlled baseline, gain, additive-noise, timing, and clipping perturbations, label-free degradation diagnosis, identifiability-based recalibration, class-prior robustness testing, and an independent NE213A PSD-domain audit. The primary experimental CLYC&ndash;SiPM waveform data are publicly available from Zenodo record 8037239 (DOI: 10.5281/zenodo.8037239) . The independent NE213A experimental dataset is publicly available from Zenodo record 14305929 (DOI: 10.5281/zenodo.14305929) . Raw experimental data are not redistributed in this package. The NE213A dataset is used as an independent detector- and PSD-domain audit. Waveform-level drift and recovery are deliberately not claimed for NE213A because the acquisition-specific QDC quantities could not be reconstructed from the released waveforms with sufficient held-out fidelity. The repository includes documentation describing data provenance, analysis order, software dependencies, and the scope and limitations of the reproducibility workflow.",
+      "tags": [],
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Honeypots for AI Agent Insider Threats",
-      "url": "https://arxiv.org/abs/2610.26664v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "e6f44bf9c875af4b6447ebd6",
-      "context_id": "761de9a6cf5ace83bb24dd2a",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.4167,
-      "source": "arxiv",
-      "source_context_sha256": "f09bc74f4ef145cf55f199b1bc5018f8e58c9f21dd7aa610b01b381236d4527d",
-      "source_published": "2026-10-19T17:01:52Z",
-      "source_updated": "2026-10-19T17:01:52Z",
-      "summary": "We investigate quantum-state texture during the thermal relaxation of an anisotropic spin-$1/2$ Heisenberg dimer subject to a longitudinal magnetic field and a Dzyaloshinskii-Moriya (DM) interaction. Starting from local transverse and longitudinal couplings to a bosonic bath, we construct a global weak-coupling Lindblad equation, identify its transition channels, and discuss the applicability and limitations of the secular approximation. The Gibbs state is obtained explicitly in the local spin basis, revealing that the DM coupling controls both the modulus and phase of the single-excitation coherence by modifying the energy splitting and rotating the chiral phase. For heating and cooling protocols, we compare rugosity, fidelity-based texture, and trace-distance texture with coherence, vector spin chirality, and purity. The relaxation dynamics separates population thermalization from the decay and precession of deliberately prepared energy-basis coherence. Their combined contribution to local coherence produces DM-dependent texture overshoots and, during cooling, damped oscillations and sign changes of the coherence quadratures. These transients differ from the evolution of coherence magnitude and purity, while trace-distance texture weights them differently from the overlap-based quantifiers. Calculations at reduced dissipation preserve the texture maxima within the secular model. The results identify a phase-sensitive diagnostic of relaxation.",
-      "tags": [
-        "cond-mat.stat-mech",
-        "quant-ph"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Phase-sensitive quantum-state texture during thermalization of a Dzyaloshinskii-Moriya Heisenberg dimer",
-      "url": "https://arxiv.org/abs/2610.26736v1"
+      "title": "Reproducibility Package for Self-Diagnosing Reliability of Neutron–Gamma Pulse-Shape Discrimination under Operational Drift",
+      "url": "https://zenodo.org/records/23512177"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -1486,41 +959,6 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "03cda0767e7b2ad1e895ed64",
-      "context_id": "d39a005b51d3b0183e468893",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "bias"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.1667,
-      "source": "arxiv",
-      "source_context_sha256": "97daa6da0949dff1bd1626a8081f7173079ea89426d9bd3c2ca7d657bf62d384",
-      "source_published": "2026-10-19T16:50:03Z",
-      "source_updated": "2026-10-19T16:50:03Z",
-      "summary": "Frontier LLMs can copy random text almost flawlessly, yet they often overrun or truncate long blocks of repeated characters. In repeated strings, matching local content no longer reliably identifies where copying should continue or when it should stop. Nevertheless, we show that a two-layer transformer with $O(\\log\\log N)$-bit precision and $O(\\log N/\\log\\log N)$ width can copy every string up to a chosen design horizon $N$ and terminate correctly under arbitrary repetition. We use RoPE-style rotations of attention values and outputs (VO-rotations) with small prime periods to encode distances from delimiter anchors modulo those primes. By the Chinese Remainder Theorem, these periodic encodings jointly distinguish all required distances, allowing one retrieval rule to select either the next source token or the end marker. In contrast, we prove a width-independent impossibility result for copying under sequential finite-precision softmax accumulation. It applies to transformers whose only positional input is an additive attention bias that eventually becomes constant, including NoPE and a recursive implementation of ALiBi. Once an identical-token run exceeds the resulting saturation threshold, further repetitions leave the logits unchanged. If this threshold grows sublinearly with $N$, these models cannot both complete a long all-identical copy and stop correctly, a pattern resembling the termination errors of frontier LLMs. In synthetic copying experiments, baseline transformer models fail on long repeated strings even within the training range. Trained VO models, by contrast, generalize beyond the training lengths with near-perfect accuracy up to length $\\approx 5005$, the selected primes' period product.",
-      "tags": [
-        "cs.LG",
-        "cs.CL"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Copying Under Repetition: From Prefix Matching to Position Hashing",
-      "url": "https://arxiv.org/abs/2610.26722v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "d3ceae6d89c31393be4f071e",
       "context_id": "5ef5b38ff05a2cd3950d3d50",
       "delivery_preview_only": true,
@@ -1596,6 +1034,6 @@
   "schema": "janus.beetle.repo_memory_batch.v1",
   "selection": "BALANCED_LENS_ROLLING_TOP",
   "snapshot_cap": 48,
-  "snapshot_items_total": 44,
+  "snapshot_items_total": 28,
   "target_repository": "Hawkar-usls/-Terminal-for-Janus"
 }

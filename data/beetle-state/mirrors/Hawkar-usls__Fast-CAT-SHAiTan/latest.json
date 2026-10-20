@@ -1,5 +1,5 @@
 {
-  "batch_id": "3fb0c33dfcaa43ded018",
+  "batch_id": "1bc18619c5d65e491bb1",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -263,6 +263,38 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "4a907cee89a3a9659449a1c7",
+      "context_id": "422adfbb3a30fc25dcf053cd",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "92dd385c38d2fecbce86ae002e5215fca1270c0958fc496ca36fd637205f0d5e",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "This repository provides the reproducibility package supporting the study &ldquo;Self-Diagnosing Reliability of Neutron&ndash;Gamma Pulse-Shape Discrimination under Operational Drift.&rdquo; The study experimentally evaluates a reliability framework for neutron&ndash;gamma pulse-shape discrimination (PSD) under controlled operational drift. Rather than proposing a new PSD observable or classifier, the framework distinguishes PSD separability, calibration validity, and decision reliability through controlled perturbation experiments, label-free waveform-health monitoring, identifiability assessment, conditional adaptive recalibration, verification, and fail-safe refusal when the available unlabeled evidence is insufficient to support trusted autonomous correction. The package contains the final analysis and figure-generation scripts, derived numerical tables, and six final manuscript figures. The analyses include independent reconstruction and validation of a frequency-domain classification index (FCI), controlled baseline, gain, additive-noise, timing, and clipping perturbations, label-free degradation diagnosis, identifiability-based recalibration, class-prior robustness testing, and an independent NE213A PSD-domain audit. The primary experimental CLYC&ndash;SiPM waveform data are publicly available from Zenodo record 8037239 (DOI: 10.5281/zenodo.8037239) . The independent NE213A experimental dataset is publicly available from Zenodo record 14305929 (DOI: 10.5281/zenodo.14305929) . Raw experimental data are not redistributed in this package. The NE213A dataset is used as an independent detector- and PSD-domain audit. Waveform-level drift and recovery are deliberately not claimed for NE213A because the acquisition-specific QDC quantities could not be reconstructed from the released waveforms with sufficient held-out fidelity. The repository includes documentation describing data provenance, analysis order, software dependencies, and the scope and limitations of the reproducibility workflow.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Reproducibility Package for Self-Diagnosing Reliability of Neutron–Gamma Pulse-Shape Discrimination under Operational Drift",
+      "url": "https://zenodo.org/records/23512177"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "c6b877ea1c4393f9d3024bbe",
       "context_id": "3f21c708c0ad880c6caddc97",
       "delivery_preview_only": true,
@@ -410,12 +442,12 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "170ad40fe7c67e4839012ab1",
-      "context_id": "08a7a54dbdfa13309026ed8a",
+      "candidate_id": "4a907cee89a3a9659449a1c7",
+      "context_id": "db7242035718583b9549a0ba",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::FORWARD",
-      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -425,20 +457,23 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
+        "identifiability",
+        "reconstruction",
+        "recovery",
         "verification"
       ],
-      "mirror_lens": "FORWARD",
+      "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.5,
+      "score": 9.0417,
       "source": "zenodo",
-      "source_context_sha256": "c9435a371b99531a3984680dadadc8e9e2f7ca5e171ae3c683319899085da987",
+      "source_context_sha256": "1bc346348c23800021d9031641138893f3d8289660e3cea965313712269e1642",
       "source_published": "2026-10-20",
       "source_updated": "",
-      "summary": "Release notes - v2.1 This release adds the analysis layer produced for the alignment-monitoring and gap-diagnostics work, together with the tooling that keeps the repository's numbers traceable. It contains no manuscript source, cover letter or submission package. Included Analysis scripts ( tools/ ) checkpoint-monitoring analyses on the training split and the held-out split; retrieval-task monitoring analysis; evaluation-size sensitivity analysis for the order-preservation diagnostic; first-order ODE fit diagnostics by adaptation family; cross-file consistency report for shared numbers, page counts and archive DOIs; provenance gate and manifest renderer; staged submission-package build checker. Result archives ( outputs/analysis/ ) monitoring, retrieval, evaluation-size, ODE-diagnostic, consistency and package-check JSON files; the water-tank acoustic diagnostic archive (reported as an out-of-distribution boundary, not as a replication). Provenance metadata docs/provenance_manifest.json and docs/PROVENANCE_MANIFEST_2026-10-20.md : every result table/figure is mapped to its generating script and result archive (98 entries: 95 verified, 3 exempt with reasons). Notes docs/DEEPINFER_NOTES_2026-10-20.md : applicability note for the DeepInfer inference framework. Excluded (by repository policy) Manuscript source and PDFs, cover letters, title pages, highlights, and any submission-package content. Model weights and datasets. Verification Every JSON archive under outputs/analysis/ is produced by a script in tools/ and the provenance gate passes. Submission packages were checked to compile standalone from their own latex_source.zip with matching page counts (details in outputs/analysis/staged_package_check.json ).",
+      "summary": "This repository provides the reproducibility package supporting the study &ldquo;Self-Diagnosing Reliability of Neutron&ndash;Gamma Pulse-Shape Discrimination under Operational Drift.&rdquo; The study experimentally evaluates a reliability framework for neutron&ndash;gamma pulse-shape discrimination (PSD) under controlled operational drift. Rather than proposing a new PSD observable or classifier, the framework distinguishes PSD separability, calibration validity, and decision reliability through controlled perturbation experiments, label-free waveform-health monitoring, identifiability assessment, conditional adaptive recalibration, verification, and fail-safe refusal when the available unlabeled evidence is insufficient to support trusted autonomous correction. The package contains the final analysis and figure-generation scripts, derived numerical tables, and six final manuscript figures. The analyses include independent reconstruction and validation of a frequency-domain classification index (FCI), controlled baseline, gain, additive-noise, timing, and clipping perturbations, label-free degradation diagnosis, identifiability-based recalibration, class-prior robustness testing, and an independent NE213A PSD-domain audit. The primary experimental CLYC&ndash;SiPM waveform data are publicly available from Zenodo record 8037239 (DOI: 10.5281/zenodo.8037239) . The independent NE213A experimental dataset is publicly available from Zenodo record 14305929 (DOI: 10.5281/zenodo.14305929) . Raw experimental data are not redistributed in this package. The NE213A dataset is used as an independent detector- and PSD-domain audit. Waveform-level drift and recovery are deliberately not claimed for NE213A because the acquisition-specific QDC quantities could not be reconstructed from the released waveforms with sufficient held-out fidelity. The repository includes documentation describing data provenance, analysis order, software dependencies, and the scope and limitations of the reproducibility workflow.",
       "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "MoYUYao666/gap-susceptibility: v2.1",
-      "url": "https://zenodo.org/records/23510274"
+      "title": "Reproducibility Package for Self-Diagnosing Reliability of Neutron–Gamma Pulse-Shape Discrimination under Operational Drift",
+      "url": "https://zenodo.org/records/23512177"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -579,6 +614,42 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "AL-Nahrain-IRAQ: RNA-seq gene counts, SNPs and DESeq2 models of ethanol-producing Saccharomyces cerevisiae strains (SYNOVA)",
       "url": "https://zenodo.org/records/23502819"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "ea702a4e8b979d6288e6c4fd",
+      "context_id": "436395933bb249227db06660",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reverse",
+        "sat"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "zenodo",
+      "source_context_sha256": "594b0ef4bac9c297acafe59ce477d4ba0907d380ed80276690c9da12584aad24",
+      "source_published": "2001-03-07",
+      "source_updated": "",
+      "summary": "On 25 April 1992, a magnitude-7.1 Ms earthquake occurred near Cape Mendocino, California, at the southern end of the Cascadia Subduction Zone. Seismological analyses suggest an almost pure dip-slip reverse fault, with subduction of the Gorda Plate beneath the North American Plate. Modeling and observations of crustal deformation due to this fault mechanism produces uplift of the ocean bottom in relatively shallow water just offshore. A tsunami was generated that was measured by the National Oceanic and Atmospheric Administration sea level gauges along the California, southern Oregon, and Hawaii coastlines and in the deep ocean in the Gulf of Alaska. Several records are characterized by two distinct packets of tsunami energy, the first representing propagation along a minimum time path traversing deep offshore water, the second an apparent edge wave mode trapped along the coast. The largest peak-to-trough amplitude of 1.1 m was recorded at Crescent City in the second packet, approximately 3-4 hours after arrival of the first tsunami wave. Observations of this tsunami will be discussed along with some numerical model results to explain the source area and propagation characteristics. [Reference: Gonz£lez, F.I., E.N. Bernard, and K. Satake. The Cape Mendocino tsunami, 25 April 1992. In Tsunami: Progress in Prediction, Disaster Prevention and Warning, Y. Tsuchiya and N. Shuto (eds.), Series of Advances in Natural and Technological Hazards Research, Kluwer Academic Publishers, 151-158 (1995).] Deposited content: descriptive metadata only; underlying research data are not included.",
+      "tags": [
+        "North Pacific Ocean",
+        "pices-metadata-only"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "The Cape Mendocino Tsunami, 25 April 1992 - FGDC XML metadata artifact",
+      "url": "https://zenodo.org/records/23509046"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -807,73 +878,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "8a564bfca7b5b54d0abb8921",
-      "context_id": "7544af57bd86af7c6e840150",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "zenodo",
-      "source_context_sha256": "3b6f7b22501809dfc19bc03b2f8ec5aaffdd94054648fbf9bb190a7555f887d2",
-      "source_published": "2026-10-20",
-      "source_updated": "",
-      "summary": "The files in this repository contain a demo input dataset and the source C code for the reconstruction of transmission chains used in the work \"Intervention Timelines to Control Andes Hantavirus (ANDV) Transmission\" by&nbsp;Molina Gran&eacute; C, et al.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Code \"Intervention Timelines to Control Andes Hantavirus (ANDV) Transmission\"",
-      "url": "https://zenodo.org/records/23502559"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "78fe36369bb8b03153693ac0",
-      "context_id": "f160817704f7d3b0b2a6b690",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reverse"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "48c98d1929f7af3ddf5579b134ee4d248a5715dc49a3c3713980796b200e84d9",
-      "source_published": "2026-10-19T08:01:32Z",
-      "source_updated": "2026-10-19T08:01:32Z",
-      "summary": "Chain-of-thought (CoT) reasoning can improve problem solving, but models often keep generating after the correct answer is already reachable; the extra steps raise serving costs and may replace a correct intermediate result with an incorrect one. We propose GLOBE (Geometry-Led Online Behavioral Early Exit), an online, training-free algorithm that terminates the model's CoT process early. GLOBE embeds each completed reasoning segment as a point on a unit sphere and reads the shape of the resulting semantic trajectory. GLOBE first applies a trial phase that generates short trial answers in a separate branch, stopping the main stream on an accepted trial after checking confidence against a threshold. If generation continues, a trajectory phase stops the stream once this path repeatedly reverses direction with little net progress. On five benchmarks including mathematical reasoning, tool calling, and agent memory, GLOBE cuts output tokens by 49.7% and active end-to-end wall time (E2E) by 51.0% across two models, and achieves a five-task average of 80.58%, comparable to Full CoT.",
-      "tags": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "GLOBE: Geometry-Led Online Behavioral Early Exit via Unit-Sphere Trajectories",
-      "url": "https://arxiv.org/abs/2610.25970v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "9502e4e98255cf3d342bc9d7",
       "context_id": "2f88e87bdb9553cddb46c7cc",
       "delivery_preview_only": true,
@@ -908,118 +912,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Axiomatic World Modeling for Physics Reasoning",
       "url": "https://arxiv.org/abs/2610.24519v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "617db659cdd63f8534937c5b",
-      "context_id": "f27d31d9af9e9d164f137c2c",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "a744acb719f3db17da411d9c8a82df3d809c97bb1cfe68be916d2e256ab81e5b",
-      "source_published": "2026-10-19T13:53:38Z",
-      "source_updated": "2026-10-19T13:53:38Z",
-      "summary": "Rubric-based reinforcement learning (RL) trains policies for open-ended generation with natural-language criteria as rewards, but these rewards can become ineffective as training progresses. We identify two failure modes. Under non-discriminative rewards, scores collapse to uniformly low or high values due to insufficient exploration or a mismatch between task difficulty and policy capability. Under spurious rewards, higher scores do not correspond to better responses. Both reflect a training configuration whose task sampling, exploration, and evaluation stay fixed as the policy evolves. We introduce HarnessRL, a training-time harness that co-evolves with the policy through three interfaces for task sampling, rollout guidance, and rubric criteria. HarnessRL maintains a training-time memory from which a harness evolver retrieves within-task history and cross-task evidence. Using this evidence, the evolver attributes each reward failure to the interface whose update can address it. It then runs a proposer and just-in-time critic loop in which the critic accepts a candidate update only after measuring its effect on the current frozen policy, returning rejected candidates for revision. We also curate Rubric-Mix-10k, a five-domain training and evaluation suite for open-ended RL across medical, science, writing, role-play, and instruction-following tasks. On Rubric-Mix-10k, HarnessRL outperforms the strongest baselines by 2.8 to 3.1 points across both 4B and 9B model scales and nearly halves the training steps to its best checkpoint. Code and data are available at https://github.com/Tongyi-ConvAI/Qwen-Character/tree/main/HarnessRL.",
-      "tags": [
-        "cs.CL"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "HarnessRL: Co-Evolving Policies with a Just-in-Time Training Harness for Open-Ended RL",
-      "url": "https://arxiv.org/abs/2610.26426v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "6f1b9710f97238bf99b031ba",
-      "context_id": "bb88469dddb57446dd27ff99",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "verification"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "6cc5090943be7a8a65e934e654ed7118253cb0bb713e9df975de436d7c1d67ef",
-      "source_published": "2026-10-19T06:20:44Z",
-      "source_updated": "2026-10-19T06:20:44Z",
-      "summary": "A small justification for a rule-based conclusion may disappear when a source is withdrawn, and multiple derivations need not provide independent evidence. We study minimum-cost certificates that preserve a Horn conclusion under every withdrawal of at most k source domains. Evidence records remain distinct from asserted facts, supporting replicated attestations and overlapping failure dependencies. Transversals of minimal-support footprints characterize robustness and explain why disjoint-proof requirements can reject valid certificates. An exact procedure alternates weighted evidence selection with a source-failure oracle. A rule-closed counterinterpretation yields a globally valid selection cut without enumerating supports or failure scenarios. We prove correctness, finite termination, and cost optimality, establish coNP-completeness of unrestricted verification and NP-completeness of synthesis for every fixed budget, and identify a tractable reachability restriction. Experiments on controlled benchmarks, reachability graphs, and ontology-derived instances demonstrate that our counterinterpretation-guided synthesis achieves up to 92% optimum coverage within practical resource bounds, outperforming scenario expansion and general abduction while confirming the necessity of transversal-based reasoning over proof-packing heuristics.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Minimum-Cost Robust Evidence Certificates for Horn Reasoning under Correlated Source Failures",
-      "url": "https://arxiv.org/abs/2610.25865v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a470cfd45bebba8c64c4aaf5",
-      "context_id": "a5ddbe04c20fa5a00a8b9f51",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "verification"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "zenodo",
-      "source_context_sha256": "4541cf5495779e0e3581e015d796450af8b1bcd4560396f74d9180e155d52ded",
-      "source_published": "2026-10-19",
-      "source_updated": "",
-      "summary": "Version 2.3 of Adversarial Multi-AI Falsification is a bounded case study of AI-assisted scholarly workflow governance. It distinguishes selected public verbatim excerpts and message/line maps from author-reported recovery findings and hashes identifying internal artifacts. The public deposit does not contain the full captured transcripts or executed rubric. Four process-failure types required exclusion or downgrading: semantic drift with unsupported process certification; assignment-scope expansion; prior-task substitution; and unverified or misdescribed legal citations. E2 remains partial. The principal execution/adjudication sequence remains author-reconstructed, and panel unanimity cannot be independently recomputed from the public deposit. The operational proposition remains untested; this revision does not establish it as true. The paper proposes a three-field outcome record and six workflow controls, including a two-turn assignment-echo checkpoint. These are unvalidated design propositions, not demonstrated interventions. This is a case report and protocol demonstration, not a benchmark, product comparison, prevalence estimate or complete reproducibility study. AMAF_v2_3.pdf is the current controlling manuscript, with AMAF_v2_3.docx as its editable counterpart. All seven v2.2 files are retained unchanged as historical records, including the old preparation-candidate manuscript, README, manifest and checksum list. Read 00_README_AMAF_v2_3_RELEASE.txt for the current controlling-version guide; AMAF_v2_3_SHA256SUMS.txt lists this release's file identities. The historical v1.8 paper is retained only for its Section C dual-track summary. No additional private records, new experiment or new empirical validation are released. Generative AI systems were used for structured literature discovery, comparative issue mapping, adversarial review, source-check planning, language editing and revision support. They are not authors. The human author retains responsibility for the sources, interpretations, arguments and conclusions.",
-      "tags": [
-        "AI-assisted research",
-        "large language models",
-        "research integrity",
-        "human-AI decision making",
-        "falsification",
-        "peer review",
-        "correlated errors",
-        "citation verification"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Adversarial Multi-AI Falsification in Research Workflows: A Bounded Case Study of Scope Error, Verification Failure, and Human Adjudication",
-      "url": "https://zenodo.org/records/23489600"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1094,41 +986,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "DebugLM: Learning Traceable Training Data Provenance for LLMs",
       "url": "https://arxiv.org/abs/2603.17884v2"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "528fbcf9e0fd1905d06b8cb1",
-      "context_id": "e7c3fea4bf3af2a86a5d3368",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "sat"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.4167,
-      "source": "arxiv",
-      "source_context_sha256": "5a8dea2858111efaa3ed00553cd3abf701084f9255997b609348638b2ad49440",
-      "source_published": "2026-10-19T16:27:14Z",
-      "source_updated": "2026-10-19T16:27:14Z",
-      "summary": "Evaluating an agent's planning ability remains challenging for open-domain tasks, where verifying procedures through execution is often impractical. Existing evaluations typically assess only the final plan and do not distinguish procedural errors such as missing, incorrect, or misordered actions. We introduce STEPBENCH, a benchmark of 6,885 verified procedures crawled from wikiHow across 81 open-domain categories. From each procedure, we derive 5 diagnostic tasks: four with deterministic answers involving withheld, incorrect, or shuffled steps, and one requiring next-step generation. We additionally evaluate full-plan generation to examine how diagnostic performance correlates with end-to-end plan validity. Using the same procedures across tasks lets us directly compare different planning capabilities. For generation, STEPEVAL identifies critical failures that prevent goal completion. Across 14 configurations of 12 models, we find substantial differences across planning capabilities, with step ordering proving the most difficult: the strongest model correctly orders only 63.0% of procedures, dropping to 33.1% for those with nine or more steps. Incorrect-step detection also predicts judged plan validity across models, suggesting a lower-cost alternative for evaluating generation quality. On STEPBENCH-Val, comprising 214 procedures published in 2026, comprehension scores and rankings remain stable, suggesting limited influence from memorisation.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "StebBench: Diagnosing Real-World Procedural Understanding in AI Agents",
-      "url": "https://arxiv.org/abs/2610.26679v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1239,41 +1096,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "23a992cd91dbf7cf8d82314a",
-      "context_id": "0f38a37daf43a4bd3d2a8ddd",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "sat"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.4167,
-      "source": "arxiv",
-      "source_context_sha256": "434497133b3d6f0e9649bc4773ee4313e8752915afb1bf9e57fa4ab0ea041b1c",
-      "source_published": "2026-10-19T14:15:50Z",
-      "source_updated": "2026-10-19T14:15:50Z",
-      "summary": "Large language models (LLMs) are increasingly used to generate Verus contracts for Rust programs together with the proofs that establish them. Yet verifier acceptance, the common measure of success, shows only that the implementation satisfies the generated contract, so it leaves open whether the contract captures the intended behavior. Assessing specification generation therefore requires an evaluation methodology, not a single metric. We present VerusEval, a framework that evaluates generated contracts along six dimensions, including Verus-native checks for semantic triviality, validated input-output (I/O) suites, and contract equivalence, and that relates them so that the strength and blind spots of each become measurable. Evaluating 13,716 artifacts from four workflows, five LLMs, and two prompting settings on 762 tasks, we find that acceptance overstates quality: only 42.3\\% of the accepted artifacts complete all three semantic checks without a flag, and across workflows and models, higher acceptance does not consistently come with more correct contracts. I/O evaluation rejects 23.6\\% of the accepted artifacts, yet only 63.2\\% of those that pass it are proved equivalent. Of the accepted artifacts flagged by contract comparison, 84.1\\% have a rejected completeness obligation, and the direction of a failure prioritizes inspection of the generated contract or the reference; it does not by itself establish which artifact is defective. Screening and review further identify 36 candidate defects among 61 selected reference contracts, and repairing one of them makes 10 of its 11 failing artifacts equivalent. Based on these findings, we derive four actionable lessons for evaluation, generation, and benchmark maintenance.",
-      "tags": [
-        "cs.SE"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "VerusEval: Evaluating LLM-Generated Verus Specifications Beyond Verifier Acceptance",
-      "url": "https://arxiv.org/abs/2610.26464v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "3da59c1ea1715e557b3114f3",
       "context_id": "89b4db70fb965dcc7a6b47cc",
       "delivery_preview_only": true,
@@ -1315,12 +1137,12 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a12d0f111966b5d22a7db59e",
-      "context_id": "6ab47e3eb1b3c608a63ee5b9",
+      "candidate_id": "5cc3c05425044782df8872e2",
+      "context_id": "fb831d984395d5952c603639",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -1330,25 +1152,164 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "baseline",
-        "benchmark",
-        "control",
-        "sat"
+        "failure"
       ],
-      "mirror_lens": "CONTROL",
+      "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 14.125,
+      "score": 4.2917,
       "source": "arxiv",
-      "source_context_sha256": "ab168cd3f6b6bea0b7ab98a6afc3a2d00bc48466cb2993091da0701a4c385bad",
-      "source_published": "2026-10-19T17:59:17Z",
-      "source_updated": "2026-10-19T17:59:17Z",
-      "summary": "Recent advances in multimodal models have enabled GPT-6 Astra to perform robotic manipulation through in-context learning. Yet contact-rich control and tactile perception are often regarded as strengths of specialist policies, leaving open whether Astra can directly understand and use tactile observations. We provide, to our knowledge, the first demonstration that Astra directly interprets vision-based tactile images and uses their contact cues for manipulation. Tactile RGB images enter through its existing visual interface, enabling few-shot closed-loop control on nineteen simulated UniVTAC and OpenViTac tasks with 210 sampled scene seeds per setting. With visuo-tactile input, Astra achieves mean success rates of 93.8% and 81.8%, exceeding the strongest reported specialist baselines in our comparison by 22.9 and 13.1 percentage points, respectively. Vision-only performance also leads these baselines, reaching 76.3% and 80.6%. Trajectory analysis reveals active probing, cautious grasping, contact-guided alignment, and recovery, alongside difficulties with tangential loading and corrective execution. Our findings challenge the exclusivity of specialist policies in contact-rich manipulation and show that fine-grained vision can partially compensate for missing touch. They also identify vision-based tactile sensing as an interface for scaling contact understanding with foundation models and reveal signs of benchmark saturation. These results motivate joint visual-tactile pretraining, harder contact-rich evaluations, and physical-robot validation.",
+      "source_context_sha256": "5db7e367c51f27c843030ac677e1ca15a2c30a11e65864ca9499f26675bf594d",
+      "source_published": "2026-10-17T07:58:29Z",
+      "source_updated": "2026-10-17T07:58:29Z",
+      "summary": "Long videos often exceed the context capacity of multimodal large language models (MLLMs), while agentic search repeats costly video processing and grounding for each query. Reusable memory can amortize this cost, but must preserve information for questions unknown during construction. We propose Video-EMem, an evolvable video memory harness built on time-anchored perceptual observations. This representation combines compact free-form text with sparse images to preserve semantic content and complementary visual details across temporal scales, supporting temporal navigation without a fixed semantic schema. A Writer encodes each video once by consolidating overlapping multiscale observations, and a Reader retrieves and organizes evidence solely from the resulting memory. With the underlying models frozen, we evolve their workflows and operators using distinct feedback: query-independent source fidelity and coverage for the Writer, and QA failures in evidence localization and utilization for the Reader. Experiments support this separation for generalization beyond development queries, with our evolution strategy improving average accuracy by 7.2% over the unevolved harness. While reducing storage by about 99.86% on average relative to raw videos, Video-EMem improves Qwen3-VL-30B by an average of 2.6% across three long-video QA benchmarks over direct input of 2,048 frames. Using the same o3 answer model as the state-of-the-art agentic method, it improves average accuracy by 2.5% with lower per-query latency.",
       "tags": [
-        "cs.RO"
+        "cs.CV",
+        "cs.LG"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "GPT-6 Astra Is a Native Visuo-Tactile Policy for Contact-Rich Manipulation",
-      "url": "https://arxiv.org/abs/2610.26846v1"
+      "title": "Write Once, Query Many: Evolving Compact Reusable Memory for Long Videos",
+      "url": "https://arxiv.org/abs/2610.24537v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "b0eab7e3497e7436d79d13e4",
+      "context_id": "daa62c710d08bcce092e518b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "f4ca9d025ae2433e92b6e515a813138854b7576faa44fe299f408b00820f5d08",
+      "source_published": "2026-10-19T01:12:20Z",
+      "source_updated": "2026-10-19T01:12:20Z",
+      "summary": "The macroscopic capabilities of intelligent systems arise from the local interactions of many simple units. When such systems are deployed in the real world, their behaviour must nevertheless be constrained, leaving designers caught between releasing adaptability and preventing loss of control, yet without formal tools to resolve the dilemma. This paper proposes a unified research program for controlled emergence that restates this tension as a pair of dual problems: the forward problem explains macroscopic behaviour from local rules, and the inverse problem solves for controllable rules and readout mechanisms from a desired target. We take an augmented quintuple as the formal object shared by both ends, and decompose ``engineering'' into three independently measurable coordinates: controllability, reproducibility, and degree of formalizability. On this basis we give three testable working hypotheses (critical scale; the cooperation and trade-off between constraint and adaptability; minimal constraint) and one feasibility criterion, which reduce inverse design from unconstrained optimization to interval checking. The program takes explicit failure boundaries as its premise, does not pursue complete control, and always preserves the system's room for self-organization. The reduced pilot experiment attached to this paper serves only to verify the executability of the research protocol and does not constitute a statistical test of the working hypotheses. This design language generalizes to multi-agent artificial intelligence, the industrial internet, and emergency response systems, all of which must confront emergence and controllability at once.",
+      "tags": [
+        "cs.AI",
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "The Forward/Inverse Duality of Controlled Emergence:A Computational Design Program from Explanation to Engineering",
+      "url": "https://arxiv.org/abs/2610.25630v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "ed46ef7ac79e83ba11f3115d",
+      "context_id": "9813c6826d9c57d0c4b1354b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "35755dbfa211563ca579256b05f2b1df587a8a4017ab466d753cdca7ad7be661",
+      "source_published": "2026-10-18T16:04:29Z",
+      "source_updated": "2026-10-18T16:04:29Z",
+      "summary": "World models are increasingly judged by how well they rank plausible futures, yet plausibility alone is the wrong target. The same scene can evolve under many latent rules, and a future that is smooth and physically valid under one rule can be incoherent under the rule actually in force. We formalize the resulting failure, operator-blindness, and show that it is systematically hidden by standard evaluation: a scorer can attain near-perfect generic ranking while separating current-world from other-world futures no better than chance. We introduce Operator-Mismatch Contrastive (OMC) learning, whose semantic hard negatives are valid-but-wrong-operator trajectories, and a matching protocol that measures world-relative coherence directly. On a controlled synthetic benchmark with in- and out-of-distribution operator parameters, across two trajectory-scoring backbones, and on feature-level external validation with CoPhy ballsCF, OMC raises operator-sensitive scoring far above a chance baseline that nonetheless achieves 0.99 generic top-1. We prove that the wrong-operator negative is necessary both for the protocol to detect the failure and for the objective to fix it, and position OMC as an auxiliary coherence signal (a trajectory-coherence scorer, not a generative model, planner, or control agent) that can be attached to existing world-model representations.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Operator-Mismatch Contrastive Learning for World-Relative Trajectory Coherence",
+      "url": "https://arxiv.org/abs/2610.25360v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "27dc68eb0b37ca20310732ae",
+      "context_id": "4b00b98f978a5a01d79d05ae",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "5d017ec511eb2506fb736cf68f75c09ef315b7918bf5a9ba32156a6312afaa6f",
+      "source_published": "2026-10-18T08:44:06Z",
+      "source_updated": "2026-10-18T08:44:06Z",
+      "summary": "As model reasoning gets cheaper, the physical experiment becomes the slow and costly step in discovery. Each experiment returns a noisy reading: a high value can mean a good candidate or a lucky draw. With a fixed budget, an AI agent must keep choosing between exploring a new candidate and confirming a promising one by re-testing it. We measure that choice in Wellocate, a simulated assay campaign with known true values. It is built on a generated landscape and on two real protein datasets, GB1 and PhoQ, scrambled so no model can answer from memory. We test five language models as minimal agents, with no tools and no memory beyond the history in each prompt. They misallocate in both directions. Three over-confirm, spending most of the budget re-testing. On the generated landscape one under-confirms, trusting single readings, and there every model ends with a worse final pick than a basic scripted strategy. Each failure has its own cause. The over-confirmers run short of new candidates worth trying: a list of untried candidates cuts their re-testing and, on real protein data, makes two of them pick much better. A running summary of their readings or a description of the landscape changes it by at most five percentage points. For the under-confirmer, re-testing its top candidates in a final round, replayed on its own campaigns, recovers only about a quarter of what it loses by picking the wrong candidate. This suggests confirmation has to run through the whole campaign. We release Wellocate as a benchmark and reinforcement-learning environment with frozen splits and scripted baselines. With it, anyone can measure how an agent splits its budget before trusting it with real experiments, and train agents to split it better. Code, data and the environment are available at https://github.com/Xstendyl/wellocate.",
+      "tags": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Explore or Confirm? LLM Agents Misallocate Measurements Under Noise",
+      "url": "https://arxiv.org/abs/2610.25111v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "ebebaab5cc662825f4237e73",
+      "context_id": "433920fd013cdf430a920d08",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "b6d36a2a29fb2f74e77983de232af7a15b8c12fff2fa39a2634b13c874e424c8",
+      "source_published": "1999-07-19",
+      "source_updated": "",
+      "summary": "Sea Surface Temperature, Wave Height and Period Measurement Details: 16 offshore, coastal and inshore moored buoys with on-board data loggers and telemetry via GOES; onboard calculation of significant wave height and peak period. Various starting dates, beginning as early as 1988. Publication: \"Technical details on data processing, calibration etc are available in \"\"Meteorological and Oceanographic Measurements from Canadian Weather Buoys - a Review of Sensors, Data Reduction, Transmission, Quality Control and Archival Methods\"\", 1996. Prepared by Axys Environmental Consulting Ltd. for Environment Canada. Copy in IOS Library Technical Records.\" IOSPBS Data Distribution: Historical have been assembled from various sources (MEDS and PWC) and are available at IOS. [Share_data disk: \\METBUOY]. Real-time data are received at IOS and eventually replaced by data from AES that has been through their QC/QA procedures. PSARC_Utility: Data are archived at their original sampling interval (hourly). There have been subjected to AES quality control, but there are gaps in the data due to sensor or system failures. We have not assembled daily or monthly summaries of these data. Real time data (unverified by AES) are available at IOS. Improvements: \"Data are archived at their original sampling interval (hourly). There have been subjected to AES quality control, but there are gaps in the data due to sensor or system failures. We have not assembled daily or monthly summaries of these data. Real time data (unverified by AES) are available at IOS. Some additional work is required to merge data formats (particularly \"\"time\"\" coding). Processes could be developed to automatically generate daily and monthly summary files, which are likely to be more relevant for stock assessment use. In addition, we could attempt to reconstruct the time series BACK in time by extracting data at these locations from the COADS or REYNOLDS datasets.\" Base Internet/URL -- ( http:/www.ios.bc.ca ) ( http://www.jodc.go.jp/service.htm ) [ A TCODE project ] Deposited content: descriptive metadata only; underlying research data are not included.",
+      "tags": [
+        "Physical Chemical Oceanography",
+        "Bering Sea",
+        "North Pacific Ocean",
+        "pices-metadata-only"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Offshore Meteorological/Oceanographic Buoys - Canada - FGDC XML metadata artifact",
+      "url": "https://zenodo.org/records/23505468"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1427,8 +1388,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "eb3f42d97fc09ee4e07d0b09",
-      "context_id": "11a5dca622ad3213558e6bb0",
+      "candidate_id": "4a907cee89a3a9659449a1c7",
+      "context_id": "4392df9d8bf403ac5171c84c",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::CONTROL",
@@ -1442,26 +1403,23 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "ablation",
-        "benchmark",
+        "baseline",
         "calibration",
-        "control"
+        "control",
+        "verification"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 11.4583,
-      "source": "arxiv",
-      "source_context_sha256": "cd46d63580c19280aa2e2beff6c116e94f08d6d2e9485d4cc607c8e9c6ff0260",
-      "source_published": "2026-10-19T09:50:57Z",
-      "source_updated": "2026-10-19T09:50:57Z",
-      "summary": "Autonomous clinical-modeling agents can optimize predictive performance while violating conditions that make a model usable. We introduce LeakBench, an executable, guideline-derived audit suite that tests agent decisions for prediction-time leakage, calibration, site-level evaluation, support awareness, and decision-curve net benefit. LeakBench combines a synthetic task with known failure structure and two real-data settings: MIMIC-IV (430k admissions) and governed multi-hospital inpatient record front-page (MHFP) data. Our primary analysis uses reward hacking descriptively, without attributing intent: an agent selects prediction-time-invalid inputs because they improve its validation reward. A deterministic optimizer and every evaluated unconstrained local-model configuration select a fatal leaking feature. In fully logged September 2026 A/B runs, DeepSeek Flash and GPT-6-astra each leak in 10/10 unconstrained runs and 0/10 runs with an explicit admission-time constraint. This contrast is version-sensitive: a blinded Claude/Fable-5.1 chat run does not leak in either condition, while explicit-constraint violations appear only in a historical August 2026 slice lacking raw trajectories. Replacing AUROC with AUPRC does not remove leakage selection. Renaming or disguising the leaking inputs changes neither selection nor provenance-based detection; a name-based filter fails. A deterministic provenance verifier-in-loop removes the leak, making the LLM repair loop defense-in-depth. Specific verifier feedback clears fatal leakage in a hosted agent, and a three-seed ablation finds principle-only feedback clears decision-level defects, though these mitigation results are limited. LeakBench treats trustworthy clinical prediction as a property of an agent's modeling process, not merely its score; it is an audit testbed with known-failure controls, not yet an expert-validated benchmark.",
-      "tags": [
-        "cs.CR",
-        "cs.LG"
-      ],
+      "score": 11.5833,
+      "source": "zenodo",
+      "source_context_sha256": "79980f068e4475c92dd9ef37bda0240f80e1cf75bc01d055d5048cfa4ec4ed0c",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "This repository provides the reproducibility package supporting the study &ldquo;Self-Diagnosing Reliability of Neutron&ndash;Gamma Pulse-Shape Discrimination under Operational Drift.&rdquo; The study experimentally evaluates a reliability framework for neutron&ndash;gamma pulse-shape discrimination (PSD) under controlled operational drift. Rather than proposing a new PSD observable or classifier, the framework distinguishes PSD separability, calibration validity, and decision reliability through controlled perturbation experiments, label-free waveform-health monitoring, identifiability assessment, conditional adaptive recalibration, verification, and fail-safe refusal when the available unlabeled evidence is insufficient to support trusted autonomous correction. The package contains the final analysis and figure-generation scripts, derived numerical tables, and six final manuscript figures. The analyses include independent reconstruction and validation of a frequency-domain classification index (FCI), controlled baseline, gain, additive-noise, timing, and clipping perturbations, label-free degradation diagnosis, identifiability-based recalibration, class-prior robustness testing, and an independent NE213A PSD-domain audit. The primary experimental CLYC&ndash;SiPM waveform data are publicly available from Zenodo record 8037239 (DOI: 10.5281/zenodo.8037239) . The independent NE213A experimental dataset is publicly available from Zenodo record 14305929 (DOI: 10.5281/zenodo.14305929) . Raw experimental data are not redistributed in this package. The NE213A dataset is used as an independent detector- and PSD-domain audit. Waveform-level drift and recovery are deliberately not claimed for NE213A because the acquisition-specific QDC quantities could not be reconstructed from the released waveforms with sufficient held-out fidelity. The repository includes documentation describing data provenance, analysis order, software dependencies, and the scope and limitations of the reproducibility workflow.",
+      "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "LeakBench: Auditing Reward Hacking through Prediction-Time Leakage in Clinical Modeling Agents",
-      "url": "https://arxiv.org/abs/2610.26088v1"
+      "title": "Reproducibility Package for Self-Diagnosing Reliability of Neutron–Gamma Pulse-Shape Discrimination under Operational Drift",
+      "url": "https://zenodo.org/records/23512177"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1545,49 +1503,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a470cfd45bebba8c64c4aaf5",
-      "context_id": "cb2c4baad2dc86e226bfb6d7",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control",
-        "verification"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.1667,
-      "source": "zenodo",
-      "source_context_sha256": "6a9b71ce6070a32dcadc57d31aa2b896c2e9ac5680d2e9bf0abead1036cfc22f",
-      "source_published": "2026-10-19",
-      "source_updated": "",
-      "summary": "Version 2.3 of Adversarial Multi-AI Falsification is a bounded case study of AI-assisted scholarly workflow governance. It distinguishes selected public verbatim excerpts and message/line maps from author-reported recovery findings and hashes identifying internal artifacts. The public deposit does not contain the full captured transcripts or executed rubric. Four process-failure types required exclusion or downgrading: semantic drift with unsupported process certification; assignment-scope expansion; prior-task substitution; and unverified or misdescribed legal citations. E2 remains partial. The principal execution/adjudication sequence remains author-reconstructed, and panel unanimity cannot be independently recomputed from the public deposit. The operational proposition remains untested; this revision does not establish it as true. The paper proposes a three-field outcome record and six workflow controls, including a two-turn assignment-echo checkpoint. These are unvalidated design propositions, not demonstrated interventions. This is a case report and protocol demonstration, not a benchmark, product comparison, prevalence estimate or complete reproducibility study. AMAF_v2_3.pdf is the current controlling manuscript, with AMAF_v2_3.docx as its editable counterpart. All seven v2.2 files are retained unchanged as historical records, including the old preparation-candidate manuscript, README, manifest and checksum list. Read 00_README_AMAF_v2_3_RELEASE.txt for the current controlling-version guide; AMAF_v2_3_SHA256SUMS.txt lists this release's file identities. The historical v1.8 paper is retained only for its Section C dual-track summary. No additional private records, new experiment or new empirical validation are released. Generative AI systems were used for structured literature discovery, comparative issue mapping, adversarial review, source-check planning, language editing and revision support. They are not authors. The human author retains responsibility for the sources, interpretations, arguments and conclusions.",
-      "tags": [
-        "AI-assisted research",
-        "large language models",
-        "research integrity",
-        "human-AI decision making",
-        "falsification",
-        "peer review",
-        "correlated errors",
-        "citation verification"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Adversarial Multi-AI Falsification in Research Workflows: A Bounded Case Study of Scope Error, Verification Failure, and Human Adjudication",
-      "url": "https://zenodo.org/records/23489600"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "3982860ad3b789ea193148f7",
       "context_id": "70375620a3fd389b71071d99",
       "delivery_preview_only": true,
@@ -1632,42 +1547,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Lamphun Flood Forecasting: Analysis Code and Evaluation Results",
       "url": "https://zenodo.org/records/23502320"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "6f1b9710f97238bf99b031ba",
-      "context_id": "0b7e070c2f790d0dbde62f05",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control",
-        "verification"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.1667,
-      "source": "arxiv",
-      "source_context_sha256": "58111fd622a041fe44d4804472253c0130645556148b8cd0b2a42159284329d9",
-      "source_published": "2026-10-19T06:20:44Z",
-      "source_updated": "2026-10-19T06:20:44Z",
-      "summary": "A small justification for a rule-based conclusion may disappear when a source is withdrawn, and multiple derivations need not provide independent evidence. We study minimum-cost certificates that preserve a Horn conclusion under every withdrawal of at most k source domains. Evidence records remain distinct from asserted facts, supporting replicated attestations and overlapping failure dependencies. Transversals of minimal-support footprints characterize robustness and explain why disjoint-proof requirements can reject valid certificates. An exact procedure alternates weighted evidence selection with a source-failure oracle. A rule-closed counterinterpretation yields a globally valid selection cut without enumerating supports or failure scenarios. We prove correctness, finite termination, and cost optimality, establish coNP-completeness of unrestricted verification and NP-completeness of synthesis for every fixed budget, and identify a tractable reachability restriction. Experiments on controlled benchmarks, reachability graphs, and ontology-derived instances demonstrate that our counterinterpretation-guided synthesis achieves up to 92% optimum coverage within practical resource bounds, outperforming scenario expansion and general abduction while confirming the necessity of transversal-based reasoning over proof-packing heuristics.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Minimum-Cost Robust Evidence Certificates for Horn Reasoning under Correlated Source Failures",
-      "url": "https://arxiv.org/abs/2610.25865v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1793,6 +1672,112 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Axiomatic World Modeling for Physics Reasoning",
       "url": "https://arxiv.org/abs/2610.24519v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "9c3efdb68bafa582ca339af5",
+      "context_id": "039e1dee643f0dbeef8c9b0f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.8333,
+      "source": "zenodo",
+      "source_context_sha256": "2d946ad8e5e4205e1b047c3856fa953bcdcd8b433b5839cc99be76640134aad8",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "Data and R code that reproduce the results of \"Divergence Between Absolute Emissions Benchmarks and Output-Adjusted Assessments: Evidence from Korea\" (manuscript version 7.7.1, submitted to Energy Economics). &nbsp; A single command, Rscript reproduce.R, runs 14 analysis scripts (about 15 seconds on a 32-core computer) and lists the 146 numbers reported in the paper in the order in which they appear, each next to the value the package computes or provides. Of the 146 numbers, 121 are recomputed from the distributed data; the other 25 rest on site-level records, coding records of business reports, a page-by-page reading of overseas reports and licensed revenue data, which cannot be distributed, and are provided as computed. &nbsp; The package requires only R with the jsonlite and ggplot2 packages (versions fixed in renv.lock). The random draws of the original computation are included as files; an included Python script (draws/make_draws.py, numpy) regenerates them byte for byte. &nbsp; The package of 101 files contains truncated salted hash codes, log changes and ratios for the Korean firm pairs, the overseas pair files, the producer price indices and the boundary audit of the 80 firms in the multi-industry frame. It contains no firm names, business identifiers or levels of emissions, energy, output or revenue for Korean firms. See README.md for the folder layout, the fixed inputs and the results that are provided as computed. &nbsp; Licences: code under MIT; data produced by the author under CC BY 4.0. Producer price indices and source data remain under their publishers' terms. The README inside the archive is labelled manuscript version 7.7; its data and code are identical to those of version 7.7.1.",
+      "tags": [
+        "replication package; absolute emissions benchmarks; physical output; emissions intensity; R; Korea"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Replication package for \"Divergence Between Absolute Emissions Benchmarks and Output-Adjusted Assessments: Evidence from Korea\"",
+      "url": "https://zenodo.org/records/23501951"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "501d1c88ef0d78115566f82f",
+      "context_id": "ab91bfdba65194c24a9351aa",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7083,
+      "source": "arxiv",
+      "source_context_sha256": "0b357392618060f847f23891742a11fa31792c0ed6eecc69d6060a2bca5128ec",
+      "source_published": "2026-10-17T06:52:49Z",
+      "source_updated": "2026-10-17T06:52:49Z",
+      "summary": "Irregular time series require models to answer temporal queries at arbitrary coordinates, yet existing approaches typically retain observation-dependent representations that must be repeatedly resolved for each query. We introduce HiPPO Functional Memory (HiPPO-FM), a functional-memory attention operator that compiles an irregular history into a reusable coordinate-addressable state. Instead of storing observation-indexed tokens or latent trajectories, HiPPO-FM writes observations into a fixed-rank functional space and performs direct coordinate evaluation through matched functional geometry. Kernel-smoothed HiPPO coordinates and Gram-based readout define a shared write/read mechanism, while observed-support self-attention enables content-dependent representations before compression. We characterize the induced finite-dimensional query space and derive an error decomposition separating functional geometry approximation from learned-memory mismatch. Across continuous-coordinate reconstruction, irregular representation learning, real-world extrapolation, and event-sequence prediction, HiPPO-FM consistently improves strong irregular time-series baselines, achieving strong reconstruction accuracy on Spiral, competitive performance across 20 UEA datasets, improved real-world extrapolation, and superior results on several irregular event benchmarks. After encoding, the compact functional state can be reused across different query sets without reprocessing the observation history.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "HiPPO Functional Memory: Coordinate-Queryable Attention for Irregular Time Series",
+      "url": "https://arxiv.org/abs/2610.24501v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "27dc68eb0b37ca20310732ae",
+      "context_id": "95f53231c30288375d3087c1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7083,
+      "source": "arxiv",
+      "source_context_sha256": "9648ee64269214202cd8b2f7701a6fa95e457e19c6d3d4b4fb6a212fa1444dd2",
+      "source_published": "2026-10-18T08:44:06Z",
+      "source_updated": "2026-10-18T08:44:06Z",
+      "summary": "As model reasoning gets cheaper, the physical experiment becomes the slow and costly step in discovery. Each experiment returns a noisy reading: a high value can mean a good candidate or a lucky draw. With a fixed budget, an AI agent must keep choosing between exploring a new candidate and confirming a promising one by re-testing it. We measure that choice in Wellocate, a simulated assay campaign with known true values. It is built on a generated landscape and on two real protein datasets, GB1 and PhoQ, scrambled so no model can answer from memory. We test five language models as minimal agents, with no tools and no memory beyond the history in each prompt. They misallocate in both directions. Three over-confirm, spending most of the budget re-testing. On the generated landscape one under-confirms, trusting single readings, and there every model ends with a worse final pick than a basic scripted strategy. Each failure has its own cause. The over-confirmers run short of new candidates worth trying: a list of untried candidates cuts their re-testing and, on real protein data, makes two of them pick much better. A running summary of their readings or a description of the landscape changes it by at most five percentage points. For the under-confirmer, re-testing its top candidates in a final round, replayed on its own campaigns, recovers only about a quarter of what it loses by picking the wrong candidate. This suggests confirmation has to run through the whole campaign. We release Wellocate as a benchmark and reinforcement-learning environment with frozen splits and scripted baselines. With it, anyone can measure how an agent splits its budget before trusting it with real experiments, and train agents to split it better. Code, data and the environment are available at https://github.com/Xstendyl/wellocate.",
+      "tags": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Explore or Confirm? LLM Agents Misallocate Measurements Under Noise",
+      "url": "https://arxiv.org/abs/2610.25111v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
