@@ -17,6 +17,33 @@ from beetle_memory_receiver import INBOX_STATUS
 ACK_PATH = 'beetle-memory/data/beetle-inbox/ACK.json'
 
 
+def classify_missing_ack(repo: str) -> str:
+    """Raw 404 cannot distinguish a missing ACK from a private repository.
+
+    A publicly visible repository with a missing ACK is positive evidence of
+    absence. A 404 on repository metadata (or unreadable metadata) is not.
+    No cross-repository credentials are used or inferred.
+    """
+    req = urllib.request.Request(
+        f'https://api.github.com/repos/{repo}',
+        headers={'User-Agent': 'JANUS-Beetle-ACK-Visibility/1',
+                 'Accept': 'application/vnd.github+json'},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=8) as resp:
+            raw = resp.read(100_001)
+        if len(raw) > 100_000:
+            return 'ACK_VISIBILITY_UNKNOWN'
+        metadata = json.loads(raw)
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError,
+            ValueError, UnicodeError):
+        return 'ACK_VISIBILITY_UNKNOWN'
+    if (isinstance(metadata, dict) and metadata.get('full_name') == repo and
+            metadata.get('private') is False):
+        return 'NO_ACK'
+    return 'ACK_VISIBILITY_UNKNOWN'
+
+
 def fetch_ack(repo: str):
     if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repo):
         return None, 'INVALID_REPO'
@@ -29,7 +56,8 @@ def fetch_ack(repo: str):
             return None, 'ACK_TOO_LARGE'
         return json.loads(data), None
     except urllib.error.HTTPError as exc:
-        return None, 'NO_ACK' if exc.code == 404 else f'HTTP_{exc.code}'
+        return None, (classify_missing_ack(repo) if exc.code == 404
+                      else f'HTTP_{exc.code}')
     except (urllib.error.URLError, TimeoutError, ValueError) as exc:
         return None, f'ACK_UNAVAILABLE:{type(exc).__name__}'
 
@@ -69,8 +97,12 @@ def inspect_queue(queue: dict, ack: dict | None, error: str | None,
             result['status'] = 'STALE'
         if error:
             result['ack_read_error'] = error
-            if minutes < stale_minutes:
-                result['status'] = 'AWAITING_ACK' if error == 'NO_ACK' else 'ACK_UNAVAILABLE'
+            # Inaccessible private ACK or transport errors cannot prove delivery
+            # silence, even when the sender's queue is old. Preserve pending.
+            if error != 'NO_ACK':
+                result['status'] = 'ACK_UNAVAILABLE'
+            elif minutes < stale_minutes:
+                result['status'] = 'AWAITING_ACK'
     return result
 
 
