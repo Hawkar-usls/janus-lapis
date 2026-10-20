@@ -63,10 +63,10 @@ jobs:
     outputs:
       status: ${{ steps.classify.outputs.status }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - name: Verify normal and adversarial SLO scenarios
@@ -90,7 +90,7 @@ jobs:
           echo "status=$status" >> "$GITHUB_OUTPUT"
       - name: Preserve watcher receipt, even after ALERT
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: janus-watchdog-${{ steps.classify.outputs.status }}-${{ github.run_id }}
           path: watchdog-run.txt
@@ -111,14 +111,14 @@ jobs:
       actions: read
       issues: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: janus-watchdog-${{ needs.observe.outputs.status }}-${{ github.run_id }}
       - name: Upsert one deduplicated durable issue on state transition
