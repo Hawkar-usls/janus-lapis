@@ -10,6 +10,7 @@ import json
 import pathlib
 import sys
 import unittest
+import urllib.error
 from unittest import mock
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / 'tools'))
@@ -211,6 +212,21 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
         self.assertEqual(current['repositories']['Hawkar-usls/Echo-Pyramid']['status'], 'STALE')
         self.assertIn('Hawkar-usls/Echo-Pyramid: STALE',
                       self.check([current, *self.sources[1:]])['alerts'])
+
+    def test_private_receiver_raw_404_is_unknown_visibility_not_stale(self):
+        health, queue, _ = self.stale_snapshot_and_live_queue()
+        def fetch(url, max_bytes):
+            if url.endswith('/delivery.json'):
+                return queue
+            raise urllib.error.HTTPError(url, 404, 'private or missing', None, None)
+        with mock.patch('beetle_home_watchdog.classify_missing_ack',
+                        return_value='ACK_VISIBILITY_UNKNOWN'):
+            current = reconcile_stale(health, NOW, fetcher=fetch)
+        row = current['repositories']['Hawkar-usls/Echo-Pyramid']
+        self.assertEqual(row['status'], 'ACK_UNAVAILABLE')
+        self.assertEqual(row['confirmed'], 0)
+        self.assertEqual(row['pending'], 2)
+        self.assertEqual(self.check([current, *self.sources[1:]])['status'], 'WARN')
 
     def test_live_mismatched_ack_sha_fails_conflict_not_silent_clear(self):
         health, queue, ack = self.stale_snapshot_and_live_queue()
