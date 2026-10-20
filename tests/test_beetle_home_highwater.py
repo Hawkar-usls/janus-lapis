@@ -56,6 +56,15 @@ class HighwaterTests(unittest.TestCase):
         self.assertIn("github.event.workflow_run.conclusion == 'success'", workflow)
         self.assertIn('needs.observe.result != \'skipped\'', workflow)
 
+    def test_cron_has_independent_redundant_schedule_opportunities(self):
+        workflow = (Path(__file__).resolve().parents[1] /
+                    '.github/workflows/janus-beetle-home-watchdog.yml').read_text()
+        self.assertIn("cron: '17,37,57 * * * *'", workflow)
+        self.assertIn('workflow_run:', workflow)
+        self.assertIn("github.event.workflow_run.conclusion == 'success'", workflow)
+        # No event-driven success may be relabelled as an actual cron run.
+        self.assertNotIn('event_name == \'schedule\' ||', workflow)
+
     def test_anchor_ancestry_detects_complete_history_replacement(self):
         compare = {'status': 'ahead', 'ahead_by': 3,
                    'base_commit': {'sha': 'b' * 40},

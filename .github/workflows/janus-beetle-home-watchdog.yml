@@ -1,8 +1,11 @@
 name: JANUS Beetle → Genesis durable delivery watchdog
 
 on:
+  # Independent scheduled observations are required to prove schedule liveness.
+  # GitHub may skip individual ticks; three off-hour opportunities reduce risk
+  # without ever counting workflow_run/push as a scheduled success.
   schedule:
-    - cron: '37 * * * *'
+    - cron: '17,37,57 * * * *'
   workflow_dispatch:
   # GitHub may defer or omit cron ticks. A successful producer or receiver
   # gives the observer a second wake-up path without cross-repository tokens.
