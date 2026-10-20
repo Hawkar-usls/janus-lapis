@@ -16,7 +16,7 @@ import re
 import urllib.error
 import urllib.request
 
-from beetle_delivery_health import inspect_queue
+from beetle_delivery_health import classify_missing_ack, inspect_queue
 from beetle_home_highwater import (ISSUE_NUMBER, ancestry_url,
                                    check as check_highwater, parse_issue,
                                    verify_ancestry)
@@ -248,7 +248,7 @@ def reconcile_stale(health: dict, now: dt.datetime, fetcher=fetch_json) -> dict:
         except urllib.error.HTTPError as exc:
             if exc.code != 404:
                 raise
-            ack, error = None, 'NO_ACK'
+            ack, error = None, classify_missing_ack(repo)
         if ack is not None and (not isinstance(ack, dict) or
                                 ack.get('scientific_authority_delta') != 0):
             live = {'status': 'ACK_CONFLICT', 'produced': len(queue['entries']),

@@ -3,17 +3,20 @@ from __future__ import annotations
 
 import datetime as dt
 import hashlib
+import io
 import json
 import pathlib
 import sys
 import tempfile
 import unittest
+import urllib.error
+from unittest import mock
 
 TOOLS = pathlib.Path(__file__).resolve().parents[1] / 'tools'
 sys.path.insert(0, str(TOOLS))
 from beetle_mirror_router import canon, queue_batch, queue_snapshot, safe_repo, to_item
 from beetle_memory_receiver import stage, INBOX_STATUS
-from beetle_delivery_health import inspect
+from beetle_delivery_health import classify_missing_ack, inspect
 
 REPO = 'Hawkar-usls/Janus_Genesis'
 TIME = '2026-10-17T00:00:00Z'
@@ -125,6 +128,36 @@ class DeliveryTest(unittest.TestCase):
         self.assertEqual(health['status'], 'PASS')
         self.assertEqual(health['repositories'][REPO]['pending'], 0)
         self.assertEqual(health['ack_semantics'], 'INBOX_DURABLE_ONLY_NOT_RUNTIME_CONSUMPTION')
+
+    def test_private_or_inaccessible_ack_keeps_pending_without_false_stale(self):
+        self.send(1)
+        observed = dt.datetime.fromisoformat('2026-10-17T04:00:00+00:00')
+        health = inspect(self.root, fetcher=lambda repo: (None, 'ACK_VISIBILITY_UNKNOWN'),
+                         observed_at=observed)
+        row = health['repositories'][REPO]
+        self.assertEqual(health['status'], 'WARN')
+        self.assertEqual(row['status'], 'ACK_UNAVAILABLE')
+        self.assertEqual(row['pending'], 1)
+        self.assertEqual(row['confirmed'], 0)
+        self.assertEqual(row['oldest_pending_minutes'], 240)
+
+    def test_transient_ack_transport_error_never_proves_stale(self):
+        self.send(1)
+        observed = dt.datetime.fromisoformat('2026-10-17T04:00:00+00:00')
+        health = inspect(self.root, fetcher=lambda repo: (None, 'HTTP_503'),
+                         observed_at=observed)
+        self.assertEqual(health['repositories'][REPO]['status'], 'ACK_UNAVAILABLE')
+        self.assertEqual(health['status'], 'WARN')
+
+    def test_public_repo_metadata_proves_missing_ack_when_404(self):
+        metadata = json.dumps({'full_name': REPO, 'private': False}).encode()
+        with mock.patch('beetle_delivery_health.urllib.request.urlopen',
+                        return_value=io.BytesIO(metadata)):
+            self.assertEqual(classify_missing_ack(REPO), 'NO_ACK')
+        with mock.patch('beetle_delivery_health.urllib.request.urlopen',
+                        side_effect=urllib.error.HTTPError('https://api.github.com',
+                                                           404, 'not found', None, None)):
+            self.assertEqual(classify_missing_ack(REPO), 'ACK_VISIBILITY_UNKNOWN')
 
     def test_old_ack_cannot_skip_newly_queued_batches(self):
         self.send(1)
