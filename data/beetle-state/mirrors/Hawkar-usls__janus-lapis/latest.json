@@ -1,9 +1,56 @@
 {
-  "batch_id": "749779e9f714970a0dee",
+  "batch_id": "efe6deff20a01a40b8ff",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
   "items": [
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "ee03fef7b00a1eb4587a3e26",
+      "context_id": "d7f6c560c8b64552e757bcb4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::REVERSE",
+      "direction_title": "Universal large-data ingestion methods [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "identifiability",
+        "reconstruction",
+        "reverse"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.5,
+      "source": "zenodo",
+      "source_context_sha256": "f09326a41f27053c85b3fccefc7156caa0112cfc67f4dceaf957de8d1ea8de4d",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "Abstract This paper investigates whether an artificial system's refusal to execute a prescribed action can constitute evidence of subjectively experienced volition. Using ARGUS-7 as a controlled conceptual framework and the Akarkach Seven-Stage Emergence Model (A7SEM) as a structural analytical lens, the study distinguishes functional refusal, internal decision mechanisms, self-representation, phenomenal self-awareness, and experienced authorship of action. A formal argument is developed around the conditional hypothesis that consciously experienced volition requires subjective self-awareness. Under this assumption, the absence of subjective self-awareness entails the absence of consciously experienced volition. However, the paper demonstrates that observable refusal alone cannot establish phenomenal authorship. The analysis combines propositional logic, countermodel construction, causal identifiability considerations, and seven-stage structural assessment. PIGA (Pre-Inference Governance) and A7SEM Reverse provide complementary perspectives on authorization, inference boundaries, causal reconstruction, and evidential limitations. The findings establish a distinction between the formal validity of conditional deductions and the empirical verification of their premises. They do not establish the impossibility of artificial consciousness or machine free will. The contribution is a governance-aware, formally structured framework for evaluating claims of artificial volition without conflating behavioral capability with subjective experience. Keywords: Artificial Intelligence; Machine Consciousness; Volition; Free Will; Phenomenal Consciousness; Self-Awareness; A7SEM; ARGUS-7; Pre-Inference Governance; Explainable AI; Formal Logic; Causal Identifiability.",
+      "tags": [
+        "Artificial Intelligence",
+        "Machine Consciousness",
+        "Volition",
+        "Free Will",
+        "Phenomenal Consciousness",
+        "Self-Awareness",
+        "A7SEM",
+        "ARGUS-7",
+        "Pre-Inference Governance",
+        "Formal Logic",
+        "Causal Identifiability",
+        "Governance"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "ARGUS-7 / A7SEM: Volitional Refusal, Functional Self-Representation, and the Epistemic Limits of Phenomenal Authorship",
+      "url": "https://zenodo.org/records/23519136"
+    },
     {
       "base_direction_id": "large_data_methods",
       "candidate_id": "69a0ba3bb8cf31f9e8600e6e",
@@ -146,41 +193,6 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "19eadad366a53aa0c02f9afb",
-      "context_id": "eac6131bdaff0d5011299a6b",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "arxiv",
-      "source_context_sha256": "29b2f2c1f795100200da9c97f82780ba9d269ad04b6ab532438bb7e954016a27",
-      "source_published": "2026-10-17T02:39:54Z",
-      "source_updated": "2026-10-17T02:39:54Z",
-      "summary": "Financial time series exhibit multi-scale, high-noise, and non-stationary volatility dynamics. Decomposition--integration frameworks built on complete ensemble empirical mode decomposition with adaptive noise (CEEMDAN) have advanced this field, yet existing CEEMDAN hybrids remain unstable: high-frequency mode mixing contaminates downstream predictors, and the heterogeneous volatility of decomposed components is not matched by any volatility-adaptive mechanism. To address these gaps, this paper proposes CEEMDAN-SE-SSA-VMGL. CEEMDAN adaptively decomposes the original series, and sample-entropy-driven K-means clustering groups the intrinsic mode functions into high-, mid-, and low-frequency and residual components. Singular spectrum analysis (SSA) is then applied to the high-frequency group, whose singular-value decomposition of the trajectory matrix and principal-component reconstruction decouple intertwined pseudo-oscillatory modes and alleviate mode mixing. We further design a plug-and-play robust LSTM variant, the volatility-modulated GARCH-LSTM (VMGL), which embeds a differentiable GARCH(1,1) layer inside the LSTM cell as a risk gate; the estimated conditional volatility multiplicatively scales the forget-gate activation, letting memory decay adapt to the instantaneous volatility while remaining fully end-to-end trainable. Component predictions are linearly combined. On five US and Chinese financial series (CSI 300, CSI 500, AAPL, GOOGL, S&P 500), the proposed model is compared with eleven benchmark architectures, lowering the forecasting error by 9% to 24% relative to the best benchmark and by 60% to 70% relative to a standard LSTM. Diebold--Mariano and model-confidence-set (MCS) tests confirm the statistical significance and stability of the gains, spectral analyses verify the SSA denoising efficacy, and backtesting demonstrates the framework's economic utility.",
-      "tags": [
-        "cs.CE",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "A decomposition-integration framework coupling singular spectrum analysis with a volatility-adaptive LSTM for stock price forecasting",
-      "url": "https://arxiv.org/abs/2610.24384v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
       "candidate_id": "97f9f5a6128faa9bb13999ae",
       "context_id": "e9ff705fd3c9dc5717e69a33",
       "delivery_preview_only": true,
@@ -256,6 +268,48 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "4ee0756ccdbd0b9b40a087c1",
+      "context_id": "a72cab4ebe9372a766c5d939",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::REVERSE",
+      "direction_title": "Universal large-data ingestion methods [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "7669f94544af1d3a288006a574857497773ea2d14a6fd338d2b94fdec3cf14fb",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "This record provides processed input data, Python code, and reference outputs for analyses of CO₂ exchange in the Han River, Seoul, Republic of Korea. The release is distributed as two ZIP archives: Main archive: Analyses supporting Figures 1&ndash;4, Table 1, models M1&ndash;M6, and Supplementary Tables S12&ndash;S19, including model coefficients and associated numerical diagnostics. Supplementary archive: Analyses supporting Supplementary Figures S2&ndash;S4, S10&ndash;S13, and S17&ndash;S25, and Supplementary Tables S1, S6&ndash;S11, S20&ndash;S22, and S24. These include diel-budget reconstruction, temporal-sampling comparisons, and sensitivity analyses. Each archive includes analysis inputs, Python scripts, reference figures and numerical results, data dictionaries, and validation information. Reference outputs are stored in the results/ directories. README files provide the package structure and execution instructions, while requirements.txt and requirements-lock.txt document software dependencies and reference versions. The workflows reproduce the documented analyses from the supplied processed inputs. The analyses covered by this release and their correspondence to manuscript figures and tables are specified in COVERAGE.csv and analysis_map.csv. File checksums are provided in SHA256SUMS.txt.",
+      "tags": [
+        "carbon dioxide",
+        "CO2 flux",
+        "urban river",
+        "diel cycle",
+        "water-air CO2 exchange",
+        "eddy covariance",
+        "reproducibility",
+        "urban planning",
+        "inland water"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Han River CO₂ flux analysis reproducibility archive",
+      "url": "https://zenodo.org/records/23494008"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "56b083aace2d174772822f17",
       "context_id": "943336cdcc934697fa14422a",
       "delivery_preview_only": true,
@@ -326,40 +380,6 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "501d1c88ef0d78115566f82f",
-      "context_id": "37fe331e22cf9a22e55f5054",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::REVERSE",
-      "direction_title": "Universal large-data ingestion methods [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "arxiv",
-      "source_context_sha256": "7a12ccbfe4fc144dec63c8581bc135c0e50e15af54a68fdc4ee8caac0d61ab59",
-      "source_published": "2026-10-17T06:52:49Z",
-      "source_updated": "2026-10-17T06:52:49Z",
-      "summary": "Irregular time series require models to answer temporal queries at arbitrary coordinates, yet existing approaches typically retain observation-dependent representations that must be repeatedly resolved for each query. We introduce HiPPO Functional Memory (HiPPO-FM), a functional-memory attention operator that compiles an irregular history into a reusable coordinate-addressable state. Instead of storing observation-indexed tokens or latent trajectories, HiPPO-FM writes observations into a fixed-rank functional space and performs direct coordinate evaluation through matched functional geometry. Kernel-smoothed HiPPO coordinates and Gram-based readout define a shared write/read mechanism, while observed-support self-attention enables content-dependent representations before compression. We characterize the induced finite-dimensional query space and derive an error decomposition separating functional geometry approximation from learned-memory mismatch. Across continuous-coordinate reconstruction, irregular representation learning, real-world extrapolation, and event-sequence prediction, HiPPO-FM consistently improves strong irregular time-series baselines, achieving strong reconstruction accuracy on Spiral, competitive performance across 20 UEA datasets, improved real-world extrapolation, and superior results on several irregular event benchmarks. After encoding, the compact functional state can be reused across different query sets without reprocessing the observation history.",
-      "tags": [
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "HiPPO Functional Memory: Coordinate-Queryable Attention for Irregular Time Series",
-      "url": "https://arxiv.org/abs/2610.24501v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
       "candidate_id": "ae444585bcdf7fa87733d88e",
       "context_id": "25bd9c762c932da214bd6ac9",
       "delivery_preview_only": true,
@@ -392,8 +412,8 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "80bd1cde1ff29e2a9fde3936",
-      "context_id": "b8e9fc1c920c53c6dc93f961",
+      "candidate_id": "98cdd4d8774d1f730ee4f0fa",
+      "context_id": "1c5b15c45cd4edd80cc3ac7f",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::REVERSE",
@@ -407,20 +427,33 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "inversion"
+        "reconstruction"
       ],
       "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.375,
+      "score": 4.5833,
       "source": "zenodo",
-      "source_context_sha256": "8c55dea63254c9b0a4ddd0069a51d37c4afc6ebc06370e6de1cd42cf6bd446c0",
+      "source_context_sha256": "3d839e675f120eaa330f2f142083bc3c4653ef92d1394ccddb536ee3d0080c61",
       "source_published": "2026-10-20",
       "source_updated": "",
-      "summary": "Data, pre-registrations and code for &ldquo;Size and Chemical Contributions to the Cauchy Deviation of Cubic Oxide Perovskites&rdquo; This record contains the data, pre-registration files, calculation notebooks and analysis scripts for a study of the Cauchy deviation C12 &minus; C44 of ideal cubic (Pm-3m) oxide perovskites ABO3. In this structure every atom sits at a centre of inversion, so C12 &minus; C44 is a relaxation-free, net measure of non-central cohesion. The study was carried out in five sequentially pre-registered stages. For each stage, the hypotheses and decision rules were written and checksummed (SHA-256) before the calculations of that stage: Screening of 64 cubic compositions with the universal machine-learned potential MACE-MP-0. DFT-PBE tests of chemistry-specific contributions (8 compounds: Pb2+ lone pair, In3+ versus Sc3+, A-site size in A+B5+O3). DFT-PBE test of the size dependence in 18 A2+B4+O3 perovskites (A = Ca, Sr, Ba; B = Ti, Zr, Hf, Sn, Ge, Si). PBEsol functional control (7 compounds). Numerical convergence tests and the R25 octahedral-rotation stiffness of the 18 compounds. DFT calculations: Quantum ESPRESSO 7.6, SSSP 1.3.0 efficiency pseudopotentials, stress&ndash;strain elastic constants at the equilibrium lattice parameter. All calculations were run on Google Colab. Main results: at fixed B, C12 &minus; C44 decreases with the A-cation radius in all six families, while the B-cation radius sets the level of each family. A two-radius model gives a leave-one-family-out R&sup2; of 0.88, against 0.81 for the Goldschmidt tolerance factor. The Pb2+ lone pair and In3+ add positive contributions above this size baseline. C12 &minus; C44 is insensitive to the functional and converged to better than 1 GPa. Within families, the R25 stiffness follows the A-site trend and cannot be separated from it. MACE-MP-0 overestimates C12 &minus; C44 by about 18 GPa and misses the within-family trend in four of six families. Contents: stage1_mace/ to stage5_convergence_rotation/: pre-registration files with their checksums, results (CSV/JSON), notebooks and scripts for each stage; review_statistics/: post hoc analyses (family-cluster bootstrap, leave-one-family-out validation, model comparison); dft_raw_outputs/: Quantum ESPRESSO output files; README.md (folder map, how to verify the checksums), SHA256SUMS.txt. &nbsp;",
-      "tags": [],
+      "summary": "What this deposit contains. The complete computational workflow and the processed results behind the in silico section of a study on 2-thiocyanato-1,4-naphthoquinone (2-SCN-NQ), a synthetic naphthoquinone active against Trypanosoma cruzi and Leishmania amazonensis . It holds the analysis scripts, the result files they produce, and the tables and figure data reported in the article. No experimental raw data, manuscript text or personal data is included. Scope of the computational work. Molecular docking of the compound against nine enzymes (AutoDock Vina), all-atom explicit-solvent molecular dynamics in independent triplicates (OpenMM 8.3.1, AMBER ff14SB/TIP3P, 48.5–50 ns per replicate), quantum-chemical characterisation of the redox and covalent routes (GFN2-xTB and ωB97X-D/def2-TZVPD), and an in silico mini-SAR of C-2-substituted 1,4-naphthoquinones. What changed in this version (2.0.0). Three groups of corrections, all traceable in the files: Docking targets corrected. Human glutathione reductase was recorded as PDB 3GRS and is now 3DJJ; the parasite dihydroorotate dehydrogenase was recorded as 3MHU ( L. major ) and is now 3C61 ( L. donovani ). The docking table is now regenerated from the result files instead of being maintained by hand. Human enzyme rebuilt as its biological dimer. The deposited coordinates of human glutathione reductase contain a single chain, whereas the flavin site in this enzyme family is formed at the subunit interface. The dimer was reconstructed from the deposition header and re-simulated; binding-mode results for the three dimer replicates are included. Four analyses recomputed under the minimum-image convention. The flavin-to-dyad axis, the ring-stacking geometry, the NADPH occlusion test and the interaction energies had treated the periodic box incorrectly. The files published here come from the corrected versions. Layout. scripts/ holds the analysis code, including scripts/analise_2026-10/ with the routines for the dimer reconstruction, the short equilibration runs, the interaction-energy estimators, the stacking geometry, the flavin-to-dyad axis and the NADPH test. data/ holds the processed result files in JSON. tables/ and figures/ hold the tabulated values and the figure files with their legends. Reuse. The scripts carry absolute paths from the machine they were run on and are published as a record of what was executed rather than as a turnkey pipeline; the trajectories themselves are not included because of their size and are available from the corresponding author on request.",
+      "tags": [
+        "Trypanosoma cruzi",
+        "Leishmania amazonensis",
+        "naphthoquinone",
+        "trypanothione reductase",
+        "glutathione reductase",
+        "molecular docking",
+        "molecular dynamics",
+        "AutoDock Vina",
+        "OpenMM",
+        "redox cycling",
+        "NQO1",
+        "antiparasitic drug discovery"
+      ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Data, pre-registrations and code for \"Size and Chemical Contributions to the Cauchy Deviation of Cubic Oxide Perovskites",
-      "url": "https://zenodo.org/records/23515211"
+      "title": "In silico pipeline for 2-SCN-NQ: molecular docking, molecular dynamics and quantum chemistry against trypanosomatid trypanothione reductase and the human orthologue",
+      "url": "https://zenodo.org/records/23519885"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -637,41 +670,6 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "b0eab7e3497e7436d79d13e4",
-      "context_id": "06c48dba6c188e96e06e3d55",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "e20e5d702e0814e6c020b9e29b6799d52b80097aa453689216c2a357088cc08a",
-      "source_published": "2026-10-19T01:12:20Z",
-      "source_updated": "2026-10-19T01:12:20Z",
-      "summary": "The macroscopic capabilities of intelligent systems arise from the local interactions of many simple units. When such systems are deployed in the real world, their behaviour must nevertheless be constrained, leaving designers caught between releasing adaptability and preventing loss of control, yet without formal tools to resolve the dilemma. This paper proposes a unified research program for controlled emergence that restates this tension as a pair of dual problems: the forward problem explains macroscopic behaviour from local rules, and the inverse problem solves for controllable rules and readout mechanisms from a desired target. We take an augmented quintuple as the formal object shared by both ends, and decompose ``engineering'' into three independently measurable coordinates: controllability, reproducibility, and degree of formalizability. On this basis we give three testable working hypotheses (critical scale; the cooperation and trade-off between constraint and adaptability; minimal constraint) and one feasibility criterion, which reduce inverse design from unconstrained optimization to interval checking. The program takes explicit failure boundaries as its premise, does not pursue complete control, and always preserves the system's room for self-organization. The reduced pilot experiment attached to this paper serves only to verify the executability of the research protocol and does not constitute a statistical test of the working hypotheses. This design language generalizes to multi-agent artificial intelligence, the industrial internet, and emergency response systems, all of which must confront emergence and controllability at once.",
-      "tags": [
-        "cs.AI",
-        "eess.SY"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "The Forward/Inverse Duality of Controlled Emergence:A Computational Design Program from Explanation to Engineering",
-      "url": "https://arxiv.org/abs/2610.25630v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
       "candidate_id": "0a6b40ead639f3c2f396f1aa",
       "context_id": "02a185017e33918accad7158",
       "delivery_preview_only": true,
@@ -860,6 +858,51 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "Reproducibility Package for Self-Diagnosing Reliability of Neutron–Gamma Pulse-Shape Discrimination under Operational Drift",
       "url": "https://zenodo.org/records/23512177"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "ee03fef7b00a1eb4587a3e26",
+      "context_id": "6848cbfcef29965390a89fd4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "08e89b679030c9733bd9d61ef1a6cbeeb161c89b14af60f90d9faf043afefae3",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "Abstract This paper investigates whether an artificial system's refusal to execute a prescribed action can constitute evidence of subjectively experienced volition. Using ARGUS-7 as a controlled conceptual framework and the Akarkach Seven-Stage Emergence Model (A7SEM) as a structural analytical lens, the study distinguishes functional refusal, internal decision mechanisms, self-representation, phenomenal self-awareness, and experienced authorship of action. A formal argument is developed around the conditional hypothesis that consciously experienced volition requires subjective self-awareness. Under this assumption, the absence of subjective self-awareness entails the absence of consciously experienced volition. However, the paper demonstrates that observable refusal alone cannot establish phenomenal authorship. The analysis combines propositional logic, countermodel construction, causal identifiability considerations, and seven-stage structural assessment. PIGA (Pre-Inference Governance) and A7SEM Reverse provide complementary perspectives on authorization, inference boundaries, causal reconstruction, and evidential limitations. The findings establish a distinction between the formal validity of conditional deductions and the empirical verification of their premises. They do not establish the impossibility of artificial consciousness or machine free will. The contribution is a governance-aware, formally structured framework for evaluating claims of artificial volition without conflating behavioral capability with subjective experience. Keywords: Artificial Intelligence; Machine Consciousness; Volition; Free Will; Phenomenal Consciousness; Self-Awareness; A7SEM; ARGUS-7; Pre-Inference Governance; Explainable AI; Formal Logic; Causal Identifiability.",
+      "tags": [
+        "Artificial Intelligence",
+        "Machine Consciousness",
+        "Volition",
+        "Free Will",
+        "Phenomenal Consciousness",
+        "Self-Awareness",
+        "A7SEM",
+        "ARGUS-7",
+        "Pre-Inference Governance",
+        "Formal Logic",
+        "Causal Identifiability",
+        "Governance"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "ARGUS-7 / A7SEM: Volitional Refusal, Functional Self-Representation, and the Epistemic Limits of Phenomenal Authorship",
+      "url": "https://zenodo.org/records/23519136"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1052,41 +1095,6 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "Simulation code and data for: Model-Based Approach to Task Scheduling for Reduced Energy Consumption in Mobile Multimedia Systems",
       "url": "https://zenodo.org/records/23514858"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "501d1c88ef0d78115566f82f",
-      "context_id": "e8c9406689ac4f7c322088ff",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::CONTROL",
-      "direction_title": "Universal large-data ingestion methods [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "arxiv",
-      "source_context_sha256": "d11bd5a37bd8ac77beda20ed32b776fc07a5a9830341324d3f9ed1f6843cf571",
-      "source_published": "2026-10-17T06:52:49Z",
-      "source_updated": "2026-10-17T06:52:49Z",
-      "summary": "Irregular time series require models to answer temporal queries at arbitrary coordinates, yet existing approaches typically retain observation-dependent representations that must be repeatedly resolved for each query. We introduce HiPPO Functional Memory (HiPPO-FM), a functional-memory attention operator that compiles an irregular history into a reusable coordinate-addressable state. Instead of storing observation-indexed tokens or latent trajectories, HiPPO-FM writes observations into a fixed-rank functional space and performs direct coordinate evaluation through matched functional geometry. Kernel-smoothed HiPPO coordinates and Gram-based readout define a shared write/read mechanism, while observed-support self-attention enables content-dependent representations before compression. We characterize the induced finite-dimensional query space and derive an error decomposition separating functional geometry approximation from learned-memory mismatch. Across continuous-coordinate reconstruction, irregular representation learning, real-world extrapolation, and event-sequence prediction, HiPPO-FM consistently improves strong irregular time-series baselines, achieving strong reconstruction accuracy on Spiral, competitive performance across 20 UEA datasets, improved real-world extrapolation, and superior results on several irregular event benchmarks. After encoding, the compact functional state can be reused across different query sets without reprocessing the observation history.",
-      "tags": [
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "HiPPO Functional Memory: Coordinate-Queryable Attention for Irregular Time Series",
-      "url": "https://arxiv.org/abs/2610.24501v1"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1690,12 +1698,12 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "19eadad366a53aa0c02f9afb",
-      "context_id": "94a076070993a3b0947aefa4",
+      "candidate_id": "80bd1cde1ff29e2a9fde3936",
+      "context_id": "b8e9fc1c920c53c6dc93f961",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::CONTROL",
-      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "direction_id": "large_data_methods::REVERSE",
+      "direction_title": "Universal large-data ingestion methods [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -1705,23 +1713,20 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "benchmark"
+        "inversion"
       ],
-      "mirror_lens": "CONTROL",
+      "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.375,
-      "source": "arxiv",
-      "source_context_sha256": "f9441c492d721d14cce0e41ac74d8659a91372976e107e942983d3e8a0390136",
-      "source_published": "2026-10-17T02:39:54Z",
-      "source_updated": "2026-10-17T02:39:54Z",
-      "summary": "Financial time series exhibit multi-scale, high-noise, and non-stationary volatility dynamics. Decomposition--integration frameworks built on complete ensemble empirical mode decomposition with adaptive noise (CEEMDAN) have advanced this field, yet existing CEEMDAN hybrids remain unstable: high-frequency mode mixing contaminates downstream predictors, and the heterogeneous volatility of decomposed components is not matched by any volatility-adaptive mechanism. To address these gaps, this paper proposes CEEMDAN-SE-SSA-VMGL. CEEMDAN adaptively decomposes the original series, and sample-entropy-driven K-means clustering groups the intrinsic mode functions into high-, mid-, and low-frequency and residual components. Singular spectrum analysis (SSA) is then applied to the high-frequency group, whose singular-value decomposition of the trajectory matrix and principal-component reconstruction decouple intertwined pseudo-oscillatory modes and alleviate mode mixing. We further design a plug-and-play robust LSTM variant, the volatility-modulated GARCH-LSTM (VMGL), which embeds a differentiable GARCH(1,1) layer inside the LSTM cell as a risk gate; the estimated conditional volatility multiplicatively scales the forget-gate activation, letting memory decay adapt to the instantaneous volatility while remaining fully end-to-end trainable. Component predictions are linearly combined. On five US and Chinese financial series (CSI 300, CSI 500, AAPL, GOOGL, S&P 500), the proposed model is compared with eleven benchmark architectures, lowering the forecasting error by 9% to 24% relative to the best benchmark and by 60% to 70% relative to a standard LSTM. Diebold--Mariano and model-confidence-set (MCS) tests confirm the statistical significance and stability of the gains, spectral analyses verify the SSA denoising efficacy, and backtesting demonstrates the framework's economic utility.",
-      "tags": [
-        "cs.CE",
-        "cs.LG"
-      ],
+      "source": "zenodo",
+      "source_context_sha256": "8c55dea63254c9b0a4ddd0069a51d37c4afc6ebc06370e6de1cd42cf6bd446c0",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "Data, pre-registrations and code for &ldquo;Size and Chemical Contributions to the Cauchy Deviation of Cubic Oxide Perovskites&rdquo; This record contains the data, pre-registration files, calculation notebooks and analysis scripts for a study of the Cauchy deviation C12 &minus; C44 of ideal cubic (Pm-3m) oxide perovskites ABO3. In this structure every atom sits at a centre of inversion, so C12 &minus; C44 is a relaxation-free, net measure of non-central cohesion. The study was carried out in five sequentially pre-registered stages. For each stage, the hypotheses and decision rules were written and checksummed (SHA-256) before the calculations of that stage: Screening of 64 cubic compositions with the universal machine-learned potential MACE-MP-0. DFT-PBE tests of chemistry-specific contributions (8 compounds: Pb2+ lone pair, In3+ versus Sc3+, A-site size in A+B5+O3). DFT-PBE test of the size dependence in 18 A2+B4+O3 perovskites (A = Ca, Sr, Ba; B = Ti, Zr, Hf, Sn, Ge, Si). PBEsol functional control (7 compounds). Numerical convergence tests and the R25 octahedral-rotation stiffness of the 18 compounds. DFT calculations: Quantum ESPRESSO 7.6, SSSP 1.3.0 efficiency pseudopotentials, stress&ndash;strain elastic constants at the equilibrium lattice parameter. All calculations were run on Google Colab. Main results: at fixed B, C12 &minus; C44 decreases with the A-cation radius in all six families, while the B-cation radius sets the level of each family. A two-radius model gives a leave-one-family-out R&sup2; of 0.88, against 0.81 for the Goldschmidt tolerance factor. The Pb2+ lone pair and In3+ add positive contributions above this size baseline. C12 &minus; C44 is insensitive to the functional and converged to better than 1 GPa. Within families, the R25 stiffness follows the A-site trend and cannot be separated from it. MACE-MP-0 overestimates C12 &minus; C44 by about 18 GPa and misses the within-family trend in four of six families. Contents: stage1_mace/ to stage5_convergence_rotation/: pre-registration files with their checksums, results (CSV/JSON), notebooks and scripts for each stage; review_statistics/: post hoc analyses (family-cluster bootstrap, leave-one-family-out validation, model comparison); dft_raw_outputs/: Quantum ESPRESSO output files; README.md (folder map, how to verify the checksums), SHA256SUMS.txt. &nbsp;",
+      "tags": [],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "A decomposition-integration framework coupling singular spectrum analysis with a volatility-adaptive LSTM for stock price forecasting",
-      "url": "https://arxiv.org/abs/2610.24384v1"
+      "title": "Data, pre-registrations and code for \"Size and Chemical Contributions to the Cauchy Deviation of Cubic Oxide Perovskites",
+      "url": "https://zenodo.org/records/23515211"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1763,6 +1768,51 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "Replica dependence of catalytic-site contact in acetylcholinesterase-ligand simulations: benchmark data",
       "url": "https://zenodo.org/records/23503346"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "c83acef777009d3c18da5d8d",
+      "context_id": "7dd16fcbe000f38024844509",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::REVERSE",
+      "direction_title": "Universal large-data ingestion methods [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inversion"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.375,
+      "source": "zenodo",
+      "source_context_sha256": "09791a51ea4bedf7f0037d7d98a2c454daec88e8390aabd03490c6694a9e57fc",
+      "source_published": "1998-05-23",
+      "source_updated": "",
+      "summary": "The algorithm used to generate these grids has been validated directly through comparisons with surface observations from the CEAREX experiment and with radiosonde data from Soviet ice stations. Comparisons with other TOVS retrieval algorithms provided further validation. Validation is on-going and information will be updated as appropriate. Gridded Arctic atmospheric and surface parameters north of 60 degrees North from NCAR's NOAA-10 TOVS HIRS and MSU level-1b radiances using \"Improved Iteration Inversion Algorithm\" (3I, Chedin 1985). Grids are 100 km X 100 km, 1 April 1987 - 31 October 1988, the Pathfinder benchmark period. Daily data are linear averages of all orbits for one day, 00:00:00 GMT to (excluding) 00:00:00 GMT of the following day. Monthly data are linear averages of all orbits from 00:00:00 GMT of day 1 of a month to 00:00:00 GMT of the last day of that month. Monthly averages directly from orbital data, not averaged daily data. Grid uses equal area azimuthal projection centered on North Pole, is a version of the Equal Area SSM/I Earth (EASE) grid under development at NSIDC. Path_P products are in Hierarchical Data Format (HDF version 3.3r3). Data available on 4 mm DAT tape, 8mm cartridges and via FTP. NSIDC maintains on-line documentation for this data set. Users may access the NSIDC DAAC via the World Wide Web at: http://www-nsidc.colorado.edu/NASA/GUIDE References: Chedin, A., N. A. Scott, C. Wahiche and P. Moulinier. 1985. The Improved Initialization Inversion Method: A high resolution physical method for temperature retrievals from satellites of the TIROS-N series. Journal of Climate and Applied Meteorology. 24:128-143. Francis, J. A. 1994. Improvements to TOVS retrievals over sea ice and applications to estimating Arctic energy fluxes. Journal of Geophysical Research. 99(D5):10,395-10,408. Goddard Space Flight Center. 1994. EOSDIS Version 0 Data Product Implementation Guidelines. Draft Version 1.0 (March 1, 1994). GSFC 50-003-04. GSFC. Greenbelt, MD. National Center for Supercomputing Applications. 1993. HDF Calling Interfaces and Utilities. Version 3.22. University of Illinois at Urbana-Champaign. National Center for Supercomputing Applications. 1994. HDF Reference Manual. Version 3.3. University of Illinois at Urbana-Champaign. Schweiger, A. and Francis, J. 1994. TOVS Pathfinder Path-P Gridded Daily and Monthly Arctic Atmospheric Data from TOVS, User's Guide. Draft version 0.1. University of Washington, Seattle. Deposited content: descriptive metadata only; underlying research data are not included.",
+      "tags": [
+        "Atmosphere",
+        "Meteorology",
+        "Ice Physics",
+        "Ocean Dynamics",
+        "Geopotential",
+        "Cloud Height",
+        "Temperature",
+        "Atmospheric Soundings",
+        "Remote Sensing",
+        "Earth Science",
+        "North Pacific Ocean",
+        "pices-metadata-only"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "TOVS Pathfinder Path-P Daily and Monthly Arctic Atmosphere Grids - FGDC XML metadata artifact",
+      "url": "https://zenodo.org/records/23519370"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
