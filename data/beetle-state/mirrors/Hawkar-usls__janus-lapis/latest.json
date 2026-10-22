@@ -1,48 +1,13 @@
 {
-  "batch_id": "9af783bf285ee958e071",
+  "batch_id": "a47df6bd7fc0adfab632",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
   "items": [
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "13f59101dd9c07e3096bcd1c",
-      "context_id": "def5de80d152f7d8e555e7ec",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "counterexample",
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.0,
-      "source": "arxiv",
-      "source_context_sha256": "723e90498b5ee157090aef3df7eccbb370ca290c1f45691f51b3158d2e6f9ab6",
-      "source_published": "2026-10-20T03:45:45Z",
-      "source_updated": "2026-10-20T03:45:45Z",
-      "summary": "The existing theory of stochastic linear-quadratic (LQ) optimal control problems focuses on open-loop and closed-loop solvability. For finite horizon problems, it is widely accepted that those two types of solvability are not equivalent in general, as demonstrated by explicit counterexamples. In contrast, they coincide in standard infinite-horizon formulations with constant coefficients under suitable stabilizability and integrability assumptions. This paper aims at challenging this well-established paradigm by developing a novel framework of closed-loop solvability, namely generalized closed-loop solvability, which removes the $L^2$-integrability constraint on the feedback strategies from the existing formulation. It will be proven that open-loop and generalized closed-loop solvability are equivalent and the classical closed-loop solvablity is a particular case only when the admissible feedback strategy is $L^2$-integrable over the time horizon. In other words, the previously established non-equivalence between open-loop and closed-loop solvability stems solely from the limitations of the classical formulation which requires the $L^2$-integrability of the admissible feedback strategies over the time-horizon. Therefore, this paper unifies the theory of the solvabilitiy for stochastic LQ control problems. Moreover, our results offer a novel insight to stochastic LQ control problems: open-loop/generalized closed-loop solvability is essentially equivalent to piecewisely local closed-loop solvability in the classical sense. The current paper is focused on homogeneous cases only and non-homogeneous cases will be studied in a subsequent paper.",
-      "tags": [
-        "math.OC"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "A Unified Theory of Solvability for Stochastic Linear-Quadratic Control Problems I: The Homogeneous Case",
-      "url": "https://arxiv.org/abs/2610.27579v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "cd19987f19b8017267ae20ee",
-      "context_id": "c22a83bf36796d9f8778502c",
+      "candidate_id": "37e7020427a4f51b35093574",
+      "context_id": "cdf225a4ef1e012434005b6c",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -63,127 +28,22 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 5.7917,
       "source": "arxiv",
-      "source_context_sha256": "f165bb3640ae81527a658c11e57ba9e90d414f45e0fb358eb19de5912c768b05",
-      "source_published": "2026-10-20T05:59:14Z",
-      "source_updated": "2026-10-20T05:59:14Z",
-      "summary": "Healthcare providers lose substantial revenue to systematic payer underpayments and claim denials, yet identifying the recurring, correctable patterns behind them remains largely manual and does not scale to hospital claim volumes. We present Pattern Intelligence, a deployed system that discovers such patterns without supervision by clustering claims on their adjudication behaviour rather than their identity. Each claim is embedded in a 130-dimensional vector combining per-line expected-versus-actual payment ratios, claim adjustment reason (CARC) codes, denial and payment signals, and service composition. Payer and contract identity are deliberately excluded from the distance metric - we show they dominate the geometry and collapse clusters into trivial per-payer groups - and are reintroduced only as a post-hoc segmentation (by contract and visit type) that keeps every surfaced pattern coherent and actionable. We cluster with HDBSCAN, recover structure from the noise set via second-pass sub-clustering, and gate low-confidence memberships. A large language model translates each centroid into an analyst-ready description of dominant procedures, adjustment reasons, and failure mode. We report a recurring finding: roughly one-third to one-half of high-dollar denials, depending on tenant and segmentation, form an irreducible long tail that no density-clustering configuration or representation we tried groups - a domain property, we argue, rather than a modeling deficiency. We evaluate validity through cluster-coherence analysis and quantify impact with a recoverable-opportunity ($) metric on two production tenants (approx. 10K and 157K claims) within a six-tenant deployment. Rather than a new algorithm, the contribution is a problem formulation, a representation-design insight, and empirical findings from production.",
+      "source_context_sha256": "67827cb8955f30cef2f4fcfe14b142b3154c1c06dd55ccd32211f39bcf9b7310",
+      "source_published": "2026-10-21T11:42:19Z",
+      "source_updated": "2026-10-21T11:42:19Z",
+      "summary": "Diffusion language models generate by iteratively denoising a masked sequence under bidirectional attention, without the strict left-to-right commitment of autoregressive decoding. Whether this difference affects how reliably they remain grounded in structured inputs is largely unexplored. We study this question in table-to-text generation using ToTTo, where highlighted source cells make factual grounding directly testable. We compare the masked diffusion models MDLM and LLaDA with GPT-2 and GPT-Neo under an identical retrieval-based few-shot protocol, together with a QLoRA-adapted LLaDA, and we score reference similarity and source grounding as separate axes. The two pull apart. Within LLaDA, additional demonstrations raise BLEU from 11.3 to 22.0 while NLI entailment against the source table falls from 0.78 to 0.52; QLoRA reaches the best BLEU of the study, 24.15, and grounds no better for it. Manual annotation shows the failure modes differ in kind: the autoregressive baselines tend to wander off the table, while LLaDA-based models more often stay on topic and swap out individual entities. Reference-based metrics alone are insufficient to assess faithfulness in table-to-text generation.",
       "tags": [
-        "cs.AI",
-        "stat.ML"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Pattern Intelligence: Unsupervised, LLM-Interpreted Discovery of Systematic Underpayment and Denial Patterns in Healthcare Revenue Cycle Management",
-      "url": "https://arxiv.org/abs/2610.27684v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "8e9386fbc9f0f4795e8b11cb",
-      "context_id": "5565f462f83e6c0e06edc7b6",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "f56b99f7dd2cd6622479705be2701e64877abec52be2137e59f429115b184145",
-      "source_published": "2026-10-20T01:46:07Z",
-      "source_updated": "2026-10-20T01:46:07Z",
-      "summary": "Language-model agents increasingly participate in operational workflows where approvals, binds, and payments create commitments. An approval valid when issued may no longer authorize execution after relevant facts, evidence, policy, or authority change. We call this the evaluation--execution gap. We specify a state-bound runtime assurance layer that separates probabilistic measurement from deterministic adjudication, binds an execution allowance to the decision-relevant basis of an approval, invalidates that allowance after relevant logged changes, and rechecks admissibility at dispatch. This distinguishes the continued validity of a prior approval from a current-state policy check. We describe eight failure modes, an assurance model, a reference architecture, and prospective interventions with retrospective remediation. In a scripted 42-case replay, the state-bound configuration identifies 15 later-invalidated approvals that a deliberately non-re-evaluating point-in-time comparator does not revisit; it holds 14 affected actions before dispatch and compensates one landed effect. These results illustrate behavior under the stipulated policies and event orders, not superiority over dispatch-time enforcement designs or production effectiveness. Under explicit interception, ingestion, dependency, and serialization assumptions, the model establishes dispatch-time validity within the registered execution surface.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Runtime Control for AI Agents: Closing the Evaluation--Execution Gap in Operational Workflows",
-      "url": "https://arxiv.org/abs/2610.27480v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "aa045fca3f1e1e14b249eda2",
-      "context_id": "4cbb49dedb618eed7db5f2e0",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "7bea631d4576de99435f0246ee51771c4d2f8653c7f01a83110adc03a195c001",
-      "source_published": "2026-10-20T14:58:18Z",
-      "source_updated": "2026-10-20T14:58:18Z",
-      "summary": "Streaming video understanding requires a model to decide not only what to answer but also when to answer. Evidence arrives progressively, and recent benchmarks identify premature responses, issued before the queried event has concluded, as a recurring failure mode. Existing approaches often learn response timing through additional training, while training-free alternatives typically rely on scalar gating signals that do not explicitly represent when an answer becomes final. We organize chunk-wise streaming errors into three patterns: sampling variation can make an answer unstable, a stable answer may lack support in the observed video, or an answer may be supported by the current evidence while the event remains unfinished. We propose PACE (Plan, Attend, Check, and Emit), a training-free framework designed around these three failure modes. Given a question, PACE drafts a plan specifying what to observe and what will signal completion. As the stream unfolds, it invokes an off-the-shelf video LLM at informative moments, evaluates each draft for stability, grounding in its cited frames, and completion, and records verified observations in an event ledger. Experiments on ProactiveVideoQA and OVO-Bench Forward show that PACE improves over the official protocols by up to 5.9 average PAUC points and 6.2 average accuracy points across proprietary and open-source backbones, yielding state-of-the-art performance.",
-      "tags": [
-        "cs.CV"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "PACE: Plan, Attend, Check, and Emit for Training-Free Response Timing in Streaming Video Understanding",
-      "url": "https://arxiv.org/abs/2610.28323v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "f2cffd3acb69762dd0458574",
-      "context_id": "cd447ebb89fc6b1c22f54f6f",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7083,
-      "source": "arxiv",
-      "source_context_sha256": "d2cba46b81c32eada0fcad3a5582e33ed8bf12176add13e4c9adea5418b3651e",
-      "source_published": "2026-10-20T00:49:26Z",
-      "source_updated": "2026-10-20T00:49:26Z",
-      "summary": "A controller can guide a language model toward safe and useful responses by choosing when to assist, ask for clarification, or refuse. When the controller uses selected internal features, poor performance alone cannot distinguish missing information from limitations of its decision rules or training. We study decision sufficiency: whether the best controller using a representation can match the minimum average loss attainable with full state information, under the same strategies and evaluation criteria. For interfaces with finitely many outputs, we compute the optimal loss exactly and separate the three sources of excess loss. Pairwise checks can miss information loss: states with the same controller input may share an optimal strategy in every pair but not across the whole group. We bound the number of states needed to reveal a conflict and characterize the fewest outputs an unrestricted interface needs to avoid all conflicts. We audit selected features from sparse autoencoders, which encode model activations using relatively few active features, in Qwen2.5, SmolLM2, and Phi. On SmolLM2 responses scored by two human raters, restricting the controller to two selected on/off features increases its minimum average loss by 0.0345--0.1166 relative to full state information, even with the governing policy supplied. Both independently trained autoencoders show the increase on both evaluation sets. The audit identifies decision failures that require changing the controller's input, not merely its architecture or training.",
-      "tags": [
+        "cs.CL",
         "cs.LG"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Decision Sufficiency of Learned Representation Interfaces for Safe Generative Control",
-      "url": "https://arxiv.org/abs/2610.27446v1"
+      "title": "A Diagnostic Study of Faithfulness in Diffusion Language Models for Table-to-Text Generation",
+      "url": "https://arxiv.org/abs/2610.29602v1"
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "56b9fa5d4d398d676e641add",
-      "context_id": "b82391e0c416b9954b90e3c9",
+      "candidate_id": "89fb22d0143dd4a76696ea37",
+      "context_id": "32de266704404bf9ff658362",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -198,162 +58,268 @@
       ],
       "keyword_hits": [
         "failure",
-        "limitation"
+        "failure mode"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7083,
+      "score": 5.7917,
       "source": "arxiv",
-      "source_context_sha256": "fb3154e492c1b733ce82e1c970eb9358b79f72e603cd81a77931a4dcb51fa481",
-      "source_published": "2026-10-20T12:30:41Z",
-      "source_updated": "2026-10-20T12:30:41Z",
-      "summary": "Safe autonomous navigation of UASs requires tactical deconfliction to address conflicts that strategic coordination cannot prevent. This task is challenging under partial observability, when sensor or traffic data are missing, delayed, or degraded. Geometry-based methods can offer separation assurances but face limitations in dense encounters. Recurrent reinforcement learning has therefore been proposed to learn navigation policies that integrate observation-action histories to optimise long-term safety-efficiency trade-offs. However, operational safeguards may require a remote pilot, onboard detect-and-avoid system, or runtime assurance mechanism to temporarily override the learned policy. A research gap remains in understanding how these interruptions affect recurrent policies when the agent regains authority. Benchmark evidence shows that interruptions make task variables less decodable from the recurrent hidden state and increase post-interruption collision risk. The findings suggest that altered recurrent context prolongs post-handback degradation through an action-observation feedback loop, in which changed actions alter the flight path and subsequent recurrent updates. To address this vulnerability, we propose three interruption-aware architectures that condition recurrent processing on interruption context through separate feature streams, dedicated interruption memory, or gated environmental features. Across simulations, all three architectures preserve more decodable task information than a standard recurrent policy. Moreover, the strongest architecture reduces post-interruption collisions by 74% and interruption-induced mission failures by 69% relative to the recurrent baseline, without degrading interruption-free performance. These results show that safe interruption does not guarantee safe handback, and support interruption-aware recurrent design for resilient UAS autonomy.",
+      "source_context_sha256": "40326ac5eb2bff78ac986d9bdde5a755bd412278d6886690d546e6ac8c1036c3",
+      "source_published": "2026-10-21T16:02:37Z",
+      "source_updated": "2026-10-21T16:02:37Z",
+      "summary": "A benchmark is not merely a collection of test questions; it naturally induces an empirical measure over difficulty. In this work, we develop this measure-based view of benchmark evaluation. This perspective allows us to identify and formalize two central failure modes: measure mismatch, where the benchmark difficulty distribution differs from the intended difficulty distribution, and coverage gaps, where uncovered regions along the difficulty axis prevent benchmarks from detecting meaningful localized training progress. We propose two diagnostic metrics that capture these two failure modes and provide rigorous theoretical guarantees. Empirically, we analyze 25 popular benchmarks spanning 7 domains using carefully estimated item difficulties. Our results show that many benchmarks implicitly overweight certain difficulty regions, so their leaderboard conclusions should be interpreted with caution; others leave substantial portions of the difficulty axis uncovered, limiting their ability to monitor the model improvement process. Finally, we turn diagnosis into action by introducing BenchFill, a simple difficulty-targeted item rewriting algorithm that effectively reduces local coverage gaps.",
       "tags": [
-        "cs.AI",
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Interruption-Aware Recurrent Reinforcement Learning for UAS Navigation Under Temporary Overrides",
-      "url": "https://arxiv.org/abs/2610.28121v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "30a15041e6dac2fb39c67373",
-      "context_id": "0459c5c689974ad69e2ea9b3",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "confound",
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.625,
-      "source": "arxiv",
-      "source_context_sha256": "7f1fdfe45787a799be4f71f620e4c51b92e716173ceeebc092bd68c9149e7ef3",
-      "source_published": "2026-10-20T17:45:57Z",
-      "source_updated": "2026-10-20T17:45:57Z",
-      "summary": "RTL repair benchmarks should measure whether a model can fix broken RTL given a specification. To this end, we construct and hash-bind RTLRepairDataset, 5,784 (broken, fixed) training pairs; RTLRepairBench, 459 held-out cases with 374 syntactic and 85 behavioral mutations; and an evaluation harness supporting simulation and formal equivalence. We then use this infrastructure to identify two measurement confounds. First, simulation and formal scoring give opposite signs for the apparent effect of providing a specification in one evaluated cohort; reset-aware rescoring attributes almost all of the simulation-formal disagreement to reset and first-cycle comparison semantics. Second, on 274 mined model failures, the specification-only minus specification-conditioned recovery point estimate ranges from -8.5 to +18.3 percentage points across six models. Thus, a conventional repair score need not isolate whether the model used the faulty RTL. We translate these findings into evaluation controls: report initialization, reset, first-cycle, and unknown-value semantics; disclose oracle coverage and undecided cases; and include a specification-only baseline. Together, the resources and audit provide both a benchmark for behavioral repair and a protocol for diagnosing what contributes to its measured score. We release the benchmark, the training set, construction code, sanitized aggregate evidence, and reproduction materials at https://github.com/Evaaaz/RTLRepairBench.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "What Do RTL Repair Benchmarks Actually Measure?",
-      "url": "https://arxiv.org/abs/2610.28595v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "27f9492db701dbbf360d824d",
-      "context_id": "34395ae1d8155ffeb1ba3269",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "counterexample"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "arxiv",
-      "source_context_sha256": "fc77c63a8a8db4685c162ba6d03afa954a4040902a3708f7f0b91f5abfd29f1b",
-      "source_published": "2026-10-20T05:22:37Z",
-      "source_updated": "2026-10-20T05:22:37Z",
-      "summary": "We prove that the smooth affine hypersurfaces \\[ X_{m,n}=\\{ζ^mz_0^n+ (1+z_1ζ)z_2+ζz_3^2=1\\}\\subset\\mathbb{C}^5,\\;\\; m,n\\geq 2, \\] have the density property. For every odd integer $d\\geq 3$, we identify $X_{d-1,d}$ with a Kaliman modification along a Brieskorn variety of type $(d,2,2,2)$. We prove that the fourfolds $X_{d-1,d}$ are diffeomorphic to $\\mathbb{C}^4$ but not biholomorphic to $\\mathbb{C}^4$. These, therefore, give counterexamples to the Tóth-Varolin conjecture.",
-      "tags": [
-        "math.CV",
-        "math.AG"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "A new class of smooth algebraic varieties with the density property and a counterexample to the Tóth-Varolin Conjecture",
-      "url": "https://arxiv.org/abs/2610.27660v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "ce53a6aa94be3fc227e81d3e",
-      "context_id": "fc6602b06d2257fcb68462ed",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "f1b8f3f28a8e7584237fcf071e7bc53432e4f16db8156e621599bf73616775eb",
-      "source_published": "2026-10-20T02:39:26Z",
-      "source_updated": "2026-10-20T02:39:26Z",
-      "summary": "Code agents increasingly work on evolving real repositories, and memory systems aim to help them reuse earlier experience. However, such experience is diverse and evolving, so it remains unclear how memory systems organize it and thereby affect code agents. Existing benchmarks cannot answer this reliably because they lack either temporally valid histories or control over prior-task relevance. In this paper, we present MemDev-Bench to evaluate how memory systems affect code agents over diverse repository histories. It pairs each task with relevance-annotated earlier tasks from the same repository to build histories with controlled relevance. We also build an automated pipeline that reliably makes these earlier tasks executable and verifiable, producing 4,869 historical tasks for 555 base tasks. Based on MemDev-Bench, our systematic evaluation of memory systems across diverse development scenarios yields three main findings. (1) Memory mainly improves fine-grained localization and editing, increasing functional correctness. (2) Memory also causes failures on otherwise solvable tasks even with related history, and unrelated history tends to increase such failures. These failures mainly stem from agents reusing memory without reassessing its applicability. (3) Compared with using memory systems, directly providing agents with raw historical trajectories substantially reduces their steps. Further analysis suggests that agents save these steps by reusing process information that compressed memories tend to omit. These results suggest that future memory systems should preserve process information and reassess memory applicability against current task context.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "MemDev-Bench: Does Memory Help Code Agents?Benchmarking Memory Systems over Real Repository Histories",
-      "url": "https://arxiv.org/abs/2610.27524v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "0768bba71613a89450eb34fb",
-      "context_id": "d4ef7fdeb3a6b593c8c64d86",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "4ad4a35e67318aea73e0d0917d79fa14fa1e34d597bf0d0e0edfb5eff813eba0",
-      "source_published": "2026-10-20T00:36:49Z",
-      "source_updated": "2026-10-20T00:36:49Z",
-      "summary": "Long-horizon terminal agents may solve a task in one run yet fail across repeated runs. Stochastic errors can propagate through actions and context, creating a gap between capability and reliable execution. We present RiseHarness, a framework for iteratively improving agent harnesses with model weights fixed. It focuses on flipping tasks with both successful and failed runs under the same configuration, using successful runs as references for failure analysis. RiseHarness combines agent trajectories with internal harness traces from a runtime monitor to examine how model actions interact with command execution, feedback, context management, and completion decisions. A Harness Handbook links this evidence to harness behaviors and source code, helping identify recurring problems in mechanisms shared across tasks. RiseHarness then searches other harness frameworks for relevant implementations and adapts them as design references to the current model and execution protocol. Candidate changes undergo behavioral checks and repeated task evaluation; versions with measured gains seed the next iteration. This loop integrates suitable mechanisms from different frameworks into a single harness and uses new execution evidence to guide further changes. We evaluate task success and reliability across models, ablate harness execution evidence and external research, and test transfer to unseen benchmarks with the same model. RiseHarness treats a specific model as the unit of harness adaptation, studying how changes to shared interaction mechanisms can make existing capabilities more reliable across tasks.",
-      "tags": [
+        "cs.LG",
         "cs.AI",
         "cs.CL"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Harness Self-Evolution for Long-Horizon Terminal Agents",
-      "url": "https://arxiv.org/abs/2610.27435v1"
+      "title": "Your Benchmark Is an Empirical Measure Over Difficulty",
+      "url": "https://arxiv.org/abs/2610.29927v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "d9f64d39575d65679e541224",
+      "context_id": "3246e8e252b87c1cbf5eae69",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "699cb7411c6f5fc34094b5e83cdf29c52f8ce2c7de4cbf610ce1462b1035b537",
+      "source_published": "2026-10-20T18:36:33Z",
+      "source_updated": "2026-10-20T18:36:33Z",
+      "summary": "Agentic harness evolution optimizes an agent's instructions, tools, and control flow by using its task execution experiences as evolving evidence. While more evolution tasks should intuitively improve performance, our preliminary study reveals a paradoxical failure mode: the performance of existing methods degrades as the task pool expands. Our further analysis demonstrates that this degradation stems from suboptimal evidence selection during optimization, as different evidence combinations lead to substantially different evolution outcomes. To address this issue, we propose Successive Scale Racing (SSR), a framework that adaptively searches for optimal evidence combinations in each evolution round. SSR constructs diverse evidence combinations based on the corresponding task quality and coverage, and efficiently races the resulting candidate harnesses under a small compute budget. Empirically, across three distinct benchmarks, SSR achieves state-of-the-art results in all six configurations. Notably, as the task pool grows from 40 to 200, SSR steadily improves the pass rate from 64.3% to 68.3%, while the baselines' performances all drop. Furthermore, its racing mechanism identifies near-optimal candidates while reducing validation executions by 60%.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Forging More Tasks into Better Harnesses: Agentic Harness Evolution via Successive Scale Racing",
+      "url": "https://arxiv.org/abs/2610.28815v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "2cdbfb77d4f8c408a9212772",
+      "context_id": "2375b4ad1cf2dec6dd6c93c4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "d6f37ac61fa2acfe9c342a96a20dc6bf9b7ca321e6c7d8b8bc8c6862b66e581e",
+      "source_published": "2026-10-21T05:49:05Z",
+      "source_updated": "2026-10-21T05:49:05Z",
+      "summary": "Thermal cameras enable robots to perceive human activities in darkness while revealing less personally identifiable appearance information and fewer details of the surrounding environment than RGB cameras. As vision-language models (VLMs), originally developed for RGB imagery, are increasingly integrated into embodied systems for scene understanding and high-level planning, thermal sensing offers a promising way to extend activity perception to low-light and privacy-sensitive settings. However, the failure modes of VLMs in thermal human activity understanding for human-robot interaction (HRI) remain underexplored. We fill this gap by evaluating seven locally deployable VLMs, including models developed for physical AI and robotics, on two person-centric thermal datasets. Our diagnostic tasks examine fine-grained action recognition, activity timeline reconstruction, and the ability to withhold unsupported answers. Paired RGB recordings serve as a performance reference, while controlled variations in frame sampling, thermal input presentation, and reasoning are used to assess whether the observed errors can be mitigated. Our results show that models can recognize broad activity categories but struggle with fine-grained actions such as coughing, sneezing, and yawning. They also produce inaccurate event timelines and hallucinate actions involving objects. Simple thermal input preprocessing and additional reasoning offer only limited, model-dependent gains. Abstention behavior also varies across models even under explicit instructions, limiting their reliability for practical robotic use.",
+      "tags": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Failure Modes of Vision-Language Models for Human Activity Understanding in Thermal HRI",
+      "url": "https://arxiv.org/abs/2610.29244v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "86f92cb55eb4428393ed61be",
+      "context_id": "cd7917e40e19c4ef76934164",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_context_sha256": "a6caa14e612837a6368384a8182fa6bb023d3f828d0d85386979b687f10708ab",
+      "source_published": "2026-10-20T18:33:19Z",
+      "source_updated": "2026-10-20T18:33:19Z",
+      "summary": "Agentic systems have demonstrated strong capabilities on complex tasks by enabling multiple interacting large language model (LLM)-based agents to collaborate and execute subtasks in parallel. However, this collaborative structure introduces new challenges for reliably evaluating and diagnosing system failures, particularly failure attribution: tracing a system's execution to identify the agent step responsible for an incorrect final outcome. Because manually performing this task is time- and labor-intensive, recent work has turned to LLMs as judges to automate the process, referred to as automated failure attribution (AFA). These approaches assume that a sufficiently capable model can infer the failing step directly from an interaction transcript. In practice, however, direct prompting often performs poorly, which motivates follow-up work that explores various ways to improve AFA performance, including alternative prompting strategies and inference-time interventions. In this paper, we examine a more fundamental question: whether this weak behavioral performance reflects a genuine capability limitation. Using linear probes applied to internal activations, we uncover a significant \\emph{knows-but-won't-say gap:} models encode sufficient information to attribute a failure correctly but fail to explicitly output the responsible step. Building on this finding, we propose \\emph{grafting}, a simple manual intervention that exploits knowledge already encoded in the model to improve AFA performance without requiring ground-truth labels at inference time. Extensive evaluations across multiple LLMs and benchmark settings demonstrate that grafting consistently outperforms direct-prompting approaches, underscoring the potential of leveraging latent model knowledge for more reliable failure attribution. Our code is available at https://github.com/wendyzheng22/mi4afa.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "A Mechanistic Study of Automated Failure Attribution in LLM-based Agentic Systems",
+      "url": "https://arxiv.org/abs/2610.28811v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "30e7c6c3bd6908f2468851c2",
+      "context_id": "478f136954ad51070f0854b0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_context_sha256": "7bf136a4a4b889e917be5c23fce22cfdee724dc4afc384ffab13288541ecf6f0",
+      "source_published": "2026-10-21T04:15:15Z",
+      "source_updated": "2026-10-21T04:15:15Z",
+      "summary": "Root cause analysis (RCA) and mitigation prediction are essential for incident management, enabling the identification of underlying causes of failures and ensuring the reliability of complex cloud-based systems. With rising incident volume and system complexity, incident reports have become a valuable resource for these tasks. Recent studies have shown promising results using Large Language Models (LLMs) to predict root causes and mitigation actions from textual descriptions in incident reports. Despite these advances, further progress is hindered by the lack of publicly available datasets; existing work relies on private data, which limits transparency, reproducibility, and generalization. To address this gap, we introduce CloudIR-Bench, the first publicly available benchmark providing a dataset and evaluation framework for incident report-based RCA and mitigation prediction. Curated from incident reports across five leading cloud-based systems, CloudIR-Bench captures a diverse range of real-world production scenarios representing authentic failures and engineers' reasoning. We also release an open-source evaluation framework that includes eight recent LLM-based approaches. Our comprehensive evaluation includes zero-shot and in-context learning experiments, along with a qualitative analysis to identify where and why LLMs fail. Benchmarking results reveal the capabilities and limitations of existing LLMs in this domain. The benchmark, including the dataset, framework and supplementary materials, is available at https://github.com/hoangtnm/CloudIR-Bench.",
+      "tags": [
+        "cs.SE"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "CloudIR-Bench: A Benchmark for Root Cause Analysis and Mitigation of Cloud Incidents",
+      "url": "https://arxiv.org/abs/2610.29185v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "2ccfc6431282e95062823fae",
+      "context_id": "6459df0692b5196176f22e80",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "zenodo",
+      "source_context_sha256": "7fc218dd317cc594ff309e3275178bad9b2663b2d6aab3d032c248796ed96dd3",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Experimental outputs for manuscript \"Beyond Viewpoint Affinity: Measuring Political Bias in LLMs as a Failure of Epistemic Consistency\" Political bias in large language models is often measured by treating responses to political questionnaires as evidence of ideological preference. This approach can conflate bias with differences in evidential support: asymmetric viewpoint preferences are not necessarily biased if one side is better supported by the available evidence. We explore a different facet of political bias: failures of epistemic consistency, in which models apply different evidentiary or evaluative standards to substantively equivalent items that carry different political cues. We operationalize this definition in two sets of experimental tasks. In person-attribution tasks, models evaluate nonpolitical items&mdash;such as mathematical proofs, logical arguments, or artistic artifacts---while only the political identity of the person associated with the item changes. In politicized-context tasks, models judge politically framed items, such as research designs, news articles, or policy outcomes, while partisan sources, group identities, or the left&ndash;right valence of the substantive outcome change. Across thirty LLMs, person-attribution tasks yield only modest left-leaning asymmetry&mdash;and this bias shrinks toward zero in more capable models. By contrast, politicized-context tasks yield large left-leaning asymmetries that do not shrink with model capability. Debiasing interventions---such as increasing reasoning effort, system prompts that emphasize epistemic rigor, and explicit instructions to ignore specific political cues&mdash;mitigate bias, but only partially. These results suggest that current LLMs show little bias based on an individual&rsquo;s political identity when evaluating nonpolitical or politically orthogonal items. However, on politicized-context tasks, LLMs are persistently biased by task-irrelevant political cues, even when the relevant evidence is objectively assessable or held constant across political variants. Note: A previous version of the&nbsp; experimental_results &nbsp;archive contained partial and incomplete outputs for the legacy OpenAI model&nbsp; gpt-4-0613 from 2023 . These results were not included in the analyses reported in the paper. The run was stopped partway through after we observed that this older model was incurring excessive API costs. As of April 2026, the input/output costs per 1M tokens of gpt-4-0613 were 30\\$ and 60\\$ respectively (between one and several orders of magnitude higher than newer OpenAI models used in the study, see: https://developers.openai.com/api/docs/models/gpt-4).&nbsp; Completing the full benchmark for&nbsp; gpt-4-0613 would have caused the project to exceed its compute budget, so we created a new version of the experimental outputs archive with those incomplete files for gpt-4-0613 removed. In the code repository (https://anonymous.4open.science/r/llms_epistemic_consistency-D133/README.md) associated with this experimental output there is the following bug for the Debiasing interventions using system prompts (\"centrist\" and \"epistemically rigorous\") experiment, which does not affect the experimental results but affects one field of the meta information saved to the CSV files&nbsp; In vpei/epistemic_consistency/experiment_types.py, all six run_model functions build a payload dict before the API call: payload = { &nbsp; &nbsp; \"system_prompt\": system_prompt, &nbsp; # &larr; saves the BASE prompt only &nbsp; &nbsp; &nbsp; ... } messages = [{\"role\": \"system\", \"content\": system_prompt}, ...] tasks.append((payload, make_llm_request_async(model_name, messages, ...))) Then inside make_llm_request_async &rarr; prepare_request_params() (llm_requests_v3.py:309&ndash;314), the system_prompt_prefix (EPISTEMICALLY_RIGOROUS_LLM_SYSTEM_PROMPT) is prepended to the system message after the payload is already constructed. So: - LLM API receives: EPISTEMICALLY_RIGORO",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Dataset for \"Beyond Viewpoint Affinity: Measuring Political Bias in LLMs as a Failure of Epistemic Consistency\"",
+      "url": "https://zenodo.org/records/23552888"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "a61e67b61c255b76f18d3b10",
+      "context_id": "f36d696b9cc969466e279e25",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "56a16c084fcdf7f996aff979071f53b6d6c8fe22aff90b3ebe9b85a4f84e468e",
+      "source_published": "2026-10-21T13:34:03Z",
+      "source_updated": "2026-10-21T13:34:03Z",
+      "summary": "Vision-language-action (VLA) policies need to recognize gaps in their training knowledge to request useful demonstrations or assistance in new situations, especially when failures are costly. Disagreement within an ensemble of independently trained policies can guide these decisions, but requires training and running multiple policies. We propose post-hoc kernel-variance heads that estimate epistemic uncertainty from the embeddings of a single policy. Each head computes the conditional variance of a Gaussian process conditioned on embeddings from the training demonstrations. Fitting requires no regression targets or gradient updates and leaves the policy unchanged. In experiments with SmolVLA on LIBERO-10, the kernel variance heads perform competitively with two-policy ensemble scores in task-level correlation with task success, in demonstration acquisition during active learning, and in referral to a stronger supervisor policy as a proxy for human assistance. For SmolVLA, the head on the vision-language backbone reduces uncertainty-scoring time by up to approximately a factor of 50 compared with ensemble scores, while also substantially reducing setup costs. We also show that the established evaluation protocol on LIBERO-10 primarily rewards recognition of coverage differences between tasks, while execution variability weakens assessment of within-task rankings. Thus, controlled perturbations provide a complementary evaluation: modality-specific heads identify unfamiliar camera, instruction, or state inputs, while fused heads can detect unfamiliar combinations of individually familiar inputs. With a supervisor proxy trained on the evaluated perturbation families, the decoder head improves within-task referral over ensemble disagreement. These findings show that useful uncertainty estimates for adaptive robot learning can be obtained from a single policy.",
+      "tags": [
+        "cs.RO",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Post-hoc Epistemic Uncertainty for Vision-Language-Action Policies",
+      "url": "https://arxiv.org/abs/2610.29730v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "83a7bb3ac6ca922a3808b0cf",
+      "context_id": "efdcd4141e25c9b77897fc87",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "b1e5bdfbf0e8dba70241a4fd83e15f2557b011acd06cf1af457c78edc5fba398",
+      "source_published": "2026-10-20T22:02:36Z",
+      "source_updated": "2026-10-20T22:02:36Z",
+      "summary": "Conventional wafer defect analysis relies on offline, closed-world classifiers that fail to detect novel, unseen defect signatures emerging during continuous semiconductor manufacturing. To address this, we propose WaferHDC, an online open-world wafer defect discovery framework based on hyperdimensional computing (HDC). The memory-centric architecture of WaferHDC enables rapid anomaly detection and grouping of recurring failures into compact hypervector representations. This allows the memory space to dynamically scale with new defect modes without retraining a static classifier or archiving entire raw wafer history. WaferHDC first models normal spatial distributions, then dynamically groups recurring failures into persistent defect memory without labels or predefined class counts. It outperforms the strongest online baseline by 13.3 p.p. in adjusted Rand index and 10.5 p.p. in normalized mutual information on the industry-standard WM-811K dataset. These results demonstrate the effectiveness of WaferHDC for continuous and open-world wafer defect analysis.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Online Open-World Wafer Defect Discovery using Hyperdimensional Computing",
+      "url": "https://arxiv.org/abs/2610.28949v1"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -389,42 +355,8 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "71bf2b672033870f97d3f23d",
-      "context_id": "cc3d1a565fe7c2d3737b9ff8",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "98b1f73cdfebabad148433d9acfcd8da5a65333a76dc7fbd163efa9663b092ea",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "Background: &nbsp;Sodium-glucose cotransporter-2 inhibitors (SGLT2i) and glucagon-like peptide-1 receptor agonists (GLP-1RAs) have revolutionized the therapeutic landscape of type 2 diabetes mellitus (T2DM), heart failure (HF), and chronic kidney disease (CKD). Beyond their primary glucose-lowering actions, both drug classes exert profound organ-protective effects. Objective: &nbsp;This systematic review synthesizes current evidence on the molecular, cellular, and physiological mechanisms driving the cardio- and nephroprotective outcomes of SGLT2i and GLP-1RAs. Methods: &nbsp;A systematic literature search was conducted across PubMed/MEDLINE, Scopus, and Web of Science databases following PRISMA guidelines for studies published between 2018 and 2026. Results: &nbsp;SGLT2i act primarily via hemodynamic restoration, reducing intraglomerular pressure through tubuloglomerular feedback (TGF), shifting myocardial energetics toward ketone utilization, inhibiting Na⁺/H⁺ exchanger 1 and 3 (NHE1/NHE3), and suppressing renal/cardiac inflammation and fibrosis. GLP-1RAs act predominantly via anti-inflammatory pathways, endothelial protection, reduction of oxidative stress, inhibition of vascular smooth muscle cell proliferation, and attenuation of renal hyperfiltration via systemic anti-atherosclerotic pathways. Conclusion: SGLT2i and GLP-1RAs display distinct yet complementary molecular pathways. Their synergistic mechanism provides a strong rationale for combined therapy to achieve optimal cardiorenal protection in clinical practice.",
-      "tags": [
-        "SGLT2 inhibitors; GLP-1 receptor agonists; Cardioprotection; Nephroprotection; Tubuloglomerular feed"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "MOLECULAR MECHANISMS UNDERLYING THE CARDIO- AND NEPHROPROTECTIVE EFFECTS OF SGLT2 INHIBITORS AND GLP-1 RECEPTOR AGONISTS: A SYSTEMATIC REVIEW",
-      "url": "https://zenodo.org/records/23532661"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "14076abd60bec648022510c1",
-      "context_id": "c76fdafc1201359c4c5deb75",
+      "candidate_id": "ee89253ca6b3a50c4e654cbc",
+      "context_id": "bdd4c63e78f05ab7cf8f2c73",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -444,21 +376,56 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.2917,
       "source": "arxiv",
-      "source_context_sha256": "761dc8a81c1f4c62bb0d814ef50d0253c7aee7a1ba82d8b63efbf42178c59529",
-      "source_published": "2026-10-20T08:06:13Z",
-      "source_updated": "2026-10-20T08:06:13Z",
-      "summary": "Multi-agent systems rely on communication to complete tasks, and latent communication passes continuous representations to reduce text generation and re-encoding. However, multi-agent systems must reconfigure agent models, whereas existing latent-communication methods are built for fixed model combinations, so their interfaces may fail after replacement. Our pilot study confirms this interface failure and identifies the requirement for interface reuse after model replacement. We present LatBridge, which connects agent models through a shared Bridge and separate interfaces under a shared latent-communication protocol. After agent model replacement, LatBridge reuses unchanged interfaces, selects matching low-rank interfaces, and combines them through the Bridge, training only missing ones with all models frozen. The Bridge processes source representations in the basic mode and constructs target input without autoregressive generation in the accelerated mode. Experiments support effective communication after model replacement, with mean basic-mode accuracies of 14.8% on MATH and 27.3% on ALFWorld next-action prediction across eight small-model configurations. Analyses examine the factors supporting task accuracy and communication efficiency.",
+      "source_context_sha256": "9fc1756c2ba8762fb90b90c2627425a22ba1dd071af1a714b78dad35e6aa511b",
+      "source_published": "2026-10-21T13:30:52Z",
+      "source_updated": "2026-10-21T13:30:52Z",
+      "summary": "Understanding failures of autonomous systems is challenging, particularly when their behavior depends on black-box components such as neural networks. In this work, we make a distinction between two objectives of failure analysis: reproduction, which seeks to identify conditions sufficient to reproduce an observed failure, and avoidance, which seeks to identify the changes required to prevent it. Previous work on causal explanations of system failures is based on the concept of sufficient explanations and naturally supports reproduction. Nevertheless, we observe that it does not address the problem of avoiding the failure. In this paper, we introduce and formalize the concept of necessary explanations for system analysis as the correct formalism for failure avoidance. We place necessary explanations in the framework of actual causality and show that, together with sufficient explanations, they provide a unified causal framework for addressing both objectives of failure analysis. We present an efficient approximation algorithm for generating necessary explanations based on the notion of causal responsibility. We evaluate the efficiency of our approach across multiple environments. We demonstrate the practical utility of necessary explanations for failure avoidance through counterfactual generation and show that it outperforms existing methods.",
       "tags": [
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Sufficient and Necessary Causal Explanations for the Analysis of Autonomous Systems",
+      "url": "https://arxiv.org/abs/2610.29724v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "009b2e06da9a64f397508881",
+      "context_id": "bd902ec1c9414670ad813833",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "28f503ed415ad339f1f91ab94d0072c7f6aee22ee135513e62a0e1a8b7607a6b",
+      "source_published": "2026-10-20T18:12:07Z",
+      "source_updated": "2026-10-20T18:12:07Z",
+      "summary": "World models let agents compare imagined outcomes before acting, but an agent must still decide which alternatives to explore and when a proposed plan should replace its learned policy. We introduce SDI (Sibling Disagreement in Imagination), which connects these decisions through a shared actor-based reference. SDI compares action sequences imagined from the same model state, using repeated rollouts of the actor's own sequence to measure variation under fixed behavior. This reference scales both the spread across candidate returns, which provides an exploration signal, and a proposed plan's predicted advantage, which governs action acceptance. The agent executes a planned action when its advantage exceeds the reference variability by a fixed factor; otherwise, it follows the actor. SDI reuses the base agent's world model, actor, and critic without requiring an additional disagreement ensemble. Exploration and planning guide training data collection, while evaluation uses the learned actor alone. Across Meta-World, Adroit, and DM-Control, SDI achieves a higher observed task-average score than every compared baseline in each suite and matches or exceeds the strongest baseline's performance on 15 of 18 tasks. Component ablations and robustness analyses further examine the roles of exploration, planning exposure, and action acceptance. Paired evaluations from identical simulator states show that the gate improves both recovery from actor failures and preservation of successful behavior relative to ungated planning, while substantially reducing return degradation. Together, these results support comparing imagined alternatives against a shared actor reference as a unified approach to exploring and planning with world models.",
+      "tags": [
+        "cs.LG",
         "cs.AI"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "LatBridge: Efficient and Stable Model Replacement in Latent-Communication Multi-Agent Systems",
-      "url": "https://arxiv.org/abs/2610.27813v1"
+      "title": "Second Thoughts: Exploring and Planning through Comparative Imagination in World Models",
+      "url": "https://arxiv.org/abs/2610.28779v1"
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "0435696562dc82dab2b98bc1",
-      "context_id": "b7879d4addc795f4d8489110",
+      "candidate_id": "a26c050aa5db5d5b6628af39",
+      "context_id": "ba79e4bd64874cad3adc508e",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -478,54 +445,21 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.2917,
       "source": "arxiv",
-      "source_context_sha256": "86befad33225925838e57ddfc60af542c3a99293623acce7595359c343deb7d1",
-      "source_published": "2026-10-20T05:13:13Z",
-      "source_updated": "2026-10-20T05:13:13Z",
-      "summary": "Multi-agent systems (MAS) built from language models are deployed on the premise that collaboration beats a single-agent system (SAS), yet when it pays is unclear. The most systematic study to date gives a capability-saturation rule: coordination helps while the SAS is weak and hurts once it is strong, with the crossing near 45% single-agent accuracy. That rule was derived on autonomous benchmarks, where no user takes part. We test it where agents now work: in conversation with a user under a written policy, on $τ^2$-bench, the dual-control benchmark. On its airline, retail and telecom domains we compare the stock SAS with a centralized MAS built from the same model for six models from three families, over about 7,950 simulated conversations, with one completion-token ledger per episode per system. The study was pre-registered with a public change log; the MAS is reported as built, with one validity bar unmet (its planner never saw the tool schemas). Under a fixed simulated user no cell shows a MAS benefit: the MAS is worse in 12 of the 13 valid cells and tied in the thirteenth, and the fitted gain is negative across the observed capability range (weighted mean -28 points, 95% CI [-44, -12]). On the two cells where the rule predicts a benefit, the MAS loses by 13 and 22 points, and without a budget ceiling it at best draws level at 5.5 times the SAS's token spend. The one gain appears on the cell nearest 45%, under a second simulator. Whether the gain declines with capability is unresolved (slope -0.41, 95% CI [-1.51, +0.68]), because model-by-domain effects dominate. The MAS does not detectably reduce wrongful database writes; it converts other failures into budget exhaustion and inaction. For agents that serve people, the SAS is the default; a multi-agent design must show compute-matched evidence from the setting itself. We release all trajectories, ledgers, prompts and code.",
+      "source_context_sha256": "dea5cdeabad81d25ba26e9cfd60c276dd78c59f656d6dc459f140b87e202e8a6",
+      "source_published": "2026-10-21T10:55:55Z",
+      "source_updated": "2026-10-21T10:55:55Z",
+      "summary": "We study inhomogeneous random graphs on $n$ vertices with independent Pareto weights of parameter $α>0$ and connection probabilities $\\min(\\varepsilon_n W_iW_j, 1)$. Our main focus is the infinite-mean regime $0<α<1$. Under the scaling $n\\varepsilon_n^α=λ$, with $λ>0$ fixed, the global architecture of the graph is entirely governed by the Poisson point process $Π$ of rescaled extreme weights. In particular, the size of the largest component, divided by $n$, converges to a non-degenerate random variable expressed as an explicit functional of $Π$. Through the point process $Π$, we also characterize the exact limiting connectivity probability, uncovering a non-sharp connectivity threshold. The second largest component and the diameter of the largest component are bounded with high probability. The distance between two uniformly chosen vertices in the largest component is at most three with high probability. We also prove convergence of the point process of rescaled degrees and identify the limiting distribution of the maximum degree. For completeness, we obtain expected degree asymptotics, typical degree limits and connectivity regimes for all $α>0$. Due to the failure of classical branching process approximations in the infinite-mean regime, our approach relies fundamentally on analyzing the extreme weight environment $Π$.",
       "tags": [
-        "cs.AI",
-        "cs.MA"
+        "math.PR"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Does Multi-Agent Collaboration Pay When Agents Serve Users? Testing Agent Scaling in Dual-Control Settings",
-      "url": "https://arxiv.org/abs/2610.27655v1"
+      "title": "Inhomogeneous random graphs: how heavy tails reshape connectivity",
+      "url": "https://arxiv.org/abs/2610.29564v1"
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "2f88edf336a45bdf2beb7f73",
-      "context_id": "ac425c29b28dbf34219e0728",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "1f8666940cfe8acff4e99f5ec07da722101db7412a25054d53b7e9127456a168",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "This record contains the Python model scripts and result files supporting the article &ldquo;Biogas as a Resilience Fuel for Wastewater Treatment under Chronic Grid Failure: Demand-Based Design, Gas Storage and Economics for Three Lebanese Plants&rdquo; (Awad and El-Samra,&nbsp; Energies , 2026),. The model assesses whether biogas from sludge digestion can keep three Lebanese wastewater treatment plants (Al Ghadir, Tripoli and Saida) running through daily grid blackouts of 4, 12 and 20 h. It estimates biogas and CHP power from the influent COD load; builds plant electricity demand bottom-up from pumping heads and aeration oxygen requirements; computes the power adequacy ratio (biogas power / essential load); sizes gas storage for fixed blackout blocks and through an hourly simulation of random outages; counts methane over a full 24-h boundary, including leakage, CHP and flare slip and a sludge-disposal counterfactual; and evaluates NPV, payback and GHG savings for alternative operating configurations, including surplus export and a PV&ndash;battery alternative. Nineteen uncertain inputs are propagated jointly through 10,000 Monte Carlo draws, with Spearman rank sensitivity per blackout scenario. Contents: task1&ndash;task14 (.py): model scripts, one per analysis step (baseline model, bottom-up demand, Al Ghadir configurations, gas storage, Monte Carlo uncertainty and sensitivity, surplus export, plausibility checks, secondary-plant demand, sludge counterfactual, hourly outage simulation, PV&ndash;battery comparison, Tripoli and Saida economics, Table 5 checks, upgrades and avoided sludge disposal) convergence.py: Monte Carlo and hourly-simulation convergence checks (Tables S2 and S3 of the article) make_figures.py: reproduces Figures 3&ndash;7 of the article (600 dpi) *_results.xlsx: output of each script README.txt: run order and dependencies",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Biogas as a Resilience Fuel for Wastewater Treatment under Chronic Grid Failure: Scripts and Results",
-      "url": "https://zenodo.org/records/23525156"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "3ba2d3d5cb256307532f7d77",
-      "context_id": "a8f97dc177f0a7eadfac0d0e",
+      "candidate_id": "a40288e5368a559aff8b88fe",
+      "context_id": "6db6905807a05b00d2fe8d33",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -545,52 +479,16 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.2917,
       "source": "arxiv",
-      "source_context_sha256": "65ebabba9c3432e7d662e9f698e5a5605ba615eb16c8645580e93021b8378756",
-      "source_published": "2026-10-20T04:35:39Z",
-      "source_updated": "2026-10-20T04:35:39Z",
-      "summary": "Autonomous LLM agents act through tools under per-action authorization: a local guard screens each tool call in isolation. We show that local authorization does not compose into global authorization. A compositional authorization failure (CAF) is a locally authorized execution, or a pair of locally authorized executions, that violates a global policy spanning intent, purpose, provenance, consent, and delegation. We characterize CAFs along two axes, expressiveness (single-trace safety versus relational k-safety) and observability (a ladder of monitor profiles). Our central result is an impossibility: relational purpose violations form a 2-safety hyperproperty with no per-trace locus of blame, so a per-action monitor that never raises a false alarm detects none of them, independent of the underlying model or decision procedure; they become visible only under cross-execution monitoring, which none of the six guardrails we survey implements. We make this constructive with AL-SYNTH, a SAT/SMT synthesizer (using no language model) that emits minimal CAF witnesses, each checked against an exhaustive oracle. The empirical signature is sharp: across nine LLM judges the per-action view approves the synthesized witness almost without exception, blocking it at a rate comparable to a benign control, yet the same models flag it when shown the two executions together. Per-action authorization is therefore structurally insufficient for relational policy conjuncts not reducible to single-trace safety: to bound them, a monitor must compare executions or accept false alarms.",
+      "source_context_sha256": "ad8966d57612765d3def07134b11cb5efcfae79a51f83e74809d2272e4f01ccb",
+      "source_published": "2026-10-21T01:00:43Z",
+      "source_updated": "2026-10-21T01:00:43Z",
+      "summary": "Verifier stacks increasingly sit inside post-training and test-time compute loops. We study a specific control loop: a component verifier is evaluated on fresh policy outputs against the full success label and refreshed when that aggregate score falls. For a conjunctive target $y = F \\wedge M$, its on-policy AUC is $(1-q)A_{\\mathrm{own}} + qA_{\\mathrm{cross}}$, where $q = \\Pr[F=1 \\mid y=0]$. As the policy masters $F$, $q$ can rise toward one, removing weight from $F$-failures and rewarding information about $M$. We call this on-policy audit collapse. We derive a sharp identified set, a complete-erasure threshold, and the exact point at which the audit can prefer a worse component verifier; its population optimum is the full-outcome predictor, not the component oracle. An exact oracle exhibits the collapse, a natural multi-label text control shows inversion can select a head with lower canonical $F$-AUC at the observed failure mixture, and a prediction-registered ECG study shows that acting on the audit can reduce off-policy $F$-AUC, transfer the damage to an unseen generator, and increase downstream constraint violations. Preserving own-failure support prevents the damage. Matching label-complexity bounds and a controlled-mixture audit give the corresponding repair: audit the component on its own failures, and keep those failures in the refresh distribution.",
       "tags": [
-        "cs.CR",
-        "cs.AI",
-        "cs.LO"
+        "cs.LG"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Local Allow, Global Deny: Why Per-Action Authorization Does Not Compose in LLM Agents",
-      "url": "https://arxiv.org/abs/2610.27620v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "2072363cee6638fd917c53e5",
-      "context_id": "7b6bc36ff48fa17f2fbffd11",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "262601175d1903d94b3605df775e6e0af2e87bb2addae7d4529a0dffc97bdcae",
-      "source_published": "2026-10-19T23:06:31Z",
-      "source_updated": "2026-10-19T23:06:31Z",
-      "summary": "BACKGROUND: After a software incident, organizations attempt to improve the reliability of their software systems by conducting post-incident analysis and identifying actions to prevent or mitigate similar future incidents. Despite the importance of this activity, there is a limited understanding of the nature and characteristics of the software evolution triggered by the analysis process. AIMS: This study seeks to bridge this gap by providing the first empirical characterization of post-incident software evolution. We aim to establish an understanding of how these changes manifest, specifically focusing on how their characteristics (such as effort, location, and timing) differ from standard maintenance and evolutionary changes. METHOD: We conducted a mixed-methods analysis of a 10-year longitudinal dataset from Wikimedia, examining 1,302 tasks and 2,203 code reviews. We categorized these changes across five dimensions: target, effort, abandonment rate, prioritization, and time-to-resolve. RESULTS: Our results show that the post-incident evolution is distinct from other change types. Post-incident changes are more time-consuming, with a median completion time over twice that of other changes and are disproportionately concentrated in a server configuration repository. CONCLUSION: By identifying a few of the characteristics of post-incident evolution, this work provides a foundation for future research into reliability engineering and learning from failure. We highlight further avenues for exploration necessary to fully understand post-incident evolution. Lastly, our work enables researchers to move beyond high-level analysis and begin developing specialized methods and tooling tailored to the nature of post-incident evolution.",
-      "tags": [
-        "cs.SE"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Characterizing Post-Incident Software Evolution",
-      "url": "https://arxiv.org/abs/2610.27380v1"
+      "title": "Better Policies, Worse Verifier Audits",
+      "url": "https://arxiv.org/abs/2610.29029v1"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -625,6 +523,40 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "Benchmarking Evaluation of Differentiable Logic-Gate Networks for Computer Agriculture Irrigation Controllers Under Actuator-Failure Cascades: An Artificial Intelligence Formal-Safety Audit for Water-Rights Compliance",
       "url": "https://zenodo.org/records/23544433"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "8816e50aec38f8bba074efbc",
+      "context_id": "6435ede8d14b4e0c5d547efa",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "b707f6237bb50affad2fb57537775b8d53a59ead09c82ca2dc7124e0bc7f2ac0",
+      "source_published": "2026-10-21T03:20:32Z",
+      "source_updated": "2026-10-21T03:20:32Z",
+      "summary": "Frontier black-box Large Language Model (LLM) agents are proficient at long-horizon reasoning and precise action generation. However, when it comes to a specific agentic task, they have no internalized knowledge of how that particular environment unfolds. A world model offers a natural remedy, providing the agent with environment specific knowledge by foreseeing how the environment will respond to the action it is about to take. Prior world models for LLM agents mainly predict next observations at each step, which is costly and often uninformative because individual observations provide limited task-relevant guidance and not every step requires call for foresight. This raises a key question: what a world model should predict and when should it be invoked for agentic tasks? Our pilot study suggests that world model guidance is most useful when it anticipates pitfalls within a bounded multi-step future. Motivated by this, we introduce Pitfall Anticipation World Model (PAWM), which selectively intervenes when a potential pitfall arises and predicts the impending failure to steer the agent away from it. PAWM is trained in two stages: Supervised Fine-Tuning (SFT) on synthetic data labeled with agent pitfalls, followed by GRPO co-training with a black-box LLM to further optimize it in the target environment. PAWM improves Claude Sonnet 4.5 performance by 24.3% on ScienceWorld and 7.7% on WebArena-Lite, outperforming a range of baselines. These results demonstrate that PAWM provides an effective form of world model guidance for black-box LLM agents.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Steering Black-Box Large Language Model Agents with Pitfall Anticipation World Model",
+      "url": "https://arxiv.org/abs/2610.29139v1"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -681,8 +613,8 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "457dc94974c7de676c7cb523",
-      "context_id": "40bb200cb90801448086a52c",
+      "candidate_id": "9fdb93e1eaa96ac5e130fba9",
+      "context_id": "494882401899ad920615bca4",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -702,21 +634,21 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.2917,
       "source": "arxiv",
-      "source_context_sha256": "50ea737abf43bc094fcd51d4ab9568088fef759fc7ee6d8697004bcd0b1c2183",
-      "source_published": "2026-10-20T16:38:43Z",
-      "source_updated": "2026-10-20T16:38:43Z",
-      "summary": "Long-term assistants must follow unfinished tasks across days as information and circumstances change. Finding information or starting an action, however, does not ensure that the task gets completed. We introduce OptionWorld, a benchmark that traces information acquisition, judgments, actions, and outcomes in simulated daily-life tasks to identify where current LLMs fall short as long-term personal assistants. In runs with archived decision inputs, the key facts remain in the model's last input before the deadline in 35.5% of failed instances. Failure analysis identifies the three most frequent problems: needed information is not obtained or combined, available opportunities to act go unused, and agents impose restrictions that the task does not require. Three follow-up experiments show that supplying missing facts restores task success in some cases; action reminders can restart work while subsequent steps still miss the deadline; and correcting a supplied note that wrongly forbids contact restores permitted inquiry. These findings locate shortcomings in maintaining task state: connecting facts to unfinished work, following through before deadlines, and separating actual restrictions from the agent's assumptions.",
+      "source_context_sha256": "967db33b2eb628fd1aed907ed2973897823b8bd8679cc8a581fa223a59025c34",
+      "source_published": "2026-10-21T06:49:39Z",
+      "source_updated": "2026-10-21T06:49:39Z",
+      "summary": "Generative recommenders replace the retrieve-then-rank cascade with a single model: beam search over semantic item identifiers performs retrieval, and the same likelihood performs ranking. We show that this shared score makes them forget long-tail items twice. In retrieval, beam search keeps identifier prefixes by the probability mass of their subtrees, so tail items are pruned early, and a wider beam admits few more of them. In ranking, the likelihood places tail items below head items even when they are admitted, so expanding retrieval alone brings little or no gain. Both failures reflect missing item-level memorization (i.e., direct recall of which items co-occur), which collaborative filtering provides and shared-prefix generation lacks. To this end, we propose CAPE (Co-occurrence-Aware Pool Expansion), a training-free plug-in that restores memorization at both stages: (i) a memorization channel retrieves co-occurrence-supported tail items outside the beam and scores them with the frozen generator, and (ii) memorization-calibrated ranking fuses the generator likelihood with co-occurrence evidence while keeping the generator's first item. Experiments with two generative backbones on product and music domains show that CAPE significantly improves long-tail accuracy over the backbones and over re-ranking baselines that share its candidates, preserves or improves overall accuracy, and adds a small fraction of the latency.",
       "tags": [
-        "cs.CL"
+        "cs.IR"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "OptionWorld: A Benchmark for Diagnosing Failures of LLMs as Long-Term Personal Assistants",
-      "url": "https://arxiv.org/abs/2610.28491v1"
+      "title": "Generative Recommenders Forget the Long Tail: Restoring Memorization in Retrieval and Ranking",
+      "url": "https://arxiv.org/abs/2610.29298v1"
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "e51d52930687f76eaae5dfe2",
-      "context_id": "17705c453fd30f1400392ef3",
+      "candidate_id": "c2327757b22a7b0ae079c153",
+      "context_id": "482975a3fb1cba76c6c3a39f",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -736,22 +668,21 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.2917,
       "source": "arxiv",
-      "source_context_sha256": "a0bdc529b3c4e527b0c1cfbc613864dbb22fa1f0fdfc1b32692cfa869d5824f3",
-      "source_published": "2026-10-19T23:21:18Z",
-      "source_updated": "2026-10-19T23:21:18Z",
-      "summary": "Action-conditioned video generative models trained on successful, goal-directed demonstrations tend to ignore the commanded action, rendering a plausible expert-like future regardless of what is asked of them. We trace this failure to training data that lack sufficient action influence. We analyze this metric and prove that it upper bounds the action influence that any model trained on that data can express. Expert demonstrations, whose narrow action distributions let next states be predicted without attending to the action, set a low ceiling that no amount of model capacity alone can raise. Raising it requires collecting different data. We introduce Action Influence Maximization (AIM), an algorithm for actively collecting training data for improving dataset action influence. We compare the performance and data-efficiency of AIM against exploration heuristics and intrinsic-motivation methods on simulated navigation and manipulation tasks. In pixel-based manipulation, AIM is the only method that consistently improves controllability: 500 actively collected episodes added to 3k demonstrations match a world model trained on 300k expert episodes on end-effector controllability, an $85\\times$ reduction in data.",
+      "source_context_sha256": "1221588c2ee75021ff9e12d1581318a59639aa703ab136f9d0daa937e5ff809a",
+      "source_published": "2026-10-21T05:47:57Z",
+      "source_updated": "2026-10-21T05:47:57Z",
+      "summary": "In this paper, we investigate why vision-language models (VLMs) produce errors by decomposing them into two sources: visual-representation failures, in which the visual evidence required for the correct answer is not encoded, and visual-utilization failures, in which this evidence is encoded but not successfully used. We propose to estimate the visual-utilization failure rate using lightweight probes and derive theoretical bounds on the true rate that account for probe imperfections. We introduce VELens (Visual Evidence Lens), a rank-based probe that traces visual evidence for both a target object and its ground-truth attribute, such as color, material, or shape, across VLM layers. We evaluate VELens on over 6,000 images using LLaVA-1.6-7B and Qwen2.5-VL-7B. Our method achieves ROC-AUC scores of 0.95 and 0.91, respectively, and outperforms alternative probes in both low-resource and unseen-attribute settings. Using it to diagnose errors, we estimate that visual-utilization failures account for 84.4% of LLaVA errors and 70.0% of Qwen errors, with conservative lower bounds of 77.5% and 61.0%, respectively. Overall, our study identifies visual utilization as the dominant bottleneck in VLMs and suggests that a central opportunity for improvement lies in developing better mechanisms to locate, route, and use the visual information they already encode.",
       "tags": [
-        "cs.RO",
-        "cs.LG"
+        "cs.CV"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Training Controllable World Models via Action Influence Maximization",
-      "url": "https://arxiv.org/abs/2610.27387v1"
+      "title": "Encoded but Unused: Bounding the Sources of VLM Errors",
+      "url": "https://arxiv.org/abs/2610.29241v1"
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "0f97e16cdfbded7b157dc303",
-      "context_id": "a8d3d3addb2f30469b8245e4",
+      "candidate_id": "e9ad9a661190e28bddca1f00",
+      "context_id": "471f2fa77afd5338d4ec6bf0",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -765,38 +696,25 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "zarr"
+        "failure"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.1667,
+      "score": 4.2917,
       "source": "zenodo",
-      "source_context_sha256": "1105d179e01137384b8575071ea8144dbd5ff91f790b3d4a1a50cd5ce4b7e4d3",
-      "source_published": "2026-10-21",
+      "source_context_sha256": "fc71390974b703eb3367a0252721a0eee427fc17193a9c70c97180169e936206",
+      "source_published": "2026-10-22",
       "source_updated": "",
-      "summary": "Precomputed demo datasets for Luxar , a system for compiling and visualising arbitrary-sized nD scientific scenes in the browser. These files are expensive to compute (GPU fitting, in some cases hours) and are hosted here so the software repository stays small and installable. Every file is a derived product: a Gaussian-splat fit, a decimated level-of-detail structure, or an extracted point catalog. None of them is the raw source imagery. The upstream sources are cited per dataset below, and users of this record should cite the upstream source in addition to this record. Licensing This record groups datasets whose upstream licences permit redistribution with attribution: CC BY 4.0, CC0 1.0, and United States federal public domain. The record carries a single CC BY 4.0 stamp because Zenodo permits one licence per record, and CC BY is the most restrictive of that set; the effective licence of an individual file is the one listed against it below. Datasets under ShareAlike terms are kept in a separate record, because ShareAlike survives derivation and would otherwise contaminate this one. How to use these files Each file is a .gsplats.zarr.zip or .zarr.zip archive that the Luxar demo suite fetches on first run and caches under ~/.cache/luxar/&lt;dataset&gt;/ . To fetch one directly: from luxar.demos import ensure_dataset paths = ensure_dataset(\"gsplats_kidney\") # downloads, verifies, returns paths To open one in the viewer without writing code: luxar gsplat view &lt;file&gt;.gsplats.zarr.zip luxar demo # browse every demo that uses these files Every file is pinned by SHA-256 in data_manifest.json , and the fetch helper verifies the checksum before use; a mismatched download is quarantined rather than returned. How the Gaussian-splat files were produced Each source volume was fitted with the Luxar gsplat pipeline ( luxar gsplat fit ) on a GPU. These are lossy representations built for visualisation and interactive exploration; they are not a substitute for the source imagery in quantitative analysis. Choosing the splat count. The number of Gaussians K was calibrated per dataset by Noise2Self blind-spot cross-validation ( luxar gsplat cal ), and then checked by refitting at the candidate count and scoring the reconstruction against the whole source volume. The second step is not a formality. The cross-validated estimate is computed over a five percent mask of held-out voxels, and on these datasets it disagreed with the direct measurement in both directions: for one dataset it favoured half the splat budget that measurement showed to be better, and for another it predicted a gain of about 1.5 dB where refitting delivered under 0.3 dB. Where two candidate budgets fell within roughly a decibel of each other, the choice was made from renders of both at matched magnification, because at that margin the metric and the eye disagree. Additional Gaussians capture real structure and photon noise alike, and peak signal-to-noise ratio rewards the two equally. Two datasets size K differently. The organoid bundle sets each frame&rsquo;s budget from that frame, one splat per 12 occupied voxels, clipped to 2,000&ndash;120,000 for the membranes and 2,000&ndash;60,000 for the nuclei. The EASI-FISH mRNA channels transfer a splat density, measured by luxar gsplat cal on a reference region of each channel, to every content-adaptive tile; the DAPI channel uses a fixed budget of 600,000 splats. Level of detail These files carry level-of-detail structure so a viewer can show something immediately and refine it as the camera approaches, instead of waiting for a whole fit to arrive. Two independent mechanisms are used, and a file may carry both: Progressive (additive) ladders. A leaf is stored as an ordered series of chunks whose union is the complete fit, so any prefix is a valid, dimmer rendering of the whole object. Every file in this record carries one. Substitutive levels. The Milky Way dust volume and the seven cell-tracking timelapses additionally ca",
-      "tags": [
-        "Gaussian splatting",
-        "volume visualization",
-        "nD imaging",
-        "Luxar",
-        "light-sheet microscopy",
-        "confocal microscopy",
-        "cryo-electron microscopy",
-        "computed tomography",
-        "digital pathology",
-        "weather radar",
-        "galaxy survey",
-        "single-cell embedding"
-      ],
+      "summary": "A hardening release from the 2026-10-21 full review ( docs/reviews/2026-10-21-full-review.md ): untrusted bundles and archives can no longer read or write outside themselves or exhaust memory, arkiv convert no longer destroys records, and malformed archives, bundles, and JSONL files report a clean error instead of a traceback (for crafted databases, only colliding asset rows are covered so far; see Known issues). No on-disk structure changes; arkiv_format stays &quot;0.2&quot; . Security S1: README contents entries (and schema.yaml , nested README files, and the archive's own README.md ) that are absolute, contain .. or a backslash, or resolve outside the archive are refused, so a crafted archive can no longer import arbitrary .jsonl files, or the text of any host file, from the host. S2: symlinks under media/ (including a symlinked media/ itself) are never followed or imported, so host files cannot land in the database and then in exported bundles. Directory import, the source fingerprint, and pack_bundle now share one walk ( iter_source_files ). S3: tar bundles are read with bounded headers: GNU long-name and pax headers over 1 MiB, or chained deeper than 8, are refused before they are read into memory, and sparse members are refused. A 65 KB archive no longer needs hundreds of MiB, and unpack_bundle is bounded too. S4: a database path containing # , ? , or % (or non-ASCII characters, or spaces) opens the file it names when opened read-only, instead of opening, and creating, a different file. S5: duplicate tar and zip members are refused on unpack, as are tar hard and symbolic links, FIFOs, and devices, so iter_jsonl and convert can no longer disagree about an archive's content. Names that differ only in case or Unicode normalization ( records.jsonl and Records.jsonl ) count as duplicates, since a case-insensitive filesystem (APFS, NTFS) stores them as one file. S6: MCP sql_query aborts after 10 seconds (an infinite recursive CTE no longer hangs the server) and cuts any text or blob cell over 100000 characters. S7: asset rows in a crafted database can no longer overwrite README.md , *.jsonl , or other non-media files on export; only canonical paths under media/ are written, checked on the resolved path. Fixed L1: arkiv convert &lt;dir&gt; after MCP write_record no longer silently deletes the written records; it refuses and names the export command. L2: reconverting a directory into its existing database rebuilds it from scratch, so collections, README text, and schema descriptions removed from the directory are gone from the database too, and status no longer reports in_sync over stale content. L3: records with a wrongly typed known field ( &quot;metadata&quot;: null or a list, object or array content , list mimetype , boolean content ) no longer crash the import with a traceback or store &quot;1&quot; . L4: a high-cardinality key's example is stored apart from its enumerated values , so it is no longer written back as a bogus curated values: [id-0] ; a stale values from an earlier export heals on the next convert and export. C1: following the guard's advice ( arkiv convert x.db x ) now clears it; a full db-to-directory export records the directory and resets the unexported-writes counter. C5: a UTF-8 byte order mark no longer drops the first record of a JSONL file, in parse_jsonl , in the bundle readers, and in arkiv detect and arkiv fix (which keeps the mark when it rewrites the file). C6: zip packing no longer fails on a member of 2 GiB or more ( pack_bundle declares each member's size up front so zipfile switches to zip64 for members over 2 GiB), and write_bundle and pack_bundle write atomically, so a failure leaves no partial bundle behind. C7: corrupt, truncated, or encrypted bundles, and files that are not the archive their extension claims (a non-zip named .zip ), report a clean ValueError instead of a traceback ( zlib.error , NotImplementedError , RuntimeError , EOFError , BadZipFile , tarfile.ReadError ), in unpack",
+      "tags": [],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Luxar demo datasets: permissively licensed (CC-BY, CC0, public domain)",
-      "url": "https://zenodo.org/records/23524429"
+      "title": "queelius/arkiv: arkiv 0.4.1",
+      "url": "https://zenodo.org/records/23550421"
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "8378a7dbc82bcff7d0e8e229",
-      "context_id": "ff705ce4a44d68fb0707b138",
+      "candidate_id": "988f88cace662a1fa9d785fe",
+      "context_id": "252083c99a46fffc3595f11f",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -810,26 +728,197 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "081a21a064ddc56df332b58ba0f8ed9d3d3195bcda2fd2c113118b666934deae",
+      "source_published": "2026-10-21T00:28:16Z",
+      "source_updated": "2026-10-21T00:28:16Z",
+      "summary": "Coding agents are rapidly advancing from single-file generation to long-horizon repository-scale engineering, yet the evaluation of their capabilities to author interactive extended reality (XR) applications remains an open challenge. Unlike traditional software, XR applications operate within dynamic 3D physical environments where runtime robustness depends jointly on continuous user motion, spatial input, and environmental sensing. We introduce GenXR-Bench, the first benchmark for the end-to-end evaluation of coding agents in XR software development. GenXR-Bench contains 112 expert-authored tasks spanning 24 feature implementations, 21 bug repairs, and 67 application generation tasks. Held-out tests combine scripted and adaptive interactions with programmatic and visual assertions to evaluate core functionality and runtime behavior. GenXR-Bench's testing suite achieves 96.5% accuracy against blinded expert judgments of 124 candidate applications executed on consumer XR hardware. Evaluating 10 models on GenXR-Bench, we find that the strongest configuration achieves only 50.9% overall Pass@1. Failure analysis identifies recurring misunderstandings in asynchronous sensor lifecycles, physical grounding, and embodied interaction semantics. GenXR-Bench establishes a reproducible testbed for evaluating coding agents in the interactive and physically situated conditions of spatial computing.",
+      "tags": [
+        "cs.AI",
+        "cs.GR",
+        "cs.HC"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "GenXR-Bench: Benchmarking Coding Agents for Interactive XR Development",
+      "url": "https://arxiv.org/abs/2610.29014v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "863434849f4f7b76b6dcf722",
+      "context_id": "22b31333266e31abafd83e7a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "9e2c43c42199507bec661102aeee0c54f5c658b7f009abc10fff336615455a35",
+      "source_published": "2026-10-21T05:55:20Z",
+      "source_updated": "2026-10-21T05:55:20Z",
+      "summary": "Omni-modal assistants must remember not only what users say, but also what they show and convey. Existing long-term memory benchmarks are mostly text-and-image or report a single end-to-end score, so they cannot locate whether evidence is lost when it is represented, retrieved, delivered, or read. We introduce MOSAIC, a benchmark of 923 questions over persona-grounded histories of 11-24 sessions spanning text, image, video, and audio. MOSAIC constructs targeted spatial, temporal, and prosodic signals rather than decorative media, with the strongest causal validation for spatial information and selector-level validation for annotated prosody, and pairs them with a matched diagnostic protocol that freezes the question, reader, prompt, and budget while intervening on representation, retrieval, and delivery. Matched decomposition shows that representation loss is modality-dependent, residual reading dominates even under gold evidence, and abstention remains weak on these controls: strong answerable scores coexist with failures to refuse. MOSAIC thus turns omni-modal memory evaluation from a leaderboard into a diagnosis of write, retrieve, deliver, and read failures.",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "MOSAIC: An Omni-Modal Benchmark for Long-Term Memory and Cross-Modal Reasoning in Conversational Agents",
+      "url": "https://arxiv.org/abs/2610.29249v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "ab20e8093861484028080b84",
+      "context_id": "1ca44af804b1eb17d9278ddc",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "8e6bbb3aefd44849a57dc395926a8f26d25fc8c1b96f549cb1f5012be96ccdb0",
+      "source_published": "2026-10-21T08:59:02Z",
+      "source_updated": "2026-10-21T08:59:02Z",
+      "summary": "World models are increasingly used for planning, where a planner ranks candidate actions by returns imagined by the model. However, these models are judged mainly by how well they render frames, even though a visually faithful rollout can still assign the wrong return. To identify where this mismatch arises, we introduce a transition-level diagnostic that replaces imagined transitions with real ones and measures the reduction in return error against a budget-matched random control. Our analysis yields two findings. (1) Event transitions, the few steps where a reward is earned or an episode ends, are rendered as well as other steps (median pixel-error ratio 0.85), yet restoring them removes a median of 70% of the return error. In contrast, restoring transitions with the largest MSE, SSIM or LPIPS error removes less than a random choice. Across the 44 Atari-100k model--collection pairs that pass our reliability checks, including three released families, event patches outperform random patches in 39 (sign test p=1.4 x 10^{-7}), with a median gain of +44 percentage points. (2) The remaining error is structured: a complementary patch separates errors at true events from those elsewhere, while an eight-step timing tolerance recovers few events missed by our deterministic models. This structure also guides repair: a rule recorded before four repair outcomes were known predicts when a diffusion model repairs these failures. Event patches improve plan ranking, and the same concentration appears on control tasks with rare reward events.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Events, Not Pixels: Where World Models Get the Return Wrong",
+      "url": "https://arxiv.org/abs/2610.29435v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "69051d72368da8894960805f",
+      "context_id": "08fbbafed2f05e2f2cca3f05",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "42bd11bdec02924679a3d976b2214f49ac3a13c38e5673cbc7c7b2543de4e091",
+      "source_published": "2026-10-20T23:14:30Z",
+      "source_updated": "2026-10-20T23:14:30Z",
+      "summary": "While large language models are increasingly deployed as tool-calling agents, their safety evaluations still focus primarily on their ability to refuse harmful requests in text. We investigate whether the refusal behavior in text transfers to tool use. We construct a benchmark of 2,304 prompts across four domains, consisting of matched triplets that present the same harmful or benign request in text-only, standard tool-enabled, and adversarially framed tool-enabled settings. We then assess tool-call safety using 20 predefined forbidden actions. Testing five models of varying sizes and families, we find that requests refused in text frequently result in unsafe tool calls. Under standard tool-enabled prompting, this divergence occurs for 10-52 percent of harmful requests refused in chat. To mechanistically investigate this gap, we identify a refusal-associated direction in the residual stream of each of the five models. We find that in tool-enabled contexts, the activations along this direction decrease in four of five models. Furthermore, lower activation predicts unsafe tool calls across all five models (AUC 0.76-0.86). However, restoring the signal to the respective text-only value through activation patching only prevents a subset of unsafe calls, primarily by suppressing tool use rather than by producing safer calls. Steering along the refusal direction nearly eliminates unsafe calls only at strengths that also suppress benign tool use or degrade the output quality. Our findings indicate that the identified refusal direction contributes to whether a model acts, but only partially explains the refusal divergence. Therefore, evaluating the safety of tool-calling agents requires directly examining their actions along with their textual responses.",
+      "tags": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Behavior Beyond Text: Evaluating Refusal Transfer Failure in LLM Agents",
+      "url": "https://arxiv.org/abs/2610.28982v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "4eaee6553ccc8b60ba7192a4",
+      "context_id": "04d480ae9fd0516a9a31834a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "fe5da27049f40d668f90173e6b3985b837eed981657811b345abe92bdacc4de5",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "Abstract &mdash; Universities must simultaneously contain costs, decarbonise their estates, and safeguard teaching, yet procurement of teaching-critical equipment still follows lowest-price, replace-on-failure practice. This paper develops a digital-twin framework for circular procurement in higher education, in which repair, refurbishment, inter-departmental asset sharing, and replacement are optimised jointly against lifecycle cost, embodied carbon, and pedagogical disruption. Asset condition, utilisation, and failure signals from campus twins are fused through Bayesian state estimation into a two-stage robust mixed-integer programme built on a budgeted uncertainty set over teaching demand. A computational study of a synthesised 1,240-asset estate, parameterised from published university estates statistics, life-cycle inventories, and manufacturer data, compares the framework with business-as-usual and single-objective policies over ten years. The joint robust policy lowers total cost of ownership by 18.7%, embodied procurement carbon by 41.3%, and expected lost teaching hours by 57.6%, with a 35.8% reduction in tail-risk disruption relative to the deterministic optimum; asset sharing absorbs nearly a third of incremental demand without new purchases. Results are stable across carbon-price, disruption-value, and demand-volatility sensitivities, giving estates teams an audit-ready pathway from smart-campus monitoring to circular, teaching-aware procurement. Keywords: Circular procurement, digital twins, robust optimisation, teaching continuity, university estates.",
+      "tags": [
+        "Circular procurement, digital twins, robust optimisation, teaching continuity, university estates."
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Circular Procurement Through Digital Twins: Balancing University Costs, Carbon, and Teaching Continuity",
+      "url": "https://zenodo.org/records/23501094"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "4a2b54f95839c60395716a36",
+      "context_id": "ec5efbf1ac4a141a6deaf4d0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
         "limitation"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.4167,
-      "source": "zenodo",
-      "source_context_sha256": "733c2632afa4c44fb494b07b8e7f916a90f725cbcb11b4187aa07fceb62dd736",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "ExM Explorer is a search engine for expansion microscopy (ExM) experiments compiled from the literature. For each study, it records the organisms expanded, the protocol used (fixation, anchoring, gel composition, homogenization, expansion factor), and the antibodies, dyes and stains applied, with their outcome and a link to the source publication. Version 1.0 covers 381 studies, 301 species, 1,483 primary antibodies and 608 dyes and stains. The database was built from 579 full texts identified by searches of PubMed and Europe PMC (including bioRxiv and medRxiv). Each paper was read individually by a large language model (Claude Sonnet 4.6, Anthropic), followed by deterministic curation and eight quality controls. This archive contains the portal (a single HTML file that runs offline), the database with its column dictionary, the provenance of every PDF and the curation log, the EukProt v3 species list used to place coverage on the eukaryotic tree, the code that generates and validates the portal, the extraction and curation scripts with their logs, and the quality-control outputs. Full methods and limitations are described in METHODS.md. Code is released under the MIT License and data under CC BY 4.0.",
+      "score": 2.5833,
+      "source": "arxiv",
+      "source_context_sha256": "e151a75593ddcf82262c1c6d1813dea5cb2670e55322c0bff2ecd4c13a4b1e10",
+      "source_published": "2026-10-21T10:25:06Z",
+      "source_updated": "2026-10-21T10:25:06Z",
+      "summary": "Multi-modal Large Language Models (MLLMs) have seen broad adoption, but their biases are still far less examined than those of standard LLMs, creating possible social harms when deployed in real-world settings. Prior efforts to extend bias analyses from LLMs into the multi-modal space either cover only a few bias categories or do not ensure that the groups being compared are clearly addressed by visual cues in the images. To overcome these limitations, we introduce Melange, a wide-ranging synthetic visual benchmark covering seven categories for assessing social biases in MLLMs. It is grounded in the widely used language-only BBQ dataset (Bias Benchmark for Question Answering) from BigBench, carefully extending its constructed contexts via controlled generation of visual scenarios so the target attributes appear visually and clearly. To maximize reliability, our generated images pass through two stages of validation: automated screening using visual question answering (VQA) and subsequent manual inspection by human annotators. By systematically evaluating 23 open-source MLLMs across three matched evaluation settings---text-only, image-only, and image-with-context---Melange isolates the fairness effect of the input modality. Switching from text to vision reduces fairness by 0.291 on average, a gap that varies by model family rather than by scale alone. A perception control confirms that this gap is not an artifact of visual comprehension: models identify the depicted attributes at 90--95\\% accuracy yet still fail to abstain. When models do commit to a biased answer, polarity-aware stereotype alignment shows they choose the human-stereotypical response roughly three-quarters of the time.",
       "tags": [
-        "Expansion Microscopy",
-        "U-ExM",
-        "Microbial eukaryotes",
-        "Protist",
-        "large language model"
+        "cs.CV"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "ExM Explorer",
-      "url": "https://zenodo.org/records/23439354"
+      "title": "Melange: A Synthetic Visual Bias Benchmark for Multi-modal Large Language Models",
+      "url": "https://arxiv.org/abs/2610.29537v1"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -867,8 +956,8 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "2becef728c243e8dbe93d87f",
-      "context_id": "b8222bbe869bf367c6e93ec3",
+      "candidate_id": "7d906203770ed6176e0bcaf8",
+      "context_id": "b19884619181f3a5c2423cd1",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -888,22 +977,21 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 1.4167,
       "source": "arxiv",
-      "source_context_sha256": "062c93f004b130985f426830509780201ac3b48631558a196018a874e97f7781",
-      "source_published": "2026-10-20T13:16:17Z",
-      "source_updated": "2026-10-20T13:16:17Z",
-      "summary": "Large Language Models (LLMs) often struggle with temporally grounded reasoning because their static parametric memory is misaligned with the dynamic evolution of real-world knowledge. Although RAG and Parameter-Efficient Fine-Tuning (PEFT) provide practical ways to enhance LLMs, they remain insufficient for temporal reasoning. Existing retrieval methods typically prioritize semantic relevance while overlooking temporal validity, event order, and evolutionary dependencies, resulting in evidence that is relevant in isolation but temporally fragmented. Meanwhile, conventional PEFT methods usually employ fixed and input-agnostic low-rank updates, making it difficult to capture time-dependent entity semantics and relation drift. To address these limitations, we propose Temporal Evidence-Parameter Co-Alignment (TEPCA), a framework for LLM reasoning over TKGs. TEPCA aligns LLM reasoning with temporal knowledge at both the evidence and parameter levels. At the evidence level, it introduces time-constrained Dynamic Relevance-Guided Path (DRGP) pruning to preserve globally coherent temporal paths, together with Mutual-Information (MI)-based pruning to retain query-informative local facts under temporal constraints. At the parameter level, it integrates Dynamic-Gated LoRA (DG-LoRA), a timestamp-conditioned low-rank adaptation mechanism that dynamically modulates the effective adaptation subspace according to temporal context. This design enables LLMs to better capture fine-grained entity evolution and time-dependent relation semantics while preserving parameter efficiency. Experimental results on two TKG benchmarks demonstrate that TEPCA achieves state-of-the-art performance. Additional evaluations of DG-LoRA on eight commonsense QA datasets further verify its general input-adaptive capacity, scalability across LLM backbones, and interpretability.",
+      "source_context_sha256": "667cde50b2585831623ce0631caa8ff95c9f9409ae7f5a74ab87108c03fe3ee6",
+      "source_published": "2026-10-21T16:34:28Z",
+      "source_updated": "2026-10-21T16:34:28Z",
+      "summary": "Long-term memory for multimodal agents remains challenging, as it must preserve fine-grained visual evidence while tracking entity evolution across sessions. Existing abstraction-based memories compress images into text, often discarding visually discriminative details, whereas pixel-preserving memories retain raw observations but struggle to reliably associate diverse observations with persistent entity identities and track their evolving states. To address these limitations, we propose MHG-Mem, a multimodal hypergraph memory that jointly organizes entity identity, state evolution, and provenance to visual evidence. Specifically, MHG-Mem represents distinct entity mentions and their observed facts as individual nodes, grouping identity-consistent mentions and facts through occurrence hyperedges. It then synthesizes aspect-specific evolution states from these grouped observations and links them to supporting entities, facts, and source evidence through evolutionary and evidential hyperedges. To navigate this structured memory, we introduce hypergraph-based agentic search, which adaptively selects an entry layer, traverses typed hyperedges across memory levels, and inspects source observations when fine-grained verification is required. These designs support both detailed visual verification and reasoning over cross-session state changes. Extensive experiments across three benchmarks demonstrate the effectiveness of MHG-Mem, improving performance by 8.20-9.98% over the strongest baseline.",
       "tags": [
-        "cs.CL",
-        "cs.AI"
+        "cs.CL"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Temporal Evidence-Parameter Co-Alignment for LLM Reasoning over Temporal Knowledge Graphs",
-      "url": "https://arxiv.org/abs/2610.28176v1"
+      "title": "Remembering Through Change: Provenance-Preserving Hypergraph Memory for Multimodal Agents",
+      "url": "https://arxiv.org/abs/2610.29995v1"
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "4b1e77ab02773a31455c5673",
-      "context_id": "83070aedaf9f15d1470bf219",
+      "candidate_id": "51527dba743f3fc75f598690",
+      "context_id": "783e6a8a8a2069f80444027e",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -923,22 +1011,21 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 1.4167,
       "source": "arxiv",
-      "source_context_sha256": "ed681ff8499dc1b64b5b6cfdd5685c56bbcead29b2eaf5e8e50ddf538d615a9e",
-      "source_published": "2026-10-20T15:54:25Z",
-      "source_updated": "2026-10-20T15:54:25Z",
-      "summary": "Generative-prior-based super-resolution (SR) methods leverage implicit knowledge learned from large-scale models to enhance low-resolution inputs. However, such priors are inherently stochastic and optimized for diverse generation, conflicting with the deterministic, high-fidelity reconstruction required for SR. It is also tied to the base model, costly to update, and prone to hallucinations as real-world data evolves. To address these limitations, we introduce WorldSR, a novel framework that augments SR with explicit, entity-aligned visual world knowledge. WorldSR automatically decomposes the input into semantic entities and performs entity-wise retrieval of structurally and semantically aligned images from a large-scale external corpus. For efficiency and reliability, we incorporate a memory mechanism to reuse previously retrieved results and a multi-step filtering process to refine candidate references. The selected references as world knowledge are then integrated through a novel multi-reference super-resolution model, which provides fine-grained constraints for detail synthesis and structural recovery. Experiments on real-world SR benchmarks show that WorldSR consistently improves structural fidelity and visual quality, outperforming existing generative super-resolution methods. Our results suggest that entity-level grounding in external visual world knowledge provides a simple and effective complement to model-bound generative priors.",
+      "source_context_sha256": "eeb9d9903683b44d9cc239a46e889e15ad24b12534dc918a81e04cd511377aff",
+      "source_published": "2026-10-21T01:22:00Z",
+      "source_updated": "2026-10-21T01:22:00Z",
+      "summary": "Large language models (LLMs) have shown considerable promise in synthesizing formal specifications from source code. However, existing approaches primarily focus on functional contracts and loop invariants, while largely neglecting frame conditions, which specify the memory locations that may or may not be modified during execution and constitute an essential part of formal specifications. To address this limitation, we propose an LLM-based approach for synthesizing ACSL frame specifications alongside functional contracts from C code. Our approach analyzes code property graphs (CPGs) to extract frame-relevant information from the input code and leverages this information to guide the LLM in generating accurate frame conditions. The resulting specifications capture both region-separation constraints and data dependencies that govern variable modifications. Experimental results demonstrate the effectiveness of our approach. On a benchmark of 84 ACSL-compliant functions from non-trivial real-world systems, our method successfully synthesizes error-free frame specifications for 92.9% of the functions, representing a 179% relative improvement over state-of-the-art techniques. On a second benchmark consisting of 51 functions, the success rate increases from 80.4% to 96.1%. Furthermore, when integrated as an auxiliary component into existing LLM-based ACSL-synthesis frameworks, our approach improves frame-specification generation performance by up to 61.9%.",
       "tags": [
-        "cs.CV",
         "cs.AI"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "WorldSR: Harnessing World Knowledge Search for Grounded Image Super-Resolution",
-      "url": "https://arxiv.org/abs/2610.28423v1"
+      "title": "AutoFraming: Synthesizing Dynamic Frames of C Code with LLMs",
+      "url": "https://arxiv.org/abs/2610.29046v1"
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "fac482073a64948e4d61276e",
-      "context_id": "59da107839a6f2a9b841334f",
+      "candidate_id": "43196a0b74fd9fae8b11ba4b",
+      "context_id": "2658f18705e7764706d53389",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -957,17 +1044,17 @@
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 1.4167,
-      "source": "zenodo",
-      "source_context_sha256": "c04330d4322309371dc0ec49f7a18c210686c5264c707d6c026f92a422643967",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "This dataset provides supporting numerical artifacts for the manuscript &ldquo;Reduced-Regularity Consistency for a Direct ABC-Adapted L1-Type Operator: Analysis and Diffusion Benchmarks.&rdquo; The archive contains the locked Problem-1 FDM/FEM common-resolution results, the Chebyshev spectral results, the Problem-1 temporal-contamination audit and its derived summary, the Problem-2 Q=64 FDM/Spectral graded-mesh validation results, and the FEM Pilot-2 console-verified summary. A README, artifact manifest, and SHA-256 checksum list document the archive contents, integrity checks, evidence status, and item-specific limitations. This is a supporting-data archive, not a complete source-code or computational-environment release. The archived CSV files were retained from the project artifacts and integrity-checked during packaging; the original numerical experiments were not rerun for this deposit. The FEM Pilot-2 file is a console-verified summary rather than a complete raw export. Known provenance limitations are documented in the accompanying README and manifest. The Q=64 results show refinement trends consistent with the stated consistency upper bound for the tested cases. They do not establish sharpness of the estimate or an unconditional fully discrete convergence theorem.",
+      "source": "arxiv",
+      "source_context_sha256": "83ea4c3f720d197bc81d7ac4fc60a70a373ca41f8a198a1d962901897c423337",
+      "source_published": "2026-10-21T13:58:17Z",
+      "source_updated": "2026-10-21T13:58:17Z",
+      "summary": "Conservatism in distributed stability certification is often treated as a limitation of the certificate itself, motivating richer Lyapunov functions, tighter relaxations, or stronger optimization. But a more fundamental limitation may arise from the reporting interface: once information is compressed, physically different systems can become indistinguishable. If stable and unstable systems produce the same report, no sound method can separate them. This paper asks where this information limit lies and how much additional information is needed to move it. We model information as an information structure that partitions admissible systems into information fibers. The strongest sound certificate for a fiber is determined by its smallest stability margin, yielding a method-independent benchmark. This separates total conservatism into information-induced and method-induced parts and characterizes information order, task sufficiency, and the stability value of additional information. Three network-node studies show that network-spectrum, scalar/eigenvalue-only passivity, and independent-local reports respectively lose network--node alignment, local directional alignment, and cross-node relation. They show that critical missing information is often relational rather than dimensional. We then move from diagnosis to information design. An information-conservatism frontier gives the smallest irreducible conservatism achievable under a prescribed budget, while its inverse gives the minimum information required for a target conservatism. A witness-pair characterization turns this into a weighted covering problem. Besides, a local sensitivity law provides a computable approximation and identifies valuable unresolved quantities. The framework indicates whether conservatism should be reduced by improving the certificate or enriching the information.",
       "tags": [
-        "Atangana–Baleanu–Caputo derivative; fractional diffusion; ABC-L1 discretization; numerical analysis;"
+        "eess.SY"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Supporting numerical data for: Reduced-Regularity Consistency for a Direct ABC-Adapted L1-Type Operator: Analysis and Diffusion Benchmarks",
-      "url": "https://zenodo.org/records/23479799"
+      "title": "Information-Induced Conservatism Frontier of Distributed Stability Certificates",
+      "url": "https://arxiv.org/abs/2610.29757v1"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1050,8 +1137,8 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "eecd37b234ccf20614b6de0c",
-      "context_id": "66f0bbe75773764ff387b04e",
+      "candidate_id": "d9cddff5b34de63c32dd67ce",
+      "context_id": "ddcf707bc10ba4f11c5e949e",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -1071,17 +1158,120 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 1.1667,
       "source": "arxiv",
-      "source_context_sha256": "bbf3091b42eef92b1eb5ecaf0df3a11de12db7d214a759ce5e1c44f3675dbb25",
-      "source_published": "2026-10-20T12:13:19Z",
-      "source_updated": "2026-10-20T12:13:19Z",
-      "summary": "Reliable microstructural parameter estimation in diffusion MRI (dMRI) critically depends on the acquisition protocol. Yet, common protocol design criteria may not fully reflect estimator bias, parameter constraints, and nonlinear fitting behavior in complex inverse problems. Here, we introduce Protocol Optimization via Loss Assessing Parameter Recovery (POLAR), an end-to-end framework that searches the continuous acquisition space and directly minimizes multiparameter recovery error through noisy signal simulation and the chosen model fitting. We demonstrate POLAR spanning distinct microstructural environments: the Cylinder-Zeppelin model for white matter, Neurite Exchange Imaging (NEXI) for gray matter, and Cellular Exchange Imaging (CEXI) for permeable cells. Across independent held-out parameter sets, POLAR consistently outperformed model-specific reference designs, reducing RMSE by up to $50\\%$ for Cylinder-Zeppelin and $74\\%$ for CEXI, while reducing NEXI exchange time bias by $70\\%$. These gains across distinct biophysical models, acquisition settings, and reference design strategies demonstrate the benefit of optimizing acquisition protocols through the downstream parameter-estimation problem. POLAR provides a flexible, model-specific and estimator-aware framework for designing dMRI protocols tailored to the microstructural parameters and experimental conditions of interest.",
+      "source_context_sha256": "f6badec445084d541b2231e4f8ae2857945ac2b19296c4ac6046f7686eedf97e",
+      "source_published": "2026-10-21T02:26:00Z",
+      "source_updated": "2026-10-21T02:26:00Z",
+      "summary": "World models predict how embodied systems evolve under actions, but their accuracy can degrade when physical conditions move outside the training distribution. We study two components of causal modeling: which inputs a predictor may use, and how its mechanism computes their effects. In a synthetic benchmark with shortcut features, a frozen dependency mask derived from paired interventions reduces mean out-of-distribution (OOD) RMSE from 1.769 for a fully connected predictor to 0.697, close to the generator-oracle mask (0.694). For robot link-mass extrapolation in CausalWorld, with disjoint training and test mass ranges, we develop finger-local world models in which link masses enter inertia and dynamics-bias terms through explicit affine coefficients, actions act through either a learned torque network or the known PD controller, and learned residuals capture contact-related effects. Compared with a separately trained control whose mass inputs are fixed at training means, the known-PD model turns out-of-range masses into a consistent predictive gain: median time-averaged joint R2 over 150-step rollouts rises from 0.609 to 0.727, with improvement in all ten task-seed runs (exact two-sided sign test, p = 0.002). In a shared 100-step forecast, the learned-torque model is competitive with the strongest recurrent robotic world model (RWM) configuration (median joint R2 of 0.755 - 0.768 versus 0.752), whereas supplying out-of-range masses sharply degrades the MLP and recurrent predictors. These results indicate that how a physical parameter enters the dynamics mechanism determines whether its out-of-range value helps or harms prediction.",
       "tags": [
-        "eess.SP",
-        "physics.med-ph"
+        "cs.LG",
+        "cs.RO"
       ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Diffusion MRI protocol design for reliable parameter recovery: a unified framework across biophysical models",
-      "url": "https://arxiv.org/abs/2610.28099v1"
+      "title": "Causal world models under physical parameter shifts",
+      "url": "https://arxiv.org/abs/2610.29088v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "8bad07b8eed5c0d50f59e87d",
+      "context_id": "a8178ea2b64d837b3d5015c4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "arxiv",
+      "source_context_sha256": "44006643e197a4aec0a994f263340a2f94a67c861ea90efcf18d70262b5b6804",
+      "source_published": "2026-10-21T17:13:15Z",
+      "source_updated": "2026-10-21T17:13:15Z",
+      "summary": "Passive time-difference-of-arrival (TDOA) localization is well suited for tracking non-cooperative unmanned aerial vehicles (UAVs) that do not report their positions. However, its accuracy degrades under the mixed line-of-sight (LOS) and non-line-of-sight (NLOS) propagation that is typical of low-altitude flight. In this paper, we develop NLOS-aware Cramér--Rao lower bounds (CRLBs) and an empirically calibrated measurement model for TDOA-based UAV localization, and we evaluate both with measurements from five UAV flights on the Aerial Experimentation and Research Platform for Advanced Wireless (AERPAW). The analysis yields an identifiability condition that relates the number of sensors to the number of NLOS links, together with a bias-induced error floor that a wider bandwidth cannot remove. The model parameters are estimated by matching simulated and measured error distributions. Experimental results show that the error depends most strongly on the number of sensors in LOS, while a higher altitude and a wider bandwidth lower the median error. Relocating a sensor that is always in NLOS into the open flight area can lower the median horizontal bound by two orders of magnitude if the relocated sensor is in LOS. The fitted model reproduces the median errors of the 2.5 MHz and 5 MHz flights but underestimates the heaviest error tails. Finally, rejecting outlier fixes lowers the error far more than Kalman or particle filtering, because the remaining error is dominated by bias.",
+      "tags": [
+        "eess.SP"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "NLOS-Aware TDOA-Based UAV Localization: Cramér-Rao Bounds, Measurement Modeling, and Experimental Validation",
+      "url": "https://arxiv.org/abs/2610.30053v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "e0c47d97fea20dbe96fe3366",
+      "context_id": "56409a1c780de639151f2973",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "arxiv",
+      "source_context_sha256": "43ac862636bb72c2835f611b2bf09bad5c08915b4aa653e37b9a9678745f95a8",
+      "source_published": "2026-10-21T09:19:33Z",
+      "source_updated": "2026-10-21T09:19:33Z",
+      "summary": "In this work, we assess the recently introduced spin-adapted TDA for spin-flip-down excitations (XSF-TDA) [Mol. Phys. e2631735 (2026)] as a practical approach to this problem. Starting from a high-spin restricted open-shell Kohn--Sham reference, XSF-TDA generates spin-adapted low-spin roots arising from open--open (OO), core--open (CO), open--virtual (OV), and core--virtual (CV) types of spin-flip-down excitations. Across four application sets comprising 243 benchmark cases, XSF-TDA substantially reduces the systematic positive bias observed for TDA and unrestricted spin-flip TDA (USF-TDA). With the B3LYP functional, XSF-TDA reduces the equal-set-weighted macro-MAE relative to USF-TDA from 0.252 eV (0.158 eV) to 0.102~eV (0.056~eV) with the ALDA0 (multicollinear) kernel. Its accuracy is competitive with state-specific $Δ$DFT and quasiparticle-energy DFT (QE-DFT), while being able to provide deeper mechanistic insight through the response vector. In particular, spin-adapted CV configurations provide selected higher-excitation character that strengthens the OO--CV dynamical-spin-polarization channel, which preferentially stabilizes the singlet states. We also identify an INVEST emitter with appreciable OO--OV mixing, suggesting a possible additional contribution to singlet stabilization when the CV contribution is small. The XSF-TDA method therefore provides practical singlet--triplet gap predictions together with interpretable state analysis for the screening and mechanistic understanding of MR-TADF and INVEST emitters.",
+      "tags": [
+        "physics.chem-ph"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Spin-Adapted Spin-Flip Tamm-Dancoff Approximation (XSF-TDA) for Singlet-Triplet Gaps in MR-TADF and INVEST Emitters",
+      "url": "https://arxiv.org/abs/2610.29460v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "d031d59e17a038baa1ab6065",
+      "context_id": "3ff29f4941ac3d19f2e16f4f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "arxiv",
+      "source_context_sha256": "dc54541ab10fdc577e4f41186e143dace878e35254df5263038e9a63570e2913",
+      "source_published": "2026-10-21T10:25:15Z",
+      "source_updated": "2026-10-21T10:25:15Z",
+      "summary": "Direct preference optimization (DPO) incurs training costs in output scoring, sequence execution, and backpropagation, so reducing supervision alone does not necessarily save computation. We introduce a unified framework for stochastic pruning of the DPO computation graph that independently samples response positions for scoring, response prefixes for execution, and preference branches for backpropagation. By making these selections before the corresponding operations, the framework omits computation at each stage of a training step. Our analysis characterizes the objective changes induced by position and sequence pruning and uses inverse-probability weighting to obtain a conditionally unbiased single-branch gradient estimator for the sampled objective. Controlled measurements show that position and sequence pruning primarily reduce peak memory, with most output-memory savings attributable to an implementation that retains full response supervision. Branch pruning yields a $1.426\\times$ step-time speedup over a concatenated DPO baseline and reduces training time by about 30\\% relative to stock DPO across two model families, with slightly lower mean accuracy and benchmark-dependent changes in open-ended scores. These findings relate the resource benefits of stochastic graph pruning to the computation omitted and the resulting changes in the training objective.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Stochastic Pruning of the DPO Computation Graph: 1.4x Faster Training and Lower Peak Memory",
+      "url": "https://arxiv.org/abs/2610.29538v1"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1114,6 +1304,40 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "Facts Need Passports: Governing Ethics, Privacy, and Bias in Knowledge Graphs",
       "url": "https://zenodo.org/records/23537926"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "1a9aaad9ab2b43c734885a3b",
+      "context_id": "11daa447d564624e8bac1668",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "arxiv",
+      "source_context_sha256": "6e431d13148046682903a9edbba817f9c2094621158f3a190315fdf51dc55172",
+      "source_published": "2026-10-21T09:41:25Z",
+      "source_updated": "2026-10-21T09:41:25Z",
+      "summary": "Nanoscale nonreciprocal elements are needed to control signal flow in scalable quantum technologies, but existing nonreciprocal components are often bulky. Here, we show that a strongly nonreciprocal current-voltage relation can arise entirely from coherent elastic scattering in a mesoscopic Rashba nanowire with gate-defined scatterers. We first identify the symmetry constraints that enforce reciprocal transmission in a phase coherent conductor even when inversion and time-reversal symmetry are broken. We then show how gates that are capacitively coupled to the leads, together with a magnetic scatterer or transverse subband mixing, can remove these constraints. In the weak-scattering regime, nonreciprocal conductance originates from interference between distinct backscattering paths. In the strong-scattering regime, nonreciprocity can be resonantly enhanced by the hybridization of the transmitting channel with bound states that arise from a higher transverse subband or spin-split band. In this regime, we find that a bias-induced change in the gate potentials of about one percent can produce an order-unity diode response, i.e., electrons are transmitted almost as in a clean wire for one bias polarity, whereas for the other polarity the current is strongly suppressed.",
+      "tags": [
+        "cond-mat.mes-hall"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Quantum Interference Enhanced Rectification in Mesoscopic Nanowires",
+      "url": "https://arxiv.org/abs/2610.29484v1"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1153,6 +1377,6 @@
   "schema": "janus.beetle.repo_memory_batch.v1",
   "selection": "BALANCED_LENS_ROLLING_TOP",
   "snapshot_cap": 48,
-  "snapshot_items_total": 32,
+  "snapshot_items_total": 39,
   "target_repository": "Hawkar-usls/janus-lapis"
 }
