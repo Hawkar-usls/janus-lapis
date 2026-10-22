@@ -1,5 +1,5 @@
 {
-  "batch_id": "a47df6bd7fc0adfab632",
+  "batch_id": "51cf0c4bc0769df7c03a",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -185,6 +185,39 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "337a3ba8312985ae25c1c652",
+      "context_id": "c68ddc2d6651b0319333dffa",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "zenodo",
+      "source_context_sha256": "cfaf589d255501eff19a9afcbf460cc85779b4045f49aa6976fbeb0ed43841ce",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "QUANTUM SENSING AND MICROROBOTIC PERTURBATION ANALYSIS OF CELLULAR MICROENVIRONMENTS AT THE LIMIT Microenvironment Gradients &times; Quantum Readout &times; Measurement-Induced Perturbation Separation STARLI Research Institute XXIX &mdash; Flagship Research Monograph 13 What happens when an instrument changes the very microenvironment it is supposed to measure? This research monograph investigates the scientific and engineering boundaries of quantum-enabled thermometry and microrobotic observation in confined, nonclinical cellular microenvironment models. Its central question is whether a localized temperature or magnetic-field gradient can be separated from disturbances introduced by the sensing and manipulation apparatus itself. The proposed research architecture combines hydrogel phantoms, controlled heat sources, nitrogen-vacancy (NV) diamond sensors, independent classical fluorescent thermometry, spatial reference points, blinded sham-actuation experiments, and uncertainty-aware thermal-field reconstruction. Rather than treating a sharp image or improved instrument sensitivity as proof of biological discovery, the study asks how to establish the physical origin, spatial validity, and reproducibility of each reported field. The 770-page volume contains 82 research chapters, five independently paginated research sections per chapter, 30 interconnected mathematical derivation plates, 200 Research Gates, and 33 Phoenix Answer Embryos. Topics range from NV resonance cross-sensitivity, microwave and laser heating, photon statistics, soft-matter interfaces, hydrodynamic motion, and anisotropic thermal conduction to causal controls, inverse problems, spatial covariance, interlaboratory comparison, and qualified instrument retirement. Each research chapter connects a physical mechanism to a falsifiable claim, a nonclinical experimental comparator, a measurement endpoint, and an explicit condition for withholding or retiring the conclusion. The Research Gates preserve actionable questions for future investigators. The Phoenix Answer Embryos offer provisional designs that can be separated, reconfigured, or abandoned when evidence contradicts them. DOI-linked scholarly literature supplies foundations for metrology, quantum sensing, microhandling, and thermal-field measurement without being mistaken for validation of the proposed integrated platform. Scientific Scope and Limitations This is a hypothesis-forming research blueprint, not a report of completed laboratory experiments or independently peer-reviewed findings. It does not establish autonomous nanoscale robotic systems, clinical diagnostic performance, therapeutic efficacy, or universal quantum advantage. Its minimum experimental setting uses confined hydrogels, artificial microenvironments, and properly authorized reference materials. A temperature or magnetic-field reading alone cannot establish cell health, metabolism, viability, or treatment outcomes. STARLI Research Philosophy A scientifically responsible observation includes the possibility that observing changed the result. By making such failures measurable, preserving negative evidence, and leaving research questions open to revision, this monograph invites future human and AI researchers to challenge, extend, and reconstruct its proposed methods.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "QUANTUM SENSING AND MICROROBOTIC PERTURBATION ANALYSIS OF CELLULAR MICROENVIRONMENTS AT THE LIMIT Microenvironment Gradients × Quantum Readout × Measurement-Induced Perturbation Separation STARLI Research Institute XXIX — Flagship Research Monograph 13 What happens when an instrument changes the ver",
+      "url": "https://zenodo.org/records/23562293"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "30e7c6c3bd6908f2468851c2",
       "context_id": "478f136954ad51070f0854b0",
       "delivery_preview_only": true,
@@ -323,38 +356,6 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "4aa488aa50cc7930982fde32",
-      "context_id": "d3a3dab3add4f95077e1237e",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "d191a503f8b2d42a82be54334a215b2a081e631a74ede514a4cd2b37b3958314",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "Terra Scientific Pipelines Service Overview Terra Scientific Pipelines Service, or teaspoons, facilitates running a number of defined scientific pipelines on behalf of users that users can't run themselves in Terra. The most common reason for this is that the pipeline accesses proprietary data that users are not allowed to access directly, but that may be used as e.g. a reference panel for imputation. Supported pipelines Current supported pipelines are: [in development] Imputation (TODO add link/info) Architecture WIP architecture doc Linked LucidChart Development This codebase is in initial development. Requirements This service is written in Java 17, and uses Postgres 13. To run locally, you'll also need: jq - install with brew install jq vault - see DSP's setup instructions here Note that for Step 7, &quot;Create a GitHub Personal Access Token&quot;, you'll want to choose the &quot;Tokens (classic)&quot; option, not the fine-grained access token option. Java 17 - can be installed manually or through IntelliJ which will do it for you when importing the project Postgres 13 - multiple solutions here as long as you have a postgres instance running on localhost:5432 the local app will connect appropriately Postgres.app https://postgresapp.com/ Brew https://formulae.brew.sh/formula/postgresql@13 Tech stack Java 17 temurin Postgres 13.1 Gradle - build automation tool SonarQube - static code security and coverage Trivy - security scanner for docker images Jib - docker image builder for Java Local development To run locally: Make sure you have the requirements installed from above. We recommend IntelliJ as an IDE. Clone the repo (if you see broken inputs build the project to get the generated sources) Run the commands in scripts/postgres-init.sql in your local postgres instance. You will need to be authenticated to access Vault. Run scripts/write-config.sh Run ./gradlew bootRun to spin up the server. Navigate to http://localhost:8080/# If this is your first time deploying to any environment, be sure to use the admin endpoint /api/admin/v1/updatePipelineWorkspaceId/{pipelineName}/{workspaceId} to set your pipeline's workspace id. Workspace id can be found through the terra ui workspace dashboard or through the Rawls GET workspace endpoint. Local development with debugging If using Intellij (only IDE we use on the team), you can run the server with a debugger. Follow the steps above but instead of running ./gradlew bootRun to spin up the server, you can run (debug) the App.java class through intellij and set breakpoints in the code. Be sure to set the GOOGLE_APPLICATION_CREDENTIALS=config/tsps-sa.json in the Run/Debug configuration Environment Variables. Running Tests/Linter Locally Testing Run ./gradlew service:test to run tests Linting Run ./gradlew spotlessCheck to run linter checks Run ./gradlew :service:spotlessApply to apply fix any issues the linter finds (Optional) Install pre-commit hooks [scripts/git-hooks/pre-commit] has been provided to help ensure all submitted changes are formatted correctly. To install all hooks in [scripts/git-hooks], run: git config core.hooksPath scripts/git-hooks Running SonarQube locally SonarQube is a static analysis code that scans code for a wide range of issues, including maintainability and possible bugs. Get more information from DSP SonarQube Docs If you get a build failure due to SonarQube and want to debug the problem locally, you need to get the sonar token from vault before running the gradle task. export SONAR_TOKEN=$(vault read -field=sonar_token secret/secops/ci/sonarcloud/tsps) ./gradlew sonarqube Running this task produces no output unless your project has errors. To generate a report, run using --info : ./gradlew sonarqube --info Connecting to the database To connect to the Teaspoons database, we have a script in dsp-scripts that does all the setup for you. Clone that repo and make sure you're either on Broad Internal wifi or connected to the VPN. Then run the following command: ./",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "github.com/DataBiosphere/terra-scientific-pipelines-service/SubsetVcfByBedFile",
-      "url": "https://zenodo.org/records/23538136"
-    },
-    {
-      "base_direction_id": "large_data_methods",
       "candidate_id": "ee89253ca6b3a50c4e654cbc",
       "context_id": "bdd4c63e78f05ab7cf8f2c73",
       "delivery_preview_only": true,
@@ -489,40 +490,6 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "Better Policies, Worse Verifier Audits",
       "url": "https://arxiv.org/abs/2610.29029v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "9683fec09fc7197b22b5c550",
-      "context_id": "6c058bfc690392a371f7bdaa",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "075945ffb5219cd2b6202d22f6859f3b0e9172c61e4521d441c2842ccf873a31",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "Differentiable logic-gate networks (DLGNs) are attractive for irrigation controllers because their learned Boolean structure can be verified exhaustively, yet the safety case for deploying them under actuator-failure cascades has not been formalised. The work is a design-and-power analysis of a before-after-control-impact (BACI) evaluation protocol, not an observational study: no field data are used or claimed. Operating characteristics were characterised under a declared variance structure with between-cluster SD = 6.0, residual SD = 4.5 and intraclass correlation = 0.64, across 2000 replications per design cell for cluster counts of 8, 16, 24 and 32 and effect sizes of 3, 5 and 8 percentage points.52 clusters are required to detect a 5-percentage-point compliance effect at 80% power under this variance structure, and that the intraclass correlation of 0.64 dominates the design's sensitivity. A formal-safety audit of DLGN controllers is then specified as a finite-state reachability problem over the actuator-failure cascade, with water-rights compliance encoded as an invariant. The contribution is a benchmark protocol that couples a verifiable controller class to a statistically defensible evaluation design, and a demonstration that the evaluation design, not the controller, is the binding constraint on regulatory acceptance.",
-      "tags": [
-        "differentiable logic-gate networks; irrigation controllers; actuator-failure cascades; water-rights "
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Benchmarking Evaluation of Differentiable Logic-Gate Networks for Computer Agriculture Irrigation Controllers Under Actuator-Failure Cascades: An Artificial Intelligence Formal-Safety Audit for Water-Rights Compliance",
-      "url": "https://zenodo.org/records/23544433"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -922,40 +889,6 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "bd9a21474f67f3edb22053e0",
-      "context_id": "cb5ca5d84fce833af663d0e8",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.4167,
-      "source": "arxiv",
-      "source_context_sha256": "62580f6dd1b1cf2592fb7735fb18d2463118c9016c9613c5d65c16d86cbbf9ca",
-      "source_published": "2026-10-20T03:41:00Z",
-      "source_updated": "2026-10-20T03:41:00Z",
-      "summary": "Porous-material adsorption studies require coordinated structure preparation, force-field selection, simulation, validation, and interpretation, making end-to-end automation difficult. We test whether RaspAssistant, a hierarchical multi-agent framework, can carry an adsorption study from force-field preparation through validation and downstream separation analysis. Across twelve multi-agent workflow-reproduction runs spanning four adsorption and separation benchmarks, overall scores ranged from 8.50 to 10.00 on a rubric evaluating workflow correctness, simulation validity, and analysis consistency. In a separate eight-case force-field extraction benchmark, the mean weighted score was 0.967, combining parameter agreement and RASPA readiness. In open-ended studies, the system diagnosed and refined an acetylene force field and, after validating a CO$_2$ force field against MFI experiments, screened 197 pure-silica zeolites that passed automated input checks. These results demonstrate autonomous workflow execution after task specification and input provision: RaspAssistant coordinates, validates, adapts, and documents extended adsorption-simulation workflows while exposing model sensitivity and methodological limitations for expert review.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "RaspAssistant as an Agentic Framework for Automating Adsorption Simulation Research in Porous Materials",
-      "url": "https://arxiv.org/abs/2610.27572v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
       "candidate_id": "7d906203770ed6176e0bcaf8",
       "context_id": "b19884619181f3a5c2423cd1",
       "delivery_preview_only": true,
@@ -1024,6 +957,43 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "04cc73f97e144cbb9d225503",
+      "context_id": "728529edcc14cbc583b9fc79",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "bd3a7909d2a54ecb53c220d636639d08793a2e16ad09f7ddf1f6046fae9823a4",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Context: Software systems operating in regulated domains must often be adapted as legal and regulatory requirements evolve. While identifying regulatory changes is an important first step, determining which parts of a software repository are affected remains largely manual and knowledge-intensive. Objectives: This paper investigates how regulatory changes can be systematically mapped to affected parts of software repositories, and how this analysis can be supported through an evidence-grounded tool. Method: Following a Design Science Research approach, we conducted a multi-stage empirical investigation in collaboration with an industrial partner. We first developed a category-driven impact model linking regulatory change categories to potentially affected repository artifact types and engineering consequences. The model was then validated and refined with practitioners. Based on these findings, we designed and implemented ReguLens, which was subsequently examined through a formative expert evaluation and refined accordingly. The resulting version was evaluated using a controlled benchmark of 25 historical cases from three regulation-dependent open-source repositories. Results:&nbsp; Practitioner validation showed that regulatory change categories&nbsp;provide useful structure for reasoning about likely software consequences, but should be treated as contextual guidance rather than deterministic mappings.&nbsp;The formative expert evaluation indicated that ReguLens can support exploration of potentially affected artifacts while still requiring expert interpretation. This observation was reinforced by the benchmark evaluation: ReguLens&nbsp;achieved 99.3% F1-score and 96.0% balanced accuracy for repository-level&nbsp;impact detection, whereas artifact localization was more challenging. For&nbsp;directly affected artifacts, macro F1 reached 64.1% at file level and 60.6% at&nbsp;container level, but decreased to 21.1% at symbol level. Conclusion:&nbsp; Practitioners can benefit from ReguLens by using it to narrow&nbsp;the search space, identify plausible implementation entry points, and inspect&nbsp;supporting repository evidence. However, incomplete localization shows that&nbsp;human review remains necessary to interpret the evidence and confirm the&nbsp;required software changes. The findings therefore highlight both the potential&nbsp;and the current limitations of AI- assisted support for regulatory impact&nbsp;analysis.",
+      "tags": [
+        "Requirements Engineering",
+        "Regulatory Change, Impact Analysis,",
+        "Regulatory Compliance",
+        "Large Language Models"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Regulatory Impact Analysis in Software Repositories: From Category-Driven Modeling to Evidence-Grounded Tool Support",
+      "url": "https://zenodo.org/records/23562627"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "43196a0b74fd9fae8b11ba4b",
       "context_id": "2658f18705e7764706d53389",
       "delivery_preview_only": true,
@@ -1058,10 +1028,10 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "1e407c87bc47437f17e841e1",
-      "context_id": "775b6dde562bc912e0bccc10",
+      "candidate_id": "65de13ca52b6a8c3c54e999c",
+      "context_id": "e89a74196cf541285bda3d47",
       "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
+      "delivery_preview_truncated": true,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
       "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -1079,16 +1049,14 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 1.3333,
       "source": "zenodo",
-      "source_context_sha256": "49b09b4e4b44d122e130842ff85325b91b6ad57e3a6e5157a5673f9d957ee907",
-      "source_published": "2026-10-21",
+      "source_context_sha256": "1c5e59f6a7db092ce7a5618980aad6f290de3e477edb0efde8ae358cdf6c4a11",
+      "source_published": "2026-10-22",
       "source_updated": "",
-      "summary": "Yield anomaly detectors in computer agriculture routinely attribute harvest shortfalls to a single dominant stressor, yet drought and pest outbreaks frequently co-occur and confound one another's signatures in remotely sensed and agronomic covariates. The framework is methodological and theoretical: it defines the attribution game, states the confounding conditions under which Shapley values are point-identified, and derives upper and lower bounds when concurrent drought and pest outbreak render the attribution non-identified. A worked illustration uses NASA POWER monthly reanalysis air temperature at 2 m for Accra, Ghana (5.6, -0.19) over 2000-2023, comprising 312 monthly observations with a mean of 26.521 C, a standard deviation of 1.24 C and a warming trend of 0.1622 C per decade, to show how a single covariate channel can be bounded before attribution is attempted. The contribution is a bound-based audit protocol that replaces point attribution with interval attribution and specifies the evidence required to narrow those intervals in operational detector pipelines.",
-      "tags": [
-        "causal attribution; Shapley decomposition; yield anomaly detection; drought-pest confounding; comput"
-      ],
+      "summary": "COUNTERFACTUAL MEASUREMENT AND CAUSAL INFERENCE IN MICROROBOTIC SAMPLING AT THE LIMIT &nbsp; Intervention Design &times; Counterfactual Controls &times; Scientific Identifiability &nbsp; STARLI Research Institute XXIX &mdash; Flagship Research Monograph 12 &nbsp; When a microrobot manipulates a biological sample, how can researchers determine whether an observed change originates from the sample itself, the manipulation process, or the measurement system? &nbsp; This research monograph explores the intersection of microrobotic engineering, experimental design, causal inference, measurement science, and uncertainty quantification. &nbsp; Its central investigation concerns the fundamental problem of counterfactual measurement: the same physical sample cannot simultaneously experience two mutually exclusive interventions. &nbsp; Consequently, establishing causal effects requires carefully constructed experimental comparisons, explicit identification assumptions, independent reference measurements, and transparent uncertainty assessment. &nbsp; The research framework investigates randomized microrobotic manipulation, passive transport controls, sham interventions, treatment carryover, temporal confounding, measurement interference, sample contamination, and sensor drift. &nbsp; Particular attention is given to distinguishing genuine intervention effects from apparent improvements caused by changing experimental conditions, measurement calibration, or selective sample recovery. &nbsp; The monograph is organized around 82 research chapters, 30 interconnected mathematical research plates, 200 Research Gates, and 33 Phoenix Answer Embryos. &nbsp; Its mathematical investigations incorporate potential outcomes, average treatment effects, randomized estimators, causal diagrams, interference models, hierarchical uncertainty, measurement covariance, sensitivity analysis, and counterfactual identification. &nbsp; Each Research Gate introduces a scientific question intended to support independent investigation, critical examination, experimental falsification, and future methodological development. &nbsp; The Phoenix Answer Embryos offer provisional research architectures that may be revised, reconstructed, or replaced as new evidence emerges. &nbsp; DOI-linked scientific literature provides methodological foundations and relevant engineering background, while clearly distinguishing established knowledge from proposed research directions. &nbsp; Scientific Boundaries &nbsp; This work presents a hypothesis-forming, nonclinical research architecture. It does not establish autonomous nanoscale robotic capabilities, validated clinical applications, or demonstrated quantum sensing superiority. &nbsp; Its objective is to support the development of reproducible research methods capable of separating observed correlations from experimentally defensible causal explanations. &nbsp; STARLI Research Philosophy &nbsp; Scientific progress is not measured solely by the number of questions answered. &nbsp; It also depends on whether unanswered questions remain accessible, testable, and open to future generations. &nbsp; This monograph is designed to preserve those opportunities for continued discovery.",
+      "tags": [],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Evaluation of Causal-Attribution Bounds for Computer Agriculture Yield Anomaly Detectors Under Concurrent Drought and Pest Outbreak Confounding: An Artificial Intelligence Shapley-Decomposition Audit",
-      "url": "https://zenodo.org/records/23544385"
+      "title": "COUNTERFACTUAL MEASUREMENT AND CAUSAL INFERENCE IN MICROROBOTIC SAMPLING AT THE LIMIT Intervention Design × Counterfactual Controls × Scientific Identifiability STARLI Research Institute XXIX — Flagship Research Monograph 12 When a microrobot manipulates a biological sample, how can researchers dete",
+      "url": "https://zenodo.org/records/23561181"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1275,38 +1243,6 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "5fbdd080fa70efa213b08c94",
-      "context_id": "29c80ec83c333fabe2022b32",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "bias"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.1667,
-      "source": "zenodo",
-      "source_context_sha256": "2913a5880d336c0862cced5857ed2f841043c3e5f4a3e9ed24beec85723c8657",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "Knowledge graphs (KGs) are increasingly used as sources of knowledge for large language models (LLMs), hybrid AI systems, autonomous agents, and machine reasoning. However, conventional knowledge representation does not, by itself, establish whether a KG fact is ethically appropriate for a particular use, legitimately accessible to a particular agent, or endorsed by a relevant epistemic constituency. This paper proposes an EPB-passport framework that associates knowledge claims with explicit qualifications concerning Ethics, Privacy, and Bias (EPB). At the level of an RDF triple, the passport records whether a claim is appropriate for a specified agent or context, whether the agent is legitimately authorized to access or use it, and whether it is endorsed by a relevant epistemic constituency. These dimensions are distinguished from truth, provenance, and technical accessibility: endorsement does not establish truth, and technical retrievability does not establish legitimate access. The framework follows a conservative principle: a qualification must not be assumed merely because a claim exists or can be derived. Missing qualification information is treated as undetermined rather than as an implicit positive or negative judgment. The same principle applies to derived knowledge: an inferred claim cannot automatically inherit the EPB qualifications of its source facts but requires dimension-specific propagation and reassessment. The passport concept is also extended beyond RDF triples to semantic claims produced and manipulated by LLM-based systems, distinguishing computational units such as tokens and semantic spans from epistemic units such as claims and reasoning episodes. The paper develops and analyzes this conceptual and architectural framework, examining its implications for KGs, LLMs, LLM&ndash;KG hybrid architectures, and autonomous agents. Rather than reporting an implementation or empirical evaluation, it establishes a basis for explicit, context-sensitive governance of knowledge claims and identifies requirements for their formalization, propagation, and practical assessment.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Facts Need Passports: Governing Ethics, Privacy, and Bias in Knowledge Graphs",
-      "url": "https://zenodo.org/records/23537926"
-    },
-    {
-      "base_direction_id": "large_data_methods",
       "candidate_id": "1a9aaad9ab2b43c734885a3b",
       "context_id": "11daa447d564624e8bac1668",
       "delivery_preview_only": true,
@@ -1338,45 +1274,11 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "Quantum Interference Enhanced Rectification in Mesoscopic Nanowires",
       "url": "https://arxiv.org/abs/2610.29484v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "21f45d732ecd23c35d157720",
-      "context_id": "01317843471107da811fc76e",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "bias"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.1667,
-      "source": "zenodo",
-      "source_context_sha256": "ec6c134c35123a7b951b9627b8f91bc8e6bded96194e7e14d7381990ab0383d1",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "Satellite-cloud gaps corrupt the reflectance time series on which computer-agriculture crop-yield estimators depend, and the resulting coverage error propagates into famine early-warning reliability. The framework is evaluated through a replication-based benchmark in which 600 data sets of N = 500 were drawn from a declared data-generating process (intercept 12.0, exposure 0.42, group -3.1, severity 1.35, error SD 4.2) and the ordinary least squares estimator was characterised under the stated process. The benchmark produced an estimated bias of -0.07173 for the intercept and 0.00147 for the exposure coefficient, with RMSE values of 0.89562 and 0.0157 respectively, and empirical coverage of the nominal 95% confidence intervals of 1.0 for both parameters. The coverage-error bound formalises the conditions under which CDA-supported estimators preserve nominal coverage and therefore early-warning reliability, and it identifies the augmentation regimes in which coverage degrades. The contribution is a benchmark protocol and a bound that make the reliability consequences of cloud-gap augmentation auditable rather than assumed.",
-      "tags": [
-        "counterfactual data augmentation; crop-yield estimation; satellite-cloud gaps; coverage-error bound;"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Benchmarking Evaluation of Counterfactual Data Augmentation for Computer Agriculture Crop-Yield Estimators Under Satellite-Cloud Gaps: An Artificial Intelligence Coverage-Error Bound for Famine Early-Warning Reliability",
-      "url": "https://zenodo.org/records/23544459"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
   "selection": "BALANCED_LENS_ROLLING_TOP",
   "snapshot_cap": 48,
-  "snapshot_items_total": 39,
+  "snapshot_items_total": 36,
   "target_repository": "Hawkar-usls/janus-lapis"
 }
