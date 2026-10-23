@@ -1,28 +1,28 @@
 {
-  "finished_at": "2026-10-22T23:58:19.716500Z",
+  "finished_at": "2026-10-23T04:36:01.405180Z",
   "graze": {
-    "finished_at": "2026-10-22T23:58:19.716482Z",
+    "finished_at": "2026-10-23T04:36:01.405161Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
-        "returncode": 2,
-        "stderr_tail": "{\"event\": \"ERROR\", \"type\": \"RuntimeError\", \"message\": \"Remote server did not answer the 1-byte probe with HTTP 206. Ocean Beetle refuses to risk a whole-file download. Use --allow-full-download only if you explicitly accept that risk.\"}\n",
-        "stdout_tail": "",
+        "returncode": 0,
+        "stderr_tail": "",
+        "stdout_tail": "{\"event\": \"OPEN\", \"run_id\": \"uwa-channel-content-dc5d937c62b1\", \"disk_shape\": [2553, 12, 320], \"logical_shape\": [320, 12, 2553], \"params\": {\"fs_delay\": 9765.625, \"fs_time\": 48.828125, \"fc\": 13000.0, \"version\": 1.0}, \"resume_from\": 2553, \"stop\": 2553}\n{\"event\": \"COMPLETE\", \"bites\": 40, \"receipts\": \"/home/runner/work/janus-lapis/janus-lapis/beetle-memory/data/beetle-state/grazers/uwa_blue_1_raw_channel/uwa-channel-content-dc5d937c62b1/receipts.jsonl\", \"checkpoint\": \"/home/runner/work/janus-lapis/janus-lapis/beetle-memory/data/beetle-state/grazers/uwa_blue_1_raw_channel/uwa-channel-content-dc5d937c62b1/checkpoint.json\"}\n",
         "task_id": "uwa_blue_1_raw_channel"
       }
     ]
   },
   "mode": "both",
-  "receipt_head": "7cf9c8732382df1e29d0f39418e173762ba8442607985608ff3f92c9b6b05ff3",
+  "receipt_head": "5e05147a5b707f3efb36d2dbbf38d3660e3b581ece1919e38c35eb15474c5750",
   "scout": {
     "errors": [],
-    "finished_at": "2026-10-22T23:58:13.609358Z",
-    "metadata_bytes": 771323,
-    "new_candidates": 14,
+    "finished_at": "2026-10-23T04:35:50.130252Z",
+    "metadata_bytes": 709596,
+    "new_candidates": 66,
     "requests": 36,
-    "started_at": "2026-10-22T23:57:16.284676Z"
+    "started_at": "2026-10-23T04:34:20.618542Z"
   },
-  "started_at": "2026-10-22T23:57:16.284511Z",
+  "started_at": "2026-10-23T04:34:20.618373Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
