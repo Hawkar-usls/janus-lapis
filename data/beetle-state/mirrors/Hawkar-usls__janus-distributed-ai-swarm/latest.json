@@ -1,5 +1,5 @@
 {
-  "batch_id": "0e44936851498a371657",
+  "batch_id": "7ef9456ff07206b9dfc4",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -364,43 +364,6 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "5052e787e4a7a4909b997cd0",
-      "context_id": "b85741be8e9a1f0bbc918379",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "720ed11a8e359dd995a4a2e3b47b21bc0aecc6289e9d1a1ec0c10d1446db3caf",
-      "source_published": "2026-10-22T14:41:36Z",
-      "source_updated": "2026-10-22T14:41:36Z",
-      "summary": "Many LLM agents maintain external persistent memory and derive additional state from past interactions, such as summaries. Deleting an original memory record therefore need not remove information carried by its descendants. We introduce AfterDeleteBench, a controlled behavioral audit for this failure mode in fixed-weight LLM agents. For each synthetic secret, we compare an exposed-then-deleted agent with an otherwise matched agent that was never exposed to the secret, allowing post-deletion recovery to be attributed to the original exposure. In our primary setting, a single query recovers the deleted secret from Qwen2.5-7B-Instruct in roughly two thirds of cases, while matched never-exposed controls have zero recovery. Crucially, recovery does not require a surviving verbatim copy: when the complete secret string is absent and only separately stored components remain under a public composition rule, exact reconstruction succeeds in 62-99% of cases across Qwen, Mistral, and Phi-3. We also show that the response interface is part of the measurement system: target-bearing replies can be scored as failures when the requested format and parser are misaligned. Finally, we separate reconstruction from write-back and fresh-session recall. Provenance-aware closure eliminates observed recovery in the tested positive-baseline settings, whereas an exact-literal write filter blocks reinsertion but cannot erase information already present. Together, these results show that source deletion should be evaluated behaviorally at the level of the agent and its memory system, not only as a storage operation.",
-      "tags": [
-        "cs.CR",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "AfterDeleteBench: Auditing Post-Deletion Information Persistence in LLM Agents",
-      "url": "https://arxiv.org/abs/2610.31366v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
       "candidate_id": "d3cb7721336999556a8ab6d2",
       "context_id": "a4f729f36afb9c64bb96d399",
       "delivery_preview_only": true,
@@ -468,43 +431,6 @@
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
       "title": "Volatility-Corrected Prediction Intervals: Locally Adaptive Uncertainty Quantification for Probabilistic Time-Series Forecasting",
       "url": "https://arxiv.org/abs/2610.31621v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "5052e787e4a7a4909b997cd0",
-      "context_id": "85cd97f2ba75b485c37ef684",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "dc0081243bea8368540d50d3b4784f3abba5db0a23b7fe50a680dc914d930ffe",
-      "source_published": "2026-10-22T14:41:36Z",
-      "source_updated": "2026-10-22T14:41:36Z",
-      "summary": "Many LLM agents maintain external persistent memory and derive additional state from past interactions, such as summaries. Deleting an original memory record therefore need not remove information carried by its descendants. We introduce AfterDeleteBench, a controlled behavioral audit for this failure mode in fixed-weight LLM agents. For each synthetic secret, we compare an exposed-then-deleted agent with an otherwise matched agent that was never exposed to the secret, allowing post-deletion recovery to be attributed to the original exposure. In our primary setting, a single query recovers the deleted secret from Qwen2.5-7B-Instruct in roughly two thirds of cases, while matched never-exposed controls have zero recovery. Crucially, recovery does not require a surviving verbatim copy: when the complete secret string is absent and only separately stored components remain under a public composition rule, exact reconstruction succeeds in 62-99% of cases across Qwen, Mistral, and Phi-3. We also show that the response interface is part of the measurement system: target-bearing replies can be scored as failures when the requested format and parser are misaligned. Finally, we separate reconstruction from write-back and fresh-session recall. Provenance-aware closure eliminates observed recovery in the tested positive-baseline settings, whereas an exact-literal write filter blocks reinsertion but cannot erase information already present. Together, these results show that source deletion should be evaluated behaviorally at the level of the agent and its memory system, not only as a storage operation.",
-      "tags": [
-        "cs.CR",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "AfterDeleteBench: Auditing Post-Deletion Information Persistence in LLM Agents",
-      "url": "https://arxiv.org/abs/2610.31366v1"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1060,6 +986,44 @@
       "url": "https://zenodo.org/records/23608890"
     },
     {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "e6383729efa0df6346c694f2",
+      "context_id": "ffe184d9c97f4ecaf3242091",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "6acc73bb0b0f0a810ba0be933f7fffd2a633e0de00dedbfb6cee6689972cef80",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "RFT-FaultBench provides training-process telemetry for anomaly detection and failure-type diagnosis in reinforcement fine-tuning. This revised dataset contains 2,630 runs (339 normal and 2,291 injected), 72,100 train-step records, and 2,617,600 training trajectories across OpenRLHF, AgentEvolver, and TRL and five task categories: arithmetic reasoning, GSM8K-style mathematical reasoning, code generation, verifiable instruction following, and tool calling. It includes 55 compound-failure runs for detection; diagnosis uses 2,236 single-failure runs. Task versions and native failure-label coverage differ across frameworks. The package includes run-level artifacts, canonical labels and seeds, five seed-grouped evaluation folds, 25 one-shot support draws, provenance and exclusion ledgers, per-file checksums, and Python example loaders and validation tools. Membership follows the frozen 2026-10-12 evaluation snapshot. It updates the earlier 779-run release; no new training was performed during packaging. GitHub companion: AIOps4LLM/RFT-FaultBench . Related manuscript: Towards Robust LLM Post-Training: Automatic Failure Diagnosis for Reinforcement Fine-Tuning. Extract RFT-FaultBench-full.tar.gz and consult its README and docs for schemas, verification evidence, and evaluation scope. The dataset continues the CC BY 4.0 license of the preceding Zenodo version.",
+      "tags": [
+        "reinforcement fine-tuning",
+        "failure diagnosis",
+        "anomaly detection",
+        "LLM",
+        "training telemetry"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "RFT-FaultBench-full",
+      "url": "https://zenodo.org/records/23612747"
+    },
+    {
       "base_direction_id": "large_data_methods",
       "candidate_id": "30aaae460ae02db98a1c9947",
       "context_id": "f956eda1ff5c680bd99d9940",
@@ -1259,13 +1223,13 @@
       "url": "https://zenodo.org/records/23608581"
     },
     {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "51dd0fe08e69231ded457d38",
-      "context_id": "b7d5a0181f5c4e56bcd22d6d",
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "e6383729efa0df6346c694f2",
+      "context_id": "b3466d411dd7b4382140f825",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -1280,18 +1244,21 @@
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "d63e387ed7656397d1f043838681b35db9aa0f21fbdc69d874c582acea66ef79",
-      "source_published": "2026-10-22T14:26:52Z",
-      "source_updated": "2026-10-22T14:26:52Z",
-      "summary": "Generative AI is widely framed as democratizing skilled work by lowering the barrier to producing professional output. Drawing on 21 semi-structured interviews with 27 workers across 21 small and medium-sized businesses (SMBs) in Kenya and Nigeria (July to October 2023), we find that availability alone did not make participation workable. In participants' accounts, drafting was rarely the hard part. The consequential work was making AI-assisted drafts defensible enough to circulate to clients. We identify five intertwined practices through which participants made generative AI workable: using it as draft labour, steering outputs through iterative interaction, switching and comparing across tools, performing release work to make outputs accountable before circulation, and repairing context misfit when outputs failed local requirements. We make two central contributions. First, we specify release work as a distinct, boundary-facing form of accountability labour, evidenced through verification gates, traceability reconstruction when sources fail, and non-delegation boundaries that decide what can ship. Second, we show how localization and representational failures, which we call context misfit, operate in everyday work as a recurring breakdown-and-repair class, including failures of local language, institutional knowledge, and the credible representation of African people and places, and we document the repair repertoire they demanded. Reframing democratization as workable participation, we argue that reported gains were conditional on this accountability and repair labour, and we translate the findings into four design directions for workplace generative AI. We treat Kenya and Nigeria as two situated cases, not as a representative sample of SMBs or the Global South.",
+      "source": "zenodo",
+      "source_context_sha256": "7f6e0ff8a1dabb5474f07b16f0f41868896f9b6e14dc301c3b3aea1ea2fa60ba",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "RFT-FaultBench provides training-process telemetry for anomaly detection and failure-type diagnosis in reinforcement fine-tuning. This revised dataset contains 2,630 runs (339 normal and 2,291 injected), 72,100 train-step records, and 2,617,600 training trajectories across OpenRLHF, AgentEvolver, and TRL and five task categories: arithmetic reasoning, GSM8K-style mathematical reasoning, code generation, verifiable instruction following, and tool calling. It includes 55 compound-failure runs for detection; diagnosis uses 2,236 single-failure runs. Task versions and native failure-label coverage differ across frameworks. The package includes run-level artifacts, canonical labels and seeds, five seed-grouped evaluation folds, 25 one-shot support draws, provenance and exclusion ledgers, per-file checksums, and Python example loaders and validation tools. Membership follows the frozen 2026-10-12 evaluation snapshot. It updates the earlier 779-run release; no new training was performed during packaging. GitHub companion: AIOps4LLM/RFT-FaultBench . Related manuscript: Towards Robust LLM Post-Training: Automatic Failure Diagnosis for Reinforcement Fine-Tuning. Extract RFT-FaultBench-full.tar.gz and consult its README and docs for schemas, verification evidence, and evaluation scope. The dataset continues the CC BY 4.0 license of the preceding Zenodo version.",
       "tags": [
-        "cs.HC",
-        "cs.CY"
+        "reinforcement fine-tuning",
+        "failure diagnosis",
+        "anomaly detection",
+        "LLM",
+        "training telemetry"
       ],
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Making Generative AI Workable at Work: Accountability, Localization, and Representation in Kenyan and Nigerian Small Businesses",
-      "url": "https://arxiv.org/abs/2610.31344v1"
+      "title": "RFT-FaultBench-full",
+      "url": "https://zenodo.org/records/23612747"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -1749,6 +1716,41 @@
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
       "title": "Precision boundaries in spiking transport of recursive mixture uncertainty: synthetic inputs and permitted evidence",
       "url": "https://zenodo.org/records/23608591"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "7409e7ad7d0331123abc7758",
+      "context_id": "6f38407037537b4faf53125a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "c4e59079fb9675a6c5b17eeac90ecfc8c964c9058016676fab31889858dbfebc",
+      "source_published": "2026-10-22T15:07:49Z",
+      "source_updated": "2026-10-22T15:07:49Z",
+      "summary": "Computer-use agents increasingly handle private information and act on users' behalf across desktop and web applications, including email. Phishing therefore poses privacy and security risks that depend not only on whether agents recognize malicious messages, but also on how they respond. Existing phishing datasets were developed primarily for conventional detection, leaving agent susceptibility to persuasive malicious requests insufficiently characterized. To expose vulnerabilities that pre-existing datasets may miss, we introduce AgentPhishing, a benchmark for evaluating whether persuasive phishing attacks can evade detection and induce LLM email agents to comply with malicious requests. We develop PhishOpt, which optimizes reusable email-generation skills against individual agents under fixed benchmark constraints and a realism constraint. We analyze the generated emails using Cialdini's persuasion principles to identify strategies associated with agent failures and use these findings to construct a universal generation skill. Our evaluation shows that agents can handle pre-existing phishing emails safely yet remain susceptible to attacks adapted to agent behavior, while in an AgentPhishing evaluation of nine agents, four exhibit phishing-detection rates below $10\\%$ and malicious-request compliance rates above $45\\%$. These results highlight the limits of inferring agent safety from conventional phishing evaluations and the need to assess how agents respond to persuasive malicious requests.",
+      "tags": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "AgentPhishing: A Benchmark of LLM Email Agents Under Adaptive Attack",
+      "url": "https://arxiv.org/abs/2610.31404v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",

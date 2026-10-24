@@ -1,5 +1,5 @@
 {
-  "batch_id": "03848e8d69216c4058c6",
+  "batch_id": "601833436bb7b59c9313",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -108,43 +108,6 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "HARMONY: Hierarchical Anchor Retrieval on Manifold for Oblivious-source Machinery Acoustic Anomaly Detection",
       "url": "https://arxiv.org/abs/2610.31093v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "5052e787e4a7a4909b997cd0",
-      "context_id": "b85741be8e9a1f0bbc918379",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "720ed11a8e359dd995a4a2e3b47b21bc0aecc6289e9d1a1ec0c10d1446db3caf",
-      "source_published": "2026-10-22T14:41:36Z",
-      "source_updated": "2026-10-22T14:41:36Z",
-      "summary": "Many LLM agents maintain external persistent memory and derive additional state from past interactions, such as summaries. Deleting an original memory record therefore need not remove information carried by its descendants. We introduce AfterDeleteBench, a controlled behavioral audit for this failure mode in fixed-weight LLM agents. For each synthetic secret, we compare an exposed-then-deleted agent with an otherwise matched agent that was never exposed to the secret, allowing post-deletion recovery to be attributed to the original exposure. In our primary setting, a single query recovers the deleted secret from Qwen2.5-7B-Instruct in roughly two thirds of cases, while matched never-exposed controls have zero recovery. Crucially, recovery does not require a surviving verbatim copy: when the complete secret string is absent and only separately stored components remain under a public composition rule, exact reconstruction succeeds in 62-99% of cases across Qwen, Mistral, and Phi-3. We also show that the response interface is part of the measurement system: target-bearing replies can be scored as failures when the requested format and parser are misaligned. Finally, we separate reconstruction from write-back and fresh-session recall. Provenance-aware closure eliminates observed recovery in the tested positive-baseline settings, whereas an exact-literal write filter blocks reinsertion but cannot erase information already present. Together, these results show that source deletion should be evaluated behaviorally at the level of the agent and its memory system, not only as a storage operation.",
-      "tags": [
-        "cs.CR",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "AfterDeleteBench: Auditing Post-Deletion Information Persistence in LLM Agents",
-      "url": "https://arxiv.org/abs/2610.31366v1"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -446,6 +409,44 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "e6383729efa0df6346c694f2",
+      "context_id": "b3466d411dd7b4382140f825",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "7f6e0ff8a1dabb5474f07b16f0f41868896f9b6e14dc301c3b3aea1ea2fa60ba",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "RFT-FaultBench provides training-process telemetry for anomaly detection and failure-type diagnosis in reinforcement fine-tuning. This revised dataset contains 2,630 runs (339 normal and 2,291 injected), 72,100 train-step records, and 2,617,600 training trajectories across OpenRLHF, AgentEvolver, and TRL and five task categories: arithmetic reasoning, GSM8K-style mathematical reasoning, code generation, verifiable instruction following, and tool calling. It includes 55 compound-failure runs for detection; diagnosis uses 2,236 single-failure runs. Task versions and native failure-label coverage differ across frameworks. The package includes run-level artifacts, canonical labels and seeds, five seed-grouped evaluation folds, 25 one-shot support draws, provenance and exclusion ledgers, per-file checksums, and Python example loaders and validation tools. Membership follows the frozen 2026-10-12 evaluation snapshot. It updates the earlier 779-run release; no new training was performed during packaging. GitHub companion: AIOps4LLM/RFT-FaultBench . Related manuscript: Towards Robust LLM Post-Training: Automatic Failure Diagnosis for Reinforcement Fine-Tuning. Extract RFT-FaultBench-full.tar.gz and consult its README and docs for schemas, verification evidence, and evaluation scope. The dataset continues the CC BY 4.0 license of the preceding Zenodo version.",
+      "tags": [
+        "reinforcement fine-tuning",
+        "failure diagnosis",
+        "anomaly detection",
+        "LLM",
+        "training telemetry"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "RFT-FaultBench-full",
+      "url": "https://zenodo.org/records/23612747"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "1abdc9a4722413283fe61ce0",
       "context_id": "acd3b64c2858fb124412f8c1",
       "delivery_preview_only": true,
@@ -730,41 +731,6 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "014d2c6b214767f4e989e2fd",
-      "context_id": "66304ac668a13f4a25775d3c",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "ef53be824f4f138b23b972ccb07206965f3fcbe6d4c97176a9080af703e24032",
-      "source_published": "2026-10-22T17:26:34Z",
-      "source_updated": "2026-10-22T17:26:34Z",
-      "summary": "Diffusion models have become strong priors for solving inverse problems. However, nonlinear inverse problems such as phase retrieval remain challenging when multiple measurement-consistent solutions are distinguishable only by the prior; we call such measurements ambiguous. Existing diffusion-based samplers rely on local approximations during reconstruction. For an ambiguous measurement, these approximations can allow measurement guidance to favor a measurement-consistent mode that is close to a prior-supported mode but is itself not supported by the prior. Evaluation often masks this type of failure by reporting the best-of-$k$ runs, where the best is selected by comparison to the ground truth. We introduce Prior-Consistent DAPS (PC-DAPS), a variant of Decoupled Annealing Posterior Sampling (DAPS) designed to address this failure case by maintaining multiple candidate solutions within a single sampling run. As annealing noise decreases, PC-DAPS prunes and replaces weaker candidates according to their prior consistency, without any ground-truth access. PC-DAPS reduces the incidence of prior-inconsistent samples and improves sample quality on nonlinear inverse problems while preserving sample quality and diversity on linear inverse problems.",
-      "tags": [
-        "cs.CV",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Beyond Best-of-$k$: Prior-Consistent DAPS for Ambiguous Nonlinear Inverse Problems",
-      "url": "https://arxiv.org/abs/2610.31592v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
       "candidate_id": "68f387a9cc30a026b96d0334",
       "context_id": "594579a2c29d1bf095aecf92",
       "delivery_preview_only": true,
@@ -796,41 +762,6 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "Where Do Long Captions Fail? Position-Aware Diagnosis and Reinforcement Learning for Detailed Image Captioning",
       "url": "https://arxiv.org/abs/2610.31111v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "51dd0fe08e69231ded457d38",
-      "context_id": "4c0881e59ed362fe12f64b6e",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "dd2905977fd8dbd3709d709cee1ab0d8ae546b22c3cab871fc368db4f4957f96",
-      "source_published": "2026-10-22T14:26:52Z",
-      "source_updated": "2026-10-22T14:26:52Z",
-      "summary": "Generative AI is widely framed as democratizing skilled work by lowering the barrier to producing professional output. Drawing on 21 semi-structured interviews with 27 workers across 21 small and medium-sized businesses (SMBs) in Kenya and Nigeria (July to October 2023), we find that availability alone did not make participation workable. In participants' accounts, drafting was rarely the hard part. The consequential work was making AI-assisted drafts defensible enough to circulate to clients. We identify five intertwined practices through which participants made generative AI workable: using it as draft labour, steering outputs through iterative interaction, switching and comparing across tools, performing release work to make outputs accountable before circulation, and repairing context misfit when outputs failed local requirements. We make two central contributions. First, we specify release work as a distinct, boundary-facing form of accountability labour, evidenced through verification gates, traceability reconstruction when sources fail, and non-delegation boundaries that decide what can ship. Second, we show how localization and representational failures, which we call context misfit, operate in everyday work as a recurring breakdown-and-repair class, including failures of local language, institutional knowledge, and the credible representation of African people and places, and we document the repair repertoire they demanded. Reframing democratization as workable participation, we argue that reported gains were conditional on this accountability and repair labour, and we translate the findings into four design directions for workplace generative AI. We treat Kenya and Nigeria as two situated cases, not as a representative sample of SMBs or the Global South.",
-      "tags": [
-        "cs.HC",
-        "cs.CY"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Making Generative AI Workable at Work: Accountability, Localization, and Representation in Kenyan and Nigerian Small Businesses",
-      "url": "https://arxiv.org/abs/2610.31344v1"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1171,6 +1102,44 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "fdfd7413923653b90ddd2628",
+      "context_id": "2f4dce4f635fc7c4a57ec5d9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "437034f4094781a99879e7007ebf9d5cd9e671d2c8c9e1f477e4304d0e7381af",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "ICMarkingSynthetic is a synthetic image dataset of defective integrated circuit markings generated by physics-informed guidelines. The guidelines distinguish surface abrasion and deposition from changes to the marking itself, covering scratch, contamination, missing text, smeared text, and combined defects. Images are accompanied by labels and generation provenance. These models are cause-derived image-formation approximations, not first-principles material or optical simulations. This record contains the dataset archive and its companion generator archive. Reproduction instructions and annotation limitations are documented in the archive READMEs. The record metadata are public; access to both archives is restricted. Reviewers and researchers may request access by contacting mdsamiul.hoque@utdallas.edu and describing their intended use. Access requests are reviewed individually. License scopes: image assets are licensed under CC BY-SA 4.0 with per-source attribution; annotations and provenance are licensed under CC BY 4.0; the generator code is licensed under MIT. These licenses apply to their respective components and are not alternative licenses for every file.",
+      "tags": [
+        "integrated circuits",
+        "synthetic image dataset",
+        "IC marking inspection",
+        "defect detection",
+        "physics-informed guidelines"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "ICMarkingSynthetic: A synthetic image dataset of defective integrated circuit markings generated by physics-informed guidelines",
+      "url": "https://zenodo.org/records/23600809"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "9c0be441024926f21ebc0668",
       "context_id": "1d68e5bbdd94088c2fb73dca",
       "delivery_preview_only": true,
@@ -1444,6 +1413,6 @@
   "schema": "janus.beetle.repo_memory_batch.v1",
   "selection": "BALANCED_LENS_ROLLING_TOP",
   "snapshot_cap": 48,
-  "snapshot_items_total": 39,
+  "snapshot_items_total": 38,
   "target_repository": "Hawkar-usls/janus-lapis"
 }
