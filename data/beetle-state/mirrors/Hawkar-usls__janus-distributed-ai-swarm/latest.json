@@ -1,5 +1,5 @@
 {
-  "batch_id": "9986d71f549dab6d6f41",
+  "batch_id": "cf79c8f48c1e0e310538",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -745,6 +745,46 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "8ff489549cc582ced52d0454",
+      "context_id": "d12c78330c645d4fa60ed9b1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.375,
+      "source": "zenodo",
+      "source_context_sha256": "f3a6e5eaeee52af80ad85974be8f72953e22c68c520779d9e36585d9b41ea94f",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "RASHER begins as a fork of BACoN 0.4.0 (commit 4fdec16, which includes the samtools consensus -C 20 change below), adapted to Illumina short reads. Everything under &quot;BACoN changelog&quot; is the parent tool's history, kept for provenance. Changed Renamed throughout: the package, command, log ( rasher.log ) and lock file ( .rasher.lock ) are rasher . The pipeline reads Illumina short reads , paired or single-end. sample_R1 / sample_R2 , sample_1 / _2 sample.R1 / .R2 and sample.1 / .2 files (bcl2fastq _001 tails included) pair into one sample, in flat folders, subfolders and sample sheets; a file without a mate is a single-end sample, and unmated files next to a sample's pairs are skipped with a warning. A pair is baited whole when either mate matches the reference, mates travel together through every step ( 1_extracted/&lt;sample&gt;_R1/_R2 , 2_filtered/... ), and a desynchronised pair is an error, whether the mates carry identical names or /1 /2 suffixes. Baiting aligns with minimap2 -x sr (BBDuk baits pairs natively with in2= / outm2= ). --keep-bam now keeps the baited reads aligned to the reference (paired samples: a proper paired BAM). Filtering: fastp (adapter trimming, quality and length filters; its JSON and HTML reports land in logs/2_filter/ where MultiQC finds them) followed by deterministic, evenly spread subsampling of the reads (pairs kept whole) to --target-depth . Filtlong, --keep-percent and --filter-by-reference are gone; --min-read-length defaults to 50. Fasta reads skip fastp and are filtered by length. Templated assembly aligns pairs with minimap2 -ax sr and calls samtools consensus -X hiseq (call quality at least 20, as BACoN's unreleased change at the time of the fork). De novo assembly: SKESA ( -a skesa ; the recommended de novo assembler — on the real-data benchmark its SNP distances matched SPAdes' with far fewer contigs) or SPAdes ( -a spades , --isolate ; writes the assembly graph, more robust below ~30x depth). Flye and myloasm are gone, with --read-type and --min-size . --snp-method auto is minimap2 for templated assemblies and SKA2 for SPAdes and SKESA assemblies. -m/--memory also sizes SPAdes and SKESA (it was BBDuk-only). A paired sample X next to a sample named X_R1 or X_R2 is an error (their outputs would collide). No assembler flags circular contigs any more, so SKA2's circular-contig end extension no longer applies. Single-end extraction matches read names with a trailing /1 or /2 stripped, as aligners report them. Output folders of BACoN do not resume under RASHER (the checkpoint fingerprints are seeded with the tool's name; every step runs again); BACoN VCFs are rewritten. Checkpoints record each step's own output signature, and a result is only reused when its output is still the file it wrote: a sample returning to a sheet can no longer pick up reads another sample wrote over. Switching a sample between single-end and paired (or fasta and fastq) removes the other shape's files. BBDuk's paired outputs are checked mate against mate, like minimap2's (a desynchronised pair fails the sample); mates named .1 / .2 ( fastq-dump --readids ) pair; the unpaired-reads file of fasterq-dump --split-3 next to its pair is skipped with a warning; a file cannot pair with a link to itself, and files that look like mates but do not pair are warned about. Stale fastp reports are removed on rerun and for samples that fail at baiting. The report and MultiQC drop the circular-contigs column (no short-read assembler flags circles) and say that read pairs were kept whole when either mate matched.",
+      "tags": [
+        "bioinformatics",
+        "illumina",
+        "short reads",
+        "organelle genome",
+        "chloroplast",
+        "genome skimming",
+        "SNP"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "RASHER: Bait, Assemble and Compare Illumina short reads",
+      "url": "https://zenodo.org/records/23628162"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "e6383729efa0df6346c694f2",
       "context_id": "ffe184d9c97f4ecaf3242091",
       "delivery_preview_only": true,
@@ -868,6 +908,42 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "caab60535883ed49dba7fd90",
+      "context_id": "ce94d84eee022bf6e86aea03",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "1e74db808f4acea8988f987b9d901601c196e0f757d6a9951b205d25732a7cda",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Modern web architecture relies on software runtimes to dynamically maintain the boundary between untrusted user input and executable instructions. The recent PHP2Shell vulnerability class illustrates the failure of this model when pushed to edge thresholds, hardware enforcement is the only reliable software security.&nbsp;",
+      "tags": [
+        "cyber security",
+        "php",
+        "php2shell"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "PHP2Shell Security Breach Analysis and Patch",
+      "url": "https://zenodo.org/records/23629065"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "f84d88a646376e02899972e9",
       "context_id": "bda0fc55496d477b45377988",
       "delivery_preview_only": true,
@@ -939,6 +1015,42 @@
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
       "title": "RFT-FaultBench-full",
       "url": "https://zenodo.org/records/23612747"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "caab60535883ed49dba7fd90",
+      "context_id": "af8bfc55307b33412d2306e0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "03854704c437c43482c3eb98c53dc921b03c4142caccb5cdf8c90feca9b98867",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Modern web architecture relies on software runtimes to dynamically maintain the boundary between untrusted user input and executable instructions. The recent PHP2Shell vulnerability class illustrates the failure of this model when pushed to edge thresholds, hardware enforcement is the only reliable software security.&nbsp;",
+      "tags": [
+        "cyber security",
+        "php",
+        "php2shell"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "PHP2Shell Security Breach Analysis and Patch",
+      "url": "https://zenodo.org/records/23629065"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1154,6 +1266,45 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "bab4b5c8abfd21c04fc6ce56",
+      "context_id": "802f4c1e01d111d57b1f37a0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "073e31df47312a4ebc69874a8268d5ef7072f750575f9745930a039a21cb96e3",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Code, frozen configurations, input data, outputs and logs behind the Working sheet for MQG v0.3.8: chiral active Model H in three dimensions — computational validation addendum (MQG: magnetic quorum gravity). The archive contains the pre-registered canonical fit (v1.0), the frozen v1.1 analysis (angular torque test; joint fit with mixed noise), a reproduction on separate hardware, a second-algorithm check, and frozen acceptance tolerances for a future independent fitter. A SHA-256 manifest of every file is included. Interpretation level 1. All dispersion data are synthetic; the results verify software, uncertainty calibration and parameter identifiability, not the physics. The canonical fit v1.0 passes 15 of 16 pre-registered criteria and the v1.1 analysis passes 9 of 10; both failures stay on record. A pre-registered fit by an independent implementer is still open. Licences. Code ( *.py ): MIT licence. Data, outputs, figures and documents: CC BY 4.0. See LICENSE.md in the archive. Use of AI tools. Anthropic Claude, Microsoft Copilot and Google Gemini were used for code development, running the numerical workflow, drafting, editorial review, document organization, literature discovery and verification checks. The author independently reviewed the cited sources, equations, numerical procedures, computational results, scientific interpretations and final claims, and accepts full responsibility for the content. AI-assisted output was not treated as evidence, and computational verification was evaluated separately from physical evidence.",
+      "tags": [
+        "active matter",
+        "chiral active fluid",
+        "Brinkman screening",
+        "pre-registration",
+        "heteroscedastic regression",
+        "reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Code, frozen configurations, input data, outputs and logs behind the MQG v0.3.8 working sheet",
+      "url": "https://zenodo.org/records/23628447"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "e63b4039322db99d1b9cee36",
       "context_id": "7dc9053e9b2ead730bb191db",
       "delivery_preview_only": true,
@@ -1183,6 +1334,45 @@
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
       "title": "uibcdf/pytest-receptor: 1.2.2",
       "url": "https://zenodo.org/records/23624458"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "bab4b5c8abfd21c04fc6ce56",
+      "context_id": "795e9d189a378bc53f924ff6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "b4b47905f8edb2557a95092fffba272202af90d1db8e506ca6d80a52f3c40995",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Code, frozen configurations, input data, outputs and logs behind the Working sheet for MQG v0.3.8: chiral active Model H in three dimensions — computational validation addendum (MQG: magnetic quorum gravity). The archive contains the pre-registered canonical fit (v1.0), the frozen v1.1 analysis (angular torque test; joint fit with mixed noise), a reproduction on separate hardware, a second-algorithm check, and frozen acceptance tolerances for a future independent fitter. A SHA-256 manifest of every file is included. Interpretation level 1. All dispersion data are synthetic; the results verify software, uncertainty calibration and parameter identifiability, not the physics. The canonical fit v1.0 passes 15 of 16 pre-registered criteria and the v1.1 analysis passes 9 of 10; both failures stay on record. A pre-registered fit by an independent implementer is still open. Licences. Code ( *.py ): MIT licence. Data, outputs, figures and documents: CC BY 4.0. See LICENSE.md in the archive. Use of AI tools. Anthropic Claude, Microsoft Copilot and Google Gemini were used for code development, running the numerical workflow, drafting, editorial review, document organization, literature discovery and verification checks. The author independently reviewed the cited sources, equations, numerical procedures, computational results, scientific interpretations and final claims, and accepts full responsibility for the content. AI-assisted output was not treated as evidence, and computational verification was evaluated separately from physical evidence.",
+      "tags": [
+        "active matter",
+        "chiral active fluid",
+        "Brinkman screening",
+        "pre-registration",
+        "heteroscedastic regression",
+        "reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Code, frozen configurations, input data, outputs and logs behind the MQG v0.3.8 working sheet",
+      "url": "https://zenodo.org/records/23628447"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -1626,210 +1816,6 @@
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
       "title": "HIGH-INTEGRITY CARGO TRANSPORT AND CONTROLLED RELEASE IN MICRO/NANOROBOTICS AT THE LIMIT English Introduction This high-density research monograph develops a falsifiable architecture for high-integrity microrobotic cargo transport and controlled release. Its core coupling is binding kinetics × trans",
       "url": "https://zenodo.org/records/23606974"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "725e923c4a62bdc666bb567c",
-      "context_id": "e691f55ad9868497d10689e9",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.4167,
-      "source": "zenodo",
-      "source_context_sha256": "c8a9a57a2f27a89d191a25bec4c776b173df2c85a563367e9c96a64d0121544b",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "we hereby submit our manuscript entitled &ldquo;Query-Defined Submodels: Publishing Topological Graph Analyses to the Asset Administration Shell&rdquo; for consideration for publication as an Article in the Industrial Informatics and Digital Twin section of Machines (MDPI).The manuscript proposes a unidirectional pipeline that combines graph-based analysis with standardized information exchange through the Asset Administration Shell (AAS). It addresses a specific limitation of AAS-QL regarding traversal through RelationshipElement endpoints, performs the required topological analysis in a property-graph environment, and exports the selected and potentially derived result as a standards-conformant AAS Submodel. The approach is formalized mathematically by representing the analysis as a mapping from a labelled property graph to a result graph and the export as a second mapping fSrom that result into an AAS Submodel. This makes explicit that the exported extent is query-defined. The proposed architecture is further evaluated analytically with respect to communication and maintenance costs under different production-system configurations.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Query Defined Submodels Publishing Topological Graph Analyses to the Asset Administration Shell",
-      "url": "https://zenodo.org/records/23598515"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "c0fe3afa348de0136b9ac071",
-      "context_id": "e44278209b5320412c334cf9",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.4167,
-      "source": "zenodo",
-      "source_context_sha256": "4af33e92f2943aeb02e0eaca51051549e0297901af738c3bd7cb4aaf627dc4d2",
-      "source_published": "2026-10-24",
-      "source_updated": "",
-      "summary": "This record contains the replication data and R code for the study &ldquo;How much does the publication universe matter? Source discontinuities and panel selection in OpenAlex&rdquo; by Vladislav B&iacute;na and Jiř&iacute; Přibil. The package includes OpenAlex source-by-year counts for 2010&ndash;2025 retrieved on 10&ndash;11 October 2026, supplementary OpenAlex and Crossref aggregate counts retrieved on 23 October 2026, a provenance-limited earlier archive of annual totals, and twelve annotated illustrative record checks. It also provides eight R scripts, expected numerical results, numerical inputs to the figures, and English documentation. The default workflow reproduces the saved-data analyses offline using base R. It covers publication growth, continuity panels, source turnover, panel-selection timing, population layers, and sensitivity to comparison horizons and endpoints. Version 2.2 was tested with R 4.5.2 on Windows. Data provenance, variable definitions, limitations and reproduction instructions are documented in README.md. Licensing applies by component: bibliographic metadata and factual numerical data/results are provided under CC0 1.0; R code under the MIT License; and original documentation and author annotations under CC BY 4.0. See LICENSE.txt for the exact scopes.",
-      "tags": [
-        "publication growth",
-        "OpenAlex",
-        "scientometrics",
-        "database coverage",
-        "panel selection",
-        "metadata quality",
-        "reproducibility"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Replication data and code for \"How much does the publication universe matter? Source discontinuities and panel selection in OpenAlex\"",
-      "url": "https://zenodo.org/records/23620714"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "725e923c4a62bdc666bb567c",
-      "context_id": "cf4b60727a788e8794b58347",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.4167,
-      "source": "zenodo",
-      "source_context_sha256": "c2c605b557db56371e9aa39a432c1d44d8705d21a8bb9eb5c41e06a9f5948d01",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "we hereby submit our manuscript entitled &ldquo;Query-Defined Submodels: Publishing Topological Graph Analyses to the Asset Administration Shell&rdquo; for consideration for publication as an Article in the Industrial Informatics and Digital Twin section of Machines (MDPI).The manuscript proposes a unidirectional pipeline that combines graph-based analysis with standardized information exchange through the Asset Administration Shell (AAS). It addresses a specific limitation of AAS-QL regarding traversal through RelationshipElement endpoints, performs the required topological analysis in a property-graph environment, and exports the selected and potentially derived result as a standards-conformant AAS Submodel. The approach is formalized mathematically by representing the analysis as a mapping from a labelled property graph to a result graph and the export as a second mapping fSrom that result into an AAS Submodel. This makes explicit that the exported extent is query-defined. The proposed architecture is further evaluated analytically with respect to communication and maintenance costs under different production-system configurations.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Query Defined Submodels Publishing Topological Graph Analyses to the Asset Administration Shell",
-      "url": "https://zenodo.org/records/23598515"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "baf8374cbd456eff9c71b922",
-      "context_id": "bee86bebe19c43f5713d8e13",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.4167,
-      "source": "zenodo",
-      "source_context_sha256": "9d09b51bb682c3962cc0d7fc3a974804c54909a695dd86a1b3b03efaa7e27c35",
-      "source_published": "2026-10-24",
-      "source_updated": "",
-      "summary": "The work builds a foundation of physics from a single assumption: everything is a process, and a process is an ideal sine; its centre, the balance, is the observer. Only the square &mdash; intensity without phase &mdash; passes between levels; from this arise dimensions, the arrow of time, the quantum and the standard. On this basis stable particles are built as standing waves together with their galactic analogues, the initial rules of quantum mechanics and relativity are derived, and the constants are linked to a single number &mdash; the speed of light. Agreement with experiment is at the level of a few percent; the model attributes the discrepancies to the imperfection of the standard. Main results The four stable particles (neutrino, electron, neutron, proton) are the four stable states of a standing wave; masses from the speed of light alone: electron +0.7 %, nucleons about &minus;3 % [result given hypotheses]. The Born rule, the randomness of a single outcome, the 2&radic;2 limit in the Bell test, spin &frac12; and g = 2 [result]. The Lorentz transformation from the &ldquo;speed budget&rdquo; c&sup2; = v&sup2; + v_int&sup2;, the Klein &mdash; Gordon and Schr&ouml;dinger equations, Schwarzschild gravitational time dilation and the light deflection of 1.75&Prime; [result]. Similarity of the small and the large with the step c⁴: the image of the neutron is the stellar mass of the Milky Way (5.5&middot;10&sup1;⁰ versus (6.1 &plusmn; 1.1)&middot;10&sup1;⁰ solar masses) [hypothesis, numerical agreement]. The large end is built by the same logic as the microworld: the construction yields the Hubble constant H₀ = 1/(5c&sup2;) &asymp; 68.7 km/s/Mpc and the smallest acceleration of galaxies a₀ = 1/(10&pi;c) [result given hypotheses]. The gravitational constant G &asymp; c^(&minus;6/5) (0.8 %); the mass of the Universe and the scale of dark energy are expressed through c [hypothesis]. The fine-structure constant has been found as the number 1/&alpha; &asymp; 4&middot;(c/2&pi;)^(1/5) (0.22 %); its meaning is open [observation]. Limitations: the accuracy is percent-level, not parts per million; the standard and several constants remain open questions. The status of each statement is given in the text. Revision dated 2026-10-24: &nbsp; The black hole. A black hole is understood as the construction of mass from the large end: particles build mass from the small end, the black hole from the large one. Perception has a limit of tempo: a process whose tempo is below our smallest does not change for us, so the centre is inaccessible, and for us it is space possessing mass and rotation. The horizon is the transition from space into mass; it grows with mass and is not related to the core. The black hole processes volumetric particles into a plane, and the tension of space, when the sizes of galaxies change, again gives birth to particle&ndash;antiparticle pairs: the cycle is closed. Only black holes that are analogues of elementary particles are considered. G and &alpha;. Both constants have received a geometric reading. Gravity is the work of space in a cross-section, charge is the same work over a closed surface; the surface of a sphere is four times its cross-section, hence the four. Charge is the work of one unpaired half-wave, that is, of one step of the microworld k: 1/&alpha; = 4k. G is gravity from the large end: the whole linear path up to the transition and the step linking it with the small end, G = 1/(c&middot;c^(1/5)), without the four. The link of the two constants is G = 4&alpha;/((2&pi;)^(1/5)&middot;c). In neutral particles the same transition from flat to volume goes through rotation (support: the magnetic moment of the neutron). The residuals of 0.22 % in &alpha; and 0.8 % in G are not yet explained. &nbsp; &nbsp; &nbsp; Работа строит основу физики из одного допущения: всё &mdash; процесс, а процесс &mdash; идеальный синус; его центр, баланс, &mdash; наблюдатель. Между уровнями проходит только квадрат &mdash; интенсивност",
-      "tags": [
-        "process",
-        "sine",
-        "observer",
-        "balance",
-        "intensity",
-        "dimension",
-        "standard",
-        "arrow of time",
-        "quantum",
-        "tower of levels",
-        "frequency",
-        "resonance",
-        "standing wave",
-        "elementary particles",
-        "speed of light",
-        "Compton relation",
-        "процесс",
-        "синус",
-        "наблюдатель",
-        "баланс",
-        "интенсивность",
-        "измерение",
-        "эталон",
-        "стрела времени",
-        "квант",
-        "башня уровней",
-        "частота",
-        "резонанс",
-        "стоячая волна",
-        "элементарные частицы",
-        "скорость света",
-        "соотношение Комптона"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "The Birth of Dimensions: A Formal Skeleton",
-      "url": "https://zenodo.org/records/23618071"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "02ee31188ed7306cd69b697b",
-      "context_id": "abc76374c68973f0c492ed5f",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.4167,
-      "source": "arxiv",
-      "source_context_sha256": "3413ad01d720a35c3b31c5c13098a071c045a0d718667cd382afe6d90f26f6d7",
-      "source_published": "2026-10-21T20:46:24Z",
-      "source_updated": "2026-10-21T20:46:24Z",
-      "summary": "Recent advances in search agents have enabled large language models to tackle complex tasks by retrieving and synthesizing external information. However, existing search agents often lack search-state awareness, i.e., the ability to recognize what information has been obtained and what remains missing, leading to hallucinated reasoning and prematurely terminated search. To address this limitation, we propose Self-Assessment Reinforcement Learning (SARL), a reinforcement learning framework in which models learn to recognize their own search state during training and improve their search behavior accordingly, without requiring additional assessment at test time. SARL achieves this through a dual reward design that captures the corrective effect of each assessment while penalizing excessive reliance on it, jointly encouraging effective and efficient search trajectories. Under this setup, SARL achieves a 24.3% relative improvement over the strongest baseline, with average gains of 35.9% on multi-hop reasoning and 27.9% on deep research benchmarks against the strongest per-benchmark baselines. SARL further surpasses methods built on auxiliary supervision or multi-agent coordination, despite operating as a standalone RL framework with no inference-time scaffolding. Beyond final performance, SARL maintains training stability under extended search horizons, a regime where existing methods consistently degrade, enabling sustained gains as task complexity grows.",
-      "tags": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Self-Assessment Reinforcement Learning for Search-State Awareness in Retrieval-Augmented Large Language Models",
-      "url": "https://arxiv.org/abs/2610.30435v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
