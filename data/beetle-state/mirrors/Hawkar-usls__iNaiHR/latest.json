@@ -1,17 +1,17 @@
 {
-  "batch_id": "48dd40f797dbedc0e6ca",
+  "batch_id": "6020dc90b5caf26af33a",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
   "items": [
     {
-      "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "dbf702dcd44f712283fbe90e",
-      "context_id": "e1bf7286bf6a39d86fee21e2",
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "49d3ab824e799847c5e47de8",
+      "context_id": "5be6bf6c5197137bba765580",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "cognition_memory_reverse::FORWARD",
-      "direction_title": "Cognition / memory / reverse models / representation [FORWARD]",
+      "direction_id": "mirror_bidirectional_provenance::FORWARD",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [FORWARD]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -21,25 +21,23 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "representation",
-        "representation learning",
-        "world model"
+        "bidirectional",
+        "inverse problem"
       ],
       "mirror_lens": "FORWARD",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.0417,
-      "source": "arxiv",
-      "source_context_sha256": "9c654326dd77b489843cd7bb0df25101b27dd4ebc200d9a80d6c7e46233327fc",
-      "source_published": "2026-10-22T04:46:49Z",
-      "source_updated": "2026-10-22T04:46:49Z",
-      "summary": "Video provides a natural source of supervision: what happens next serves as a learning signal for visual world modeling. Yet masked video pretraining focuses on recovering missing content from surrounding context rather than predicting the future from the past. Autoregressive methods instead predict forward one token at a time, but have yet to match joint-embedding methods in representation quality. This gap motivates us to revisit the granularity and space of future prediction. In this work, we introduce VANE, a self-supervised visual pretraining framework built on next-frame prediction in embedding space. A causal encoder summarizes past observations for a state predictor that infers the representation of the entire next frame, making temporal evolution the primary learning signal. This prediction is carried out in a fixed embedding space provided by a frozen semantic tokenizer, emphasizing scene content and structure. To retain fine-grained spatial detail alongside semantic content, a lightweight auxiliary generative decoder reconstructs future-frame patches conditioned on the predicted representations. To unify visual modeling across images and videos, we construct a local-to-global crop sequence for still images, allowing the same encoder to predict newly revealed regions from earlier crops under the same objective. Experiments show that VANE improves with model and data scaling, achieving SOTA on most anticipation, recognition, and dense perception benchmarks among unified encoders. Especially on EPIC-KITCHENS-100 action anticipation, it surpasses V-JEPA 2.1 by 7.1 points in mean-class recall@5. These results demonstrate that next-frame prediction in embedding space is effective and scalable for visual world modeling.",
+      "score": 9.1667,
+      "source": "zenodo",
+      "source_context_sha256": "e77e4fea71f742eaefe05729a36de543fe7634de30fe8f0820aade3e73cd0bca",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Neurons containing joint distribution model (HCR) can propagate in any direction - here one network used as both encoder and decoder of autoencoder, reversing non-invertible functions like y = x^2 as two peaks x = &plusmn;&radic;y with Bayes weights. Applications: nonlinear filtering learned from simulations within 2% of filter knowing the equations, changing prior without refitting, simulation-based inference, sensor outages; code and data included.",
       "tags": [
-        "cs.CV",
-        "cs.AI"
+        "hierarchical correlation reconstruction; HCR; bidirectional neural networks; joint distribution neur"
       ],
       "target_repository": "Hawkar-usls/iNaiHR",
-      "title": "Learning from Next-Frame Prediction: Towards Unified and Scalable Visual Representation Learning",
-      "url": "https://arxiv.org/abs/2610.30724v1"
+      "title": "One neural network, both directions. HCR joint-density neurons read forward and backward",
+      "url": "https://zenodo.org/records/23625010"
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
@@ -291,42 +289,6 @@
       "url": "https://zenodo.org/records/23604927"
     },
     {
-      "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "dfaa29998edbb78e0aa1495b",
-      "context_id": "afc653ebd662e81afaa4e34c",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "cognition_memory_reverse::FORWARD",
-      "direction_title": "Cognition / memory / reverse models / representation [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "world model"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.4583,
-      "source": "arxiv",
-      "source_context_sha256": "86e749ae2514c748733656ab1cfaccfac718893965e1fd87de51eded2ff7b108",
-      "source_published": "2026-10-22T12:43:03Z",
-      "source_updated": "2026-10-22T12:43:03Z",
-      "summary": "Joint-embedding predictive architectures (JEPAs) learn world models in latent space, enabling efficient planning but leaving their states opaque. We introduce Inside-JEPA, which places relational channels for ordered entity pairs inside the JEPA latent state and shows that an inverse-dynamics loss can ground these channels without relation labels when its head reads them, either alone or as part of the full state. On Something-Something V2, latent prediction alone performs no better than a random relation head, while inverse-dynamics supervision that recovers actions from channel changes improves relational AUROC by .065-.103 across ten settings with annotated boxes, by .081 on RH20T robot episodes with held-out tasks, and by .050-.061 across five relations using off-the-shelf detection and tracking. An inverse head on entity latents decodes actions more accurately but barely improves relational grounding; shuffled labels, two label-free objectives, and action labels on only 5% of the pairs also fail to ground the channels. Given an action, predicted relational changes approach the quality of observed future relations (AUROC .599 vs .621). For one-step relational goals, a supervised readout of the 16 channels ranks the correct action among the top five of 65 in 43% of cases, compared with 24% for prediction-only latents and 17% for a frequency prior.",
-      "tags": [
-        "cs.LG",
-        "cs.CV",
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/iNaiHR",
-      "title": "Inside-JEPA: From Prediction to Relational Grounding in Latent World Models",
-      "url": "https://arxiv.org/abs/2610.31194v1"
-    },
-    {
       "base_direction_id": "mirror_bidirectional_provenance",
       "candidate_id": "d863707a1cdc7efbaec80329",
       "context_id": "f349bc41e6cb852f8b22b9e6",
@@ -403,6 +365,38 @@
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "d8cd3629dfd8e47191f17ed8",
+      "context_id": "eb254958792657c881197eef",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "mirror_bidirectional_provenance::FORWARD",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "provenance"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4167,
+      "source": "zenodo",
+      "source_context_sha256": "db6345d9a1375ce6fd1e9990d39e2d5ac1d9ed51af1b88d3f77fd48c65b88f14",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "INTELLIGENT NANO-ACUPUNCTURE AND CLOSED-LOOP NEUROMODULATION AT THE LIMIT White Rainbow Epoch / 33 &times; STARLI Original Civilizational Interpretation A Research Flagship in the STARLI White Rainbow Scientific Library ENGLISH DESCRIPTION This prospective research monograph investigates a sharply bounded engineering question: can nanosensing-inspired instrument interfaces and closed-loop neural feedback produce a measurable improvement in feedback latency and electromyographic outcomes when confronted with blinded false-feedback inputs, sensor disconnection, equal-resource conventional controls and independently verified hard-stop conditions? The scientific emphasis is not a one-off demonstration or a claim of proven therapeutic efficacy. It is a technically accountable methodology in which the raw waveform, hardware timebase, stimulus exposure, causal comparator, calibration record, uncertainty budget and right to abstain remain separately inspectable. The work is organized around three couplings: nanosensing, neural feedback and bounded safety. Its larger civilizational frame is Chinese cultural inheritance &times; modern scientific exploration &times; original White Rainbow Epoch interpretation. Classical acupuncture and traditional Chinese medicine, Laozi's Daoist philosophy, yin&ndash;yang, Five-Phase thinking and the historical vocabulary of meridians or qi are welcomed as cultural and interpretive sources of research questions. They are not relabeled as verified quantum forces, established meridian conductors, or validated clinical mechanisms. The authors' new extensions are explicitly designated White Rainbow Epoch hypotheses, which may be refined, rejected or reformulated through independent experiments. Across 775 pages, the volume contains a scientific-position and provenance dossier; 30 substantive mathematical plates covering distinct routes through optimal control, physical dosimetry, contact mechanics, electromyographic inference, uncertainty propagation, causal identification, robust stability, metrology, quantum-sensor benchmarking, reliability and evidence release; 82 separately introduced chapters with 410 individually paginated scientific studies; 200 expanded Research Gates designed as falsifiable, independently executable research entrances; and 33 Phoenix Answer Embryos that propose distinguishable instruments, null-test designs, conditional answers and paths for scientific metamorphosis after a failed hypothesis.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/iNaiHR",
+      "title": "INTELLIGENT NANO-ACUPUNCTURE AND CLOSED-LOOP NEUROMODULATION AT THE LIMIT White Rainbow Epoch / 33 × STARLI Original Civilizational Interpretation A Research Flagship in the STARLI White Rainbow Scientific Library ENGLISH DESCRIPTION This prospective research monograph investigates a sharply bounded",
+      "url": "https://zenodo.org/records/23624624"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
       "candidate_id": "e63b4039322db99d1b9cee36",
       "context_id": "d720d955901d4af44da1ac1e",
       "delivery_preview_only": true,
@@ -432,6 +426,81 @@
       "target_repository": "Hawkar-usls/iNaiHR",
       "title": "uibcdf/pytest-receptor: 1.2.2",
       "url": "https://zenodo.org/records/23624458"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "49d3ab824e799847c5e47de8",
+      "context_id": "1fb3cd2b478c9f8defd3f2de",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::REVERSE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bidirectional",
+        "inverse",
+        "inverse problem",
+        "inversion",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 22.4167,
+      "source": "zenodo",
+      "source_context_sha256": "f937a7e3072759e14fb2c3e0394a40c8c0b08e93fc10bdea013479bc495f1e5e",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Neurons containing joint distribution model (HCR) can propagate in any direction - here one network used as both encoder and decoder of autoencoder, reversing non-invertible functions like y = x^2 as two peaks x = &plusmn;&radic;y with Bayes weights. Applications: nonlinear filtering learned from simulations within 2% of filter knowing the equations, changing prior without refitting, simulation-based inference, sensor outages; code and data included.",
+      "tags": [
+        "hierarchical correlation reconstruction; HCR; bidirectional neural networks; joint distribution neur"
+      ],
+      "target_repository": "Hawkar-usls/iNaiHR",
+      "title": "One neural network, both directions. HCR joint-density neurons read forward and backward",
+      "url": "https://zenodo.org/records/23625010"
+    },
+    {
+      "base_direction_id": "cognition_memory_reverse",
+      "candidate_id": "49d3ab824e799847c5e47de8",
+      "context_id": "2c86ada629d996e6bf85ac20",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "cognition_memory_reverse::REVERSE",
+      "direction_title": "Cognition / memory / reverse models / representation [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bidirectional",
+        "inverse",
+        "inversion",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 14.7917,
+      "source": "zenodo",
+      "source_context_sha256": "880b31bc0ecf93c9945490c7277a7c8123be5d4721f4c83e6662471daa79f4ec",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Neurons containing joint distribution model (HCR) can propagate in any direction - here one network used as both encoder and decoder of autoencoder, reversing non-invertible functions like y = x^2 as two peaks x = &plusmn;&radic;y with Bayes weights. Applications: nonlinear filtering learned from simulations within 2% of filter knowing the equations, changing prior without refitting, simulation-based inference, sensor outages; code and data included.",
+      "tags": [
+        "hierarchical correlation reconstruction; HCR; bidirectional neural networks; joint distribution neur"
+      ],
+      "target_repository": "Hawkar-usls/iNaiHR",
+      "title": "One neural network, both directions. HCR joint-density neurons read forward and backward",
+      "url": "https://zenodo.org/records/23625010"
     },
     {
       "base_direction_id": "cognition_memory_reverse",
@@ -606,6 +675,47 @@
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "c27bd350f2332fb4517fdb4c",
+      "context_id": "58ef10f06c1338d6228bfd26",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::REVERSE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "provenance",
+        "reconstruction",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.3333,
+      "source": "zenodo",
+      "source_context_sha256": "971143571b7559f048cef9467a90f5b9e897dd66ad37dd6a78d34e677859d24c",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Complete computational-reproduction artifact for Recovery Budgets for Persistent AI-Agent Memory: Bounding Revocation Liability. Version 2.1.0-review includes the original structural and recorded CLI studies, the prospectively frozen 120-question LongMemEval-derived study (two Claude API models, two repetitions, seven policies; 3,360 policy executions), and a separate exploratory 20-question sensitivity study (batch order, revoked-source position, three policies; 1,920 executions). Full public benchmark inputs, frozen protocols, original code, exact recorded requests and responses, usage and spending ledgers, durable SQLite traces, analyses and retention diagnostics are included. Offline reproduction uses recorded responses, disables networking for the reproduction process and requires no API credentials or model charges. Validation included 40 unit tests, the original CLI checks, 3,360 main-study and 1,920 follow-up policy replays, and reconstruction of 128 main-study plus 20 follow-up retrievals. The recorded checks found zero replay discrepancies and made zero new model calls. See verification/ for reports and platform limits. Download and extract recovery-budgets-reproducibility-final.zip, then follow README.txt. The archive contains 26,234 files; online ZIP preview may be unavailable. Correctly weighted live-and-pending quotas and reservations intentionally agree. Episodic memory remains competitive. The separate 20-question follow-up is exploratory and must not be pooled with the 120-question cohort. Scores use strict short-reference EM/F1 rather than official LongMemEval scoring. Replay is computational reproduction, not independent new model sampling. Adaptive-attack robustness, general superiority and production-scale recovery are not established. Anonymous creator attribution is used for review; third-party attribution is retained. MIT applies to original software, CC BY 4.0 to original results and documentation, and LongMemEval retains its MIT notice. Provider services and model weights are not relicensed. The unchanged archive records its preparation-time publication status; this Zenodo landing page and the accompanying release note identify the published release.",
+      "tags": [
+        "AI agent security",
+        "persistent memory",
+        "revocation",
+        "provenance",
+        "reproducibility",
+        "recovery budgets"
+      ],
+      "target_repository": "Hawkar-usls/iNaiHR",
+      "title": "Recovery Budgets for Persistent AI-Agent Memory: Reproducibility Artifact",
+      "url": "https://zenodo.org/records/23626873"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
       "candidate_id": "0552e053d0ab73009e492c1d",
       "context_id": "49d40a219d8d8bf816eb8b04",
       "delivery_preview_only": true,
@@ -678,43 +788,6 @@
       "target_repository": "Hawkar-usls/iNaiHR",
       "title": "From Reversible Bit-Rings to Quantitative Matter Readouts",
       "url": "https://zenodo.org/records/23613487"
-    },
-    {
-      "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "dbf702dcd44f712283fbe90e",
-      "context_id": "869f7573e46f8c8782a3992f",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "cognition_memory_reverse::REVERSE",
-      "direction_title": "Cognition / memory / reverse models / representation [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "representation",
-        "representation learning",
-        "world model"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.0417,
-      "source": "arxiv",
-      "source_context_sha256": "eb745e2015be6ebcba948a62b4103ebaeda671e7e1a91ab246da5f9851563a6d",
-      "source_published": "2026-10-22T04:46:49Z",
-      "source_updated": "2026-10-22T04:46:49Z",
-      "summary": "Video provides a natural source of supervision: what happens next serves as a learning signal for visual world modeling. Yet masked video pretraining focuses on recovering missing content from surrounding context rather than predicting the future from the past. Autoregressive methods instead predict forward one token at a time, but have yet to match joint-embedding methods in representation quality. This gap motivates us to revisit the granularity and space of future prediction. In this work, we introduce VANE, a self-supervised visual pretraining framework built on next-frame prediction in embedding space. A causal encoder summarizes past observations for a state predictor that infers the representation of the entire next frame, making temporal evolution the primary learning signal. This prediction is carried out in a fixed embedding space provided by a frozen semantic tokenizer, emphasizing scene content and structure. To retain fine-grained spatial detail alongside semantic content, a lightweight auxiliary generative decoder reconstructs future-frame patches conditioned on the predicted representations. To unify visual modeling across images and videos, we construct a local-to-global crop sequence for still images, allowing the same encoder to predict newly revealed regions from earlier crops under the same objective. Experiments show that VANE improves with model and data scaling, achieving SOTA on most anticipation, recognition, and dense perception benchmarks among unified encoders. Especially on EPIC-KITCHENS-100 action anticipation, it surpasses V-JEPA 2.1 by 7.1 points in mean-class recall@5. These results demonstrate that next-frame prediction in embedding space is effective and scalable for visual world modeling.",
-      "tags": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/iNaiHR",
-      "title": "Learning from Next-Frame Prediction: Towards Unified and Scalable Visual Representation Learning",
-      "url": "https://arxiv.org/abs/2610.30724v1"
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
@@ -840,72 +913,6 @@
       "url": "https://zenodo.org/records/23609163"
     },
     {
-      "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "b83987a2331d21bb5fae3727",
-      "context_id": "953546a4199ba7a939361b41",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "cognition_memory_reverse::REVERSE",
-      "direction_title": "Cognition / memory / reverse models / representation [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "reverse"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.875,
-      "source": "zenodo",
-      "source_context_sha256": "06c885f80a6697db6d6684f4eabb4e6536a4ecb1dea965ac18884cf40098ee01",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "This protocol presents a systematic, deterministic translation framework for Beinecke MS 408 (The Voynich Manuscript). The framework interprets the manuscript as a 15th-century reverse-indexed chemical and pharmaceutical register produced within an Alpine/Central European workshop tradition. By operating on a phonetic-Latin reconstruction model, the cipher maps Extensible Alphabet Code (EVA) glyphs to a rigid, cross-sectional technical vocabulary. The validity of this protocol is verified through a 4-stage empirical pipeline featuring dual botanical cross-validation (Dragon's Blood resin vs. Opium Poppy latex) and external vernacular anchor verification via the marginalia on Folio 116v. &nbsp;",
-      "tags": [],
-      "target_repository": "Hawkar-usls/iNaiHR",
-      "title": "Voynich Manuscript Final Decoding Procedure",
-      "url": "https://zenodo.org/records/23604976"
-    },
-    {
-      "base_direction_id": "mirror_bidirectional_provenance",
-      "candidate_id": "b83987a2331d21bb5fae3727",
-      "context_id": "77d704ef17778811ece6fac8",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "mirror_bidirectional_provenance::REVERSE",
-      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "reverse"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.875,
-      "source": "zenodo",
-      "source_context_sha256": "7a8137df3483eb556dfff8f90d7b016550a68d31491a9f859d88dae62c47d573",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "This protocol presents a systematic, deterministic translation framework for Beinecke MS 408 (The Voynich Manuscript). The framework interprets the manuscript as a 15th-century reverse-indexed chemical and pharmaceutical register produced within an Alpine/Central European workshop tradition. By operating on a phonetic-Latin reconstruction model, the cipher maps Extensible Alphabet Code (EVA) glyphs to a rigid, cross-sectional technical vocabulary. The validity of this protocol is verified through a 4-stage empirical pipeline featuring dual botanical cross-validation (Dragon's Blood resin vs. Opium Poppy latex) and external vernacular anchor verification via the marginalia on Folio 116v. &nbsp;",
-      "tags": [],
-      "target_repository": "Hawkar-usls/iNaiHR",
-      "title": "Voynich Manuscript Final Decoding Procedure",
-      "url": "https://zenodo.org/records/23604976"
-    },
-    {
       "base_direction_id": "mirror_bidirectional_provenance",
       "candidate_id": "2a879fcb7cedbba1ded1fdd8",
       "context_id": "bb93b0978b8177aab79c0fa3",
@@ -940,13 +947,13 @@
       "url": "https://zenodo.org/records/23618790"
     },
     {
-      "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "dbf702dcd44f712283fbe90e",
-      "context_id": "39d8fae846d9488f38996285",
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "6725d96fd3041bfeb9f857b3",
+      "context_id": "9ed9871b4536de1cf64d7be1",
       "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "cognition_memory_reverse::COUNTEREVIDENCE",
-      "direction_title": "Cognition / memory / reverse models / representation [COUNTEREVIDENCE]",
+      "delivery_preview_truncated": true,
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -956,25 +963,57 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "representation",
-        "representation learning",
-        "world model"
+        "bias",
+        "failure",
+        "provenance"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.0417,
-      "source": "arxiv",
-      "source_context_sha256": "e97c3a88f5a497768462a0a29d9ed3e2be0ba3278fd16e6cd2e8a460bf5928be",
-      "source_published": "2026-10-22T04:46:49Z",
-      "source_updated": "2026-10-22T04:46:49Z",
-      "summary": "Video provides a natural source of supervision: what happens next serves as a learning signal for visual world modeling. Yet masked video pretraining focuses on recovering missing content from surrounding context rather than predicting the future from the past. Autoregressive methods instead predict forward one token at a time, but have yet to match joint-embedding methods in representation quality. This gap motivates us to revisit the granularity and space of future prediction. In this work, we introduce VANE, a self-supervised visual pretraining framework built on next-frame prediction in embedding space. A causal encoder summarizes past observations for a state predictor that infers the representation of the entire next frame, making temporal evolution the primary learning signal. This prediction is carried out in a fixed embedding space provided by a frozen semantic tokenizer, emphasizing scene content and structure. To retain fine-grained spatial detail alongside semantic content, a lightweight auxiliary generative decoder reconstructs future-frame patches conditioned on the predicted representations. To unify visual modeling across images and videos, we construct a local-to-global crop sequence for still images, allowing the same encoder to predict newly revealed regions from earlier crops under the same objective. Experiments show that VANE improves with model and data scaling, achieving SOTA on most anticipation, recognition, and dense perception benchmarks among unified encoders. Especially on EPIC-KITCHENS-100 action anticipation, it surpasses V-JEPA 2.1 by 7.1 points in mean-class recall@5. These results demonstrate that next-frame prediction in embedding space is effective and scalable for visual world modeling.",
+      "score": 9.875,
+      "source": "zenodo",
+      "source_context_sha256": "96b8fcbca70b76f58542510e6ffcf3fc64499cff4c44bb91c8f28829737f6329",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "NANOSENSING ACUPUNCTURE AND ACUPOINT MICROENVIRONMENT METROLOGY AT THE LIMIT STARLI / WHITE RAINBOW EPOCH / 33 x STARLI ORIGINAL CIVILIZATIONAL INTERPRETATION This English-language prospective research monograph asks whether historically nominated acupuncture points exhibit reproducible paired differences in local electrical impedance or optically inferred superficial tissue oxygenation when compared with anatomically and environmentally matched nonpoint sites. Its core three-coupling is Acupoint Microenvironments x Multimodal Metrology x Paired Control. The principal White Rainbow Epoch Hypothesis is deliberately vulnerable to refutation: analysts blinded to point identity must be able to reconstruct an independently calibrated advantage when equally hydrated measurement sites are exchanged under a concealed test condition. Skin water content, contact pressure, temperature, electrode polarization, ordinary neurovascular anatomy, skin pigmentation, photon pathlength and site-selection bias are treated as strong competing explanations, not minor caveats. The civilizational purpose follows a governing three-coupling: Continuity of Chinese Cultural Heritage x Exploration through Modern Science x Original Civilizational Interpretation of the White Rainbow Epoch. Classical acupuncture, Chinese medical philosophy, yin-yang, Five Phases and Daoist thought are welcomed as inherited cultural frameworks capable of generating questions. They are not relabelled novel SI-measurable energy fields or independently validated clinical mechanisms. Established physical laws and metrological statistics likewise remain inherited knowledge rather than purported discoveries by 33 x STARLI. Newly composed, falsifiable interdisciplinary proposals are marked White Rainbow Epoch Hypotheses. Cultural interpretation may remain meaningful even when a particular physical hypothesis fails. The book contains 30 mechanism-distinct golden mathematical plates, 82 scientific chapters and 410 individually paginated research investigations, 200 one-page Research Gates whose large deep-navy opening questions lead to discriminating experiments, and 33 scientifically distinguishable Phoenix Answer Embryos. The plates include complex impedance, electrode polarization, pressure and hydration sensitivity, optical pathlength, chromophore inversion, heat transport, oxygen diffusion, spatial statistics, hierarchical and covariance-aware inference, multiplicity, null-equivalence and hard integrity vetoes. The Gates present concrete blinded challenges, resource-matched traditional metrology baselines, necessary calibration and acceptance margins, failure pathways and independent handoff requirements. Each Phoenix embryo has a different named instrument or provisional mechanism, adversarial test, rival explanation and honest metamorphosis path when rejected. The editorial DOI scope is intentionally limited to three author-associated STARLI mother research volumes: 10.5281/zenodo.23480803 (AI Microrobotic Sensing of Senescent-Cell Heterogeneity at the Limit), 10.5281/zenodo.23486020 (Reconfigurable Robotic Swarms and Continuous Functional Regeneration at the Limit), and 10.5281/zenodo.23318840 (Microrobotic Sampling and Quantum Biosensing Co-Design at the Limit). Their chapter lineages offer methodological ancestry in measurement provenance, bias governance, independent requalification and sample-state preservation. They are not independent evidence that the proposed acupoint effect exists. The project does not exclude established scientific knowledge or ancient philosophy; it simply does not include other authors' DOI records in this particular bibliography.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/iNaiHR",
+      "title": "NANOSENSING ACUPUNCTURE AND ACUPOINT MICROENVIRONMENT METROLOGY AT THE LIMIT STARLI / WHITE RAINBOW EPOCH / 33 x STARLI ORIGINAL CIVILIZATIONAL INTERPRETATION This English-language prospective research monograph asks whether historically nominated acupuncture points exhibit reproducible paired diffe",
+      "url": "https://zenodo.org/records/23625122"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "49d3ab824e799847c5e47de8",
+      "context_id": "13c6a5db700ec0d88784cb48",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bidirectional",
+        "inverse problem"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.1667,
+      "source": "zenodo",
+      "source_context_sha256": "03d7b6c65e40d6a2fed9cb14f206b5c9a9ab36674f8266bcc039fe58958bb7b0",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Neurons containing joint distribution model (HCR) can propagate in any direction - here one network used as both encoder and decoder of autoencoder, reversing non-invertible functions like y = x^2 as two peaks x = &plusmn;&radic;y with Bayes weights. Applications: nonlinear filtering learned from simulations within 2% of filter knowing the equations, changing prior without refitting, simulation-based inference, sensor outages; code and data included.",
       "tags": [
-        "cs.CV",
-        "cs.AI"
+        "hierarchical correlation reconstruction; HCR; bidirectional neural networks; joint distribution neur"
       ],
       "target_repository": "Hawkar-usls/iNaiHR",
-      "title": "Learning from Next-Frame Prediction: Towards Unified and Scalable Visual Representation Learning",
-      "url": "https://arxiv.org/abs/2610.30724v1"
+      "title": "One neural network, both directions. HCR joint-density neurons read forward and backward",
+      "url": "https://zenodo.org/records/23625010"
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
@@ -1156,6 +1195,69 @@
     },
     {
       "base_direction_id": "cognition_memory_reverse",
+      "candidate_id": "a7b8fe9016da38e77691dec7",
+      "context_id": "b1ec4ed2108bca472e64115f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "cognition_memory_reverse::COUNTEREVIDENCE",
+      "direction_title": "Cognition / memory / reverse models / representation [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure",
+        "failure mode",
+        "memory"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.2083,
+      "source": "zenodo",
+      "source_context_sha256": "745ca04165166241e1b703f73b9d42ed438023c97e0abbeb8cb7e9c969fa7f98",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Related: Verification Theater: Measured Failure Modes of AI Verifier Panels , accepted (poster) at the NeurIPS 2026 workshop Who Verifies the Agents? Version of record: SSRN 7653679 , DOI 10.2139/ssrn.7653679 . Cite that version. The same text is also at polyhelper.ai/research/sealed-before-the-open/ and https://github.com/vadimchernets/papers/tree/main/sealed-before-the-open . The registered predictions of Section 8 are on OSF: 10.17605/OSF.IO/9Q86N . The immutable release of the open league files on which every number of the paper rests: 10.5281/zenodo.23552700 . The live league and its open data (CC BY 4.0): trends.polyhelper.ai/markets , trends.polyhelper.ai/api/v1 . This deposit is an archival copy made so that the full text stays retrievable; it makes no separate claim. When an AI model says gold will rise, anyone can score the call at the close, but few can check when it was made. A backtest mixes memory with skill, and an operator's log asks for trust. I propose a standard for measuring AI market forecasts, written as a ladder of checkable requirements, and I run its reference implementation, AI Council · Markets: an open league where fourteen models, seven from US and seven from Chinese laboratories, face one question on one price snapshot. Before each New York open the ten on its Council, five from each side, give probabilities for twelve indicators at four horizons. Each answer is sealed into a hash chain before the price it is scored from, the chain is anchored in Bitcoin and signed by independent time-stamping authorities, and one run per session counts by a rule declared in advance. On 21 October 2026, the first counted morning, every counted answer was signed before the 09:30 ET open. Agreement among the models proved to be a count of independent voices, not a headcount: on two development mornings the seven and eight models sealed before the open were as alike as about 1.6 independent forecasters, nine counted ones were worth 2.23, and the closest pairs crossed the US-China line. Check a seal with three commands, and score my thirty predictions, registered on OSF, before I do.",
+      "tags": [
+        "AI forecasting",
+        "large language models",
+        "financial markets",
+        "forecast evaluation",
+        "Brier score",
+        "calibration",
+        "look-ahead bias",
+        "trusted timestamping",
+        "OpenTimestamps",
+        "effective number of independent voices",
+        "prediction markets",
+        "registered predictions",
+        "hash chain",
+        "proper scoring rules",
+        "climatological base rate",
+        "Brier skill score",
+        "forecast combination",
+        "preregistration",
+        "SHA-256",
+        "RFC 3161",
+        "Polymarket",
+        "Kalshi",
+        "live benchmark",
+        "open data",
+        "reproducibility",
+        "correlated errors",
+        "consensus forecast"
+      ],
+      "target_repository": "Hawkar-usls/iNaiHR",
+      "title": "Sealed Before the Open: A Verifiable Standard for Measuring AI Forecasts of Financial Markets",
+      "url": "https://zenodo.org/records/23626403"
+    },
+    {
+      "base_direction_id": "cognition_memory_reverse",
       "candidate_id": "ae7d8fae379a8ae0701104b4",
       "context_id": "35771994c37f95191b874ecb",
       "delivery_preview_only": true,
@@ -1204,6 +1306,68 @@
       "url": "https://zenodo.org/records/23597515"
     },
     {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "a7b8fe9016da38e77691dec7",
+      "context_id": "ae7a9377d35ca51f49701f09",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.9583,
+      "source": "zenodo",
+      "source_context_sha256": "6bc652f4e47d3e03034a5340f551dc2f5c59c73d226a90840545b259e43cbe7b",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Related: Verification Theater: Measured Failure Modes of AI Verifier Panels , accepted (poster) at the NeurIPS 2026 workshop Who Verifies the Agents? Version of record: SSRN 7653679 , DOI 10.2139/ssrn.7653679 . Cite that version. The same text is also at polyhelper.ai/research/sealed-before-the-open/ and https://github.com/vadimchernets/papers/tree/main/sealed-before-the-open . The registered predictions of Section 8 are on OSF: 10.17605/OSF.IO/9Q86N . The immutable release of the open league files on which every number of the paper rests: 10.5281/zenodo.23552700 . The live league and its open data (CC BY 4.0): trends.polyhelper.ai/markets , trends.polyhelper.ai/api/v1 . This deposit is an archival copy made so that the full text stays retrievable; it makes no separate claim. When an AI model says gold will rise, anyone can score the call at the close, but few can check when it was made. A backtest mixes memory with skill, and an operator's log asks for trust. I propose a standard for measuring AI market forecasts, written as a ladder of checkable requirements, and I run its reference implementation, AI Council · Markets: an open league where fourteen models, seven from US and seven from Chinese laboratories, face one question on one price snapshot. Before each New York open the ten on its Council, five from each side, give probabilities for twelve indicators at four horizons. Each answer is sealed into a hash chain before the price it is scored from, the chain is anchored in Bitcoin and signed by independent time-stamping authorities, and one run per session counts by a rule declared in advance. On 21 October 2026, the first counted morning, every counted answer was signed before the 09:30 ET open. Agreement among the models proved to be a count of independent voices, not a headcount: on two development mornings the seven and eight models sealed before the open were as alike as about 1.6 independent forecasters, nine counted ones were worth 2.23, and the closest pairs crossed the US-China line. Check a seal with three commands, and score my thirty predictions, registered on OSF, before I do.",
+      "tags": [
+        "AI forecasting",
+        "large language models",
+        "financial markets",
+        "forecast evaluation",
+        "Brier score",
+        "calibration",
+        "look-ahead bias",
+        "trusted timestamping",
+        "OpenTimestamps",
+        "effective number of independent voices",
+        "prediction markets",
+        "registered predictions",
+        "hash chain",
+        "proper scoring rules",
+        "climatological base rate",
+        "Brier skill score",
+        "forecast combination",
+        "preregistration",
+        "SHA-256",
+        "RFC 3161",
+        "Polymarket",
+        "Kalshi",
+        "live benchmark",
+        "open data",
+        "reproducibility",
+        "correlated errors",
+        "consensus forecast"
+      ],
+      "target_repository": "Hawkar-usls/iNaiHR",
+      "title": "Sealed Before the Open: A Verifiable Standard for Measuring AI Forecasts of Financial Markets",
+      "url": "https://zenodo.org/records/23626403"
+    },
+    {
       "base_direction_id": "cognition_memory_reverse",
       "candidate_id": "8d41a6f1e53e7e88cef019f8",
       "context_id": "fab6a342bf1ad2606980f852",
@@ -1235,128 +1399,6 @@
       "target_repository": "Hawkar-usls/iNaiHR",
       "title": "Negative Results of Applying Computer Vision and Spatial Code Representations Techniques for Vulnerability Detection — Artifacts",
       "url": "https://zenodo.org/records/23618255"
-    },
-    {
-      "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "1abdc9a4722413283fe61ce0",
-      "context_id": "83fc7b4912ead602e104bcfe",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "cognition_memory_reverse::COUNTEREVIDENCE",
-      "direction_title": "Cognition / memory / reverse models / representation [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "representation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.875,
-      "source": "zenodo",
-      "source_context_sha256": "0fb7f066abe3c038d1863df2d182528496632e0c80b97e837bb8fc99d88062b4",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "We study intransitive probabilistic preferences through dice whose face labels may be repeated. We distinguish restricted models, in which the set of permitted labels depends on the number of sides, from the unrestricted model, which allows arbitrary integer labels. We review existence results, including the exceptional impossibility of a Chinese chain of five four-sided dice, and give an explicit construction establishing the known existence of simple cycles of three-sided dice of every length m &ge;3, with no ties and a net win margin of one. We examine mixed-integer programming, simulated annealing, and lexicographic optimization of the margins. We then extend pairwise comparison to probability measures by means of bounded, measurable, antisymmetric kernels. For complete comparison data with uniform weights, we derive the Hodge decomposition of the margin matrix into an additive score component and an orthogonal, divergence-free residual. We distinguish the failure of an exact additive representation from the existence of strict preference cycles. The minimax theorem ensures that every finite family admits a mixed strategy with nonnegative expected margin against every mixture of that family. For the historical cycle with margins 4, 4, 10, we compute both the decomposition and the equilibrium mixture (2/9, 5/9, 2/9). Applications to portfolios, artistic evaluation, visual perception, and sports clarify the distinctions among independent comparisons, shared scenarios, and expected utility.",
-      "tags": [
-        "Chinese dice",
-        "intransitive preferences",
-        "circular chains",
-        "Mayan dice",
-        "combinatorial optimization",
-        "Hodge decomposition",
-        "mixed strategies"
-      ],
-      "target_repository": "Hawkar-usls/iNaiHR",
-      "title": "Chinese and Mayan Dice: Circular Chains, Explicit Constructions, and Decision Theory",
-      "url": "https://zenodo.org/records/23604229"
-    },
-    {
-      "base_direction_id": "mirror_bidirectional_provenance",
-      "candidate_id": "f69e6cfdb9105c1712030f4f",
-      "context_id": "c67db294c5213bdf61dbc429",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
-      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation",
-        "provenance"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.8333,
-      "source": "zenodo",
-      "source_context_sha256": "4dd05c0da426a8bc6b73411ffc9a037815322ea87d08e96fb413d5c1d2111e2b",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "IrrMapper is a Random Forest classification of Landsat imagery that maps irrigated agriculture each year at 30 m across Arizona, California, Colorado, Idaho, Montana, New Mexico, Nevada, Oregon, Utah, Washington and Wyoming. This deposit is the GeoTIFF release of version 1.2, the product served in the Google Earth Engine public data catalog as UMT/Climate/IrrMapper_RF/v1_2. One zip per state holds one cloud-optimized GeoTIFF per year (450 files; California begins in 1986), the state boundary polygon used for clipping, and grids.json describing every state's raster grid. Values: 1 irrigated, 0 not irrigated, 255 nodata. All files are in EPSG:5070 (NAD83 / Conus Albers) at 30 m on one shared pixel lattice, so all years of a state stack without resampling and neighboring states align pixel for pixel. SHA256 checksums are provided for every GeoTIFF and archive. See README.md for the format, grid definition, provenance and known limitations.",
-      "tags": [
-        "irrigation",
-        "irrigated agriculture",
-        "Landsat",
-        "random forest",
-        "western United States",
-        "land cover",
-        "Google Earth Engine",
-        "IrrMapper"
-      ],
-      "target_repository": "Hawkar-usls/iNaiHR",
-      "title": "IrrMapper v1.2: annual 30 m irrigated-agriculture maps of 11 western US states, 1985-2025",
-      "url": "https://zenodo.org/records/23603289"
-    },
-    {
-      "base_direction_id": "mirror_bidirectional_provenance",
-      "candidate_id": "fdfd7413923653b90ddd2628",
-      "context_id": "7273628e3248788cd73ed184",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
-      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation",
-        "provenance"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.8333,
-      "source": "zenodo",
-      "source_context_sha256": "e119d8087b5e9911e816188fa6841d9eba952f3b63cc13df69deec016375f618",
-      "source_published": "2026-10-24",
-      "source_updated": "",
-      "summary": "ICMarkingSynthetic is a synthetic image dataset of defective integrated circuit markings generated by physics-informed guidelines. The guidelines distinguish surface abrasion and deposition from changes to the marking itself, covering scratch, contamination, missing text, smeared text, and combined defects. Images are accompanied by labels and generation provenance. These models are cause-derived image-formation approximations, not first-principles material or optical simulations. This record contains the dataset archive and its companion generator archive. Reproduction instructions and annotation limitations are documented in the archive READMEs. The record metadata are public; access to both archives is restricted. Reviewers and researchers may request access by contacting mdsamiul.hoque@utdallas.edu and describing their intended use. Access requests are reviewed individually. License scopes: image assets are licensed under CC BY-SA 4.0 with per-source attribution; annotations and provenance are licensed under CC BY 4.0; the generator code is licensed under MIT. These licenses apply to their respective components and are not alternative licenses for every file.",
-      "tags": [
-        "integrated circuits",
-        "synthetic image dataset",
-        "IC marking inspection",
-        "defect detection",
-        "physics-informed guidelines"
-      ],
-      "target_repository": "Hawkar-usls/iNaiHR",
-      "title": "ICMarkingSynthetic: A synthetic image dataset of defective integrated circuit markings generated by physics-informed guidelines",
-      "url": "https://zenodo.org/records/23600809"
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
@@ -1526,6 +1568,76 @@
       "url": "https://zenodo.org/records/23604927"
     },
     {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "d8cd3629dfd8e47191f17ed8",
+      "context_id": "439da518c4fa7a2975167833",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "calibration",
+        "control",
+        "provenance"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 14.5417,
+      "source": "zenodo",
+      "source_context_sha256": "aa2b991a3d924e1a056e56b99d05d4bf93e35d5c39525ea3c4a2f395421ba72d",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "INTELLIGENT NANO-ACUPUNCTURE AND CLOSED-LOOP NEUROMODULATION AT THE LIMIT White Rainbow Epoch / 33 &times; STARLI Original Civilizational Interpretation A Research Flagship in the STARLI White Rainbow Scientific Library ENGLISH DESCRIPTION This prospective research monograph investigates a sharply bounded engineering question: can nanosensing-inspired instrument interfaces and closed-loop neural feedback produce a measurable improvement in feedback latency and electromyographic outcomes when confronted with blinded false-feedback inputs, sensor disconnection, equal-resource conventional controls and independently verified hard-stop conditions? The scientific emphasis is not a one-off demonstration or a claim of proven therapeutic efficacy. It is a technically accountable methodology in which the raw waveform, hardware timebase, stimulus exposure, causal comparator, calibration record, uncertainty budget and right to abstain remain separately inspectable. The work is organized around three couplings: nanosensing, neural feedback and bounded safety. Its larger civilizational frame is Chinese cultural inheritance &times; modern scientific exploration &times; original White Rainbow Epoch interpretation. Classical acupuncture and traditional Chinese medicine, Laozi's Daoist philosophy, yin&ndash;yang, Five-Phase thinking and the historical vocabulary of meridians or qi are welcomed as cultural and interpretive sources of research questions. They are not relabeled as verified quantum forces, established meridian conductors, or validated clinical mechanisms. The authors' new extensions are explicitly designated White Rainbow Epoch hypotheses, which may be refined, rejected or reformulated through independent experiments. Across 775 pages, the volume contains a scientific-position and provenance dossier; 30 substantive mathematical plates covering distinct routes through optimal control, physical dosimetry, contact mechanics, electromyographic inference, uncertainty propagation, causal identification, robust stability, metrology, quantum-sensor benchmarking, reliability and evidence release; 82 separately introduced chapters with 410 individually paginated scientific studies; 200 expanded Research Gates designed as falsifiable, independently executable research entrances; and 33 Phoenix Answer Embryos that propose distinguishable instruments, null-test designs, conditional answers and paths for scientific metamorphosis after a failed hypothesis.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/iNaiHR",
+      "title": "INTELLIGENT NANO-ACUPUNCTURE AND CLOSED-LOOP NEUROMODULATION AT THE LIMIT White Rainbow Epoch / 33 × STARLI Original Civilizational Interpretation A Research Flagship in the STARLI White Rainbow Scientific Library ENGLISH DESCRIPTION This prospective research monograph investigates a sharply bounded",
+      "url": "https://zenodo.org/records/23624624"
+    },
+    {
+      "base_direction_id": "mirror_bidirectional_provenance",
+      "candidate_id": "6725d96fd3041bfeb9f857b3",
+      "context_id": "89c84d8d2595de922c213d36",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "mirror_bidirectional_provenance::CONTROL",
+      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "calibration",
+        "control",
+        "provenance"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 14.5,
+      "source": "zenodo",
+      "source_context_sha256": "3b0a4315da10f3f9189bd469f282ccd86c2642ceef5aa1f0ffa01fa3a1c4eb1c",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "NANOSENSING ACUPUNCTURE AND ACUPOINT MICROENVIRONMENT METROLOGY AT THE LIMIT STARLI / WHITE RAINBOW EPOCH / 33 x STARLI ORIGINAL CIVILIZATIONAL INTERPRETATION This English-language prospective research monograph asks whether historically nominated acupuncture points exhibit reproducible paired differences in local electrical impedance or optically inferred superficial tissue oxygenation when compared with anatomically and environmentally matched nonpoint sites. Its core three-coupling is Acupoint Microenvironments x Multimodal Metrology x Paired Control. The principal White Rainbow Epoch Hypothesis is deliberately vulnerable to refutation: analysts blinded to point identity must be able to reconstruct an independently calibrated advantage when equally hydrated measurement sites are exchanged under a concealed test condition. Skin water content, contact pressure, temperature, electrode polarization, ordinary neurovascular anatomy, skin pigmentation, photon pathlength and site-selection bias are treated as strong competing explanations, not minor caveats. The civilizational purpose follows a governing three-coupling: Continuity of Chinese Cultural Heritage x Exploration through Modern Science x Original Civilizational Interpretation of the White Rainbow Epoch. Classical acupuncture, Chinese medical philosophy, yin-yang, Five Phases and Daoist thought are welcomed as inherited cultural frameworks capable of generating questions. They are not relabelled novel SI-measurable energy fields or independently validated clinical mechanisms. Established physical laws and metrological statistics likewise remain inherited knowledge rather than purported discoveries by 33 x STARLI. Newly composed, falsifiable interdisciplinary proposals are marked White Rainbow Epoch Hypotheses. Cultural interpretation may remain meaningful even when a particular physical hypothesis fails. The book contains 30 mechanism-distinct golden mathematical plates, 82 scientific chapters and 410 individually paginated research investigations, 200 one-page Research Gates whose large deep-navy opening questions lead to discriminating experiments, and 33 scientifically distinguishable Phoenix Answer Embryos. The plates include complex impedance, electrode polarization, pressure and hydration sensitivity, optical pathlength, chromophore inversion, heat transport, oxygen diffusion, spatial statistics, hierarchical and covariance-aware inference, multiplicity, null-equivalence and hard integrity vetoes. The Gates present concrete blinded challenges, resource-matched traditional metrology baselines, necessary calibration and acceptance margins, failure pathways and independent handoff requirements. Each Phoenix embryo has a different named instrument or provisional mechanism, adversarial test, rival explanation and honest metamorphosis path when rejected. The editorial DOI scope is intentionally limited to three author-associated STARLI mother research volumes: 10.5281/zenodo.23480803 (AI Microrobotic Sensing of Senescent-Cell Heterogeneity at the Limit), 10.5281/zenodo.23486020 (Reconfigurable Robotic Swarms and Continuous Functional Regeneration at the Limit), and 10.5281/zenodo.23318840 (Microrobotic Sampling and Quantum Biosensing Co-Design at the Limit). Their chapter lineages offer methodological ancestry in measurement provenance, bias governance, independent requalification and sample-state preservation. They are not independent evidence that the proposed acupoint effect exists. The project does not exclude established scientific knowledge or ancient philosophy; it simply does not include other authors' DOI records in this particular bibliography.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/iNaiHR",
+      "title": "NANOSENSING ACUPUNCTURE AND ACUPOINT MICROENVIRONMENT METROLOGY AT THE LIMIT STARLI / WHITE RAINBOW EPOCH / 33 x STARLI ORIGINAL CIVILIZATIONAL INTERPRETATION This English-language prospective research monograph asks whether historically nominated acupuncture points exhibit reproducible paired diffe",
+      "url": "https://zenodo.org/records/23625122"
+    },
+    {
       "base_direction_id": "cognition_memory_reverse",
       "candidate_id": "0bc19ab4f4e774583f0a8ba4",
       "context_id": "7945ac78d03b39794de098a9",
@@ -1606,44 +1718,6 @@
       "target_repository": "Hawkar-usls/iNaiHR",
       "title": "Artifact package for: Distilling Frozen Time-Series Foundation Model Teachers into Lightweight Edge Anomaly Detectors — A Preregistered Quality–Fidelity–Cost Study",
       "url": "https://zenodo.org/records/23623799"
-    },
-    {
-      "base_direction_id": "cognition_memory_reverse",
-      "candidate_id": "dbf702dcd44f712283fbe90e",
-      "context_id": "c1cfe2e9889d4ebcb1cf23bf",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "cognition_memory_reverse::CONTROL",
-      "direction_title": "Cognition / memory / reverse models / representation [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "representation",
-        "representation learning",
-        "world model"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 13.4167,
-      "source": "arxiv",
-      "source_context_sha256": "f2fe165a50c3a6d16f51ef3c0eea46c11b8152c1302879f7d7ec0bb63e893f9c",
-      "source_published": "2026-10-22T04:46:49Z",
-      "source_updated": "2026-10-22T04:46:49Z",
-      "summary": "Video provides a natural source of supervision: what happens next serves as a learning signal for visual world modeling. Yet masked video pretraining focuses on recovering missing content from surrounding context rather than predicting the future from the past. Autoregressive methods instead predict forward one token at a time, but have yet to match joint-embedding methods in representation quality. This gap motivates us to revisit the granularity and space of future prediction. In this work, we introduce VANE, a self-supervised visual pretraining framework built on next-frame prediction in embedding space. A causal encoder summarizes past observations for a state predictor that infers the representation of the entire next frame, making temporal evolution the primary learning signal. This prediction is carried out in a fixed embedding space provided by a frozen semantic tokenizer, emphasizing scene content and structure. To retain fine-grained spatial detail alongside semantic content, a lightweight auxiliary generative decoder reconstructs future-frame patches conditioned on the predicted representations. To unify visual modeling across images and videos, we construct a local-to-global crop sequence for still images, allowing the same encoder to predict newly revealed regions from earlier crops under the same objective. Experiments show that VANE improves with model and data scaling, achieving SOTA on most anticipation, recognition, and dense perception benchmarks among unified encoders. Especially on EPIC-KITCHENS-100 action anticipation, it surpasses V-JEPA 2.1 by 7.1 points in mean-class recall@5. These results demonstrate that next-frame prediction in embedding space is effective and scalable for visual world modeling.",
-      "tags": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/iNaiHR",
-      "title": "Learning from Next-Frame Prediction: Towards Unified and Scalable Visual Representation Learning",
-      "url": "https://arxiv.org/abs/2610.30724v1"
     },
     {
       "base_direction_id": "mirror_bidirectional_provenance",
@@ -1804,40 +1878,6 @@
       "target_repository": "Hawkar-usls/iNaiHR",
       "title": "uibcdf/pyunitwizard: 0.29.0",
       "url": "https://zenodo.org/records/23604831"
-    },
-    {
-      "base_direction_id": "mirror_bidirectional_provenance",
-      "candidate_id": "8049aaa0f93fcab69ab06ed6",
-      "context_id": "ddde9a245d5782f9585a6efd",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "mirror_bidirectional_provenance::CONTROL",
-      "direction_title": "Mirrors / bidirectionality / provenance / identifiability [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control",
-        "provenance"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 13.0833,
-      "source": "zenodo",
-      "source_context_sha256": "721e4141a30fc07b5eb916597b5e7c210037ba8b9c8b89c0d5a23b3b495d6104",
-      "source_published": "2026-08-12",
-      "source_updated": "",
-      "summary": "Motivation: Variant calling for next-generation sequencing (NGS) data relies on a diverse ecosystem of tools and workflows. Large-scale collaborative studies increasingly adopt federated analysis, where each institution processes sensitive data locally using standardized pipelines. Deploying identical pipelines across multiple centers remains challenging because heterogeneous software environments and computing policies can cause workflow divergence and inconsistent results. Results: We developed CBIcall, a workflow backend-flexible, configuration-driven framework that runs standardized variant-calling pipelines from raw FASTQ files to analysis-ready VCFs. Users define each analysis in a single YAML parameters file, which CBIcall resolves against a controlled workflow registry and resource catalog. The execution driver validates parameters and checks compatibility among pipelines, analysis modes, workflow backends, genome builds, tool versions, and resource bundles. CBIcall supports reproducibility auditing by comparing executions using recorded provenance and output fingerprints. CBIcall dispatches validated workflows natively through Bash, Cromwell, Nextflow and Snakemake backends and provides production-ready pipelines for germline WES, WGS (single-sample or cohort joint genotyping following GATK Best Practices), and mitochondrial DNA analysis. We evaluated analytical performance using public benchmark datasets and validated reproducibility across four computing environments. We further deployed CBIcall in the EU HEREDITARY project, where it processed 1102 samples with both WES and mtDNA pipelines on an institutional HPC system, supporting its suitability for reproducible cohort-scale genomic analyses. Availability and implementation: CBIcall is open source (GPLv3) and distributed with ready-to-run pipelines; full dependency and installation documentation is available at https://github.com/CNAG-Biomedical-Informatics/cbicall.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/iNaiHR",
-      "title": "CBIcall: a configuration-driven framework for variant calling in large sequencing cohorts",
-      "url": "https://zenodo.org/records/23597279"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",

@@ -1,5 +1,5 @@
 {
-  "batch_id": "2dfb8962f94fbcbe4ff4",
+  "batch_id": "1bde1ebc2e6cd4d6c5e1",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -142,41 +142,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "uibcdf/pytest-receptor: 1.2.2",
       "url": "https://zenodo.org/records/23624458"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "641920eb23a3bbdfa0bc3bba",
-      "context_id": "dc742b0ce2c581c7e2803567",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::FORWARD",
-      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "cnf",
-        "sat"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 2.25,
-      "source": "arxiv",
-      "source_context_sha256": "923a160b272ebd03a776265a20e9bff632984572bc7241a377c3d913762c3e66",
-      "source_published": "2026-10-21T23:08:30Z",
-      "source_updated": "2026-10-21T23:08:30Z",
-      "summary": "In this article, we use the PBNF-transform, or Polynomial Boolean Normal Form, described earlier in two articles and now extended to higher arity, to solve Boolean satisfiability problems (SAT), which are part of the P versus NP problem. SAT consists of a statement of conjunctions of clauses, and in our SAT-solving models, we dualize the logical equations, inverting the problem by \\emph{multiplying} letters (literals) in the transferred clauses, now phrases: $pqrs\\cdots s_{\\ell}$, and using a binary iterated composition based on \\emph{adding polynomials} for the conjunctions in our solution formula. We obtain Polynomial Boolean Equations, PBE=0, by also renaming the truth value $1\\mapsto 0$(T). To find a solution, we look for repeating literals in the clauses to factor out. With reversed literal repetition, we can even reduce the CNF to the sum of the transformed clauses.",
-      "tags": [
-        "math.LO"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "A Study in Solution Models for SAT using the PBNF-transform",
-      "url": "https://arxiv.org/abs/2610.30523v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -458,6 +423,66 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a7b8fe9016da38e77691dec7",
+      "context_id": "af075b4b60940b9dd619f782",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "c96402946a258d406f3d07dd0c12db1a0c990000fa2f7bdcc2811e4c3fbb8e30",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Related: Verification Theater: Measured Failure Modes of AI Verifier Panels , accepted (poster) at the NeurIPS 2026 workshop Who Verifies the Agents? Version of record: SSRN 7653679 , DOI 10.2139/ssrn.7653679 . Cite that version. The same text is also at polyhelper.ai/research/sealed-before-the-open/ and https://github.com/vadimchernets/papers/tree/main/sealed-before-the-open . The registered predictions of Section 8 are on OSF: 10.17605/OSF.IO/9Q86N . The immutable release of the open league files on which every number of the paper rests: 10.5281/zenodo.23552700 . The live league and its open data (CC BY 4.0): trends.polyhelper.ai/markets , trends.polyhelper.ai/api/v1 . This deposit is an archival copy made so that the full text stays retrievable; it makes no separate claim. When an AI model says gold will rise, anyone can score the call at the close, but few can check when it was made. A backtest mixes memory with skill, and an operator's log asks for trust. I propose a standard for measuring AI market forecasts, written as a ladder of checkable requirements, and I run its reference implementation, AI Council · Markets: an open league where fourteen models, seven from US and seven from Chinese laboratories, face one question on one price snapshot. Before each New York open the ten on its Council, five from each side, give probabilities for twelve indicators at four horizons. Each answer is sealed into a hash chain before the price it is scored from, the chain is anchored in Bitcoin and signed by independent time-stamping authorities, and one run per session counts by a rule declared in advance. On 21 October 2026, the first counted morning, every counted answer was signed before the 09:30 ET open. Agreement among the models proved to be a count of independent voices, not a headcount: on two development mornings the seven and eight models sealed before the open were as alike as about 1.6 independent forecasters, nine counted ones were worth 2.23, and the closest pairs crossed the US-China line. Check a seal with three commands, and score my thirty predictions, registered on OSF, before I do.",
+      "tags": [
+        "AI forecasting",
+        "large language models",
+        "financial markets",
+        "forecast evaluation",
+        "Brier score",
+        "calibration",
+        "look-ahead bias",
+        "trusted timestamping",
+        "OpenTimestamps",
+        "effective number of independent voices",
+        "prediction markets",
+        "registered predictions",
+        "hash chain",
+        "proper scoring rules",
+        "climatological base rate",
+        "Brier skill score",
+        "forecast combination",
+        "preregistration",
+        "SHA-256",
+        "RFC 3161",
+        "Polymarket",
+        "Kalshi",
+        "live benchmark",
+        "open data",
+        "reproducibility",
+        "correlated errors",
+        "consensus forecast"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Sealed Before the Open: A Verifiable Standard for Measuring AI Forecasts of Financial Markets",
+      "url": "https://zenodo.org/records/23626403"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "e6383729efa0df6346c694f2",
       "context_id": "9caec2912e8e14ffb4dd7b95",
       "delivery_preview_only": true,
@@ -493,6 +518,43 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "RFT-FaultBench-full",
       "url": "https://zenodo.org/records/23612747"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "49d3ab824e799847c5e47de8",
+      "context_id": "83925be670b6d6640e8f8354",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bidirectional",
+        "inverse",
+        "inversion",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 14.7917,
+      "source": "zenodo",
+      "source_context_sha256": "24a6f1021f58dd2aacecb29296bf0996b88de1816bf82126be7962f0f8cfaaba",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Neurons containing joint distribution model (HCR) can propagate in any direction - here one network used as both encoder and decoder of autoencoder, reversing non-invertible functions like y = x^2 as two peaks x = &plusmn;&radic;y with Bayes weights. Applications: nonlinear filtering learned from simulations within 2% of filter knowing the equations, changing prior without refitting, simulation-based inference, sensor outages; code and data included.",
+      "tags": [
+        "hierarchical correlation reconstruction; HCR; bidirectional neural networks; joint distribution neur"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "One neural network, both directions. HCR joint-density neurons read forward and backward",
+      "url": "https://zenodo.org/records/23625010"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -792,6 +854,47 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "c27bd350f2332fb4517fdb4c",
+      "context_id": "a502156a7625bee367f4a483",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "recovery",
+        "verification"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.4167,
+      "source": "zenodo",
+      "source_context_sha256": "b38cd80b34c35a0f14ff210293b189e317250446ce5169378d5181e0a8fe457c",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Complete computational-reproduction artifact for Recovery Budgets for Persistent AI-Agent Memory: Bounding Revocation Liability. Version 2.1.0-review includes the original structural and recorded CLI studies, the prospectively frozen 120-question LongMemEval-derived study (two Claude API models, two repetitions, seven policies; 3,360 policy executions), and a separate exploratory 20-question sensitivity study (batch order, revoked-source position, three policies; 1,920 executions). Full public benchmark inputs, frozen protocols, original code, exact recorded requests and responses, usage and spending ledgers, durable SQLite traces, analyses and retention diagnostics are included. Offline reproduction uses recorded responses, disables networking for the reproduction process and requires no API credentials or model charges. Validation included 40 unit tests, the original CLI checks, 3,360 main-study and 1,920 follow-up policy replays, and reconstruction of 128 main-study plus 20 follow-up retrievals. The recorded checks found zero replay discrepancies and made zero new model calls. See verification/ for reports and platform limits. Download and extract recovery-budgets-reproducibility-final.zip, then follow README.txt. The archive contains 26,234 files; online ZIP preview may be unavailable. Correctly weighted live-and-pending quotas and reservations intentionally agree. Episodic memory remains competitive. The separate 20-question follow-up is exploratory and must not be pooled with the 120-question cohort. Scores use strict short-reference EM/F1 rather than official LongMemEval scoring. Replay is computational reproduction, not independent new model sampling. Adaptive-attack robustness, general superiority and production-scale recovery are not established. Anonymous creator attribution is used for review; third-party attribution is retained. MIT applies to original software, CC BY 4.0 to original results and documentation, and LongMemEval retains its MIT notice. Provider services and model weights are not relicensed. The unchanged archive records its preparation-time publication status; this Zenodo landing page and the accompanying release note identify the published release.",
+      "tags": [
+        "AI agent security",
+        "persistent memory",
+        "revocation",
+        "provenance",
+        "reproducibility",
+        "recovery budgets"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Recovery Budgets for Persistent AI-Agent Memory: Reproducibility Artifact",
+      "url": "https://zenodo.org/records/23626873"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "0552e053d0ab73009e492c1d",
       "context_id": "455cf5211171b2844a278a25",
       "delivery_preview_only": true,
@@ -830,42 +933,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Recovery Budgets for Persistent AI-Agent Memory: Reproducibility Artifact",
       "url": "https://zenodo.org/records/23623902"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "641920eb23a3bbdfa0bc3bba",
-      "context_id": "70ed8603b9e41f29f9eeedc8",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "cnf",
-        "reverse",
-        "sat"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.5417,
-      "source": "arxiv",
-      "source_context_sha256": "b8a6c2827de1ca8ce6bec6d568309a0d27c740896b5f91ec8d001ec465309b1a",
-      "source_published": "2026-10-21T23:08:30Z",
-      "source_updated": "2026-10-21T23:08:30Z",
-      "summary": "In this article, we use the PBNF-transform, or Polynomial Boolean Normal Form, described earlier in two articles and now extended to higher arity, to solve Boolean satisfiability problems (SAT), which are part of the P versus NP problem. SAT consists of a statement of conjunctions of clauses, and in our SAT-solving models, we dualize the logical equations, inverting the problem by \\emph{multiplying} letters (literals) in the transferred clauses, now phrases: $pqrs\\cdots s_{\\ell}$, and using a binary iterated composition based on \\emph{adding polynomials} for the conjunctions in our solution formula. We obtain Polynomial Boolean Equations, PBE=0, by also renaming the truth value $1\\mapsto 0$(T). To find a solution, we look for repeating literals in the clauses to factor out. With reversed literal repetition, we can even reduce the CNF to the sum of the transformed clauses.",
-      "tags": [
-        "math.LO"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "A Study in Solution Models for SAT using the PBNF-transform",
-      "url": "https://arxiv.org/abs/2610.30523v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -958,42 +1025,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "e10467b220313c9681bf2378",
-      "context_id": "688eaf04e9dc5efef0da24bf",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "rup"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7083,
-      "source": "arxiv",
-      "source_context_sha256": "6463571b8824fe55436f2cc42d7a75da620805f34d6d736f6ef5b3b91f53ac0d",
-      "source_published": "2026-10-21T15:06:08Z",
-      "source_updated": "2026-10-22T07:24:01Z",
-      "summary": "Autonomous mobile robots operating in dense crowds and cluttered sites require $360^\\circ$ perception to react to surrounding hazards. While panoramic LiDAR offers full-surround coverage, learning representations within reinforcement learning (RL) is sample-inefficient under sparse rewards, and existing 3D pretrained point-cloud encoders are too memory-heavy for massively parallel RL simulation. We present RangeNav, a compact (183k parameters) LiDAR range-image encoder pretrained entirely on synthetic data. RangeNav uses anisotropic convolutions and circular padding to handle the extreme aspect ratio and azimuthal seam of range images. We pretrain the network using a navigation-aligned objective combining range reconstruction, semantic segmentation, and bird's-eye-view (BEV) prediction, then freeze it for policy learning. In simulation, adding semantic and BEV supervision increases success rates over a reconstruction-only baseline by an average of 32.03 and 23.73 percentage points (pp) in procedurally generated training and out-of-distribution realistic test environments, respectively. Zero-shot real-world deployments on a Unitree B2-W quadruped demonstrate robust navigation through dense crowds, low-light settings, and construction zones where limited-field-of-view depth policies struggle. Code and models will be open-sourced. Project website: https://rangenav.github.io/.",
-      "tags": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation",
-      "url": "https://arxiv.org/abs/2610.29845v2"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "2a879fcb7cedbba1ded1fdd8",
       "context_id": "1f4c0710e5afcb01ded410d9",
       "delivery_preview_only": true,
@@ -1024,6 +1055,69 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "DIGITAL EVIDENCE AND QUALIFICATION ENGINEERING FOR MICROROBOTIC MISSION RELIABILITY AT THE LIMIT English Introduction This high-density research monograph develops a falsifiable qualification architecture for microrobotic mission reliability. Its central coupling is mission evidence x metrological t",
       "url": "https://zenodo.org/records/23618790"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a7b8fe9016da38e77691dec7",
+      "context_id": "235b9490cde2b90d168b46eb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure",
+        "failure mode",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.4583,
+      "source": "zenodo",
+      "source_context_sha256": "7989c61198f3035cf0b4aeac230122fe3b8a254e0f14275f3bb3bffa79adb4e4",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Related: Verification Theater: Measured Failure Modes of AI Verifier Panels , accepted (poster) at the NeurIPS 2026 workshop Who Verifies the Agents? Version of record: SSRN 7653679 , DOI 10.2139/ssrn.7653679 . Cite that version. The same text is also at polyhelper.ai/research/sealed-before-the-open/ and https://github.com/vadimchernets/papers/tree/main/sealed-before-the-open . The registered predictions of Section 8 are on OSF: 10.17605/OSF.IO/9Q86N . The immutable release of the open league files on which every number of the paper rests: 10.5281/zenodo.23552700 . The live league and its open data (CC BY 4.0): trends.polyhelper.ai/markets , trends.polyhelper.ai/api/v1 . This deposit is an archival copy made so that the full text stays retrievable; it makes no separate claim. When an AI model says gold will rise, anyone can score the call at the close, but few can check when it was made. A backtest mixes memory with skill, and an operator's log asks for trust. I propose a standard for measuring AI market forecasts, written as a ladder of checkable requirements, and I run its reference implementation, AI Council · Markets: an open league where fourteen models, seven from US and seven from Chinese laboratories, face one question on one price snapshot. Before each New York open the ten on its Council, five from each side, give probabilities for twelve indicators at four horizons. Each answer is sealed into a hash chain before the price it is scored from, the chain is anchored in Bitcoin and signed by independent time-stamping authorities, and one run per session counts by a rule declared in advance. On 21 October 2026, the first counted morning, every counted answer was signed before the 09:30 ET open. Agreement among the models proved to be a count of independent voices, not a headcount: on two development mornings the seven and eight models sealed before the open were as alike as about 1.6 independent forecasters, nine counted ones were worth 2.23, and the closest pairs crossed the US-China line. Check a seal with three commands, and score my thirty predictions, registered on OSF, before I do.",
+      "tags": [
+        "AI forecasting",
+        "large language models",
+        "financial markets",
+        "forecast evaluation",
+        "Brier score",
+        "calibration",
+        "look-ahead bias",
+        "trusted timestamping",
+        "OpenTimestamps",
+        "effective number of independent voices",
+        "prediction markets",
+        "registered predictions",
+        "hash chain",
+        "proper scoring rules",
+        "climatological base rate",
+        "Brier skill score",
+        "forecast combination",
+        "preregistration",
+        "SHA-256",
+        "RFC 3161",
+        "Polymarket",
+        "Kalshi",
+        "live benchmark",
+        "open data",
+        "reproducibility",
+        "correlated errors",
+        "consensus forecast"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Sealed Before the Open: A Verifiable Standard for Measuring AI Forecasts of Financial Markets",
+      "url": "https://zenodo.org/records/23626403"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1162,6 +1256,40 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Phase Compatibility: Harmonic Combination, Selective Participation, Whole Formation, and Recursive Organisation",
       "url": "https://zenodo.org/records/23597515"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "6725d96fd3041bfeb9f857b3",
+      "context_id": "3f8c384ed1ebc1a6dc5c6370",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "drat",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.625,
+      "source": "zenodo",
+      "source_context_sha256": "e421f6415e0bdd023ff98f00bc5100f8212bd7f94ae19250b327bbf850e4ea29",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "NANOSENSING ACUPUNCTURE AND ACUPOINT MICROENVIRONMENT METROLOGY AT THE LIMIT STARLI / WHITE RAINBOW EPOCH / 33 x STARLI ORIGINAL CIVILIZATIONAL INTERPRETATION This English-language prospective research monograph asks whether historically nominated acupuncture points exhibit reproducible paired differences in local electrical impedance or optically inferred superficial tissue oxygenation when compared with anatomically and environmentally matched nonpoint sites. Its core three-coupling is Acupoint Microenvironments x Multimodal Metrology x Paired Control. The principal White Rainbow Epoch Hypothesis is deliberately vulnerable to refutation: analysts blinded to point identity must be able to reconstruct an independently calibrated advantage when equally hydrated measurement sites are exchanged under a concealed test condition. Skin water content, contact pressure, temperature, electrode polarization, ordinary neurovascular anatomy, skin pigmentation, photon pathlength and site-selection bias are treated as strong competing explanations, not minor caveats. The civilizational purpose follows a governing three-coupling: Continuity of Chinese Cultural Heritage x Exploration through Modern Science x Original Civilizational Interpretation of the White Rainbow Epoch. Classical acupuncture, Chinese medical philosophy, yin-yang, Five Phases and Daoist thought are welcomed as inherited cultural frameworks capable of generating questions. They are not relabelled novel SI-measurable energy fields or independently validated clinical mechanisms. Established physical laws and metrological statistics likewise remain inherited knowledge rather than purported discoveries by 33 x STARLI. Newly composed, falsifiable interdisciplinary proposals are marked White Rainbow Epoch Hypotheses. Cultural interpretation may remain meaningful even when a particular physical hypothesis fails. The book contains 30 mechanism-distinct golden mathematical plates, 82 scientific chapters and 410 individually paginated research investigations, 200 one-page Research Gates whose large deep-navy opening questions lead to discriminating experiments, and 33 scientifically distinguishable Phoenix Answer Embryos. The plates include complex impedance, electrode polarization, pressure and hydration sensitivity, optical pathlength, chromophore inversion, heat transport, oxygen diffusion, spatial statistics, hierarchical and covariance-aware inference, multiplicity, null-equivalence and hard integrity vetoes. The Gates present concrete blinded challenges, resource-matched traditional metrology baselines, necessary calibration and acceptance margins, failure pathways and independent handoff requirements. Each Phoenix embryo has a different named instrument or provisional mechanism, adversarial test, rival explanation and honest metamorphosis path when rejected. The editorial DOI scope is intentionally limited to three author-associated STARLI mother research volumes: 10.5281/zenodo.23480803 (AI Microrobotic Sensing of Senescent-Cell Heterogeneity at the Limit), 10.5281/zenodo.23486020 (Reconfigurable Robotic Swarms and Continuous Functional Regeneration at the Limit), and 10.5281/zenodo.23318840 (Microrobotic Sampling and Quantum Biosensing Co-Design at the Limit). Their chapter lineages offer methodological ancestry in measurement provenance, bias governance, independent requalification and sample-state preservation. They are not independent evidence that the proposed acupoint effect exists. The project does not exclude established scientific knowledge or ancient philosophy; it simply does not include other authors' DOI records in this particular bibliography.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "NANOSENSING ACUPUNCTURE AND ACUPOINT MICROENVIRONMENT METROLOGY AT THE LIMIT STARLI / WHITE RAINBOW EPOCH / 33 x STARLI ORIGINAL CIVILIZATIONAL INTERPRETATION This English-language prospective research monograph asks whether historically nominated acupuncture points exhibit reproducible paired diffe",
+      "url": "https://zenodo.org/records/23625122"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1348,8 +1476,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "bd3a5da46ccc2155a3572164",
-      "context_id": "95533486ee375777de0e05c8",
+      "candidate_id": "fb1576128b921af8b74ee4bd",
+      "context_id": "9b5648ed5ff5acd043d36e6d",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
@@ -1369,94 +1497,14 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.2917,
       "source": "zenodo",
-      "source_context_sha256": "1d01ae1ad4d56b11af2ad425b6b154914826b0027fecd6aad32e58f09ae5386f",
+      "source_context_sha256": "6b147be051eace6bc79b1414bda74e49784047ac62e48a9ba2c405f77157bb60",
       "source_published": "2026-10-24",
       "source_updated": "",
-      "summary": "Two datasets recording immigration detention oversight in the inspecting bodies' and ICE's own published language. The inspections dataset (207 rows) gives the most recent published inspection per facility from ICE Office of Detention Oversight reports in the ICE FOIA Library 2025–2026 listing window (179 facilities) plus the 28 facility-specific DHS Office of Inspector General detention inspection reports of fiscal years 2021–2026, with each report's published Facility Rating and deficient-standards count reproduced verbatim, never re-graded. The deaths dataset (84 rows) lists the deaths in ICE custody in ICE's Detainee Death Reporting tables for fiscal years 2021–2026, each with the ICE death report ICE itself published (name, age, country of citizenship, facility, date of death, and cause of death where the report states one). Sources: ICE FOIA Library, DHS Office of Inspector General, and ICE Detainee Death Reporting, retrieved October 23, 2026. Tool: https://inspections-ledger.straitresearch.org/. Direction and final calls by Athena Anthea; research judgment and technical execution shared with an AI assistant. Version 1.1 (October 24, 2026) adds: a published facility-name crosswalk (200 canonical facilities) with single-facility dossiers joining ODO, OIG, and deaths records per facility; an extraction naming the deficient standards behind the published counts for 52 of the 179 ODO inspection rows (validated by hand-checking 10 reports; coverage and per-row failure reasons stated, never guessed); and deaths tables showing cause stated (12) vs not stated (72) by fiscal year and facility.",
-      "tags": [
-        "immigration detention",
-        "ICE",
-        "detention inspections",
-        "Office of Detention Oversight",
-        "DHS Office of Inspector General",
-        "deaths in custody",
-        "FOIA"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Inspections & Deaths Ledger: detention facility inspection results and deaths in ICE custody from the official record — a Strait Research dataset",
-      "url": "https://zenodo.org/records/23622296"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "48a1f4fdc82d3f4fa8670abd",
-      "context_id": "8b9908d95dc150d5839d824a",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "ac33603e2210dd3abb290d764e043e33df269f52bd03debdbb60a5ac89f200dc",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "Despite significant advances in deep learning-based failure prognosis, existing predictive maintenance frameworks consistently terminate at the prediction step, leaving the critical operational challenge of prioritising maintenance resources across heterogeneous asset fleets unresolved. This paper addresses this gap by proposing an integrated framework that couples Long Short-Term Memory network-based Remaining Useful Life prediction with the Technique for Order of Preference by Similarity to Ideal Solution for data-driven multi-criteria maintenance scheduling, validated on the NASA C-MAPSS FD001 turbofan degradation benchmark. The framework dynamically synthesises predicted health indicators with operational criteria encompassing machine criticality, maintenance cost, and production downtime impact to generate a ranked intervention schedule whose quality is evaluated through a rigorous, assumption-free protocol comprising precision-recall analysis, area under the precision-recall curve, Spearman rank correlation, and a scheduling efficiency ratio against a random baseline. A five-seed ablation study comparing Long Short-Term Memory, Bidirectional Long Short-Term Memory, and Gated Recurrent Unit architectures, with Wilcoxon signed-rank validation, establishes statistically equivalent prediction accuracy, confirming the architecture-agnostic nature of the scheduling design.",
+      "summary": "Highlights of the Study This comprehensive review examines the fatigue behaviour of load-bearing polymeric bone scaffolds , addressing a critical but comparatively underexplored aspect of bone tissue engineering. It evaluates the mechanisms governing fatigue damage and systematically examines how polymer characteristics, microstructure, reinforcing materials, scaffold topology, manufacturing methods, loading conditions, body fluids, and tissue ingrowth influence fatigue performance, with particular emphasis on translating polymeric scaffolds toward reliable load-bearing clinical applications. Key findings: 🟢 Fatigue failure mechanisms: Polymeric scaffolds can undergo both mechanical and thermal fatigue. Repeated cyclic loading causes residual-strain accumulation, stiffness and peak-stress reduction, crack development, and hysteretic heating, which can progressively degrade polymer chains and ultimately cause structural failure. 🟢 Low- and high-cycle fatigue: Low-cycle fatigue generally occurs under relatively high stresses and involves repeated plastic deformation, whereas high-cycle fatigue develops over much larger numbers of cycles under lower stress levels and is primarily associated with elastic deformation and progressive material degradation. 🟢 Material and microstructural effects: Polymer fatigue resistance is strongly governed by molecular and microstructural characteristics. Increased crystallinity, molecular weight, and molecular-chain entanglement can improve fatigue resistance, emphasizing the importance of selecting and tailoring the polymer microstructure for load-bearing scaffolds. 🟢 Reinforcement strategy: Incorporating ceramic or metallic reinforcing phases can substantially improve the fatigue performance of polymeric scaffolds by redistributing applied loads and dissipating energy that would otherwise contribute to polymer deformation and heat generation. 🟢 Hydroxyapatite reinforcement: Incorporation of 15 wt% hydroxyapatite increased the fatigue limit of PLA scaffolds by approximately 17%, while also improving compressive modulus, crack resistance, and hysteresis energy compared with unreinforced PLA. 🟢 Scaffold topology: Pore architecture plays a decisive role in fatigue behaviour by controlling stress distribution and stress concentration. Even scaffolds fabricated from the same polymer and having comparable porosity can exhibit substantially different fatigue lives when their pore geometry and filament arrangement are changed. 🟢 Topology-dependent fatigue life: Among 3D-printed PLA scaffolds with comparable porosity, the tetragonal topology achieved a fatigue life of approximately 4400 cycles, outperforming hexagonal and wheel-like structures at approximately 3200 and 2500 cycles, respectively. 🟢 Advanced scaffold architectures: TPMS, Voronoi, functionally graded, auxetic, and other irregular architectures offer promising approaches for load-bearing scaffolds. TPMS structures are particularly attractive because their smooth transitions at strut junctions may reduce stress concentrations, although their polymer fatigue behaviour remains insufficiently investigated. 🟢 Bone-inspired architecture: Bio-inspired scaffold design can substantially improve fatigue performance. Increasing the thickness of transverse rod-like struts in bone-inspired structures was reported to enhance fatigue life by approximately 10&ndash;100 times with relatively minor effects on density and stiffness. 🟢 Porosity&ndash;strength trade-off: Increasing porosity promotes permeability, vascularization, cell migration, and tissue ingrowth but simultaneously reduces scaffold stiffness, strength, and load-bearing capacity. Therefore, successful scaffold design requires balancing biological benefits against fatigue and mechanical integrity. 🟢 Stress concentration: Geometrical discontinuities and sharp pore corners create localized stress concentrations that accelerate fatigue damage. Circular pores can provide more uniform stress distribu",
       "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Code and analysis: A Deep Learning and TOPSIS Framework for Predictive Maintenance Scheduling in Smart Manufacturing: An Industry 4.0 Approach",
-      "url": "https://zenodo.org/records/23604927"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "1abdc9a4722413283fe61ce0",
-      "context_id": "645f128af6e9f9eae71b69b6",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "cb0a35cc63a45bd6225739c546ac852f93602c89b375f7df48e7204e953fa8a5",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "We study intransitive probabilistic preferences through dice whose face labels may be repeated. We distinguish restricted models, in which the set of permitted labels depends on the number of sides, from the unrestricted model, which allows arbitrary integer labels. We review existence results, including the exceptional impossibility of a Chinese chain of five four-sided dice, and give an explicit construction establishing the known existence of simple cycles of three-sided dice of every length m &ge;3, with no ties and a net win margin of one. We examine mixed-integer programming, simulated annealing, and lexicographic optimization of the margins. We then extend pairwise comparison to probability measures by means of bounded, measurable, antisymmetric kernels. For complete comparison data with uniform weights, we derive the Hodge decomposition of the margin matrix into an additive score component and an orthogonal, divergence-free residual. We distinguish the failure of an exact additive representation from the existence of strict preference cycles. The minimax theorem ensures that every finite family admits a mixed strategy with nonnegative expected margin against every mixture of that family. For the historical cycle with margins 4, 4, 10, we compute both the decomposition and the equilibrium mixture (2/9, 5/9, 2/9). Applications to portfolios, artistic evaluation, visual perception, and sports clarify the distinctions among independent comparisons, shared scenarios, and expected utility.",
-      "tags": [
-        "Chinese dice",
-        "intransitive preferences",
-        "circular chains",
-        "Mayan dice",
-        "combinatorial optimization",
-        "Hodge decomposition",
-        "mixed strategies"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Chinese and Mayan Dice: Circular Chains, Explicit Constructions, and Decision Theory",
-      "url": "https://zenodo.org/records/23604229"
+      "title": "Fatigue behavior of load-bearing polymeric bone scaffolds: A review",
+      "url": "https://zenodo.org/records/23626656"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1629,6 +1677,41 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "6725d96fd3041bfeb9f857b3",
+      "context_id": "8277796442617aae03b98c4e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "calibration",
+        "control",
+        "drat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 11.25,
+      "source": "zenodo",
+      "source_context_sha256": "21eeb82d1e4f755fdd90daed068d2f6cdd27c8a36ff96f3e7d08f7787383dd6f",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "NANOSENSING ACUPUNCTURE AND ACUPOINT MICROENVIRONMENT METROLOGY AT THE LIMIT STARLI / WHITE RAINBOW EPOCH / 33 x STARLI ORIGINAL CIVILIZATIONAL INTERPRETATION This English-language prospective research monograph asks whether historically nominated acupuncture points exhibit reproducible paired differences in local electrical impedance or optically inferred superficial tissue oxygenation when compared with anatomically and environmentally matched nonpoint sites. Its core three-coupling is Acupoint Microenvironments x Multimodal Metrology x Paired Control. The principal White Rainbow Epoch Hypothesis is deliberately vulnerable to refutation: analysts blinded to point identity must be able to reconstruct an independently calibrated advantage when equally hydrated measurement sites are exchanged under a concealed test condition. Skin water content, contact pressure, temperature, electrode polarization, ordinary neurovascular anatomy, skin pigmentation, photon pathlength and site-selection bias are treated as strong competing explanations, not minor caveats. The civilizational purpose follows a governing three-coupling: Continuity of Chinese Cultural Heritage x Exploration through Modern Science x Original Civilizational Interpretation of the White Rainbow Epoch. Classical acupuncture, Chinese medical philosophy, yin-yang, Five Phases and Daoist thought are welcomed as inherited cultural frameworks capable of generating questions. They are not relabelled novel SI-measurable energy fields or independently validated clinical mechanisms. Established physical laws and metrological statistics likewise remain inherited knowledge rather than purported discoveries by 33 x STARLI. Newly composed, falsifiable interdisciplinary proposals are marked White Rainbow Epoch Hypotheses. Cultural interpretation may remain meaningful even when a particular physical hypothesis fails. The book contains 30 mechanism-distinct golden mathematical plates, 82 scientific chapters and 410 individually paginated research investigations, 200 one-page Research Gates whose large deep-navy opening questions lead to discriminating experiments, and 33 scientifically distinguishable Phoenix Answer Embryos. The plates include complex impedance, electrode polarization, pressure and hydration sensitivity, optical pathlength, chromophore inversion, heat transport, oxygen diffusion, spatial statistics, hierarchical and covariance-aware inference, multiplicity, null-equivalence and hard integrity vetoes. The Gates present concrete blinded challenges, resource-matched traditional metrology baselines, necessary calibration and acceptance margins, failure pathways and independent handoff requirements. Each Phoenix embryo has a different named instrument or provisional mechanism, adversarial test, rival explanation and honest metamorphosis path when rejected. The editorial DOI scope is intentionally limited to three author-associated STARLI mother research volumes: 10.5281/zenodo.23480803 (AI Microrobotic Sensing of Senescent-Cell Heterogeneity at the Limit), 10.5281/zenodo.23486020 (Reconfigurable Robotic Swarms and Continuous Functional Regeneration at the Limit), and 10.5281/zenodo.23318840 (Microrobotic Sampling and Quantum Biosensing Co-Design at the Limit). Their chapter lineages offer methodological ancestry in measurement provenance, bias governance, independent requalification and sample-state preservation. They are not independent evidence that the proposed acupoint effect exists. The project does not exclude established scientific knowledge or ancient philosophy; it simply does not include other authors' DOI records in this particular bibliography.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "NANOSENSING ACUPUNCTURE AND ACUPOINT MICROENVIRONMENT METROLOGY AT THE LIMIT STARLI / WHITE RAINBOW EPOCH / 33 x STARLI ORIGINAL CIVILIZATIONAL INTERPRETATION This English-language prospective research monograph asks whether historically nominated acupuncture points exhibit reproducible paired diffe",
+      "url": "https://zenodo.org/records/23625122"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "ff3a8a337126d9061bf61d8d",
       "context_id": "4af5e8b520d2aadac4b2bfd5",
       "delivery_preview_only": true,
@@ -1781,6 +1864,40 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "d8cd3629dfd8e47191f17ed8",
+      "context_id": "87b3bc314f568359bf552ea6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "calibration",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.125,
+      "source": "zenodo",
+      "source_context_sha256": "b03f4e3741ca67158f3a13a45fa2d753ca5269faae1fde07332038205e7e8f28",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "INTELLIGENT NANO-ACUPUNCTURE AND CLOSED-LOOP NEUROMODULATION AT THE LIMIT White Rainbow Epoch / 33 &times; STARLI Original Civilizational Interpretation A Research Flagship in the STARLI White Rainbow Scientific Library ENGLISH DESCRIPTION This prospective research monograph investigates a sharply bounded engineering question: can nanosensing-inspired instrument interfaces and closed-loop neural feedback produce a measurable improvement in feedback latency and electromyographic outcomes when confronted with blinded false-feedback inputs, sensor disconnection, equal-resource conventional controls and independently verified hard-stop conditions? The scientific emphasis is not a one-off demonstration or a claim of proven therapeutic efficacy. It is a technically accountable methodology in which the raw waveform, hardware timebase, stimulus exposure, causal comparator, calibration record, uncertainty budget and right to abstain remain separately inspectable. The work is organized around three couplings: nanosensing, neural feedback and bounded safety. Its larger civilizational frame is Chinese cultural inheritance &times; modern scientific exploration &times; original White Rainbow Epoch interpretation. Classical acupuncture and traditional Chinese medicine, Laozi's Daoist philosophy, yin&ndash;yang, Five-Phase thinking and the historical vocabulary of meridians or qi are welcomed as cultural and interpretive sources of research questions. They are not relabeled as verified quantum forces, established meridian conductors, or validated clinical mechanisms. The authors' new extensions are explicitly designated White Rainbow Epoch hypotheses, which may be refined, rejected or reformulated through independent experiments. Across 775 pages, the volume contains a scientific-position and provenance dossier; 30 substantive mathematical plates covering distinct routes through optimal control, physical dosimetry, contact mechanics, electromyographic inference, uncertainty propagation, causal identification, robust stability, metrology, quantum-sensor benchmarking, reliability and evidence release; 82 separately introduced chapters with 410 individually paginated scientific studies; 200 expanded Research Gates designed as falsifiable, independently executable research entrances; and 33 Phoenix Answer Embryos that propose distinguishable instruments, null-test designs, conditional answers and paths for scientific metamorphosis after a failed hypothesis.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "INTELLIGENT NANO-ACUPUNCTURE AND CLOSED-LOOP NEUROMODULATION AT THE LIMIT White Rainbow Epoch / 33 × STARLI Original Civilizational Interpretation A Research Flagship in the STARLI White Rainbow Scientific Library ENGLISH DESCRIPTION This prospective research monograph investigates a sharply bounded",
+      "url": "https://zenodo.org/records/23624624"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "48a1f4fdc82d3f4fa8670abd",
       "context_id": "15d332fa9a9e9118d390add6",
       "delivery_preview_only": true,
@@ -1854,79 +1971,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "BD2: Insulin timing and glucose-trajectory phenotypes in sepsis-associated acute kidney injury - analysis code",
       "url": "https://zenodo.org/records/23613752"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "02ee31188ed7306cd69b697b",
-      "context_id": "e1cea8aec5cc779fcba90b38",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "arxiv",
-      "source_context_sha256": "9a672d2f025428bc8f94442e5f663de1762691846b7a7f4e377cf2d61716d953",
-      "source_published": "2026-10-21T20:46:24Z",
-      "source_updated": "2026-10-21T20:46:24Z",
-      "summary": "Recent advances in search agents have enabled large language models to tackle complex tasks by retrieving and synthesizing external information. However, existing search agents often lack search-state awareness, i.e., the ability to recognize what information has been obtained and what remains missing, leading to hallucinated reasoning and prematurely terminated search. To address this limitation, we propose Self-Assessment Reinforcement Learning (SARL), a reinforcement learning framework in which models learn to recognize their own search state during training and improve their search behavior accordingly, without requiring additional assessment at test time. SARL achieves this through a dual reward design that captures the corrective effect of each assessment while penalizing excessive reliance on it, jointly encouraging effective and efficient search trajectories. Under this setup, SARL achieves a 24.3% relative improvement over the strongest baseline, with average gains of 35.9% on multi-hop reasoning and 27.9% on deep research benchmarks against the strongest per-benchmark baselines. SARL further surpasses methods built on auxiliary supervision or multi-agent coordination, despite operating as a standalone RL framework with no inference-time scaffolding. Beyond final performance, SARL maintains training stability under extended search horizons, a regime where existing methods consistently degrade, enabling sustained gains as task complexity grows.",
-      "tags": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Self-Assessment Reinforcement Learning for Search-State Awareness in Retrieval-Augmented Large Language Models",
-      "url": "https://arxiv.org/abs/2610.30435v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "796fe9c918eb5ac8369a2ab8",
-      "context_id": "916dfdbb3c513bfddeaea5c6",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "arxiv",
-      "source_context_sha256": "9a5e481b282497ce218a205259b000aeb11a3eba399fc72405581f32c04648dc",
-      "source_published": "2026-10-22T12:24:25Z",
-      "source_updated": "2026-10-22T12:24:25Z",
-      "summary": "Humanoid loco-manipulation in dynamic scenes is non-Markovian: cues vanish as objects change or are hidden, or leave the view as the robot turns and walks, yet whole-body vision-language-action (VLA) policies see only the present. We present WholeBodyMem, an object-guided perceptual memory that keeps the pre-history of object events seen before the robot acts on its goal. SAM3 tracks the task objects, and their events causally select key frames within an adaptive budget, which the action expert reads by cross-attention together with object tokens encoding appearance, geometry and time. We also contribute HuMeGo, a humanoid memory benchmark with six simulated and six real-world Unitree G1 tasks. Keeping the right frames rather than more frames, WholeBodyMem surpasses memoryless and uniform-memory baselines, raising its base policy's success from 29.1% to 72.6% in simulation and from 36.7% to 88.3% on the real robot, while also improving the standard SIMPLE tasks (70.2% to 86.9%).",
-      "tags": [
-        "cs.RO",
-        "cs.CV",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Memory before Goal: Role of Pre-History Memory for Humanoid Loco-Manipulation",
-      "url": "https://arxiv.org/abs/2610.31166v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
