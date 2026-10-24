@@ -1,5 +1,5 @@
 {
-  "batch_id": "565a00ec08421c868a66",
+  "batch_id": "376c444c80430c3a851f",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -612,224 +612,6 @@
       "url": "https://arxiv.org/abs/2610.31566v1"
     },
     {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "db61ee203dd915fbab78652a",
-      "context_id": "672bec74cd7da89b7fed4d91",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "bias",
-        "counterexample"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.75,
-      "source": "zenodo",
-      "source_context_sha256": "8cd4c0a941c8e2868787e8aac32ad1b81ae3c3823317689ec37a1591a7e5e3c2",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "Unrefereed research candidate. A random walk is robust if an adversary who may change every transition probability by a small relative amount cannot make it much slower to reach its targets. Zuckerman (Markov chain robustness, ITCS 2026, LIPIcs 362, 118) conjectured that the largest safe relative change is at least a constant divided by the graph's diameter (Conjecture 1.16). This package shows the conjecture is false. A graph can have short routes that the walk almost never uses; a small fixed bias away from a target accumulates between rare visits to them and depletes the target's stationary mass, and Kac's formula turns this into a long hitting time. For explicit cubic graphs J_b on N vertices with diameter O(log N), every effective resistance is at most 684 (proof), and a fixed perturbation of size 1/b, with error times diameter tending to zero, multiplies the worst-case hitting time by a factor of order b; the robustness is O(N^(-1/3)). For explicit 3m-regular graphs of diameter exactly three, the mixing time is at most 50(m+1), so with Zuckerman's mixing-time theorem the robustness lies between constant multiples of N^(-1/2) and N^(-1/4) (proof; not matching). An exact computation shows a 5.80-fold slowdown on a 5,995-vertex member with error times diameter 0.74. A diameter-two example, a reversible-perturbation bound and a comparison with Kemeny's constant are included. The archive contains the manuscript (PDF and LaTeX), seven verification scripts with a driver that reproduces the reference JSON results byte for byte under python -B -O, semantic negative controls, figures and SHA-256 sums. Assurance: written proofs; exact checks; producer-side replay including a clean replay in a separate copy; internal AI-assisted review, AI-assisted adversarial reviews (OpenAI gpt-5.6-sol; Anthropic Claude Opus 5.5; OpenAI gpt-6-astra) and a verification re-review. This is not peer review, independent reproduction or formal verification. Creator: Anonymous. Prose, manuscript and data CC0-1.0; code MIT.",
-      "tags": [
-        "Markov chains",
-        "random walks",
-        "hitting times",
-        "robustness",
-        "relative perturbations",
-        "effective resistance",
-        "mixing time",
-        "cubic graphs",
-        "counterexample"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Small diameter does not control hitting-time robustness",
-      "url": "https://zenodo.org/records/23575572"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "db61ee203dd915fbab78652a",
-      "context_id": "2f26a72366941eadfab612a4",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "bias",
-        "counterexample"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.75,
-      "source": "zenodo",
-      "source_context_sha256": "a91c19c89fc4308eeed04ad6d428a1edebfa8d46022f4a2669bdd376459ae47a",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "Unrefereed research candidate. A random walk is robust if an adversary who may change every transition probability by a small relative amount cannot make it much slower to reach its targets. Zuckerman (Markov chain robustness, ITCS 2026, LIPIcs 362, 118) conjectured that the largest safe relative change is at least a constant divided by the graph's diameter (Conjecture 1.16). This package shows the conjecture is false. A graph can have short routes that the walk almost never uses; a small fixed bias away from a target accumulates between rare visits to them and depletes the target's stationary mass, and Kac's formula turns this into a long hitting time. For explicit cubic graphs J_b on N vertices with diameter O(log N), every effective resistance is at most 684 (proof), and a fixed perturbation of size 1/b, with error times diameter tending to zero, multiplies the worst-case hitting time by a factor of order b; the robustness is O(N^(-1/3)). For explicit 3m-regular graphs of diameter exactly three, the mixing time is at most 50(m+1), so with Zuckerman's mixing-time theorem the robustness lies between constant multiples of N^(-1/2) and N^(-1/4) (proof; not matching). An exact computation shows a 5.80-fold slowdown on a 5,995-vertex member with error times diameter 0.74. A diameter-two example, a reversible-perturbation bound and a comparison with Kemeny's constant are included. The archive contains the manuscript (PDF and LaTeX), seven verification scripts with a driver that reproduces the reference JSON results byte for byte under python -B -O, semantic negative controls, figures and SHA-256 sums. Assurance: written proofs; exact checks; producer-side replay including a clean replay in a separate copy; internal AI-assisted review, AI-assisted adversarial reviews (OpenAI gpt-5.6-sol; Anthropic Claude Opus 5.5; OpenAI gpt-6-astra) and a verification re-review. This is not peer review, independent reproduction or formal verification. Creator: Anonymous. Prose, manuscript and data CC0-1.0; code MIT.",
-      "tags": [
-        "Markov chains",
-        "random walks",
-        "hitting times",
-        "robustness",
-        "relative perturbations",
-        "effective resistance",
-        "mixing time",
-        "cubic graphs",
-        "counterexample"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Small diameter does not control hitting-time robustness",
-      "url": "https://zenodo.org/records/23575572"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "ec3b0664a98425370fa9a34f",
-      "context_id": "f1a93c0286b3ea241f506604",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7083,
-      "source": "zenodo",
-      "source_context_sha256": "adac26c75a8adf7fb0f94b7116a2612b58720b9c030943c587a8494a713bd86a",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "Biological-Digital-Twin-Driven Microrobotic Sampling Decisions at the Limit STARLI Research Institute XXIX &mdash; Flagship Research Monograph 10 What if the next scientific sample could be selected not merely to collect more data, but to distinguish between competing explanations of biological behavior? Biological-Digital-Twin-Driven Microrobotic Sampling Decisions at the Limit explores a prospective research architecture combining versioned biological digital twins, active learning, microrobotic sampling, uncertainty quantification, and mechanistic model discrimination. The central question is whether a computational twin can identify safe, informative sampling actions that distinguish competing biological mechanisms more effectively than conventional experimental schedules, while retaining the ability to recognize model inadequacy and abstain from unsupported decisions. The proposed framework treats biological digital twins as revisable scientific models rather than exact replicas of living systems. Its reference environment is a controlled, nonclinical microfluidic platform containing two declared dynamical mechanisms and a third withheld mechanism reserved for evaluating open-world uncertainty and model failure. The research architecture is organized around five interconnected layers: versioned biological modeling, explicit prior assumptions and knowledge gaps, physically constrained predictive interrogation, comparative adaptive experimentation, and independent requalification. The manuscript develops thirty candidate mathematical research plates covering Bayesian mechanism inference, conditional information gain, experimental identifiability, observation uncertainty, transport dynamics, calibration, model discrepancy, and decision safety. These mathematical structures are connected to eighty-two research chapters, five independently paginated investigation sections per chapter, two hundred detailed Research Gates, and thirty-three Phoenix Answer Embryos. Each Research Gate is intended as a transferable research question that future investigators may test, challenge, refine, or reject. The proposed evaluation compares twin-guided sampling against optimized fixed schedules, established experimental-design approaches, and alternative active-learning policies under matched physical constraints and experimental budgets. Particular attention is given to blinded mechanism identification, probabilistic calibration, out-of-distribution rejection, specimen integrity, model-version accountability, and explicit stopping conditions. The volume includes DOI-linked methodological literature and a staged nonclinical verification pathway. Scientific status and limitations: This manuscript presents a conceptual methodological research program, not completed experimental validation. Its integrated hypotheses, mathematical proposals, and experimental architectures remain subject to independent technical review and empirical testing. The manuscript does not establish clinical efficacy, diagnostic reliability, therapeutic benefit, or proven superiority of microrobotic digital-twin systems. The work also acknowledges remaining editorial limitations, including recurring methodological language that requires further substantive review before the manuscript can be regarded as a fully refined scientific monograph. The broader purpose of this research is to develop scientific systems that can remain useful even when their initial models are incomplete. Rather than demanding certainty from a digital twin, the proposed framework asks whether future autonomous research tools can become more transparent, corrigible, experimentally accountable, and capable of recognizing the boundaries of their own knowledge. Within the STARLI research continuum, this volume is intended as an evolving research inheritance for future human and artificial-intelligence investigators. Language: English Research Type: Conceptual and Methodological Research Monograph Edition",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Biological-Digital-Twin-Driven Microrobotic Sampling Decisions at the Limit STARLI Research Institute XXIX — Flagship Research Monograph 10 What if the next scientific sample could be selected not merely to collect more data, but to distinguish between competing explanations of biological behavior? ",
-      "url": "https://zenodo.org/records/23578792"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "5afdc929ea0dd51f3f41d599",
-      "context_id": "d59508f1b8cb2fcef37962a3",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7083,
-      "source": "zenodo",
-      "source_context_sha256": "1d57be56b191f6cc0bcf785afeb8ff03ebce1f03237e65c8b7bec8a44cc48d1d",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "AUTONOMOUS QUANTUM BIOSENSOR DRIFT DIAGNOSIS AND RECOVERY AT THE LIMIT Drift Identifiability &times; Reference Transfer &times; Safe Requalification STARLI Research Institute XXIX &mdash; Flagship Research Monograph 06 Can an autonomous quantum-enabled biosensing platform distinguish genuine specimen changes from thermal response, optical ageing, clock instability, reference-source drift, and permanent component degradation? More importantly, can the platform recognize when calibration is insufficient and an instrument must remain outside the scientific measurement process? This research monograph develops a hypothesis-forming, nonclinical framework for autonomous biosensor drift diagnosis, independently traceable reference transfer, and evidence-based recovery decisions. Its central scientific distinction is between making an instrument appear numerically stable and demonstrating that the instrument has genuinely regained acceptable measurement performance. The proposed architecture combines state-space estimation, controlled environmental perturbations, independent measurement references, multivariate uncertainty analysis, quantum sensing physics, classical sensor comparisons, and verifiable calibration governance. Particular attention is given to the identifiability problem: a mathematical model may separate sample and instrument states in its equations without possessing sufficient experimental information to distinguish them in reality. The 771-page volume contains 82 research chapters, 410 independently paginated investigations, 30 interconnected mathematical research plates, 200 Research Gates, and 33 Phoenix Answer Embryos. Major research directions include nitrogen-vacancy diamond resonance thermometry, photon-counting uncertainty, ODMR spectral interpretation, optical contrast degradation, thermal hysteresis, frequency-reference instability, material ageing, common-mode reference failure, blind fault injection, calibration transfer, immutable measurement histories, and independent instrument requalification. Each chapter establishes a specific technical mechanism, a competing explanation, an experimental intervention, and conditions under which its proposed interpretation should be rejected. The 200 Research Gates preserve falsifiable research questions, proposed experimental methods, measurable outcomes, independent comparators, uncertainty-aware acceptance conditions, and evidence-preserving stopping procedures. The 33 Phoenix Answer Embryos introduce provisional research architectures that future human and AI investigators may challenge, modify, reconstruct, or replace. Seventeen DOI-linked scientific publications and metrological standards provide foundations in quantum sensing, sensor drift compensation, statistical state estimation, and measurement uncertainty. These references support established physical principles and methodological approaches. They do not constitute experimental validation of the proposed integrated STARLI F06 system. Scientific Scope and Limitations This monograph presents a theoretical and experimental research blueprint rather than completed laboratory findings. It does not establish autonomous clinical diagnostic capability, physical self-healing, reversal of biological deterioration, or universal quantum sensing superiority. Recovery is restricted to independently verified recalibration, qualified component replacement, or documented retirement. The proposed experiments are limited to nonclinical standards, artificial phantoms, closed-chip modules, and appropriately authorized research materials. STARLI Research Philosophy A scientific instrument should not regain authority simply because an algorithm has learned to explain its residual errors. Trust must be restored through evidence that remains independent of the instrument being evaluated. A reliable autonomous research system is distinguished not only by its ability to identify and correct faults, but also by its willingness to wit",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "AUTONOMOUS QUANTUM BIOSENSOR DRIFT DIAGNOSIS AND RECOVERY AT THE LIMIT Drift Identifiability × Reference Transfer × Safe Requalification STARLI Research Institute XXIX — Flagship Research Monograph 06 Can an autonomous quantum-enabled biosensing platform distinguish genuine specimen changes from the",
-      "url": "https://zenodo.org/records/23574646"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "ec3b0664a98425370fa9a34f",
-      "context_id": "b9570ed1a5e398d3a61bb604",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7083,
-      "source": "zenodo",
-      "source_context_sha256": "ea54b897b4fb635b0436d2920d061e56b43d8eedcf89454e00a1f3ef809bfe65",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "Biological-Digital-Twin-Driven Microrobotic Sampling Decisions at the Limit STARLI Research Institute XXIX &mdash; Flagship Research Monograph 10 What if the next scientific sample could be selected not merely to collect more data, but to distinguish between competing explanations of biological behavior? Biological-Digital-Twin-Driven Microrobotic Sampling Decisions at the Limit explores a prospective research architecture combining versioned biological digital twins, active learning, microrobotic sampling, uncertainty quantification, and mechanistic model discrimination. The central question is whether a computational twin can identify safe, informative sampling actions that distinguish competing biological mechanisms more effectively than conventional experimental schedules, while retaining the ability to recognize model inadequacy and abstain from unsupported decisions. The proposed framework treats biological digital twins as revisable scientific models rather than exact replicas of living systems. Its reference environment is a controlled, nonclinical microfluidic platform containing two declared dynamical mechanisms and a third withheld mechanism reserved for evaluating open-world uncertainty and model failure. The research architecture is organized around five interconnected layers: versioned biological modeling, explicit prior assumptions and knowledge gaps, physically constrained predictive interrogation, comparative adaptive experimentation, and independent requalification. The manuscript develops thirty candidate mathematical research plates covering Bayesian mechanism inference, conditional information gain, experimental identifiability, observation uncertainty, transport dynamics, calibration, model discrepancy, and decision safety. These mathematical structures are connected to eighty-two research chapters, five independently paginated investigation sections per chapter, two hundred detailed Research Gates, and thirty-three Phoenix Answer Embryos. Each Research Gate is intended as a transferable research question that future investigators may test, challenge, refine, or reject. The proposed evaluation compares twin-guided sampling against optimized fixed schedules, established experimental-design approaches, and alternative active-learning policies under matched physical constraints and experimental budgets. Particular attention is given to blinded mechanism identification, probabilistic calibration, out-of-distribution rejection, specimen integrity, model-version accountability, and explicit stopping conditions. The volume includes DOI-linked methodological literature and a staged nonclinical verification pathway. Scientific status and limitations: This manuscript presents a conceptual methodological research program, not completed experimental validation. Its integrated hypotheses, mathematical proposals, and experimental architectures remain subject to independent technical review and empirical testing. The manuscript does not establish clinical efficacy, diagnostic reliability, therapeutic benefit, or proven superiority of microrobotic digital-twin systems. The work also acknowledges remaining editorial limitations, including recurring methodological language that requires further substantive review before the manuscript can be regarded as a fully refined scientific monograph. The broader purpose of this research is to develop scientific systems that can remain useful even when their initial models are incomplete. Rather than demanding certainty from a digital twin, the proposed framework asks whether future autonomous research tools can become more transparent, corrigible, experimentally accountable, and capable of recognizing the boundaries of their own knowledge. Within the STARLI research continuum, this volume is intended as an evolving research inheritance for future human and artificial-intelligence investigators. Language: English Research Type: Conceptual and Methodological Research Monograph Edition",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Biological-Digital-Twin-Driven Microrobotic Sampling Decisions at the Limit STARLI Research Institute XXIX — Flagship Research Monograph 10 What if the next scientific sample could be selected not merely to collect more data, but to distinguish between competing explanations of biological behavior? ",
-      "url": "https://zenodo.org/records/23578792"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "5afdc929ea0dd51f3f41d599",
-      "context_id": "ab1470412d437fb4f68c0e28",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7083,
-      "source": "zenodo",
-      "source_context_sha256": "648dfe0765500294390e86c3d99f7b7c05ffb88e2862ae77cff8d1ab929458e1",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "AUTONOMOUS QUANTUM BIOSENSOR DRIFT DIAGNOSIS AND RECOVERY AT THE LIMIT Drift Identifiability &times; Reference Transfer &times; Safe Requalification STARLI Research Institute XXIX &mdash; Flagship Research Monograph 06 Can an autonomous quantum-enabled biosensing platform distinguish genuine specimen changes from thermal response, optical ageing, clock instability, reference-source drift, and permanent component degradation? More importantly, can the platform recognize when calibration is insufficient and an instrument must remain outside the scientific measurement process? This research monograph develops a hypothesis-forming, nonclinical framework for autonomous biosensor drift diagnosis, independently traceable reference transfer, and evidence-based recovery decisions. Its central scientific distinction is between making an instrument appear numerically stable and demonstrating that the instrument has genuinely regained acceptable measurement performance. The proposed architecture combines state-space estimation, controlled environmental perturbations, independent measurement references, multivariate uncertainty analysis, quantum sensing physics, classical sensor comparisons, and verifiable calibration governance. Particular attention is given to the identifiability problem: a mathematical model may separate sample and instrument states in its equations without possessing sufficient experimental information to distinguish them in reality. The 771-page volume contains 82 research chapters, 410 independently paginated investigations, 30 interconnected mathematical research plates, 200 Research Gates, and 33 Phoenix Answer Embryos. Major research directions include nitrogen-vacancy diamond resonance thermometry, photon-counting uncertainty, ODMR spectral interpretation, optical contrast degradation, thermal hysteresis, frequency-reference instability, material ageing, common-mode reference failure, blind fault injection, calibration transfer, immutable measurement histories, and independent instrument requalification. Each chapter establishes a specific technical mechanism, a competing explanation, an experimental intervention, and conditions under which its proposed interpretation should be rejected. The 200 Research Gates preserve falsifiable research questions, proposed experimental methods, measurable outcomes, independent comparators, uncertainty-aware acceptance conditions, and evidence-preserving stopping procedures. The 33 Phoenix Answer Embryos introduce provisional research architectures that future human and AI investigators may challenge, modify, reconstruct, or replace. Seventeen DOI-linked scientific publications and metrological standards provide foundations in quantum sensing, sensor drift compensation, statistical state estimation, and measurement uncertainty. These references support established physical principles and methodological approaches. They do not constitute experimental validation of the proposed integrated STARLI F06 system. Scientific Scope and Limitations This monograph presents a theoretical and experimental research blueprint rather than completed laboratory findings. It does not establish autonomous clinical diagnostic capability, physical self-healing, reversal of biological deterioration, or universal quantum sensing superiority. Recovery is restricted to independently verified recalibration, qualified component replacement, or documented retirement. The proposed experiments are limited to nonclinical standards, artificial phantoms, closed-chip modules, and appropriately authorized research materials. STARLI Research Philosophy A scientific instrument should not regain authority simply because an algorithm has learned to explain its residual errors. Trust must be restored through evidence that remains independent of the instrument being evaluated. A reliable autonomous research system is distinguished not only by its ability to identify and correct faults, but also by its willingness to wit",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "AUTONOMOUS QUANTUM BIOSENSOR DRIFT DIAGNOSIS AND RECOVERY AT THE LIMIT Drift Identifiability × Reference Transfer × Safe Requalification STARLI Research Institute XXIX — Flagship Research Monograph 06 Can an autonomous quantum-enabled biosensing platform distinguish genuine specimen changes from the",
-      "url": "https://zenodo.org/records/23574646"
-    },
-    {
       "base_direction_id": "large_data_methods",
       "candidate_id": "ae7d8fae379a8ae0701104b4",
       "context_id": "1931872582457a223f988e03",
@@ -1403,45 +1185,6 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "bd0bdc162aa15a9f26eede7f",
-      "context_id": "c2b7db32c7b2a2d78d13c039",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "05611baabb89fd954ae2319c6c48093e706a3ee9e496ca9732157f6e64edba21",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "Gratitude can concern a benefit received, a harm that did not occur, or the conditions that make one's own assumptions examinable. We develop the proposal that appreciating these conditions can orient practice toward realizing emptiness: examining how distinctions arise, relinquishing their assumed intrinsic necessity, and retaining their conditional usefulness. The argument distinguishes an observed absence, a missing observation, counterfactual valuation and non-reification, and places their differences in dialogue with explicitly situated philosophical and scriptural sources. We reconstruct Fisher, Sandved Smith and Hohwy's gratitude and gaze notebooks, then separate faithful reconstruction from corrected experiments and new mechanisms. GNN-declared paired recall experiments use 5120 independent agent-world units, matched environmental exposure and replay dose, normalized likelihoods, and independent predictive assessment. Pinned Realizing Emptiness interfaces supply structural admission and finite mathematical comparators. An enacted inquiry model separates appreciation, costly activity, access to alternatives and evidence-responsive retention or revision; explicit learning-to-gaze and joint scene/encoding experiments examine transfer and identifiability. Exact count enumeration, mathematical nulls, paired controls and joint bootstrap inference make the resulting software claims independently checkable. Selective positive recall reduces the declared optimism summary, while its predictive consequences depend on the world mixture and the specified transfer bridge. Counterfactual absence valuation preserves inference by construction. Accessible inquiry can revise a contradicted restriction and retain a useful one; activity without access instead incurs costs while preserving rigid forecasts. Exact analysis exposes rare adverse selections absent from seeded realizations. The original gaze code reproduces the pre-intervention occupancy but contains no implemented after intervention. Our active-scene extension finds a context-dependent access advantage without an additional inquiry-specific predictive advantage. Joint scene/encoding inquiry distinguishes learning an encoding from combining it with scene evidence: observationally equivalent labels remain unidentifiable, and excluded hypotheses cannot be recovered. Known-answer fixtures also retain skew-related undercoverage and unavailable rare-event estimates rather than treating replication size as a remedy for every inferential failure. The contribution is a reproducible account of enabling operations and their limits, together with a falsifiable human research program that separates inquiry value from patience, anticipated good news and instrumental information demand. Synthetic model results establish neither human gratitude nor contemplative realization or clinical benefit. Code, declared models and reproducibility materials are available at github.com/docxology/thanks_for_nothing .",
-      "tags": [
-        "gratitude",
-        "emptiness",
-        "active inference",
-        "model revisability",
-        "generalized notation notation",
-        "reproducible research"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Thanks for Nothing: Gratitude, Model Revisability, and the Practice of Realizing Emptiness",
-      "url": "https://zenodo.org/records/23402517"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "51dd0fe08e69231ded457d38",
       "context_id": "b7d5a0181f5c4e56bcd22d6d",
       "delivery_preview_only": true,
@@ -1652,6 +1395,38 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "afc52f50065aa72d2b838b18",
+      "context_id": "942d167d38081141ea29e2f0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "2217b863a029b765cecfaceb5620ce580597f8453e7e23294c77db82707f81c9",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "HIGH-INTEGRITY CARGO TRANSPORT AND CONTROLLED RELEASE IN MICRO/NANOROBOTICS AT THE LIMIT English Introduction This high-density research monograph develops a falsifiable architecture for high-integrity microrobotic cargo transport and controlled release. Its core coupling is binding kinetics &times; transport exposure &times; triggered release. Arrival is explicitly separated from delivery: one identified cargo lineage must remain bound through transport, stay below registered shear thermal and chemical exposure limits, avoid premature leakage and cross-contamination, release inside the authorized spatial and temporal window, preserve a cargo-specific functional endpoint, and leave a closed record of residual material and carrier recovery. The central contribution is the Cargo Integrity Passport, a replayable evidence object that binds cargo and carrier identities, initial load, binding calibration, route, exposure waveforms, leakage samples, trigger fields, target masks, released mass, functional assays, contamination panels, unreleased residue, retrieval, abstentions, failures, and final disposition. Thirty physicalized derivations connect directly to 82 chapters, 410 single-page research studies, 200 Research Gates, and 33 Phoenix Answer Embryos. When unknown shear pulses, constrictions, sham triggers, second cargo lots, and carrier aging are introduced blindly, the system must lower both premature leakage and nonrelease rather than exchange one failure for the other. Missing mass, destructive triggering, target expansion, and deleted failed cargo reject the claim.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "HIGH-INTEGRITY CARGO TRANSPORT AND CONTROLLED RELEASE IN MICRO/NANOROBOTICS AT THE LIMIT English Introduction This high-density research monograph develops a falsifiable architecture for high-integrity microrobotic cargo transport and controlled release. Its core coupling is binding kinetics × trans",
+      "url": "https://zenodo.org/records/23606974"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "1abdc9a4722413283fe61ce0",
       "context_id": "93d568134c5c01349b8a1ea2",
       "delivery_preview_only": true,
@@ -1748,6 +1523,214 @@
       "score": 4.2917,
       "source": "arxiv",
       "source_context_sha256": "016ed662bde50404b1d428ae7813f391d38734cc5b7495fce60dde2e8eea296e",
+      "source_published": "2026-10-22T14:13:59Z",
+      "source_updated": "2026-10-22T14:13:59Z",
+      "summary": "Many deployments require a model to move rapidly from a data-rich source to a related target observed only sparsely. This is especially consequential where target data are difficult to collect, as in healthcare settings with persistent population or acquisition imbalances. Retraining or fine-tuning a high-capacity generator for every target is costly and can be statistically unreliable when target data are scarce. We introduce Meta-Diff, which instead learns a recurring source--target relation once in a compact task space. A shared encoder maps each distribution to a low-dimensional coordinate; a learned relation transports a new source coordinate to its predicted target, and a shared diffusion backbone generates from that prediction without target-specific retraining. Controlled Gaussian-mixture experiments identify when this works: task identity must survive the representation, the relation must generalise across tasks, and the source--target shift must leave useful headroom for transport. On held-out CIFAR-100 validation tasks, correct source $+$ transport achieves 13.9% lower mean SW than transport from the wrong source. With validation-selected adaptation settings in the final-test one-target comparison, its mean SW is 14.7% lower than target-only modelling and 32.7% lower than full fine-tuning; the main route itself uses no target image and assumes the applicable relation is known. On matched CIFAR test episodes, generating from the clean-source coordinate and then applying the known corruption yields lower SW than task-space transport. Office-Home exposes a complementary boundary: transport can align target-domain statistics without reliable object identity. Together, these results recast extreme-few-shot adaptation as reusable transport in task space, while making the conditions for its success and failure directly measurable.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Bridging the Data Gap: Source-Informed Task-Space Transport for Few-Shot Diffusion",
+      "url": "https://arxiv.org/abs/2610.31323v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "8914f6034ca09aacc7052e95",
+      "context_id": "8dbd63b6c3cbb844fa8753fc",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "62152edd3a0374e810275d48ff2b0cc7692f8b6f2f2619032ebbca8f7d81f1ce",
+      "source_published": "2026-10-22T01:04:24Z",
+      "source_updated": "2026-10-22T01:04:24Z",
+      "summary": "Unlike conventional GUI agents, personalized GUI agents require user preferences to guide sequential execution over changing GUI states. This raises two challenges: determining HOW each preference should alter execution strategy and WHEN it should take effect along the interaction trajectory. Existing benchmarks primarily evaluate overall task success, offering limited insight into these questions. We introduce PrefDiag-Bench with two components: (1) a categorization of preferences into five types, characterizing HOW they affect execution; and (2) a stage-wise diagnostic framework with 1,664 probes, tracing WHEN preferences should take effect and where failures occur. We evaluate eleven GUI agent systems, including end-to-end agents and agentic workflows, under two forms of user context: explicit user profiles and behavioral memory logs. Although existing agents achieve relatively high completion rates on non-personalized tasks, performance is substantially lower on preference-personalized tasks. Even the best-performing model, Seed-2.0-Pro, achieves only 47.17% on Process preferences under explicit user profiles. Agents struggle particularly with Ranking and Process preferences. Further analysis reveals two key capability bottlenecks: selecting relevant evidence from user history and recognizing when preferences should take effect during execution. Controlled interventions that explicitly provide relevant evidence improve end-to-end task success by up to 7.06%. PrefDiag-Bench offers a more systematic evaluation of GUI agents' personalization capabilities beyond overall task success. Code and data are available at https://github.com/Zhixin-L/PrefDiag-Bench.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Diagnosing Personalization Failures in Mobile GUI Agents",
+      "url": "https://arxiv.org/abs/2610.30573v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "fe198d1c308df2ab776db799",
+      "context_id": "8260c64766e168641895d13e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "f974b86c2cc61ec1a35ee37320ed77a69e489777a32ed52d168e7dd5bbf0d324",
+      "source_published": "2026-10-22T14:08:48Z",
+      "source_updated": "2026-10-22T14:08:48Z",
+      "summary": "Large language models can repeat an instruction while failing to keep obeying it. We study this recall-compliance dissociation in long-horizon dialogue and define State Integrity Collapse: a model preserves a stated constraint in memory but stops applying it to later turns. We introduce StateTrack-Bench, a controlled suite of conversations covering numerical, format, role/persona, factual-memory, and logical-rule constraints. Across seven provider-pinned model snapshots and five dialogue-depth probes, strict joint retention ranges from 62.4% to 100.0%, with degradation concentrated in symbolic constraints and in one especially brittle model. A forked recall audit shows that 88.6% of observed failures are behavioral-drift failures rather than ordinary forgetting; excluding the brittle outlier preserves this diagnosis (84.4% of failures). Extended evaluations at depths up to 50 turns confirm that the dissociation persists beyond the core benchmark, while Structured State Anchoring recovers up to 24.4 points on immutable constraints. The results show that reliability cannot be inferred from single-turn instruction following alone; evaluation must track whether remembered constraints remain operational as dialogue state grows. Code and artifacts are available at: https://github.com/xzzvsxd/StateTrack.",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "When LLMs Forget What They Believe: Characterizing State Integrity Collapse in Long-Horizon Dialogues",
+      "url": "https://arxiv.org/abs/2610.31314v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "7409e7ad7d0331123abc7758",
+      "context_id": "6f38407037537b4faf53125a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "c4e59079fb9675a6c5b17eeac90ecfc8c964c9058016676fab31889858dbfebc",
+      "source_published": "2026-10-22T15:07:49Z",
+      "source_updated": "2026-10-22T15:07:49Z",
+      "summary": "Computer-use agents increasingly handle private information and act on users' behalf across desktop and web applications, including email. Phishing therefore poses privacy and security risks that depend not only on whether agents recognize malicious messages, but also on how they respond. Existing phishing datasets were developed primarily for conventional detection, leaving agent susceptibility to persuasive malicious requests insufficiently characterized. To expose vulnerabilities that pre-existing datasets may miss, we introduce AgentPhishing, a benchmark for evaluating whether persuasive phishing attacks can evade detection and induce LLM email agents to comply with malicious requests. We develop PhishOpt, which optimizes reusable email-generation skills against individual agents under fixed benchmark constraints and a realism constraint. We analyze the generated emails using Cialdini's persuasion principles to identify strategies associated with agent failures and use these findings to construct a universal generation skill. Our evaluation shows that agents can handle pre-existing phishing emails safely yet remain susceptible to attacks adapted to agent behavior, while in an AgentPhishing evaluation of nine agents, four exhibit phishing-detection rates below $10\\%$ and malicious-request compliance rates above $45\\%$. These results highlight the limits of inferring agent safety from conventional phishing evaluations and the need to assess how agents respond to persuasive malicious requests.",
+      "tags": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "AgentPhishing: A Benchmark of LLM Email Agents Under Adaptive Attack",
+      "url": "https://arxiv.org/abs/2610.31404v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "48a1f4fdc82d3f4fa8670abd",
+      "context_id": "6cefaecd22fc568b22afe63e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "24091448ca1318c671695f1b512ecf171545e4f66ef9ae804b6faf9b03e92e76",
+      "source_published": "2026-10-23",
+      "source_updated": "",
+      "summary": "Despite significant advances in deep learning-based failure prognosis, existing predictive maintenance frameworks consistently terminate at the prediction step, leaving the critical operational challenge of prioritising maintenance resources across heterogeneous asset fleets unresolved. This paper addresses this gap by proposing an integrated framework that couples Long Short-Term Memory network-based Remaining Useful Life prediction with the Technique for Order of Preference by Similarity to Ideal Solution for data-driven multi-criteria maintenance scheduling, validated on the NASA C-MAPSS FD001 turbofan degradation benchmark. The framework dynamically synthesises predicted health indicators with operational criteria encompassing machine criticality, maintenance cost, and production downtime impact to generate a ranked intervention schedule whose quality is evaluated through a rigorous, assumption-free protocol comprising precision-recall analysis, area under the precision-recall curve, Spearman rank correlation, and a scheduling efficiency ratio against a random baseline. A five-seed ablation study comparing Long Short-Term Memory, Bidirectional Long Short-Term Memory, and Gated Recurrent Unit architectures, with Wilcoxon signed-rank validation, establishes statistically equivalent prediction accuracy, confirming the architecture-agnostic nature of the scheduling design.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Code and analysis: A Deep Learning and TOPSIS Framework for Predictive Maintenance Scheduling in Smart Manufacturing: An Industry 4.0 Approach",
+      "url": "https://zenodo.org/records/23604927"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "cb9680b181820c63b94fea7e",
+      "context_id": "6ac3dd603fe507f4ebb0fdc7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "362dc5cf783e85fd70503c54a86919a32893a3790dbe7072421f61503a041a12",
+      "source_published": "2026-10-22T00:22:47Z",
+      "source_updated": "2026-10-22T00:22:47Z",
+      "summary": "LLM agents that act on live Web data must combine heterogeneous evidence, remember what they have done and improve from outcomes without weakening their own safeguards. We study this problem in autonomous investing, where every action is irreversible and based on untrusted Web content. We present Steward, a multi-agent LLM system that draws the boundary of self-evolution in its type system. First, nine role-specialised agents decide jointly: four analysts read news feeds, SEC filings, macroeconomic series and market data and emit typed reports, from which a Portfolio Manager sets target positions that a protected Risk Manager audits. Second, a seven-layer shared memory, assembled by code from the system's own record, gives each decision its position context, the market narrative, calibration and the agent's past decisions. Third, the system improves itself by review: code grades every trade and forecast nightly and writes the grades into memory, and each quarter a reflector proposes prompt learnings that a deterministic gate applies reversibly and replay of recorded inputs verifies. All three operate around an invariant core of order arithmetic, risk rules and discipline-agent prompts that no self-edit can reach. In a five-month live deployment (102 trading days, 1,632 LLM calls), the system contained a 24.6% sector drawdown to a 0.3% loss; in replay of its recorded inputs, a single model given the same raw data traded more and lost 1.35 points against the market over five days where the joint design showed no significant loss, and no injected instruction was followed; and a 2015-2026 backtest shows the core alone lowering the maximum drawdown under all 50 random entry policies. The reflector traced the dominant failure to its root cause, and the gate applied a learning that the agent adopted on trigger evenings and on no control evening. Code: https://github.com/yebof/quant-agent",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA",
+        "q-fin.PM"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core",
+      "url": "https://arxiv.org/abs/2610.30557v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "44692fb3fe29e342943579b2",
+      "context_id": "68dc8557c45bc48724b1df81",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "6fe56ceda855f178b45d10ea01502190ebb87575766dbc2abe3db1f3ff16b8b5",
       "source_published": "2026-10-22T14:13:59Z",
       "source_updated": "2026-10-22T14:13:59Z",
       "summary": "Many deployments require a model to move rapidly from a data-rich source to a related target observed only sparsely. This is especially consequential where target data are difficult to collect, as in healthcare settings with persistent population or acquisition imbalances. Retraining or fine-tuning a high-capacity generator for every target is costly and can be statistically unreliable when target data are scarce. We introduce Meta-Diff, which instead learns a recurring source--target relation once in a compact task space. A shared encoder maps each distribution to a low-dimensional coordinate; a learned relation transports a new source coordinate to its predicted target, and a shared diffusion backbone generates from that prediction without target-specific retraining. Controlled Gaussian-mixture experiments identify when this works: task identity must survive the representation, the relation must generalise across tasks, and the source--target shift must leave useful headroom for transport. On held-out CIFAR-100 validation tasks, correct source $+$ transport achieves 13.9% lower mean SW than transport from the wrong source. With validation-selected adaptation settings in the final-test one-target comparison, its mean SW is 14.7% lower than target-only modelling and 32.7% lower than full fine-tuning; the main route itself uses no target image and assumes the applicable relation is known. On matched CIFAR test episodes, generating from the clean-source coordinate and then applying the known corruption yields lower SW than task-space transport. Office-Home exposes a complementary boundary: transport can align target-domain statistics without reliable object identity. Together, these results recast extreme-few-shot adaptation as reusable transport in task space, while making the conditions for its success and failure directly measurable.",
