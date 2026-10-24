@@ -1,5 +1,5 @@
 {
-  "batch_id": "b467e0bc2f7a1e74ccb2",
+  "batch_id": "03848e8d69216c4058c6",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -520,6 +520,42 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "2190ea9c5b72640fb0014767",
+      "context_id": "92c6c35ad58a35ca082632e5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "916a2fcf2024ac422e5b483a6900d8474acffd99552f9bee85e368f90c2b1921",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Permitted evidence and exact synthetic inputs supporting Precision boundaries in spiking transport of recursive mixture uncertainty, by Chris Twombly (Independent researcher, Centennial, Colorado, USA). Version 1.2.0 retains the v1.0/v1.1 evidence, including completed LR1 and audited S6-H/S6-U aircraft diagnostics. Six new S5 archives contain exact synthetic observations/truth, original protocol/seed/prediction locks, all run/screen/audit receipts, 4,800 compact forecast series, original exact-replay arrays and an explicit mapping to omitted full-output hashes. Each selected forecast array was bitwise checked against its original. Clean extraction and SHA256 checks passed; a portable verifier reproduced the primary result and all 960 candidate peak checks at 90 digits. The separately source/seed/protocol-locked S5 campaign completed 480 independent new physical trajectories with paired healthy/fault sensing (960 streams, 256 scans), four arms (3,840 runs), and 960 high-precision audits. Its prespecified composite fidelity endpoint had 0/480 base failures; the exact one-sided 95% upper failure bound was 0.622167%, with exact p=0.00803329 at a 1% null failure rate. Every selection was the 40-bit floor. This supports the tested artificial population, not adaptive-width benefits, higher-width branches, calibration improvement or universal 40-bit sufficiency. Earlier 40-bit stress failures remain valid. Author evidence is CC BY 4.0; included code retains its software terms. Compact arrays retain means, full joint covariance laws, g/h and score/coverage/alarm series; this is not a deposit of full mixture-component or internal-state traces. Every ZIP contains a member manifest, and S5_COMPACT_MANIFEST.json maps compact files to their original full outputs. Original locks, analyses, stress breaches and failed endpoints are retained. The independent-machine R1 replay remains not passed (7/8). S5 is fresh synthetic confirmation, not another independent-machine replay. Cross-platform regeneration previously agreed within 5e-11 rather than bitwise; saved synthetic inputs remain the numerical reference. External-data exclusions are unchanged: no K-Radar data/derived outcomes, TartanAviation raw archives, recorded aircraft coordinates, recorded input/truth arrays or recorded forecast means are redistributed. The new S5 positions, truth and compact forecasts are wholly synthetic. Full component and internal-state traces remain local for size; original hashes are retained. Mixed-data manuscript snapshots and edit specifications are excluded. Provider data must be obtained from official sources under their terms. No neuromorphic hardware energy, latency or efficiency benefit is claimed. No external funding; no competing interests. Files remain restricted for peer review. The manuscript remains under author review; this archive is not journal submission.",
+      "tags": [
+        "neuromorphic computing",
+        "uncertainty propagation",
+        "tracking"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Precision boundaries in spiking transport of recursive mixture uncertainty: synthetic inputs and permitted evidence",
+      "url": "https://zenodo.org/records/23608591"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "fe198d1c308df2ab776db799",
       "context_id": "8260c64766e168641895d13e",
       "delivery_preview_only": true,
@@ -798,8 +834,8 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "ed1f19cbc17349aace5e2049",
-      "context_id": "274939965595f2334f5348ac",
+      "candidate_id": "399c9d7e3ac9ccddbc78bc50",
+      "context_id": "43ac0998234b6cc7c216a4fd",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "large_data_methods::COUNTEREVIDENCE",
@@ -819,14 +855,57 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.2917,
       "source": "zenodo",
-      "source_context_sha256": "1ea257cff6197ff33787fbf4b479ca6cbf0a39a30e58ccba73e989c026715de8",
-      "source_published": "2026-10-22",
+      "source_context_sha256": "6bd2a2bde2f33029be470a1d7fa97b40bec327fcc3baaabc95554993e6be7a9c",
+      "source_published": "2026-10-24",
       "source_updated": "",
-      "summary": "Makes canu failures fatal when canu itself could not run. Previously any canu failure during read correction was reported as &quot;This probably means there is low depth, don't be too concerned&quot; and plassembler carried on with uncorrected reads - including when one of canu 's own jobs could not run at all. In the Biocontainers image, canu 's generated job scripts call expr -- ... , which the image's BusyBox expr rejects, so k-mer counting failed every time; continuing with uncorrected reads left Unicycler assembling 110 spurious contigs that the depth filter then had to discard. Thanks @ SieurRicort for the detailed report and diagnosis ( #92 ) plassembler now reads canu 's log to tell its stops apart. A job that failed ( ... jobs failed, tried 2 times, giving up. ) or an internal canu crash stops the run, reports the failing stage alongside canu 's own output, and keeps the canu directory, which holds each job's log. Low read coverage - the expected outcome for a sample with no plasmids - still carries on as before, now with a message saying so. Any other stop also carries on, but shows canu 's reason rather than reassurance. The same applies to canu assembly with --canu_flag",
-      "tags": [],
+      "summary": "Code, frozen configurations, input data, outputs and logs behind the Working sheet for MQG v0.3.8: chiral active Model H in three dimensions — computational validation addendum (MQG: magnetic quorum gravity). The archive contains the pre-registered canonical fit (v1.0), the frozen v1.1 analysis (angular torque test; joint fit with mixed noise), a reproduction on separate hardware, a second-algorithm check, and frozen acceptance tolerances for a future independent fitter. A SHA-256 manifest of every file is included. Interpretation level 1. All dispersion data are synthetic; the results verify software, uncertainty calibration and parameter identifiability, not the physics. The canonical fit v1.0 passes 15 of 16 pre-registered criteria and the v1.1 analysis passes 9 of 10; both failures stay on record. A pre-registered fit by an independent implementer is still open. Licences. Code ( *.py ): MIT licence. Data, outputs, figures and documents: CC BY 4.0. See LICENSE.md in the archive. Use of AI tools. Anthropic Claude, Microsoft Copilot and Google Gemini were used for code development, running the numerical workflow, drafting, editorial review, document organization, literature discovery and verification checks. The author independently reviewed the cited sources, equations, numerical procedures, computational results, scientific interpretations and final claims, and accepts full responsibility for the content. AI-assisted output was not treated as evidence, and computational verification was evaluated separately from physical evidence.",
+      "tags": [
+        "active matter",
+        "chiral active fluid",
+        "Brinkman screening",
+        "pre-registration",
+        "heteroscedastic regression",
+        "reproducibility"
+      ],
       "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "gbouras13/plassembler: v1.8.6",
-      "url": "https://zenodo.org/records/23580245"
+      "title": "Code, frozen configurations, input data, outputs and logs behind the MQG v0.3.8 working sheet",
+      "url": "https://zenodo.org/records/23609229"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "f84d88a646376e02899972e9",
+      "context_id": "1aed8c607e0ffb9117a8db13",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "0d9990329447e3eaffb8565e1d6fbe28177a62cd720b3710cffeefb1528f25e7",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Companion software for Precision boundaries in spiking transport of recursive mixture uncertainty, by Chris Twombly (Independent researcher, Centennial, Colorado, USA). Version 1.2.0 retains the v1.0/v1.1 sources and replay/reporting packages. It adds the frozen S5 dependency source code, runtime-only twelve-worker amendment helper, a portable saved-evidence verifier and archive reporting tools. The numerical worker sources and original scientific lock are unchanged. The verifier passed all deposited-file hashes and recomputed all 960 candidate peaks at 90 digits on a clean extraction on the same computer; this is not full tracker regeneration or a second-machine replay. The separately source/seed/protocol-locked S5 campaign completed 480 independent new physical trajectories with paired healthy/fault sensing (960 streams, 256 scans), four arms (3,840 runs), and 960 high-precision audits. Its prespecified composite fidelity endpoint had 0/480 base failures; the exact one-sided 95% upper failure bound was 0.622167%, with exact p=0.00803329 at a 1% null failure rate. Every selection was the 40-bit floor. This supports the tested artificial population, not adaptive-width benefits, higher-width branches, calibration improvement or universal 40-bit sufficiency. Earlier 40-bit stress failures remain valid. Signed integrate-and-fire packets operate within a numerical host-recursive Gaussian-process mixture tracker. Host gains, weights, mixture assembly and forecast algebra remain numerical. Author code is MIT; retained third-party components keep their notices. The original pipeline retains frozen path/dependency assumptions and is not claimed fully relocatable; the portable verifier checks the saved S5 evidence without importing that pipeline. Original locks, analyses, stress breaches and failed endpoints are retained. The independent-machine R1 replay remains not passed (7/8). S5 is fresh synthetic confirmation, not another independent-machine replay. Cross-platform regeneration previously agreed within 5e-11 rather than bitwise; saved synthetic inputs remain the numerical reference. External-data exclusions are unchanged: no K-Radar data/derived outcomes, TartanAviation raw archives, recorded aircraft coordinates, recorded input/truth arrays or recorded forecast means are redistributed. The new S5 positions, truth and compact forecasts are wholly synthetic. Full component and internal-state traces remain local for size; original hashes are retained. Mixed-data manuscript snapshots and edit specifications are excluded. Provider data must be obtained from official sources under their terms. No neuromorphic hardware energy, latency or efficiency benefit is claimed. No external funding; no competing interests. Files remain restricted for peer review. The manuscript remains under author review; this archive is not journal submission.",
+      "tags": [
+        "neuromorphic computing",
+        "uncertainty propagation",
+        "Gaussian process regression"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Precision boundaries in spiking transport of recursive mixture uncertainty: software and replay package",
+      "url": "https://zenodo.org/records/23608581"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1016,38 +1095,6 @@
     },
     {
       "base_direction_id": "large_data_methods",
-      "candidate_id": "a3adabee0a0bbbf6db1a3bc8",
-      "context_id": "d5524356e3f6b55980383ac4",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.4167,
-      "source": "zenodo",
-      "source_context_sha256": "9d78a85fc85986878bcf415f5a9d2efb18d4bbcc36f0404b96be822e902c22a4",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "MICROROBOTIC NOISE SEPARATION ENGINEERING FOR QUANTUM BIOSENSING AT THE LIMIT Mechanical Vibration &times; Quantum Readout Noise &times; Causal Spectral Analysis STARLI Research Institute XXIX &mdash; Flagship Research Monograph 08 When a microrobotic biosensing instrument produces a cleaner waveform, what evidence distinguishes genuinely improved measurement from a signal-processing procedure that has silently removed the very event being investigated? This research monograph develops a nonclinical, hypothesis-forming framework for microrobotic noise separation, causal spectral attribution, and quantum-enabled biosensing. Its central scientific challenge is to distinguish physical specimen-surrogate fluctuations, mechanical vibration, photon-counting statistics, optical reference instability, and shared instrumental noise without incorrectly attributing unexplained residuals to quantum effects or biological activity. The proposed research architecture combines synchronized raw-waveform acquisition, controlled microrobotic actuation, independent reference measurements, complex cross-spectral estimation, uncertainty quantification, and prospective blinded signal-recovery experiments. The 772-page manuscript contains 82 research chapters, 410 independently paginated scientific investigations, 30 interconnected mathematical research plates, 200 Research Gates, and 33 Phoenix Answer Embryos. Major mathematical investigations address power spectral density decomposition, source cross-correlations, spectral coherence, transfer functions, photon shot noise, low-frequency flicker noise, spectral leakage, mechanical harmonics, lock-in detection, multichannel spectral matrices, identifiability, and uncertainty-aware release decisions. A central falsifiable proposition is that controlled alternating actuation combined with independent phase-locked references may improve the separation of movement artifacts from genuine time-localized signals compared with conventional frequency-only filtering. However, successful noise reduction must be demonstrated without sacrificing true-signal amplitude, timing, spectral content, or scientific traceability. Proposed experiments employ artificial pulse generators, controlled vibration platforms, quantum-enabled optical sensing modules, conventional photodetection systems, and independently calibrated references. Performance comparisons include passive vibration isolation, fixed bandpass filtering, stationary sensing, and longer conventional averaging under matched measurement time, bandwidth, energy, and resource constraints. The 200 Research Gates preserve falsifiable questions, competing explanations, proposed experiments, measurable outcomes, uncertainty conditions, and evidence-preserving stopping criteria. The 33 Phoenix Answer Embryos present provisional research architectures that future human and AI investigators may challenge, reconstruct, extend, or replace. Seventeen DOI-linked scientific publications and metrological references provide methodological foundations while maintaining a clear distinction between established research and the unverified integration proposed in this manuscript. Scientific Scope and Limitations This monograph presents a theoretical and experimental research blueprint rather than completed laboratory findings. It does not establish clinical biosensing effectiveness, verified autonomous nanoscale medical robotics, universal quantum sensing superiority, or demonstrated biological signal attribution. Initial validation is restricted to artificial pulses, controlled instrumentation, nonclinical phantoms, and appropriately authorized research environments. STARLI Research Philosophy A trustworthy scientific signal is not simply a signal that looks quieter. It is one whose physical meaning, original evidence, causal assumptions, measurement uncertainty, and rejected interpretations remain open to independent investigation. By preserving falsifiable questions, negative fin",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "MICROROBOTIC NOISE SEPARATION ENGINEERING FOR QUANTUM BIOSENSING AT THE LIMIT Mechanical Vibration × Quantum Readout Noise × Causal Spectral Analysis STARLI Research Institute XXIX — Flagship Research Monograph 08 When a microrobotic biosensing instrument produces a cleaner waveform, what evidence d",
-      "url": "https://zenodo.org/records/23578718"
-    },
-    {
-      "base_direction_id": "large_data_methods",
       "candidate_id": "02ee31188ed7306cd69b697b",
       "context_id": "abc76374c68973f0c492ed5f",
       "delivery_preview_only": true,
@@ -1121,70 +1168,6 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "IrrMapper v1.2: annual 30 m irrigated-agriculture maps of 11 western US states, 1985-2025",
       "url": "https://zenodo.org/records/23603289"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "cfbd6b4bb8cd59c923cf6b06",
-      "context_id": "727b0ba00bc57500ab30bffd",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.4167,
-      "source": "zenodo",
-      "source_context_sha256": "12efc485d0b3469ea843f74dc4533104d42ca8956f1d5c3268d98f39898e375b",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "v1.1.0 — final-prediction revision analyses Release date: 23 October 2026. This is an analysis/code release; no models were trained or rescored for it. Included evidence revision-experiments/09_photo_count_final/ : final SigLIP2 MIL ensemble versus random forest, stratified into 278 one-photo, 127 two-photo and 345 three-photo cases; 10,000 paired case-bootstrap draws, confidence intervals, multiplicity adjustments, raw subgroup scores and a publication figure. revision-experiments/10_test_discrepancy/ : reproduction of seven paired macro ROC-AUC DeLong-type comparisons and the historical permutation tests, with a separate rank-scale sensitivity analysis. The primary raw-score permutation remains non-significant (p=0.089891); the macro DeLong-type p=0.000072328 and rank sensitivity answer different null questions. Modules 07 (chance-anchored AP) and 08 (paired AUC), added after the original v1.0.0 snapshot, are now included in the release alongside modules 09 and 10. Saved predictions and analysis inputs remain tracked in Git. Copy manifests verify the original E1/E2 script and result bytes. The manuscript-workspace copies remain unchanged. Correct model identity and availability The final manuscript predictor is the canonical SigLIP2 MIL ensemble of seeds 42–51, followed by validation-fitted per-condition Platt calibration. Its saved test predictions are artifacts/models/mil/siglip2_so400m/canonical/ensemble/test_predictions.csv and reproduce approximately 0.851 macro ROC-AUC and 0.304 macro average precision on the locked 750 cases. The separately fitted final model and earlier ensembles are different predictors. The Hugging Face public HawkFranklin-Research/pelliscope-siglip2-mil and private HawkFranklin-Research/pelliscope-25class-models-internal repositories contain historical 20 September weights. Their cards were explicitly labeled as earlier versions on 23 October; commit receipts are in v1.1.0-huggingface-receipts.json . No weights were changed or represented as the final ensemble. Final September 27 checkpoints are not included in this code release, and their recovery/upload remains pending. Google Cloud access currently requires renewed authentication; VM contents have not been verified in this release session. Reproduce the new analyses From the repository root, in the project environment: python revision-experiments/09_photo_count_final/analyze.py --code-root . python revision-experiments/09_photo_count_final/plot_results.py python revision-experiments/10_test_discrepancy/verify_tests.py --code-root . These commands use saved predictions only. They require neither model checkpoints nor feature banks. See each module README for sparse-label, subgroup and test-null limitations. No causal advantage from multi-image aggregation or clinical benefit is established by these analyses alone. Archive continuity The previous immutable archive is v1.0.0, DOI 10.5281/zenodo.23000066 ; its version-series DOI is 10.5281/zenodo.23000065 . The new GitHub release is intended as the next version of that archive. Do not cite the old version-specific DOI as containing these new modules; verify the new version record before updating a manuscript citation.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Hawk Derm: reproducible case-level teledermatology experiments",
-      "url": "https://zenodo.org/records/23581240"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "c115152b6924d7f447bc7e84",
-      "context_id": "5c751b608e6d5ce31c018fa9",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.4167,
-      "source": "zenodo",
-      "source_context_sha256": "92dad0141a78b445f02a1cfb32d79865b1cba3b95fdcf5ce009c5f8d72f78090",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "This archive provides the code, preserved numerical results, historical replication fixtures, figure-source data, and provenance documentation supporting the manuscript &ldquo;An executable procedure for attributing performance differences in finite candidate itinerary evaluations.&rdquo; The package includes a configurable saved-count comparison interface, tests, expected outputs, and 48 preserved historical replication files. It supports reconstruction and verification of the documented V1-R and U2-R comparisons and one selected raw-input trace. The archive does not reproduce the complete original scenario-generation, optimization, or simulation pipeline. Its scope and limitations are documented in the accompanying files. Licensing and attribution: Original project software is released under the MIT License; authorized original documentation and generated research records under CC BY 4.0. City of Toronto source material retains the Open Government Licence &ndash; Toronto, and OpenStreetMap-derived database material retains ODbL 1.0. These component-specific terms do not relicense third-party materials. See CURRENT_COMPONENT_RELEASE_TERMS.md and SOURCE_CITATIONS_AND_RELEASE_BOUNDARIES.md for details.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "FreeTime Planner: Saved-count comparison and historical replication archive (code and data)",
-      "url": "https://zenodo.org/records/23584207"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1314,52 +1297,6 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "OlmLab/microbiome_repo-data: Data package data-v1.23.0",
       "url": "https://zenodo.org/records/23602565"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "f22dfe728b66ee3f39d1dcc3",
-      "context_id": "f7351e1424d48f6cb587bb51",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "hdf5"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.1667,
-      "source": "zenodo",
-      "source_context_sha256": "15a07ed3a803de96c49a466431f2c373f9573beb1578265ef956f9b6737ebcc8",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "Amun Code is an open-source parallel simulation code for astrophysical fluids and plasmas. It solves the equations of hydrodynamics and magnetohydrodynamics in two and three dimensions on uniform or adaptively refined Cartesian meshes. Supported formulations include Newtonian flows with isothermal or adiabatic equations of state, and special relativistic hydrodynamics and magnetohydrodynamics. The code uses Godunov-type shock-capturing methods with selectable approximate Riemann solvers, high-order weighted essentially non-oscillatory and monotonicity-preserving reconstruction, and Runge&ndash;Kutta time integration. Embedded integrators provide error-based time-step control. Magnetic-divergence errors are controlled through generalized Lagrange multiplier cleaning. Optional viscosity, magnetic resistivity, and stochastic turbulence driving support studies of turbulence, shocks, and magnetic reconnection. Driving options include the Alvelius method and an Ornstein&ndash;Uhlenbeck process. Amun Code is written primarily in modern Fortran and supports hybrid MPI/OpenMP parallelization. Simulation settings are supplied through parameter files, and outputs use native XML/binary or HDF5 formats. AmunPy provides a separate Python interface for reading simulation data. The code is developed by Grzegorz Kowal and distributed under the GNU General Public License, version 3 or later.",
-      "tags": [
-        "magnetohydrodynamics",
-        "hydrodynamics",
-        "relativistic magnetohydrodynamics",
-        "astrophysical fluid dynamics",
-        "computational astrophysics",
-        "adaptive mesh refinement",
-        "finite volume methods",
-        "high-order shock-capturing schemes",
-        "Riemann solvers",
-        "turbulence",
-        "Fortran",
-        "MPI",
-        "OpenMP"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Amun Code",
-      "url": "https://zenodo.org/records/23577379"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1507,6 +1444,6 @@
   "schema": "janus.beetle.repo_memory_batch.v1",
   "selection": "BALANCED_LENS_ROLLING_TOP",
   "snapshot_cap": 48,
-  "snapshot_items_total": 41,
+  "snapshot_items_total": 39,
   "target_repository": "Hawkar-usls/janus-lapis"
 }
