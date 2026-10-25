@@ -78,6 +78,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_beetle_delivery.py' -v
           python -m unittest discover -s tests -p 'test_beetle_partial_checkpoint.py' -v
           python -m unittest discover -s tests -p 'test_beetle_rowan_focus.py' -v
+          python -m unittest discover -s tests -p 'test_beetle_rowan_relevance.py' -v
 
       - name: Ask Demiurge for current attention and build mirrored schedule
         run: |

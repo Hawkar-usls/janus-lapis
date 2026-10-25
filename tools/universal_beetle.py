@@ -168,7 +168,30 @@ def keyword_score(direction: dict[str, Any], title: str, summary: str, tags: Ite
     return score, sorted(set(hits))
 
 
+def rowan_domain_scope(direction: dict[str, Any], item: dict[str, Any]) -> bool:
+    """Reject cross-domain noise only for the dedicated protein-stability lane.
+
+    This is a discovery relevance predicate, NOT a TOPA validation gate.
+    Negative controls from protein stability remain eligible. Existing
+    durable candidates and other Beetle directions are never rewritten.
+    """
+    lane=str(direction.get("base_direction_id", direction.get("id",""))).split("::",1)[0]
+    if lane!="protein_stability_falsifiers":
+        return True
+    hay=" ".join((str(item.get("title") or ""),str(item.get("summary") or ""),
+                  " ".join(str(t) for t in (item.get("tags") or [])))).casefold()
+    identity=any(x in hay for x in ("protein", "proteolysis", "proteome", "proteingym",
+                                    "t suboyama", "tsuboyama", "bbc1", "1tg0"))
+    changed=any(x in hay for x in ("mutat", "substitut", "variant", "ddg", "ΔΔg".casefold(), "t suboyama",
+                                   "tsuboyama", "bbc1", "1tg0"))
+    measurement=any(x in hay for x in ("stabil", "proteolys", "thermodynam", "ddg",
+                                       "ΔΔg".casefold(), "fold", "assay", "fitness"))
+    return identity and changed and measurement
+
+
 def record_candidate(state: State, budget: Budget, direction: dict[str, Any], item: dict[str, Any]) -> bool:
+    if not rowan_domain_scope(direction, item):
+        return False
     iid = item_id(item["source"], item["url"], item.get("title", ""))
     if iid in state.seen:
         return False
