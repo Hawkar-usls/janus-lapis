@@ -1,0 +1,26 @@
+name: JANUS Beetle Rowan Direction Integrity
+on:
+  pull_request:
+    paths:
+      - 'data/beetle/directions.json'
+      - 'tests/test_beetle_rowan_direction.py'
+      - '.github/workflows/beetle-rowan-direction-integrity.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/beetle/directions.json'
+      - 'tests/test_beetle_rowan_direction.py'
+      - '.github/workflows/beetle-rowan-direction-integrity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_beetle_rowan_direction.py' -v
