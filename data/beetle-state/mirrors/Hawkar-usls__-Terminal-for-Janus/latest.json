@@ -1,5 +1,5 @@
 {
-  "batch_id": "b9a39ebf9a6bf6ff8085",
+  "batch_id": "e4725c3f4a0706de76f3",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -131,6 +131,40 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "4b0807a4bdbabd575f4e497e",
+      "context_id": "7ae54c48df1a51b0c5aa329f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "13c6f4aebcc8895ab0ba658d7b9ec689e2b191c4a2174c80e7b73c205fe42b19",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "This artifact reproduces the evaluation of DrNLA, a method that rewrites&nbsp;non-linear integer arithmetic (NLA) expressions in program branch/loop guards&nbsp;into equivalent linear integer arithmetic (LIA) via context-dependent dual&nbsp;rewriting, enabling off-the-shelf LIA-based CTL verifiers (T2, FuncTion) to&nbsp;verify branching-time properties of NLA programs. Contents: the DrNLA implementation (src/); all benchmark suites (benchmarks/:&nbsp;ctl-svcomp, ctl-pldi13small, custom, real-world, and the 320-instance&nbsp;ctl-diverse suite); the CIL source instrumenter (deps/dyn_instr/, prebuilt&nbsp;binary + source); the reproduction drivers, pinned-toolchain manifest, and&nbsp;reference results (reproduce/); and the context-experiment inputs. Reproduced tables: Tab. 1 (NLA-&gt;LIA rewrite results), Tab. 2 (context&nbsp;necessity / reach-ctx), and Tab. 3/4 (T2 and FuncTion enabled by DrNLA). Usage: unzip and follow REPRODUCE.md (the single entry point); exact pinned&nbsp;toolchain is in reproduce/MANIFEST.md. The external verifiers &mdash; DIG (commit&nbsp;a6a4d04), Ultimate Automizer 0.2.2, T2 (10f1373), and FuncTion (bdeeae1) &mdash; are&nbsp;obtained and built per deps/README.md; DIG must be a6a4d04 (newer DIG changes&nbsp;the invariant-generator flags). All reported numbers were produced on a single&nbsp;Ubuntu 22.04 workstation with a 900 s per-benchmark timeout.",
+      "tags": [
+        "Dynamic Analysis; Program Simplification; CTL Verification; Non-Linear Arithmetic; Counterexample-Gu"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "DrNLA: Context-dependent linearization for CTL verification of non-linear arithmetic programs (Reproduction Artifact)",
+      "url": "https://zenodo.org/records/23650589"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "07a45022c620095c4523334c",
       "context_id": "02f291bd2b50b4bb7df59f5d",
       "delivery_preview_only": true,
@@ -167,6 +201,44 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "Independent finite-field verification of a Hankel seed certificate for hyperbolicity cones",
       "url": "https://zenodo.org/records/23648332"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "0644d33ab81a43d510865396",
+      "context_id": "a6ccca63bef1bbf8ead7844e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "zenodo",
+      "source_context_sha256": "8ec05cc9235474ad5996584499e6118c42565f72c986800cc75943594b2833ef",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "aiprov records who, a person or an AI model, did what to an artefact and who checked it, in a plain Turtle file as a profile of W3C PROV-O. 0.2.0 is the first release archived on Zenodo, together with 0.1.0 under one concept DOI. Since 0.1.0: Multi-agent runs (from 0.2.0-rc.1): aiprov:Orchestration with planned roles and agents, delegation through prov:actedOnBehalfOf and prov:wasInformedBy , and provlog merge for sharded logging, where each agent writes its own copy of the graph and the dispatcher unions them; validate and report know the plan. claim and source refuse the human-only steps ( human-confirmed , human-read , lit-read ) for any agent that is not a registered HumanAgent , as promote does. The check trusts the registration of agents (see AGENTS.md ). Identity and logo: docs/identity.md and assets/ , with the provenance record of the generated picture. Demo page: https://noheton.github.io/aiprov/ , built by running provlog on invented data; the build fails if a command behaves differently from what the page says. Docs: the install line pins @v0.2.0 ; schema/README.md names Build and Repair . Planned for 0.3.0: the open schema proposals and bug reports in the issue tracker. Install: pip install git+https://github.com/noheton/aiprov@v0.2.0",
+      "tags": [
+        "provenance",
+        "PROV-O",
+        "AI",
+        "FAIR",
+        "RDF"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "aiprov: domain-agnostic AI provenance over PROV-O",
+      "url": "https://zenodo.org/records/23651340"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -392,6 +464,39 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "dcad3ce62f731879a37a23fc",
+      "context_id": "8d6306886e36b69af5deafb8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "confound"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.5,
+      "source": "zenodo",
+      "source_context_sha256": "1bc26c089535c45bc8cfc09cd0be7de290a1814896237567b0b3ce08e02f5554",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "CAUSAL INFERENCE AND CLINICAL EVIDENCE ENGINEERING FOR INTELLIGENT NANO-ACUPUNCTURE AT THE LIMIT STARLI / WHITE RAINBOW EPOCH / FLAGSHIP 25 OF 90 777-PAGE NONCLINICAL RESEARCH WORKING EDITION v1.0 / 2026 This 777-page STARLI flagship volume develops a falsifiable research program for causal inferenc",
+      "url": "https://zenodo.org/records/23650967"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "a4fd185d4681899575059ce8",
       "context_id": "aa399316b451442b47facc26",
       "delivery_preview_only": true,
@@ -465,6 +570,6 @@
   "schema": "janus.beetle.repo_memory_batch.v1",
   "selection": "BALANCED_LENS_ROLLING_TOP",
   "snapshot_cap": 48,
-  "snapshot_items_total": 12,
+  "snapshot_items_total": 15,
   "target_repository": "Hawkar-usls/-Terminal-for-Janus"
 }
