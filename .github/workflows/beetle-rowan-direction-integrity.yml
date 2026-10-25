@@ -4,6 +4,8 @@ on:
     paths:
       - 'data/beetle/directions.json'
       - 'tests/test_beetle_rowan_direction.py'
+      - 'tests/test_beetle_rowan_focus.py'
+      - 'tools/beetle_director_overlay.py'
       - '.github/workflows/beetle-rowan-direction-integrity.yml'
   push:
     branches: [main]
@@ -23,4 +25,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check --quiet requests==2.32.5
       - run: python -m unittest discover -s tests -p 'test_beetle_rowan_direction.py' -v
+      - run: python -m unittest discover -s tests -p 'test_beetle_rowan_focus.py' -v
