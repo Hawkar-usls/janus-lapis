@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import argparse, copy, datetime as dt, json, pathlib
+import argparse, copy, datetime as dt, hashlib, json, pathlib
 from typing import Any
 import requests
 
@@ -66,21 +66,90 @@ def adhoc_to_direction(row: dict[str,Any]) -> dict[str,Any]:
       'sources':[{'kind':'arxiv','enabled':True,'query':aq,'max_results':8},{'kind':'zenodo','enabled':True,'query':q,'max_results':8},{'kind':'github','enabled':True,'query':q,'max_results':8}]
     }
 
+
+# No arbitrary Oracle/Demiurge-generated search terms may reach the worker.
+# Its only admitted input is a source-matched ID mapping to frozen queries here.
+ROWAN_QUERY_TEMPLATES = {
+    'RAW_ASSAY_LINEAGE': {
+        'arxiv': 'all:"Tsuboyama" AND (all:"protein stability" OR all:"proteolysis")',
+        'zenodo': 'Tsuboyama 2023 BBC1 1TG0 experimental protein stability raw assay',
+        'github': 'ProteinGym BBC1 Tsuboyama raw assay preprocessing',
+    },
+    'EXTERNAL_HOLDOUT': {
+        'arxiv': 'all:"protein stability" AND (all:"independent benchmark" OR all:"mutation")',
+        'zenodo': 'independent proteolysis stability mutants protein benchmark',
+        'github': 'ProteinGym external holdout mutation stability benchmark',
+    },
+}
+def rowan_digest(o: dict[str,Any]) -> str:
+    return hashlib.sha256(json.dumps(o,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()).hexdigest()
+
+def verify_rowan_focus(meta: dict[str,Any], council: dict[str,Any]) -> str|None:
+    """A stale, rehashed or authority-escalated council never steers discovery."""
+    if not isinstance(meta,dict) or not isinstance(council,dict):
+        return None
+    if meta.get('schema_id')!='janus.rowan.observer_state.v1' or council.get('schema_id')!='janus.demiurge.rowan_council_proposal.v1':
+        return None
+    c=dict(council)
+    if c.pop('content_sha256',None)!=rowan_digest(c):
+        return None
+    row=council.get('sources',{}).get('meta_registry',{})
+    if row.get('canonical_run')!=meta.get('latest_durable_external_run') or row.get('sha256')!=rowan_digest(meta):
+        return None
+    if row.get('source_artifact_sha256')!=meta.get('underlying_state_is_derived_from'):
+        return None
+    if council.get('next_beetle_direction_id')!='protein_stability_falsifiers':
+        return None
+    gates=council.get('gates',{})
+    if any(gates.get(k) is not False for k in (
+       'rowan_credit_spend_new','rowan_job_submission_new',
+       'beetle_candidates_empirical_evidence','aura_predictions_empirical_evidence',
+       'production_model_weight_promotion')):
+        return None
+    if council.get('scientific_authority')!='NONE__PROPOSAL_NOT_EXPERIMENT':
+        return None
+    if council.get('completed_pilot_cases')!=meta.get('last_completed_mutants'):
+        return None
+    question=council.get('next_aura_question_id')
+    if question not in ROWAN_QUERY_TEMPLATES:
+        return None
+    if question=='EXTERNAL_HOLDOUT' and meta.get('last_completed_mutants')!=8:
+        return None
+    if question=='RAW_ASSAY_LINEAGE' and meta.get('last_completed_mutants')==8:
+        return None
+    return question
+
+def focus_rowan_direction(direction: dict[str,Any], question: str|None) -> dict[str,Any]:
+    d=copy.deepcopy(direction)
+    if d.get('id')!='protein_stability_falsifiers' or question not in ROWAN_QUERY_TEMPLATES:
+        return d
+    for source in d.get('sources',[]):
+        kind=source.get('kind')
+        if kind in ROWAN_QUERY_TEMPLATES[question]:
+            source['query']=ROWAN_QUERY_TEMPLATES[question][kind]
+    d['source_bound_research_question_id']=question
+    d['source_bound_research_question_is_evidence']=False
+    return d
+
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('--base',required=True); ap.add_argument('--static-url',required=True); ap.add_argument('--live-url',required=True)
     ap.add_argument('--state-dir',required=True); ap.add_argument('--out',required=True)
+    ap.add_argument('--rowan-council-url',default=None)
+    ap.add_argument('--rowan-meta-url',default=None)
     ap.add_argument('--max-primary',type=int,default=None)
     ap.add_argument('--max-lanes',type=int,default=None)
     a=ap.parse_args()
     base=load_local(a.base); static=load_remote(a.static_url); live=load_remote(a.live_url)
+    rowan_question=(verify_rowan_focus(load_remote(a.rowan_meta_url),load_remote(a.rowan_council_url))
+        if a.rowan_meta_url and a.rowan_council_url else None)
     state_dir=pathlib.Path(a.state_dir); sched_path=state_dir/'scheduler.json'
     sched=json.loads(sched_path.read_text()) if sched_path.exists() else {'lanes':{},'directions':{},'runs':0}
     sched.setdefault('lanes',{}); sched.setdefault('directions',{})
     priorities={d['id']:float(d.get('priority',0)) for d in base.get('directions',[])}
     priorities.update({k:float(v) for k,v in static.get('base_priorities',{}).items() if k in priorities})
     priorities.update({k:float(v) for k,v in live.get('direction_priorities',{}).items() if k in priorities})
-    directions=[copy.deepcopy(d) for d in base.get('directions',[]) if d.get('enabled',True)]
+    directions=[focus_rowan_direction(d,rowan_question) for d in base.get('directions',[]) if d.get('enabled',True)]
     allow=set(static.get('allowed_target_repositories',[]))
     for ad in live.get('ad_hoc_directions',[]) if isinstance(live.get('ad_hoc_directions',[]),list) else []:
         targets=[x for x in ad.get('target_repositories',[]) if x in allow]
@@ -160,6 +229,8 @@ def main():
       'selected_lanes':[d['id'] for d in lanes], 'active_mirror_lenses':active_lenses,
       'all_four_mirror_lenses_present':all(x in active_lenses for x in MIRROR_ORDER) if max_lanes>=4 else False,
       'priority_semantics':'ATTENTION_ONLY_NOT_EVIDENCE','base_direction_fairness_slot':fairness,
+      'rowan_source_bound_focus':rowan_question or 'UNAVAILABLE_OR_STALE__BASE_QUERIES_ONLY',
+      'rowan_council_authority_delta':0,
       'scheduler_width':{'max_primary':max_primary,'max_lanes':max_lanes,'static_max_primary':static_max_primary,'static_max_lanes':static_max_lanes},
       'mirror_invariant':'FORWARD_REVERSE_COUNTEREVIDENCE_CONTROL_EACH_CYCLE_WHEN_MAX_LANES_GE_4'
     }
