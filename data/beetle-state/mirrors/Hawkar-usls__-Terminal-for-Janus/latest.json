@@ -1,5 +1,5 @@
 {
-  "batch_id": "14237e9d8e893df885f3",
+  "batch_id": "88b76689e7949cd1e5c6",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -134,42 +134,6 @@
       "url": "https://zenodo.org/records/23618790"
     },
     {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "34a47aa2bdd255fbc23e04f5",
-      "context_id": "a61c7ffd9eaebd191ccb64eb",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "consensus",
-        "multi-agent"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.8333,
-      "source": "arxiv",
-      "source_context_sha256": "893b69ef8fa24fb3415fc894cb5f5e3b6584f311d523d93a89c4124a94ce467b",
-      "source_published": "2026-10-21T16:39:07Z",
-      "source_updated": "2026-10-21T16:39:07Z",
-      "summary": "Large organizations increasingly face what this book calls the cognitive complexity wall: at the scale of hundreds of interacting components, maintaining the dependency map and reacting at the pace of incidents exceeds what a human team can deliver. This conceptual volume proposes AAM/5C, in which five capabilities (Capture, Comprehend, Choose, Coordinate, Control) are instantiated across seven logical layers, L1 to L7. A single authorization rule, R-AUT, separates who proposes, who decides and who executes: a probabilistic planner (L4) proposes; a governance layer (L6) decides under signed policies and records its verdict in a signed evaluation proof; a security layer (L5) issues a short-lived act token bound to that proof; a policy enforcement point verifies both before the target layer materializes the act. Under an explicit guarantee contract, two analytical statements (H7a, H8a) hold by construction. The other statements of its ten hypotheses (H1 to H10), including log completeness (H7b) and non-bypass of the enforcement point (H8b), are refutable, and the protocol that could refute them is fixed before any measurement. The contribution of the book is a prescriptive reference model that articulates, under this single authorization rule, known mechanisms and adds three constructs, all to be validated: the Validation step of the Distributed Autonomy Loop, the ephemeral authority surface and the cognitive dependency plane. The book positions them against autonomic computing, multi-agent systems, enterprise architecture and agent protocols (MCP, A2A), gives an authorization policy in Rego and a partial TLA+ specification of peer consensus, and sets out a validation program with quantified milestones. It reports no empirical results. This English edition is a translation of the French original, produced with the assistance of AI tools and validated by the author.",
-      "tags": [
-        "cs.SE",
-        "cs.MA"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Agentic Architecture of Information Systems. The AAM/5C Model: A Reference Model for Distributed Autonomy",
-      "url": "https://arxiv.org/abs/2610.30221v1"
-    },
-    {
       "base_direction_id": "large_data_methods",
       "candidate_id": "2588133293ad6b18cbb8f64a",
       "context_id": "a094e6800d0b93d3af217ed3",
@@ -300,13 +264,13 @@
       "url": "https://zenodo.org/records/23625122"
     },
     {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "c402fddab3e4d1dfc3fc1ed9",
-      "context_id": "7f73275d57f4b4cb2448e01d",
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "ff474e2f7a8b33911332d4d7",
+      "context_id": "29bd77d48685163374b2721e",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -316,29 +280,30 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "agent orchestration",
-        "multi-agent"
+        "failure",
+        "limitation"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.25,
-      "source": "arxiv",
-      "source_context_sha256": "bdabf0836143c2d99e1648cdabcfea6209c51e38f49f1d64d4b40f16006f8908",
-      "source_published": "2026-10-21T20:47:14Z",
-      "source_updated": "2026-10-21T20:47:14Z",
-      "summary": "Sixth-generation (6G) communication systems are expected to support immersive, intent-driven, and latency-critical services through tight integration of multimodal intelligence, edge computing, and autonomous network control. In this setting, agentic AI systems can reason over heterogeneous inputs, use tools and network functions, coordinate across distributed entities, and adapt to dynamic environments. These capabilities make agentic multimodal intelligence promising for 6G applications such as semantic communications, digital twins, and zero-touch network management, but they also introduce security and privacy risks that extend beyond conventional AI and network security models. Vulnerabilities can propagate across multimodal data pipelines, memory, tools, communication interfaces, and inter-agent coordination loops. We survey multimodal intelligence and agentic AI for 6G cross-layered communication systems from the perspectives of privacy and security. We present a 6G-oriented system view spanning perception, memory, tool use, and multi-agent orchestration; analyze threat models and attack surfaces across sensing, cognition, action, memory, and communication layers; organize existing attacks into a structured taxonomy; and review mitigation strategies including prompt and memory defenses, inter-agent trust mechanisms, secure orchestration, and privacy-preserving learning. We conclude by outlining open research directions for trustworthy multimodal multi-agent 6G systems.",
+      "score": 5.7083,
+      "source": "zenodo",
+      "source_context_sha256": "955b8313d7006802f824bc58d5a161ef03fe1c710ad70dc7f03d2419df9a1c27",
+      "source_published": "2026",
+      "source_updated": "",
+      "summary": "Background/Objectives : With the advent of the current digital health age, opportunities for interacting with health systems have grown not only more frequent but also variable in type, spanning across emergent care settings, routine outpatient follow-up, as well as at-home telemedicine-based platforms. In light of initiatives to re-design electronic medical records (EMR) to more meaningfully curate evidence-based insights, our research objective is focused on harnessing underutilized data features (i.e., time-ordered events) to map the complex interactions that patients undergo within their health systems. We posit that inclusion of information associated with sequential patterns will help more accurately simulate care pathways and outcomes. We report preliminary data on care utilization patterns among cohorts of patients diagnosed with chronic disease. Methods : De-identified data were extracted from the MedStar Health AIM-AHEAD Data Bridge (AADB)&rsquo;s Chronic Disease repository. EMRs were queried for patients with confirmed diagnoses for diabetes mellitus (ICD-10: E10.X or E11.X) as well as heart failure (ICD-10: I50.X). For each unique patient, encounters related to care utilization were sequentially collated, with explicit demarcation of whether interactions occurred before or after corresponding diagnoses. For analytical purposes, encounters were categorized as &ldquo;Emergency&rdquo;, &ldquo;Inpatient&rdquo;, &ldquo;Observation&rdquo;, &ldquo;Outpatient&rdquo;, &ldquo;Home Health&rdquo;, and &ldquo;Patient Portal&rdquo;. For each cohort, sequential pattern mining (SPM) was used to generate antecedent-consequent prediction rules and calculate the conditional probabilities (confidence) of subsequent care utilization episodes. Analyses were performed using R (The R Foundation for Statistical Computing; version 4.5.2). Results : Between January 2018 and December 2024, we distinctly identified 202,605 patients with a diagnosis for diabetes mellitus as well as 79,223 patients with a diagnosis for heart failure. Across both cohorts, 42,208 patients had documentation of being diagnosed with both conditions and were flagged separately for potential sensitivity analyses. The proportion of older patients (50 years or above) was predominant (&gt;85% for all patients). The median number of annual healthcare interactions tended to increase post-diagnosis (versus pre-diagnosis) particularly in diabetic cohorts: 3.0 versus 1.0 (diabetes only); 5.0 versus 1.7 (diabetes and heart failure). Total instances of care episodes (t) were enumerated across the 7-year study period: diabetes only (t=3,511,417), heart failure only (t=741,789), diabetes and heart failure (t=1,681,307). SPM algorithms were used to generate rulebooks associating unique care utilization patterns with their corresponding likelihood of subsequent events. Discussion/Conclusions : Our initial findings highlight a wide variability of care utilization patterns among patients diagnosed with chronic diseases. We demonstrated that analyzing care utilization sequences may yield embedded insights that can be harnessed for prospectively tracking person-centered health trajectories. The current work exhibits several limitations and opportunities for expanded analysis. We expect to enrich our data pipeline with more detailed clinical features (e.g., medications, laboratory panels, procedures) in future iterations. This comprehensive ingestion would enable the initial steps towards developing models for predicting the onset of unfavorable health outcomes. Implications: Notwithstanding these considerations, the goals of our preliminary efforts are aligned with learning health systems models which emphasize the implementation of evidence-based insights at the point-of-care. With increasing integration of multi-modal sources of longitudinal health information as well as availability of high-computing resources, connected health technologies may serve as valuable applications from whi",
       "tags": [
-        "cs.AI",
-        "eess.SP"
+        "AIM-AHEAD Research Fellowship",
+        "AI/ML",
+        "health services research"
       ],
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Secure Agentic AI and Multimodal Intelligence in 6G Communication Systems",
-      "url": "https://arxiv.org/abs/2610.30436v1"
+      "title": "Establishing a Scalable Research Reporting Framework for Mapping Healthcare Utilization Trajectories and Outcomes among Chronic Disease Patients Diagnosed with Diabetes and/or Heart Failure",
+      "url": "https://zenodo.org/records/23630219"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "1acb338bfee4f784eb35ef26",
-      "context_id": "cedabe2deb264ec3940c07ff",
+      "candidate_id": "ff474e2f7a8b33911332d4d7",
+      "context_id": "25e19439a6e4fce694d0b68d",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
@@ -352,59 +317,25 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "decentralized",
-        "multi-agent"
+        "failure",
+        "limitation"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.0,
-      "source": "arxiv",
-      "source_context_sha256": "1b89ebef41fc8d47c7ff26a0702ee425c43a7d8b0be5ce4249be27771646b98b",
-      "source_published": "2026-10-21T20:52:48Z",
-      "source_updated": "2026-10-21T20:52:48Z",
-      "summary": "Multi-task generalization is an important yet underexplored problem in multi-agent reinforcement learning (MARL). Many real-world applications require multi-agent systems to generalize across complex, temporally extended tasks with diverse inter-agent coordination requirements. We introduce a specification language that combines temporal-logic task specifications with operators for expressing such requirements. We propose SpecMAGIC, a hierarchical framework that leverages the automaton structure of task specifications for subtask decomposition. A centralized high-level planner identifies and allocates compatible subtask sequences across agents, while decentralized low-level policies execute individual subtasks. This enables zero-shot generalization to new tasks by composing reusable subtask policies according to new specifications, without retraining. We establish soundness and probabilistic completeness of the high-level planner. Experiments on multi-agent navigation tasks show that SpecMAGIC substantially outperforms existing approaches on unseen task specifications and maintains strong performance as the number of agents increases.",
+      "score": 5.7083,
+      "source": "zenodo",
+      "source_context_sha256": "1e5c51842e816ce348011a666c98b57dd969ac30467b63d5f1d4fd73375a4925",
+      "source_published": "2026",
+      "source_updated": "",
+      "summary": "Background/Objectives : With the advent of the current digital health age, opportunities for interacting with health systems have grown not only more frequent but also variable in type, spanning across emergent care settings, routine outpatient follow-up, as well as at-home telemedicine-based platforms. In light of initiatives to re-design electronic medical records (EMR) to more meaningfully curate evidence-based insights, our research objective is focused on harnessing underutilized data features (i.e., time-ordered events) to map the complex interactions that patients undergo within their health systems. We posit that inclusion of information associated with sequential patterns will help more accurately simulate care pathways and outcomes. We report preliminary data on care utilization patterns among cohorts of patients diagnosed with chronic disease. Methods : De-identified data were extracted from the MedStar Health AIM-AHEAD Data Bridge (AADB)&rsquo;s Chronic Disease repository. EMRs were queried for patients with confirmed diagnoses for diabetes mellitus (ICD-10: E10.X or E11.X) as well as heart failure (ICD-10: I50.X). For each unique patient, encounters related to care utilization were sequentially collated, with explicit demarcation of whether interactions occurred before or after corresponding diagnoses. For analytical purposes, encounters were categorized as &ldquo;Emergency&rdquo;, &ldquo;Inpatient&rdquo;, &ldquo;Observation&rdquo;, &ldquo;Outpatient&rdquo;, &ldquo;Home Health&rdquo;, and &ldquo;Patient Portal&rdquo;. For each cohort, sequential pattern mining (SPM) was used to generate antecedent-consequent prediction rules and calculate the conditional probabilities (confidence) of subsequent care utilization episodes. Analyses were performed using R (The R Foundation for Statistical Computing; version 4.5.2). Results : Between January 2018 and December 2024, we distinctly identified 202,605 patients with a diagnosis for diabetes mellitus as well as 79,223 patients with a diagnosis for heart failure. Across both cohorts, 42,208 patients had documentation of being diagnosed with both conditions and were flagged separately for potential sensitivity analyses. The proportion of older patients (50 years or above) was predominant (&gt;85% for all patients). The median number of annual healthcare interactions tended to increase post-diagnosis (versus pre-diagnosis) particularly in diabetic cohorts: 3.0 versus 1.0 (diabetes only); 5.0 versus 1.7 (diabetes and heart failure). Total instances of care episodes (t) were enumerated across the 7-year study period: diabetes only (t=3,511,417), heart failure only (t=741,789), diabetes and heart failure (t=1,681,307). SPM algorithms were used to generate rulebooks associating unique care utilization patterns with their corresponding likelihood of subsequent events. Discussion/Conclusions : Our initial findings highlight a wide variability of care utilization patterns among patients diagnosed with chronic diseases. We demonstrated that analyzing care utilization sequences may yield embedded insights that can be harnessed for prospectively tracking person-centered health trajectories. The current work exhibits several limitations and opportunities for expanded analysis. We expect to enrich our data pipeline with more detailed clinical features (e.g., medications, laboratory panels, procedures) in future iterations. This comprehensive ingestion would enable the initial steps towards developing models for predicting the onset of unfavorable health outcomes. Implications: Notwithstanding these considerations, the goals of our preliminary efforts are aligned with learning health systems models which emphasize the implementation of evidence-based insights at the point-of-care. With increasing integration of multi-modal sources of longitudinal health information as well as availability of high-computing resources, connected health technologies may serve as valuable applications from whi",
       "tags": [
-        "cs.AI"
+        "AIM-AHEAD Research Fellowship",
+        "AI/ML",
+        "health services research"
       ],
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "SpecMAGIC: Specification-Guided Multi-Task Generalization in Multi-Agent Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2610.30443v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "02ee31188ed7306cd69b697b",
-      "context_id": "ecdc2e1a4a3ebd2030c48998",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation",
-        "multi-agent"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.875,
-      "source": "arxiv",
-      "source_context_sha256": "05ee5c20a04e4674fff6d84fa02be345c402e92e987f55a5046d443c523297f2",
-      "source_published": "2026-10-21T20:46:24Z",
-      "source_updated": "2026-10-21T20:46:24Z",
-      "summary": "Recent advances in search agents have enabled large language models to tackle complex tasks by retrieving and synthesizing external information. However, existing search agents often lack search-state awareness, i.e., the ability to recognize what information has been obtained and what remains missing, leading to hallucinated reasoning and prematurely terminated search. To address this limitation, we propose Self-Assessment Reinforcement Learning (SARL), a reinforcement learning framework in which models learn to recognize their own search state during training and improve their search behavior accordingly, without requiring additional assessment at test time. SARL achieves this through a dual reward design that captures the corrective effect of each assessment while penalizing excessive reliance on it, jointly encouraging effective and efficient search trajectories. Under this setup, SARL achieves a 24.3% relative improvement over the strongest baseline, with average gains of 35.9% on multi-hop reasoning and 27.9% on deep research benchmarks against the strongest per-benchmark baselines. SARL further surpasses methods built on auxiliary supervision or multi-agent coordination, despite operating as a standalone RL framework with no inference-time scaffolding. Beyond final performance, SARL maintains training stability under extended search horizons, a regime where existing methods consistently degrade, enabling sustained gains as task complexity grows.",
-      "tags": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Self-Assessment Reinforcement Learning for Search-State Awareness in Retrieval-Augmented Large Language Models",
-      "url": "https://arxiv.org/abs/2610.30435v1"
+      "title": "Establishing a Scalable Research Reporting Framework for Mapping Healthcare Utilization Trajectories and Outcomes among Chronic Disease Patients Diagnosed with Diabetes and/or Heart Failure",
+      "url": "https://zenodo.org/records/23630219"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -503,41 +434,6 @@
       "url": "https://zenodo.org/records/23597515"
     },
     {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "806194c5890b621d41c435e3",
-      "context_id": "32910e265eaecde3566e99a2",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "multi-agent",
-        "swarm"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.6667,
-      "source": "arxiv",
-      "source_context_sha256": "b745b91bb35deb1b94d744773d3afc1ba4a7eff1244dc136e4fda73133739bca",
-      "source_published": "2026-10-22T10:34:17Z",
-      "source_updated": "2026-10-22T10:34:17Z",
-      "summary": "The limited communication resources and sensing perspectives of a single uncrewed aerial vehicle (UAV) motivate UAV swarms for integrated sensing and communication (ISAC) in air-ground networks. However, in multi-region scenarios, regional UAV allocations may not match vehicle demand, while local observations may lack sufficient diversity for accurate sensing. To address these issues, this paper proposes a cross-region cooperation framework for UAV swarms. For communication, cross-region UAV reallocation reduces service disparities by matching resources to vehicle demand. For sensing, combining UAV observations from different regions increases observation diversity, while adaptive handshaking guided by marginal Cramér--Rao bound (CRB) utilities balances phase synchronization gains against handshaking energy consumption. Joint optimization of UAV positions and transmit power within each region then further improves communication service and sensing performance. These coupled decisions are coordinated by a hierarchical multi-agent reinforcement learning (H-MARL) approach through slow-timescale inter-region UAV reallocation and fast-timescale intra-region UAV control. Under the considered simulation settings, reallocation can improve quality of service (QoS) by over 20 percentage points compared with retaining the initial allocation under severe resource-demand mismatches. Cooperative sensing with adaptive handshaking incurs only about a 5.0% increase in mean CRB relative to perfect synchronization.",
-      "tags": [
-        "eess.SY"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Cross-Region Cooperation of UAV Swarms Towards Air-Ground ISAC via Hierarchical Multi-Agent Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2610.31054v1"
-    },
-    {
       "base_direction_id": "large_data_methods",
       "candidate_id": "6725d96fd3041bfeb9f857b3",
       "context_id": "fc051b5df26bf37d4768110d",
@@ -633,76 +529,6 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "Negative Results of Applying Computer Vision and Spatial Code Representations Techniques for Vulnerability Detection — Artifacts",
       "url": "https://zenodo.org/records/23618255"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "c61f59d487d84e386d4a6d90",
-      "context_id": "bf4a2091fd303afada6220f1",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "multi-agent"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.4583,
-      "source": "arxiv",
-      "source_context_sha256": "0d38bb6ec225a514b754f5b3d93852b3d247c899850393178fa9a31dcce5117e",
-      "source_published": "2026-10-22T03:31:03Z",
-      "source_updated": "2026-10-22T03:31:03Z",
-      "summary": "LLM-based scam systems increasingly combine adaptive dialogue, persistent context, external tools, and multi-agent coordination to automate personalized fraud. These capabilities also create a resource dependency: every reasoning step, model call, and coordination round incurs inference cost. We present TokenTrap, a resource-oriented defense that redirects suspected scam systems toward benign, low-value computation while withholding credentials, payments, and other exploitable information. TokenTrap combines three components: an architecture-specific token-task library, a router that selects among single-agent, hierarchical, and flat multi-agent workflows, and a bounded anti-guardrail strategy that varies task presentation while enforcing token, round, time, and safety limits. Across 50-round traces, TokenTrap amplifies token consumption by $2{,}487.0\\times$, $1{,}616.0\\times$, and $567.8\\times$ relative to a no-token-task baseline for the three workflows. Its router achieves 85.67% accuracy on 300 architecture-labeled prompts. These results demonstrate that short, non-sensitive requests can impose substantial context-processing and coordination costs, motivating resource-aware defense as a complement to scam detection.",
-      "tags": [
-        "cs.CR"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Your Token Is Gone: A Token-Consumption Countermeasure for Disrupting LLM-Based Scam Systems",
-      "url": "https://arxiv.org/abs/2610.30666v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "38699e020f25c8580641caef",
-      "context_id": "133151d5269d571a605f7ffc",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "multi-agent"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.4583,
-      "source": "arxiv",
-      "source_context_sha256": "fd66bb01096ed281f32c35fb02f56ddd0eca3b4feaca5537e335946f6c8d93b3",
-      "source_published": "2026-10-21T19:48:21Z",
-      "source_updated": "2026-10-21T19:48:21Z",
-      "summary": "We address the problem of real-time multi-agent path planning under prescribed initial and final configurations, formulated as a high-dimensional optimal control problem subject to inter-agent collision avoidance and obstacle constraints. Classical solvers based on the Hamilton--Jacobi--Bellman equation or Pontryagin's maximum principle (PMP) become computationally intractable as the number of agents grows, due to the curse of dimensionality and the non-convexity introduced by interaction constraints. We propose OCFormer, a transformer-based neural network that parameterizes the inverse of a coordinate transformation mapping a simple, analytically tractable latent space, in which agents evolve independently under a decoupled Hamiltonian, to the physical space of the coupled, interacting system. The model is trained by minimizing a physics-informed loss comprising the Hamiltonian ODE residual from the PMP and a boundary matching term, without requiring pre-computed trajectory data. The self-attention mechanism endows OCFormer with permutation equivariance over agents, a structural symmetry that prior symplectic network approaches do not natively enforce. When trained on a distribution of boundary conditions, the amortized OCFormer produces near-optimal trajectories for unseen initial and final configurations in a single forward pass ($\\sim$220ms), enabling real-time inference without retraining. We further introduce a lightweight transfer learning framework that adapts a pretrained OCFormer to out-of-distribution perturbations in seconds via L-BFGS fine-tuning. Numerical experiments on two- and three-dimensional multi-agent navigation with up to 128 agents demonstrate the scalability and efficiency of the proposed approach.",
-      "tags": [
-        "math.OC",
-        "cs.LG",
-        "math.NA"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "A Transformer-based Approach for Real-time Multi-agent Path Planning with Varying Initial/Final Conditions",
-      "url": "https://arxiv.org/abs/2610.30388v1"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -941,6 +767,38 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "PHP2Shell Security Breach Analysis and Patch",
       "url": "https://zenodo.org/records/23629065"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "7e992decff9788b92ffd37b3",
+      "context_id": "ce4104df293720de99e08ddd",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "6d7c840330383efbcb20614dad7b35c32c7f893b3663ae317fb87427c751e93b",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "DIGITAL TWINS AND AI CLOSED-LOOP CONTROL FOR NANOROBOTIC PHARMACEUTICAL MANUFACTURING AT THE LIMIT Digital Twins x AI Process Control x Pharmaceutical Manufacturing Quality This high-density English research monograph develops a falsification-oriented architecture for digital twins and AI closed-loop control in nonclinical nanorobotic pharmaceutical manufacturing research. Its central question is whether a process-state estimator can predict quality failure under raw-material, flow, sensor and equipment drift before the failure occurs, rather than merely replaying historical data as an attractive dashboard. The governing evidence object is the Falsifiable Manufacturing Twin. It binds a declared physical state, observation model, uncertainty envelope, process and sensor versions, candidate and executed control actions, external critical-quality-attribute measurements, abstention, fallback and terminal batch fate. A twin earns authority only while new physical evidence can contradict it. Failed, stopped, out-of-distribution and externally falsified batches remain in the denominator. The monograph compares fixed recipes, statistical process control, tuned PID, strong non-learning model predictive control and AI under equal sensing, energy, constraints and operator access. It treats calibrated ignorance as a successful behavior: an unsupported state must cause abstention, return to a separately qualified safe recipe or stop. External CQA evidence always outranks the model. The volume contains 30 distinct mathematical research plates, 82 chapters, 410 independently paginated section studies, 200 detailed Research Gates and 33 genuinely distinguishable Phoenix Answer Embryos. Every Gate begins with a large deep-navy bold question and continues with a blind protocol, evidence package, competing explanation, hard stop and successor fork.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "DIGITAL TWINS AND AI CLOSED-LOOP CONTROL FOR NANOROBOTIC PHARMACEUTICAL MANUFACTURING AT THE LIMIT Digital Twins x AI Process Control x Pharmaceutical Manufacturing Quality This high-density English research monograph develops a falsification-oriented architecture for digital twins and AI closed-loo",
+      "url": "https://zenodo.org/records/23630668"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -1263,6 +1121,38 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "Precision boundaries in spiking transport of recursive mixture uncertainty: synthetic inputs and permitted evidence",
       "url": "https://zenodo.org/records/23608591"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "7e992decff9788b92ffd37b3",
+      "context_id": "8bccef4e4e850c226d7fe264",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "181c28a2f1cce9e5e297d4206acc9215cafd9b5cedd4ee863f8237480b9c4707",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "DIGITAL TWINS AND AI CLOSED-LOOP CONTROL FOR NANOROBOTIC PHARMACEUTICAL MANUFACTURING AT THE LIMIT Digital Twins x AI Process Control x Pharmaceutical Manufacturing Quality This high-density English research monograph develops a falsification-oriented architecture for digital twins and AI closed-loop control in nonclinical nanorobotic pharmaceutical manufacturing research. Its central question is whether a process-state estimator can predict quality failure under raw-material, flow, sensor and equipment drift before the failure occurs, rather than merely replaying historical data as an attractive dashboard. The governing evidence object is the Falsifiable Manufacturing Twin. It binds a declared physical state, observation model, uncertainty envelope, process and sensor versions, candidate and executed control actions, external critical-quality-attribute measurements, abstention, fallback and terminal batch fate. A twin earns authority only while new physical evidence can contradict it. Failed, stopped, out-of-distribution and externally falsified batches remain in the denominator. The monograph compares fixed recipes, statistical process control, tuned PID, strong non-learning model predictive control and AI under equal sensing, energy, constraints and operator access. It treats calibrated ignorance as a successful behavior: an unsupported state must cause abstention, return to a separately qualified safe recipe or stop. External CQA evidence always outranks the model. The volume contains 30 distinct mathematical research plates, 82 chapters, 410 independently paginated section studies, 200 detailed Research Gates and 33 genuinely distinguishable Phoenix Answer Embryos. Every Gate begins with a large deep-navy bold question and continues with a blind protocol, evidence package, competing explanation, hard stop and successor fork.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "DIGITAL TWINS AND AI CLOSED-LOOP CONTROL FOR NANOROBOTIC PHARMACEUTICAL MANUFACTURING AT THE LIMIT Digital Twins x AI Process Control x Pharmaceutical Manufacturing Quality This high-density English research monograph develops a falsification-oriented architecture for digital twins and AI closed-loo",
+      "url": "https://zenodo.org/records/23630668"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1816,6 +1706,143 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "HIGH-INTEGRITY CARGO TRANSPORT AND CONTROLLED RELEASE IN MICRO/NANOROBOTICS AT THE LIMIT English Introduction This high-density research monograph develops a falsifiable architecture for high-integrity microrobotic cargo transport and controlled release. Its core coupling is binding kinetics × trans",
       "url": "https://zenodo.org/records/23606974"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "725e923c4a62bdc666bb567c",
+      "context_id": "e691f55ad9868497d10689e9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "c8a9a57a2f27a89d191a25bec4c776b173df2c85a563367e9c96a64d0121544b",
+      "source_published": "2026-10-23",
+      "source_updated": "",
+      "summary": "we hereby submit our manuscript entitled &ldquo;Query-Defined Submodels: Publishing Topological Graph Analyses to the Asset Administration Shell&rdquo; for consideration for publication as an Article in the Industrial Informatics and Digital Twin section of Machines (MDPI).The manuscript proposes a unidirectional pipeline that combines graph-based analysis with standardized information exchange through the Asset Administration Shell (AAS). It addresses a specific limitation of AAS-QL regarding traversal through RelationshipElement endpoints, performs the required topological analysis in a property-graph environment, and exports the selected and potentially derived result as a standards-conformant AAS Submodel. The approach is formalized mathematically by representing the analysis as a mapping from a labelled property graph to a result graph and the export as a second mapping fSrom that result into an AAS Submodel. This makes explicit that the exported extent is query-defined. The proposed architecture is further evaluated analytically with respect to communication and maintenance costs under different production-system configurations.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Query Defined Submodels Publishing Topological Graph Analyses to the Asset Administration Shell",
+      "url": "https://zenodo.org/records/23598515"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "c0fe3afa348de0136b9ac071",
+      "context_id": "e44278209b5320412c334cf9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "4af33e92f2943aeb02e0eaca51051549e0297901af738c3bd7cb4aaf627dc4d2",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "This record contains the replication data and R code for the study &ldquo;How much does the publication universe matter? Source discontinuities and panel selection in OpenAlex&rdquo; by Vladislav B&iacute;na and Jiř&iacute; Přibil. The package includes OpenAlex source-by-year counts for 2010&ndash;2025 retrieved on 10&ndash;11 October 2026, supplementary OpenAlex and Crossref aggregate counts retrieved on 23 October 2026, a provenance-limited earlier archive of annual totals, and twelve annotated illustrative record checks. It also provides eight R scripts, expected numerical results, numerical inputs to the figures, and English documentation. The default workflow reproduces the saved-data analyses offline using base R. It covers publication growth, continuity panels, source turnover, panel-selection timing, population layers, and sensitivity to comparison horizons and endpoints. Version 2.2 was tested with R 4.5.2 on Windows. Data provenance, variable definitions, limitations and reproduction instructions are documented in README.md. Licensing applies by component: bibliographic metadata and factual numerical data/results are provided under CC0 1.0; R code under the MIT License; and original documentation and author annotations under CC BY 4.0. See LICENSE.txt for the exact scopes.",
+      "tags": [
+        "publication growth",
+        "OpenAlex",
+        "scientometrics",
+        "database coverage",
+        "panel selection",
+        "metadata quality",
+        "reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Replication data and code for \"How much does the publication universe matter? Source discontinuities and panel selection in OpenAlex\"",
+      "url": "https://zenodo.org/records/23620714"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "baf8374cbd456eff9c71b922",
+      "context_id": "bee86bebe19c43f5713d8e13",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "9d09b51bb682c3962cc0d7fc3a974804c54909a695dd86a1b3b03efaa7e27c35",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "The work builds a foundation of physics from a single assumption: everything is a process, and a process is an ideal sine; its centre, the balance, is the observer. Only the square &mdash; intensity without phase &mdash; passes between levels; from this arise dimensions, the arrow of time, the quantum and the standard. On this basis stable particles are built as standing waves together with their galactic analogues, the initial rules of quantum mechanics and relativity are derived, and the constants are linked to a single number &mdash; the speed of light. Agreement with experiment is at the level of a few percent; the model attributes the discrepancies to the imperfection of the standard. Main results The four stable particles (neutrino, electron, neutron, proton) are the four stable states of a standing wave; masses from the speed of light alone: electron +0.7 %, nucleons about &minus;3 % [result given hypotheses]. The Born rule, the randomness of a single outcome, the 2&radic;2 limit in the Bell test, spin &frac12; and g = 2 [result]. The Lorentz transformation from the &ldquo;speed budget&rdquo; c&sup2; = v&sup2; + v_int&sup2;, the Klein &mdash; Gordon and Schr&ouml;dinger equations, Schwarzschild gravitational time dilation and the light deflection of 1.75&Prime; [result]. Similarity of the small and the large with the step c⁴: the image of the neutron is the stellar mass of the Milky Way (5.5&middot;10&sup1;⁰ versus (6.1 &plusmn; 1.1)&middot;10&sup1;⁰ solar masses) [hypothesis, numerical agreement]. The large end is built by the same logic as the microworld: the construction yields the Hubble constant H₀ = 1/(5c&sup2;) &asymp; 68.7 km/s/Mpc and the smallest acceleration of galaxies a₀ = 1/(10&pi;c) [result given hypotheses]. The gravitational constant G &asymp; c^(&minus;6/5) (0.8 %); the mass of the Universe and the scale of dark energy are expressed through c [hypothesis]. The fine-structure constant has been found as the number 1/&alpha; &asymp; 4&middot;(c/2&pi;)^(1/5) (0.22 %); its meaning is open [observation]. Limitations: the accuracy is percent-level, not parts per million; the standard and several constants remain open questions. The status of each statement is given in the text. Revision dated 2026-10-24: &nbsp; The black hole. A black hole is understood as the construction of mass from the large end: particles build mass from the small end, the black hole from the large one. Perception has a limit of tempo: a process whose tempo is below our smallest does not change for us, so the centre is inaccessible, and for us it is space possessing mass and rotation. The horizon is the transition from space into mass; it grows with mass and is not related to the core. The black hole processes volumetric particles into a plane, and the tension of space, when the sizes of galaxies change, again gives birth to particle&ndash;antiparticle pairs: the cycle is closed. Only black holes that are analogues of elementary particles are considered. G and &alpha;. Both constants have received a geometric reading. Gravity is the work of space in a cross-section, charge is the same work over a closed surface; the surface of a sphere is four times its cross-section, hence the four. Charge is the work of one unpaired half-wave, that is, of one step of the microworld k: 1/&alpha; = 4k. G is gravity from the large end: the whole linear path up to the transition and the step linking it with the small end, G = 1/(c&middot;c^(1/5)), without the four. The link of the two constants is G = 4&alpha;/((2&pi;)^(1/5)&middot;c). In neutral particles the same transition from flat to volume goes through rotation (support: the magnetic moment of the neutron). The residuals of 0.22 % in &alpha; and 0.8 % in G are not yet explained. &nbsp; &nbsp; &nbsp; Работа строит основу физики из одного допущения: всё &mdash; процесс, а процесс &mdash; идеальный синус; его центр, баланс, &mdash; наблюдатель. Между уровнями проходит только квадрат &mdash; интенсивност",
+      "tags": [
+        "process",
+        "sine",
+        "observer",
+        "balance",
+        "intensity",
+        "dimension",
+        "standard",
+        "arrow of time",
+        "quantum",
+        "tower of levels",
+        "frequency",
+        "resonance",
+        "standing wave",
+        "elementary particles",
+        "speed of light",
+        "Compton relation",
+        "процесс",
+        "синус",
+        "наблюдатель",
+        "баланс",
+        "интенсивность",
+        "измерение",
+        "эталон",
+        "стрела времени",
+        "квант",
+        "башня уровней",
+        "частота",
+        "резонанс",
+        "стоячая волна",
+        "элементарные частицы",
+        "скорость света",
+        "соотношение Комптона"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "The Birth of Dimensions: A Formal Skeleton",
+      "url": "https://zenodo.org/records/23618071"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
