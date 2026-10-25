@@ -182,8 +182,7 @@ def rowan_domain_scope(direction: dict[str, Any], item: dict[str, Any]) -> bool:
                   " ".join(str(t) for t in (item.get("tags") or [])))).casefold()
     identity=any(x in hay for x in ("protein", "proteolysis", "proteome", "proteingym",
                                     "t suboyama", "tsuboyama", "bbc1", "1tg0"))
-    changed=any(x in hay for x in ("mutat", "substitut", "variant", "variant", "ddg",
-                                   "Δδg", "δδg", "ΔΔg".casefold(), "t suboyama",
+    changed=any(x in hay for x in ("mutat", "substitut", "variant", "ddg", "ΔΔg".casefold(), "t suboyama",
                                    "tsuboyama", "bbc1", "1tg0"))
     measurement=any(x in hay for x in ("stabil", "proteolys", "thermodynam", "ddg",
                                        "ΔΔg".casefold(), "fold", "assay", "fitness"))
