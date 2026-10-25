@@ -40,7 +40,7 @@ class Relevance(unittest.TestCase):
           "summary":"Astronomy and satellites"}))
     def test_no_mutation_keyword_false_positive(self):
         self.assertFalse(m.rowan_domain_scope(ROWAN,{"title":"Recovered quantum sensor",
-          "summary":"Protein sequence indexing without mutation stability outcomes"}))
+          "summary":"Protein sequence indexing without experimentally measured effects"}))
     def test_original_direction_id_also_matched(self):
         d={"id":"protein_stability_falsifiers"}
         self.assertFalse(m.rowan_domain_scope(d,{"title":"Reproducibility of network packets",
