@@ -8,6 +8,7 @@ TOOLS=Path(__file__).resolve().parents[1]/"tools"
 sys.path.insert(0,str(TOOLS))
 spec=importlib.util.spec_from_file_location("universal_beetle",TOOLS/"universal_beetle.py")
 m=importlib.util.module_from_spec(spec)
+sys.modules[spec.name]=m
 spec.loader.exec_module(m)
 
 ROWAN={"id":"protein_stability_falsifiers::FORWARD",
