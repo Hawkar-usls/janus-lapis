@@ -1,5 +1,5 @@
 {
-  "batch_id": "dc7f1a3cfdfc22601ac9",
+  "batch_id": "5e509ff8c3d7d30e4d57",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -437,8 +437,8 @@
     },
     {
       "base_direction_id": "registry_provenance",
-      "candidate_id": "8049aaa0f93fcab69ab06ed6",
-      "context_id": "4b7fa985ba22687ba5ae7351",
+      "candidate_id": "a5e27964f3f48d5e6687aae9",
+      "context_id": "a6e851e898d9e6d465484ea1",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "registry_provenance::COUNTEREVIDENCE",
@@ -459,14 +459,21 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 9.0417,
       "source": "zenodo",
-      "source_context_sha256": "cb036d3a871abfde69a9743ec04dbd08cd28edf7ed22db4e8696cf20047d8b66",
-      "source_published": "2026-08-12",
+      "source_context_sha256": "88243de5fa83d4a5bbc30eba86a0da3c777579c5307276f84fc02e40d7c8a49d",
+      "source_published": "2026-10-25",
       "source_updated": "",
-      "summary": "Motivation: Variant calling for next-generation sequencing (NGS) data relies on a diverse ecosystem of tools and workflows. Large-scale collaborative studies increasingly adopt federated analysis, where each institution processes sensitive data locally using standardized pipelines. Deploying identical pipelines across multiple centers remains challenging because heterogeneous software environments and computing policies can cause workflow divergence and inconsistent results. Results: We developed CBIcall, a workflow backend-flexible, configuration-driven framework that runs standardized variant-calling pipelines from raw FASTQ files to analysis-ready VCFs. Users define each analysis in a single YAML parameters file, which CBIcall resolves against a controlled workflow registry and resource catalog. The execution driver validates parameters and checks compatibility among pipelines, analysis modes, workflow backends, genome builds, tool versions, and resource bundles. CBIcall supports reproducibility auditing by comparing executions using recorded provenance and output fingerprints. CBIcall dispatches validated workflows natively through Bash, Cromwell, Nextflow and Snakemake backends and provides production-ready pipelines for germline WES, WGS (single-sample or cohort joint genotyping following GATK Best Practices), and mitochondrial DNA analysis. We evaluated analytical performance using public benchmark datasets and validated reproducibility across four computing environments. We further deployed CBIcall in the EU HEREDITARY project, where it processed 1102 samples with both WES and mtDNA pipelines on an institutional HPC system, supporting its suitability for reproducible cohort-scale genomic analyses. Availability and implementation: CBIcall is open source (GPLv3) and distributed with ready-to-run pipelines; full dependency and installation documentation is available at https://github.com/CNAG-Biomedical-Informatics/cbicall.",
-      "tags": [],
+      "summary": "This dataset is the supplementary material for the manuscript \"Decision Neutrality of Forecast Revisions in Microgrids with Photovoltaics and Battery Storage\" by Yun Xing (Hohai University), submitted to Applied Sciences (MDPI). Version 1.0, 25 October 2026. Overview The study asks when adopting a revised next-day forecast changes a battery dispatch decision, rather than only the predicted cost. It derives two checkable sufficient reset conditions under which old and revised forecasts produce next-day storage value functions that differ only by an additive constant. A fixed-input perturbation bound separates this local neutrality from realized rolling-policy performance. Five policies (FF, FS, SF, SS and DAY) are compared on 522 community-days from 270 measured households aggregated into nine synthetic communities, with three synthetic tariffs and two import regimes. Key results - Freezing next-day forecasts is numerically neutral under unlimited imports across the tested tariffs. - Under a 30 kW import cap and time-of-use pricing, retaining midnight targets (DAY) lowers total operating cost by 3.105% relative to full updating (FF). Lower unmet-demand penalties account for 88.3% of the reduction; the import-bill reduction is 0.588%. - Freezing both forecasts while replanning (SS) costs 0.054% more than FF under the same six-hour replanning schedule, separating forecast adoption from target retention. - Under the same cap and tariff, freezing only the next-day forecast (FS) costs 0.188% more than FF. - Matched-calendar comparisons show that the magnitude of update effects depends on the controller scheme. Contents 1. Supporting_Results_and_Protocol.zip: verified reproducibility archive with 3,833 files, including fixed protocols, derived community inputs, customer-community mapping, analysis code, result tables, 15,660 policy-day records, 9,396 local terminal comparisons, 1,496 matched-calendar controller records, half-hour trajectories, figures and an internal manifest. 2. Supplementary_Guide.pdf: Supplementary Methods S1 and S2, extended uncertainty tables S1-S6, data dictionary notes and the run sequence. 3. README_ZENODO.txt: contents, usage order and scope notes. 4. LICENSE.txt: licensing note for code and derived data. 5. CITATION.cff: citation metadata. 6. zenodo_metadata.json: suggested metadata for this record. 7. SHA256SUMS.txt: SHA-256 checksums of the files in this archive. Reproduction Verify the files against SHA256SUMS.txt, extract Supporting_Results_and_Protocol.zip, and read README.txt, RUN_REPRODUCTION.txt and DATA_DICTIONARY.md before running anything. The recorded environment is Python 3.13.9 with NumPy 2.3.5, SciPy 1.16.3, pandas 2.3.3, Matplotlib 3.10.6 and openpyxl 3.1.5. Entry points cover the primary experiment, aggregation, availability sensitivity, diagnostics, both controller families, benchmarks and independent checks. The archive also supports a fresh single-group replay and a full audit without the author's original workspace. Data provenance and scope The household data are the Ausgrid 2012-2013 Solar Home Electricity Data, version 2, obtained from data.gov.au and the BetterGrids mirror. Raw provider records are not redistributed; provider URLs, version and SHA-256 are recorded in RUN_REPRODUCTION.txt and raw_source_manifest.json. Derived community inputs, results and trajectories are included. The archived results are the recorded reference outputs, not new observations. Communities, tariffs and batteries are synthetic scenario inputs, and the manuscript states the limits of the evidence. License Unless otherwise stated, the code and derived data in this package are provided under the Creative Commons Attribution 4.0 International License (CC BY 4.0). The original household data are not redistributed and remain subject to the provider terms. Related manuscript Submitted to Applied Sciences (MDPI). The manuscript DOI will be added to this record after publication. Contact Yun Xing, College of Com",
+      "tags": [
+        "forecast revision",
+        "battery storage",
+        "photovoltaic microgrid",
+        "terminal value",
+        "model predictive control",
+        "decision value"
+      ],
       "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "CBIcall: a configuration-driven framework for variant calling in large sequencing cohorts",
-      "url": "https://zenodo.org/records/23597279"
+      "title": "Decision Neutrality of Forecast Revisions in Microgrids with Photovoltaics and Battery Storage - Supplementary Material",
+      "url": "https://zenodo.org/records/23635561"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -581,8 +588,8 @@
     },
     {
       "base_direction_id": "registry_provenance",
-      "candidate_id": "8049aaa0f93fcab69ab06ed6",
-      "context_id": "cbefe4bbe3dfcc906b7b2003",
+      "candidate_id": "a5e27964f3f48d5e6687aae9",
+      "context_id": "ba0d7ce0fc5eeadbdef8e501",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "registry_provenance::CONTROL",
@@ -605,14 +612,21 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 17.7083,
       "source": "zenodo",
-      "source_context_sha256": "9d23eac33e56fdab39717336894c4c30791aeb06b15d4e9e52987858d2acda8d",
-      "source_published": "2026-08-12",
+      "source_context_sha256": "105240929cf1c1d9eace2d16a0eba1601f662b20ca3f1097ab737a26d50ddbca",
+      "source_published": "2026-10-25",
       "source_updated": "",
-      "summary": "Motivation: Variant calling for next-generation sequencing (NGS) data relies on a diverse ecosystem of tools and workflows. Large-scale collaborative studies increasingly adopt federated analysis, where each institution processes sensitive data locally using standardized pipelines. Deploying identical pipelines across multiple centers remains challenging because heterogeneous software environments and computing policies can cause workflow divergence and inconsistent results. Results: We developed CBIcall, a workflow backend-flexible, configuration-driven framework that runs standardized variant-calling pipelines from raw FASTQ files to analysis-ready VCFs. Users define each analysis in a single YAML parameters file, which CBIcall resolves against a controlled workflow registry and resource catalog. The execution driver validates parameters and checks compatibility among pipelines, analysis modes, workflow backends, genome builds, tool versions, and resource bundles. CBIcall supports reproducibility auditing by comparing executions using recorded provenance and output fingerprints. CBIcall dispatches validated workflows natively through Bash, Cromwell, Nextflow and Snakemake backends and provides production-ready pipelines for germline WES, WGS (single-sample or cohort joint genotyping following GATK Best Practices), and mitochondrial DNA analysis. We evaluated analytical performance using public benchmark datasets and validated reproducibility across four computing environments. We further deployed CBIcall in the EU HEREDITARY project, where it processed 1102 samples with both WES and mtDNA pipelines on an institutional HPC system, supporting its suitability for reproducible cohort-scale genomic analyses. Availability and implementation: CBIcall is open source (GPLv3) and distributed with ready-to-run pipelines; full dependency and installation documentation is available at https://github.com/CNAG-Biomedical-Informatics/cbicall.",
-      "tags": [],
+      "summary": "This dataset is the supplementary material for the manuscript \"Decision Neutrality of Forecast Revisions in Microgrids with Photovoltaics and Battery Storage\" by Yun Xing (Hohai University), submitted to Applied Sciences (MDPI). Version 1.0, 25 October 2026. Overview The study asks when adopting a revised next-day forecast changes a battery dispatch decision, rather than only the predicted cost. It derives two checkable sufficient reset conditions under which old and revised forecasts produce next-day storage value functions that differ only by an additive constant. A fixed-input perturbation bound separates this local neutrality from realized rolling-policy performance. Five policies (FF, FS, SF, SS and DAY) are compared on 522 community-days from 270 measured households aggregated into nine synthetic communities, with three synthetic tariffs and two import regimes. Key results - Freezing next-day forecasts is numerically neutral under unlimited imports across the tested tariffs. - Under a 30 kW import cap and time-of-use pricing, retaining midnight targets (DAY) lowers total operating cost by 3.105% relative to full updating (FF). Lower unmet-demand penalties account for 88.3% of the reduction; the import-bill reduction is 0.588%. - Freezing both forecasts while replanning (SS) costs 0.054% more than FF under the same six-hour replanning schedule, separating forecast adoption from target retention. - Under the same cap and tariff, freezing only the next-day forecast (FS) costs 0.188% more than FF. - Matched-calendar comparisons show that the magnitude of update effects depends on the controller scheme. Contents 1. Supporting_Results_and_Protocol.zip: verified reproducibility archive with 3,833 files, including fixed protocols, derived community inputs, customer-community mapping, analysis code, result tables, 15,660 policy-day records, 9,396 local terminal comparisons, 1,496 matched-calendar controller records, half-hour trajectories, figures and an internal manifest. 2. Supplementary_Guide.pdf: Supplementary Methods S1 and S2, extended uncertainty tables S1-S6, data dictionary notes and the run sequence. 3. README_ZENODO.txt: contents, usage order and scope notes. 4. LICENSE.txt: licensing note for code and derived data. 5. CITATION.cff: citation metadata. 6. zenodo_metadata.json: suggested metadata for this record. 7. SHA256SUMS.txt: SHA-256 checksums of the files in this archive. Reproduction Verify the files against SHA256SUMS.txt, extract Supporting_Results_and_Protocol.zip, and read README.txt, RUN_REPRODUCTION.txt and DATA_DICTIONARY.md before running anything. The recorded environment is Python 3.13.9 with NumPy 2.3.5, SciPy 1.16.3, pandas 2.3.3, Matplotlib 3.10.6 and openpyxl 3.1.5. Entry points cover the primary experiment, aggregation, availability sensitivity, diagnostics, both controller families, benchmarks and independent checks. The archive also supports a fresh single-group replay and a full audit without the author's original workspace. Data provenance and scope The household data are the Ausgrid 2012-2013 Solar Home Electricity Data, version 2, obtained from data.gov.au and the BetterGrids mirror. Raw provider records are not redistributed; provider URLs, version and SHA-256 are recorded in RUN_REPRODUCTION.txt and raw_source_manifest.json. Derived community inputs, results and trajectories are included. The archived results are the recorded reference outputs, not new observations. Communities, tariffs and batteries are synthetic scenario inputs, and the manuscript states the limits of the evidence. License Unless otherwise stated, the code and derived data in this package are provided under the Creative Commons Attribution 4.0 International License (CC BY 4.0). The original household data are not redistributed and remain subject to the provider terms. Related manuscript Submitted to Applied Sciences (MDPI). The manuscript DOI will be added to this record after publication. Contact Yun Xing, College of Com",
+      "tags": [
+        "forecast revision",
+        "battery storage",
+        "photovoltaic microgrid",
+        "terminal value",
+        "model predictive control",
+        "decision value"
+      ],
       "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "CBIcall: a configuration-driven framework for variant calling in large sequencing cohorts",
-      "url": "https://zenodo.org/records/23597279"
+      "title": "Decision Neutrality of Forecast Revisions in Microgrids with Photovoltaics and Battery Storage - Supplementary Material",
+      "url": "https://zenodo.org/records/23635561"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -1211,40 +1225,6 @@
     },
     {
       "base_direction_id": "registry_provenance",
-      "candidate_id": "d863707a1cdc7efbaec80329",
-      "context_id": "38bd864856851add5de070b1",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::CONTROL",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control",
-        "provenance"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 13.0833,
-      "source": "zenodo",
-      "source_context_sha256": "c8db71ca951bf11b3f592c976a152e1ea6057c07b4f8ca4f2fbb1a653938bb1b",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "EnzyPair is a benchmark dataset for evaluating enzyme-function similarity at low sequence identity. It contains 1,664 same-EC4 protein pairs and 4,992 structure-matched different-EC4 controls involving 2,465 proteins. The release includes protein sequences, EC annotations, TM-align measurements, residue alignments, exclusion records, source provenance and software versions.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "EnzyPair: a dataset of same-function enzyme pairs with structure-matched controls at low sequence identity",
-      "url": "https://zenodo.org/records/23597110"
-    },
-    {
-      "base_direction_id": "registry_provenance",
       "candidate_id": "7443e731a64d10c9ba2ca314",
       "context_id": "8b39727007a15dc4fa30d638",
       "delivery_preview_only": true,
@@ -1634,6 +1614,50 @@
     },
     {
       "base_direction_id": "registry_provenance",
+      "candidate_id": "d309b0375e56511fd4927025",
+      "context_id": "b0b11d635714d669e4c81fe0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::CONTROL",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "reproducibility"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.9583,
+      "source": "zenodo",
+      "source_context_sha256": "1d80d7d5d5b614c167237b822f3a31c7da36dbb9d0b4044736b5652ae4779d90",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "This candidate extends the LWS research bench with three computational modules. The sequential-context module preserves the protocol and reference outcomes of the five-intersection experiment. The functional-alignment module compares equal feature budgets on already inspected outcomes. The branching module is a development pilot with short movement-specific lanes and a strong lane-aware scalar baseline. Development analyses are not presented as new confirmatory experiments. The package includes fixed protocols, generators, feature inputs, readable model parameters, reference predictions, complete comparison tables and tests. The original public v7 ZIP is included unchanged. New entry points separate integrity checks, cached model refits, engineering simulations and full raw regeneration. Runtime paths are resolved within the extracted package or an explicitly selected work directory. Python dependencies and SUMO must be installed separately at the recorded versions. The candidate was tested from a fresh extraction on Windows with the existing pinned scientific environment. All 17 tests passed. Refitting 54 fixed model variants reproduced all 51,642 saved probabilities with a maximum numerical difference of zero. Ten engineering simulations were regenerated and matched the reference canonical observations and feature rows. Reads from the original study directories were blocked during the checks. These checks establish reproducibility within the tested environment, not new scientific confirmation. Full regeneration of all 494 historical simulations was not performed in this candidate validation. It is available as a separate explicit command. Installation of dependencies on a clean machine and execution on other operating systems have not been tested. The 30 m sequential outcome and the 15 m branching outcome remain separate. No general predictive superiority of functional token boundaries is claimed. Own code is licensed under MIT. Own synthetic results and documentation are licensed under CC BY 4.0. The package excludes manuscripts, expert assessments, consents, signatures, third-party raw trajectories, videos and simulator binaries. The original v7 archive retains its own metadata and licenses. Developed in institutional competitive project STN-AI, no. 210318, funded by the European Union, NextGenerationEU. Data source: pNEUMA &ndash; open-traffic.epfl.ch.",
+      "tags": [
+        "linear referencing",
+        "vehicle trajectories",
+        "spatial excess dwell",
+        "semantic traffic tokens",
+        "spatial resolution",
+        "vehicle support",
+        "SUMO",
+        "reproducibility",
+        "queue forecasting",
+        "held-out geometry"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "LWS research bench for LRS referenced traffic measures with sequential context and development comparisons",
+      "url": "https://zenodo.org/records/23634322"
+    },
+    {
+      "base_direction_id": "registry_provenance",
       "candidate_id": "2433b37374df647c95b81ef0",
       "context_id": "e06f706c699f278e6ae048d8",
       "delivery_preview_only": true,
@@ -1664,6 +1688,46 @@
       "target_repository": "Hawkar-usls/Janus-Demiurge",
       "title": "OlmLab/microbiome_repo-data: Data package data-v1.23.0",
       "url": "https://zenodo.org/records/23602565"
+    },
+    {
+      "base_direction_id": "registry_provenance",
+      "candidate_id": "94125d76d383c490576ed13a",
+      "context_id": "b7d91a7e28042d637c39a8d1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "registry_provenance::COUNTEREVIDENCE",
+      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.9167,
+      "source": "zenodo",
+      "source_context_sha256": "9c63f99b88b58352db3238bf395182c9c419fde8b6156d16d989551f5ec20816",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "This deposit is the numerical companion to &ldquo;One-Sided p-Explicit Stability for High-Order Cut Finite Element Nitsche Methods&rdquo; by Erik Burman, Peter Hansbo, Mats G. Larson and Karl Larsson. It contains Python experiment code, case parameters, compact reference data, reproducibility instructions and the Numerical Verification Guide. The implementation uses two-dimensional triangular P p finite elements and CPU-based dense linear algebra. The studies cover polynomial continuation, one-sided flux estimates, penalty thresholds, convergence, numerical precision, Schwarz comparisons and exact tube certificates. The compact data retain 4,959 reference observations, 239 failed criteria and 22 tables, including known accuracy flags, the original solver-stopping failure and unresolved higher-degree attempts. Selected validation covers 15 numerical commands across ten study families; it is not a rerun of the full 257-command campaign or an audit of the omitted raw archives. Raw run archives and manuscript sources are not included. Detailed run records and exact certificates can be regenerated using the documented commands. The continuation and tube studies are tested on Apple Silicon macOS and Linux x86-64. The remaining supplied validation studies require the documented Linux configuration with a 64-bit longdouble significand and multiprocessing fork. The package includes file-integrity checks and pinned dependencies. Licensing is component-specific: Python code and software documentation are licensed under MIT; numerical data and the Numerical Verification Guide are licensed under CC BY 4.0. See LICENSE for the precise scope. AI assistance and author responsibility are disclosed in README.md. This documentation update aligns the guide&rsquo;s references with the revised manuscript numbering. Numerical code, case inputs, reference data and dependency pins are unchanged; numerical tests were not rerun for this update. Source repository: KarlLarssonUmU/one-sided-hp-cutfem Archived commit: bae06c644b21f723ee636ed67663c99e06004cfd .",
+      "tags": [
+        "cut finite element methods",
+        "Nitsche methods",
+        "high-order finite elements",
+        "polynomial continuation",
+        "one-sided stability",
+        "numerical reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/Janus-Demiurge",
+      "title": "Numerical Companion to One-Sided p-Explicit Stability for High-Order Cut Finite Element Nitsche Methods",
+      "url": "https://zenodo.org/records/23635453"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -1780,8 +1844,8 @@
     },
     {
       "base_direction_id": "registry_provenance",
-      "candidate_id": "8aa1f0d040a8be5ef7ae8a72",
-      "context_id": "c17f836604c1c657a2cabda8",
+      "candidate_id": "f36359defb330ed3e32509a7",
+      "context_id": "0d503892533058413eea9082",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "registry_provenance::CONTROL",
@@ -1802,24 +1866,14 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 8.875,
       "source": "zenodo",
-      "source_context_sha256": "afaccaf562f0887a3c326f6cda4322dbf8b348153e66d506c37752c2c6985c4e",
-      "source_published": "2026-10-23",
+      "source_context_sha256": "8fa87eea5ed37d722037c863b3ee23b7fd7652f45f855343210742315124883b",
+      "source_published": "2026-10-25",
       "source_updated": "",
-      "summary": "Analytical panel (79,988 one-kilometre cells x 16 years, ten European functional urban areas) combining Eurostat Census 2021 residents, Copernicus Tree Cover Density 2018, Copernicus Urban Atlas 2018 class 14100 (green urban areas, cells wholly inside the city boundary mask) and EEA interpolated annual maps of NO2, PM2.5 and PM10 for 2010 to 2025, with the extraction scripts, the analysis code, the result tables, a data dictionary, a provenance file and checksums. Derived from public sources; see docs/PROVENANCE.md for versions, URLs and processing. Replication software is licensed under MIT; authored documentation and derived-data contributions under CC BY 4.0, subject to upstream source terms, including the GISCO geographical non-commercial restriction. Boundary attribution: © EuroGeographics for the administrative boundaries. Original data are restored losslessly from compressed parts and verified by SHA-256.",
-      "tags": [
-        "urban greening",
-        "tree canopy",
-        "air pollution",
-        "NO2",
-        "Urban Atlas",
-        "Copernicus",
-        "EEA",
-        "screening",
-        "replication"
-      ],
+      "summary": "Replication package for the article \"Facts versus Claims: Provenance-Grounded Defense for LLM Security Analysts under Adaptive Evidence-Substrate Injection\". Contents: the analysis notebooks in run order, the skeletonization and evidence-view modules, the frozen configuration files (closed vocabulary, normalization, provenance flags and their thresholds, triage instruction, framing notes, output schema, decoding parameters, sampling rule and attack payloads), the figure generator, and the per-request result records in Parquet that support every table and figure in the article. The analysts are two quantized 8B models served locally over an OpenAI-compatible endpoint: hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4 and Qwen/Qwen3-8B-AWQ. Decoding is deterministic (temperature 0.0, top_p 1.0, max_tokens 256, seed 42) with a guided JSON schema, and every call is cached by sha1(model + prompt), so the reported numbers are reproducible from the cache without a GPU. The underlying request corpus is CSIC 2010, which is publicly available and is not redistributed here except as derived per-request records.",
+      "tags": [],
       "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "Data and code: Which polluted neighbourhoods would a greening indicator select? Indicator dependence in urban greening screening across ten European cities, 2010 to 2024",
-      "url": "https://zenodo.org/records/23597884"
+      "title": "Replication package for \"Facts versus Claims: Provenance-Grounded Defense for LLM Security Analysts under Adaptive Evidence-Substrate Injection\"",
+      "url": "https://zenodo.org/records/23632643"
     },
     {
       "base_direction_id": "registry_provenance",
@@ -1931,41 +1985,6 @@
       "target_repository": "Hawkar-usls/Janus-Demiurge",
       "title": "uibcdf/pytest-receptor: 1.2.2",
       "url": "https://zenodo.org/records/23624458"
-    },
-    {
-      "base_direction_id": "registry_provenance",
-      "candidate_id": "17cafd5e0fc180bfc71686d1",
-      "context_id": "4675dea492912d102116658d",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "registry_provenance::CONTROL",
-      "direction_title": "Scientific provenance / evidence ledgers / reproducibility [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "provenance"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7917,
-      "source": "zenodo",
-      "source_context_sha256": "850d133ce4e8866a140c291f2d06111e6fa283daba4c216300d7bd917e8bd00a",
-      "source_published": "2026-10-24",
-      "source_updated": "",
-      "summary": "Physics-informed neural networks (PINNs) are increasingly proposed for downscaling convective-permitting rainfall extremes, yet their behaviour under sparse radiosonde initialization remains poorly characterised for dam-safety analytics, where the upper tail of the rainfall distribution governs spillway design. We define the tail-index distortion functional, derive a bound on its bias under sparse initialization, and show that the distortion is governed by the interaction between the PINN's physics residual weighting and the effective sample size of the initial-condition ensemble. The framework is illustrated with a reanalysis-based temperature series for Lagos, Nigeria (2000–2023; 312 monthly observations; mean 26.414 °C; warming trend 0.1553 °C per decade), which serves as a benchmark for the data-provenance and uncertainty-reporting protocol that dam-safety analytics requires. Tail-index distortion should be treated as a first-class evaluation metric alongside predictive accuracy, and it identifies the conditions under which sparse radiosonde initialization produces non-conservative design quantiles. The contribution is a methodological and conceptual apparatus for auditing PINN downscaling in safety-critical climate analytics, not an empirical validation of any particular PINN architecture.",
-      "tags": [
-        "physics-informed neural networks; rainfall extremes; tail-index distortion; dam safety; radiosonde i"
-      ],
-      "target_repository": "Hawkar-usls/Janus-Demiurge",
-      "title": "Physics-informed neural networks for downscaling convective-permitting rainfall extremes under sparse radiosonde initialization: a climate-analytics evaluation of tail-index distortion in dam-safety analytics",
-      "url": "https://zenodo.org/records/23606784"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
