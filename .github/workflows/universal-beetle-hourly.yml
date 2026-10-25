@@ -77,6 +77,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_beetle_shard_store.py' -v
           python -m unittest discover -s tests -p 'test_beetle_delivery.py' -v
           python -m unittest discover -s tests -p 'test_beetle_partial_checkpoint.py' -v
+          python -m unittest discover -s tests -p 'test_beetle_rowan_focus.py' -v
 
       - name: Ask Demiurge for current attention and build mirrored schedule
         run: |
@@ -85,6 +86,8 @@ jobs:
             --base lapis/data/beetle/directions.json \
             --static-url https://raw.githubusercontent.com/Hawkar-usls/Janus-Demiurge/main/beetle/DEMIURGE_BEETLE_DIRECTIVES.json \
             --live-url https://raw.githubusercontent.com/Hawkar-usls/Janus-Demiurge/main/beetle/LIVE_PRIORITIES.json \
+            --rowan-council-url https://raw.githubusercontent.com/Hawkar-usls/Janus-Demiurge/main/research/rowan/LATEST_COUNCIL.json \
+            --rowan-meta-url https://raw.githubusercontent.com/Hawkar-usls/janus-meta-registry/main/data/rowan/CANONICAL_STATE.json \
             --state-dir beetle-memory/data/beetle-state \
             --max-primary 10 \
             --max-lanes 16 \
