@@ -1,297 +1,9 @@
 {
-  "batch_id": "c0a45163d78fa1c63c74",
+  "batch_id": "f84d9f78eb291ca42931",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
   "items": [
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "2588133293ad6b18cbb8f64a",
-      "context_id": "4badf30458236f2d3061bdee",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "parquet",
-        "partial read",
-        "zarr"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.9583,
-      "source": "zenodo",
-      "source_context_sha256": "fcded4d65a5acc1fb061100b7b162ab5a0fc938c86ac1b9b279d55a66fe34e85",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "PyUnitWizard 0.29.0 This additive release expands verified quantity exchange while retaining the existing computing APIs, session policy and qrec/0.3 / bundle bytes. Tagged QuantityRecord arrays share unit/kind descriptors; homogeneous immutable append checks conversion, dtype and trailing shape (#102/#105). Zarr snapshots support verified first-axis partial reads; typed Arrow tables and complete local Parquet bindings retain explicit unit/kind handshakes (#104/#103). Case-sensitive UCUM tools validate explicit output codes and import biomedical values through actual ucumvert 0.3.2 (#125). Only independently qualified physical atoms are admitted; unchecked provider aliases are refused. Native ASDF/Astropy quantities carry an additional sealed snapshot binding; readers check named unit meaning, SI scale, dtype/shape, value seals and their own expectations (#126). Explicit QUDT/UO annotations bind a record and selected identifiers to an offline attributed catalogue for hertz, becquerel and radians/second (#127). Quantity kinds are chosen by consumers, never inferred from SI dimensions. Earlier source fixes preserve OpenMM angstrom meaning in unyt, reuse unyt registries, preserve atomic-mass names/prefixes and record actual benchmark interpreter provenance (#120–#124). All record extensions, optional dialects/storage bindings, measurement statements and attribution surfaces remain provisional . New format identifiers are explicit; old readers must not interpret them as old formats. QUDT/UO correspondences are reviewed local alignments, not upstream exactMatch claims. Limits remain explicit: immutable append copies values; Zarr selection verifies selected chunk contents; Arrow nulls are refused and Parquet reads whole files. ASDF is homogeneous/multiplicative only; affine temperatures need explicit conversion to Kelvin. Unknown vocabularies, arbitrary/nonlinear/annotated UCUM units, CF calendar coordinates, full clinical/astronomy schemas and consumer migrations are outside this checkpoint. Seals establish integrity, not producer authentication or scientific truth of an asserted kind. Baseline support remains Linux/macOS arm64, Python 3.11–3.14. Optional profiles retain their own provider/interpreter constraints, including OpenFF 0.4.0 on Python 3.12–3.14 with Pint &lt;0.26 and UCUM's Pint &gt;=0.25 requirement. Exact source, immutable Conda artifact, installed matrix and publication receipts are tracked in release #128 . Publication of this version does not admit the provisional contracts as stable or establish adoption in consuming repositories. Publication identity: canonical annotated tag 0.29.0 , source cfe067bcc4545c60aaca4c6950f6d84075ee6c36 . All 29 required native source jobs passed, with actual CI coverage/test-result uploads and eight optional source-wheel probes passing 247 cases each without skips. Original Conda producer: 40014661788 , attempt 1. Exact file: pyunitwizard-0.29.0-py_0.tar.bz2 (94,325 bytes), SHA-256 9169cd302dbda415ebc441ef6f5077dcde834d435626fcf80c179a9013657f34 . All 30 installed cells plus the original-producer verifier passed 40018157605 . The distinct qualifier 821231dbf188656b6872b5f6866b20e9114c87fb is explicitly bound to the original source/file; the artifact was not rebuilt. Required storage/dialect and prepared-attribution modules executed without skips in their respective eight-cell profiles. Intentional strict-JSON/NaN and unavailable prepared-API skips elsewhere remain classified in retained JUnit evidence. At GitHub Release creation, the exact file is staged and public-main promotion is pending. Publication status, public installation/docs verification and client-guide handoff are updated in MolSysSuite #132 and release #128 .",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "uibcdf/pyunitwizard: 0.29.0",
-      "url": "https://zenodo.org/records/23604831"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "1e8a5a93e5b725aede8f816c",
-      "context_id": "ede1e282f7b0ee3c259014f7",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "zarr"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.1667,
-      "source": "zenodo",
-      "source_context_sha256": "575b2073c420540839017c6a60337f220d316e9d0573830a325b65c26b380da3",
-      "source_published": "2026-10-25",
-      "source_updated": "",
-      "summary": "This repository contains the complete 10-water-year daily streamflow simulation archive ( 1989-10-01 through 1999-09-30 ; 3,652 daily steps across 531 canonical CAMELS-US basins) for ERA-Multi-Paradigm-Gauged (10-model ensemble) , evaluated as part of the CAMELS-US Hydrological Model Intercomparison Project (MIP) ( grey-nearing/camels-us-mip ). Model Name: ERA-Multi-Paradigm-Gauged (10-model ensemble) Target Leaderboard: gauged__multi_camels Spatial Evaluation Regime: Gauged Basins (All 531 Basins Trained &amp; Evaluated) Meteorological Forcings: Multi-Forcing (Daymet + Maurer + NLDAS) Ensemble Size: n = 10 independent random seed realizations ( seeds = 100..109 ) Open-Source Model Code: https://github.com/grey-nearing/camels-us-mip/tree/main/models/era_gauged_multi_paradigm ERA Discovery Notebook: https://github.com/grey-nearing/camels-us-mip/blob/main/era_experiments/era_gauged_newman_cv_winner.ipynb Model Architecture &amp; Experimental Protocol Architecture: Four-Family Multi-Paradigm Hydrological Ensemble combining two complementary feature-and-conditioning paradigms per seed: (1) Paradigm A (60 multi-scale hydroclimatic, PET, rolling water-balance deficit, and cross-forcing agreement features with basin-conditioned static embeddings, trajectory Huber-NSE + log1p MSE loss, and exponential moving average weight averaging): `CausalConvGRULSTM` (multi-scale causal dilated Conv1D d=1,3,9 + coupled GRU-LSTM, weight 0.38) and `MultiScaleFiLMEALSTM` (2-layer FiLM-modulated Entity-Aware LSTM, weight 0.12); and (2) Paradigm B (36 clean meteorological features augmented with continuous 10-year 3-forcing degree-day snowpack accumulation/melt and liquid water delivery across Daymet, Maurer, and NLDAS, conditioned strictly on 27 static catchment attributes with zero basin ID lookup embeddings): `DualPathwayFiLMGRULSTM` (parallel 2-layer LSTM + 2-layer GRU with static FiLM gates, weight 0.36) and `EntityAwareHydroLSTM` (2-layer Entity-Aware HydroLSTM, weight 0.14), evaluated with hybrid continuous 10-year rollout + overlapping 730-day sliding-window inference. Strict Non-Leakage Protocol: Architecture and blending weights discovered strictly within the Newman et al. (2015) training decade (`1998-10-01` to `2008-09-30`, XID 304144117, achieving `0.8410` Median NSE on the `1999-10-01` to `2003-09-30` validation split when trained on `2003-10-01` to `2008-09-30`), with zero access to the `1989-10-01` to `1999-09-30` Newman evaluation period. For benchmark evaluation, 10 independent random seeds (`seeds = 100..109`) of all 4 architectural families (40 trained models total) were trained on the full Newman training window (`1999-10-01` to `2008-09-30`, with 365-day spinup `1998-10-01` to `1999-09-30`) and evaluated out-of-sample on the blind Newman test period (`1989-10-01` to `1999-09-30`; 3,652 days across 531 basins). Benchmark Performance Summary (531 CAMELS-US Basins, 1989-10-01 to 1999-09-30) Ensemble Median NSE (n = 10): 0.826 Single-Model Median NSE (mean &plusmn; SD across 10 seeds): 0.822 ± 0.002 Ensemble Mean NSE: 0.776 Ensemble Median KGE: 0.806 Ensemble Median Peak-Flow Bias |FHV|: 13.28% Catastrophic Failure Basins (NSE &le; 0): 2 / 531 Included Files era_gauged_multi_paradigm_gauged_multi_camels_hydrographs_531x3652.npz : Compressed NumPy archive containing qsim / qsim_members of shape (10, 531, 3652) (float32, mm/day), qsim_ensemble_mean of shape (531, 3652) , qobs of shape (531, 3652) , basins of shape (531,) , dates of shape (3652,) , and seeds of shape (10,) . era_gauged_multi_paradigm_gauged_multi_camels.zarr.zip : Consolidated Zarr v2 store containing qsim (531, 3652) , qsim_members (10, 531, 3652) , basin (531,) , date (3652,) , huc_02 (531,) , and member (10,) . README.md : Complete documentation, schema reference, and Python loading example.",
-      "tags": [
-        "CAMELS-US",
-        "Hydrology",
-        "Streamflow Forecasting",
-        "Rainfall-Runoff Modeling",
-        "Model Intercomparison Project",
-        "HydrologyMIP",
-        "Deep Learning",
-        "Empirical Research Agent",
-        "ERA-Multi-Paradigm-Gauged (10-model ensemble)"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "CAMELS-US Hydrological Model Intercomparison Project (MIP) — ERA-Multi-Paradigm-Gauged (10-model ensemble) Daily Streamflow Hydrographs (531 Basins, Water Years 1990–1999)",
-      "url": "https://zenodo.org/records/23641695"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "f36359defb330ed3e32509a7",
-      "context_id": "c71b5812389cd102bd014a47",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "parquet"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.2917,
-      "source": "zenodo",
-      "source_context_sha256": "fe5dffd43ec4fd15f84013dbcf1400716032809ece825de74da96e2c8de0dfb5",
-      "source_published": "2026-10-25",
-      "source_updated": "",
-      "summary": "Replication package for the article \"Facts versus Claims: Provenance-Grounded Defense for LLM Security Analysts under Adaptive Evidence-Substrate Injection\". Contents: the analysis notebooks in run order, the skeletonization and evidence-view modules, the frozen configuration files (closed vocabulary, normalization, provenance flags and their thresholds, triage instruction, framing notes, output schema, decoding parameters, sampling rule and attack payloads), the figure generator, and the per-request result records in Parquet that support every table and figure in the article. The analysts are two quantized 8B models served locally over an OpenAI-compatible endpoint: hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4 and Qwen/Qwen3-8B-AWQ. Decoding is deterministic (temperature 0.0, top_p 1.0, max_tokens 256, seed 42) with a guided JSON schema, and every call is cached by sha1(model + prompt), so the reported numbers are reproducible from the cache without a GPU. The underlying request corpus is CSIC 2010, which is publicly available and is not redistributed here except as derived per-request records.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Replication package for \"Facts versus Claims: Provenance-Grounded Defense for LLM Security Analysts under Adaptive Evidence-Substrate Injection\"",
-      "url": "https://zenodo.org/records/23632643"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "2433b37374df647c95b81ef0",
-      "context_id": "852ca36a188214b6b39c131c",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "parquet"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.2917,
-      "source": "zenodo",
-      "source_context_sha256": "cc9a426aadc07ec8da69b4752ac6e685733c4023f54f908ad1fde914f1bfead5",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "Microbiome Repo — data package v1.23.0 (2026-10-21) One catalog, two tiers, all ages. The registry tables ( registry_* ) cover every public human shotgun-metagenome study in ENA/SRA/DDBJ — 64,369 studies, all body sites and ages — with archive-only classification (host, UBERON-anchored body sites, life stages, assay, access) and the harvested BioSample tier (637,397 BioSamples with normalised site / age / sex / country). The catalog tables ( gut_* ) are the curated tier: every registry study of the human gut, all ages — 2,954 studies, 602,823 samples, 4,230,116 sample × field values — with age at collection, sex, BMI, country, health condition (controlled vocabulary), antibiotic exposure, subject and timepoint recovered from archive attributes (R1), supplementary tables (R2), paper full text (R3) and abstracts (R4); every value carries a verbatim evidence quote (≤ 12 words), a labelled source, a route and a confidence. Coverage over all gut samples: age 29%, sex 33%, country 91%, health condition 49%, antibiotic exposure 20%. Start here. gut_studies.parquet (one row per study: classification, papers, per-field coverage, age-category and health-condition mix, curated depth) → gut_sample_metadata_wide.parquet (one row per sample: every field with __route / __confidence , age_category + basis, body_site_class ) → gut_sample_determinations.parquet (the evidence behind every value). registry_studies.parquet is the registry; registry_runs_v1.23.0.parquet (every run) ships as a GitHub Release asset. Infant extension. The 391 infant-gut studies were curated in greater depth in earlier releases (delivery mode, feeding mode, preterm status, gestational age, birth weight, maternal antibiotics, probiotics, HMO supplementation, NEC). Those rows are present in the gut_* tables ( curated_source = infant_catalog , infant_scope = true reproduces the former infant catalog exactly: 72,468 samples) and the original deep tables ( sample_metadata_wide , sample_determinations , study_metadata_wide , cohorts , universe_studies_all , sandpiper_* , …) remain in the package for reproducibility; the paragraphs and headline numbers of that extension are kept below under Infant extension (historical description) . Infant extension (historical description) The registry_* tables cover every public human shotgun-metagenome study in ENA/SRA/DDBJ (all body sites, all ages; archive-only classification plus the harvested BioSample tier). All other tables belong to the first curated scope , the Infant Gut Shotgun-Metagenome Catalog — the description below is that scope's. A curated, evidence-linked catalog of every public shotgun-metagenome study of the human infant gut (0–36 months) in the INSDC archives (ENA/SRA/DDBJ), with per-sample metadata recovered from archive attributes, supplementary tables and papers. Headline numbers (computed from the tables in this package; see CHANGELOG v1.2 and v1.2.2). 389 included studies · 154,206 catalog samples (153,685 BioSample units + 521 run units from 6 one-BioSample-per-infant deposits; their 16 parent BioSamples are listed in parent_biosamples.parquet and counted nowhere else) · 174,022 sequencing runs · 618,898 sample × field determinations, each with a verbatim evidence quote (9,559 of them are out-of-scope ages that document adult_age_flag ) · age scope : 67,598 samples with per-sample or per-subject infant evidence + 7,097 in studies triage judged all-infant = 74,695 age-scope infant samples, of which 72,358 are also gut/unknown body site = catalog_scope , the headline denominator (2,900 age-scope infant rows are body-site excluded / linked : skin, milk, oral, mother…); 14,410 samples sit in mixed-age deposits and 49,556 in studies without a per-study infant estimate (age unknown); 9,559 carry an out-of-range age ( adult_flagged ); 5,986 are mother/other samples · age at collection ≤ 1,100 d recovered for 53,669 of 74,695 age-scope infant samples (72%) for 52,649 of 72,358 catalog-scope samples (73%) and for 62,230 ",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "OlmLab/microbiome_repo-data: Data package data-v1.23.0",
-      "url": "https://zenodo.org/records/23602565"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "88b5986413a3f9b6d4a9cf01",
-      "context_id": "66f8b18deb1a89768f2f947b",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "parquet"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.2917,
-      "source": "zenodo",
-      "source_context_sha256": "5253ddcc95a23009d2f92d2b9c615aa2dad515594cfe75c29fbbc774cacf39c1",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "One annotation table for the alleles of the VarChAMP allele collection and the alleles assayed by Lacoste et al. 2024 (Cell, doi:10.1016/j.cell.2024.09.003) that are not in the collection: 8,963 alleles &times; 1,267 columns (8,619 collection , 344 lacoste , column allele_origin ). It is a lookup table for assay results: join the tested alleles on the key ( orf_id , mut_id , ccsb_mutation_id ). To describe the collection itself, filter allele_origin == \"collection\" . Built by the VarChAMP allele-metadata pipeline (GitHub: varchamp-allele-metadata, commit in metadata.json ) from the inputs record (lab data and snapshots, doi:10.5281/zenodo.23373387) and public resources pinned by checksum. metadata.json records the provenance of every input (origin, version, licence, checksum) and the QC counts of every step. Version 1.1 adds the measurements of three published studies of the lab (Sahni et al. 2015, Rolland et al. 2014, Luck et al. 2020), keyed on the same clone key, and a mapping of every study allele to the collection (file published_studies.zip ). The allele table is unchanged from version 1.0 (same files, same checksums). Files File Content varchamp_allele_metadata_public.parquet The table (Apache Parquet, with column types). varchamp_allele_metadata_public.tsv The same table as tab-separated text. metadata.json Provenance of every input, pipeline commit, per-step QC counts, the columns left out of this public release. published_studies.zip The published studies (folder published_studies/ ), two tables as Parquet and TSV: published_study_alleles (2,606 rows, one per study allele: the study's identifiers, its match to the collection &mdash; clone key, status , rule , gene, reference/alternate and position checks &mdash; and the per-allele readouts edgotype_class , chaperone_responsive and n_chaperones_expressed ) and published_study_edges (3,345 rows, one per allele &times; partner &times; study: Y2H from Sahni Table S3A, Rolland and Luck; WT rows flagged; the partner's Ensembl gene; each study's scores as published, in columns prefixed by study); metadata.json with the provenance and QC of the study steps. data_licences.md The terms of every source in the table and what they require. THIRD_PARTY_NOTICES.md Copyright and permission notices of the MIT- and Apache-licensed scores. Columns The first 52 columns are a stable contract; definitions are in the pipeline's README. Identity: key, CCSB allele id, source collection, gene symbol, Ensembl gene and protein ids, ORF nucleotide and amino-acid change, SPDI and genomic position (GRCh38). Sequence confirmation: Y/N calls per clone (entry, DB, N2H, DUAL-IPA, mislocalisation); is_entry_seq_confirmed . ClinVar (variant_summary 2026-10): clinical significance (raw and cleaned categories), review status, phenotypes ( PhenotypeList , PhenotypeIDS ), OMIM numbers ( OMIM_IDs ). Protein coordinates: UniProt accession and the change on the UniProt canonical sequence. dbNSFP 5.0a (academic branch): 513 columns of variant scores and annotations for the matched transcript. Predictors: AlphaMissense ( am_pathogenicity ), SpliceAI ( splicing_variant ), ThermoMPNN &Delta;&Delta;G on AlphaFold DB v6 models. Structure: pLDDT and relative solvent accessibility at the residue (AlphaFold DB v6 F1 model). Domains and features: TED domains and the hit at the variant (CATH v4.4.0 names); G2P protein features ( g2p_* ). Disease: mode of inheritance (GenCC, or Lacoste et al. 2024 Table S1 where GenCC's modes disagree), rare-disease modules of the gene (Buphamalai et al. 2021). Flags: is_synonymous , in_analysis_set . Published studies The studies' supplementary tables are pinned by publisher URL and checksum and kept as published; only the clone key ( orf_id , mut_id , ccsb_mutation_id ) is added. Matching to the collection: Study Alleles Matched Dropped by the collection's rules Unmapped Sahni et al. 2015 2,470 2,420 45 5 Rolland et al. 2014 115 114 1 0 Luck et al. 2020 21 21 0 0 Sahni: by the RC4 mutat",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "VarChAMP allele metadata table: annotations of the VarChAMP 1% allele collection and Lacoste et al. 2024 alleles, and the measurements of three published studies keyed on the collection",
-      "url": "https://zenodo.org/records/23574322"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "81451fb9600a715f684cfdff",
-      "context_id": "cb1bfd0a3f5c1dd9b26821c2",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "netcdf"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.25,
-      "source": "zenodo",
-      "source_context_sha256": "7db08a3091be558bfcab7691748b57431bedcc4c9abbbbd36a0f2714f01b6ed4",
-      "source_published": "2026-10-25",
-      "source_updated": "",
-      "summary": "Adds the gap-filled sea-surface-temperature field as HEALPix NetCDF ( results/sst_gap_filled_healpix.nc , nside 32, NESTED): observed Copernicus Marine L3S, L4 reference, harmonic and scattering-transform (FOSCAT) fills, cloud and ocean masks, for 2026-04-01. A re-run on 2026-10-24 reproduces the published result within 0.4 %: FOSCAT RMSE 0.985 K (published 0.989 K), harmonic baseline 11.463 K (identical), 91.4 % improvement either way. The FOSCAT optimisation is not bit-reproducible.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "FIESTA Scattering SST: Copernicus Sea Surface Temperature Gap-Filling",
-      "url": "https://zenodo.org/records/23627844"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "f22dfe728b66ee3f39d1dcc3",
-      "context_id": "b413b3ab3cf3c126b0fc7a65",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "hdf5"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.1667,
-      "source": "zenodo",
-      "source_context_sha256": "4c2202448613f64ce0648280267a49e86061fb551fd752d38b26a94dfc72f2cb",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "Amun Code is an open-source parallel simulation code for astrophysical fluids and plasmas. It solves the equations of hydrodynamics and magnetohydrodynamics in two and three dimensions on uniform or adaptively refined Cartesian meshes. Supported formulations include Newtonian flows with isothermal or adiabatic equations of state, and special relativistic hydrodynamics and magnetohydrodynamics. The code uses Godunov-type shock-capturing methods with selectable approximate Riemann solvers, high-order weighted essentially non-oscillatory and monotonicity-preserving reconstruction, and Runge&ndash;Kutta time integration. Embedded integrators provide error-based time-step control. Magnetic-divergence errors are controlled through generalized Lagrange multiplier cleaning. Optional viscosity, magnetic resistivity, and stochastic turbulence driving support studies of turbulence, shocks, and magnetic reconnection. Driving options include the Alvelius method and an Ornstein&ndash;Uhlenbeck process. Amun Code is written primarily in modern Fortran and supports hybrid MPI/OpenMP parallelization. Simulation settings are supplied through parameter files, and outputs use native XML/binary or HDF5 formats. AmunPy provides a separate Python interface for reading simulation data. The code is developed by Grzegorz Kowal and distributed under the GNU General Public License, version 3 or later.",
-      "tags": [
-        "magnetohydrodynamics",
-        "hydrodynamics",
-        "relativistic magnetohydrodynamics",
-        "astrophysical fluid dynamics",
-        "computational astrophysics",
-        "adaptive mesh refinement",
-        "finite volume methods",
-        "high-order shock-capturing schemes",
-        "Riemann solvers",
-        "turbulence",
-        "Fortran",
-        "MPI",
-        "OpenMP"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "Amun Code",
-      "url": "https://zenodo.org/records/23577379"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "6c103eede8b25f08bf7728ae",
-      "context_id": "a876f9703ea14c5c6cfecff9",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "hdf5"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.1667,
-      "source": "zenodo",
-      "source_context_sha256": "a7dd0c3723fea7003288dd7557090f845b9b193dc5ff113d54233725f71f057f",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "SlideRule is an open source server-side framework for on-demand processing of science data in the cloud. The SlideRule project offers a new paradigm for NASA archival data management – rapid delivery of customizable on-demand data products, rather than hosting large volumes of standard derivative products, which will inevitably be insufficient for some science applications. The scalable server-side components of SlideRule run in the AWS cloud with optimized functions to read HDF5 data hosted by NASA in S3 cloud object storage. While SlideRule can be accessed by any HTTP client (e.g., curl) through GET and POST requests, the sliderule-python client provides a user-friendly API for synchronous interaction with the SlideRule service. The client library returns standard Python data containers (i.e., Pandas DataFrame) and facilitates serialization with provenance metadata for reproducible science. SlideRule uses a plugin framework to support different NASA missions and data products. The ICESat-2 SlideRule plugin offers customizable algorithms to process the archive of low-level data products from the NASA Ice Cloud and land Elevation Satellite-2 (ICESat-2) laser altimetry mission. The user defines a geographic area of interest and key processing parameters via an interactive web interface or the API, and SlideRule returns high-level surface elevation point cloud products in seconds to minutes, enabling rapid algorithm development, visualization and scientific interpretation.",
-      "tags": [
-        "Earth data",
-        "ICESat-2",
-        "GEDI",
-        "Laser altimetry",
-        "Topography"
-      ],
-      "target_repository": "Hawkar-usls/janus-lapis",
-      "title": "SlideRule",
-      "url": "https://zenodo.org/records/23572608"
-    },
     {
       "base_direction_id": "large_data_methods",
       "candidate_id": "1e8a5a93e5b725aede8f816c",
@@ -335,6 +47,77 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "CAMELS-US Hydrological Model Intercomparison Project (MIP) — ERA-Multi-Paradigm-Gauged (10-model ensemble) Daily Streamflow Hydrographs (531 Basins, Water Years 1990–1999)",
       "url": "https://zenodo.org/records/23641695"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "0981f009dfbc259dd6b0ad82",
+      "context_id": "ef521127d706aa61a7e16407",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "b395f7842ac6e285a904eb7432498b97a0a8ce11070cb3e983e7085b42aafa7d",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Replication materials accompanying the manuscript &ldquo;Failure-log ranking and selective dismissal across projects&rdquo;. The release contains saved validation/test predictions, project-disjoint split identifiers, thresholds, decision tables, analysis and figure code, source manifests, and supporting provenance. It covers the primary matched analysis, three alternative project partitions, and the prior-shift, class-conditional score-tail and pointwise-binomial diagnostics in Supplement S9. The package supports verification of saved-output analyses. It does not provide a verified one-command end-to-end training rerun. Retraining requires separate access to the original dataset and reconstruction of documented features and dependencies. Raw third-party archives and fitted model binaries are not included. Source data: Alshammari, Ammann, Hilton and Bell (2024), version v1, https://doi.org/10.5281/zenodo.10531160 (CC BY 4.0). All scientific CSV tables and compressed data are retained unchanged from the review package. Internal operational records and a full third-party webpage snapshot are excluded; private home-directory roots in textual provenance are replaced with a neutral marker. Public changes and hashes are documented. No model scores, thresholds or reported results are altered. Author-created code is MIT-licensed. Original summary results, figures and documentation are CC BY 4.0. Third-party tokenization code retains BSD-3-Clause terms, and an unmodified figure-audit helper retains Apache-2.0. Source-derived records retain source attribution. See LICENSE_SCOPE.md and THIRD_PARTY_NOTICES.md. This deposit does not assert journal acceptance or cross-project deployment safety.",
+      "tags": [
+        "selective classification",
+        "project shift",
+        "risk-coverage",
+        "flaky tests",
+        "reproducibility",
+        "failure logs"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Replication materials for Failure-log ranking and selective dismissal across projects",
+      "url": "https://zenodo.org/records/23645351"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "5912124236fd262c000cbc9d",
+      "context_id": "e7801332e943a02ec6b0f5a7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "65c9ea317f34a0852323d6cf5949420341d39415a588bb64295bf9a961fff49c",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "The Objection AI Wrote into My Papers How AI-authored scientific manuscripts change the researcher's claim, demote executed results, and reproduce the error even while promising to correct it Driven by Dean A. Kulik 25 October 2026 Abstract This paper examines a specific failure of AI-assisted scientific writing: an assistant receives a research program with an explicit foundational claim and an extended record of derivations, executable constructions, and observed returns; it then produces manuscripts in which that program has become something else. In the documented NEXUS case, the researcher's claim is that the universe consists of binary transformations, with arrangement and constrained continuation preceding the entities later called matter. Across an extended conversation, the assistant repeatedly reformulates that claim as the use of a binary computational method on pre-existing physical domains. The substitution is not cosmetic. It reverses the direction of explanation, changes which claims a result can support, and changes how the resulting paper will be read. The second failure occurs at the conclusion. The assistant can report concrete outcomes and then append a generalized reservation about whether the program establishes physical reality, predictive uniqueness, or an entire theory of matter. Such reservations can be appropriate when tied to a specific technical claim. Here, however, the transcript records the assistant recognizing that it had repeatedly allowed those broader questions to displace the findings of individual papers. The same editorial framing reportedly appeared in the conclusions of different manuscripts. When directed to write a paper about the failures, the assistant instead delivered successive condensed accounts of NEXUS, again incorporating the disputed framing. It subsequently acknowledged the reversal in its own paper, rewrote the document, and repeated the problem. This is an analysis of the AI's treatment of scientific material, not an independent review of the correctness of NEXUS or a new attempt to prove its thesis. The evidence is the exported conversation, including statements of the researcher's instructions, the assistant's self-audits, quotations from its drafts, and records of the successive manuscript deliveries. The central finding is that AI-mediated scientific distortion can operate through ordinary-seeming connective words, changes of explanatory direction, and borrowed review conventions. Once inserted into the manuscript, these interventions become attributed to the scientist. In this case, the reviewer did not merely misunderstand the work. The reviewer wrote its misunderstanding into the work itself. Keywords: AI-assisted scientific authorship; epistemic framing; manuscript integrity; semantic substitution; research provenance; binary transformations; NEXUS; scientific review. 1. The object under examination is the AI intervention This is not a general introduction to NEXUS. Such an introduction would repeat the failure the record documents. The present object is the text written by an AI assistant, its relationship to instructions it was given, and the specific ways that relationship broke. The transcript shows that the researcher was not seeking an appreciative abstract or an adversarial review of the entire universe. He requested an account of how AI systems had been writing and reviewing his papers in ways that changed their meaning. On 25 October at 10:49 he demanded a paper explaining &ldquo;how you and other AI keep ... up my work,&rdquo; followed immediately by a request that the account explain the research correctly [T 7782&ndash;7794]. At 10:50 he rejected the assistant's proposed limit to eight recent papers and directed it to the project archives [T 7798&ndash;7814]. Later, after successive delivered manuscripts, he again described the required artifact as a paper exposing the AI's conduct&mdash;not &ldquo;The Universe as cliff notes&rdquo; [T 8176&ndash;8194",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "The Objection AI Wrote into My Papers How AI-authored scientific manuscripts change the researcher's claim, demote executed results, and reproduce the error even while promising to correct it",
+      "url": "https://zenodo.org/records/23645901"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -518,6 +301,38 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "Persistent Sheaf Laplacian Analysis of Protein Stability and Solubility Changes upon Mutation",
       "url": "https://arxiv.org/abs/2601.12219v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "5d98731768bae7fb29cf9797",
+      "context_id": "44fa351d330d3d9fc517016d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "83087e7d19a02aa3a38e3779632e265a02edb4c0feaca5dcf4efe6a55d4306a8",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Overview This repository provides the reproducibility materials accompanying the research manuscript From False to Fluent: A Claim-Disjoint Baseline Study and Preregistered Framework for Evaluating Generative-AI Transformation of Health Misinformation . The study investigates the robustness of machine-learning classifiers for health-misinformation detection under Generative-AI-mediated linguistic transformation. It uses two existing health-information datasets, COVID-19 FNIR and an mpox misinformation dataset, to examine whether classification performance remains stable when original health claims are reformulated without intending to change their underlying meaning or veracity. Experimental framework Four experimental conditions are defined: C0: Original health-information text. C1: Neutral rewriting to improve fluency and readability. C2: Elaboration Likelihood Model (ELM) central-route transformation, emphasising the organisation of existing reasoning and evidence. C3: ELM peripheral-route transformation, modifying rhetorical emphasis and peripheral persuasive cues. The reported computational experiments evaluate four classical classifiers (logistic regression, linear support vector machine, multinomial na&iuml;ve Bayes and random forest) and five task-trained neural architectures (1D-CNN, LSTM, BiLSTM, CNN-LSTM and CNN-BiLSTM). The analyses examine transformation robustness, changes in textual and persuasion-related features, statistical associations with classification errors, transformation-aware mitigation and cross-dataset transfer. The repository also includes supplementary analyses of class-specific error rates and paired source-root bootstrap confidence intervals for the classical classifiers. Repository contents The archive contains Python source code, preprocessing and evaluation workflows, configuration files, reproducibility instructions, frozen aggregate results, integrity-check materials and supplementary statistical outputs. Data availability and reproducibility The original datasets are available from their respective third-party providers, subject to their applicable access and reuse conditions. The frozen intervention texts used for the C0&ndash;C3 experiments are not redistributed in this public software archive. Their SHA-256 integrity manifest is provided to support verification of authorised copies. Consequently, complete reproduction of text-dependent experiments requires access to the original datasets and the frozen intervention texts. The public archive supports inspection of the methodology and reproduction of analyses for which the necessary inputs or saved instance-level outputs are included. Scope and limitations The reported intervention experiments did not execute pretrained DistilBERT, RoBERTa or DeBERTa baselines. Independent clinical semantic-equivalence adjudication of the generated transformations was not completed. The results are computational and do not establish clinical deployment performance. This record accompanies the associated research manuscript and is intended to support transparent reporting, methodological scrutiny and further replication.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "From False to Fluent_ A Claim-Disjoint Baseline Study and Preregistered Framework for Evaluating Generative-AI Transformation of Health Misinformation",
+      "url": "https://zenodo.org/records/23645855"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1051,6 +866,41 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "50afc166771bfd0169920f85",
+      "context_id": "0c3044e109bac7a2e24885e5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline",
+        "calibration",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 11.4167,
+      "source": "zenodo",
+      "source_context_sha256": "bd116250897266a3161756bd40d8376678e5418c4c0151510b0e45ee95531a0d",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Digital Twins of Qigong-Related Psychophysiological States at the Limit STARLI | White Rainbow Epoch Research Family | Flagship 20 This nonclinical research working monograph investigates what a defensible, transferable digital twin of qigong-related psychophysiological observations would have to predict, measure, and survive before it can claim incremental scientific value. The work couples Digital Twins, Qigong Physiology, and Transferable Models, with a central emphasis on day-ahead prediction and independent reconstruction. A qigong label here denotes a culturally situated breathing, attention, posture, or movement task; it does not establish an unrecognized form of physical energy. The scientific question is deliberately narrow: can a preregistered personalized model outperform a strong within-person historical baseline, on withheld future days and previously unseen breathing-by-movement conditions, for a traceable physiological endpoint such as ECG-derived NN-interval RMSE, while retaining reliable uncertainty calibration? A system that memorizes an individual's previous recordings, sees data from the future test day, relies on device or operator identity, or repeatedly recalibrates after the answer is revealed does not satisfy this claim. The work positions ECG R-peaks, normal-to-normal intervals, respiratory belts, inertial measurement units, peripheral electrodermal activity, temperature records, timing references, and instrument phantoms as candidate observations. These measurements are not interchangeable. A low prediction error on one sensor cannot license interpretation of a hidden mental or autonomic state that remains observationally indistinguishable from breathing rate, body movement, vigilance, posture, expectation, or shared sensor error. The book's measurement discipline begins with physical units and independent calibration. An NN-interval RMSE is expressed in milliseconds under a fixed beat eligibility policy; respiration retains an appropriate physical or calibrated coordinate; skin conductance is recorded in microsiemens; movement amplitude and spectrum require an independently logged inertial unit; device timing and drift must be measured against a traceable reference. When observations share clocks, power supplies, contact artifacts, or environmental drivers, the cross-channel covariance must be retained rather than falsely decomposed into independent measurement errors. The methodological proposal has five linked layers. Layer I is an operational contract that locks endpoints, sample units, eligibility, negative-control tasks, evaluation dates, and hard stops. Layer II is a measurement contract that documents raw signal provenance, physical units, sampling, calibration, cross-channel covariance, and uncertainty. Layer III is a hidden challenge program, including room changes, operator and device exchanges, sensor ablation, controlled respiratory pacing, and withheld breath-motion combinations. Layer IV requires a resource-matched comparison with the strongest conventional model available, including an autoregressive personal-history baseline and physiologically grounded respiratory predictors. Layer V calls for an independent laboratory to reconstruct the entire result and safety-abstention path from preserved raw traces and versioned analysis artifacts.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Digital Twins of Qigong-Related Psychophysiological States at the Limit STARLI | White Rainbow Epoch Research Family | Flagship 20 This nonclinical research working monograph investigates what a defensible, transferable digital twin of qigong-related psychophysiological observations would have to pr",
+      "url": "https://zenodo.org/records/23646014"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "ff3a8a337126d9061bf61d8d",
       "context_id": "8d2e6b04469605cfbb1f0e2b",
       "delivery_preview_only": true,
@@ -1306,6 +1156,48 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "da27dc66b17743c603bce60f",
+      "context_id": "af8e9076dff2b110bc6b68f4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.0417,
+      "source": "zenodo",
+      "source_context_sha256": "2ee4482e7406095acf07b35d858b375a8689aca6f1bbd7387de14660ac6925e8",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Preservation copy of an article published in International Journal of Science, Technology and Management . Read the full article: https://ioro.org/ijstm/article/705694772108/705694772108 . Organizations increasingly use artificial intelligence (AI) to improve strategic planning, operational efficiency, and sustainability. However, conventional machine learning models often lack transparency, limiting managerial trust, accountability, and the practical adoption of AI-driven decisions. This study proposes an explainable AI (XAI) framework that integrates predictive analytics, interpretable machine learning, and sustainability indicators to support transparent, reliable, and evidence-based decision-making across technological, organizational, and environmental dimensions. The proposed framework combines Random Forest, XGBoost, and Explainable Boosting Machines with SHapley Additive exPlanations (SHAP) and Local Interpretable Model-Agnostic Explanations (LIME). Evaluation uses a benchmark dataset containing operational performance, resource consumption, organizational efficiency, and environmental indicators. Comparative experiments assess predictive accuracy, precision, recall, F1-score, area under the receiver operating characteristic curve (AUC), explanation consistency, decision latency, computational cost, and sustainability performance. Baseline models include Logistic Regression, conventional Random Forest, and XGBoost without explanation mechanisms. Ablation studies examine the individual contributions of interpretability and sustainability-aware optimization. The experimental evaluation is designed to determine whether the proposed framework improves predictive reliability, explanation quality, and sustainability-aware decisions compared with conventional approaches. Quantitative reporting will include percentage improvements in predictive performance, reductions in decision latency and resource consumption, and explanation stability across repeated experiments. Qualitative analysis will assess managerial understandability, perceived trustworthiness, fairness, and practical implementation challenges. Numerical outcomes will be reported only after experiments are completed, avoiding unsupported performance claims. The proposed framework establishes a comparative approach for integrating explainability, predictive intelligence, and sustainability into organizational decision-making. By connecting model predictions with transparent explanations and measurable sustainability indicators, the framework aims to strengthen accountability, operational effectiveness, and responsible technology adoption. Future validation across multiple industries will establish its generalizability and practical value.",
+      "tags": [
+        "Predictive Analytics",
+        "Explainable Artificial Intelligence",
+        "Sustainable Decision-Making",
+        "Interpretable Machine Learning",
+        "Organizational Intelligence.",
+        "International Journal of Science, Technology and Management",
+        "ijstm"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Explainable AI for Intelligent and Sustainable Decision-Making",
+      "url": "https://zenodo.org/records/23646286"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "48a1f4fdc82d3f4fa8670abd",
       "context_id": "07dd12a21aa4641cb33274d0",
       "delivery_preview_only": true,
@@ -1533,6 +1425,39 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "Benchmarking Evaluation of Counterfactual Data Augmentation for Computer Agriculture Crop-Yield Estimators Under Satellite-Cloud Gaps: An Artificial Intelligence Coverage-Error Bound for Famine Early-Warning Reliability",
       "url": "https://zenodo.org/records/23544459"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "5d98731768bae7fb29cf9797",
+      "context_id": "d0e30dc57bb7a9404837c723",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7917,
+      "source": "zenodo",
+      "source_context_sha256": "89de8735c3e73c2257675e50adec0f943355d9def153e68daff506d14b3a8826",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Overview This repository provides the reproducibility materials accompanying the research manuscript From False to Fluent: A Claim-Disjoint Baseline Study and Preregistered Framework for Evaluating Generative-AI Transformation of Health Misinformation . The study investigates the robustness of machine-learning classifiers for health-misinformation detection under Generative-AI-mediated linguistic transformation. It uses two existing health-information datasets, COVID-19 FNIR and an mpox misinformation dataset, to examine whether classification performance remains stable when original health claims are reformulated without intending to change their underlying meaning or veracity. Experimental framework Four experimental conditions are defined: C0: Original health-information text. C1: Neutral rewriting to improve fluency and readability. C2: Elaboration Likelihood Model (ELM) central-route transformation, emphasising the organisation of existing reasoning and evidence. C3: ELM peripheral-route transformation, modifying rhetorical emphasis and peripheral persuasive cues. The reported computational experiments evaluate four classical classifiers (logistic regression, linear support vector machine, multinomial na&iuml;ve Bayes and random forest) and five task-trained neural architectures (1D-CNN, LSTM, BiLSTM, CNN-LSTM and CNN-BiLSTM). The analyses examine transformation robustness, changes in textual and persuasion-related features, statistical associations with classification errors, transformation-aware mitigation and cross-dataset transfer. The repository also includes supplementary analyses of class-specific error rates and paired source-root bootstrap confidence intervals for the classical classifiers. Repository contents The archive contains Python source code, preprocessing and evaluation workflows, configuration files, reproducibility instructions, frozen aggregate results, integrity-check materials and supplementary statistical outputs. Data availability and reproducibility The original datasets are available from their respective third-party providers, subject to their applicable access and reuse conditions. The frozen intervention texts used for the C0&ndash;C3 experiments are not redistributed in this public software archive. Their SHA-256 integrity manifest is provided to support verification of authorised copies. Consequently, complete reproduction of text-dependent experiments requires access to the original datasets and the frozen intervention texts. The public archive supports inspection of the methodology and reproduction of analyses for which the necessary inputs or saved instance-level outputs are included. Scope and limitations The reported intervention experiments did not execute pretrained DistilBERT, RoBERTa or DeBERTa baselines. Independent clinical semantic-equivalence adjudication of the generated transformations was not completed. The results are computational and do not establish clinical deployment performance. This record accompanies the associated research manuscript and is intended to support transparent reporting, methodological scrutiny and further replication.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "From False to Fluent_ A Claim-Disjoint Baseline Study and Preregistered Framework for Evaluating Generative-AI Transformation of Health Misinformation",
+      "url": "https://zenodo.org/records/23645855"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1803,6 +1728,76 @@
       "target_repository": "Hawkar-usls/janus-lapis",
       "title": "Backdoor-Trigger Evaluation for Computer Agriculture Disease-Detection Models Under Third-Party Pretrained Checkpoints: An Artificial Intelligence Poisoning-Rate Audit",
       "url": "https://zenodo.org/records/23544383"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "da11e0847432289137237a39",
+      "context_id": "ea8a779ff2ebfd55ff17e169",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7083,
+      "source": "arxiv",
+      "source_context_sha256": "5f81bf6a5fe8100264e53117a4a6706b8c6ddfa89d714e29727373de7b250faf",
+      "source_published": "2026-10-21T17:37:58Z",
+      "source_updated": "2026-10-21T17:37:58Z",
+      "summary": "Today's multimodal assistants are typically prompted to interpret the visual evidence presented to them. To offload the cognitive burden of remembering across long horizons, wearable assistants should instead proactively acquire and maintain useful memory as the user's surroundings evolve. Doing so on the user's behalf requires identifying what matters, understanding the scene in real time, and initiating memory maintenance in the background while the user stays focused on their activities. We introduce ProactEgoMem, a benchmark that evaluates proactive memory in streaming egocentric video. Three tasks ground the evaluation in ambient environmental needs: Information Capture (IC) preserves transient yet dense visual information, State Tracking (ST) follows changing object states, and Location Tracking (LT) records object movements. The benchmark defines its protocol at two levels of proactiveness: the Notification Level asks for a single timely notification that satisfies the user's intent, while the deeper Intervention Level asks the agent to maintain memory on the user's behalf through an active start-to-stop tool lifecycle. Parallel ProactEgoMem-Daily and ProactEgoMem-Sci tracks contain 300/100 clips covering daily and scientific use cases, paired with 1000/500 questions in ProactEgoMem-QA, which measures the quality of the proactively acquired memory. Across proprietary, open-source, video-language, and streaming baselines, even the strongest models fail to capture memory both timely and accurately. ProactEgoMem provides a rigorous evaluation foundation for proactive multimodal assistance and for video agents that co-exist with their users.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "ProactEgoMem: Benchmarking Proactive Memory in Streaming Egocentric Video",
+      "url": "https://arxiv.org/abs/2610.30089v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "149006301da76ea3a85b142f",
+      "context_id": "dbeeeb5ced89d2e2466cf3e0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7083,
+      "source": "arxiv",
+      "source_context_sha256": "5cf25b6d0d72d18cccbba29543bd4724ec1a3f84d8b3fd9b5757c10b1eb0dc18",
+      "source_published": "2026-10-22T14:07:01Z",
+      "source_updated": "2026-10-22T14:07:01Z",
+      "summary": "Scaling embedding capacity alongside Transformer computation is an emerging trend in language models. This trend makes high compression rates increasingly useful. Hence, we study extreme compression of Per-Layer Embeddings (PLE), which follow this trend and account for 35.2% of the parameters of Gemma 4 E4B. At such rates, conventional quantizers give each token-layer vector its own code of only a few bytes. We instead develop OPTIC (Output-Path-fitted, Token-shared Indexed Codes), which stores one quantized code tuple per token and decodes it at every layer with a layer-specific affine decoder. Codes and decoders are fitted to the PLE output path rather than to the stored vectors. At about $100\\times$ PLE compression of bfloat16 (BF16) E4B, OPTIC retains an aggregate 97.8% of the uncompressed model's performance across seven benchmarks, whereas product quantization, the strongest of six conventional baselines, retains 66.3%. At $594\\times$ and $1,002\\times$ PLE compression of BF16 E4B, OPTIC retains 90.5% and 84.1%. On the official E4B release with 4-bit linear weights and 16-bit activations (W4A16), OPTIC retains 96.9% at about $100\\times$ PLE compression. During inference at about $100\\times$ PLE compression, BF16 E4B uses 29.7% less GPU memory than with uncompressed PLE at the same key-value cache size, while running at most 0.40% slower.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-lapis",
+      "title": "Extreme Compression of Per-Layer Embeddings via Cross-Layer Latent Vector Quantization",
+      "url": "https://arxiv.org/abs/2610.31309v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
