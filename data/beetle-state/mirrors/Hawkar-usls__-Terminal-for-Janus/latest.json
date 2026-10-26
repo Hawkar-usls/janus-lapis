@@ -1,9 +1,43 @@
 {
-  "batch_id": "e4725c3f4a0706de76f3",
+  "batch_id": "4fb83d49f655b3f16806",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
   "items": [
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "4369f592edff222ac419856b",
+      "context_id": "6bf11ff5396119f4cab85789",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus",
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.1667,
+      "source": "zenodo",
+      "source_context_sha256": "73ea9de8ca05b6b1161652ab04ea4330eaceb6f1f11d0ba2e75c90e47fd34129",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "Nine years after its introduction, the transformer remains the default sequence model. The usual explanations are real: parallel matrix multiplication on accelerators, predictable returns to scale, a co-evolved ecosystem and exact recall from an uncompressed context. But they do not explain why most modifications barely move accuracy, which properties are essential, why the changes practice adopted took the forms they did, or where the design can still move. This paper is the entry point to a collection of papers that treat a token-mixing layer as an averaging operator rebuilt from its own input and iterated through depth. Such a layer faces six failure modes (collapse to consensus, contamination of content by routing, runaway feedback, the inability to abstain, dilution as context grows, and the inability to represent direction). Each has a protection, proved within a declared class, and a signature measured at small scale when that protection is removed; for gain control, which protects against runaway feedback, that signature is synthetic. We read softmax attention in a pre-normalized residual block as the one known point where all six protections are cheap at once under the prices of parallel hardware and gradient descent; this is an interpretation, not a measured optimum. Two mechanisms, measured at small scale, help explain why its neighbourhood is flat: trained networks compensate local deficits through spare capacity, and, in ten scored tests, making a protection explicit did not beat a block that already supplies it. The anchor, the residual or input path that protects against collapse to consensus, is the one protection whose loss compensation provably cannot repair: under strict mixing, where repeated averaging contracts token differences toward zero, no extra capacity of bounded gain (bounded sensitivity) brings back what is lost without it, and in small-model ablations nothing else in the block made up for it. This is a proved bound; a trained test that adds capacity is pending. Many changes adopted in the mixing layer and its block since 2017, among them pre-normalization, QK-norm, sinks and output gates, read as re-supplies of the same protections; the account is silent on others, such as changes to the MLP. The room that remains for the design to move is where a protection is patched (met only by a fix that works over a limited range, such as the trained length) or paid at a price that another design could avoid. It includes abstention and retrieval at long context, governed by a two-sided log-N law in the context length (with bounded scores, no fixed rule for abstaining keeps both as the context grows), and bounded memory, whose price for exact recall is a per-head capacity. It also includes decisions that sum over all competitors where reading the largest would do, and the writer of new features (in a transformer, the MLP and the output map), for which the collection has no theory yet of what a good writer computes. Along the way the collection establishes results that stand on their own: attention has an arrow that default statistics of a single operator cannot see; depth is a distribution over path lengths; converged adaptive averaging can amplify changes in its input and overturn correct predictions; and softmax obeys length laws that decisions on maxima escape while the competing scores stay below the decision's threshold. We state what is proved, what is measured, what is interpretation, and what is still pending. This is a working draft, not a final version. It is unpolished in places, incomplete in others, and keeps exploratory material a polished paper would leave out, because that material helps decide what comes next and shows the programme's big picture more fully. Please read it with that in mind: the work will be refined further, and later versions will appear under this record. It belongs to a collection released together on Zenodo: the entry paper The Transformer Abides, the monograph A Spectra",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "The Transformer Abides: What Attention Needs, and Why It Endures",
+      "url": "https://zenodo.org/records/23541767"
+    },
     {
       "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "1c6f708952c6d178a35efbd2",
@@ -85,6 +119,40 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "A Reproducible Provenance Audit of the Public Einstein Elevator Data Package: Trace Correspondence, Metadata Linkage, and the Non-Identifiability of Sensor-Certificate Risk from the Public Archive",
       "url": "https://zenodo.org/records/23647325"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "628f6d626ff824e7005da6d1",
+      "context_id": "0c5aff0e8fabca16fbde1475",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.9583,
+      "source": "zenodo",
+      "source_context_sha256": "a5cc6410e4fb46f4fb28731a118335c78682ebd983e848daf33b41f131402744",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "A sequence-mixing layer that is iterated through depth and rebuilt from its own input faces six failure modes. Each is met by a protection&mdash;anchoring, alignment, gain control, abstention, a routing budget, or an arrow&mdash;with an operator-level statement proved within a declared class, a signature when it is removed, and a price. We organize attention designs as a lattice of kernel, dynamical, and block constraints in which relaxing a constraint buys a capability and obliges a re-supply. We read softmax attention inside a pre-normalized residual block as the lattice point where every protection is either supplied or cheaply re-supplied under parallel-hardware and optimization pricing: of the deficits tested, all but the anchor's were compensated by capacity elsewhere in the deeper models, and explicit protection knobs did not beat the block, both measured at small scale, while corner structure, by which designs would jump rather than drift, remains a hypothesis. The lattice reads the selected adopted changes to the mixing layer, its normalization and its residual path over the last decade as cheap re-supplies of protections, and it locates the room for change. The clearest room is abstention, governed by a two-sided log-N law: with a bounded logit scale, no null keeps both abstention and single-key retrieval as context grows, and tempering the entire logit budget with log N keeps both when its margins are strictly separated. A controlled pilot follows the law, while a prespecified test of its sink prediction on an open production model was undecided by its prespecified rule; descriptively its slopes leaned toward compensation through position, in which position encoding holds the background's growth down. In a prespecified trained harness of 125M-parameter language models, tempering every logit by log N / log N_train on top of YaRN, which already carries a log-length temperature, did not keep abstention and raised long-context perplexity. In these language models every rule that gives attention a null removed the first-token sink and cut massive activations by 67% to 82%, as earlier reports for gates and attention biases found, and, sigmoid aside, lowered perplexity slightly at the training length; the comparison registered for two of these rules held in every seed, while the same comparison failed in the harness's vision transformers. We close with falsifiable predictions for future architectures, most of them not yet tested. This is a working draft, not a final version. It is unpolished in places, incomplete in others, and keeps exploratory material a polished paper would leave out, because that material helps decide what comes next and shows the programme's big picture more fully. Please read it with that in mind: the work will be refined further, and later versions will appear under this record. It belongs to a collection released together on Zenodo: the entry paper The Transformer Abides, the monograph A Spectral Theory of Token Communication, and the papers Attention Sinks at Long Context, The Transformer as a Constrained Equilibrium and Beyond Transformers. This version is the text; the records, the code and the formal proofs follow in a later version.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "The Transformer as a Constrained Equilibrium: A Lattice of Protections for Adaptive Sequence Mixing, and Where the Room Is",
+      "url": "https://zenodo.org/records/23542051"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -570,6 +638,6 @@
   "schema": "janus.beetle.repo_memory_batch.v1",
   "selection": "BALANCED_LENS_ROLLING_TOP",
   "snapshot_cap": 48,
-  "snapshot_items_total": 15,
+  "snapshot_items_total": 17,
   "target_repository": "Hawkar-usls/-Terminal-for-Janus"
 }
