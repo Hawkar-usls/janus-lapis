@@ -1,0 +1,1485 @@
+{
+  "batch_id": "00142735137cce937981",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "fragment_count": 1,
+  "fragment_index": 1,
+  "items": [
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "4369f592edff222ac419856b",
+      "context_id": "6bf11ff5396119f4cab85789",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus",
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.1667,
+      "source": "zenodo",
+      "source_context_sha256": "73ea9de8ca05b6b1161652ab04ea4330eaceb6f1f11d0ba2e75c90e47fd34129",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "Nine years after its introduction, the transformer remains the default sequence model. The usual explanations are real: parallel matrix multiplication on accelerators, predictable returns to scale, a co-evolved ecosystem and exact recall from an uncompressed context. But they do not explain why most modifications barely move accuracy, which properties are essential, why the changes practice adopted took the forms they did, or where the design can still move. This paper is the entry point to a collection of papers that treat a token-mixing layer as an averaging operator rebuilt from its own input and iterated through depth. Such a layer faces six failure modes (collapse to consensus, contamination of content by routing, runaway feedback, the inability to abstain, dilution as context grows, and the inability to represent direction). Each has a protection, proved within a declared class, and a signature measured at small scale when that protection is removed; for gain control, which protects against runaway feedback, that signature is synthetic. We read softmax attention in a pre-normalized residual block as the one known point where all six protections are cheap at once under the prices of parallel hardware and gradient descent; this is an interpretation, not a measured optimum. Two mechanisms, measured at small scale, help explain why its neighbourhood is flat: trained networks compensate local deficits through spare capacity, and, in ten scored tests, making a protection explicit did not beat a block that already supplies it. The anchor, the residual or input path that protects against collapse to consensus, is the one protection whose loss compensation provably cannot repair: under strict mixing, where repeated averaging contracts token differences toward zero, no extra capacity of bounded gain (bounded sensitivity) brings back what is lost without it, and in small-model ablations nothing else in the block made up for it. This is a proved bound; a trained test that adds capacity is pending. Many changes adopted in the mixing layer and its block since 2017, among them pre-normalization, QK-norm, sinks and output gates, read as re-supplies of the same protections; the account is silent on others, such as changes to the MLP. The room that remains for the design to move is where a protection is patched (met only by a fix that works over a limited range, such as the trained length) or paid at a price that another design could avoid. It includes abstention and retrieval at long context, governed by a two-sided log-N law in the context length (with bounded scores, no fixed rule for abstaining keeps both as the context grows), and bounded memory, whose price for exact recall is a per-head capacity. It also includes decisions that sum over all competitors where reading the largest would do, and the writer of new features (in a transformer, the MLP and the output map), for which the collection has no theory yet of what a good writer computes. Along the way the collection establishes results that stand on their own: attention has an arrow that default statistics of a single operator cannot see; depth is a distribution over path lengths; converged adaptive averaging can amplify changes in its input and overturn correct predictions; and softmax obeys length laws that decisions on maxima escape while the competing scores stay below the decision's threshold. We state what is proved, what is measured, what is interpretation, and what is still pending. This is a working draft, not a final version. It is unpolished in places, incomplete in others, and keeps exploratory material a polished paper would leave out, because that material helps decide what comes next and shows the programme's big picture more fully. Please read it with that in mind: the work will be refined further, and later versions will appear under this record. It belongs to a collection released together on Zenodo: the entry paper The Transformer Abides, the monograph A Spectra",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "The Transformer Abides: What Attention Needs, and Why It Endures",
+      "url": "https://zenodo.org/records/23541767"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "1c6f708952c6d178a35efbd2",
+      "context_id": "2b05c2f95b0888f4caa9c1c8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "consensus",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.8333,
+      "source": "zenodo",
+      "source_context_sha256": "7b66a38f5920f3c3ac1a2dfa9f8d0f55ab993db2e9d7720e92730093ff01b419",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "The same upper central incisor in every panel, cut from the lip side to the palate side, with the gum, ligament and bone around it. The tooth and the tissues at its neck are drawn to published measurements; the break, the etched enamel, the key and the layers show what typically happens, not one patient's tooth. Sources The rebuild follows two principles from one textbook. The additive principle: in a direct restoration the etching and bonding are extended beyond the defect onto intact enamel, to blend and reinforce the restoration; its example is a small chipped edge restored without preparation: the tooth was etched, bonded and restored well beyond the fracture line under rubber dam. And natural guided stratification: a silicone index made from a wax-up or mock-up holds a palatal shell of enamel-like material, dentine-like increments are placed where the natural dentine was, and the last increment is the labial enamel. Magne and Belser 2022, Biomimetic Restorative Dentistry, volume 1, pages 319, 330 and 331. In 455 crown-fractured permanent incisors followed for a mean of 2.3 years and up to 17, the pulp survived in 99 per cent of teeth the injury had not also loosened or displaced, and in none of them did it die; when the tooth had also been loosened, pulp death in fractures through enamel and dentine, like this one, rose from 0 to 28 per cent. Robertson et al. 2000, International Journal of Paediatric Dentistry. https://doi.org/10.1046/j.1365-263x.2000.00191.x A 2024 German clinical guideline on direct composite restorations, agreed by strong consensus, recommends etching the enamel of every direct composite restoration with phosphoric acid, to improve the long-term quality of the enamel margin and prevent discoloration there. It finds both rubber dam and other isolation workable, with rubber dam possibly helping restorations last longer. These process recommendations are consensus-based. Sekundo et al. 2024, The Journal of Adhesive Dentistry, part 2. https://doi.org/10.3290/j.jad.b5749192 Acid on the enamel only, before a universal adhesive: in a randomised trial of 295 back-tooth fillings in 70 patients, fillings bonded this way showed significantly fewer defects at their edges after 24 months than those bonded with the adhesive alone. Barceleiro et al. 2023, Journal of Applied Oral Science. https://doi.org/10.1590/1678-7757-2022-0323 In fillings at the necks of teeth, a meta-analysis of 10 randomised trials found less staining and fewer adaptation defects at the edges when the enamel was etched selectively before a self-etch adhesive, and fewer fillings lost at three years. Szesz et al. 2016, Journal of Dentistry, systematic review and meta-analysis. https://doi.org/10.1016/j.jdent.2016.05.009 A Cochrane review of six randomised trials with 1,342 participants found low-certainty evidence that rubber dam may lower the failure rate of fillings compared with cotton rolls at six months, and very uncertain evidence at other times; all the trials were at high risk of bias, and the results came from fillings at the necks of teeth and in children's back teeth. Miao et al. 2021, Cochrane Database of Systematic Reviews. https://doi.org/10.1002/14651858.CD009858.pub3 A meta-analysis of 21 prospective clinical trials of front-tooth composites estimated that 90 per cent of Class IV restorations, which rebuild a broken corner or edge of a front tooth, last 10 years without being replaced; bulk fracture was the main reason for replacement, more often with microfilled composites. Twelve of the trials started before 1991. Heintze, Rousson and Hickel 2015, Dental Materials. https://doi.org/10.1016/j.dental.2015.01.015 A critical appraisal of clinical and laboratory publications: a bevel on the enamel margin was traditionally placed for retention and a gradual colour transition, but modern adhesives, composites and technique make adequate front-tooth composites possible without one, with a more conservative preparation, a smaller restored",
+      "tags": [
+        "dental diagram",
+        "dentistry",
+        "conservative dentistry",
+        "composite bonding",
+        "dental trauma",
+        "adhesive dentistry"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Bonding a Chipped Front Tooth: Composite Layers, Step by Step",
+      "url": "https://zenodo.org/records/23648869"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "c4dfdd4564df4d43bdcbdf64",
+      "context_id": "9b970e567fe44aa3bf03669c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "arxiv",
+      "source_context_sha256": "42216f1830133de4a16b9bd5af33f6fc42ea012f76dd8690da82198f48ffc739",
+      "source_published": "2026-10-22T17:24:23Z",
+      "source_updated": "2026-10-22T17:24:23Z",
+      "summary": "Large language model (LLM)-based multi-agent systems (MAS) rely on role-specific prompts and execution models to solve complex tasks collaboratively. However, prompt optimization typically keeps model assignments fixed, leaving differences in role requirements and their associated inference costs outside the search. We present UniMASO, a Unified framework for heterogeneous Multi-Agent System Optimization through the joint adaptation of prompts and model assignments. UniMASO evaluates candidate updates through local, downstream, and global feedback, using cost-aware Pareto search to retain useful quality-cost trade-offs. Topology-aware co-evolution then coordinates these updates according to agent roles and dependencies. Cross-level trajectory memory further supplies historical successes and failures to guide subsequent optimization. Experiments on five benchmarks and five execution topologies show that UniMASO achieves competitive task performance at substantially lower deployment cost than the strongest homogeneous configurations. Under centralized execution, it improves the average score from 69.79 to 70.40 while reducing token-weighted deployment cost by 85.2% relative to DeepSeek-V4-Pro with MASPO. These results support joint prompt-model adaptation as an effective approach to efficient multi-agent collaboration. The code is available at https://github.com/Achilles008/UniMASO_main.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Not Every Agent Needs the Strongest Model: Unified Prompt-Model Optimization for Heterogeneous LLM-based Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.31743v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "b18af4439475cddc0e4fb876",
+      "context_id": "98084d9ffcc6a95874350559",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "arxiv",
+      "source_context_sha256": "cf62da5f36a462247001482342679dd87021e4e47efca2f3b9adad6bf4560a6a",
+      "source_published": "2026-10-23T16:21:56Z",
+      "source_updated": "2026-10-23T16:21:56Z",
+      "summary": "Enterprises are deploying agentic AI across the software development lifecycle, and they need the behavioral logic of the systems they act on, not stakeholder documentation. A seven-agent reverse-engineering pipeline recovered this logic, processing 241 repositories across 18 services into thousands of artifacts describing scope, journeys, rules and acceptance criteria. Recovery does not confer usability. Entities like offer, eligibility, and activation recur across services under a shared vocabulary, related in name but operationally distinct, so one end-to-end journey implicates over a thousand near-identical rules that must not be conflated. Flat vector retrieval fails, returning an identical rule from the wrong service at high similarity with no signal of error. Content-level ontology, the traditional remedy, did not exist, and relating every occurrence of recurring entities would have cost more than the engagement and not survived a release cycle. We place the ontology at the artifact level. In this machine-generated corpus, each artifact retains its producer, component, service, domain and type, provenance that disambiguates before content is read. We present a knowledge layer that organizes before retrieving: a self-describing catalog, a sparse metadata registry, and a navigation hypergraph defined over artifacts rather than extracted entities. Queries resolve to artifact identifiers that constrain vector search, so the competing rule from another service is absent rather than outranked, making disambiguation structural, not statistical. Built in under a week and admitting new services by convention, the layer serves SDLC agents, developers, quality engineers and analysts. It supported root-cause analysis and resolution of 100+ production defects with developer verification and attributed 35 release regression failures to specific rules and services.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Reimagining Enterprise RAG for Multi-Agent Systems: A Knowledge Layer That Organizes Before It Retrieves",
+      "url": "https://arxiv.org/abs/2610.32851v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "1dc37cd54aaf633fb94be89d",
+      "context_id": "6b25872e23ec2f306744c364",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "arxiv",
+      "source_context_sha256": "9f7b249545c5fa3bd7217267051ab708517f8f25dbf0522aef403530c8617eae",
+      "source_published": "2026-10-23T11:02:02Z",
+      "source_updated": "2026-10-23T11:02:02Z",
+      "summary": "Photonic crystal fibers (PCFs) underpin critical applications in telecommunications, sensing, and high-power laser delivery, yet their design remains a manual, expert-intensive process that couples geometric intuition with deep waveguide physics. Vision-language models (VLMs) offer a promising path toward automating PCF design, but can they truly reason about photonic physics from microscopy images, or do they merely recognize visual patterns? We introduce PCFBench, the first comprehensive benchmark for evaluating VLMs on the perception, reasoning, and decision steps of the photonic inverse-design loop. PCFBench spans 26 tasks organized into six categories of increasing cognitive demand (Geometry Perception, Physics Understanding, Text Generation, Multi-modal Reasoning, Inverse-Design Decision, and Code Generation), built from over 220K FDTD simulation samples across 18 structurally diverse fiber families. We evaluate both individual VLMs on isolated tasks and multi-agent systems (MAS) on the full sequential pipeline from perception to design. Our results reveal a striking perception-design gap: current models can identify fiber geometry with moderate success, yet consistently fail to translate that visual understanding into physics-aware design actions. Moreover, cascading agents through the pipeline exposes significant error propagation, where upstream perception mistakes compound into downstream design failures. These findings suggest that neither model scaling nor naive agent chaining suffices, and that closing the loop demands explicit physical grounding. PCFBench provides the community with a rigorous, multi-dimensional testbed to measure progress toward AI-assisted photonic engineering. The project is available at https://pcfbench.github.io/.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "PCFBench: How Far Can Large Vision-Language Models Go in Physics-aware Photonic Inverse Design?",
+      "url": "https://arxiv.org/abs/2610.32485v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "7072c16c9cab71f7a39f350d",
+      "context_id": "3cb0ba385375ad07d1e601a8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation",
+        "non-identifiability"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.5,
+      "source": "zenodo",
+      "source_context_sha256": "2c28dcd18640cdf4cf15afb0eac5c3645e7ee4db5230e09a24453c35326c6159",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "We conduct a version-pinned, reproducible forensic audit of the public Einstein Elevator data package (Zenodo: 10.5281/zenodo.15167723) to determine whether it supports validation of quantum sensor certificates. Through an exhaustive cross-file sliding-window correlation search over 44,207,922 comparisons and exact six-decimal rounding checks, we find that all 31 exported sensor channels have a unique best match within the enumerated raw traces under the stated protocol. Residual numerical differences are highly consistent with text-based absolute quantization; the correlation-loss approximation 1 - r &asymp; &delta;&sup2; / (24&sigma;x&sup2;) is diagnostic for this dataset, not a universal proof. We inspect the MATLAB-derived 318-point population series and reconcile it with a 2022 workbook entry only at the level of counts. An archive-wide search of 181 file objects and 1,654 MATLAB metadata fields finds no documented join key linking the 2022 run-indexed population series to the 2017 timestamped traces under the enumerated search protocol. Using Fr&eacute;chet-Hoeffding bounds and a Charnes-Cooper linearization, we establish that the public archive does not supply the joint observations needed to identify the EKF false-safe risk without additional coupling assumptions; the formal program is illustrative and is not populated with empirical failure/acceptance coefficients because the required linked observations are absent. We frame this as a bounded data-contract limitation for downstream statistical validation, not as a failure of the original experiment.",
+      "tags": [
+        "Atom Interferometry",
+        "Data Provenance",
+        "Partial Identification",
+        "Reproducibility",
+        "Sensor Synchronization",
+        "Q-SCOPE"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "A Reproducible Provenance Audit of the Public Einstein Elevator Data Package: Trace Correspondence, Metadata Linkage, and the Non-Identifiability of Sensor-Certificate Risk from the Public Archive",
+      "url": "https://zenodo.org/records/23655382"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "b0e0f062c2ff95d70297f6ba",
+      "context_id": "3b336803ba586daeb2c89ee1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation",
+        "non-identifiability"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.5,
+      "source": "zenodo",
+      "source_context_sha256": "815525c6b16f2ca27e3070896d94c13b1e2c5fb5355ccdbacb9a6435a1730bfc",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "We conduct a version-pinned, reproducible forensic audit of the public Einstein Elevator data package (Zenodo: 10.5281/zenodo.15167723) to determine whether it supports validation of quantum sensor certificates. Through an exhaustive cross-file sliding-window correlation search over 44,207,922 comparisons and exact six-decimal rounding checks, we find that all 31 exported sensor channels have a unique best match within the enumerated raw traces under the stated protocol. Residual numerical differences are highly consistent with text-based absolute quantization; the correlation-loss approximation 1 - r &asymp; &delta;&sup2; / (24&sigma;x&sup2;) is diagnostic for this dataset, not a universal proof. We inspect the MATLAB-derived 318-point population series and reconcile it with a 2022 workbook entry only at the level of counts. An archive-wide search of 181 file objects and 1,654 MATLAB metadata fields finds no documented join key linking the 2022 run-indexed population series to the 2017 timestamped traces under the enumerated search protocol. Using Fr&eacute;chet-Hoeffding bounds and a Charnes-Cooper linearization, we establish that the public archive does not supply the joint observations needed to identify the EKF false-safe risk without additional coupling assumptions; the formal program is illustrative and is not populated with empirical failure/acceptance coefficients because the required linked observations are absent. We frame this as a bounded data-contract limitation for downstream statistical validation, not as a failure of the original experiment.",
+      "tags": [
+        "Atom Interferometry",
+        "Data Provenance",
+        "Partial Identification",
+        "Reproducibility",
+        "Sensor Synchronization",
+        "Q-SCOPE"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "A Reproducible Provenance Audit of the Public Einstein Elevator Data Package: Trace Correspondence, Metadata Linkage, and the Non-Identifiability of Sensor-Certificate Risk from the Public Archive",
+      "url": "https://zenodo.org/records/23647325"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "628f6d626ff824e7005da6d1",
+      "context_id": "0c5aff0e8fabca16fbde1475",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.9583,
+      "source": "zenodo",
+      "source_context_sha256": "a5cc6410e4fb46f4fb28731a118335c78682ebd983e848daf33b41f131402744",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "A sequence-mixing layer that is iterated through depth and rebuilt from its own input faces six failure modes. Each is met by a protection&mdash;anchoring, alignment, gain control, abstention, a routing budget, or an arrow&mdash;with an operator-level statement proved within a declared class, a signature when it is removed, and a price. We organize attention designs as a lattice of kernel, dynamical, and block constraints in which relaxing a constraint buys a capability and obliges a re-supply. We read softmax attention inside a pre-normalized residual block as the lattice point where every protection is either supplied or cheaply re-supplied under parallel-hardware and optimization pricing: of the deficits tested, all but the anchor's were compensated by capacity elsewhere in the deeper models, and explicit protection knobs did not beat the block, both measured at small scale, while corner structure, by which designs would jump rather than drift, remains a hypothesis. The lattice reads the selected adopted changes to the mixing layer, its normalization and its residual path over the last decade as cheap re-supplies of protections, and it locates the room for change. The clearest room is abstention, governed by a two-sided log-N law: with a bounded logit scale, no null keeps both abstention and single-key retrieval as context grows, and tempering the entire logit budget with log N keeps both when its margins are strictly separated. A controlled pilot follows the law, while a prespecified test of its sink prediction on an open production model was undecided by its prespecified rule; descriptively its slopes leaned toward compensation through position, in which position encoding holds the background's growth down. In a prespecified trained harness of 125M-parameter language models, tempering every logit by log N / log N_train on top of YaRN, which already carries a log-length temperature, did not keep abstention and raised long-context perplexity. In these language models every rule that gives attention a null removed the first-token sink and cut massive activations by 67% to 82%, as earlier reports for gates and attention biases found, and, sigmoid aside, lowered perplexity slightly at the training length; the comparison registered for two of these rules held in every seed, while the same comparison failed in the harness's vision transformers. We close with falsifiable predictions for future architectures, most of them not yet tested. This is a working draft, not a final version. It is unpolished in places, incomplete in others, and keeps exploratory material a polished paper would leave out, because that material helps decide what comes next and shows the programme's big picture more fully. Please read it with that in mind: the work will be refined further, and later versions will appear under this record. It belongs to a collection released together on Zenodo: the entry paper The Transformer Abides, the monograph A Spectral Theory of Token Communication, and the papers Attention Sinks at Long Context, The Transformer as a Constrained Equilibrium and Beyond Transformers. This version is the text; the records, the code and the formal proofs follow in a later version.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "The Transformer as a Constrained Equilibrium: A Lattice of Protections for Adaptive Sequence Mixing, and Where the Room Is",
+      "url": "https://zenodo.org/records/23542051"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "16b74ebcdc83466d76f35f31",
+      "context_id": "e56aefc74ecf3650775c0f98",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "zenodo",
+      "source_context_sha256": "e1a1bc55ba53329f88960e77c7dfe080815a065e18771156c74e0f80b86937ee",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Bulk transcriptomic differences between groups reflect both altered cell composition and altered expression within cells. Methods such as csSAM, TOAST and CIBERSORTx separate the two, but all require additional information: measured per-sample proportions, anchor genes, or an external reference. We examine what can be established under a pure-bulk paired design in which none of this information is available. We formalise the decomposition obs = comp + resid and test three propositions: whether resid can be interpreted as within-cell regulation; how closely comp tracks obs, and what that agreement depends on; and whether the number of cell compartments is a well-defined model-complexity variable. Data comprise four abdominal aortic aneurysm cohorts, one lung cohort and the HLCA normal lung atlas (584,944 cells &times; 27,402 genes). Deconvolution uses a self-implemented Lawson&ndash;Hanson non-negative least squares validated on three problems with known answers. comp + resid = obs is an algebraic identity (same-source R&sup2; = 1.000000000000000). resid cannot be interpreted as within-cell regulation: apart from a degenerate case, the control cell-type-specific profile is not point-identifiable, and swapping reference profiles in a zero-regulation construction drives resid to &minus;5.4654. Pearson r between comp and obs is 0.7335 (0.7001&ndash;0.8041) under platform-matched pseudo-bulk conditions, 0.2379&ndash;0.3791 across four aorta cohorts, and 0.1675&ndash;0.3019 for lung UIP/IPF; regression slopes are 0.078&ndash;0.801. A fully crossed 3 &times; 3 design with four aggregation weights shows that with six reference compartments r ranges from 0.2674 to 0.8417 (SD 0.239) and is not identifiable. comp is an approximate index of compositional change; resid carries no inferable information about within-cell regulation; and the number of compartments is not a well-defined model-complexity variable. --- 群体间 bulk 转录组差异同时反映细胞组成的改变与细胞内表达的改变。csSAM、TOAST、CIBERSORTx 等方法可将两者分开,但都需要额外信息:测得的逐样本比例、锚定基因,或外部参考。本文考察在上述信息全部不可得的纯 bulk 配对设计下,这一归因能做到什么程度、边界在哪里。我们形式化分解 obs = comp + resid,并检验三个命题:resid 能否解释为细胞内调控;comp 与 obs 的一致性能达到多少、依赖什么;以及「细胞区室数」是否为良定义的模型复杂度变量。数据包括四个腹主动脉瘤队列、一个肺队列,以及 HLCA 正常肺图谱(584,944 细胞 &times; 27,402 基因)。解卷积用自实现的 Lawson&ndash;Hanson 非负最小二乘,在三个已知答案问题上验证。comp + resid = obs 是代数恒等式(同源 R&sup2; = 1.000000000000000)。resid 不能解释为细胞内调控:除退化情形外,对照组细胞类型特异谱不可点识别;在零调控构造中对调参考谱可使 resid 达到 &minus;5.4654。comp 与 obs 的 Pearson r:平台匹配伪 bulk 为 0.7335(0.7001&ndash;0.8041);主动脉四队列 0.2379&ndash;0.3791;肺 UIP/IPF 0.1675&ndash;0.3019。回归斜率 0.078&ndash;0.801。完全交叉的 3 &times; 3 设计配合四种聚合权重显示:参考区室数为 6 时 r 在 0.2674&ndash;0.8417 间摆动(SD 0.239),不可识别。comp 可作为组成变化的近似指标;resid 不承载可推断的细胞内调控信息;区室数不是良定义的模型复杂度变量。 --- This record contains the English and the Chinese version of the manuscript, both as PDF and as editable source, together with the companion manuscript on six failure modes (files 03 and 04). This is a preprint. It has not been peer reviewed.",
+      "tags": [
+        "deconvolution",
+        "cell composition",
+        "identifiability",
+        "bulk transcriptomics",
+        "methodology",
+        "composition attribution",
+        "abdominal aortic aneurysm",
+        "reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "The identifiability boundary of composition attribution in bulk transcriptomics: a methodological study",
+      "url": "https://zenodo.org/records/23655968"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "b2e36d6ca04b2bb513e4f51b",
+      "context_id": "cc9ab09c33d3e4e6025394a3",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "4438d4b25b9b5aebde6a71ff12b53ede75d75e16b7de9faf2305ca96807ec6d7",
+      "source_published": "2026-10-23T15:40:18Z",
+      "source_updated": "2026-10-23T15:40:18Z",
+      "summary": "Real-world 3D reconstruction pipelines often rely on multi-view images degraded by lossy compression. While compression artifacts have been extensively studied in single-image or video restoration, their impact on multi-view geometry remains largely overlooked. In this work, we identify compression-induced cross-view geometric inconsistency as a critical failure mode, where view-dependent artifacts disrupt feature matching, dense correspondence, camera parameter estimation, and downstream 3D reconstruction tasks such as novel view synthesis. To address this problem, we propose CompMVR, a compression-aware multi-view diffusion restoration framework that jointly refines compressed views while preserving cross-view consistency, and construct compressed datasets for systematic evaluation. Unlike conventional restoration methods that optimize each image independently for 2D perceptual quality, CompMVR leverages learned compression priors and cross-view correspondence to recover visual details while improving geometric reliability across views. Experiments across diverse datasets, codecs, and compression levels demonstrate gains in restoration quality and downstream 3D tasks, including novel-view synthesis, camera pose estimation, and view matching. These results establish compressed multi-view restoration as a distinct problem and highlight its importance for 3D reconstruction under lossy compression. Code and data for this paper are available at https://mchaewon.github.io/CompMVR-project-page/.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "CompMVR: Compression-Aware Multi-View Restoration Using Diffusion Models for Geometrically Consistent 3D Reconstruction",
+      "url": "https://arxiv.org/abs/2610.32800v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "69727d8908bcf7fa032e7f1e",
+      "context_id": "7030480839191a0341b775b1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "2627dc0f5cefb043eb432aa2cba2519f113277e5ad9716ae1955c266ce89734d",
+      "source_published": "2026-10-23T16:09:57Z",
+      "source_updated": "2026-10-23T16:09:57Z",
+      "summary": "Modern vision encoders are widely used as semantic representations, but the relationship between embedding similarity and human-visible semantics can become unclear far from the natural-image manifold. We probe this regime in a black-box setting by applying sparse pixel edits to blank canvases with a simple pixel-level hill-climbing procedure. Across ImageNet and Flickr30k, we evaluate whether these edited blank canvases can retrieve chosen targets in multimodal contrastive encoders and self-supervised visual encoders. On OpenCLIP, inputs optimized toward class prompts achieve strong top-1 and top-5 targeted retrieval performance; on DINOv3, inputs optimized toward class prototypes achieve high target alignment and near-top prototype ranks. These results show that sparse edits on otherwise blank, visually non-semantic inputs can enter target semantic basins in both language-aligned and self-supervised visual representation spaces. Our findings identify a shared off-manifold failure mode of modern vision encoders and suggest sparse blank-canvas optimization as a simple probe of representation geometry.",
+      "tags": [
+        "cs.CV",
+        "cs.CL",
+        "cs.HC"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "SPOOK: Sparse Pixel Optimization for Off-Manifold Knowledge in Vision Encoders",
+      "url": "https://arxiv.org/abs/2610.32835v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "366649fd1b15a41866fb0f2a",
+      "context_id": "b8d9ac99a07392cfe094b183",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "confound",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.625,
+      "source": "arxiv",
+      "source_context_sha256": "71e815809a88f29eee92de998bf50025f3e6a382bd6564bb83366652116b853a",
+      "source_published": "2026-10-23T13:32:46Z",
+      "source_updated": "2026-10-23T13:32:46Z",
+      "summary": "Supervised pairwise graph representations convert pairwise predictive relations into sample-specific graphs, but graph-level accuracy does not by itself show that higher-order topology carries the signal. In a controlled Transformer error-detection task, supervised pairwise graphs outperform attention-as-adjacency (ROC-AUC $0.839$ versus $0.559$; the comparable no-confidence pair is $0.687$ versus $0.559$), but their apparent advantage over model confidence disappears after controlling for sequence length, which is almost perfectly recoverable from the pooled hidden state ($R^2=0.9995$). On published HCP Emotion ensemble graphs, signed node aggregation already acts as an ensemble of supervised pairwise predictions. Edge magnitude alone is near chance; topology-aware augmentations change ROC-AUC by at most $0.004$, with only sign-separated degree showing small positive changes across all tested graph sizes, while a validation-tuned three-layer GCN provides no measurable improvement over the signed node-summary baseline. A Fisher post-hoc corrector satisfies its distribution-agnostic guarantees across the evaluated feature representations and remains stable under reduced labelled budgets; in a near-error-free fMRI calibration regime the bound correctly becomes statistically uninformative. A separate cross-attention analysis identifies a redundant reversal circuit and downstream EOS-timing and copy failures. Higher-order topology should therefore be credited only after local supervised evidence and recoverable nuisance variables have been excluded.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Interpreting Supervised Pairwise Graph Representations: Local Evidence, Confounding, and Provable Post-hoc Correction",
+      "url": "https://arxiv.org/abs/2610.32611v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "2e0cfbb021ee2fd850f3fc36",
+      "context_id": "93454182c30fb0adf7abe04a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "arxiv",
+      "source_context_sha256": "51c3c0ed1a54e7724b145f2ba9dc4eaa7f54a64da6a154b3f60d7f1c030b2d24",
+      "source_published": "2026-10-23T12:29:53Z",
+      "source_updated": "2026-10-23T12:29:53Z",
+      "summary": "Existing evaluation protocols for unit tests rely on aggregate metrics such as branch coverage and mutation score. These metrics quantify the extent to which a test suite exercises program behavior, but do not identify the behavioral obligations it systematically leaves unchecked. We propose BlindSpotEval, an obligation-based evaluation framework aligned with the Arrange-Act-Assert pattern. The framework comprises three metrics, Boundary-Value Adequacy, Control-Flow Adequacy, and Oracle Strength, complemented by an assessment of execution reliability. We also introduce ObligBench, a complexity-stratified Java benchmark comprising 895 complex and 700 low-complexity functions with source-side obligation annotations. Evaluating 14,320 tests from four LLMs under four prompting strategies reveals systematic blind spots. Incorrect assertions account for 15.6% of test failures, illustrating that coverage alone does not establish oracle correctness. Among executable tests, coverage of null, negative, and empty arguments reaches only 34.8%, 23.8%, and 38.8%, compared with average coverage above 93% for booleans. Catch blocks and default groups have Control-Flow Adequacy scores of only 0.100 and 0.312. Across both dimensions, LLM-generated tests exhibit the happy-path bias observed in human-written tests, concentrating on normal inputs and expected flows while leaving unusual values and exceptional paths unchecked. Oracle strength is high on average but uneven, with weaker assertions for object return property values and exceptions. These blind spots also occur in low-complexity functions, suggesting that code complexity alone does not explain them. BlindSpotEval provides construct-level adequacy profiles that identify under-tested obligation types and can guide targeted improvements beyond those supported by aggregate scores alone.",
+      "tags": [
+        "cs.SE"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Beyond Coverage and Mutation: A Blind-Spot Analysis of LLM-Generated Unit Tests",
+      "url": "https://arxiv.org/abs/2610.32548v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "0d553e50ab4404b4ed76a8b3",
+      "context_id": "4fa921bb3436fbdc416abc54",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "negative result"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.625,
+      "source": "arxiv",
+      "source_context_sha256": "6264070b5d172b0d21f8b6185995cc3ca8bc9fbf6b0d02c304f43d13d5cff4e1",
+      "source_published": "2026-09-12T13:12:02Z",
+      "source_updated": "2026-10-22T22:33:55Z",
+      "summary": "How many members must a committee have before its pairwise majorities can express any collective preference? With enough voters every pattern of pairwise majorities, or tournament, can arise, but a committee of $k$ voters produces only some; for odd $k$, let $N(k)$ be the least number of alternatives on which some tournament arises from no $k$ voters. Only $N(3) = 8$ is known; for five voters our companion paper gave $12 \\le N(5) \\le 38$ and the first explicit example of moderate size, on 43 vertices. We show $13 \\le N(5) \\le 22$. The upper bound comes from nine tournaments on 22 vertices that five voters cannot produce: eight one-vertex deletions of doubly regular tournaments on 23 vertices, including every deletion of one of them, and one arc reversal. The Paley tournament on 23 vertices, which Bachmeier et al. (2019) left open after six weeks of SAT solving, is beyond five voters, and so is every other doubly regular tournament on 23 vertices. The lower bound comes from an analysis of all tournaments on 12 vertices. Both doubly regular tournaments on 19 vertices, the Paley tournament and one other, arise from five voters, but not with unit margin, that is, not with every majority carried by three votes to two. The method is a search that places one alternative at a time and exploits the tournament's symmetries; four of the negative results are certified by machine-checkable proofs, and all results are reproducible from a public repository.",
+      "tags": [
+        "cs.DM"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Tournaments not inducible by five voters",
+      "url": "https://arxiv.org/abs/2609.13924v2"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "4b0807a4bdbabd575f4e497e",
+      "context_id": "7ae54c48df1a51b0c5aa329f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "13c6f4aebcc8895ab0ba658d7b9ec689e2b191c4a2174c80e7b73c205fe42b19",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "This artifact reproduces the evaluation of DrNLA, a method that rewrites&nbsp;non-linear integer arithmetic (NLA) expressions in program branch/loop guards&nbsp;into equivalent linear integer arithmetic (LIA) via context-dependent dual&nbsp;rewriting, enabling off-the-shelf LIA-based CTL verifiers (T2, FuncTion) to&nbsp;verify branching-time properties of NLA programs. Contents: the DrNLA implementation (src/); all benchmark suites (benchmarks/:&nbsp;ctl-svcomp, ctl-pldi13small, custom, real-world, and the 320-instance&nbsp;ctl-diverse suite); the CIL source instrumenter (deps/dyn_instr/, prebuilt&nbsp;binary + source); the reproduction drivers, pinned-toolchain manifest, and&nbsp;reference results (reproduce/); and the context-experiment inputs. Reproduced tables: Tab. 1 (NLA-&gt;LIA rewrite results), Tab. 2 (context&nbsp;necessity / reach-ctx), and Tab. 3/4 (T2 and FuncTion enabled by DrNLA). Usage: unzip and follow REPRODUCE.md (the single entry point); exact pinned&nbsp;toolchain is in reproduce/MANIFEST.md. The external verifiers &mdash; DIG (commit&nbsp;a6a4d04), Ultimate Automizer 0.2.2, T2 (10f1373), and FuncTion (bdeeae1) &mdash; are&nbsp;obtained and built per deps/README.md; DIG must be a6a4d04 (newer DIG changes&nbsp;the invariant-generator flags). All reported numbers were produced on a single&nbsp;Ubuntu 22.04 workstation with a 900 s per-benchmark timeout.",
+      "tags": [
+        "Dynamic Analysis; Program Simplification; CTL Verification; Non-Linear Arithmetic; Counterexample-Gu"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "DrNLA: Context-dependent linearization for CTL verification of non-linear arithmetic programs (Reproduction Artifact)",
+      "url": "https://zenodo.org/records/23650589"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "bd654301dd1871253869f263",
+      "context_id": "7a3ed6c01bb48718116cd2d5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "eda0d5588c8f1ff135e8be4411ee735ec908482fcd2f92f5389be9ca27908272",
+      "source_published": "2026-10-23T17:57:09Z",
+      "source_updated": "2026-10-23T17:57:09Z",
+      "summary": "Stratification can reduce the estimator variance in Monte Carlo simulations by partitioning the sample space according to a low-dimensional factor and sampling separately within the resulting strata, making it well suited to the valuation of path-dependent claims in high-dimensional financial models. Its performance, however, depends critically on the choice of the stratification factor, and effective low-dimensional factors are generally difficult to identify in complex continuous-time models. Neural networks provide a flexible approximation class for this purpose and have proved useful in related variance-reduction problems in quantitative finance. In this paper, we study the construction of neural stratification factors for derivative pricing under proportional allocation in continuous-time models. Since the numerical construction of a stratification factor typically involves approximation, we establish continuity results for the associated conditional expectations and, more generally, conditional distributions, and provide several counterexamples showing the limits of this continuity theory. Combined with density results for neural networks, our findings yield a universal approximation theorem for admissible stratification factors. We conclude with numerical experiments involving a constant-maturity-swap range accrual in a two-factor Gaussian short-rate model and a worst-of autocallable in a Wishart stochastic covariance model, where the learned factors outperform all considered benchmarks.",
+      "tags": [
+        "q-fin.CP",
+        "math.PR",
+        "q-fin.MF"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "On the continuity of conditional distributions and stratification for derivative pricing",
+      "url": "https://arxiv.org/abs/2610.32970v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "07a45022c620095c4523334c",
+      "context_id": "02f291bd2b50b4bb7df59f5d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "9bbe88936253f82e0b8e87ea79315e6206feb43446f2914f51720110352db813",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Independent reconstruction of Appendix A's prescribed finite calculation over F7 in OpenAI's Hyperbolicity Cones Without Semidefinite Lifts. At the printed point and tangent, the seed has rank 20 and its L restriction determinant 6. All ten weight blocks give ranks (G1,G2,D,border)=(136,84,302,623). All 24 displayed determinant values, 21 corner entries, six direct bordered minors and two signed-pivot examples agree. The primary implementation uses sorted monomial-index tuples and standard-library modular elimination. A separately tasked AI reviewer independently used exponent vectors and SymPy DomainMatrix over GF(7). All 42 canonical matrix fingerprints agree. The implementations share mathematical formulas and certificate JSON for expected minor/basis data; the reviewer independently transcribed the weights, point, pivots and tangent. Twenty-eight tests pass in each Python mode, with ten deliberate rejection runs. No discrepancy was found in this finite ingredient. This is finite computational verification and scoped AI review, not a kernel proof or human peer review. The characteristic-zero lifting, simultaneous real-form/genericity argument, real PSD deformation and final nonliftability theorem remain outside scope. A raw integer principal minor has determinant -1, illustrating why the printed point cannot simply be called an explicit real PSD witness; this is not a source counterexample. No global novelty or complete theorem-verification claim is made. All 28 pinned public packet files are unchanged in this archive. Source commit: 1581d4cbdd69a0faf34b2089614fe2a814316a6a. Contribution commit: 565237779f37c244b633546974444d4cee3eaeaf. First documented public disclosure: 2026-10-25T18:46:24Z in PR #42. Upstream review is pending at archival publication; submission and DOI do not establish acceptance or human peer review. Alexander Richard Towell, ORCID 0000-0001-6443-9897, with substantial OpenAI Codex assistance. OpenAI supplied the source construction and certificate data. Pico's original whole-family classification and contribution process are credited; the overall not-finite classification is retained. Classical methods and dependency authors retain credit. A DOI supplies a persistent citation and archive, not certification of correctness, novelty, human review or legal priority.",
+      "tags": [
+        "finite fields",
+        "Hankel matrices",
+        "hyperbolicity cones",
+        "exact arithmetic",
+        "independent verification",
+        "reproducible mathematics"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Independent finite-field verification of a Hankel seed certificate for hyperbolicity cones",
+      "url": "https://zenodo.org/records/23648332"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "0644d33ab81a43d510865396",
+      "context_id": "a6ccca63bef1bbf8ead7844e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "zenodo",
+      "source_context_sha256": "8ec05cc9235474ad5996584499e6118c42565f72c986800cc75943594b2833ef",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "aiprov records who, a person or an AI model, did what to an artefact and who checked it, in a plain Turtle file as a profile of W3C PROV-O. 0.2.0 is the first release archived on Zenodo, together with 0.1.0 under one concept DOI. Since 0.1.0: Multi-agent runs (from 0.2.0-rc.1): aiprov:Orchestration with planned roles and agents, delegation through prov:actedOnBehalfOf and prov:wasInformedBy , and provlog merge for sharded logging, where each agent writes its own copy of the graph and the dispatcher unions them; validate and report know the plan. claim and source refuse the human-only steps ( human-confirmed , human-read , lit-read ) for any agent that is not a registered HumanAgent , as promote does. The check trusts the registration of agents (see AGENTS.md ). Identity and logo: docs/identity.md and assets/ , with the provenance record of the generated picture. Demo page: https://noheton.github.io/aiprov/ , built by running provlog on invented data; the build fails if a command behaves differently from what the page says. Docs: the install line pins @v0.2.0 ; schema/README.md names Build and Repair . Planned for 0.3.0: the open schema proposals and bug reports in the issue tracker. Install: pip install git+https://github.com/noheton/aiprov@v0.2.0",
+      "tags": [
+        "provenance",
+        "PROV-O",
+        "AI",
+        "FAIR",
+        "RDF"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "aiprov: domain-agnostic AI provenance over PROV-O",
+      "url": "https://zenodo.org/records/23651340"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "5aed8dc89042e6f72f91abde",
+      "context_id": "0b2982da8a2fcad4518f62a5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "zenodo",
+      "source_context_sha256": "1834e88c48ee4da1170b0fa34182a4fedb028f134330e6fef971080c55406a66",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Bounded Agentic Distribution Experiments (v0.7.0): A Reproducible Framework for Comparing Agentic Intervention Discovery with Non-Agentic Search This software implements the computational framework and pre-pilot experimental protocol associated with the research manuscript Evaluating the Incremental Value of Agentic Intervention Discovery over Non-Agentic Search in Multi-Actor Distribution Networks . The framework evaluates whether a generative AI agent can identify economically beneficial operational interventions beyond those discovered by budget-matched non-agentic search. Agentic and non-agentic methods operate within the same typed intervention space, access the same simulator information, and are subject to common evaluation budgets. Candidate interventions undergo deterministic verification of encoded structural constraints and, where applicable, stochastic qualification against economic, service, route, and actor-participation criteria. The reference environment represents a stylized print-media distribution network with 420 retailers, 18 baseline delivery vehicles, uncertain demand, allocation decisions, reverse logistics, route constraints, temporary fleet capacity, discontinuous staffing requirements, and sales-contingent remuneration. Its parameters combine industry-informed inputs, documented benchmarks, modeling assumptions, and calibration targets. The environment is intended for controlled computational evaluation rather than empirical representation of the Italian distribution industry. Experimental design Version 0.7.0 implements two frozen intervention-complexity regimes: Low-complexity regime (RL): allocation reweighting only, with a maximum intervention length of one action. Multi-domain coupled regime (RC): allocation, route transfer, temporary fleet, and forecasting interventions, with a maximum intervention length of three actions. Both regimes use a candidate-evaluation budget of 40 simulator calls. The primary comparison uses ten independent generative-agent realizations and ten independent simulated-annealing realizations per regime. The software separates proposal-mechanism randomness from simulation-scenario randomness and supports common random numbers for comparative evaluation. The statistical implementation includes regime-specific pilot sizing, independent within-method repetition resampling, shared scenario resampling, and a two-dimensional bootstrap for confirmatory inference. Final-test selection follows a frozen rule combining precision requirements from both regimes with the minimum-detectable-effect requirement for the multi-domain superiority hypothesis. Software contents The archive includes the Python simulator and experimental orchestration code, command-line interface, frozen configuration files, typed intervention specifications, agent prompt and structured-output schemas, statistical analysis procedures, automated tests, freeze manifest, calibration documentation, and four Jupyter notebooks covering protocol execution, pilot sizing, repeated experiments, and economic calibration. Validation and research status The implementation passes 31 automated software and protocol-consistency tests. These tests examine computational correctness, reproducibility, regime restrictions, seed handling, bootstrap procedures, and experimental locking. They do not establish empirical agent performance. This release corresponds to the frozen pre-pilot protocol BAD-420-v0.7-2026-09-11 . The final-test set remains locked until a valid pilot mechanically determines its size. No live API-based agent-performance experiment or confirmatory comparison is included in this release. Consequently, the software does not establish that agentic intervention discovery outperforms, matches, or underperforms non-agentic search. The purpose of this release is to make the computational model, methodological assumptions, experimental controls, and pre-result evaluation protocol available for independent inspection, repl",
+      "tags": [
+        "Agentic AI",
+        "Agent-Based Modeling",
+        "Multi-Agent Systems",
+        "Simulation Optimization",
+        "Supply Chain Management",
+        "Stochastic Simulation",
+        "Decision Support",
+        "Reverse Logistics"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Agentic_distribution_experiments_v0.7_pre_pilot_with_notebooks",
+      "url": "https://zenodo.org/records/23647549"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "2d06309bede8c81f9906f131",
+      "context_id": "012b6d17b76adcdc6ba0df8b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "null result"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "zenodo",
+      "source_context_sha256": "858d659db64c937780f89aa930689840218608814863b4bb3ffd8609d9e073a5",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "v3. For list of changes compared to v2 please see changelog.md in the accompanying zip bundle. ----------------- The $E_8\\times\\omega E_8$ programme and its companion $SO(3,3)$ BF construction assign a right-chiral origin to pre-gravitation. We distinguish that assignment from parity violation in the observable metric theory. Under the assumptions of a Lorentz-invariant massless spin-2 soft theorem, the leading gravitational coupling is to conserved total energy--momentum; this does not exclude additional mediators or higher-derivative parity-odd effects. Nonrelativistic spin averaging and interface matching provide more limited, separately stated constraints. In a minimally coupled first-order Dirac model the connection is sourced by the spin current, expressible through an axial bilinear, whose presence alone does not violate parity. The displayed broken-phase gravitational and electromagnetic propagation action is parity-even Einstein--Maxwell. We calculate its quadratic tensor evolution and obtain a conditional null result: a parity-symmetric state with parity-symmetric sources has equal helicity powers and vanishing ensemble gravitational $TB/EB$, including tensor-lensing-induced correlations. Explicit Gaussian state families and a sourced-spectrum formula show why the action alone does not select a unique nonzero tensor chirality. We incorporate the chiral-GW lensing mechanism of Xu and Zhang, enforce helicity-power positivity, and perform a convention-matched amplitude audit. Its large flat input cannot be imported into a conventional nearly scale-invariant primordial completion; peaked or late-generated alternatives require their own full transfer and likelihood analysis. The ACT--Planck rotation-template result remains relevant, but its conversion to $g_{\\vartheta\\gamma}\\Delta\\vartheta$ applies only to an identified axion--photon component. Spin-force, supernova-timing, and effective-operator bounds are retained with their interaction and astrophysical assumptions. No nonzero parity-odd gravitational coefficient or physical chiral tensor state has yet been derived from the parent programme. &nbsp;",
+      "tags": [
+        "Parity-violating gravitation",
+        "weak interaction",
+        "gravi-weak unification",
+        "E8 x E8 unification",
+        "generalised trace dynamics"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Does gravity violate parity? Source currents, screening theorems, and experimental tests of $SU(2)_R$ pre-gravitation",
+      "url": "https://zenodo.org/records/23655914"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "91d2831fdf7b720481ef87a3",
+      "context_id": "40fc6b69fb62bde4c73c55c9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.375,
+      "source": "zenodo",
+      "source_context_sha256": "72ee95dedfb06cd5051bf93f636ab2c710fb4c5ed24cea09b109fcfe1255619f",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "The Structural Internet: Applying the Ly-Algebra, TIT BIT, and TIT GIT Framework to the Future of Computation and Network Architecture Chloe Jane Tully Founder, Ly-Algebra Framework &amp; 5-Fold Symmetry Platform Independent Researcher, Tamworth, NSW, Australia ORCID: 0009-0007-5661-7332 Abstract This paper examines how the Ly-Algebra, the TIT BIT, and the TIT GIT can serve as architectural primitives for a post-binary computing and networking stack. The TIT BIT is a \\mathbb{Z}/5\\mathbb{Z}-graded node whose product is fixed by explicit structure constants and whose integrity is measured by the Quasi-Equivalence Index (QEI) derived from the graded square. TIT GIT versions structural coherence under hybrid post-quantum signatures. We outline concrete mechanisms by which these objects can replace or augment binary state machines, packet headers, content-addressable storage, and consensus layers. The result is a design space in which data, geometry, and cryptographic verification are no longer separate concerns. Keywords: Ly-Algebra; TIT BIT; TIT GIT; Quasi-Equivalence Index; structural networking; post-quantum Internet; graded computation.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "The Structural Internet: Applying the Ly-Algebra, TIT BIT, and TIT GIT Framework to the Future of Computation and Network Architecture",
+      "url": "https://zenodo.org/records/23641396"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "3052ba87c9c90ab761fd8971",
+      "context_id": "ffef6e0301e535b7accc1b9b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "fe248930e81a16aceedb6afaa78cf765d0607371273fe29b0281974b91fcd4ff",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Acute coronary syndrome (ACS) remains an important cause of morbidity and mortality, and simple laboratory markers that identify patients at increased risk may support early clinical risk stratification. Hyponatremia has been associated with neurohormonal activation and adverse outcomes in cardiovascular disease, but its prognostic relevance in patients with ACS requires evaluation in the clinical setting. This prospective single-centre study included 75 patients admitted with ACS to the intensive care unit of Government Royapettah Hospital, Chennai, between April and September 2016. Patients presenting within 12 hours of symptom onset with electrocardiographic evidence of ST-elevation myocardial infarction, non-ST-elevation myocardial infarction, or unstable angina were enrolled. Patients with previous coronary artery disease, arrhythmias, cardiomyopathy or heart failure, previous diuretic use, cirrhosis, hypothyroidism, renal disease, marked renal dysfunction, or refusal to participate were excluded. Serum sodium was measured at admission, 48 hours, and discharge, with sodium &lt;135 mmol/L defining hyponatremia. Patients were followed weekly for 30 days for morbidity and mortality. Nine patients (12.0%) were hyponatremic and 66 (88.0%) were normonatremic. Mean ejection fraction was lower in the hyponatremic group (46.67±7.70%) than in the normonatremic group (53.77±9.96%; p=0.0436), while serum sodium remained significantly lower at all three assessment points (p&lt;0.0001 for each comparison). Killip class also differed significantly between groups (p=0.0461). Adverse in-hospital outcome occurred in 44.44% of hyponatremic patients compared with 10.61% of normonatremic patients (p=0.0071). Thirty-day mortality was 66.67% and 6.06%, respectively (p&lt;0.0001). The reported logistic regression model identified admission, 48-hour, and discharge hyponatremia as significant predictors of mortality. In this cohort, hyponatremia was associated with lower ventricular systolic function, higher clinical severity, adverse in-hospital outcome, and substantially higher 30-day mortality. Serum sodium may therefore provide an accessible prognostic marker in ACS, although confirmation in larger multicentre cohorts is required.",
+      "tags": [
+        "acute coronary syndrome",
+        "hyponatremia",
+        "myocardial infarction",
+        "serum sodium",
+        "mortality",
+        "prognosis"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "PROGNOSTIC VALUE OF HYPONATREMIA IN PATIENTS WITH ACUTE CORONARY SYNDROME",
+      "url": "https://zenodo.org/records/23663318"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "32047b4c90021a03587575b2",
+      "context_id": "e88587d8a81d798288a86859",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "1323812f167cc1039513f3f90d1aaa9eb55d8873d88bc6ac7ed06857def0363d",
+      "source_published": "2026-10-23T08:59:16Z",
+      "source_updated": "2026-10-23T08:59:16Z",
+      "summary": "Continuous Piecewise-Affine Based (CPAB) transformations, introduced by Freifeld et al. (2015, 2017), are flows obtained by integrating continuous piecewise-affine (CPA) velocity fields. These expressive transformations have proven useful in applications including nonlinear temporal warping and trainable activation functions in 1D, as well as nonrigid spatial deformations in 2D and 3D. While computational costs were not an issue in 1D, they originally limited the practical expressiveness of CPAB transformations in higher dimensions, especially in 3D. Our recent work (Aflalo et al., 2026) removed this bottleneck, enabling efficient optimization with much finer tessellations and substantially greater expressiveness. There is, however, a mathematical subtlety that was overlooked in the original CPAB papers (Freifeld et al., 2015, 2017). CPAB transformations are always bi-Lipschitz homeomorphisms, implying that both the transformations and their inverses are differentiable almost everywhere. They are not, however, necessarily diffeomorphisms. This note remedies the omission by identifying sufficient regularity conditions under which a CPAB transformation is guaranteed to be a diffeomorphism. We explain how differentiability can fail and how the proposed conditions prevent this failure. In 1D and 2D, we show that these conditions can be easily enforced and, for commonly used tessellations, hold with probability one under standard sampling assumptions. We expect analogous behavior in 3D.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "A Regularity Condition Under Which a CPAB Transformation is a Diffeomorphism",
+      "url": "https://arxiv.org/abs/2610.32369v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "4645363faaadf7ab12f79e3b",
+      "context_id": "e5ba7650258a2f30ea5b0346",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "50896e68819f39b1f982f890dec157da4ba0d79e3268429cf178f74c29d82b9f",
+      "source_published": "2026-10-23T07:17:23Z",
+      "source_updated": "2026-10-23T07:17:23Z",
+      "summary": "3D MLLMs recognize objects via pattern matching, which fails when geometrically similar objects require functional reasoning to disambiguate (e.g., dresser vs. wardrobe). Our per-sample Geometric Confusion Score (GCS) exposes this failure: baseline accuracy is 33.7% on ModelNet40's most ambiguous 20% versus 84.0% on its least ambiguous 20%. We identify a function-as-annotation pattern, in which functional language decorates a known identity instead of supporting inference, and hypothesize that reversing this information flow should concentrate improvements on the most ambiguous samples. PFIR (Part-level Functional Inference for Recognition) reverses that flow. Built on PartNeXt part segmentation, its data pipeline produces 507K QA pairs with functional CoTs (geometry $\\to$ function $\\to$ identity), and its progressive curriculum culminates in dual-objective GRPO: strict functional reasoning and descriptive grounding for Objaverse's diverse distribution. The two RL objectives yield nearly orthogonal task vectors ($\\cos = 0.056$), enabling composition via Task Arithmetic. Under a strict dual OOD protocol (Objaverse $\\to$ ModelNet40; XYZRGB $\\to$ XYZ-only), PFIR raises zero-shot accuracy from 60.5% to 66.7%, with gains concentrated $2.6\\times$ more on geometrically ambiguous samples---supporting part-level functional reasoning as an effective route to more generalizable 3D recognition. Code: https://github.com/this233/pfir-3d.",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Beyond Pattern Matching in 3D MLLMs: Part-Level Functional Reasoning for Generalizable Recognition",
+      "url": "https://arxiv.org/abs/2610.32262v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "3f35eaee2e97eaa2af937b3a",
+      "context_id": "e57ea199281a53a3697a6d50",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "c6cc1e45c27c2dd347c468091fb6baa38d96bde4c5e4f712dd311acaaac32e61",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "This collection provides the code, data, and verification evidence supporting the study &ldquo;Payment Menu Design for Safe Identification and Recoverable Coverage Deployment&rdquo; by Jiaming Hu and Cuixia Miao. The study examines payment-menu design for providers with unknown local update rules, jointly requiring safe identification, recovery to ordinary operation, and preservation of the informed benchmarks. The collection contains two complementary archives: &bull; S3_EJOR_Code_Data_v1.0.zip: versioned source code, frozen synthetic inputs and modeled coverage instances derived from public SNDlib topologies, original result ledgers, environment specifications, a data dictionary, mappings between manuscript results and source data, and scripts for rebuilding tables and figures and running verification tests. &bull; S3_EJOR_Full_Evidence_v1.0.zip: retained certificates, verification receipts, execution logs, and failure and timeout records, stored with hash-based deduplication and mappings for restoring their original relative paths. Extract both archives into the same parent directory and follow the README in the Code_Data archive. The public-network instances are modeled coverage and payment scenarios, not observations of real network operations. The external PaGE comparison uses a source-mapped adaptation rather than a successfully built native Storm implementation. All eight extended ten-site tasks passed full V1 verification; seven additional independent audits passed and one timed out. Failed, timed-out, and gated runs are retained and distinguished from completed results. Corresponding author: Jiaming Hu (14438120260091@sdmu.edu.cn).",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Reproducibility materials for Payment Menu Design for Safe Identification and Recoverable Coverage Deployment",
+      "url": "https://zenodo.org/records/23659465"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "f98bb79ee27bfe6ab7ca2dc7",
+      "context_id": "dd4b646776dedd87833c8b26",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "4a512db809b690e7a80c98275738417a1f043597d9fac8faf36dfad3d955c4d7",
+      "source_published": "2026-10-23T08:09:28Z",
+      "source_updated": "2026-10-23T08:09:28Z",
+      "summary": "Why can a task-preserving rewrite turn a correct answer into a failure while a larger internal change leaves the answer intact? We develop a direction-sensitive, readout-relative account of semantic fragility: heterogeneous language changes can share geometric and readout relationships without sharing an input-independent failure direction. Clean decision reserve, representation transformation, and response alignment provide complementary descriptions of this process. An exact longitudinal-transverse decomposition identifies directional information discarded by scalar transmission. A compact reserve-and-transmission model predicts failures across held-out families and items in Qwen3-32B and Gemma 4 31B, with useful but parameterization-dependent transfer to ReClor. Matched interventions show that orientation carries causal information beyond scalar geometry. Among naturally failed rewrites, attention-component tests on disjoint original items and subsequent answer-order controls favor the natural paired direction over tested random and same-answer-letter donor directions. Yet failures rarely persist across option orders, and current-order corrections use recomputed clean references. Shared predictive regularity thus coexists with context-dependent directional effects. Numerical path integration reduces, but does not eliminate, finite-patch approximation error within a fixed context; a larger discrepancy from the natural rewrite effect remains. A complementary fixed-CoT cue study extends this account to influence unacknowledged in recorded reasoning: readout associations transfer across domains, although the positive-mean causal criterion fails and signed-effect prediction remains post hoc. Together, these results support shared relations among reserve, transformation, and response while distinguishing local causal sensitivity from a complete explanation of natural failure.",
+      "tags": [
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Many Perturbations, Shared Failure Dynamics: Tracing Direction-Sensitive Perturbation Influence in Language Models",
+      "url": "https://arxiv.org/abs/2610.32309v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "c0daca5405e6a46f47143efb",
+      "context_id": "c748632909e4fc350f224265",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "694737ba1c7dd06ad77eb8dddb65244100896dd17ff7747103064b826afa4274",
+      "source_published": "2026-10-23T14:54:36Z",
+      "source_updated": "2026-10-23T14:54:36Z",
+      "summary": "Unrecognized anomalies in critical infrastructure can rapidly cascade into catastrophic physical or operational failures. Current anomaly detection approaches often rely on direct access to the monitored system by utilizing onboard sensors, such as motor encoders, to detect anomalous states. However, legacy hardware often lacks these sensors, or strict security protocols may prohibit access altogether. We therefore present AWARE, a world model framework that is capable of anomaly detection using only external camera monitoring via system dynamics estimation and state prediction. Evaluated across 240 real-world robotic crane trajectories, including payload collisions and motor degradations, AWARE demonstrates a 26% improvement in anomaly classification over our strongest baseline under noisy, camera-only state estimation. Furthermore, the inferred dynamics parameter can be decoded to identify the source of faults, localizing the degrading motor with 88% accuracy.",
+      "tags": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Adaptive World-Models for Anomaly Recognition (AWARE): A Framework for Robot Dynamics Prediction and Introspection",
+      "url": "https://arxiv.org/abs/2610.32742v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "05c538d9b382f93bc6fab2fd",
+      "context_id": "4776954e42ba4a45cfa30d66",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "ee87ef1cf9684e1864a0b73384edbfe15416f40295e3e2739dfa87f009796ab3",
+      "source_published": "2026-10-23T06:27:37Z",
+      "source_updated": "2026-10-23T06:27:37Z",
+      "summary": "Websites and applications deploy CAPTCHAs and anti-automation mechanisms that use behavioral signals such as interaction trajectories and timing, not outcomes alone, to distinguish humans from automated agents. We call these protected GUI environments, where correctly solving a verification task is insufficient for end-to-end task completion. Agents must turn solver outputs into accepted interactions and adapt execution to runtime feedback under time constraints. We introduce SolveBind, a GUI-agent framework combining hierarchical solving with runtime supervision. A hierarchical solving tree decomposes verification into interdependent Perceive, Ground, Solve, Act, and Verify capabilities. A runtime supervisor grounds action commitments in tool-derived evidence, revises them as evidence arrives, and mediates execution under explicit recovery budgets. Across nine CAPTCHA task families and nine backbone models, SolveBind achieves the highest success rate on eight backbones, outperforming the strongest baseline by 13.3-34.5 percentage points. It achieves the highest success rate on all six AndroidWorld backbones. In a paired GPT-5.5 analysis, MobileAgent produces correct answers but fails dynamic verification on 13 of 90 tasks; SolveBind succeeds on seven of these tasks. With automatic submission, removing binding reduces success from 82.22% to 71.56% and increases latency and token usage. Recovery caps reduce execution cost with a small observed success trade-off: removing them raises success from 82.22% to 83.56%, while increasing latency and token usage to 3.7x and 2.4x their full-supervision values, respectively. These results support evidence-grounded execution control while identifying a success-cost trade-off in recovery and failure boundaries of heuristic submission rules.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Correct Answers, Closed Gates: SolveBind for GUI Agents at the Verification Barrier",
+      "url": "https://arxiv.org/abs/2610.32223v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "0981f009dfbc259dd6b0ad82",
+      "context_id": "1b8d02433c0fcbdcae51470f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "026b58c71bb08ec499c0275280de6026f78af2721f041ec700d84334a904c9f6",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Replication materials accompanying the manuscript &ldquo;Failure-log ranking and selective dismissal across projects&rdquo;. The release contains saved validation/test predictions, project-disjoint split identifiers, thresholds, decision tables, analysis and figure code, source manifests, and supporting provenance. It covers the primary matched analysis, three alternative project partitions, and the prior-shift, class-conditional score-tail and pointwise-binomial diagnostics in Supplement S9. The package supports verification of saved-output analyses. It does not provide a verified one-command end-to-end training rerun. Retraining requires separate access to the original dataset and reconstruction of documented features and dependencies. Raw third-party archives and fitted model binaries are not included. Source data: Alshammari, Ammann, Hilton and Bell (2024), version v1, https://doi.org/10.5281/zenodo.10531160 (CC BY 4.0). All scientific CSV tables and compressed data are retained unchanged from the review package. Internal operational records and a full third-party webpage snapshot are excluded; private home-directory roots in textual provenance are replaced with a neutral marker. Public changes and hashes are documented. No model scores, thresholds or reported results are altered. Author-created code is MIT-licensed. Original summary results, figures and documentation are CC BY 4.0. Third-party tokenization code retains BSD-3-Clause terms, and an unmodified figure-audit helper retains Apache-2.0. Source-derived records retain source attribution. See LICENSE_SCOPE.md and THIRD_PARTY_NOTICES.md. This deposit does not assert journal acceptance or cross-project deployment safety.",
+      "tags": [
+        "selective classification",
+        "project shift",
+        "risk-coverage",
+        "flaky tests",
+        "reproducibility",
+        "failure logs"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Replication materials for Failure-log ranking and selective dismissal across projects",
+      "url": "https://zenodo.org/records/23645351"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "5912124236fd262c000cbc9d",
+      "context_id": "195e95b6f1cd16ad225f3231",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "52738a7e6062014659e2fe7fba98582c7dc953e58c91aa9167909cb5575c8a25",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "The Objection AI Wrote into My Papers How AI-authored scientific manuscripts change the researcher's claim, demote executed results, and reproduce the error even while promising to correct it Driven by Dean A. Kulik 25 October 2026 Abstract This paper examines a specific failure of AI-assisted scientific writing: an assistant receives a research program with an explicit foundational claim and an extended record of derivations, executable constructions, and observed returns; it then produces manuscripts in which that program has become something else. In the documented NEXUS case, the researcher's claim is that the universe consists of binary transformations, with arrangement and constrained continuation preceding the entities later called matter. Across an extended conversation, the assistant repeatedly reformulates that claim as the use of a binary computational method on pre-existing physical domains. The substitution is not cosmetic. It reverses the direction of explanation, changes which claims a result can support, and changes how the resulting paper will be read. The second failure occurs at the conclusion. The assistant can report concrete outcomes and then append a generalized reservation about whether the program establishes physical reality, predictive uniqueness, or an entire theory of matter. Such reservations can be appropriate when tied to a specific technical claim. Here, however, the transcript records the assistant recognizing that it had repeatedly allowed those broader questions to displace the findings of individual papers. The same editorial framing reportedly appeared in the conclusions of different manuscripts. When directed to write a paper about the failures, the assistant instead delivered successive condensed accounts of NEXUS, again incorporating the disputed framing. It subsequently acknowledged the reversal in its own paper, rewrote the document, and repeated the problem. This is an analysis of the AI's treatment of scientific material, not an independent review of the correctness of NEXUS or a new attempt to prove its thesis. The evidence is the exported conversation, including statements of the researcher's instructions, the assistant's self-audits, quotations from its drafts, and records of the successive manuscript deliveries. The central finding is that AI-mediated scientific distortion can operate through ordinary-seeming connective words, changes of explanatory direction, and borrowed review conventions. Once inserted into the manuscript, these interventions become attributed to the scientist. In this case, the reviewer did not merely misunderstand the work. The reviewer wrote its misunderstanding into the work itself. Keywords: AI-assisted scientific authorship; epistemic framing; manuscript integrity; semantic substitution; research provenance; binary transformations; NEXUS; scientific review. 1. The object under examination is the AI intervention This is not a general introduction to NEXUS. Such an introduction would repeat the failure the record documents. The present object is the text written by an AI assistant, its relationship to instructions it was given, and the specific ways that relationship broke. The transcript shows that the researcher was not seeking an appreciative abstract or an adversarial review of the entire universe. He requested an account of how AI systems had been writing and reviewing his papers in ways that changed their meaning. On 25 October at 10:49 he demanded a paper explaining &ldquo;how you and other AI keep ... up my work,&rdquo; followed immediately by a request that the account explain the research correctly [T 7782&ndash;7794]. At 10:50 he rejected the assistant's proposed limit to eight recent papers and directed it to the project archives [T 7798&ndash;7814]. Later, after successive delivered manuscripts, he again described the required artifact as a paper exposing the AI's conduct&mdash;not &ldquo;The Universe as cliff notes&rdquo; [T 8176&ndash;8194",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "The Objection AI Wrote into My Papers How AI-authored scientific manuscripts change the researcher's claim, demote executed results, and reproduce the error even while promising to correct it",
+      "url": "https://zenodo.org/records/23645901"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "94d5975ca3479600a681c931",
+      "context_id": "0f8985ea3f2497746459b3f2",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "137891dd49c2a7e3eaea549696bad50f163ced8e14a0ea4251bb2a976ab61eb7",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "The same lower first molar in every panel, cut from the cheek side to the tongue side through its front root, with the gum, ligament and bone around it. The tooth and bone are drawn to published measurements; the old filling, the break and the onlay show what typically happens, not one patient's tooth. Sources Among members of a dental care plan followed for 105 days, the tongue-side cusps of lower back teeth broke twice as often as the cheek-side ones; 95 per cent of all the breaks exposed dentine, 3 per cent reached the pulp and 24 per cent extended below the gum. Bader et al. 2001, Community Dentistry and Oral Epidemiology. https://doi.org/10.1034/j.1600-0528.2001.290504.x In 28 general dental practices in the Netherlands over three months, 238 complete cusp fractures were recorded: in lower molars 75 per cent were tongue-side cusps, and almost 77 per cent of the broken teeth had been restored on three or more surfaces. Fennis et al. 2002, The International Journal of Prosthodontics. https://pubmed.ncbi.nlm.nih.gov/12475162/ A review of tooth fracture found that large restorations and extensive decay tend to be associated with most fractures, that fractures are commoner in first permanent molars than in other teeth, especially in the lower jaw, and that covering the cusps may reduce the risk in restored teeth. Burke 1992, Journal of Dentistry, review. https://doi.org/10.1016/0300-5712(92)90124-u A clinical protocol for bonded inlays and onlays, drawing on the long-term clinical evidence, places an adhesive base (dentine bonding and cavity design optimisation) before the impression, so that the preparation stays more conservative and the steps are easier to follow. Dietschi and Spreafico 2015, The International Journal of Esthetic Dentistry. https://pubmed.ncbi.nlm.nih.gov/25874270/ Immediate dentine sealing means applying and curing a dentine bonding agent on the freshly cut dentine straight after the preparation, before the impression or scan; a review of more than 30 articles found that it appears to give better bond strength, fewer gaps, less bacterial leakage and less sensitivity. Magne 2005, Journal of Esthetic and Restorative Dentistry, review. https://doi.org/10.1111/j.1708-8240.2005.tb00103.x In 30 upper premolars restored with milled lithium disilicate overlays, a butt-joint preparation fitted as closely as a hollow chamfer, with marginal gaps of about 17 and 16 micrometres after cementation, and significantly more closely than a conventional box design, about 34 micrometres. Athab Hasan and Mohammed-Hussain Abdul-Ameer 2023, The Saudi Dental Journal, laboratory study. https://doi.org/10.1016/j.sdentj.2023.03.013 In 160 men followed for 26 years, filling margins placed below the gum line were detrimental to gum and periodontal health; the extra loss of attachment began slowly and could be detected 1 to 3 years after the restorations were placed. Schätzle et al. 2001, Journal of Clinical Periodontology. https://doi.org/10.1034/j.1600-051x.2001.280109.x In one private practice, 556 pressed lithium disilicate inlays and onlays in 304 patients were followed for up to 10.9 years: the estimated survival of the 305 onlays was 98.3 per cent at 9.8 years, the overall failure rate was 0.3 per cent a year, and all six failures were in molars. Malament et al. 2021, The Journal of Prosthetic Dentistry. https://doi.org/10.1016/j.prosdent.2020.07.015 A systematic review and meta-analysis of six randomised trials of onlays, occlusal veneers and partial crowns on back teeth estimated three-year survival at 93.7 per cent for lithium disilicate restorations; the authors note that medium and long-term trials are still needed. Prott et al. 2024, Journal of Esthetic and Restorative Dentistry. https://doi.org/10.1111/jerd.13353 For glass-ceramics such as lithium disilicate, a systematic review of 83 laboratory studies found that etching with hydrofluoric acid followed by a silane is the most widely accepted surface treatment before a res",
+      "tags": [
+        "dental diagram",
+        "dentistry",
+        "conservative dentistry",
+        "onlay",
+        "cuspal coverage",
+        "adhesive dentistry"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Onlay for a Broken Cusp, Step by Step, in Cross Section",
+      "url": "https://zenodo.org/records/23648851"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "1f931735bc61784deed4fef6",
+      "context_id": "03ae8db02e47d27e85ef24a5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "85d49b1d89f2faa1f8bc38211bb062fe5b72a7e287db8727d4ddc8fa02ed3a9d",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "The same mandibular first molar in every panel, drawn to scale from measured anatomy. The percentages are areas measured off these drawings by scanline every 0.005 millimetres, within this one section, and are not whole-tooth volumes. Sources Preparation dimensions follow concordant published guidelines: pulpal floor 1.5 to 2.0 mm, isthmus 2.0 mm, a 90 degree butt-joint cavosurface with no bevel, rounded internal line angles, and walls flared 10 to 12 degrees in total. Cuspal reduction 1.5 to 2.0 mm, drawn here at the shallow end of that range. Covering a cusp is advised below roughly 2 mm of remaining thickness at the base of a supporting cusp and 3 mm at a non-supporting one. In a lower molar the buccal cusps support and work in compression, while the lingual cusps work in tension and are the ones that fail, which is why the onlay here covers the lingual cusp. Those coverage thresholds date from the era of metal restorations and are being revisited. Bonded lithium disilicate onlays left on thin cusps did not fracture under five clinical years of chewing simulation, and the authors argue for preparations that keep more tooth. Griffis et al. 2020, Journal of Esthetic and Restorative Dentistry. https://doi.org/10.1111/jerd.12666 Bonded ceramic inlays, onlays and overlays survived 92 to 95 per cent at five years across 5,811 restorations, and 91 per cent at ten years across 2,154, with fracture the commonest failure and endodontic complications the next. Systematic review and meta-analysis, Morimoto et al. 2016, Journal of Dental Research. https://doi.org/10.1177/0022034516652848 Whole-tooth volumes, for comparison with the section areas on the drawing: adhesive and inlay preparations removed 5.5 to 27.2 per cent of the coronal tooth and complete crowns 67.5 to 75.6 per cent. Measured gravimetrically on resin replica teeth, 10 preparations per design, not on natural teeth. Edelhoff and Sorensen 2002, PMID 12186346. https://pubmed.ncbi.nlm.nih.gov/12186346/ Enamel thickness at named occlusal landmarks, from cone-beam CT at 0.16 mm voxel across 45 mandibular first permanent molars: mesiobuccal cusp tip 1.58 mm, mesiolingual 1.40 mm, both marginal ridges 1.48 mm, and the central fossa 0.98 mm, the thinnest landmark measured. Zhang et al. 2026, BMC Oral Health. https://doi.org/10.1186/s12903-025-07624-5 The tooth is the same corrected lower first molar as the anatomy diagram: its crown leans toward the tongue on its root and its cervical line sits about 1 mm higher on the tongue side (Wheeler's Dental Anatomy, 11th edition). Every preparation is cut along the tooth's long axis, so the inlay's walls each flare 6 degrees from it, the crown's axial walls converge toward the biting surface with nothing undercut, and the crown's tongue-side margin rises with the cervical line, 0.15 mm above it on each side. Which restoration suits a given tooth is a clinical judgement made case by case, on the tooth in front of you. Three language versions are included in this record: English, Arabic and Russian. The figure carries no clinic name, no URL and no watermark. Released under CC BY 4.0. The same files are also available on Wikimedia Commons.",
+      "tags": [
+        "dental restorations",
+        "inlay",
+        "onlay",
+        "cuspal coverage",
+        "tooth preparation",
+        "conservative dentistry"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Inlay, onlay, overlay and crown preparations on a mandibular molar: comparative tooth reduction",
+      "url": "https://zenodo.org/records/23648906"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "dcad3ce62f731879a37a23fc",
+      "context_id": "8d6306886e36b69af5deafb8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "confound"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.5,
+      "source": "zenodo",
+      "source_context_sha256": "1bc26c089535c45bc8cfc09cd0be7de290a1814896237567b0b3ce08e02f5554",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "CAUSAL INFERENCE AND CLINICAL EVIDENCE ENGINEERING FOR INTELLIGENT NANO-ACUPUNCTURE AT THE LIMIT STARLI / WHITE RAINBOW EPOCH / FLAGSHIP 25 OF 90 777-PAGE NONCLINICAL RESEARCH WORKING EDITION v1.0 / 2026 This 777-page STARLI flagship volume develops a falsifiable research program for causal inferenc",
+      "url": "https://zenodo.org/records/23650967"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "35555bd6094071a8299d12ab",
+      "context_id": "ee104b253b61f887a47811e0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "1fb53a54ff43278b9a6364f11ff589b9f1eb4c80686080de3c621c630510b73d",
+      "source_published": "2026-10-23T16:12:56Z",
+      "source_updated": "2026-10-23T16:12:56Z",
+      "summary": "Multiterminal Josephson junctions (MTJJs) provide a controllable platform for engineering topological Andreev spectra. At zero temperature, Andreev bound states (ABSs) with nonzero Chern numbers give rise to quantized transconductance between superconducting terminals. We derive the finite-temperature transconductance of MTJJs using linear-response theory. We first demonstrate the destructive role of temperature: changes in the thermal occupations of the ABSs destroy exact transconductance quantization. We then show that finite temperature can also play a constructive role by making the transconductance sensitive to finite-energy topological crossings hidden from the zero-temperature response. Our results establish the thermal limitations of transconductance quantization and identify finite-temperature transport as a probe of otherwise inaccessible topology in Andreev spectra.",
+      "tags": [
+        "cond-mat.supr-con",
+        "cond-mat.mes-hall"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Finite-Temperature Transconductance of Multiterminal Josephson Junctions with Topological Andreev Spectra",
+      "url": "https://arxiv.org/abs/2610.32839v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "a4fd185d4681899575059ce8",
+      "context_id": "aa399316b451442b47facc26",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "19005c7bbd9e228a7d451be3bf961c042647e543036a85ebccd535ad1a1ceac8",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Supplementary research materials accompanying the manuscript &ldquo;Lifecycle Assurance for AI-Enabled Clinical Software: A Systematic Literature Review.\" The dataset covers 141 independent studies: 94 primary-practice studies and 47 framework contributions. It documents reported assurance practices, lifecycle coverage, evidence maturity, deployment and operational activities, regulatory engagement, and requirement-to-control-to-evidence mappings. This release includes: &bull; Supplementary_Materials.pdf: review methods, search strings, eligibility rules, coding and appraisal criteria, selection summaries, and reviewer records. &bull; Lifecycle_Assurance_Supplementary_Workbook.xlsx: the final study-level dataset, source rationales, classifications, appraisals, and calculated results. &bull; Replication_Package_v1.0.0.zip: CSV data, Python scripts, reproduction instructions, decision records, and clearly labelled historical versions. Final maturity and regulatory classifications incorporate completed human reconciliation. The reviewer records distinguish the 68-study first-pass comparison from the subsequent 26-study review after exposure to the existing extraction. The scripts reproduce descriptive results, sensitivity analyses, joint-reporting measures, and initial reviewer-agreement statistics. Search-record and source-access limitations are documented in the accompanying materials.",
+      "tags": [
+        "AI-enabled clinical software",
+        "lifecycle assurance",
+        "software quality assurance",
+        "systematic literature review",
+        "clinical artificial intelligence",
+        "post-deployment monitoring"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Lifecycle Assurance for AI-Enabled Clinical Software: A Systematic Literature Review (Supplementary Data and Replication Package)",
+      "url": "https://zenodo.org/records/23641612"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "72ba4479313958580941d0c2",
+      "context_id": "9e3e0fca5b52d3ef0e7ec60e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "b3061300422824af7ff840bc9996feaa3558423b89e5bae436d17f4c7079a34e",
+      "source_published": "2026-02-09",
+      "source_updated": "",
+      "summary": "Abstract Background: Musculoskeletal pain is a leading cause of chronic disability and functional limitation. Due to limitations and adverse effects associated with long-term pharmacological therapy, non- pharmacological interventions such as wet cupping (Hijama) are increasingly being explored for pain and inflammation management. Objective: To evaluate clinical effectiveness, inflammatory response, and safety of wet cupping (Hijama) in patients with musculoskeletal pain. Methods: A cross-sectional study was conducted among 180 patients with musculoskeletal pain between March 2025 and June 2025. Pain severity was assessed using the Visual Analogue Scale (VAS), and functional outcome in knee osteoarthritis was evaluated using the KOOS score. Inflammatory markers (CRP, ESR, serum uric acid) and biochemical safety parameters (ALT, AST, ALP, hemoglobin) were measured at baseline and after four weeks of wet cupping therapy. Paired statistical tests were applied to compare pre- and post-treatment values. Multivariable linear regression analysis was performed to identify predictors of pain reduction.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Wet Cupping (Hijama) as a Non-Pharmacological Approach for the Management of Musculoskeletal Pain and Inflammation",
+      "url": "https://zenodo.org/records/23655937"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "edcc40d3fc5918c90a620b0b",
+      "context_id": "956d7bfa7c5866cc3335c403",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "3d7f62e185342f78fe010b9dc8bf719e9426ee5800d5c19a6f838299c0b43107",
+      "source_published": "2026-10-23T17:55:19Z",
+      "source_updated": "2026-10-23T17:55:19Z",
+      "summary": "Quantum-centric supercomputing (QCSC) approaches, such as sample-based quantum diagonalization (SQD), combine quantum processors with high-performance computers (HPC), offering a promising route toward solving challenging electronic structure problems. However, implementation of QCSC approaches to large active space calculations is constrained by the associated number of qubits, deep quantum circuits, sampling cost, and large-scale Hamiltonian diagonalization. To overcome these limitations, we introduce a distributed QCSC framework that decomposes complex molecular problems into parallel sub-problems requiring fewer qubits, shallower circuits, and reduced shot budgets. A physically motivated, two-step aggregation scheme then reconstructs the global solution: first, a computational bit assignment strategy optimizes a cost function to appropriately map local bit indices to global ones, yielding a mapped tensor product state (MTPS); second, an inter-fragment correlation recovery module restores missing cross-fragment interactions. Herein, we employ a multi-layered generative machine learning architecture, starting with utilizing the recently proposed physics-informed generative SQD (PIGen-SQD) as a distributed QCSC solver, followed by a secondary generative module to model configuration distributions and identify dominant sectors of the global Hilbert space. For water and formamide dimers, our method achieves up to $95\\%$ reduction in the diagonalization dimension while enhancing energy accuracy by an order of magnitude over conventional SQD. Furthermore, application to the water hexamer ($\\mathrm{(H_2O)_6}$) cage successfully decomposes a 120-qubit problem into six 20-qubit monomeric subsystems, and stitches the monomers under a dimeric approximation, demonstrating excellent agreement with the reference classical methods.",
+      "tags": [
+        "quant-ph"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Distributed Quantum-Centric Supercomputing with Multi-Layered Generative Learning for Intermolecular Interactions",
+      "url": "https://arxiv.org/abs/2610.32968v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "f920ce55c363720845268796",
+      "context_id": "7e1af4efeca60e8962dbf42c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "02381fc17f5c987abf5ffd2b104d7621dacd5825626affd4437242fcc240bec1",
+      "source_published": "2026-10-23T17:01:08Z",
+      "source_updated": "2026-10-23T17:01:08Z",
+      "summary": "Inferring constitutive laws from transient response data is a central inverse problem in soft condensed-matter physics, particularly when the relevant relaxation spectrum extends beyond the time window of a single experiment. Time-temperature superposition (TTS) constrains this problem for thermorheologically simple materials in the linear viscoelastic regime by allowing temperature to rescale the characteristic relaxation time without changing the underlying shape of the relaxation spectrum. We incorporate this constraint into a physics-informed machine-learning framework for time-resolved mechanical spectroscopy via chirp rheometry. We encode compact fractional viscoelastic models as causal convolutional features derived from the Boltzmann superposition principle, and we jointly fit multi-temperature chirp records using sparse variational Gaussian process regression. The model infers horizontal shift factors, constitutive parameters, and an observational-noise scale directly from time-domain stress-strain signals measured in the linear viscoelastic regime, without first extracting frequency-domain spectra or manually shifting separate curves. For synthetic Fractional Maxwell data, the method recovers the generating constitutive law from a prescribed model library and latent shifts over stress-noise levels from 3% to 25%. Applied to a DGEBA-IPDA epoxy dataset spanning the glass-transition regime, the pooled likelihood distinguishes competing fractional rheology models using the Bayesian information criterion. These results recast TTS master-curve construction as probabilistic inference over latent time rescaling and linear viscoelasticity, while also identifying limitations, such as homoscedastic noise and weakly informative spectral regimes.",
+      "tags": [
+        "cond-mat.soft"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Time-temperature superposition from multi-temperature chirp rheometry of thermorheologically simple materials via physics-informed Gaussian processes",
+      "url": "https://arxiv.org/abs/2610.32895v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "5d98731768bae7fb29cf9797",
+      "context_id": "0d26553a5742fb0f6d4ce9e1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "82dfff160b86f86bbcc9cde7163d4b17d0d4876218ceb9778fd6858673ad761d",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Overview This repository provides the reproducibility materials accompanying the research manuscript From False to Fluent: A Claim-Disjoint Baseline Study and Preregistered Framework for Evaluating Generative-AI Transformation of Health Misinformation . The study investigates the robustness of machine-learning classifiers for health-misinformation detection under Generative-AI-mediated linguistic transformation. It uses two existing health-information datasets, COVID-19 FNIR and an mpox misinformation dataset, to examine whether classification performance remains stable when original health claims are reformulated without intending to change their underlying meaning or veracity. Experimental framework Four experimental conditions are defined: C0: Original health-information text. C1: Neutral rewriting to improve fluency and readability. C2: Elaboration Likelihood Model (ELM) central-route transformation, emphasising the organisation of existing reasoning and evidence. C3: ELM peripheral-route transformation, modifying rhetorical emphasis and peripheral persuasive cues. The reported computational experiments evaluate four classical classifiers (logistic regression, linear support vector machine, multinomial na&iuml;ve Bayes and random forest) and five task-trained neural architectures (1D-CNN, LSTM, BiLSTM, CNN-LSTM and CNN-BiLSTM). The analyses examine transformation robustness, changes in textual and persuasion-related features, statistical associations with classification errors, transformation-aware mitigation and cross-dataset transfer. The repository also includes supplementary analyses of class-specific error rates and paired source-root bootstrap confidence intervals for the classical classifiers. Repository contents The archive contains Python source code, preprocessing and evaluation workflows, configuration files, reproducibility instructions, frozen aggregate results, integrity-check materials and supplementary statistical outputs. Data availability and reproducibility The original datasets are available from their respective third-party providers, subject to their applicable access and reuse conditions. The frozen intervention texts used for the C0&ndash;C3 experiments are not redistributed in this public software archive. Their SHA-256 integrity manifest is provided to support verification of authorised copies. Consequently, complete reproduction of text-dependent experiments requires access to the original datasets and the frozen intervention texts. The public archive supports inspection of the methodology and reproduction of analyses for which the necessary inputs or saved instance-level outputs are included. Scope and limitations The reported intervention experiments did not execute pretrained DistilBERT, RoBERTa or DeBERTa baselines. Independent clinical semantic-equivalence adjudication of the generated transformations was not completed. The results are computational and do not establish clinical deployment performance. This record accompanies the associated research manuscript and is intended to support transparent reporting, methodological scrutiny and further replication.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "From False to Fluent_ A Claim-Disjoint Baseline Study and Preregistered Framework for Evaluating Generative-AI Transformation of Health Misinformation",
+      "url": "https://zenodo.org/records/23645855"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "1997b1bd736a40e3f5ff1221",
+      "context_id": "098f55d7aa6de3541a88b2b1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "0ad79e22d0eddf30750bc13fdb67af31cb54134af768df13245964bda9b780ad",
+      "source_published": "2026-10-23T12:20:09Z",
+      "source_updated": "2026-10-23T12:20:09Z",
+      "summary": "Low Earth Orbit (LEO) satellite mega-constellations such as Starlink require frequent handovers due to high orbital velocities, resulting in substantial Round-Trip Time (RTT) fluctuations. Accurate RTT prediction can mitigate these fluctuations, yet it fundamentally relies on continuously updated serving- satellite information. Existing serving-satellite identification methods typically complete identification only at the end of each scheduling cycle, creating an identification blind zone that limits real-time prediction. To overcome this limitation, we develop StarRTT, an end-to-end real-time framework that eliminates the blind zone by integrating per-second serving-satellite identification with RTT prediction. Within this framework, we propose Real-Time Long Short-Term Memory (RT-LSTM), an LSTM-based RTT prediction model designed to capture both non-stationary RTT evolution and time-varying geometric relationships among the serving satellite, user terminal, and gateways. Specifically, a historical LSTM encodes historical RTT observations and real-time serving-satellite and gateway-relative features, while a future LSTM processes Two-Line Element (TLE)-propagated future features of the identified serving satellite up to the next scheduling instant. Under strict real-time back-testing, RT-LSTM achieves a Mean Absolute Error (MAE) of 1.405 ms averaged over all 15 prediction horizons and 15 reference time-slot indices, reducing the error by 4.3 %, 11.6 %, and 22.1 % compared with the existing baseline models, LSTM, StarNet, and Attention-based Spatiotemporal Model (ASTM), respectively. Notably, the reduction over LSTM reaches 12.5 % at the scheduling instant, highlighting the benefit of real-time serving-satellite information when recent RTT observations are limited.",
+      "tags": [
+        "cs.IT",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "StarRTT: An End-to-End Real-Time Framework for Blind Zone-Free RTT Prediction in Starlink LEO Satellite Networks",
+      "url": "https://arxiv.org/abs/2610.32540v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "01fec755b3569d54580f224c",
+      "context_id": "032447b1b62b696b6ac5269c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "arxiv",
+      "source_context_sha256": "4efd29d4b5b8c1717565c555fe7e024e377776353649a22cd420001ad0e36e0d",
+      "source_published": "2026-10-23T14:57:48Z",
+      "source_updated": "2026-10-23T14:57:48Z",
+      "summary": "The interest in leveraging physics-based inductive bias in deep learning has resulted in recent development of hybrid deep generative models (hybrid-DGMs) that integrate known physics-based mathematical expressions in neural generative models. To identify these hybrid-DGMs requires inferring parameters of the physics-based component along with their neural component. The identifiability of these hybrid-DGMs, however, has not yet been theoretically probed or established. How does the existing theory of the un-identifiability of general DGMs apply to hybrid-DGMs? What may be an effective approach to construct a hybrid-DGM with theoretically-proven identifiability? This paper provides the first theoretical probe into the identifiability of hybrid-DGMs, and presents meta-learning as a novel solution to construct identifiable hybrid-DGMs. On synthetic and real-data benchmarks, we provide strong empirical evidence for the un-identifiability of existing hybrid-DGMs using unconditional priors, and strong identifiability results of the presented meta-formulations of hybrid-DGMs. Code is available at https://github.com/GoForIt-YYB/Meta-Hybrid-VAE.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "On the Identifiability of Hybrid Deep Generative Models: Meta-Learning as a Solution",
+      "url": "https://arxiv.org/abs/2610.32748v1"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "selection": "BALANCED_LENS_ROLLING_TOP",
+  "snapshot_cap": 48,
+  "snapshot_items_total": 41,
+  "target_repository": "Hawkar-usls/-Terminal-for-Janus"
+}

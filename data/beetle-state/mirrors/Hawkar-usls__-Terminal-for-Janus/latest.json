@@ -1,5 +1,5 @@
 {
-  "batch_id": "9b4b159c440159c78ec6",
+  "batch_id": "00142735137cce937981",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -451,49 +451,6 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "1e8a5a93e5b725aede8f816c",
-      "context_id": "c97ac471951675fa52f55109",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "bias",
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.4583,
-      "source": "zenodo",
-      "source_context_sha256": "92af5e131143c11c8362d04b4c023d4cb892706f3896fbdc5734dbf039adc97e",
-      "source_published": "2026-10-25",
-      "source_updated": "",
-      "summary": "This repository contains the complete 10-water-year daily streamflow simulation archive ( 1989-10-01 through 1999-09-30 ; 3,652 daily steps across 531 canonical CAMELS-US basins) for ERA-Multi-Paradigm-Gauged (10-model ensemble) , evaluated as part of the CAMELS-US Hydrological Model Intercomparison Project (MIP) ( grey-nearing/camels-us-mip ). Model Name: ERA-Multi-Paradigm-Gauged (10-model ensemble) Target Leaderboard: gauged__multi_camels Spatial Evaluation Regime: Gauged Basins (All 531 Basins Trained &amp; Evaluated) Meteorological Forcings: Multi-Forcing (Daymet + Maurer + NLDAS) Ensemble Size: n = 10 independent random seed realizations ( seeds = 100..109 ) Open-Source Model Code: https://github.com/grey-nearing/camels-us-mip/tree/main/models/era_gauged_multi_paradigm ERA Discovery Notebook: https://github.com/grey-nearing/camels-us-mip/blob/main/era_experiments/era_gauged_newman_cv_winner.ipynb Model Architecture &amp; Experimental Protocol Architecture: Four-Family Multi-Paradigm Hydrological Ensemble combining two complementary feature-and-conditioning paradigms per seed: (1) Paradigm A (60 multi-scale hydroclimatic, PET, rolling water-balance deficit, and cross-forcing agreement features with basin-conditioned static embeddings, trajectory Huber-NSE + log1p MSE loss, and exponential moving average weight averaging): `CausalConvGRULSTM` (multi-scale causal dilated Conv1D d=1,3,9 + coupled GRU-LSTM, weight 0.38) and `MultiScaleFiLMEALSTM` (2-layer FiLM-modulated Entity-Aware LSTM, weight 0.12); and (2) Paradigm B (36 clean meteorological features augmented with continuous 10-year 3-forcing degree-day snowpack accumulation/melt and liquid water delivery across Daymet, Maurer, and NLDAS, conditioned strictly on 27 static catchment attributes with zero basin ID lookup embeddings): `DualPathwayFiLMGRULSTM` (parallel 2-layer LSTM + 2-layer GRU with static FiLM gates, weight 0.36) and `EntityAwareHydroLSTM` (2-layer Entity-Aware HydroLSTM, weight 0.14), evaluated with hybrid continuous 10-year rollout + overlapping 730-day sliding-window inference. Strict Non-Leakage Protocol: Architecture and blending weights discovered strictly within the Newman et al. (2015) training decade (`1998-10-01` to `2008-09-30`, XID 304144117, achieving `0.8410` Median NSE on the `1999-10-01` to `2003-09-30` validation split when trained on `2003-10-01` to `2008-09-30`), with zero access to the `1989-10-01` to `1999-09-30` Newman evaluation period. For benchmark evaluation, 10 independent random seeds (`seeds = 100..109`) of all 4 architectural families (40 trained models total) were trained on the full Newman training window (`1999-10-01` to `2008-09-30`, with 365-day spinup `1998-10-01` to `1999-09-30`) and evaluated out-of-sample on the blind Newman test period (`1989-10-01` to `1999-09-30`; 3,652 days across 531 basins). Benchmark Performance Summary (531 CAMELS-US Basins, 1989-10-01 to 1999-09-30) Ensemble Median NSE (n = 10): 0.826 Single-Model Median NSE (mean &plusmn; SD across 10 seeds): 0.822 ± 0.002 Ensemble Mean NSE: 0.776 Ensemble Median KGE: 0.806 Ensemble Median Peak-Flow Bias |FHV|: 13.28% Catastrophic Failure Basins (NSE &le; 0): 2 / 531 Included Files era_gauged_multi_paradigm_gauged_multi_camels_hydrographs_531x3652.npz : Compressed NumPy archive containing qsim / qsim_members of shape (10, 531, 3652) (float32, mm/day), qsim_ensemble_mean of shape (531, 3652) , qobs of shape (531, 3652) , basins of shape (531,) , dates of shape (3652,) , and seeds of shape (10,) . era_gauged_multi_paradigm_gauged_multi_camels.zarr.zip : Consolidated Zarr v2 store containing qsim (531, 3652) , qsim_members (10, 531, 3652) , basin (531,) , date (3652,) , huc_02 (531,) , and member (10,) . README.md : Complete documentation, schema reference, and Python loading example.",
-      "tags": [
-        "CAMELS-US",
-        "Hydrology",
-        "Streamflow Forecasting",
-        "Rainfall-Runoff Modeling",
-        "Model Intercomparison Project",
-        "HydrologyMIP",
-        "Deep Learning",
-        "Empirical Research Agent",
-        "ERA-Multi-Paradigm-Gauged (10-model ensemble)"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "CAMELS-US Hydrological Model Intercomparison Project (MIP) — ERA-Multi-Paradigm-Gauged (10-model ensemble) Daily Streamflow Hydrographs (531 Basins, Water Years 1990–1999)",
-      "url": "https://zenodo.org/records/23641695"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "2e0cfbb021ee2fd850f3fc36",
       "context_id": "93454182c30fb0adf7abe04a",
       "delivery_preview_only": true,
@@ -821,6 +778,45 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "3052ba87c9c90ab761fd8971",
+      "context_id": "ffef6e0301e535b7accc1b9b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "fe248930e81a16aceedb6afaa78cf765d0607371273fe29b0281974b91fcd4ff",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Acute coronary syndrome (ACS) remains an important cause of morbidity and mortality, and simple laboratory markers that identify patients at increased risk may support early clinical risk stratification. Hyponatremia has been associated with neurohormonal activation and adverse outcomes in cardiovascular disease, but its prognostic relevance in patients with ACS requires evaluation in the clinical setting. This prospective single-centre study included 75 patients admitted with ACS to the intensive care unit of Government Royapettah Hospital, Chennai, between April and September 2016. Patients presenting within 12 hours of symptom onset with electrocardiographic evidence of ST-elevation myocardial infarction, non-ST-elevation myocardial infarction, or unstable angina were enrolled. Patients with previous coronary artery disease, arrhythmias, cardiomyopathy or heart failure, previous diuretic use, cirrhosis, hypothyroidism, renal disease, marked renal dysfunction, or refusal to participate were excluded. Serum sodium was measured at admission, 48 hours, and discharge, with sodium &lt;135 mmol/L defining hyponatremia. Patients were followed weekly for 30 days for morbidity and mortality. Nine patients (12.0%) were hyponatremic and 66 (88.0%) were normonatremic. Mean ejection fraction was lower in the hyponatremic group (46.67±7.70%) than in the normonatremic group (53.77±9.96%; p=0.0436), while serum sodium remained significantly lower at all three assessment points (p&lt;0.0001 for each comparison). Killip class also differed significantly between groups (p=0.0461). Adverse in-hospital outcome occurred in 44.44% of hyponatremic patients compared with 10.61% of normonatremic patients (p=0.0071). Thirty-day mortality was 66.67% and 6.06%, respectively (p&lt;0.0001). The reported logistic regression model identified admission, 48-hour, and discharge hyponatremia as significant predictors of mortality. In this cohort, hyponatremia was associated with lower ventricular systolic function, higher clinical severity, adverse in-hospital outcome, and substantially higher 30-day mortality. Serum sodium may therefore provide an accessible prognostic marker in ACS, although confirmation in larger multicentre cohorts is required.",
+      "tags": [
+        "acute coronary syndrome",
+        "hyponatremia",
+        "myocardial infarction",
+        "serum sodium",
+        "mortality",
+        "prognosis"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "PROGNOSTIC VALUE OF HYPONATREMIA IN PATIENTS WITH ACUTE CORONARY SYNDROME",
+      "url": "https://zenodo.org/records/23663318"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "32047b4c90021a03587575b2",
       "context_id": "e88587d8a81d798288a86859",
       "delivery_preview_only": true,
@@ -887,6 +883,38 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "Beyond Pattern Matching in 3D MLLMs: Part-Level Functional Reasoning for Generalizable Recognition",
       "url": "https://arxiv.org/abs/2610.32262v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "3f35eaee2e97eaa2af937b3a",
+      "context_id": "e57ea199281a53a3697a6d50",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "c6cc1e45c27c2dd347c468091fb6baa38d96bde4c5e4f712dd311acaaac32e61",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "This collection provides the code, data, and verification evidence supporting the study &ldquo;Payment Menu Design for Safe Identification and Recoverable Coverage Deployment&rdquo; by Jiaming Hu and Cuixia Miao. The study examines payment-menu design for providers with unknown local update rules, jointly requiring safe identification, recovery to ordinary operation, and preservation of the informed benchmarks. The collection contains two complementary archives: &bull; S3_EJOR_Code_Data_v1.0.zip: versioned source code, frozen synthetic inputs and modeled coverage instances derived from public SNDlib topologies, original result ledgers, environment specifications, a data dictionary, mappings between manuscript results and source data, and scripts for rebuilding tables and figures and running verification tests. &bull; S3_EJOR_Full_Evidence_v1.0.zip: retained certificates, verification receipts, execution logs, and failure and timeout records, stored with hash-based deduplication and mappings for restoring their original relative paths. Extract both archives into the same parent directory and follow the README in the Code_Data archive. The public-network instances are modeled coverage and payment scenarios, not observations of real network operations. The external PaGE comparison uses a source-mapped adaptation rather than a successfully built native Storm implementation. All eight extended ten-site tasks passed full V1 verification; seven additional independent audits passed and one timed out. Failed, timed-out, and gated runs are retained and distinguished from completed results. Corresponding author: Jiaming Hu (14438120260091@sdmu.edu.cn).",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Reproducibility materials for Payment Menu Design for Safe Identification and Recoverable Coverage Deployment",
+      "url": "https://zenodo.org/records/23659465"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -1452,6 +1480,6 @@
   "schema": "janus.beetle.repo_memory_batch.v1",
   "selection": "BALANCED_LENS_ROLLING_TOP",
   "snapshot_cap": 48,
-  "snapshot_items_total": 40,
+  "snapshot_items_total": 41,
   "target_repository": "Hawkar-usls/-Terminal-for-Janus"
 }
