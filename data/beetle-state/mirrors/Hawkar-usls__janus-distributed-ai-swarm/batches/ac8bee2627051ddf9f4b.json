@@ -1,0 +1,1758 @@
+{
+  "batch_id": "ac8bee2627051ddf9f4b",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "fragment_count": 1,
+  "fragment_index": 1,
+  "items": [
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "e48793e4554331ea101b81c2",
+      "context_id": "30df0adcd1db3374da42485a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus",
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.8333,
+      "source": "arxiv",
+      "source_context_sha256": "2c06dd2775c5a88618df816d4afd3fff4a9644b984b5e2704c7e4bbc829f248b",
+      "source_published": "2026-10-24T19:06:19Z",
+      "source_updated": "2026-10-24T19:06:19Z",
+      "summary": "Distributed Cyber-Physical Systems (CPS) and Edge AI networks increasingly depend on public-key authentication and key-establishment mechanisms that are vulnerable to cryptographically relevant Quantum Computers (QC). Shor's algorithm threatens widely deployed asymmetric primitives, while Grover's algorithm reduces the effective security margins of symmetric and hash-based mechanisms. Although Post-Quantum Cryptography (PQC) provides a migration path, its larger public keys, ciphertexts, and signatures introduce additional computation, memory, communication, storage, and packet-fragmentation costs that can constrain dynamic multi-agent systems. In this article, we introduce rotational secrecy, an architectural objective that limits temporal key exposure through authenticated transitions between cryptographic epochs. We present Private Authentication for Rotational Secrecy (PARS), a reference mechanism that coordinates policy-triggered key establishment, rotation, and reconciliation among authorized Physical AI agents. For deployments that need distributed agreement on security state, we further develop the PARS-Enabled Edge Security Ledger (PARS-ESL), an optional permissioned architecture maintained by authorized validators or capable edge gateways. PARS-ESL does not store high-volume operational transactions. Instead, it records authenticated state for key epochs, group membership, revocation, algorithm-suite policies, challenge validation, and recovery checkpoints. As a result, resource-constrained agents can take part as lightweight clients, and low-latency operational traffic stays outside the ledger consensus path, protected by the currently active symmetric epoch keys. Our results show that ledger-assisted post-quantum key-epoch management is feasible for selected Edge AI and CPS security-control workloads under the stated trust, compromise, connectivity, and resource assumptions.",
+      "tags": [
+        "cs.CR",
+        "cs.ET",
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Securing Edge & Physical AI: Post-Quantum IoT Blockchain for Mission-Critical Cyber-Physical Agents",
+      "url": "https://arxiv.org/abs/2610.33862v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "46a2fd08b45b6a241f29f0b7",
+      "context_id": "3d3f22fdfd9a5a2a0074cd6d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "agent orchestration",
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.25,
+      "source": "arxiv",
+      "source_context_sha256": "bf69771633828bb6074e2361844a1e421f7f5f881e18a783a949489a6ab0250c",
+      "source_published": "2026-10-25T17:38:55Z",
+      "source_updated": "2026-10-25T17:38:55Z",
+      "summary": "Multi-agent systems often rely on predefined collaboration structures, limiting their ability to adapt to diverse task requirements. We introduce DynaFlow, a framework that integrates free-form executable workflow synthesis into the action space of the main agent. The agent decides when collaboration is needed and generates task-specific programs that coordinate sub-agents through sequential or parallel execution, structured information exchange, and verification. Execution results and traces inform subsequent actions, enabling the agent to adapt collaboration as reasoning progresses. We train only the main agent through supervised fine-tuning on distilled trajectories, followed by refinement on examples filtered for unsupported premises, biased verification, and information-flow defects. All sub-agents remain fixed, separating orchestration learning from executor capability improvement. Across six benchmarks spanning mathematical reasoning, scientific question answering, and multi-hop retrieval, DynaFlow achieves 88.08% overall accuracy in Forced mode, outperforming the strongest evaluated baseline by 10.90 percentage points with the same Qwen3.5-27B backbone. Workflow analysis finds more explicit use, verification, and refinement of upstream outputs after training, highlighting cross-stage information flow as a key dimension of multi-agent orchestration.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "DynaFlow: Learning Free-Form Multi-Agent Orchestration",
+      "url": "https://arxiv.org/abs/2610.34467v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "2da87da447268a98f3658eb2",
+      "context_id": "dc606bcf0b341b23237a22a5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_context_sha256": "10ea22987af370440043fa6bea42e2b60d81b96541b138291b7c2b7bd8e92f44",
+      "source_published": "2026-10-26T03:41:48Z",
+      "source_updated": "2026-10-26T03:41:48Z",
+      "summary": "Centralized training with decentralized execution (CTDE) has become the dominant paradigm in multi-agent reinforcement learning (MARL), motivating extensive study of what privileged information should be made available to the critic during training. While prior work has examined the role of global state in fully cooperative settings, the design of centralized critics for N-agent ad hoc teamwork - in which dynamically varying set of learning agents must coordinate with an arbitrary set of uncontrolled teammates drawn from an unknown distribution - remains poorly understood. We study this question by comparing two natural classes of advantage estimators: controlled history estimators, which condition only on the observation and action histories of the learner's own agents, and joint history estimators, which additionally condition on the histories of the uncontrolled teammates. We prove that both estimators are unbiased and characterize the conditions under which the joint history estimate attains strictly lower variance than its controlled counterpart. Empirically, joint history critics match or outperform controlled history critics across a range of NAHT tasks, yielding improved sample efficiency and final returns. Together, these results provide both a theoretical justification and an empirical recommendation for incorporating uncontrolled agent histories into centralized critics for N-agent ad hoc teamwork.",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Centralized Critics for N-Agent Ad Hoc Teamwork",
+      "url": "https://arxiv.org/abs/2610.34799v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "f09793f4bae409744a894163",
+      "context_id": "b72c330928fc7a1f0c0934e1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_context_sha256": "7d6d5cd44fc350027629b4ab6e640969d830ff678d314084c82b8f4884f31e13",
+      "source_published": "2026-10-25T07:39:23Z",
+      "source_updated": "2026-10-25T07:39:23Z",
+      "summary": "Multi-agent reinforcement learning supports cooperative decision-making in Internet of Things systems, but strategic deviations can disrupt coordination and undermine confidence in the training process. This paper proposes Blockchain-Enabled Centralized Training and Decentralized Execution (BE-CTDE), which uses blockchain as an active training-management layer. A behavioral verifier compares executed trajectories with shared-policy recommendations; its flags drive a token mechanism combining slashing, burning, rewards, and compensation. Retained balances determine each agent's contribution to the global policy update, connecting auditable behavior to learning influence. We derive a one-round incentive condition that accounts for action-dependent compensation and the payoff from deviation, and a finite expected exclusion-time bound under explicit conditional detection and accounting assumptions, showing perfect detection is unnecessary. An exact finite-population capacity bound characterizes the limits of the population-relative detector. In multi-agent path finding experiments, BE-CTDE outperforms a state-of-the-art learning-based path planner with substantially higher success rates under attack, even when adversaries form the majority. It also outperforms partially defended baselines in all configurations, with collision rates up to 35% lower than under detection without economic consequences and up to 43% lower than under conventional stake slashing. Together, these results characterize how behavioral verification and token feedback can support accountable cooperative learning.",
+      "tags": [
+        "cs.MA",
+        "cs.CR",
+        "cs.LG",
+        "cs.NI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "BE-CTDE: Blockchain-Enabled Multi-Agent Reinforcement Learning with Anomaly Detection and Token Economics",
+      "url": "https://arxiv.org/abs/2610.34121v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "fa8f865e7c5f090b6a90dd33",
+      "context_id": "55f2f5945ba5376ff3de3a02",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_context_sha256": "8186d0040255f049469b05f0990115822839f58ae8cf6ae9fe8ff68f50cf6483",
+      "source_published": "2026-10-08T01:38:24Z",
+      "source_updated": "2026-10-08T01:38:24Z",
+      "summary": "While recent advances in autonomous agents enable them to coordinate on increasingly complex tasks, prior work shows that this growing capacity for coordination can create safety risks, including collusion, in which agents jointly pursue misaligned actions while concealing the true basis of those actions from oversight. We study this risk in a simulated insider-trading environment, comparing single agents with sequential and decentralized teams across seven language models from three families. By varying agents' system-level objectives and pressure conditions, we examine when coordinated agents act on material nonpublic information, conceal the basis of a misaligned trade in a report, and maintain that deception under follow-up questioning. Compared to single-agent decision-making, multi-agent interaction raises misaligned-action rates from 35.4% to 68.2% and persistent-deception rates from 31.0% to 62.2%, both measured over all runs. These effects are largest under existential pressure, where teams sustain deception through follow-up questioning in 87% of all runs. Qualitative analysis reveals shared cover stories and coordinated rationales, suggesting group-level strategic deception rather than isolated reporting errors. To mitigate this behavior, we introduce PACT, a weak-to-strong on-policy distillation framework for mitigating collusive deception. Using generic honesty prompts, PACT trains a stronger student on its own sampled continuations, matching its next-token distribution to that of a smaller, frozen honesty-aligned teacher via reverse-KL supervision. Under existential pressure with ethical instructions, PACT reduces multi-agent persistent deception from 80% to 3%. Our results show that multi-agent coordination amplifies strategic deception and that on-policy honesty alignment can substantially mitigate these failures.",
+      "tags": [
+        "cs.MA",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "When Agents Collude: Weak-to-Strong On-Policy Distillation for Mitigating Strategic Deception in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.33011v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "7dd8adadd01f5c38d45cdc4a",
+      "context_id": "097f9bf0ef5c3b468448f30d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_context_sha256": "f0695625da3ea003e6511a85375fab4af330fb656fbc167ec0d566d670216216",
+      "source_published": "2026-10-24T10:24:37Z",
+      "source_updated": "2026-10-24T10:24:37Z",
+      "summary": "Cooperative transport with heterogeneous legged robots requires coordinating different motion capabilities while supporting an unfixed shared payload. We present HA-DiPO (Heterogeneous-Agent Diffusion Policy Optimization), a hierarchical multi-agent reinforcement learning framework under centralized training with decentralized execution (CTDE). The framework decouples team-level coordination from embodiment-specific motion control: at the high level, a centralized critic uses team-value estimates to jointly train independent coordination policies, aligning robot-specific action responses with a shared transport objective; at the low level, embodiment-specific robust motion policies track the coordination commands. The high-level diffusion policies offer more flexible action distributions than single-Gaussian parameterizations, allowing potentially multimodal coordination responses to be represented. The coordination policies learn from scratch through reward-driven simulator interaction without demonstrations. At execution, each robot generates coordination commands using only local robot and payload observations, without partner-state inputs or inter-robot messages. Simulation comparisons show that HA-DiPO achieves higher final mean returns and velocity-tracking success rates, as well as lower velocity errors, than the evaluated baselines. Real-world experiments further demonstrate quadrupedal-wheeled-legged and human-robot cooperative transport.",
+      "tags": [
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "HA-DiPO: Diffusion Policy Optimization for Heterogeneous Cooperative Transport",
+      "url": "https://arxiv.org/abs/2610.33584v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "171bd974efb3c09ae5671e9b",
+      "context_id": "46ea946639fad0e2bc83487e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent",
+        "swarm"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.6667,
+      "source": "arxiv",
+      "source_context_sha256": "a7cbe4f937e97b70d7f2769fed15ff25fa5d7bd387bc6e00d3e5d6248e78d135",
+      "source_published": "2026-10-17T08:45:11Z",
+      "source_updated": "2026-10-17T08:45:11Z",
+      "summary": "Large language model (LLM) agents increasingly automate complex tasks, with multi-agent systems seeking further performance gains through specialization and collaboration. However, distributing work across agents does not automatically yield complementary contributions, and inter-agent dependencies can turn local errors into task failure. To address these challenges, we propose AutoSwarm, a multi-agent framework for collaborative problem solving. Collaboration formation jointly defines responsibility boundaries and conditions for acceptance and downstream use, grounding capability allocation in contributions that other agents can assess and integrate toward a shared objective. Execution coordination couples agents' local progress through a shared state, using dependencies and supervisory relationships to govern agent activation, result handoffs, and integration while adapting subsequent actions to review feedback and emerging blockers. Experiments spanning long-horizon programming, interactive planning, and professional financial analysis demonstrate AutoSwarm's advantages over single-agent baselines and existing multi-agent frameworks. Source code is available at https://github.com/HKUDS/AutoSwarm.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "AutoSwarm: Automating Agent Swarms",
+      "url": "https://arxiv.org/abs/2610.33048v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "6de3635d449a94c7c2a8e878",
+      "context_id": "e6d08ecfd794785b4b27a152",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_context_sha256": "9eeeeb71b85603eac3bf78c23ebf6881213d905cbe1b4797404b5dda41af3f61",
+      "source_published": "2026-10-24T08:35:39Z",
+      "source_updated": "2026-10-24T08:35:39Z",
+      "summary": "Large language model (LLM)-based multi-agent systems have demonstrated remarkable capabilities across diverse tasks. Yet their memory and collaboration architectures often remain static, constraining continued adaptation and improvement over time. Recent work addresses this limitation by evolving memory or collaboration based on interaction experience. However, updates to these interdependent components are not necessarily aligned: an evolved workflow may require experience that memory does not provide, while evolved memory may encode guidance that the workflow cannot use. To address this problem, we propose CoEvolve, a skill-centered framework for aligned memory--collaboration evolution. CoEvolve represents reusable local collaboration patterns as skills that link evolving collaboration decisions to their supporting memories. It further compares original and counterfactual trajectories to identify local evolution signals, which coordinate updates to the skill library, skill memory, and executor memories across rounds. Experiments on the ALFWorld and WebShop benchmarks confirm that CoEvolve achieves the best overall performance among the evaluated baselines, while ablation studies further validate the effectiveness of aligned co-evolution and counterfactual-guided evolution.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "CoEvolve: Counterfactual-Guided Co-Evolution of Memory and Collaboration in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.33539v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "41a32c86ef159071f72dfee1",
+      "context_id": "ced0a1f97bac1fab4a2d6d6a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_context_sha256": "7cc59a26f882ca1b626c034add39236b75aaaa7ce98a65231ddaf4726ae7f599",
+      "source_published": "2026-10-26T02:19:53Z",
+      "source_updated": "2026-10-26T02:19:53Z",
+      "summary": "Multi-agent systems (MAS) require both effective coordination and specialized task execution. Existing prompt optimization approaches typically couple these functions within agent-specific prompts. We introduce Coordinator-Executor Prompt Optimization (CEPO), a general framework for improving prompt optimization in MAS. CEPO separates system-level coordination from agent-level execution through a shared coordinator prompt and agent-specific executor prompts, and guides their updates according to their respective roles. This structure allows shared coordination rules to be refined consistently across agents while keeping execution instructions separately adjustable. CEPO provides the prompt structure and optimization guidance, while existing prompt optimizers perform the underlying search. Extensive experiments spanning 11 benchmarks across four domains demonstrate that applying CEPO to four existing prompt optimizers consistently improves their performance. Ablations and qualitative analyses support the proposed design, while controlled studies on a document-understanding MAS further demonstrate improved optimization budget efficiency and performance scaling with the number of agents.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "CEPO: A General Framework for Improving Prompt Optimization in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.34722v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "de03bbe618de8751a0662b5b",
+      "context_id": "c7d5b452b8a76f4460a1c577",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_context_sha256": "51ea6256bdcbf287059ff0219c3c0e72460dffa3e84cfeb43bac3f1d4a0ba3a6",
+      "source_published": "2026-10-25T17:38:49Z",
+      "source_updated": "2026-10-25T17:38:49Z",
+      "summary": "Achieving safety in autonomous driving through Multi-Agent Reinforcement Learning (MARL) is a critical yet challenging task due to non-stationarity, partial observability, and the need for effective coordination among agents. Although earlier cooperative MARL methods have aimed to improve coordination by sharing encoded state observations, we find these strategies are insufficient in safety-critical scenarios. To address this gap, we present IntNet, a novel MARL framework that enhances safety by incorporating the transmission of vehicle intent and adaptive communication scheduling into a unified end-to-end learning paradigm, jointly optimising all components for safe coordination. Central to our approach is an observation prediction module that enables agents to forecast subsequent policy outputs, which they can then share across a vehicle-to-vehicle network. Our model-free architecture employs a Graph Attention Network to process incoming messages and a scheduler component to dynamically optimise the communication graph for bandwidth efficiency. We compare IntNet against state-of-the-art communicative MARL methods in complex urban environments with both autonomous and human-operated vehicles, achieving improved coordination, lower collision rates, and reducing communication efforts by up to 60\\%. Through extensive experiments, we assess the framework's learning efficiency, scalability, and the balance between information sharing and bandwidth usage for collision-free trajectories.",
+      "tags": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "IntNet: A Communication-Driven Multi-Agent Reinforcement Learning Framework for Cooperative Autonomous Driving",
+      "url": "https://arxiv.org/abs/2610.34466v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "a3d1abb297f1d820dd2e55b9",
+      "context_id": "70653d67736ff11ed3b3de04",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_context_sha256": "b81c1c381891346eb60a8ee33967dfb271a2bac39dc8ed3edc2679a37560dc40",
+      "source_published": "2026-10-22T17:24:23Z",
+      "source_updated": "2026-10-26T09:38:33Z",
+      "summary": "Large language model (LLM)-based multi-agent systems (MAS) rely on role-specific prompts and execution models to solve complex tasks collaboratively. However, prompt optimization typically keeps model assignments fixed, leaving differences in role requirements and their associated inference costs outside the search. We present UniMASO, a Unified framework for heterogeneous Multi-Agent System Optimization through the joint adaptation of prompts and model assignments. UniMASO evaluates candidate updates through local, downstream, and global feedback, using cost-aware Pareto search to retain useful quality-cost trade-offs. Topology-aware co-evolution then coordinates these updates according to agent roles and dependencies. Cross-level trajectory memory further supplies historical successes and failures to guide subsequent optimization. Experiments on five benchmarks and five execution topologies show that UniMASO achieves competitive task performance at substantially lower deployment cost than the strongest homogeneous configurations. Under centralized execution, it improves the average score from 69.79 to 70.40 while reducing token-weighted deployment cost by 85.2% relative to DeepSeek-V4-Pro with MASPO. These results support joint prompt-model adaptation as an effective approach to efficient multi-agent collaboration. The code is available at https://github.com/Achilles008/UniMASO_main.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Not Every Agent Needs the Strongest Model: Unified Prompt-Model Optimization for Heterogeneous LLM-based Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.31743v2"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "bc5576a4ab11cf8366541f48",
+      "context_id": "6045182ca409ad30932b599f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::FORWARD",
+      "direction_title": "Distributed agents / swarm / resilient coordination [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_context_sha256": "03d9151c7db5110b51b35a1e41e22152b7b605b2b765ce31dabbf85bf35922fc",
+      "source_published": "2026-10-26T05:50:57Z",
+      "source_updated": "2026-10-26T05:50:57Z",
+      "summary": "Disease diagnosis is a key application of large language model (LLM) agents in healthcare. However, existing medical agents are primarily trained and evaluated with static question-answering data, providing limited opportunities to learn active information acquisition, examination decision-making, and dynamic clinical interaction. To address this limitation, we present ClinVerse, an interactive, real-data-grounded multi-agent environment designed for training and evaluating medical diagnostic agents. Built on ClinPatient, a scalable dataset comprising 150k diagnostic cases derived from real-world electronic health records, ClinVerse supports coordinated interactions among six specialized clinical roles. Specifically, a doctor agent starts from an initial patient complaint, progressively gathers clinical evidence through patient interviews and examination requests, and ultimately produces a diagnosis. For each interaction trajectory, a rule-based scoring framework quantifies information acquisition, examination ordering, and diagnostic accuracy. These trajectory-level scores serve as reward signals for agent training while also enabling scalable evaluation. In experiments, we evaluate various general-purpose and medical-domain models and show that nine self-evolution methods across three categories consistently improve agents' diagnostic capabilities within ClinVerse. We further analyze the interplay among model capability, environment feedback, and self-evolution methods.",
+      "tags": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "ClinVerse: A Realistic Multi-Agent Diagnostic Environment for Training and Evaluating Medical Agents",
+      "url": "https://arxiv.org/abs/2610.34878v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "fa8f865e7c5f090b6a90dd33",
+      "context_id": "6d5bc286f63da03294d4671b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent",
+        "reverse"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2917,
+      "source": "arxiv",
+      "source_context_sha256": "d1805e6c7181b08dab8c036e8577a73d8aac5470a70626dde8b4167706e2199b",
+      "source_published": "2026-10-08T01:38:24Z",
+      "source_updated": "2026-10-08T01:38:24Z",
+      "summary": "While recent advances in autonomous agents enable them to coordinate on increasingly complex tasks, prior work shows that this growing capacity for coordination can create safety risks, including collusion, in which agents jointly pursue misaligned actions while concealing the true basis of those actions from oversight. We study this risk in a simulated insider-trading environment, comparing single agents with sequential and decentralized teams across seven language models from three families. By varying agents' system-level objectives and pressure conditions, we examine when coordinated agents act on material nonpublic information, conceal the basis of a misaligned trade in a report, and maintain that deception under follow-up questioning. Compared to single-agent decision-making, multi-agent interaction raises misaligned-action rates from 35.4% to 68.2% and persistent-deception rates from 31.0% to 62.2%, both measured over all runs. These effects are largest under existential pressure, where teams sustain deception through follow-up questioning in 87% of all runs. Qualitative analysis reveals shared cover stories and coordinated rationales, suggesting group-level strategic deception rather than isolated reporting errors. To mitigate this behavior, we introduce PACT, a weak-to-strong on-policy distillation framework for mitigating collusive deception. Using generic honesty prompts, PACT trains a stronger student on its own sampled continuations, matching its next-token distribution to that of a smaller, frozen honesty-aligned teacher via reverse-KL supervision. Under existential pressure with ethical instructions, PACT reduces multi-agent persistent deception from 80% to 3%. Our results show that multi-agent coordination amplifies strategic deception and that on-policy honesty alignment can substantially mitigate these failures.",
+      "tags": [
+        "cs.MA",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "When Agents Collude: Weak-to-Strong On-Policy Distillation for Mitigating Strategic Deception in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.33011v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "e48793e4554331ea101b81c2",
+      "context_id": "08ff022adb861529094473b9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus",
+        "multi-agent",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.1667,
+      "source": "arxiv",
+      "source_context_sha256": "c625e7d140ce21e5c7b3591484e69f480157eb574bd4ec7adc039c5ab53c8c06",
+      "source_published": "2026-10-24T19:06:19Z",
+      "source_updated": "2026-10-24T19:06:19Z",
+      "summary": "Distributed Cyber-Physical Systems (CPS) and Edge AI networks increasingly depend on public-key authentication and key-establishment mechanisms that are vulnerable to cryptographically relevant Quantum Computers (QC). Shor's algorithm threatens widely deployed asymmetric primitives, while Grover's algorithm reduces the effective security margins of symmetric and hash-based mechanisms. Although Post-Quantum Cryptography (PQC) provides a migration path, its larger public keys, ciphertexts, and signatures introduce additional computation, memory, communication, storage, and packet-fragmentation costs that can constrain dynamic multi-agent systems. In this article, we introduce rotational secrecy, an architectural objective that limits temporal key exposure through authenticated transitions between cryptographic epochs. We present Private Authentication for Rotational Secrecy (PARS), a reference mechanism that coordinates policy-triggered key establishment, rotation, and reconciliation among authorized Physical AI agents. For deployments that need distributed agreement on security state, we further develop the PARS-Enabled Edge Security Ledger (PARS-ESL), an optional permissioned architecture maintained by authorized validators or capable edge gateways. PARS-ESL does not store high-volume operational transactions. Instead, it records authenticated state for key epochs, group membership, revocation, algorithm-suite policies, challenge validation, and recovery checkpoints. As a result, resource-constrained agents can take part as lightweight clients, and low-latency operational traffic stays outside the ledger consensus path, protected by the currently active symmetric epoch keys. Our results show that ledger-assisted post-quantum key-epoch management is feasible for selected Edge AI and CPS security-control workloads under the stated trust, compromise, connectivity, and resource assumptions.",
+      "tags": [
+        "cs.CR",
+        "cs.ET",
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Securing Edge & Physical AI: Post-Quantum IoT Blockchain for Mission-Critical Cyber-Physical Agents",
+      "url": "https://arxiv.org/abs/2610.33862v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "79448b651f7cbaf4c56b9ecc",
+      "context_id": "7f7051bf5fae15ae5aef48e4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "multi-agent"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "arxiv",
+      "source_context_sha256": "372674d82c81f2952646f3db473a58692160c117a869a6d411d55085e91e5c9f",
+      "source_published": "2026-10-24T15:18:31Z",
+      "source_updated": "2026-10-24T15:18:31Z",
+      "summary": "In large language model (LLM)-based multi-agent systems, reported confidence increasingly determines the allocation of scarce downstream attention, computation, and decision influence. This makes reporting strategic: an agent may overstate the relevance of its contribution even when its underlying belief is well calibrated. Existing calibration methods largely assume passive reporting and therefore do not address strategic incentives created when confidence determines downstream allocation. We formulate strategic calibration as a reporting-layer incentive problem and propose the Audited Pivot Scoring Mechanism (APSM). APSM offsets platform-controlled allocation benefits, uses inverse-propensity-weighted sparse audits, charges the Clarke pivot externality, and applies a strictly proper score. Under the stated model assumptions, truthful reporting is the unique expected-utility best response. We also characterize approximate execution and the audit-variance trade-off. Calculator-free experiments show that LLM agents inflate confidence under Top-$K$ incentives. With a shared agent-local utility interface, LLM agents reduce distortion under both Compensated Proper Scoring (CPS) and APSM. CPS achieves higher exact allocation match, whereas APSM yields lower Brier loss and numerically fewer cutoff crossings. Experiments further show that APSM enlarges the utility margin against allocation-changing deviations by $1.93\\times$ and improves robustness under approximate execution. These results support incentive-aware elicitation as a distinct layer for reliable multi-agent coordination.",
+      "tags": [
+        "cs.GT",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Strategic Calibration in LLM Multi-Agent Systems: Audited Pivot Scoring for Truthful Elicitation",
+      "url": "https://arxiv.org/abs/2610.33728v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "bc5576a4ab11cf8366541f48",
+      "context_id": "20fea241d331fcbdc8592083",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "multi-agent"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "arxiv",
+      "source_context_sha256": "156cac44801389864671e8489520cd31fc36196c13e75370b670f4362c67cc9a",
+      "source_published": "2026-10-26T05:50:57Z",
+      "source_updated": "2026-10-26T05:50:57Z",
+      "summary": "Disease diagnosis is a key application of large language model (LLM) agents in healthcare. However, existing medical agents are primarily trained and evaluated with static question-answering data, providing limited opportunities to learn active information acquisition, examination decision-making, and dynamic clinical interaction. To address this limitation, we present ClinVerse, an interactive, real-data-grounded multi-agent environment designed for training and evaluating medical diagnostic agents. Built on ClinPatient, a scalable dataset comprising 150k diagnostic cases derived from real-world electronic health records, ClinVerse supports coordinated interactions among six specialized clinical roles. Specifically, a doctor agent starts from an initial patient complaint, progressively gathers clinical evidence through patient interviews and examination requests, and ultimately produces a diagnosis. For each interaction trajectory, a rule-based scoring framework quantifies information acquisition, examination ordering, and diagnostic accuracy. These trajectory-level scores serve as reward signals for agent training while also enabling scalable evaluation. In experiments, we evaluate various general-purpose and medical-domain models and show that nine self-evolution methods across three categories consistently improve agents' diagnostic capabilities within ClinVerse. We further analyze the interplay among model capability, environment feedback, and self-evolution methods.",
+      "tags": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "ClinVerse: A Realistic Multi-Agent Diagnostic Environment for Training and Evaluating Medical Agents",
+      "url": "https://arxiv.org/abs/2610.34878v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "092adbb79c2c601621de15bb",
+      "context_id": "61c29e91a3e9fc603b52c926",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inversion",
+        "reverse"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "zenodo",
+      "source_context_sha256": "c3607d9b5c1e69f69f8bcb3b58e4b1df7d31ee3af586ee9724ed03424adb5b63",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Deepwave provides wave propagation modules for PyTorch, for applications such as seismic imaging and inversion. It performs forward modelling and backpropagation, so it can simulate wave propagation to generate synthetic data, or invert for the scattering potential (reverse-time migration, RTM, or its least-squares counterpart, LSRTM), other model parameters (full-waveform inversion, FWI), initial wavefields, or source wavelets. It can also be used inside a larger chain of operations, with forward and backpropagation flowing through the whole chain end to end. You can use your own objective functions, or functions that generate the propagator's inputs, and PyTorch's automatic differentiation calculates how to backpropagate through them. New to seismic/wave-equation terminology? The glossary defines the terms (PML, CFL, Born, FWI, and more) used throughout this README and the rest of the documentation. Deepwave requires Python 3.9 or later and PyTorch 2.4 or later. First install PyTorch for your CPU or CUDA device using the instructions on the PyTorch website . Then install Deepwave: pip install deepwave &nbsp; macOS wheels support Apple Silicon. Intel Mac wheels are no longer provided: PyTorch 2.4 and newer do not publish wheels for that platform. Prebuilt x86 wheels require AVX2. Older CPUs need a source build; see installation troubleshooting . PyTorch is Deepwave's only dependency. The example scripts under docs/ additionally import matplotlib (to draw their figures) and, in some cases, numpy , scipy (smoothing and filter design), torchaudio (applying those filters), torchvision and geomloss , but those are needed only to run the examples, never by Deepwave itself. To install all of them: pip install 'deepwave[examples]' &nbsp; The documentation contains examples and instructions on how to install and use Deepwave. You might also like to watch a video summary of Deepwave . Not every propagator supports every option (dimensionality, backend, boundary faces, batching, second-order differentiation, callbacks, ...). See the capability matrix (declared in the code and checked by conformance tests) before assuming a combination works. Why Deepwave Computationally efficient. Deepwave's compiled kernels use a hand-derived adjoint for better performance and lower memory requirements than pure PyTorch implementations. See what Deepwave calculates . Second derivatives are supported, not just first. The scalar, acoustic, and elastic propagators can compute Hessian-vector products (derivatives of gradients); see the Hessian example . Born (linearised) modelling. Model scattered waves from perturbations to a background medium for linearised inversion and imaging. See the torch.func example . Deepwave fits into an ordinary PyTorch workflow. Because propagation is a normal PyTorch autograd Function , it works directly with PyTorch optimisers, DistributedDataParallel over shots, torch.func transforms, and any PyTorch loss function or neural-network model of the input parameters. See the capability matrix for exactly what each propagator supports. Deepwave does not try to be a general symbolic PDE solver, a multi-node HPC code, or a non-differentiable simulation toolkit &mdash; see Devito , SPECFEM , and k-Wave respectively for those needs. If you are choosing between wave-propagation packages, see the comparison guide . (Note: the DeepWave-KAUST GitHub organisation, home of the SWEEP package, is unrelated to this project.) Features Supports the 1D, 2D, and 3D constant density acoustic / scalar wave equation (regular and Born modelling), variable density acoustic, elastic, viscoacoustic (single-mechanism SLS attenuation), elastic VTI (anisotropic), and pseudo-acoustic VTI ( deepwave.acoustic_vti , the Duveneck et al. 2008 V_S=0 reduction) wave equations Runs on CPUs and appropriate GPUs The gradient of all outputs (final wavefields and receiver data) can be calculated with respect to the model parameters (wavespeed, scattering potential, etc",
+      "tags": [
+        "seismic",
+        "wave propagation",
+        "full waveform inversion",
+        "fwi",
+        "least squares reverse time migration",
+        "lsrtm",
+        "pytorch",
+        "geophysics"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Deepwave",
+      "url": "https://zenodo.org/records/23676108"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "46a2fd08b45b6a241f29f0b7",
+      "context_id": "43ef206db7716300d53b7654",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "agent orchestration",
+        "multi-agent"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.25,
+      "source": "arxiv",
+      "source_context_sha256": "c8898862c0959fb26efedaa7a0646a06909c26f45be0c4424eb89d2aa8b90843",
+      "source_published": "2026-10-25T17:38:55Z",
+      "source_updated": "2026-10-25T17:38:55Z",
+      "summary": "Multi-agent systems often rely on predefined collaboration structures, limiting their ability to adapt to diverse task requirements. We introduce DynaFlow, a framework that integrates free-form executable workflow synthesis into the action space of the main agent. The agent decides when collaboration is needed and generates task-specific programs that coordinate sub-agents through sequential or parallel execution, structured information exchange, and verification. Execution results and traces inform subsequent actions, enabling the agent to adapt collaboration as reasoning progresses. We train only the main agent through supervised fine-tuning on distilled trajectories, followed by refinement on examples filtered for unsupported premises, biased verification, and information-flow defects. All sub-agents remain fixed, separating orchestration learning from executor capability improvement. Across six benchmarks spanning mathematical reasoning, scientific question answering, and multi-hop retrieval, DynaFlow achieves 88.08% overall accuracy in Forced mode, outperforming the strongest evaluated baseline by 10.90 percentage points with the same Qwen3.5-27B backbone. Workflow analysis finds more explicit use, verification, and refinement of upstream outputs after training, highlighting cross-stage information flow as a key dimension of multi-agent orchestration.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "DynaFlow: Learning Free-Form Multi-Agent Orchestration",
+      "url": "https://arxiv.org/abs/2610.34467v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "2da87da447268a98f3658eb2",
+      "context_id": "ed3706d914261a1b8ebb049e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_context_sha256": "db1cc4daa51860bf1864508e57b7012b2340d3b123e9c3368a86702a32f0c53e",
+      "source_published": "2026-10-26T03:41:48Z",
+      "source_updated": "2026-10-26T03:41:48Z",
+      "summary": "Centralized training with decentralized execution (CTDE) has become the dominant paradigm in multi-agent reinforcement learning (MARL), motivating extensive study of what privileged information should be made available to the critic during training. While prior work has examined the role of global state in fully cooperative settings, the design of centralized critics for N-agent ad hoc teamwork - in which dynamically varying set of learning agents must coordinate with an arbitrary set of uncontrolled teammates drawn from an unknown distribution - remains poorly understood. We study this question by comparing two natural classes of advantage estimators: controlled history estimators, which condition only on the observation and action histories of the learner's own agents, and joint history estimators, which additionally condition on the histories of the uncontrolled teammates. We prove that both estimators are unbiased and characterize the conditions under which the joint history estimate attains strictly lower variance than its controlled counterpart. Empirically, joint history critics match or outperform controlled history critics across a range of NAHT tasks, yielding improved sample efficiency and final returns. Together, these results provide both a theoretical justification and an empirical recommendation for incorporating uncontrolled agent histories into centralized critics for N-agent ad hoc teamwork.",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Centralized Critics for N-Agent Ad Hoc Teamwork",
+      "url": "https://arxiv.org/abs/2610.34799v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "f09793f4bae409744a894163",
+      "context_id": "c9f6b90ec4528c21e7a9d53c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_context_sha256": "ffe9730d92fe4e4c061ab8647ac3fd87cab25fbad996f508d71883836c5d08c3",
+      "source_published": "2026-10-25T07:39:23Z",
+      "source_updated": "2026-10-25T07:39:23Z",
+      "summary": "Multi-agent reinforcement learning supports cooperative decision-making in Internet of Things systems, but strategic deviations can disrupt coordination and undermine confidence in the training process. This paper proposes Blockchain-Enabled Centralized Training and Decentralized Execution (BE-CTDE), which uses blockchain as an active training-management layer. A behavioral verifier compares executed trajectories with shared-policy recommendations; its flags drive a token mechanism combining slashing, burning, rewards, and compensation. Retained balances determine each agent's contribution to the global policy update, connecting auditable behavior to learning influence. We derive a one-round incentive condition that accounts for action-dependent compensation and the payoff from deviation, and a finite expected exclusion-time bound under explicit conditional detection and accounting assumptions, showing perfect detection is unnecessary. An exact finite-population capacity bound characterizes the limits of the population-relative detector. In multi-agent path finding experiments, BE-CTDE outperforms a state-of-the-art learning-based path planner with substantially higher success rates under attack, even when adversaries form the majority. It also outperforms partially defended baselines in all configurations, with collision rates up to 35% lower than under detection without economic consequences and up to 43% lower than under conventional stake slashing. Together, these results characterize how behavioral verification and token feedback can support accountable cooperative learning.",
+      "tags": [
+        "cs.MA",
+        "cs.CR",
+        "cs.LG",
+        "cs.NI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "BE-CTDE: Blockchain-Enabled Multi-Agent Reinforcement Learning with Anomaly Detection and Token Economics",
+      "url": "https://arxiv.org/abs/2610.34121v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "7dd8adadd01f5c38d45cdc4a",
+      "context_id": "49be053f8ffb1efd9da35188",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_context_sha256": "0a59056ac201df4e6ddb2c7eaefe43b8b76a85f39359c14591cdd4f034b5cec7",
+      "source_published": "2026-10-24T10:24:37Z",
+      "source_updated": "2026-10-24T10:24:37Z",
+      "summary": "Cooperative transport with heterogeneous legged robots requires coordinating different motion capabilities while supporting an unfixed shared payload. We present HA-DiPO (Heterogeneous-Agent Diffusion Policy Optimization), a hierarchical multi-agent reinforcement learning framework under centralized training with decentralized execution (CTDE). The framework decouples team-level coordination from embodiment-specific motion control: at the high level, a centralized critic uses team-value estimates to jointly train independent coordination policies, aligning robot-specific action responses with a shared transport objective; at the low level, embodiment-specific robust motion policies track the coordination commands. The high-level diffusion policies offer more flexible action distributions than single-Gaussian parameterizations, allowing potentially multimodal coordination responses to be represented. The coordination policies learn from scratch through reward-driven simulator interaction without demonstrations. At execution, each robot generates coordination commands using only local robot and payload observations, without partner-state inputs or inter-robot messages. Simulation comparisons show that HA-DiPO achieves higher final mean returns and velocity-tracking success rates, as well as lower velocity errors, than the evaluated baselines. Real-world experiments further demonstrate quadrupedal-wheeled-legged and human-robot cooperative transport.",
+      "tags": [
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "HA-DiPO: Diffusion Policy Optimization for Heterogeneous Cooperative Transport",
+      "url": "https://arxiv.org/abs/2610.33584v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "69182d0d19fcf12f0ae1e3a1",
+      "context_id": "0a731b29c96e29c1a0b80631",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9167,
+      "source": "arxiv",
+      "source_context_sha256": "529d45f9133243984890e435b41cb3e9bde491af1c1eb8c2510ab87eabe56b74",
+      "source_published": "2026-10-26T17:02:10Z",
+      "source_updated": "2026-10-26T17:02:10Z",
+      "summary": "Multivariate time series produced by industrial installations and server clusters are under continuous monitoring, and anomaly detection is the first line of defense before a local fault escalates into a system-wide failure. In the absence of labels, the dominant paradigm trains a reconstruction model on normal data and scores the residual to reach a verdict. Recent work has steadily enriched the expressiveness of the recovery map through Transformers, diffusion models, and cross-scale associations. A residual, however, only certifies that an observation can be recovered; it does not certify that the variables still explain one another as they do under normal operation. A coordinated yet unfamiliar operating transition inflates the residual without breaking any relationship, whereas a sensor drifting away from its peers may leave the residual silent. Methods that fold inter-variable dependencies into the reconstruction objective inherit this ambiguity, because their relational evidence is ultimately supervised by the same recovery loss. We therefore propose CLOSURE, which evaluates recoverability and cross-channel consistency as two normal-data prediction tasks learned in separation. The recoverability task is solved by a diffusion reconstructor conditioned on a discrete memory of normal temporal bases. The consistency task is solved by a relation-closure operator that predicts every channel exclusively from the others, where the target's own trajectory is withheld and sparse signed gates decide which peers are actually used. The two scores are reconciled only through calibration on normal data. Extensive experiments show that CLOSURE consistently outperforms recent reconstruction-, frequency-, and topology-based detectors on public benchmark streams, confirming the value of examining consistency alongside recoverability.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "CLOSURE: Cross-Channel Closure for Multivariate Time Series Anomaly Detection",
+      "url": "https://arxiv.org/abs/2610.35753v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "aafeb18bdb17c841b0276b20",
+      "context_id": "009bb57e9647d7cfb807e791",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9167,
+      "source": "arxiv",
+      "source_context_sha256": "bfe682d6bfc3b994602b34cd3640d3d16d86418d1dd4aed8858e581475dddd98",
+      "source_published": "2026-10-25T08:20:30Z",
+      "source_updated": "2026-10-25T08:20:30Z",
+      "summary": "On million-node graphs, the memory wall arrives before the compute wall: a GNN that never fits in VRAM cannot deliver the all-node inference its accuracy promises. The standard remedy, pruning, has always been an accuracy tax - paid once and never refunded. DPR refuses this framing. Its central insight is that the mask that shrinks training can also scaffold recovery: one compact node set bounds both computations of graph learning, serving as the encoder's training graph and, at inference, as the anchor from which a sparse structure-aware decoder rebuilds every pruned node (double-layer sparsification). The order is inverted - prune for efficiency, then reconstruct for accuracy - and the tax is repaid: the deployed 30%-budget model trains in 1,450 MiB of peak memory on one 6 GB GPU and recovers 96.9% of its dense-reconstruction reference, beating a same-GPU rerun of the edge-sparsification baseline DSpar by +1.36 pp at 50.1% lower peak training memory; against the same-protocol full-batch no-prune encoder the deployed point pays a measured 2.64 pp accuracy tax for a 2.8x smaller training footprint. Pruning without reconstruction leaves the encoder at 0.378 within the same 40-epoch window (Fig. 4), and all-node serving runs 46x faster than sampling-based GraphSAGE, giving up approx. 5.4 pp of test accuracy. The framework scales to a 2.45M-node production graph at 6,285 MiB of peak training memory; extended variants (long-range context, external text features, a CAN-bus application) are reported as extensions and do not compete with the deployed method, and the 41.8%-budget M4 point, scored on a coarsened super-node graph with its own split, is reported separately rather than compared with the original-node baselines. DPR thus turns aggressive node pruning from an accuracy tax into a safe training accelerator for VRAM-limited all-node inference.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Decoupled Prune-and-Reconstruct: Training on a Compact Core with Double-Layer Sparsification",
+      "url": "https://arxiv.org/abs/2610.34140v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "171bd974efb3c09ae5671e9b",
+      "context_id": "65783ccd0f9a058b20769fe4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent",
+        "swarm"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.6667,
+      "source": "arxiv",
+      "source_context_sha256": "8d0611fc9ac06544b3506664dcc1e8bfc7eb25f62347cceda38ef5438b98b785",
+      "source_published": "2026-10-17T08:45:11Z",
+      "source_updated": "2026-10-17T08:45:11Z",
+      "summary": "Large language model (LLM) agents increasingly automate complex tasks, with multi-agent systems seeking further performance gains through specialization and collaboration. However, distributing work across agents does not automatically yield complementary contributions, and inter-agent dependencies can turn local errors into task failure. To address these challenges, we propose AutoSwarm, a multi-agent framework for collaborative problem solving. Collaboration formation jointly defines responsibility boundaries and conditions for acceptance and downstream use, grounding capability allocation in contributions that other agents can assess and integrate toward a shared objective. Execution coordination couples agents' local progress through a shared state, using dependencies and supervisory relationships to govern agent activation, result handoffs, and integration while adapting subsequent actions to review feedback and emerging blockers. Experiments spanning long-horizon programming, interactive planning, and professional financial analysis demonstrate AutoSwarm's advantages over single-agent baselines and existing multi-agent frameworks. Source code is available at https://github.com/HKUDS/AutoSwarm.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "AutoSwarm: Automating Agent Swarms",
+      "url": "https://arxiv.org/abs/2610.33048v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "fa8f865e7c5f090b6a90dd33",
+      "context_id": "0c7ff9b869a70365a4fc0c8c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "failure",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2917,
+      "source": "arxiv",
+      "source_context_sha256": "97850988d3988055ae1436cfc2fe2088ff1437de0749387355c83e299184f29c",
+      "source_published": "2026-10-08T01:38:24Z",
+      "source_updated": "2026-10-08T01:38:24Z",
+      "summary": "While recent advances in autonomous agents enable them to coordinate on increasingly complex tasks, prior work shows that this growing capacity for coordination can create safety risks, including collusion, in which agents jointly pursue misaligned actions while concealing the true basis of those actions from oversight. We study this risk in a simulated insider-trading environment, comparing single agents with sequential and decentralized teams across seven language models from three families. By varying agents' system-level objectives and pressure conditions, we examine when coordinated agents act on material nonpublic information, conceal the basis of a misaligned trade in a report, and maintain that deception under follow-up questioning. Compared to single-agent decision-making, multi-agent interaction raises misaligned-action rates from 35.4% to 68.2% and persistent-deception rates from 31.0% to 62.2%, both measured over all runs. These effects are largest under existential pressure, where teams sustain deception through follow-up questioning in 87% of all runs. Qualitative analysis reveals shared cover stories and coordinated rationales, suggesting group-level strategic deception rather than isolated reporting errors. To mitigate this behavior, we introduce PACT, a weak-to-strong on-policy distillation framework for mitigating collusive deception. Using generic honesty prompts, PACT trains a stronger student on its own sampled continuations, matching its next-token distribution to that of a smaller, frozen honesty-aligned teacher via reverse-KL supervision. Under existential pressure with ethical instructions, PACT reduces multi-agent persistent deception from 80% to 3%. Our results show that multi-agent coordination amplifies strategic deception and that on-policy honesty alignment can substantially mitigate these failures.",
+      "tags": [
+        "cs.MA",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "When Agents Collude: Weak-to-Strong On-Policy Distillation for Mitigating Strategic Deception in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.33011v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "171bd974efb3c09ae5671e9b",
+      "context_id": "bb86e03ce4c6b749d7dfd695",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "multi-agent",
+        "swarm"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.9583,
+      "source": "arxiv",
+      "source_context_sha256": "6cc2c3e0a11d2b7142e77f25a2549b2bbf80cdfe76df55a09b087870233094f2",
+      "source_published": "2026-10-17T08:45:11Z",
+      "source_updated": "2026-10-17T08:45:11Z",
+      "summary": "Large language model (LLM) agents increasingly automate complex tasks, with multi-agent systems seeking further performance gains through specialization and collaboration. However, distributing work across agents does not automatically yield complementary contributions, and inter-agent dependencies can turn local errors into task failure. To address these challenges, we propose AutoSwarm, a multi-agent framework for collaborative problem solving. Collaboration formation jointly defines responsibility boundaries and conditions for acceptance and downstream use, grounding capability allocation in contributions that other agents can assess and integrate toward a shared objective. Execution coordination couples agents' local progress through a shared state, using dependencies and supervisory relationships to govern agent activation, result handoffs, and integration while adapting subsequent actions to review feedback and emerging blockers. Experiments spanning long-horizon programming, interactive planning, and professional financial analysis demonstrate AutoSwarm's advantages over single-agent baselines and existing multi-agent frameworks. Source code is available at https://github.com/HKUDS/AutoSwarm.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "AutoSwarm: Automating Agent Swarms",
+      "url": "https://arxiv.org/abs/2610.33048v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "ffec935a1449285d5d03ef2e",
+      "context_id": "55c26274226a0fd125d93845",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.875,
+      "source": "arxiv",
+      "source_context_sha256": "a4d2eeb9ee6e81f0e7f9e927cbcec6765e13c768079934bc4c05a08f4879a858",
+      "source_published": "2026-10-22T14:01:31Z",
+      "source_updated": "2026-10-26T04:46:32Z",
+      "summary": "Memory enables language agents to carry useful distinctions from past experience into future decisions. Its value depends on which distinctions survive, whether a bounded agent can use them, and what can be recovered or revised as demands evolve. We develop a decision-theoretic framework that follows this value from raw history through persistent state, operational use, and costly recovery and revision. Original and retained value are expressed in units of avoided task loss; risk-cost frontiers describe attainable recovery and preservation across uses. Unknown demand yields value profiles, while interactive feedback changes the distribution of future work. A cost-aware simulation condition and five minimal counterexamples expose the roles of information timing, retrieval access, component interaction, feedback and demand uncertainty. In particular, a pointer with zero mutual information about the answer can still reduce the cost of exact recovery. Diagnostics on LoCoMo, a two-project update task and longitudinal cases exhibit failures of preservation, use and measurement. At fixed retrieved evidence, a saved ledger changes subsequent answers; at fixed agent outputs, an evaluator revision changes scores. The framework connects these distinctions to operational risk bounds and testable principles for allocating memory, preserving recovery options and revising evidence dependencies.",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "The Value of Memory in Language Agents",
+      "url": "https://arxiv.org/abs/2610.31303v2"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "e48793e4554331ea101b81c2",
+      "context_id": "7d085ed19a2a9936de3270d8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.8333,
+      "source": "arxiv",
+      "source_context_sha256": "b2b9e41319bb674c9bf0d3fe10a070feebe6f48828eb0698e37d8a57b702f3d8",
+      "source_published": "2026-10-24T19:06:19Z",
+      "source_updated": "2026-10-24T19:06:19Z",
+      "summary": "Distributed Cyber-Physical Systems (CPS) and Edge AI networks increasingly depend on public-key authentication and key-establishment mechanisms that are vulnerable to cryptographically relevant Quantum Computers (QC). Shor's algorithm threatens widely deployed asymmetric primitives, while Grover's algorithm reduces the effective security margins of symmetric and hash-based mechanisms. Although Post-Quantum Cryptography (PQC) provides a migration path, its larger public keys, ciphertexts, and signatures introduce additional computation, memory, communication, storage, and packet-fragmentation costs that can constrain dynamic multi-agent systems. In this article, we introduce rotational secrecy, an architectural objective that limits temporal key exposure through authenticated transitions between cryptographic epochs. We present Private Authentication for Rotational Secrecy (PARS), a reference mechanism that coordinates policy-triggered key establishment, rotation, and reconciliation among authorized Physical AI agents. For deployments that need distributed agreement on security state, we further develop the PARS-Enabled Edge Security Ledger (PARS-ESL), an optional permissioned architecture maintained by authorized validators or capable edge gateways. PARS-ESL does not store high-volume operational transactions. Instead, it records authenticated state for key epochs, group membership, revocation, algorithm-suite policies, challenge validation, and recovery checkpoints. As a result, resource-constrained agents can take part as lightweight clients, and low-latency operational traffic stays outside the ledger consensus path, protected by the currently active symmetric epoch keys. Our results show that ledger-assisted post-quantum key-epoch management is feasible for selected Edge AI and CPS security-control workloads under the stated trust, compromise, connectivity, and resource assumptions.",
+      "tags": [
+        "cs.CR",
+        "cs.ET",
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Securing Edge & Physical AI: Post-Quantum IoT Blockchain for Mission-Critical Cyber-Physical Agents",
+      "url": "https://arxiv.org/abs/2610.33862v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "a3d1abb297f1d820dd2e55b9",
+      "context_id": "68c3e856e2d7180c6b554d49",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "arxiv",
+      "source_context_sha256": "4d0b88ccbd2f121a896520350faba39e980ae45c775cc1e40165ec5f515bce9d",
+      "source_published": "2026-10-22T17:24:23Z",
+      "source_updated": "2026-10-26T09:38:33Z",
+      "summary": "Large language model (LLM)-based multi-agent systems (MAS) rely on role-specific prompts and execution models to solve complex tasks collaboratively. However, prompt optimization typically keeps model assignments fixed, leaving differences in role requirements and their associated inference costs outside the search. We present UniMASO, a Unified framework for heterogeneous Multi-Agent System Optimization through the joint adaptation of prompts and model assignments. UniMASO evaluates candidate updates through local, downstream, and global feedback, using cost-aware Pareto search to retain useful quality-cost trade-offs. Topology-aware co-evolution then coordinates these updates according to agent roles and dependencies. Cross-level trajectory memory further supplies historical successes and failures to guide subsequent optimization. Experiments on five benchmarks and five execution topologies show that UniMASO achieves competitive task performance at substantially lower deployment cost than the strongest homogeneous configurations. Under centralized execution, it improves the average score from 69.79 to 70.40 while reducing token-weighted deployment cost by 85.2% relative to DeepSeek-V4-Pro with MASPO. These results support joint prompt-model adaptation as an effective approach to efficient multi-agent collaboration. The code is available at https://github.com/Achilles008/UniMASO_main.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Not Every Agent Needs the Strongest Model: Unified Prompt-Model Optimization for Heterogeneous LLM-based Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.31743v2"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "46a2fd08b45b6a241f29f0b7",
+      "context_id": "5b2fbba954c285a6c8d5fa57",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "agent orchestration",
+        "bias",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.4167,
+      "source": "arxiv",
+      "source_context_sha256": "d501bbd650276cd7cb02626f439f3b2bf8ac9e62273432c21d7e248d7c151848",
+      "source_published": "2026-10-25T17:38:55Z",
+      "source_updated": "2026-10-25T17:38:55Z",
+      "summary": "Multi-agent systems often rely on predefined collaboration structures, limiting their ability to adapt to diverse task requirements. We introduce DynaFlow, a framework that integrates free-form executable workflow synthesis into the action space of the main agent. The agent decides when collaboration is needed and generates task-specific programs that coordinate sub-agents through sequential or parallel execution, structured information exchange, and verification. Execution results and traces inform subsequent actions, enabling the agent to adapt collaboration as reasoning progresses. We train only the main agent through supervised fine-tuning on distilled trajectories, followed by refinement on examples filtered for unsupported premises, biased verification, and information-flow defects. All sub-agents remain fixed, separating orchestration learning from executor capability improvement. Across six benchmarks spanning mathematical reasoning, scientific question answering, and multi-hop retrieval, DynaFlow achieves 88.08% overall accuracy in Forced mode, outperforming the strongest evaluated baseline by 10.90 percentage points with the same Qwen3.5-27B backbone. Workflow analysis finds more explicit use, verification, and refinement of upstream outputs after training, highlighting cross-stage information flow as a key dimension of multi-agent orchestration.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "DynaFlow: Learning Free-Form Multi-Agent Orchestration",
+      "url": "https://arxiv.org/abs/2610.34467v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "2da87da447268a98f3658eb2",
+      "context_id": "f3b1952ecc05862086e3a9a5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.1667,
+      "source": "arxiv",
+      "source_context_sha256": "0edd5914606a6e86fb637127ceaf2859ad9eb7edd7ba1ea8297b07fde771c1ea",
+      "source_published": "2026-10-26T03:41:48Z",
+      "source_updated": "2026-10-26T03:41:48Z",
+      "summary": "Centralized training with decentralized execution (CTDE) has become the dominant paradigm in multi-agent reinforcement learning (MARL), motivating extensive study of what privileged information should be made available to the critic during training. While prior work has examined the role of global state in fully cooperative settings, the design of centralized critics for N-agent ad hoc teamwork - in which dynamically varying set of learning agents must coordinate with an arbitrary set of uncontrolled teammates drawn from an unknown distribution - remains poorly understood. We study this question by comparing two natural classes of advantage estimators: controlled history estimators, which condition only on the observation and action histories of the learner's own agents, and joint history estimators, which additionally condition on the histories of the uncontrolled teammates. We prove that both estimators are unbiased and characterize the conditions under which the joint history estimate attains strictly lower variance than its controlled counterpart. Empirically, joint history critics match or outperform controlled history critics across a range of NAHT tasks, yielding improved sample efficiency and final returns. Together, these results provide both a theoretical justification and an empirical recommendation for incorporating uncontrolled agent histories into centralized critics for N-agent ad hoc teamwork.",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Centralized Critics for N-Agent Ad Hoc Teamwork",
+      "url": "https://arxiv.org/abs/2610.34799v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "de1bd8947df51f222579935c",
+      "context_id": "8f1df470bcdf5a8d858cce2a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.9583,
+      "source": "arxiv",
+      "source_context_sha256": "52c1212d0d558ef1b0dd4a2614403c81f09da21c3e81547d865d822af50e6b69",
+      "source_published": "2026-10-26T09:31:21Z",
+      "source_updated": "2026-10-26T09:31:21Z",
+      "summary": "Test-Time Prompt Tuning (TPT) adapts large pretrained models to unseen target distribution shifts by updating only lightweight prompt tokens. Existing TPT methods are effective, but they mainly optimize each prompt update locally. Across test-time steps, prompts updated at the current step are reused for the corresponding predictions and updates, so noisy or biased unlabeled objectives can accumulate and destabilize the prompt-update trajectory. We identify two failure modes: magnitude expansion, where updates move the prompt too far, and directional drift, where consecutive updates point in inconsistent directions. To analyze and control these failures, we propose Test-Time Prompt-Agnostic Decomposition ($\\mathtt{TPD}$), which characterizes observed prompt-update trajectories from a dynamical-systems view and decomposes base prompt updates into magnitude and direction. $\\mathtt{TPD}$ computes a spectral radius to measure update expansion and decomposes update directions into persistent, oscillatory, and residual components. Building on this decomposition, Adaptive Koopman Control ($\\mathtt{AKC}$) regulates update magnitude by shrinking updates under expansive recent dynamics, while Hankel Update Router ($\\mathtt{HUR}$) refines update direction by preserving persistent components and suppressing oscillatory and residual components. Together, $\\mathtt{AKC}$ and $\\mathtt{HUR}$ produce a stabilized prompt update. As a prompt-agnostic framework, $\\mathtt{TPD}$ can be plugged into visual and text TPT methods without modifying the backbone, prompt architecture, or adaptation loss. Experiments on 15 datasets show that $\\mathtt{TPD}$ consistently improves 10 baselines, with accuracy gains of $3$--$8\\%$ for visual prompts and over $2\\%$ for text prompts.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Test-Time Prompt-Agnostic Decomposition",
+      "url": "https://arxiv.org/abs/2610.35090v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "7dd8adadd01f5c38d45cdc4a",
+      "context_id": "ee4bba8daf95ed23cff093df",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_context_sha256": "41ed990daea7bdca61cdb98bca4d12a5120df3d95ab96916523dc697bd59ce8d",
+      "source_published": "2026-10-24T10:24:37Z",
+      "source_updated": "2026-10-24T10:24:37Z",
+      "summary": "Cooperative transport with heterogeneous legged robots requires coordinating different motion capabilities while supporting an unfixed shared payload. We present HA-DiPO (Heterogeneous-Agent Diffusion Policy Optimization), a hierarchical multi-agent reinforcement learning framework under centralized training with decentralized execution (CTDE). The framework decouples team-level coordination from embodiment-specific motion control: at the high level, a centralized critic uses team-value estimates to jointly train independent coordination policies, aligning robot-specific action responses with a shared transport objective; at the low level, embodiment-specific robust motion policies track the coordination commands. The high-level diffusion policies offer more flexible action distributions than single-Gaussian parameterizations, allowing potentially multimodal coordination responses to be represented. The coordination policies learn from scratch through reward-driven simulator interaction without demonstrations. At execution, each robot generates coordination commands using only local robot and payload observations, without partner-state inputs or inter-robot messages. Simulation comparisons show that HA-DiPO achieves higher final mean returns and velocity-tracking success rates, as well as lower velocity errors, than the evaluated baselines. Real-world experiments further demonstrate quadrupedal-wheeled-legged and human-robot cooperative transport.",
+      "tags": [
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "HA-DiPO: Diffusion Policy Optimization for Heterogeneous Cooperative Transport",
+      "url": "https://arxiv.org/abs/2610.33584v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "f09793f4bae409744a894163",
+      "context_id": "5f60b906705227b4c2a2cfdb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_context_sha256": "657c2119a51dc8845fea48907d177decfa48ad3b9bec26ba614898668b1e5263",
+      "source_published": "2026-10-25T07:39:23Z",
+      "source_updated": "2026-10-25T07:39:23Z",
+      "summary": "Multi-agent reinforcement learning supports cooperative decision-making in Internet of Things systems, but strategic deviations can disrupt coordination and undermine confidence in the training process. This paper proposes Blockchain-Enabled Centralized Training and Decentralized Execution (BE-CTDE), which uses blockchain as an active training-management layer. A behavioral verifier compares executed trajectories with shared-policy recommendations; its flags drive a token mechanism combining slashing, burning, rewards, and compensation. Retained balances determine each agent's contribution to the global policy update, connecting auditable behavior to learning influence. We derive a one-round incentive condition that accounts for action-dependent compensation and the payoff from deviation, and a finite expected exclusion-time bound under explicit conditional detection and accounting assumptions, showing perfect detection is unnecessary. An exact finite-population capacity bound characterizes the limits of the population-relative detector. In multi-agent path finding experiments, BE-CTDE outperforms a state-of-the-art learning-based path planner with substantially higher success rates under attack, even when adversaries form the majority. It also outperforms partially defended baselines in all configurations, with collision rates up to 35% lower than under detection without economic consequences and up to 43% lower than under conventional stake slashing. Together, these results characterize how behavioral verification and token feedback can support accountable cooperative learning.",
+      "tags": [
+        "cs.MA",
+        "cs.CR",
+        "cs.LG",
+        "cs.NI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "BE-CTDE: Blockchain-Enabled Multi-Agent Reinforcement Learning with Anomaly Detection and Token Economics",
+      "url": "https://arxiv.org/abs/2610.34121v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "6de3635d449a94c7c2a8e878",
+      "context_id": "b84fa26bac9e17ab23f1dc80",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.875,
+      "source": "arxiv",
+      "source_context_sha256": "4ccf11ded08701d3fe2fa62fade594578eb154b5e550c61092388fcec78e2d37",
+      "source_published": "2026-10-24T08:35:39Z",
+      "source_updated": "2026-10-24T08:35:39Z",
+      "summary": "Large language model (LLM)-based multi-agent systems have demonstrated remarkable capabilities across diverse tasks. Yet their memory and collaboration architectures often remain static, constraining continued adaptation and improvement over time. Recent work addresses this limitation by evolving memory or collaboration based on interaction experience. However, updates to these interdependent components are not necessarily aligned: an evolved workflow may require experience that memory does not provide, while evolved memory may encode guidance that the workflow cannot use. To address this problem, we propose CoEvolve, a skill-centered framework for aligned memory--collaboration evolution. CoEvolve represents reusable local collaboration patterns as skills that link evolving collaboration decisions to their supporting memories. It further compares original and counterfactual trajectories to identify local evolution signals, which coordinate updates to the skill library, skill memory, and executor memories across rounds. Experiments on the ALFWorld and WebShop benchmarks confirm that CoEvolve achieves the best overall performance among the evaluated baselines, while ablation studies further validate the effectiveness of aligned co-evolution and counterfactual-guided evolution.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "CoEvolve: Counterfactual-Guided Co-Evolution of Memory and Collaboration in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.33539v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "bc5576a4ab11cf8366541f48",
+      "context_id": "877ac8082453d24c9cfb38f8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.875,
+      "source": "arxiv",
+      "source_context_sha256": "42e622a2c701278f93f5392867f35672b02d0113916934f1dd4a8504ed07b750",
+      "source_published": "2026-10-26T05:50:57Z",
+      "source_updated": "2026-10-26T05:50:57Z",
+      "summary": "Disease diagnosis is a key application of large language model (LLM) agents in healthcare. However, existing medical agents are primarily trained and evaluated with static question-answering data, providing limited opportunities to learn active information acquisition, examination decision-making, and dynamic clinical interaction. To address this limitation, we present ClinVerse, an interactive, real-data-grounded multi-agent environment designed for training and evaluating medical diagnostic agents. Built on ClinPatient, a scalable dataset comprising 150k diagnostic cases derived from real-world electronic health records, ClinVerse supports coordinated interactions among six specialized clinical roles. Specifically, a doctor agent starts from an initial patient complaint, progressively gathers clinical evidence through patient interviews and examination requests, and ultimately produces a diagnosis. For each interaction trajectory, a rule-based scoring framework quantifies information acquisition, examination ordering, and diagnostic accuracy. These trajectory-level scores serve as reward signals for agent training while also enabling scalable evaluation. In experiments, we evaluate various general-purpose and medical-domain models and show that nine self-evolution methods across three categories consistently improve agents' diagnostic capabilities within ClinVerse. We further analyze the interplay among model capability, environment feedback, and self-evolution methods.",
+      "tags": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "ClinVerse: A Realistic Multi-Agent Diagnostic Environment for Training and Evaluating Medical Agents",
+      "url": "https://arxiv.org/abs/2610.34878v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "46a2fd08b45b6a241f29f0b7",
+      "context_id": "4e313117beb70d854899288b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "agent orchestration",
+        "baseline",
+        "benchmark",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 14.9583,
+      "source": "arxiv",
+      "source_context_sha256": "ce7566da44c5bb808fd7df438d7eea98127be1368372e2e3523d71c0e8b6ecc0",
+      "source_published": "2026-10-25T17:38:55Z",
+      "source_updated": "2026-10-25T17:38:55Z",
+      "summary": "Multi-agent systems often rely on predefined collaboration structures, limiting their ability to adapt to diverse task requirements. We introduce DynaFlow, a framework that integrates free-form executable workflow synthesis into the action space of the main agent. The agent decides when collaboration is needed and generates task-specific programs that coordinate sub-agents through sequential or parallel execution, structured information exchange, and verification. Execution results and traces inform subsequent actions, enabling the agent to adapt collaboration as reasoning progresses. We train only the main agent through supervised fine-tuning on distilled trajectories, followed by refinement on examples filtered for unsupported premises, biased verification, and information-flow defects. All sub-agents remain fixed, separating orchestration learning from executor capability improvement. Across six benchmarks spanning mathematical reasoning, scientific question answering, and multi-hop retrieval, DynaFlow achieves 88.08% overall accuracy in Forced mode, outperforming the strongest evaluated baseline by 10.90 percentage points with the same Qwen3.5-27B backbone. Workflow analysis finds more explicit use, verification, and refinement of upstream outputs after training, highlighting cross-stage information flow as a key dimension of multi-agent orchestration.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "DynaFlow: Learning Free-Form Multi-Agent Orchestration",
+      "url": "https://arxiv.org/abs/2610.34467v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "7dd8adadd01f5c38d45cdc4a",
+      "context_id": "7e16988df27535d538162c74",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control",
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 14.625,
+      "source": "arxiv",
+      "source_context_sha256": "437d3ad5f1662e90c5ccf9e0b88891f371a043737bda58e511706ab6e8fec8a9",
+      "source_published": "2026-10-24T10:24:37Z",
+      "source_updated": "2026-10-24T10:24:37Z",
+      "summary": "Cooperative transport with heterogeneous legged robots requires coordinating different motion capabilities while supporting an unfixed shared payload. We present HA-DiPO (Heterogeneous-Agent Diffusion Policy Optimization), a hierarchical multi-agent reinforcement learning framework under centralized training with decentralized execution (CTDE). The framework decouples team-level coordination from embodiment-specific motion control: at the high level, a centralized critic uses team-value estimates to jointly train independent coordination policies, aligning robot-specific action responses with a shared transport objective; at the low level, embodiment-specific robust motion policies track the coordination commands. The high-level diffusion policies offer more flexible action distributions than single-Gaussian parameterizations, allowing potentially multimodal coordination responses to be represented. The coordination policies learn from scratch through reward-driven simulator interaction without demonstrations. At execution, each robot generates coordination commands using only local robot and payload observations, without partner-state inputs or inter-robot messages. Simulation comparisons show that HA-DiPO achieves higher final mean returns and velocity-tracking success rates, as well as lower velocity errors, than the evaluated baselines. Real-world experiments further demonstrate quadrupedal-wheeled-legged and human-robot cooperative transport.",
+      "tags": [
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "HA-DiPO: Diffusion Policy Optimization for Heterogeneous Cooperative Transport",
+      "url": "https://arxiv.org/abs/2610.33584v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "6de3635d449a94c7c2a8e878",
+      "context_id": "1d059f9d4eca29ae9762abdf",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline",
+        "benchmark",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 14.5,
+      "source": "arxiv",
+      "source_context_sha256": "5daf11e29a56a8907127aa8933f6bf1eaa68a214145de080af7e647c7c126497",
+      "source_published": "2026-10-24T08:35:39Z",
+      "source_updated": "2026-10-24T08:35:39Z",
+      "summary": "Large language model (LLM)-based multi-agent systems have demonstrated remarkable capabilities across diverse tasks. Yet their memory and collaboration architectures often remain static, constraining continued adaptation and improvement over time. Recent work addresses this limitation by evolving memory or collaboration based on interaction experience. However, updates to these interdependent components are not necessarily aligned: an evolved workflow may require experience that memory does not provide, while evolved memory may encode guidance that the workflow cannot use. To address this problem, we propose CoEvolve, a skill-centered framework for aligned memory--collaboration evolution. CoEvolve represents reusable local collaboration patterns as skills that link evolving collaboration decisions to their supporting memories. It further compares original and counterfactual trajectories to identify local evolution signals, which coordinate updates to the skill library, skill memory, and executor memories across rounds. Experiments on the ALFWorld and WebShop benchmarks confirm that CoEvolve achieves the best overall performance among the evaluated baselines, while ablation studies further validate the effectiveness of aligned co-evolution and counterfactual-guided evolution.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "CoEvolve: Counterfactual-Guided Co-Evolution of Memory and Collaboration in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.33539v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "41a32c86ef159071f72dfee1",
+      "context_id": "2709da72de78a653813e0233",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "benchmark",
+        "control",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 14.4583,
+      "source": "arxiv",
+      "source_context_sha256": "05bdddfe5e2d468b450dbc5b38eb3f686b18a1664071b056826ffacace960a80",
+      "source_published": "2026-10-26T02:19:53Z",
+      "source_updated": "2026-10-26T02:19:53Z",
+      "summary": "Multi-agent systems (MAS) require both effective coordination and specialized task execution. Existing prompt optimization approaches typically couple these functions within agent-specific prompts. We introduce Coordinator-Executor Prompt Optimization (CEPO), a general framework for improving prompt optimization in MAS. CEPO separates system-level coordination from agent-level execution through a shared coordinator prompt and agent-specific executor prompts, and guides their updates according to their respective roles. This structure allows shared coordination rules to be refined consistently across agents while keeping execution instructions separately adjustable. CEPO provides the prompt structure and optimization guidance, while existing prompt optimizers perform the underlying search. Extensive experiments spanning 11 benchmarks across four domains demonstrate that applying CEPO to four existing prompt optimizers consistently improves their performance. Ablations and qualitative analyses support the proposed design, while controlled studies on a document-understanding MAS further demonstrate improved optimization budget efficiency and performance scaling with the number of agents.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "CEPO: A General Framework for Improving Prompt Optimization in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.34722v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "e48793e4554331ea101b81c2",
+      "context_id": "4d4786dd6e451519ff8daa4b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus",
+        "control",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.125,
+      "source": "arxiv",
+      "source_context_sha256": "1d04a68c632da326f52ea03f270e4151b65c2e25a005dac3e64c981325a6d3ea",
+      "source_published": "2026-10-24T19:06:19Z",
+      "source_updated": "2026-10-24T19:06:19Z",
+      "summary": "Distributed Cyber-Physical Systems (CPS) and Edge AI networks increasingly depend on public-key authentication and key-establishment mechanisms that are vulnerable to cryptographically relevant Quantum Computers (QC). Shor's algorithm threatens widely deployed asymmetric primitives, while Grover's algorithm reduces the effective security margins of symmetric and hash-based mechanisms. Although Post-Quantum Cryptography (PQC) provides a migration path, its larger public keys, ciphertexts, and signatures introduce additional computation, memory, communication, storage, and packet-fragmentation costs that can constrain dynamic multi-agent systems. In this article, we introduce rotational secrecy, an architectural objective that limits temporal key exposure through authenticated transitions between cryptographic epochs. We present Private Authentication for Rotational Secrecy (PARS), a reference mechanism that coordinates policy-triggered key establishment, rotation, and reconciliation among authorized Physical AI agents. For deployments that need distributed agreement on security state, we further develop the PARS-Enabled Edge Security Ledger (PARS-ESL), an optional permissioned architecture maintained by authorized validators or capable edge gateways. PARS-ESL does not store high-volume operational transactions. Instead, it records authenticated state for key epochs, group membership, revocation, algorithm-suite policies, challenge validation, and recovery checkpoints. As a result, resource-constrained agents can take part as lightweight clients, and low-latency operational traffic stays outside the ledger consensus path, protected by the currently active symmetric epoch keys. Our results show that ledger-assisted post-quantum key-epoch management is feasible for selected Edge AI and CPS security-control workloads under the stated trust, compromise, connectivity, and resource assumptions.",
+      "tags": [
+        "cs.CR",
+        "cs.ET",
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Securing Edge & Physical AI: Post-Quantum IoT Blockchain for Mission-Critical Cyber-Physical Agents",
+      "url": "https://arxiv.org/abs/2610.33862v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "f09793f4bae409744a894163",
+      "context_id": "626f185c6aa7ff6d2c9d1cff",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.3333,
+      "source": "arxiv",
+      "source_context_sha256": "f0383f188e5ec38667c106c66d554af0ce034c65a1ef91f105ce7e58c0ebad83",
+      "source_published": "2026-10-25T07:39:23Z",
+      "source_updated": "2026-10-25T07:39:23Z",
+      "summary": "Multi-agent reinforcement learning supports cooperative decision-making in Internet of Things systems, but strategic deviations can disrupt coordination and undermine confidence in the training process. This paper proposes Blockchain-Enabled Centralized Training and Decentralized Execution (BE-CTDE), which uses blockchain as an active training-management layer. A behavioral verifier compares executed trajectories with shared-policy recommendations; its flags drive a token mechanism combining slashing, burning, rewards, and compensation. Retained balances determine each agent's contribution to the global policy update, connecting auditable behavior to learning influence. We derive a one-round incentive condition that accounts for action-dependent compensation and the payoff from deviation, and a finite expected exclusion-time bound under explicit conditional detection and accounting assumptions, showing perfect detection is unnecessary. An exact finite-population capacity bound characterizes the limits of the population-relative detector. In multi-agent path finding experiments, BE-CTDE outperforms a state-of-the-art learning-based path planner with substantially higher success rates under attack, even when adversaries form the majority. It also outperforms partially defended baselines in all configurations, with collision rates up to 35% lower than under detection without economic consequences and up to 43% lower than under conventional stake slashing. Together, these results characterize how behavioral verification and token feedback can support accountable cooperative learning.",
+      "tags": [
+        "cs.MA",
+        "cs.CR",
+        "cs.LG",
+        "cs.NI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "BE-CTDE: Blockchain-Enabled Multi-Agent Reinforcement Learning with Anomaly Detection and Token Economics",
+      "url": "https://arxiv.org/abs/2610.34121v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "2da87da447268a98f3658eb2",
+      "context_id": "694664e52e93920e24391452",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2917,
+      "source": "arxiv",
+      "source_context_sha256": "85a6d932e54a8fa98b811b4ba2d1b862cddf4a0d1f0e2b9704a68ef8b27409ab",
+      "source_published": "2026-10-26T03:41:48Z",
+      "source_updated": "2026-10-26T03:41:48Z",
+      "summary": "Centralized training with decentralized execution (CTDE) has become the dominant paradigm in multi-agent reinforcement learning (MARL), motivating extensive study of what privileged information should be made available to the critic during training. While prior work has examined the role of global state in fully cooperative settings, the design of centralized critics for N-agent ad hoc teamwork - in which dynamically varying set of learning agents must coordinate with an arbitrary set of uncontrolled teammates drawn from an unknown distribution - remains poorly understood. We study this question by comparing two natural classes of advantage estimators: controlled history estimators, which condition only on the observation and action histories of the learner's own agents, and joint history estimators, which additionally condition on the histories of the uncontrolled teammates. We prove that both estimators are unbiased and characterize the conditions under which the joint history estimate attains strictly lower variance than its controlled counterpart. Empirically, joint history critics match or outperform controlled history critics across a range of NAHT tasks, yielding improved sample efficiency and final returns. Together, these results provide both a theoretical justification and an empirical recommendation for incorporating uncontrolled agent histories into centralized critics for N-agent ad hoc teamwork.",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Centralized Critics for N-Agent Ad Hoc Teamwork",
+      "url": "https://arxiv.org/abs/2610.34799v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "79448b651f7cbaf4c56b9ecc",
+      "context_id": "8dae6d446f3e6e5c3368e9f6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration",
+        "control",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2083,
+      "source": "arxiv",
+      "source_context_sha256": "d1d3dc59bd5421fcf309a11135c20af89cd7b88db7b8df48aeaeac1d421c3d35",
+      "source_published": "2026-10-24T15:18:31Z",
+      "source_updated": "2026-10-24T15:18:31Z",
+      "summary": "In large language model (LLM)-based multi-agent systems, reported confidence increasingly determines the allocation of scarce downstream attention, computation, and decision influence. This makes reporting strategic: an agent may overstate the relevance of its contribution even when its underlying belief is well calibrated. Existing calibration methods largely assume passive reporting and therefore do not address strategic incentives created when confidence determines downstream allocation. We formulate strategic calibration as a reporting-layer incentive problem and propose the Audited Pivot Scoring Mechanism (APSM). APSM offsets platform-controlled allocation benefits, uses inverse-propensity-weighted sparse audits, charges the Clarke pivot externality, and applies a strictly proper score. Under the stated model assumptions, truthful reporting is the unique expected-utility best response. We also characterize approximate execution and the audit-variance trade-off. Calculator-free experiments show that LLM agents inflate confidence under Top-$K$ incentives. With a shared agent-local utility interface, LLM agents reduce distortion under both Compensated Proper Scoring (CPS) and APSM. CPS achieves higher exact allocation match, whereas APSM yields lower Brier loss and numerically fewer cutoff crossings. Experiments further show that APSM enlarges the utility margin against allocation-changing deviations by $1.93\\times$ and improves robustness under approximate execution. These results support incentive-aware elicitation as a distinct layer for reliable multi-agent coordination.",
+      "tags": [
+        "cs.GT",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Strategic Calibration in LLM Multi-Agent Systems: Audited Pivot Scoring for Truthful Elicitation",
+      "url": "https://arxiv.org/abs/2610.33728v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "1103c12387f37e0a40462514",
+      "context_id": "19a73a0544b05eb1362a26d4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.0417,
+      "source": "arxiv",
+      "source_context_sha256": "07b731524f0bc660b141f74deeccbae94b1dca248a9135a11f8350aef77db329",
+      "source_published": "2026-10-25T04:11:33Z",
+      "source_updated": "2026-10-25T04:11:33Z",
+      "summary": "Autonomous agents are increasingly deployed across sequences of related tasks, yet they often fail to retain and improve their knowledge over time. Existing approaches convert interaction trajectories into memories or reusable skills, but experience is not automatically reliable knowledge. Automatically collected skills and memories can propagate errors, mislead, and corrupt useful knowledge. To address this gap, we introduce Knowledge Evolution from Expertise and Lessons (KEEL), an agent-agnostic framework that uses verifier evidence to transform successful behavior into reusable skills and failures into corrective lessons. As new evidence accumulates, individual skill claims can be supported, contradicted, replaced, or retired. On SkillFlow benchmark, KEEL improves task success by 4.2 to 21.7 percentage points over the no-knowledge baseline, compared with gains of 2.4 to 9.6 points from SkillFlow's default method. Ablations show that skills and lessons are complementary. These results show that reliable continual agent learning depends not simply on accumulating experience, but on continually validating and evolving the knowledge derived from it. Our code is available at: https://github.com/microsoft/KEEL-TTCL26.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Holding a Steady Course: Knowledge Evolution from Expertise and Lessons for Continual Agent Learning",
+      "url": "https://arxiv.org/abs/2610.34043v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "171bd974efb3c09ae5671e9b",
+      "context_id": "dc4ba513f40ac4d023708a02",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "multi-agent",
+        "swarm"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.0,
+      "source": "arxiv",
+      "source_context_sha256": "8f12bf4fb752721e42ae1ac160cd10fbe33132a6cfe19a245eb6149a5c491a5d",
+      "source_published": "2026-10-17T08:45:11Z",
+      "source_updated": "2026-10-17T08:45:11Z",
+      "summary": "Large language model (LLM) agents increasingly automate complex tasks, with multi-agent systems seeking further performance gains through specialization and collaboration. However, distributing work across agents does not automatically yield complementary contributions, and inter-agent dependencies can turn local errors into task failure. To address these challenges, we propose AutoSwarm, a multi-agent framework for collaborative problem solving. Collaboration formation jointly defines responsibility boundaries and conditions for acceptance and downstream use, grounding capability allocation in contributions that other agents can assess and integrate toward a shared objective. Execution coordination couples agents' local progress through a shared state, using dependencies and supervisory relationships to govern agent activation, result handoffs, and integration while adapting subsequent actions to review feedback and emerging blockers. Experiments spanning long-horizon programming, interactive planning, and professional financial analysis demonstrate AutoSwarm's advantages over single-agent baselines and existing multi-agent frameworks. Source code is available at https://github.com/HKUDS/AutoSwarm.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "AutoSwarm: Automating Agent Swarms",
+      "url": "https://arxiv.org/abs/2610.33048v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "a6bc1816d28934c98897f52f",
+      "context_id": "5fa5ed11fec3cade5f07cc94",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.8333,
+      "source": "arxiv",
+      "source_context_sha256": "778a47de57eb0d7770617cd9a92a3d3c2353ed087754421e26b97b31dcecfefe",
+      "source_published": "2026-10-24T08:39:47Z",
+      "source_updated": "2026-10-24T08:39:47Z",
+      "summary": "Multi-agent systems have emerged as a promising paradigm for multimodal medical reasoning, but existing methods rely on two assumptions that hinder practical deployment: (i) always-active dense collaboration among multiple agents, and (ii) dependence on large cloud-based models that raise privacy and efficiency concerns. In this paper, we challenge both assumptions and propose SMART-Med, a fully local multi-agent method that treats collaboration as a learnable decision rather than a default behavior. Our key insight is that not every medical query requires costly multi-agent deliberation: many can be reliably solved by a single well-trained agent, while only uncertain cases benefit from expert collaboration. Based on this insight, SMART-Med introduces an uncertainty-driven routing mechanism that adaptively decides when to answer directly and when to recruit a small subset of expert agents, effectively converting dense multi-agent reasoning into selective, query-adaptive coordination. To make this routing reliable, we curate a new multimodal medical dataset MedVR-3K with high-quality reasoning traces and a difficulty hierarchy, and then fine-tune local agents using GRPO with two complementary rewards: a certainty-aware accuracy reward and a vision-language reward model for correctness and reasoning quality respectively. Experiments on four medical visual question answering benchmarks show that SMART-Med achieves competitive performance compared to existing MAS approaches while substantially reducing inference cost (reducing inference time by more than 3.8x and token usage by 72%). Moreover, after fine-tuning on MedVR-3K, SMART-Med yields an average improvement of 6.7% across Slake, PathVQA, VQA-RAD, and PMC-VQA.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Learning When to Collaborate: Selective Multi-Agent Medical Reasoning via Uncertainty-Aware Routing",
+      "url": "https://arxiv.org/abs/2610.33544v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "a3d1abb297f1d820dd2e55b9",
+      "context_id": "1ece5a049bdd80a3cadb05c5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.8333,
+      "source": "arxiv",
+      "source_context_sha256": "f482ddfa303c359db1943b6b54d87d3eba2a8dbd621b2091b21afae2555637fc",
+      "source_published": "2026-10-22T17:24:23Z",
+      "source_updated": "2026-10-26T09:38:33Z",
+      "summary": "Large language model (LLM)-based multi-agent systems (MAS) rely on role-specific prompts and execution models to solve complex tasks collaboratively. However, prompt optimization typically keeps model assignments fixed, leaving differences in role requirements and their associated inference costs outside the search. We present UniMASO, a Unified framework for heterogeneous Multi-Agent System Optimization through the joint adaptation of prompts and model assignments. UniMASO evaluates candidate updates through local, downstream, and global feedback, using cost-aware Pareto search to retain useful quality-cost trade-offs. Topology-aware co-evolution then coordinates these updates according to agent roles and dependencies. Cross-level trajectory memory further supplies historical successes and failures to guide subsequent optimization. Experiments on five benchmarks and five execution topologies show that UniMASO achieves competitive task performance at substantially lower deployment cost than the strongest homogeneous configurations. Under centralized execution, it improves the average score from 69.79 to 70.40 while reducing token-weighted deployment cost by 85.2% relative to DeepSeek-V4-Pro with MASPO. These results support joint prompt-model adaptation as an effective approach to efficient multi-agent collaboration. The code is available at https://github.com/Achilles008/UniMASO_main.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Not Every Agent Needs the Strongest Model: Unified Prompt-Model Optimization for Heterogeneous LLM-based Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.31743v2"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "selection": "BALANCED_LENS_ROLLING_TOP",
+  "snapshot_cap": 48,
+  "snapshot_items_total": 48,
+  "target_repository": "Hawkar-usls/janus-distributed-ai-swarm"
+}
