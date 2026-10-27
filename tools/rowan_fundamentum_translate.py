@@ -235,10 +235,17 @@ def transform(receipt: dict, language: str = "ru") -> tuple[dict, dict, str, dic
             "status": "Status", "gate": "Next gate", "boundary": "Not a SAT solution or proof",
         },
     }[language]
+    if code == "ROWAN_PKA":
+        metrics = "pKa acid={}; base={}".format(
+            facts["values"]["strongest_acid_pka"],
+            facts["values"]["strongest_base_pka"])
+    else:
+        metrics = "BBC1 ready={}/{}; WT pTM={}; WT lDDT={}".format(
+            facts["ready_count"], facts["expected_count"],
+            facts["wildtype"].get("ptm"), facts["wildtype"].get("avg_lddt"))
     brief = (f"{msg[code]} | {fingerprint[:12]}\n"
-             f"{msg['status']}: {facts['data_status']}"
-             + (f"; {facts['ready_count']}/8" if code == "ROWAN_BBC1_STRATIFIED" else "")
-             + f"\n{msg['gate']}: {next_gate}\n{msg['boundary']}\n")
+             f"{msg['status']}: {facts['data_status']}\n"
+             f"{metrics}\n{msg['gate']}: {next_gate}\n{msg['boundary']}\n")
     manifest = {
         "schema": "janus.lapis.rowan_translation_manifest.v1",
         "source_receipt_canonical_sha256": fingerprint,
