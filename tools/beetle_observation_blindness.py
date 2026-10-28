@@ -166,7 +166,17 @@ def replace_block(body: str, replacement: str) -> str:
     return before + replacement + after
 
 
-def synchronize(report: dict, current_run_id: int, api: GitHubIssues) -> dict:
+def synchronize(report: dict, current_run_id: int, api: GitHubIssues,
+                *, event_name: str = 'schedule') -> dict:
+    # workflow_run is an opportunistic wake-up, NOT an independent schedule
+    # sample. It cannot prove an UNKNOWN streak or close one. A legitimate
+    # workflow_run is omitted from recent_runs() by design; never treat this
+    # omission as a corrupt GitHub history or a delivery failure.
+    if event_name == 'workflow_run':
+        return {'action': 'WAKEUP_NOT_COUNTED_FOR_OBSERVATION_SILENCE',
+                'issue_number': None}
+    if event_name not in {'schedule', 'push', 'workflow_dispatch'}:
+        raise ValueError('UNTRUSTED_WATCHDOG_TRIGGER')
     issue = choose_blind_issue(api.list_all())
     if report['status'] != 'UNKNOWN':
         if issue is None or issue.get('state') == 'closed':
@@ -222,7 +232,8 @@ def main() -> int:
     if not run_id.isdecimal() or int(run_id) < 1:
         raise ValueError('missing trusted workflow run identity')
     report = parse_report(args.report)
-    result = synchronize(report, int(run_id), GitHubIssues(os.environ.get('GITHUB_TOKEN', '')))
+    result = synchronize(report, int(run_id), GitHubIssues(os.environ.get('GITHUB_TOKEN', '')),
+                         event_name=os.environ.get('GITHUB_EVENT_NAME', ''))
     print(json.dumps(result, sort_keys=True))
     return 0
 

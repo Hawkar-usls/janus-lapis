@@ -153,6 +153,21 @@ class BlindnessTests(unittest.TestCase):
             synchronize(report('PASS'), CURRENT_RUN, api)
         self.assertEqual(len(api.mutations()), 1)
 
+    def test_workflow_run_wakeup_never_counts_as_independent_silence_sample(self):
+        api = FakeAPI(['UNKNOWN'] * 4)
+        # The current workflow_run is intentionally omitted by recent_runs.
+        # It must not become a fabricated schedule sample or create an issue.
+        for status in ('UNKNOWN', 'PASS', 'WARN', 'ALERT'):
+            with self.subTest(status=status):
+                result = synchronize(report(status), 999, api,
+                                     event_name='workflow_run')
+                self.assertEqual(result['action'],
+                                 'WAKEUP_NOT_COUNTED_FOR_OBSERVATION_SILENCE')
+        self.assertEqual(api.calls, [])
+        with self.assertRaisesRegex(ValueError, 'UNTRUSTED_WATCHDOG_TRIGGER'):
+            synchronize(report(), CURRENT_RUN, api, event_name='issue_comment')
+        self.assertEqual(api.calls, [])
+
     def test_current_run_not_in_history_does_not_invent_evidence(self):
         api = FakeAPI(['UNKNOWN'] * 4)
         with self.assertRaisesRegex(ValueError, 'current trusted main run'):
