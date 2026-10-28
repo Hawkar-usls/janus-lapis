@@ -11,7 +11,10 @@ on:
       - 'tools/beetle_mirror_router.py'
       - 'tools/beetle_memory_receiver.py'
       - 'tools/beetle_delivery_health.py'
+      - 'tools/beetle_producer_routing_gate.py'
+      - 'tools/beetle_producer_recovery.py'
       - 'tests/test_beetle_delivery.py'
+      - 'tests/test_beetle_normal_routing_gate.py'
       - 'tests/test_beetle_shard_store.py'
   workflow_dispatch:
 
@@ -35,8 +38,11 @@ jobs:
             tools/beetle_context_projector.py \
             tools/beetle_mirror_router.py \
             tools/beetle_memory_receiver.py \
-            tools/beetle_delivery_health.py
+            tools/beetle_delivery_health.py \
+            tools/beetle_producer_routing_gate.py \
+            tools/beetle_producer_recovery.py
       - name: Test lossless migration and Genesis receiver contract
         run: |
           python -m unittest discover -s tests -p 'test_beetle_shard_store.py' -v
           python -m unittest discover -s tests -p 'test_beetle_delivery.py' -v
+          python -m unittest discover -s tests -p 'test_beetle_normal_routing_gate.py' -v
