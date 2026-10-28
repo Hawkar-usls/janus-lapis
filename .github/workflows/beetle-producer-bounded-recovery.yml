@@ -1,0 +1,79 @@
+name: JANUS Beetle producer bounded recovery
+
+on:
+  schedule:
+    # Secondary opportunities: skips are still possible on GitHub-hosted cron.
+    - cron: '13,43 * * * *'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - tools/beetle_producer_recovery.py
+      - tests/test_beetle_producer_recovery.py
+      - .github/workflows/beetle-producer-bounded-recovery.yml
+  push:
+    branches: [main]
+    paths:
+      - tools/beetle_producer_recovery.py
+      - tests/test_beetle_producer_recovery.py
+      - .github/workflows/beetle-producer-bounded-recovery.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: janus-beetle-producer-bounded-recovery
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Test wake policy and no Rowan authority
+        run: |
+          python -m py_compile tools/beetle_producer_recovery.py tests/test_beetle_producer_recovery.py
+          python -m unittest tests.test_beetle_producer_recovery -v
+
+  recover:
+    if: github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 7
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Fetch exact existing producer workflow runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method GET "repos/$GITHUB_REPOSITORY/actions/workflows/universal-beetle-hourly.yml/runs?per_page=100" > producer-runs.json
+      - name: Refuse duplicates; require stale successful producer and quiet attempt window
+        id: gate
+        run: python tools/beetle_producer_recovery.py --input producer-runs.json
+      - name: Wake only the existing vetted main-branch Beetle workflow
+        if: steps.gate.outputs.dispatch == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method POST "repos/$GITHUB_REPOSITORY/actions/workflows/universal-beetle-hourly.yml/dispatches" \
+            -f ref=main \
+            -f 'inputs[mode]=both'
+          echo 'BEETLE_PRODUCER_RECOVERY=SAFE_DISPATCH_ISSUED'
