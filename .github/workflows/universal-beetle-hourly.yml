@@ -14,6 +14,9 @@ on:
       - "tools/beetle_memory_receiver.py"
       - "tools/beetle_partial_checkpoint.py"
       - "tools/beetle_delivery_health.py"
+      - "tools/beetle_producer_routing_gate.py"
+      - "tools/beetle_producer_recovery.py"
+      - "tests/test_beetle_normal_routing_gate.py"
       - "data/beetle/directions.json"
       - ".github/workflows/universal-beetle-hourly.yml"
       - "requirements-ocean-beetle.txt"
@@ -79,6 +82,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_beetle_partial_checkpoint.py' -v
           python -m unittest discover -s tests -p 'test_beetle_rowan_focus.py' -v
           python -m unittest discover -s tests -p 'test_beetle_rowan_relevance.py' -v
+          python -m unittest discover -s tests -p 'test_beetle_normal_routing_gate.py' -v
 
       - name: Ask Demiurge for current attention and build mirrored schedule
         run: |
@@ -259,8 +263,16 @@ jobs:
             --effective-config lapis/runtime/effective_directions.json \
             | tee beetle-memory/data/beetle-state/last_context_console.json
 
-      - name: Route new mirror contexts into provenance-bound repo mirrors
+      - name: Validate live receiver ACK backpressure before producing new packages
+        id: delivery_gate
         if: ${{ steps.worker.outcome == 'success' }}
+        run: |
+          python lapis/tools/beetle_producer_routing_gate.py \
+            --state-dir beetle-memory/data/beetle-state \
+            --run-id "$GITHUB_RUN_ID"
+
+      - name: Route new mirror contexts into provenance-bound repo mirrors
+        if: ${{ steps.worker.outcome == 'success' && steps.delivery_gate.outputs.routing_allowed == 'true' }}
         run: |
           python lapis/tools/beetle_mirror_router.py \
             --state-dir beetle-memory/data/beetle-state \
@@ -313,6 +325,7 @@ jobs:
             beetle-memory/data/beetle-state/latest_routing.json
             beetle-memory/data/beetle-state/latest_storage_health.json
             beetle-memory/data/beetle-state/latest_delivery_health.json
+            beetle-memory/data/beetle-state/latest_routing_gate.json
             beetle-memory/data/beetle-state/last_console.json
             beetle-memory/data/beetle-state/last_context_console.json
             beetle-memory/data/beetle-state/last_routing_console.json
