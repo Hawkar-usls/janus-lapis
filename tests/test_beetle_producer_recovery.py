@@ -57,6 +57,32 @@ class RecoveryTests(unittest.TestCase):
         with self.assertRaises(m.RecoveryHold):
             m.decide({"workflow_runs":[run(-100)]},NOW)
 
+    def test_delivery_backpressure_blocks_stale_and_excess_pending(self):
+        now=NOW
+        base={"schema":"janus.beetle.delivery_health.v1",
+              "at":now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "status":"WARN",
+              "repositories":{f"consumer-{i}":{"pending":0,"status":"UP_TO_DATE"}
+                              for i in range(19)},
+              "total_pending":0}
+        self.assertEqual(m.delivery_backpressure(base,now),"CLEAR")
+        v={**base, "repositories":dict(base["repositories"])}
+        v["repositories"]["consumer-0"]={"pending":2,"status":"STALE"}
+        v["total_pending"]=2
+        self.assertEqual(m.delivery_backpressure(v,now),"HOLD_STALE_RECEIVER_ACK")
+        v={**base, "repositories":dict(base["repositories"])}
+        for i in range(14):
+            v["repositories"][f"consumer-{i}"]={"pending":1,"status":"PENDING"}
+        v["total_pending"]=14
+        self.assertEqual(m.delivery_backpressure(v,now),"HOLD_DELIVERY_BACKPRESSURE")
+        v["total_pending"]=1
+        with self.assertRaises(m.RecoveryHold):
+            m.delivery_backpressure(v,now)
+
+    def test_missing_delivery_health_fails_closed(self):
+        with self.assertRaises(m.RecoveryHold):
+            m.delivery_backpressure(None,NOW)
+
     def test_zero_science_authority(self):
         src=P.read_text(encoding="utf-8")
         for forbidden in ("ROWAN_API_KEY","submit_protein_cofolding_workflow",
