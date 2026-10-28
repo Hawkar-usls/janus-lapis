@@ -63,9 +63,16 @@ jobs:
         run: |
           set -euo pipefail
           gh api --method GET "repos/$GITHUB_REPOSITORY/actions/workflows/universal-beetle-hourly.yml/runs?per_page=100" > producer-runs.json
-      - name: Refuse duplicates; require stale successful producer and quiet attempt window
+      - name: Read durable receiver delivery health from beetle-state
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method GET "repos/$GITHUB_REPOSITORY/contents/data/beetle-state/latest_delivery_health.json?ref=beetle-state" --jq '.content' | base64 -d > delivery-health.json
+      - name: Refuse duplicates and sustained receiver backlog
         id: gate
-        run: python tools/beetle_producer_recovery.py --input producer-runs.json
+        run: python tools/beetle_producer_recovery.py --input producer-runs.json --delivery-health delivery-health.json
       - name: Wake only the existing vetted main-branch Beetle workflow
         if: steps.gate.outputs.dispatch == 'true'
         env:
