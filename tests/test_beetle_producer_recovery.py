@@ -83,6 +83,20 @@ class RecoveryTests(unittest.TestCase):
         with self.assertRaises(m.RecoveryHold):
             m.delivery_backpressure(None,NOW)
 
+    def test_receiver_health_recomputed_on_each_wakeup(self):
+        workflow=(P.parent.parent / ".github/workflows/beetle-producer-bounded-recovery.yml").read_text()
+        self.assertIn("ref: beetle-state", workflow)
+        self.assertIn("from beetle_delivery_health import inspect", workflow)
+        self.assertIn("health = inspect(root, stale_minutes=180)", workflow)
+        self.assertNotIn("contents/data/beetle-state/latest_delivery_health.json", workflow)
+        self.assertIn("persist-credentials: false", workflow)
+
+    def test_stale_snapshot_not_required_for_recovery(self):
+        source=(P.parent.parent / ".github/workflows/beetle-producer-bounded-recovery.yml").read_text()
+        self.assertIn("delivery-health.json", source)
+        self.assertIn("--delivery-health delivery-health.json", source)
+        self.assertIn("BEETLE_RECOVERY_REFRESHED_PENDING=", source)
+
     def test_zero_science_authority(self):
         src=P.read_text(encoding="utf-8")
         for forbidden in ("ROWAN_API_KEY","submit_protein_cofolding_workflow",
