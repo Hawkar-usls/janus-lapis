@@ -68,20 +68,54 @@ def decide(data, now):
     return {"action": "RECOVER_MISSED_PRODUCER", "dispatch": True}
 
 
+def delivery_backpressure(health, now):
+    """Never wake a producer into a verified backlog or stale ACK state."""
+    if (not isinstance(health, dict) or
+        health.get("schema") != "janus.beetle.delivery_health.v1" or
+        not isinstance(health.get("repositories"), dict) or
+        not health["repositories"] or
+        type(health.get("total_pending")) is not int or
+        health["total_pending"] < 0):
+        raise RecoveryHold("DELIVERY_HEALTH_UNVERIFIED")
+    age = (now - timestamp(health.get("at"))).total_seconds()
+    if age < -60 or age > 6*60*60:
+        raise RecoveryHold("DELIVERY_HEALTH_OUTSIDE_FRESHNESS")
+    receivers = health["repositories"]
+    if any(not isinstance(v, dict) or
+           type(v.get("pending")) is not int or v["pending"] < 0
+           for v in receivers.values()):
+        raise RecoveryHold("DELIVERY_RECIPIENTS_INVALID")
+    if any(v.get("status") == "STALE" for v in receivers.values()):
+        return "HOLD_STALE_RECEIVER_ACK"
+    if health["total_pending"] >= max(2, len(receivers) // 2):
+        return "HOLD_DELIVERY_BACKPRESSURE"
+    if sum(v["pending"] for v in receivers.values()) != health["total_pending"]:
+        raise RecoveryHold("DELIVERY_PENDING_CONTRADICTION")
+    return "CLEAR"
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", required=True)
+    parser.add_argument("--delivery-health", required=True)
     args = parser.parse_args()
     try:
         with open(args.input, encoding="utf-8") as f:
             data = json.load(f)
-        result = decide(data, datetime.now(timezone.utc))
+        with open(args.delivery_health, encoding="utf-8") as f:
+            health = json.load(f)
+        now = datetime.now(timezone.utc)
+        pressure = delivery_backpressure(health, now)
+        result = ({"action": pressure, "dispatch": False}
+                  if pressure != "CLEAR" else decide(data, now))
     except (RecoveryHold, OSError, ValueError, json.JSONDecodeError) as exc:
         reason = str(exc)
         if reason not in {
             "RUN_COLLECTION_UNVERIFIED", "CLOCK_UNVERIFIED", "INVALID_RUN_ENTRY",
             "INVALID_RUN_ID", "INVALID_RUN_STATUS", "INVALID_RUN_TIMESTAMP",
             "RUN_CLOCK_IN_FUTURE", "NO_VERIFIABLE_PRODUCER_HISTORY",
+            "DELIVERY_HEALTH_UNVERIFIED", "DELIVERY_HEALTH_OUTSIDE_FRESHNESS",
+            "DELIVERY_RECIPIENTS_INVALID", "DELIVERY_PENDING_CONTRADICTION",
         }:
             reason = "SOURCE_UNAVAILABLE"
         print("BEETLE_PRODUCER_RECOVERY=HOLD_" + reason)
