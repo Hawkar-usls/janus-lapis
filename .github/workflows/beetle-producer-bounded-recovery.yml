@@ -63,13 +63,29 @@ jobs:
         run: |
           set -euo pipefail
           gh api --method GET "repos/$GITHUB_REPOSITORY/actions/workflows/universal-beetle-hourly.yml/runs?per_page=100" > producer-runs.json
-      - name: Read durable receiver delivery health from beetle-state
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Checkout durable mirrors read-only for independent ACK refresh
+        uses: actions/checkout@v5
+        with:
+          ref: beetle-state
+          path: beetle-durable
+          persist-credentials: false
+      - name: Recalculate live ACK health independently of producer cron
         shell: bash
         run: |
           set -euo pipefail
-          gh api --method GET "repos/$GITHUB_REPOSITORY/contents/data/beetle-state/latest_delivery_health.json?ref=beetle-state" --jq '.content' | base64 -d > delivery-health.json
+          PYTHONPATH=tools python - <<'PY'
+          import json
+          from pathlib import Path
+          from beetle_delivery_health import inspect
+          root = Path("beetle-durable/data/beetle-state")
+          health = inspect(root, stale_minutes=180)
+          Path("delivery-health.json").write_text(
+              json.dumps(health, sort_keys=True, allow_nan=False) + "\n",
+              encoding="utf-8",
+          )
+          print("BEETLE_RECOVERY_REFRESHED_ACK_HEALTH=" + health["status"])
+          print("BEETLE_RECOVERY_REFRESHED_PENDING=" + str(health["total_pending"]))
+          PY
       - name: Refuse duplicates and sustained receiver backlog
         id: gate
         run: python tools/beetle_producer_recovery.py --input producer-runs.json --delivery-health delivery-health.json
