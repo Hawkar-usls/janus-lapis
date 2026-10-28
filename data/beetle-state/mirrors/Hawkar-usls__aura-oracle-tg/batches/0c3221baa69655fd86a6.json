@@ -1,0 +1,1771 @@
+{
+  "batch_id": "0c3221baa69655fd86a6",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "fragment_count": 1,
+  "fragment_index": 1,
+  "items": [
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "a894fd224a1d2a7bdcd288e8",
+      "context_id": "e6a9d1536f942f9c81fbb4ca",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.9583,
+      "source": "arxiv",
+      "source_context_sha256": "05558ddc5329a0a018587eeb4e0755f1551c95194c20a23337507205cf75a1bb",
+      "source_published": "2026-10-26T22:59:14Z",
+      "source_updated": "2026-10-26T22:59:14Z",
+      "summary": "Perceiving human body motion is critical for multimodal systems that understand and assist people. Yet current evaluations of Multimodal Large Language Models (MLLMs) largely focus on objects, scenes, and coarse actions, leaving their ability to reason about the body itself poorly assessed. This is especially challenging from the egocentric perspective, in which the body is only partially visible and motion must be inferred from occluded and temporally distributed cues. We introduce SOMA, a benchmark for fine-grained body-motion understanding from egocentric video, comprising 1,632 human-verified questions across three capability axes: body configuration, motion dynamics, and temporal reasoning. We evaluate 37 leading closed-source, open-source, and specialized egocentric MLLMs, complemented by an extensive human evaluation. We find that humans also find this task difficult from video alone (68.5% accuracy), yet clearly outperform the strongest MLLM (Qwen3.6-27B), which reaches 50.0% zero-shot accuracy. Our error analysis shows that MLLMs often misread the wearer's own body, misjudge events in time, and are prone to biases such as favoring the right hand or under-counting repetitions. To narrow the gap to human performance and support further progress, we introduce a training dataset of aligned video, body motion, and language supervision, and a multimodal baseline that jointly learns from these modalities. By identifying common failure modes and missing capabilities in current MLLMs, we hope SOMA will inspire future research on body-motion understanding and multimodal reasoning. Full benchmark, training data, and code will be released at: https://cnai.epfl.ch/soma",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "q-bio.NC"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "SOMA: A Benchmark for Fine-Grained Egocentric Behavior and Body-Motion Understanding",
+      "url": "https://arxiv.org/abs/2610.36384v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "f8b79606619824853d6232d5",
+      "context_id": "e96960efdafc65d53d1b043b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "38a121958d5c6da4fb1a8fe3daf62ac52c548e9802cc08dfd180e85fa0273b93",
+      "source_published": "2026-10-27T10:13:34Z",
+      "source_updated": "2026-10-27T10:13:34Z",
+      "summary": "A user history can admit multiple plausible next interactions, yet conventional sequential recommenders produce a single deterministic ranking. While diffusion models offer a natural way to sample alternative continuations, we show that existing target-item diffusion recommenders often suffer from severe sampling collapse, producing nearly identical outputs across independent draws. We identify two ubiquitous design choices that promote this collapse: joint learning of the latent space and denoiser, and in-trajectory supervision via discrete losses. To address these failure modes, we introduce DARTS (Diverse and Accurate Recommendation Through Sampling), a three-stage latent diffusion framework that explicitly decouples representation learning, generative modeling, and discrete ranking by learning and freezing the latent space before diffusion training and postponing ranking supervision to the final decoding stage. We further characterize sampling diversity using complementary measures of variation before and after decoding, and use posterior-predictive aggregation to exploit this diversity at inference. Across three Amazon Reviews 2023 categories, DARTS preserves substantially greater sampling diversity while outperforming strong sequential, generative-retrieval, and diffusion baselines by 7-12% on standard ranking metrics. Aggregating multiple samples further improves ranking accuracy at a fixed slate size.",
+      "tags": [
+        "cs.IR"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "When Diffusion Recommenders Stop Sampling: Preserving Generative Diversity",
+      "url": "https://arxiv.org/abs/2610.36954v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "bbb3272911635e8177ed747c",
+      "context_id": "da3728dbb78b4fa10c8c75da",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "5a488aa2e76862faa338b68d0f8ad00ea3f3fb3e4eb1245f000ed809a928a55d",
+      "source_published": "2026-10-27T17:59:30Z",
+      "source_updated": "2026-10-27T17:59:30Z",
+      "summary": "Transferring semantically typed tokens between heterogeneous blockchains (e.g. EVM and Cosmos ecosystems) raises two problems: semantic mixing, the loss of a token's domainspecific meaning in transit (e.g., CO2 removals issued under different methodologies), and atomicity despite divergent consensus and timing assumptions. We propose a bridge that addresses both. A deterministic indicator identity derived from cryptographic commitments, mirrored in class registries on both chains and checked at mint time, preventing semantic mixing by construction. For atomicity, we extend hash time-locked contracts (HTLCs) from two-party exchange to single-owner transfer with an automatic callback that burns the source escrow after a destination claim, and a protocol-minimum bounty that makes the fallback burn incentive-compatible even against adversarial senders. We machine-check the protocol's invariants with TLC (supply conservation fails without the rational-monitor assumption and holds with it) and validate a bidirectional prototype on Polygon and Neutron mainnets over Axelar GMP: fully automatic transfers with a median end-to-end latency of 97 s over 50 Polygon to Neutron transfers across 7 days (all completed by the on-chain automatic callback) and 93 s in the reverse direction, and semantic-validation overhead below 0.4% of messaging cost. We also document the integration failure modes of Cosmos originated messaging, whose dominant operational risk proves to be relay eligibility rather than latency.",
+      "tags": [
+        "cs.SE"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "An EVM-Cosmos Bridge for Atomic, Semantic-Preserving Transfer of Environmental Tokens",
+      "url": "https://arxiv.org/abs/2610.37663v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "f584d5f30113c2e3dfca64dc",
+      "context_id": "cb0c182a86bd69e0c7dc855f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "zenodo",
+      "source_context_sha256": "353ab6b980ee41d22e0d273cb32e28dce270bf177726bd5b216988ab68a2c683",
+      "source_published": "2026-10-27",
+      "source_updated": "",
+      "summary": "Two follow-up papers built on this study's blind multi-model collection were accepted (poster) at NeurIPS 2026 workshops: Verification Theater: Measured Failure Modes of AI Verifier Panels (Who Verifies the Agents?) and Weakly Discriminative, Not Repaired by Profile Injection, and Manipulable: Self-Confidence in LLM Evaluation (TAE). Version of record: SSRN 7191261 , DOI 10.2139/ssrn.7191261 . Cite that version. The same text is also at https://vadymchernets.netlify.app/architectural-trust.html and https://github.com/vadimchernets/papers/tree/main/architectural-trust . Agentic commerce turns AI from an advisor into a transacting party, collapsing search, comparison, cart, and payment into a single delegated act and removing the review points where humans once caught errors. It arrives at an awkward moment: sixty percent of UK consumers surveyed say they would abandon an AI shopping agent after a single mistake, and most would trust no organization at all to run one on their behalf. This paper introduces architectural trust. As consumers delegate consequential decisions to AI agents, I argue, warranted trust migrates from the properties of the AI model to the verifiable architecture of the service above it. The constructs already available attach trust to organizations, to a single automated system, or to algorithmic advice, and none of them makes the decision-producing process verifiable by the truster under autonomous delegation. Architectural trust fills that gap with three checkable properties: diversity (independent models whose agreement calibrates confidence and whose divergence is surfaced), evidence (tamper-evident, replayable decision records), and neutrality (auditable independence from any vendor, merchant, or outcome). The mechanism was measured on the machine side first. Across a pre-registered sixteen-model benchmark and an August 2026 flagship-tier wave spanning eleven frontier laboratories, cross-model agreement priced correctness where a model's own confidence could not. Answers reproduced by another, blindly queried model were 1.9–3.2 times as likely to be correct. On a frozen SimpleQA subsample (Wei et al., 2024), 46.6% of the flagship answers offered at stated confidence ≥ 80 were wrong (a rate specific to this roster, not a universal constant), while a fixed three-model disagreement gate removed 82.1% of those confident failures (95% CI 79.9–84.1) at 30.5% coverage. In a post hoc analysis of the August 2026 snapshot, two flagships answering blindly (gpt-5.6-sol and claude-fable-5) agreed on 69.6% of the 1,459 pooled questions, and their agreed answer was correct 98.1% of the time, against 95.3% for the stronger one alone on the same pool. The signal reproduces on 267 Wikidata-verified commerce product facts. A larger reasoning budget bought 3.1 points of stated confidence and no measurable accuracy: more compute buys confidence, not correctness. A unanimously confident panel can still be wrong, and there agreement certifies the shared error. I then carry the mechanism into behavior in a pre-registered, incentive-compatible consumer experiment (US and UK; 119 valid participants in the primary cohort, 133 with a soft-launch cohort pooled; 200 planned). Where a consumer would otherwise accept a confident wrong recommendation, the disagreement display cut acceptance sharply, from 74% to 24% on the qualifying item (pooled cohort). The pooled robustness estimate (Δ = 0.25 → 0.46; d = 0.68; the primary main-wave cohort gives Δ = 0.24 → 0.45, d = 0.67) rests on that single item and, in an exploratory country split, on the UK sample, and it falls to d = 0.09 once the item is removed. A powered, stimulus-sampled replication is planned. On the one item of unanimous confident consensus (pooled n = 133) the display raised acceptance of the shared error from 87% to 95%, which reproduces the mechanism's boundary in human behavior. The orchestration-receipt component returned a registered, inconclusive null. The three com",
+      "tags": [
+        "agentic commerce",
+        "consumer trust",
+        "AI agents",
+        "trust in AI",
+        "appropriate reliance",
+        "overreliance",
+        "large language models",
+        "cross-model agreement",
+        "selective prediction",
+        "overconfidence",
+        "delegation",
+        "architectural trust"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Architectural Trust: Why Consumer Trust in Agentic Commerce Migrates from AI Models to Verifiable Architecture",
+      "url": "https://zenodo.org/records/23709937"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "7c44502c845cffdf4f94e908",
+      "context_id": "c0e8cba6678c59d162168481",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "d2ac161d6ea4e11fe49d7312deed4a4a326a7c05c57004dd0cf4db245455316c",
+      "source_published": "2026-10-27T10:18:45Z",
+      "source_updated": "2026-10-27T10:18:45Z",
+      "summary": "Several apparently distinct formulations of the charged-lepton mass relation $p_2/e_1^2 = 2/3$ share a common algebraic object: the ratio of flavor-breaking to flavor-symmetric amplitude components on an internal family space. We show that (i) the relation expressed as a Fourier-mode constraint on Shulga's compact cycle, (ii) the same relation as a Descartes curvature condition in the sense of Kocik, and (iii) the Soddy completion of the resulting circle configuration are related by exact algebra, with no approximations. The Soddy completion defines a companion scale $F^2 = α^2 μ_\\star$ with $α= \\sqrt{3/2} - 1$ and $μ_\\star = \\sum_\\ell m_\\ell$; identifying this scale with $\\bar{m}^{\\rm MS}_s(μ_\\star)$ yields a light-quark mass cascade with the ratio $m_d/m_s = 5/2 - \\sqrt{6}$. Combined with the leading Gatto-Sartori-Tonin relation, this gives the down-sector Cabibbo seed $\\sqrt{m_d/m_s} = \\sqrt{3/2} - 1 = 0.22474\\ldots$, numerically close to the measured $|V_{us}| = 0.22503 \\pm 0.00068$ ($0.4σ$). A full CKM evaluation requires the up-sector phase correction, which we defer. The correspondence is testable by future lattice QCD+QED determinations of $m_d/m_s$; explicit failure modes are listed.",
+      "tags": [
+        "physics.gen-ph"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Descartes Curvature Geometry, Compact-Cycle Amplitudes, and the GST Cabibbo Seed",
+      "url": "https://arxiv.org/abs/2610.36960v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "ed242f31aac64a33a6607834",
+      "context_id": "b11f4ed4de6a87d50688bfaf",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "zenodo",
+      "source_context_sha256": "2bca40d5759055a81c68ea85d1326e466755c23c36860571d722782d45f1f06e",
+      "source_published": "2026-03-22",
+      "source_updated": "",
+      "summary": "American states already hold the constitutional authority to check, prosecute, and outlast a captured federal government. The architecture has always been there. Scholarship on federalism and democratic backsliding has accurately described why subnational opposition to authoritarian federal measures tends to fail: states deploy individual tools in isolation, get outmaneuvered, and lose. What that scholarship has not provided is a unified taxonomy of the tools themselves or the recognition that they constitute an architecture that, when assembled deliberately and deployed concurrently, produces something qualitatively different from any single tool applied alone. Each of these postures has existed throughout American constitutional history. What the literature has never provided is the recognition that they constitute discrete categorical tiers within a single deployable architecture. This paper names and maps that taxonomy across five tiers. Tier Zero is cooperative federalism, the assumed ground state requiring no deliberation. Tier One, uncooperative federalism, describes governments withholding cooperation from federal enforcement, a category Bulman-Pozen and Gerken named in 2009. Tier Two, soft secession, describes states building parallel institutional and financial capacity that reduces dependence on federal partnership and builds resilience against federal mismanagement, corruption, and captured law. Tier Three, oppositional federalism, describes governmental actors at any level using sovereign powers offensively to confront and impose direct personal costs on federal officials and institutions, including through criminal prosecution under state law for offenses that are unpardonable by a corrupt federal executive. Tier Four is constitutional non-compliance, the condition at which states actively do the thing the federal government has prohibited, constructing competing legal regimes that directly contradict specific federal law as a matter of explicit state policy, with documented historical precedent across the political spectrum. The architecture is tier-modular, domain-modular, and actor-modular. A mayor, a city council, a state attorney general, a governor, or a state legislature can move from Tier Zero directly to Tier Three in a single session without prerequisites; any tier is independently deployable without activating the others; and any governmental actor can occupy different tiers simultaneously across different policy domains. Full concurrent deployment produces the constitutional infrastructure specifically suited to the failure mode the existing literature identifies but has not prescribed for: authoritarian federal capture by actors engaged in the systematic dismantling of democratic governance and the rule of law. The doctrinal foundation draws on dual sovereignty, the anti-commandeering doctrine, intergovernmental immunity, and the Tenth Amendment's structural reservation of sovereign authority to the states, doctrines consistently applied across two and a half centuries of American constitutional law because they reflect the Constitution's design rather than any particular political moment. Notably, the anti-commandeering doctrine at the architecture's foundation was built by conservative jurisprudence for entirely different purposes. Justice Scalia wrote Printz to protect states from federal gun control mandates. The doctrine he articulated does not ask which political faction is deploying it. They enable every tier of this framework, from refusing federal cooperation to prosecuting federal officials, without federal permission, federal oversight, or presidential interference. The framework does not conflict with the Supremacy Clause, which governs conflicts between state and federal regulatory regimes and has never been understood to immunize federal officials from state criminal liability for conduct that violates state law, to compel states to assist federal enforcement, or to displace the paralle",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "THE CONSTITUTIONAL ARCHITECTURE OF STATE OPPOSITION",
+      "url": "https://zenodo.org/records/23717149"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "1c91e535d6b4154e671d10e3",
+      "context_id": "5d6f7bc1f1c056f75ecb061f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "719bdb79989801439663cbe3b51b416a2e409407c766c1a0ec18585518b80e35",
+      "source_published": "2026-10-27T03:00:55Z",
+      "source_updated": "2026-10-27T03:00:55Z",
+      "summary": "The landscape of software evolution is undergoing a fundamental paradigm shift in the era of Large Language Models. As industrial software engineering increasingly transitions toward design-driven code generation, the bottleneck of evolution has shifted from writing code to maintaining deterministic consistency between multi-source design assets and the generated code. When a design asset changes, LLM agents currently lack a deterministic impact boundary to identify which code must be evolved, leading to two failure modes: hallucinating missing changes or breaking unrelated code. Probabilistic approaches, such as semantic retrieval or text-based diffing, fail to capture the structural ripple effects across highly interconnected design dependencies. We propose a paradigm shift from probabilistic semantic retrieval to deterministic structural constraints. We formalize the design assets as a Knowledge Graph and organize them into a content-addressed Merkle Directed Acyclic Graph. Our key insight reveals a topological isomorphism between the logical ripple effect of a design change and the content hash propagation within the DAG. By leveraging this, we transform ambiguous impact analysis into verifiable structural operations. Through a two-phase diffing process, we extract a precise causal chain that defines the exact modification boundary. This boundary enables deterministic context injection, providing the LLM agent with strictly scoped code and design updates, thereby fundamentally guaranteeing evolution safety. As a by-product, the KG serves as an agent-queryable knowledge base for natural language design retrieval. Early deployment on a large-scale industrial payment platform demonstrates that our mechanism successfully computes the exact impact boundary and generates incremental code modifications that meet the expected design changes.",
+      "tags": [
+        "cs.SE"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "From Ripple to Boundary: Deterministic Impact Boundaries for LLM-Based Software Evolution",
+      "url": "https://arxiv.org/abs/2610.36549v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "8774858f49eaf934105b2faf",
+      "context_id": "2b349bdccbe184749132a2bb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "confound",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.625,
+      "source": "arxiv",
+      "source_context_sha256": "db7cfba6a3dc9d5bd7145bbf8ddfe5c51675c71b0db770a5b15728044daf98c1",
+      "source_published": "2026-10-27T17:49:39Z",
+      "source_updated": "2026-10-27T17:49:39Z",
+      "summary": "When an LLM group's discussion is compressed into a short memory for a final decision maker, what should the memory keep? Two natural heuristics keep the rarest claims or the claims relevant to the decision criteria. On hidden-profile tasks both look attractive, because how widely a fact is held is confounded with whether it helps. We introduce CrossProfile, a diagnostic benchmark of 60 templates with automatically verified answer keys, in which the ownership of supporting, decoy, and irrelevant facts is crossed while their text is held fixed (480 tasks). Across Qwen2.5-7B, Llama-3.1-8B, and two DeepSeek models, both heuristics fail in predictable places. Selecting by relevance readmits decoys, because decoys are on topic: even a perfect relevance filter loses 23 to 31 points to rarest-first selection in the classic hidden-profile configuration. Rarest-first selection is no better than random selection on average and wins only where the rare facts happen to be the useful ones. In both cases accuracy follows the balance of evidence the memory keeps, not the policy that kept it. The decision model adds a third failure, a form of social proof: it gives extra weight to facts attributed to many agents. Removing the attribution tags, or reassigning them at random with line order fixed, raises accuracy in the classic configuration by 13 to 24 points. In natural discussions the evidence is lost before any memory acts: the complete transcript yields lower accuracy than no notes at all.",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA",
+        "cs.SI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Rare, Relevant, and Still Wrong: How Memory Fails LLM Group Decisions",
+      "url": "https://arxiv.org/abs/2610.37624v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "6b144a34058d26714366ba9a",
+      "context_id": "949e63b32eb1056e0f31e09a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "a4b93e163b391c91f4cb0c10cad51d79c7298043534c358acb83eb133ea6fda0",
+      "source_published": "2026-10-27T12:39:12Z",
+      "source_updated": "2026-10-27T12:39:12Z",
+      "summary": "For a deterministic sequence of normal unital completely positive maps on a von Neumann algebra, convergence of normal states, loss of memory, and convergence of Cesàro averages are different properties. This paper separates these properties in the predual norm and identifies the precise role of composition order. Uniform loss of memory for right-appended products on the predual implies uniform convergence to a normal state without any compactness or trace assumption; the convergence rate is bounded by the image diameter. In contrast, on every infinite-dimensional $σ$-finite von Neumann algebra there are right-appended products with pointwise loss of memory but no convergent normal-state trajectory, even though all nontrivial state images equal a fixed compact line segment. Consequently, finite dimensionality is characterized by the universal implication from pointwise backward memory loss to mixing. An attained normal-functional minorization coefficient extends the common-lower-bound construction for matrix channels to arbitrary von Neumann algebras and yields quantitative contraction and unique normal entrance laws. Further results distinguish pointwise from uniform relaxation, Cesàro convergence from mixing, fixed-start from time-uniform contraction, and stationary from moving asymptotic states. As an application, inhomogeneous transfer states on spin chains, including matrix product states, are shown to have a unique thermodynamic limit, uniformly in the boundary condition, with an arbitrary von Neumann algebra as bond algebra; boundary dependence and correlations are controlled by the same product coefficients. All counterexamples are explicit and extend to algebras of types I, II, and III.",
+      "tags": [
+        "math.OA"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Ergodicity, memory loss, and directional stability on von Neumann algebras",
+      "url": "https://arxiv.org/abs/2610.37143v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "15a87c1f480846fbc0575e35",
+      "context_id": "2eb68863df06ab17eb4541a2",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "9b9ce61354e51c4962a8b2c6ff0dba0f43673f9aeeb09c7f2417aa58a51d5dbd",
+      "source_published": "2026-10-27",
+      "source_updated": "",
+      "summary": "A cube can pass through a straight tunnel cut through another cube of the same size. From this seventeenth-century geometric paradox to recent counterexamples to the&nbsp; Rupert property, the problem has developed into a broader question concerning projections of convex bodies. The first part of this article reviews the historical background and introduces the essential geometric tools, including a&nbsp;vector-based reconstruction of the classical cube-passage configuration. The second part studies centred convex bodies whose support functions are expressed as spherical harmonic perturbations of the&nbsp;support function of a ball. For these bodies, we establish an exact passage&nbsp; criterion, construct explicit positive certificates for passage, and classify the three-parameter family \\[T_{a,b,c}=aP_4(x)+bP_4(y)+cP_4(z) : \\] the equality $D_2(T_{a,b,c}) = 0$ holds if and only if $ab = ac = bc = 0$. Proofs are included throughout.",
+      "tags": [
+        "Prince Rupert's problem",
+        "convex bodies",
+        "orthogonal projections",
+        "support functions",
+        "spherical harmonics of degree four",
+        "rigidity"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Prince Rupert's Problem: Geometric Foundations, Historical Background, and New Results on Convex Bodies",
+      "url": "https://zenodo.org/records/23697875"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "d6f64e275d265327ddd9c4eb",
+      "context_id": "e4b6d15acad8ebf5c7545893",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "d27ff06c90b3e64136f20e3642cd48b84c7da04042a7be507022d420499d8fbf",
+      "source_published": "2026-10-26T21:30:26Z",
+      "source_updated": "2026-10-26T21:30:26Z",
+      "summary": "Memory-agent benchmarks often collapse retrieval and answer generation into one score, making it hard to tell whether a failure comes from missing an update or from not using an update that was already retrieved. We examine this distinction on the single-hop FactConsolidation task of MemoryAgentBench. With Qwen2.5-7B-Instruct on 6K-history BM25 accuracy drops from 45% to 32% when the retrieved evidence budget grows from 64 to 512 tokens, even though a gold-assisted post-hoc audit finds the newest statement in every retrieved set. Most of the errors occur on questions that also contain an obsolete statement version. Under a frozen prompt and equal four-statement evidence size, replacing one unrelated statement with the obsolete competing statement reduces accuracy from 100% to 44.6% for Qwen2.5 and from 100% to 87.8% for Qwen3-14B, with all 50 harmful paired flips classified as stale. A 32K-history replication likewise favors BM25-64 over BM25-512 (69% versus 58%). These results suggest that retrieving the correct fact is not enough. An obsolete competing statement can be more harmful than an unrelated piece of evidence of the same size.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "When Retrieval Is Not Enough: Obsolete Facts in Agent Memory",
+      "url": "https://arxiv.org/abs/2610.36308v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "75b2736e16decf3322597e6d",
+      "context_id": "dd4a0792248377575cdf299a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "b8a5f9136b912fe31f5a1bf816b5da49dbf4566b7f031fb4d0b6414fa6680b48",
+      "source_published": "2026-10-27T03:47:47Z",
+      "source_updated": "2026-10-27T03:47:47Z",
+      "summary": "Coding agents are beginning to develop the production-grade AI infrastructure that trains and serves large models, yet existing benchmarks cover only single kernels or single-GPU tasks, and grade with tests and prompts that misjudge both correct and incorrect patches. We introduce InfraDev, a benchmark of 36 tasks built from real-world pull requests to Megatron-LM, vLLM, and verl, covering infrastructure development for training, inference, and reinforcement learning. Each task asks an agent to reimplement a real change that spans many files and must run correctly across many GPUs. To grade such changes, we jointly synthesize hidden probes, which enforce the requirements the original tests leave unchecked, and a prompt that states every interface the probes call without revealing the solution. We also design a shared execution environment that reuses dependencies and artifacts across tasks, cutting storage by 52-57% and build time by 13-14% on Megatron-LM and vLLM. Across six frontier models, the best resolves only 38.9% of the tasks; the probes reject 32% of the submissions that pass every official test, and with the original pull request descriptions as prompts, no model resolves a single task. Failure analysis shows that structural and state errors dominate and that agents' own tests rarely check memory, time, or traffic. Turning these findings into an agent skill raises the resolved rate of a frontier model on the Megatron-LM tasks by 10.5%.",
+      "tags": [
+        "cs.AI",
+        "cs.DC"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "InfraDev: Can Coding Agents Develop AI Infrastructure, and How Can We Tell?",
+      "url": "https://arxiv.org/abs/2610.36589v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "87274f31084cf9ea86733758",
+      "context_id": "dbb8b022c168d32e46109cd7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "3a26e20937ea5b0a91317bf1c57fb6d6639480d062319a0263c957868b314744",
+      "source_published": "2026-10-27T08:22:26Z",
+      "source_updated": "2026-10-27T08:22:26Z",
+      "summary": "Early-warning models in learning analytics can identify learners at risk of failure or withdrawal, but the resulting alerts are often only weakly connected to inspectable learning evidence. A risk score may indicate that intervention is needed without showing which traces, assessment events, or temporal patterns justify the alert. This paper introduces an incremental Learner Digital Twin for evidence-grounded early warning, implemented as a lightweight knowledge graph. The twin is updated at temporal checkpoints by replaying learning traces and assessment records, and it serves both as a feature-extraction substrate and as an explanation-grounding substrate. Predictive features are derived through graph-mediated queries, while features, attributions, alerts, evidence items, and raw records are represented as queryable graph entities. The framework is instantiated and evaluated on a public learning-analytics benchmark under a temporal protocol. The results show that graph-mediated feature extraction preserves the predictive behavior of equivalent raw-table features across model families and checkpoints. Generated alerts are materialized as evidence chains linking risk decisions to feature attributions, evidence items, and raw platform records. The study shows that early-warning prediction can be routed through a semantic and provenance-aware representation while preserving predictive performance and adding traceability, verifiability, and evidence-grounded explanation.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "An Incremental Knowledge-Graph Learner Digital Twin for Evidence-Grounded Early Warning",
+      "url": "https://arxiv.org/abs/2610.36820v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "ddd22af59fe5b5997866d6b4",
+      "context_id": "7b0c6f9c0858376c7e889ec9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "af31ed231495904062841b3257f91cafa84c3e7f4d0a810ebe91f48a6b06a985",
+      "source_published": "2026-10-27T16:08:08Z",
+      "source_updated": "2026-10-27T16:08:08Z",
+      "summary": "Fine-tuning Large Language Models (LLMs) on instruction data can quietly erode their safety, even when no training example looks harmful. Because this safety-degrading data looks benign, standard content filters struggle to catch it. We tackle this problem by developing SimpleLoRIF, a scalable gradient embedding method that identifies fine-tuning examples whose gradients align with unsafe behavior. By simplifying a low-rank attribution method and restricting backpropagation to the final four transformer blocks, SimpleLoRIF can embed datasets on the order of a million examples, boosting gradient attribution from a small-scale analysis tool into a practical filter for full post-training datasets. We first validate it on emergent misalignment, where we find that gradients can connect insecure-code training data to the broadly harmful behaviors that appear after fine-tuning, with AUC as high as 0.865 in the gradient space of misaligned models. We then use SimpleLoRIF to build SafeTulu, a version of Tulu 3 with the 20% of examples most gradient-aligned with unsafe responses removed. Training on SafeTulu reduces GCG attack success rate by up to 22% across Qwen, Llama, and Olmo, outperforming both LLM-as-a-judge and prior gradient-based filtering, while largely preserving or even improving capability. Finally, we analyzed the removed data and identify possibly under-studied sources of safety degradation, such as tool-execution failures and narrative arithmetic. We release SafeTulu along with a Hugging Face Space that lets researchers build their own customized versions of SafeTulu to fine-tune on, such as by changing the removal fraction or filtering only certain subsets.",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Follow the Gradient: Tracing Safety Degradation Back to Training Data",
+      "url": "https://arxiv.org/abs/2610.37481v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "08068a6fe935c6e97ea6ef3a",
+      "context_id": "72357288a136367d2bd2aa58",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "a5e216aa2bb4c4d2b1082fbf8e5f5148e329d141699b1a0076eca9ac7e1cc57b",
+      "source_published": "2026-10-25T18:00:11Z",
+      "source_updated": "2026-10-25T18:00:11Z",
+      "summary": "Deploying LLM agents in specialized domains often require fine-grained task-specific procedures and knowledge a general model lacks, yet parameter training is costly and non-interpretable, and hand-engineered agent systems shift the cost to expert labor. Episodic memory updates at context level, but single agent adaptation struggles to alleviate cross-task interference, especially with complex tasks such as multi-application navigation or data pool analysis. Although multi-agent evolution alleviates this problem, existing methods lack clear definitions on update rules and rely on the backbone model to decide where and how much the system changes. This ill-scoped evolution makes learning follow the backbone's structural preferences rather than the observed failures: one backbone accumulates skills while another spawns agents. We present EMMA (structured Episodic Memory for Multi-Agent workflow synthesis), which treats the configuration of a multi-agent system (controller routing memory, specialists inheriting a generalist prompt, and per-step procedural skills) as episodic memory. EMMA makes the ownership and admissibility of updates explicit: a reflector assigns each diagnosed failure to the scope owning its correction and proposes one edit within it, and backbone-independent guards keep every accepted edit scoped, incremental and bounded. Across KramaBench, AppWorld and BBEH with five backbones and four baselines (ACE, GEPA, EvoMAS and ADAS), EMMA attains the best overall performance on every benchmark, up to 32.5% over the strongest baseline, maintains consistent improvements across backbones, and uses 17-38% fewer training executions than the most efficient baseline.",
+      "tags": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "EMMA: Structured Episodic Memory for Multi-Agent Workflow Synthesis",
+      "url": "https://arxiv.org/abs/2610.35966v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "2280495fd3dde8b834f8d4bf",
+      "context_id": "5beb62de5dce66dc2714d200",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "11efb1d9a0d401d231e1d234e5c1b8901a1f03ce524b1799d3ef294e23ca4442",
+      "source_published": "2026-10-27T05:24:34Z",
+      "source_updated": "2026-10-27T05:24:34Z",
+      "summary": "Self-improving AI systems can revise the designs that govern their own behavior. Yet existing approaches center improvement on selected parent agents and their evolutionary experience, leaving the broader population largely underused. We identify a substantial gap between population coverage (i.e., the tasks solved by at least one evolved variant) and the performance of the best individual agent. This gap shows that useful capabilities and diagnostic evidence emerge across the population without being consolidated into its leading agents. These observations motivate the view from nowhere, a principle for agent evolution: an agent should be improved by interpreting its behavior through population-wide patterns of success, failure, and prior self-modification. We instantiate this principle as Population-Centered Evolution (PCE). PCE distils task records and modification histories from the population into a population block, which captures recurring failures, complementary successes, and the effects of previously attempted modifications to guide improvements to a selected parent's harness. Under matched models, initial harnesses, and evolution schedules, PCE achieves 72.1% success on SWE-bench Verified and 96.7% on Polyglot, improving over a strong group-evolution baseline by 3.2 and 5.9 percentage points. In our evaluation, PCE reduces the gap between population coverage and best-agent performance by one-third on SWE-bench and closes it on Polyglot. These results suggest that treating the population as evidence--not merely as candidates for selection--provides a complementary principle for agent evolution.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "The View from Nowhere: Population-Centered Agent Evolution",
+      "url": "https://arxiv.org/abs/2610.36660v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "1ffb1be841e050ee34c26dab",
+      "context_id": "5bc81e228d9c654cfdea3231",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "7d37e2b99c0e9e870fea82a1c3cba5f68671389a312af5a2d5273fa029324264",
+      "source_published": "2026-10-27T15:22:00Z",
+      "source_updated": "2026-10-27T15:22:00Z",
+      "summary": "Agentic Entity Resolution (ER) systems iteratively plan actions, retrieve evidence, revise hypotheses, and propose graph mutations. An erroneous identity hypothesis may condition later retrieval and produce apparent confirmation. This paper proposes a Digital Identity Optimization (DIO) and Ontology of Digital Identity (ODI)-informed authorization boundary between evidence available for agent reasoning and evidence eligible to authorize persistent identity-changing mutations. A domain-governed constraint-binding function maps selected reconstruction-failure distinctions to explicit identity-preserving constraints. An abstract two-phase supervisor permits a commit only when claim-specific authorization-eligible evidence supports every required proposition, relevant conflicts are resolved, the operation remains within its authorized scope, and relevant state and policy versions remain valid. Admission as UNVERIFIED does not confer authorization eligibility. Separate claim-specific promotion governs evidentiary use; insufficient support or unresolved material conflict leads to deferral. The contribution is a specification connecting diagnostic-to-constraint mapping, evidence promotion, proposition coverage, conflict handling, scope binding, and commit-time version integrity. A proposed evaluation protocol is designed to assess the mapping's incremental value beyond generic authorization and conventional identifier rules. This is a conceptual architecture without implementation or empirical validation, not a theorem of semantic correctness. Its property depends on domain-policy adequacy, evidence promotion, and enforcement. It does not prevent erroneous hypotheses or hypothesis-conditioned retrieval; dependency-aware evidence flow remains future research.",
+      "tags": [
+        "cs.AI",
+        "cs.CR",
+        "cs.DB"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Constraining the Commit Boundary: A DIO/ODI-Informed Authorization Guardrail for Agentic Entity Resolution",
+      "url": "https://arxiv.org/abs/2610.37407v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "d18ce40f39241e983db4229b",
+      "context_id": "5b9001b9e0eb78196c17d658",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "ab38636364506b5c43b3c633d9adc35e051065135ec5b3aaf64aeeb33200b6cb",
+      "source_published": "2026-10-27T11:42:47Z",
+      "source_updated": "2026-10-27T11:42:47Z",
+      "summary": "Background and purpose: Radiotherapy planning agents based on large language models (LLMs) decide when to submit a plan or request review but are evaluated mainly by dose. This study developed OpenGray, a benchmark of planning tasks with known correct decisions. Materials and methods: OpenGray adds tasks with known answers to the OpenKBP-Opt head-and-neck dataset, including two contradictions with dose goals proven incompatible and a feasible control with a stored plan meeting every hard goal. Four systems, from a rule-based planning script to a full LLM agent, were evaluated on 30 patients, the LLM-based ones with a commercial (Terra) and a local (Ministral 3 8B) LLM. Decisions, achieved dose, problem recognition, and technical failures were recorded and also read from logs of 39 stereotactic radiosurgery runs of SAGE, a clinical LLM agent. Results: With Terra, the script preceded by an LLM review and the full agent had decision accuracies of 95.4% and 92.1%, respectively, yet escalated only 50% (95% confidence interval, 25-75%) and 25% (10-40%) of overlap contradictions, which required arithmetic on the anatomy. All four systems submitted every feasible control, but 24% of these plans missed a hard goal that the stored plan had met. In four SAGE runs, one goal failed at every attempt; the agent identified it in every reply but had no action for stopping. Conclusions: Favorable aggregate scores concealed specific decision failures. Planning agents should be evaluated on their decisions as well as their dose and given an explicit action for stopping and requesting review.",
+      "tags": [
+        "cs.AI",
+        "physics.med-ph"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "OpenGray: a benchmark for evaluating the decisions of radiotherapy planning agents",
+      "url": "https://arxiv.org/abs/2610.37081v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "33f98e883388998c0b7c2c0a",
+      "context_id": "53745b554d519f50344938a7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "b85bc04a3b92dbf79597d9418f16dd0d08361d34e007e031ed857d964184f76c",
+      "source_published": "2026-10-27T16:53:18Z",
+      "source_updated": "2026-10-27T16:53:18Z",
+      "summary": "Failure diagnosers for robot manipulation are increasingly vision--language models (VLMs), trained and evaluated on single-arm failures produced by perturbing a successful demonstration. Bimanual tool use adds failures of other kinds: a tool that slips out of its socket while still held, two correct gestures made at different times, and attempts that fail for two reasons at once. On a simulated bimanual tool-use task whose failure causes are read from the recorded trace, we measure what each sensing channel lets a diagnoser tell. The tool's slip is read on the tool hand; which hand was late is read on both arms, while a sensor on one hand reads its own hand's delay and at most part of the other's; and whether a late attempt was also pushed too weakly is not identifiable from passive sensing when the tool hand is late. Within two attempts, a repair policy that escalates when the cause is not identifiable repairs as many failures as one told the true cause. A VLM's internal state carries the late hand almost perfectly, along a direction no closer to the one its answer reads than a random one; whether the answer reports it depends on the wording of the question.",
+      "tags": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Which Hand Was Late? Diagnosis for Robot Failure Recovery in Bimanual Tool Use",
+      "url": "https://arxiv.org/abs/2610.37533v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "b0d4818cd67a7681d12d824e",
+      "context_id": "50fb11fefd5085140c813fe5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "a2776f6e98b4da26becdbae7ef014fa9cffe782a6ab4c3b76f8f66455424e234",
+      "source_published": "2026-10-27T12:54:16Z",
+      "source_updated": "2026-10-27T12:54:16Z",
+      "summary": "Scaling supervised training for working agents requires diverse professional tasks that yield reliable expert demonstrations. However, missing or inconsistent task information can obstruct teacher execution and weaken the resulting supervision. We propose WorkFactory, a scalable framework for constructing coherent and executable professional tasks. Starting from professional intents, information-level planning builds an information support graph to guide task instantiation, explicitly representing the dependencies and locations of information required for the intended outputs. Probe executions then identify support failures and guide repairs while preserving the intended work. We construct 112,686 tasks spanning 612 occupations and use the collected teacher trajectories to fine-tune Qwen models at 4B, 27B, and 35B-A3B scales, yielding the WorkPilot family. All three models improve over their respective base models across four professional-work benchmarks, with WorkPilot-35B-A3B improving from 879 to 1565 Elo on GDPval-AA v2.1. Scaling analyses reveal model-dependent diminishing returns, with execution length first increasing and then decreasing. Controlled component analyses show that planning and repair reduce probe-diagnosed task environment defects and improve downstream performance. The data and models are available at https://github.com/IQuestLab/WorkFactory.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "WorkFactory: Turning Professional Intents into Executable Work for Scalable Agent Training",
+      "url": "https://arxiv.org/abs/2610.37161v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "89a8717b0037a3a9bae76705",
+      "context_id": "449514165d933af20fc12f75",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "f5bfda8da36d35a943fa5e4c002646bbf60bd4ccfd9d988319b5f859ce78a062",
+      "source_published": "2026-10-27T12:22:47Z",
+      "source_updated": "2026-10-27T12:22:47Z",
+      "summary": "Fracture in food can be undesired during production and transportation but also intended during cutting, grinding or mastication. The associated peak load, the deformation at failure and the resulting fragment geometry are all product properties. This work condenses the modeling of such fracture into a physically rigorous recipe that considers the practical constraints imposed by finite element simulations where necessary and applies idealized theoretical assessments where applicable. Cooled dark chocolate serves as a reproducible model material. Two well-established modeling frameworks for Griffith-type brittle fracture are assessed at an affordable spatial discretization: a sharp-interface and a diffuse phase-field approach. The assessment covers the choice of numerical framework, its discretization and a staged identification of the model parameters. Each parameter is identified from the loading stage that governs it: elastic parameters from pre-crack tension and compression, critical energy release rate from three-point-bending peak force, and the phase-field width last. The phase-field width interferes with the structural response, crack curvature and stress fields, depending on its lower bound set by the affordable spatial resolution. Elastic slope, peak force and crack path therefore cannot be met practically by a single parameter set. The objective must be fixed for the calibration of the model parameters and reported together with the numerical parameters and the boundary value problem.",
+      "tags": [
+        "cs.CE"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Finite Element Modeling of Fracture in Brittle Foods with Physically Consistent Parameter Calibration: A Practical Case Study on Cooled Dark Chocolate",
+      "url": "https://arxiv.org/abs/2610.37124v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "7807f7b599b6a15df659c187",
+      "context_id": "3785b6cdd928c979c6419e09",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "f0936faf8217483bf5913fc7a88656c20a1112f66eca9513eed72db2f8d50f95",
+      "source_published": "2026-10-27T05:12:46Z",
+      "source_updated": "2026-10-27T05:12:46Z",
+      "summary": "Memory helps LLM-based multi-agent systems reuse experience, but stored advice can be flawed or applied in the wrong situation. Team-level success or failure alone cannot reliably show whether a memory needs correction or should not have been used. We propose DiscernMem, a training-free framework that improves both memory quality and memory use. To improve quality, Defect-Aware Memory Refinement (DMR) compares team executions with a single memory and with no memory, diagnoses rule defects, and tests repairs on current and earlier tasks to guard against losing previously useful behavior. To guide appropriate use, Boundary-Learning Meta-Memory (BLM) records each memory's past uses and effects, learning when its owner role should apply or avoid it based on task context and incoming messages. Together, these components help teams correct flawed experience while retaining useful rules that were applied incorrectly. Experiments with Qwen3-4B-Instruct-2507 on four benchmarks show that DiscernMem achieves the highest average score on AutoGen, CAMEL, and MacNet, exceeding the strongest reported baselines by 0.51-4.32 points. It leads on code generation and symbolic planning across all three systems, including a PDDL score of 37.71 versus 28.48 on CAMEL.",
+      "tags": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Remembering Is Not Enough: Refining Memories and Learning When to Use Them in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.36652v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "e5a78585f38f62cba36baf01",
+      "context_id": "2c20288d2765e3b331382f05",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "bd27181f53954fbd3421c002670cfb9a46d8635e9ead830bbfe6ebfadd627df6",
+      "source_published": "2026-10-27T15:45:50Z",
+      "source_updated": "2026-10-27T15:45:50Z",
+      "summary": "A software feature usually evolves over time: developers extend its first version as new use cases and requirements arrive, and each extension builds on code written earlier. Most feature benchmarks evaluate a single request on a fixed codebase. Feature evolution requires evaluating successive extensions on an agent's own earlier code and checking whether the feature remains correct. We introduce FeatureArc to evaluate coding agents on evolving features, together with a pipeline that constructs its tasks from repository histories. The benchmark combines dependencies between successive stages of the same feature, explicit requirements and interface contracts, and executable checks across four programming languages. The pipeline validates fail-to-pass (F2P) tests for new behavior and pass-to-pass (P2P) tests for existing behavior on the reference code before and after each stage. We evaluated 10 coding agents on 73 manually reviewed tasks of 2 to 10 stages. Each agent works in one persistent session and workspace without external test feedback or rollback. The evaluation reveals a gap between first-stage and whole-feature success: pooled success falls from 62.7% at the first stage to 28.5% when the whole feature is tested on the final code. Trajectory analysis identifies inherited defects as a common failure mechanism, present in 72.9% of failed later stages. These earlier errors often remain undetected: in stages following a failure, agents leave the earlier error unnoticed about 95% of the time, and their self-tests rarely revisit earlier stages. Evolving a feature autonomously, without human checks between stages, therefore remains a substantial challenge for current coding agents. At Tencent, the pipeline extends internal evaluations to this setting and guides the development of Hunyuan, Tencent's family of large language models.",
+      "tags": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "FeatureArc: Benchmarking Coding Agents on Evolving Features",
+      "url": "https://arxiv.org/abs/2610.37434v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "996717aea127db279157bb8b",
+      "context_id": "2acac52cff5bfd626d378d18",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "421f1e043686f7ef68aa95a2d0c0dcd801c1580c7929fb73aa19c10a3e049177",
+      "source_published": "2026-10-27",
+      "source_updated": "",
+      "summary": "la versione 5&nbsp; documenta riprende la versione 1 e la versione 3 e la versione 4&nbsp; chiude il ciclo aperto dalla V4 e ne sostituisce integralmente i risultati numerici. Il documento riporta cinque punti fisici verificati sul modello a 240 nm (P1&ndash;P5), uno studio sistematico della scala da 1 nm a 1 m (S1&ndash;S4), la caratteriz zazione in microgravità e per tre classi di materiale (SP1&ndash;SP5), la simulazione dei fluidi con i due rotori come ostacoli (F1&ndash;F2) e il regime di vuoto profondo con assenza di attrito (V1&ndash;V5). La coppia ottica è trattata con un solo modello, il momento angolare ceduto dal fascio: &tau; = Pass/&omega;ott = F&lambda;/2&pi; = 2.610&times;10&minus;24 N&middot;m, cioè 108volte menodellimiteafasciointero P/&omega;ott = 2.824&times;10&minus;22 N&middot;m, che coincide con la &tau;max dichiarata nella V4 (2.826&times;10&minus;22). Poiché Per = &tau;/kT, il criterio di determinismo si riduce a un rapporto di potenze: Per = Pass/15.16 &micro;W. Con 1 &micro;W e l&rsquo;intercettazione reale dello 0.924 % si ottiene 6.10&times;10&minus;4 a 240 nm, 1.93&times;10&minus;14 a 1 nm e 6.60&times;10&minus;2 a 1 m: il dispositivo è termicamente limitato a ogni scala, e la soglia Per = 1 richiede 1.64 mW. A 1 GHz la configurazione in rameè strutturalmente impossibile(limite 72.6MHz). Nelvuotoprofondononesisteregimestazionario: esisteuntempocritico di rottura, che la scala governa (30.53 s a 240 nm, 2.538&times;1024 s a 1 m, un fattore 8.3&times;1022), mentre il materiale governa la velocità di rottura (31.909) e l&rsquo;energia immagazzinata (250). Nessuna validazione sperimentale è rivendicata: ogni cifra è prodotta dagli script in Appendice A. Document version 5 build s upon versions 1, 3, and 4; it concludes the cycle initiated by version 4 and entirely replaces its numerical results. The document presents: five physical points verified on the 240 nm model (P1&ndash;P5); a systematic study across scales ranging from 1 nm to 1 m (S1&ndash;S4); characterization in microgravity for three classes of materials (SP1&ndash;SP5); fluid simulations with the two rotors acting as obstacles (F1&ndash;F2); and the deep-vacuum regime in the absence of friction (V1&ndash;V5). Optical torque is addressed using a single model&mdash;the angular momentum transferred by the beam: &tau; = Pass/&omega;ott = F&lambda;/2&pi; = 2.610&times;10⁻&sup2;⁴ N&middot;m. This value is 10⁸ times smaller than the limit for a full beam (P/&omega;ott = 2.824&times;10⁻&sup2;&sup2; N&middot;m), which aligns with the &tau;max stated in version 4 (2.826&times;10⁻&sup2;&sup2;). Since Per = &tau;/kT, the criterion for determinism simplifies to a ratio of powers: Per = Pass/15.16 &micro;W. With an input of 1 &micro;W and an actual interception rate of 0.924%, the resulting values are 6.10&times;10⁻⁴ at 240 nm, 1.93&times;10⁻&sup1;⁴ at 1 nm, and 6.60&times;10⁻&sup2; at 1 m. The device is thus thermally limited at every scale, and reaching the threshold of Per = 1 requires 1.64 mW. At 1 GHz, the copper-based configuration is structurally impossible (the limit is 72.6 MHz). In a high vacuum, no steady state exists; instead, there is a critical time to failure, which is governed by the scale (30.53 s at 240 nm, 2.538&times;10&sup2;⁴ s at 1 m&mdash;a factor of 8.3&times;10&sup2;&sup2;), while the material determines the rate of failure (31.909) and the stored energy (250). No experimental validation is claimed: every figure is generated by the scripts in Appendix A.",
+      "tags": [
+        "Photon Engine",
+        "Vacuum propulsion",
+        "Photonic nanotechnology",
+        "DNA origami",
+        "Nanorobots",
+        "Quantum spin 720°",
+        "Electromagnetism",
+        "Light propulsion",
+        "Space technology",
+        "Photonic inertia",
+        "Motore fotonico",
+        "motore del vuoto",
+        "propulsione nel vuoto",
+        "Nanotecnologia fotonica",
+        "corpo umano",
+        "Nanorobot",
+        "Spin quantistico 720°",
+        "Elettromagnetismo",
+        "Propulsione luminosa",
+        "Tecnologia spaziale",
+        "nerzia fotonica",
+        "optical angular momentum",
+        "double turn",
+        "SU(2)",
+        "rotational drag",
+        "Mie scattering",
+        "rotational Péclet number",
+        "Mantaflow",
+        "deep vacuum",
+        "nanoscale propulsion"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Motore Fotonico del Vuoto v5 Architettura Spin/Contro‑spin, ciclo a doppio giro, bilancio del momento angolare, scattering ottico e leggi di scala da 1 nm a1m,con studio del regime di vuoto profondo",
+      "url": "https://zenodo.org/records/23705683"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "f2df1a8992c0baea596e81c8",
+      "context_id": "21182370f84d5fafdd728257",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "e242daf80596e3a3f150e82df19442b3852aa635f0a5dd5257d7954048b3ed42",
+      "source_published": "2026-10-27T06:09:50Z",
+      "source_updated": "2026-10-27T06:09:50Z",
+      "summary": "Security pipelines often fuse several data sources and protect a downstream model with a cross-source anomaly detector. Such detectors are usually judged by their clean false-positive rate and by how well they catch random corruption. Neither metric captures an adversary who controls some sources and targets a specific downstream decision. We propose a threat-quantification score, the \\emph{task-conditioned visibility margin}, defined as the least detector evidence a manipulation must reveal per unit of harm to the downstream task. The margin has a closed form, takes about $85\\,μ$s per certificate, yields a minimum-evidence attack, and identifies task-relevant directions the detector cannot see. On a 17-channel industrial telemetry benchmark, a detector that flags 82.8\\% of random single-channel corruptions is first-order blind on 64.7\\% of task/subset pairs in an audit of one- to four-channel subsets. Task-conditioned manipulations cause more than twice as many falsely reassuring errors as generic stealthy ones, and more of them evade the alarm on four of five splits, mainly at small budgets. Used to prioritize audits on held-out subsets, the margin finds a median of four verified failures in ten checks, compared with none for random order and two for alarm-based ranking, and performs comparably to the task-gradient baseline. It also ranks vulnerable configurations of the learned GDN and TranAD detectors and of a five-source crop-yield panel.",
+      "tags": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Quantifying and Prioritizing Stealthy Source-Manipulation Threats Against Multi-Source Anomaly Detectors",
+      "url": "https://arxiv.org/abs/2610.36693v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "1aafdaa1789b6745635a68bf",
+      "context_id": "1967c7efb8b9014357aa284a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "b3bd0422dfa106770e18990e366995c33b5c730b040324707471bedd8ae13523",
+      "source_published": "2026-10-26T20:28:50Z",
+      "source_updated": "2026-10-26T20:28:50Z",
+      "summary": "Offline-to-online reinforcement learning uses offline pretraining to accelerate subsequent online learning. While many methods assume the offline dataset remains available throughout fine-tuning, there are many settings where this is not the case. Prior work attributes failures in this setting primarily to critic recalibration under distribution shift. We identify a complementary actor-side failure: once the offline data disappears, continued behavioral cloning (BC) no longer preserves the offline behavior distribution and instead refits the behavioral model to the agent's limited, and nonstationary, online experience. We demonstrate that stopping online behavioral fitting while preserving the pretrained expressive prior substantially improves no-retention fine-tuning across implicit flow Q-learning (IFQL), flow Q-learning (FQL), and action-chunked RL (QC) on seven OGBench domains. We trace this failure to a behavioral feedback loop: continuing online behavioral cloning rapidly erases the pretrained prior, inducing representational collapse and action diversity loss that starves the critic of useful exploration. Freezing the prior breaks this cycle, preserving offline coverage while allowing value learning to drive continuous improvement.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Freeze, Don't Clone: Fine-Tuning with Expressive Policies Without Retaining Offline Data",
+      "url": "https://arxiv.org/abs/2610.36247v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "3f30f87dd6a2a19609dc973c",
+      "context_id": "18f1fedad1ba98a8dd90a6ab",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "e43a7997b180e962741e447548a7cf0c818c1c27a9a71976aabe180f8acd9166",
+      "source_published": "2026-10-26T21:56:03Z",
+      "source_updated": "2026-10-26T21:56:03Z",
+      "summary": "Benchmarks for verifiable code generation usually test a proof against one fixed implementation. We ask whether the same proof remains valid after a program refactoring that preserves behavior. We introduce RefactorProof, which derives 458 Lean-certified variants from the 185 VERINA tasks that compile in our pinned environment while holding the specification and evaluated proof fixed byte-for-byte. VERINA supplies reference proofs for 46 tasks, all from its basic split; the primary model-versus-reference comparisons further match on 21-25 short, non-recursive tasks. Structural refactorings expose substantial brittleness across proof sources: task-normalized structural PSR is 4.3% for the supplied references and 13.3-26.8% for the specialized provers. On the matched tasks, specialized prover proofs nevertheless have higher overall unchanged-proof survival than the supplied reference artifacts: +15.6 points for DeepSeek-Prover-V2-7B, +18.8 for Goedel-Prover-V2-32B, and +20.3 for Goedel-Prover-V2-8B; all three 95% CIs exclude zero. The ordering persists after excluding universally survived T1 variants, under family-balanced aggregation, and under alternative deployable valid-proof selection rules. However, unchanged-proof failure is not the same as high repair cost: predefined one-identifier edits repair 51/54 eligible reference structural failures and 58/85 eligible prover failures. RefactorProof therefore measures unchanged-proof stability under program refactoring, not the cost of maintaining a proof after it breaks.",
+      "tags": [
+        "cs.AI",
+        "cs.LO",
+        "cs.SE"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "How Stable Are LLM-Generated Proofs Under Program Refactoring? A Stress Test for Verifiable Code Generation",
+      "url": "https://arxiv.org/abs/2610.36328v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "fa8f865e7c5f090b6a90dd33",
+      "context_id": "0cc0305e071c6902abab6e52",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "799db3a4ecb6653d872456774249031e86f99871e8ddf56ad3c4b0573e566baa",
+      "source_published": "2026-10-08T01:38:24Z",
+      "source_updated": "2026-10-08T01:38:24Z",
+      "summary": "While recent advances in autonomous agents enable them to coordinate on increasingly complex tasks, prior work shows that this growing capacity for coordination can create safety risks, including collusion, in which agents jointly pursue misaligned actions while concealing the true basis of those actions from oversight. We study this risk in a simulated insider-trading environment, comparing single agents with sequential and decentralized teams across seven language models from three families. By varying agents' system-level objectives and pressure conditions, we examine when coordinated agents act on material nonpublic information, conceal the basis of a misaligned trade in a report, and maintain that deception under follow-up questioning. Compared to single-agent decision-making, multi-agent interaction raises misaligned-action rates from 35.4% to 68.2% and persistent-deception rates from 31.0% to 62.2%, both measured over all runs. These effects are largest under existential pressure, where teams sustain deception through follow-up questioning in 87% of all runs. Qualitative analysis reveals shared cover stories and coordinated rationales, suggesting group-level strategic deception rather than isolated reporting errors. To mitigate this behavior, we introduce PACT, a weak-to-strong on-policy distillation framework for mitigating collusive deception. Using generic honesty prompts, PACT trains a stronger student on its own sampled continuations, matching its next-token distribution to that of a smaller, frozen honesty-aligned teacher via reverse-KL supervision. Under existential pressure with ethical instructions, PACT reduces multi-agent persistent deception from 80% to 3%. Our results show that multi-agent coordination amplifies strategic deception and that on-policy honesty alignment can substantially mitigate these failures.",
+      "tags": [
+        "cs.MA",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "When Agents Collude: Weak-to-Strong On-Policy Distillation for Mitigating Strategic Deception in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.33011v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "08e7af85b700485380503a30",
+      "context_id": "f1f44d00b42e816c77400120",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation",
+        "non-identifiability"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 3.2083,
+      "source": "arxiv",
+      "source_context_sha256": "fdcfc81c4d55515f26bf8decf22cd547dbba0435b29bb5f42949d297e15d43e5",
+      "source_published": "2026-10-27T16:45:22Z",
+      "source_updated": "2026-10-27T16:45:22Z",
+      "summary": "A persistent belief in modern AI is that sufficiently large learners trained on sufficiently much data can make explicit domain knowledge optional. This paper examines a limitation of that belief. We define structure-encoded problems: tasks whose input-output map is determined, or sharply constrained, by known structure such as a solver, symmetry group, graph, physical law, measurement operator, grammar, combinatorial search space, or optimization objective. For such tasks, the central question is not expressivity--a dense neural network may contain the desired map--but finite-data identification, extrapolation, and certification. We introduce the structure gap: the finite-resource gap between a method that receives the governing structure and a learner that receives only examples. The strongest useful form of the claim is asymptotic rather than absolute: structure-agnostic learning may approach a structured solver as coverage grows, but every finite dataset can leave residual uncertainty that the structure resolves by construction. We prove this exactly for a Gaussian inverse problem: the known-operator Wiener solver attains Bayes risk, while the dense empirical learner in the correct linear class has persistent expected excess risk. We also prove a cell-coverage lower bound and an unobserved-orbit non-identifiability result. Controlled experiments in known-operator inversion, sparse recovery, and graph reachability with size extrapolation instantiate the mechanisms. When validated structure is available, it can constrain the hypothesis space before learning begins, leaving learning to address components the structure does not specify.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "The Structure Gap: When More Data Cannot Replace Structured Reasoning",
+      "url": "https://arxiv.org/abs/2610.37523v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "2167c3a0e360bb2fa4bcf6c9",
+      "context_id": "e72b819b2e3e10ecb00152fa",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.7917,
+      "source": "arxiv",
+      "source_context_sha256": "14453eeeb50a0c7ccbc276b29a17008e7a80db618db10b19b166d9e6279bc844",
+      "source_published": "2026-10-27T09:53:21Z",
+      "source_updated": "2026-10-27T09:53:21Z",
+      "summary": "Multimodal transformer models have driven unprecedented performance breakthroughs in modern document understanding. However, the inherent black-box nature of these models remains a major obstacle to their safe deployment in high-stakes sectors. Despite significant progress in explainability for vision and language tasks, explainable AI (XAI) research tailored to multimodal document understanding has received little attention. To address this gap, we present \\ourframework{}, the first comprehensive explainability framework that adapts existing XAI methods and evaluation metrics to the multimodal (text, layout, and image) document understanding context, while introducing efficient multi-target adaptations of both methods and metrics for domain-specific tasks such as semantic entity recognition. Using \\ourframework{}, we systematically evaluate 13 XAI methods across 3 document understanding tasks, 8 datasets, 4 models, and 17 evaluation metrics, and find that only a few methods perform consistently across all evaluation criteria, with Occlusion emerging as the most faithful and interpretable method overall. Through a dedicated meta-evaluation, we observe moderate to strong agreement among several faithfulness and complexity metrics while identifying certain ones that produce unreliable results. Finally, through multiple dataset-wide diagnostic analyses, we uncover key insights into model behavior, including the contribution of individual modalities across tasks and labels, spatial attribution patterns around target entities, and potential dataset biases. Overall, this work serves as both a benchmark and a practical guide for future XAI research in multimodal document understanding. To support reproducibility, we publicly release our code at https://github.com/saifullah3396/docxeval/.",
+      "tags": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "DocXEval: A Systematic Evaluation of Explainability in Multimodal Document Understanding",
+      "url": "https://arxiv.org/abs/2610.36929v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "1e81cad7bcce782dcc91c7a7",
+      "context_id": "bca099a8b56db4b9cbe8b8d6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.5833,
+      "source": "arxiv",
+      "source_context_sha256": "ed6f8cdda0abee25de3742b89840ec5f905d29900931d8ce9485fa7e4bb00b56",
+      "source_published": "2026-10-27T04:38:17Z",
+      "source_updated": "2026-10-27T04:38:17Z",
+      "summary": "System identification, namely the inference of mathematical representations of dynamical systems from measured data, is fundamental to engineering diagnostics, prognostics, and decision-making. Bayesian filtering offers a principled framework for probabilistic state estimation but traditionally relies on prescribed transition and observation models. Recent advances in deep Bayesian filtering address this limitation by embedding learnable representations within probabilistic state-space formulations, enabling data-driven identification of unknown dynamics while retaining physical structure and uncertainty-aware inference. This tutorial provides a systematic introduction to deep Bayesian filtering for nonlinear structural system identification, focusing on the interplay between learned dynamics, physical inductive biases, and posterior inference. The Deep Markov Model serves as a data-driven reference, while the Physics-guided Deep Markov Model (PgDMM) and Neural Extended Kalman Filter (Neural EKF) illustrate complementary approaches based on amortized variational inference and differentiable Kalman filtering, respectively. Their capabilities are examined through dynamic state estimation and joint dynamic state and parameter estimation on a three-dimensional shear-frame benchmark with hysteretic Bouc-Wen connections and sparse acceleration measurements. The results highlight important distinctions between measurement-conditioned reconstruction and open-loop forecasting, demonstrate how physical structure can improve latent-state interpretability without necessarily ensuring predictive fidelity, and reveal differences in the robustness of response and parameter estimation. Practical guidelines for model construction, training, evaluation, and deployment are provided, together with an outlook on remaining challenges in uncertainty calibration, identifiability, and real-world validation.",
+      "tags": [
+        "cs.LG",
+        "cs.CE",
+        "stat.ML"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Deep Bayesian Approaches for Interpretable Nonlinear Structural System Identification",
+      "url": "https://arxiv.org/abs/2610.36633v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "d6498bcf5e55e87daf7aba9c",
+      "context_id": "2854fb5a5f254a333a4eba06",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "negative control"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.6667,
+      "source": "zenodo",
+      "source_context_sha256": "b7ac114a5b2e97f892a3d25a187cc8e0906152502d2b89259d304345dc5e0d53",
+      "source_published": "2026-10-28",
+      "source_updated": "",
+      "summary": "Unrefereed research candidate. When two copies of a system, one hotter and one cooler, relax in the same bath, the Markovian Mpemba effect is a crossing of their distances from equilibrium. This package gives a sufficient test that rules out such crossings at every time: if the dynamics and its time reverse preserve the cone of observables with nondecreasing arithmetic prefix means, cooling Gibbs preparations stay ordered for relative entropy (both orientations), squared Hellinger and R&eacute;nyi divergences of order 0&lt;&alpha;&le;2, including for common schedules of noncommuting stages. For complete-graph bosonic population rates with common coupling, the test holds for every spectrum and bath temperature exactly when the spontaneous jump weight is concave; Ohmic baths with large enough cutoff, Drude&ndash;Lorentz and sub-Ohmic weights qualify on explicit ranges, super-Ohmic weights do not. A certified super-Ohmic example (J=d 3 ) shows an actual relative-entropy crossing. Limits: an exact five-state cone-preserving example has a brief total-variation reversal, and for every N&ge;4 there are N-level systems with a slow-mode inversion although no proper induced subsystem shows one. The archive contains the 27-page manuscript (PDF and LaTeX), exact rational and interval certificates, a reproduction runner, semantic negative controls, CI and SHA-256 sums. Assurance: written proofs, exact certificates, internal AI-assisted review only (not peer review, independent reproduction or formal verification); the closest antecedent (Avitan et al. 2026) already excludes the slow-mode effect for Ohmic and sub-Ohmic spectra. Creator: Anonymous. Text and data CC0-1.0; code MIT.",
+      "tags": [
+        "Markovian Mpemba effect",
+        "thermal relaxation",
+        "stochastic order",
+        "invariant cone",
+        "f-divergence",
+        "bosonic bath",
+        "spectral density",
+        "Markov jump process",
+        "interval arithmetic certificate"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Thermal ordering under Markovian relaxation: a finite-time criterion and its limits",
+      "url": "https://zenodo.org/records/23721564"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "1adeffe0c0b8898f1770477d",
+      "context_id": "f9a4afbf1e79bda58264c821",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.625,
+      "source": "github_repository_search",
+      "source_context_sha256": "aed7a4dda5411d081643c17aa9e1b6c41352fac428652491e3adfbc0c5cdfb3f",
+      "source_published": "",
+      "source_updated": "2026-10-28T01:21:26Z",
+      "summary": "An open coordination layer for AI research, experimentation and reproducibility. Connecting existing tools through bounded agent tasks, provenance, evaluation receipts and verifiable workflows, with an initial focus on open-model research.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "DerekWiner/alvearium-commons",
+      "url": "https://github.com/DerekWiner/alvearium-commons"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "d616add2f10a488060b07a68",
+      "context_id": "f8fc83c8d073516ee19c8ad0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.625,
+      "source": "zenodo",
+      "source_context_sha256": "03ccc14fc21916dd76939d65131f4da8c606c5d0f372249b7ad94740851d9092",
+      "source_published": "2026-10-23",
+      "source_updated": "",
+      "summary": "Supplementary data for \"OpenScientist: evaluating an open agentic AI co-scientist to accelerate biomedical discovery.\" This dataset contains research logs, knowledge states, provenance files, and generated figures for seven case studies spanning neurodegenerative disease transcriptomics, multiple myeloma genomics, survival proteomics, drug side effect analysis, and more. Each case study includes the full agent iteration log, configuration, and final report. Input datasets are included for three case studies where data sharing is permitted: case study 3 (neurofibrillary tangle transcriptomics), case study 4 (multiple myeloma RNA-seq), and case study 7 (drug side effect frequencies from clinical trials).&nbsp; Version 2 (August 2026) adds supplementary material for case study 3 (neurofibrillary tangle transcriptomics): 60 additional independent runs of the same question and dataset, comparing three agent/model configurations &mdash; Claude Code with Claude Opus 4.8, and the omp harness with Kimi K3 and GLM 5.2 &mdash; each run 10 times online and 10 times in a fully air-gapped configuration with no network access and literature served from a local 40-million-article MEDLINE mirror. Files: ..._supplemental_online_30runs_data.tar.gz and ..._supplemental_airgapped_30runs_data.tar.gz each contain 30 runs with reports (Markdown, PDF, HTML), all generated figures, per-iteration transcripts, the exact prompt, and full version/commit provenance. ..._supplemental_60runs_metrics.csv gives per-run runtime, tool-call counts, literature searches, findings recorded and token usage for all 60 runs. Version 3 (September 2026) adds two further supplementary sets for case study 3 (neurofibrillary tangle transcriptomics). ..._supplemental_reproducibility_10runs_data.tar.gz contains 10 independent runs of the same question on Claude Opus 4.6, all run on 2026-03-08 with byte-identical inputs (the research question and the input .h5ad were SHA-256 verified identical across all 10) and a 10-iteration budget. Each run includes the report (Markdown, PDF, HTML), knowledge_state.json with structured findings and literature list, per-iteration transcripts, and the job UUID. These runs quantify run-to-run variability under fixed inputs. ..._supplemental_genomic_skill_comparison_data.tar.gz contains 30 runs &mdash; 15 using the original genomics Agent Skill and 15 using a revised version &mdash; with the two skill definitions included alongside the jobs. The revised skill adds explicit guidance on donor-level pseudobulk aggregation and mixed-effect modelling; the paired arms allow the effect of that guidance on the analysis the agent chooses to be assessed directly. Each run includes reports (Markdown, PDF, HTML), per-iteration provenance transcripts, and container logs. Version 4 (October 2026) adds the run sets generated for the second revision of the manuscript, renumbers the case-study files to match the revised manuscript (the suvorexant proteomics analysis is now Case Study 5; neurofibromatosis is Case Study 6, drug side effects Case Study 7, and the CSF A&beta;42/40 prediction model Case Study 8), and adds RUNS_MANIFEST.csv , which maps every job in this record to its experiment, supplementary table and row label. Run IDs quoted in the supplementary tables are the first 8 hexadecimal characters of the job ID. New archives, all for Case Study 3 (neurofibrillary tangle transcriptomics; same research question and input file as the existing archives, OpenScientist commit fac6971, Claude Opus 4.6, run 2026-10-18 with a 10-iteration budget): ..._supplemental_iteration_controls_10runs_data.tar.gz (10 replicate runs on unmodified code; Experiment 4 and the control arm of the two ablations), ..._supplemental_knowledge_state_ablation_10runs_data.tar.gz (10 runs in which the knowledge-state summary and outline were withheld from the agent; Experiment 5; the patched orchestrator file is included as ..._knowledge_state_ablation_iteration.py.patched ), and ..._supp",
+      "tags": [
+        "AI",
+        "autonomous agents",
+        "scientific discovery",
+        "bioinformatics",
+        "open science",
+        "air-gapped",
+        "open-weight models",
+        "reproducibility",
+        "large language models"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "OpenScientist: Supplementary Case Study Data",
+      "url": "https://zenodo.org/records/23602910"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "7406b78ee7c499fcaea77762",
+      "context_id": "f83925247088eb1903c1ad1a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.625,
+      "source": "zenodo",
+      "source_context_sha256": "c16a150cef220bdb5793bdb439703cb3c7c0c42e60238b2216134b27ffcb10b9",
+      "source_published": "2026-10-27",
+      "source_updated": "",
+      "summary": "Training code, step-size calibration (Algorithm 2), the decoupled batch normalization of Appendix C (Algorithm 3), a demonstration of the grad_outputs=ones pitfall, tests, and the raw results behind every table of the paper Derivative Computation in Physics-Informed Neural Networks: Automatic Differentiation, Finite Differences and Beyond (arXiv:2608.11020). Four benchmark PDEs (Poisson 2D with holes, Burgers 1D, Heat2D-CG, a 4th-order plate), four derivative methods (AD, FD, eFD, sFD). See README.md for what reproduces what. Code: MIT. Data: CC BY 4.0, except the PINNacle reference solutions in data/reference, which keep their origin's license.",
+      "tags": [
+        "physics-informed neural networks",
+        "finite differences",
+        "automatic differentiation",
+        "PyTorch",
+        "reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "finite-pinn-repro: code and data of 'Derivative Computation in Physics-Informed Neural Networks: Automatic Differentiation, Finite Differences and Beyond'",
+      "url": "https://zenodo.org/records/23709829"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "11098d08c5da13a4877368a2",
+      "context_id": "9ac660606f825e7917490680",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.625,
+      "source": "zenodo",
+      "source_context_sha256": "a19c66aad774c4e80801b9de100b9ad8595fd574b6bb0cac714e45c081946f79",
+      "source_published": "2026-10-27",
+      "source_updated": "",
+      "summary": "This repository provides the source code, simulation datasets, computational benchmarks, numerical results, and reproducibility materials supporting Paper I of the Principle of Representation Integration for Stable Models (PRISM-M), prepared for the Journal of Computational Neuroscience . PRISM-M V4 is a minimal recurrent computational framework organized around five functional operations: Extraction, Compression, Integration, Stabilization, and Prediction/Action (ECISP). The implementation uses a single independently evolving recurrent state, with finite-precision quantization and explicitly defined information-processing transformations. The framework is intended to examine the functional organization of information processing, contextual integration, and memory stabilization within established recurrent and state-space dynamics. The repository includes the frozen V4 implementation, mathematical definitions, parameter configurations, experimental protocols, random seeds, simulation trajectories, statistical analyses, and comparative benchmarks involving autoregressive models (ARX), Kalman filtering, and recurrent neural networks. The deposited materials document the original parameter-landscape and stability analyses, targeted perturbation experiments, memory-retention studies (M1&ndash;M5), and additional computational experiments (V1&ndash;V5) evaluating noise robustness, adaptability, recovery, interference resistance, and information recoverability. Additional validation materials include information-matched representation controls, intrinsic-noise sensitivity analyses, and mathematical verification of contraction and perturbation equivalence. These retrospective analyses are distinguished from the original experimental protocols. The repository also contains the numerical datasets, figure files, supplementary materials, execution instructions, software dependencies, provenance records, and SHA-256 integrity checks associated with Figures 1&ndash;6 and Supplementary Figures S1&ndash;S4. Computational reproduction and numerical verification have been performed for the principal analyses. Complete automated regeneration of all final publication artwork and independent cross-platform verification remain outside the scope of the completed checks. The purpose of this deposit is to facilitate independent evaluation, computational reproduction, and further investigation of the PRISM-M V4 framework. The model is a theoretical computational implementation and does not constitute direct biological validation or demonstrate a new class of recurrent dynamics.",
+      "tags": [
+        "PRISM-M",
+        "Computational neuroscience",
+        "Recurrent neural networks;",
+        "Information processing",
+        "Memory stabilization",
+        "State-space models",
+        "Dynamical systems",
+        "Computational modeling",
+        "neuroscience"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "PRISM-M V4: Source Code, Simulation Data, Computational Benchmarks, and Reproducibility Materials for Paper I",
+      "url": "https://zenodo.org/records/23713014"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "5d1b9a619f0cd8a14bb6ddad",
+      "context_id": "788e7fbacbf04780142ab04a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.625,
+      "source": "zenodo",
+      "source_context_sha256": "1eee82b8dd3ba71fe4753cc0bd1ac56883bd97dec02bb4f2753e5108f7fb7986",
+      "source_published": "2026-10-28",
+      "source_updated": "",
+      "summary": "Reproducible finite-sample analysis of append-only copying in conformal calibration. The project contains five public regression benchmarks, three fixed model families, 30 random splits, six copying mechanisms, three coverage targets, independent score simulations, and exhaustive rank checks. It compares rowwise, source-ID, copy-budget, and effective-sample-size calibration, and quantifies coverage-width trade-offs under incomplete provenance.",
+      "tags": [
+        "conformal prediction",
+        "data duplication",
+        "prediction intervals",
+        "uncertainty quantification",
+        "reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "How Copies Break Conformal Prediction",
+      "url": "https://zenodo.org/records/23717113"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "4a16067d4e590f78098dca3e",
+      "context_id": "bfc05f42b8c7b686a8e6ecd5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "7aefeecf683a4be0ca354f2961d6ed167d4639b38780421a5c6fa1378a6523a3",
+      "source_published": "2026-10-26T23:18:47Z",
+      "source_updated": "2026-10-26T23:18:47Z",
+      "summary": "Modeling multi-scale dynamics in urban road networks is essential for intelligent transportation systems but is often hindered by the computational cost of long-range historical context and the challenge of fusing heterogeneous modalities. Existing spatio-temporal frameworks face a trade-off between sequence length and memory overhead, while frequently neglecting the transient effects of exogenous factors such as road incidents and weather. To address these limitations, we propose SpecLST, a frequency-enhanced long-short-term spatio-temporal multimodal framework. SpecLST leverages a fast Fourier transform-based frequency-domain representation module to efficiently encode multi-week historical dependencies, bypassing the memory bottlenecks of standard attention mechanisms over raw long sequences. Heterogeneous context is integrated through attention-based fusion, followed by a sparse Mixture-of-Experts backbone with graph augmentation for spatio-temporal representation learning. Additionally, a frequency-enhanced residual head isolates high-frequency transients, improving sensitivity to abrupt traffic anomalies. At the 60-minute horizon, SpecLST achieves mean relative error reductions of 14.10% in MAE, 10.35% in RMSE, and 15.78% in MAPE across eight neural forecasting baselines and four datasets, with the dataset- and metric-specific average reductions ranging from 5.63% to 22.21%.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "SpecLST: Spectral-Enhanced Long-Short Term Spatio-Temporal Multimodal Modeling for Traffic Forecasting",
+      "url": "https://arxiv.org/abs/2610.36393v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "c584902f122cc38eb58f83f0",
+      "context_id": "af80eaeb7951a4c06f9a01b6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "c5f1af3fa8a85801b08dda4a6217a9f23744c9582e05f0e114f4b0f89a3f21a2",
+      "source_published": "2026-10-27T16:34:24Z",
+      "source_updated": "2026-10-27T16:34:24Z",
+      "summary": "We examine conditional charged-multiplicity fluctuations at fixed multiparton interaction (MPI) count in retained PYTHIA proton-proton samples at centre-of-mass energies of 2.76, 7, and 13 TeV. Charged particles satisfy |eta| < 0.8 and 0.15 < pT < 20 GeV/c. In the historical colour-reconnection (CR)-labelled baseline samples, the CR-ON conditional mean is smaller by a larger fraction than the standard deviation: the absolute width is smaller, while the coefficient of variation is larger in every retained matched MPI bin. Effective lifetime/decay settings and their per-run correspondence are unverified for this baseline, so these comparisons do not establish that CR alone causes the observed differences or their energy dependence. A separately documented 13 TeV comparison using the Compact Muon Solenoid (CMS) CP5 tune, with equal non-CR physics settings and particle data across the ON/OFF pair, exhibits the same absolute-versus-relative width ordering. Retained independent Monash and A14 samples also show this pattern, subject to historical production-record limitations. A comparison with mean-transverse-momentum data from A Large Ion Collider Experiment (ALICE) and simulated activity estimators provides final-state context within the stated particle-definition and provenance limits.",
+      "tags": [
+        "hep-ph"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Color-Reconnection Effects on the nMPI-Nch Conditional Multiplicity Fluctuations in PYTHIA 8 pp Collisions",
+      "url": "https://arxiv.org/abs/2610.37511v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "cd6d506b42f3c6499a14b165",
+      "context_id": "98d0dddbed8ca5d9b819a1e5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "12484ecc98e3b437ef7055c400184ba34f7c66a63c8c366528fab9d566766864",
+      "source_published": "2026-10-27T09:59:09Z",
+      "source_updated": "2026-10-27T09:59:09Z",
+      "summary": "Optimizing discrete allocation weights across competing segments of a shared budget is a fundamental challenge in resource-constrained, sequential decision-making environments. In practice, this optimization is often hindered by delayed, noisy, and aggregate feedback, alongside strict operational constraints on how frequently weights can be adjusted. Because of the resulting combinatorial action space and extreme data sparsity, classical multi-armed bandit algorithms that evaluate arms independently are rendered highly inefficient. To overcome these limitations, we propose a segmentation-agnostic approach utilizing Gaussian Process Upper Confidence Bound (GP-UCB) algorithms. By placing a Gaussian Process prior on the reward function, our method effectively shares information across neighboring configurations, drastically reducing the necessary exploration horizon. In this paper, we bridge the gap between theoretical bandit research and production-scale deployment. We first introduce a high-fidelity synthetic simulator to evaluate various kernel configurations under stationary, drifting, and reactive environments, identifying a composite Matérn + Linear kernel as the most robust choice for overcoming local noise and global shifts. Finally, we validate our findings through a large-scale Randomized Controlled Trial (RCT) in a live production environment. Our empirical results demonstrate that the GP-UCB approach delivers a statistically significant efficiency lift compared to a standard $\\varepsilon$-greedy baseline, offering a highly practical solution for real-world black-box lever optimization.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Gaussian Process Bandits for Constraint Black Box Lever Optimization",
+      "url": "https://arxiv.org/abs/2610.36935v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "6de3635d449a94c7c2a8e878",
+      "context_id": "90986345ee2cbad91cd25723",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "fa5e53c2b8e0ca3865e48eae0435816c8a9579d8dd32d73a7828f10543595cbb",
+      "source_published": "2026-10-24T08:35:39Z",
+      "source_updated": "2026-10-24T08:35:39Z",
+      "summary": "Large language model (LLM)-based multi-agent systems have demonstrated remarkable capabilities across diverse tasks. Yet their memory and collaboration architectures often remain static, constraining continued adaptation and improvement over time. Recent work addresses this limitation by evolving memory or collaboration based on interaction experience. However, updates to these interdependent components are not necessarily aligned: an evolved workflow may require experience that memory does not provide, while evolved memory may encode guidance that the workflow cannot use. To address this problem, we propose CoEvolve, a skill-centered framework for aligned memory--collaboration evolution. CoEvolve represents reusable local collaboration patterns as skills that link evolving collaboration decisions to their supporting memories. It further compares original and counterfactual trajectories to identify local evolution signals, which coordinate updates to the skill library, skill memory, and executor memories across rounds. Experiments on the ALFWorld and WebShop benchmarks confirm that CoEvolve achieves the best overall performance among the evaluated baselines, while ablation studies further validate the effectiveness of aligned co-evolution and counterfactual-guided evolution.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "CoEvolve: Counterfactual-Guided Co-Evolution of Memory and Collaboration in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.33539v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "bc5576a4ab11cf8366541f48",
+      "context_id": "26f82e6eeb5b108274169b72",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "9e0c3e6a35aaddeb55423022401ce7740a498f7c3457c470478eff2106bc5198",
+      "source_published": "2026-10-26T05:50:57Z",
+      "source_updated": "2026-10-26T05:50:57Z",
+      "summary": "Disease diagnosis is a key application of large language model (LLM) agents in healthcare. However, existing medical agents are primarily trained and evaluated with static question-answering data, providing limited opportunities to learn active information acquisition, examination decision-making, and dynamic clinical interaction. To address this limitation, we present ClinVerse, an interactive, real-data-grounded multi-agent environment designed for training and evaluating medical diagnostic agents. Built on ClinPatient, a scalable dataset comprising 150k diagnostic cases derived from real-world electronic health records, ClinVerse supports coordinated interactions among six specialized clinical roles. Specifically, a doctor agent starts from an initial patient complaint, progressively gathers clinical evidence through patient interviews and examination requests, and ultimately produces a diagnosis. For each interaction trajectory, a rule-based scoring framework quantifies information acquisition, examination ordering, and diagnostic accuracy. These trajectory-level scores serve as reward signals for agent training while also enabling scalable evaluation. In experiments, we evaluate various general-purpose and medical-domain models and show that nine self-evolution methods across three categories consistently improve agents' diagnostic capabilities within ClinVerse. We further analyze the interplay among model capability, environment feedback, and self-evolution methods.",
+      "tags": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "ClinVerse: A Realistic Multi-Agent Diagnostic Environment for Training and Evaluating Medical Agents",
+      "url": "https://arxiv.org/abs/2610.34878v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "6f77c83ca9ae6d26bf9a61e1",
+      "context_id": "0fea83f2715443526a7ceae4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "19279881d66d15e9619d805d0e21d3e446e798cf4b618488ff3709ba7788689c",
+      "source_published": "2026-10-28",
+      "source_updated": "",
+      "summary": "The logarithmically averaged two-point Chowla conjecture was proved by Tao and quantitatively improved by Helfgott&ndash;Radziwi&#322;&#322; and Pilatte, through a dilation identity followed by a spectral bound for a divisibility operator. On the generalised Elliott&ndash;Halberstam conjecture (GEH), Bombieri's asymptotic sieve turns the twin prime conjecture into a Chowla-type statement on almost primes, and Tao remarked that this restriction destroys the multiplicativity the Chowla arguments rely on. We make this remark a theorem. We define a class of dilation&ndash;spectral certificates containing the Helfgott&ndash;Radziwi&#322;&#322; and Pilatte certificates adapted to the shift 2, with arbitrary smooth, rough or mixed dilators up to x &kappa; , and prove that every such certificate has resolution &gt;&gt; &eta; min(1, &eta;/&kappa;) log x on twin-type parity (Theorem A). The loss is the factor 1/log x &eta; that two-sided roughness costs on every edge. To state what such a certificate would have to resolve, we write the Bombieri&ndash;Tao reformulation as an exact, numerically testable identity for &sum; n&le;X &Lambda;(n)&Lambda;(n+2)/n in terms of a logarithmic parity defect &rho;(X) of the Liouville function on almost-prime pairs (Theorem B), and show that on GEH the joint parity of rough pairs is governed by the twin parameter alone (Theorem C). A road map (Figure 1) summarises the structure. New in version 0.6. Section 6.3, \"The roughness ceiling of known mechanisms\". Theorem A holds uniformly in the roughness level z, so dilation&ndash;spectral certificates can resolve parity only on z-rough integers with z &le; exp(O(&radic;log x)) (Corollary 6.11, a theorem). Two further remarks analyse specific arguments: Tao's entropy-decrement iteration, which reaches z &le; (log x) o(1) , and the recent L&uuml;&ndash;Wang&ndash;Wu argument for &mu;(p+2) (arXiv:2610.20242, unrefereed), which reaches z &le; exp((log x) c ) with c &lt; 1/5 and cannot start at x &eta; . These remarks concern those specific proofs, not every argument of their kind. All known mechanisms stop far below the roughness x &eta; that Bombieri's parity parameter requires. The code bundle adds the scripts entropy_test.py and bilinear_probe.py with their data up to x = 10 8 . New in version 0.7. Theorem E, a rigorous limitation theorem for entropy-decrement arguments. We define entropy-decrement certificates by the ingredients of Tao's argument: an entropy budget, the decrement inequality, and a decoupling step that uses only boundedness and sparsity, so variance-sensitive variants are included. Two explicit sharpness constructions show that such certificates can resolve twin-type parity only on z-rough integers with z &le; (log x) O(&epsilon; 4 ) at precision &epsilon;. Together with Corollary 6.11, two rows of the roughness-ceiling table are now theorems. The code bundle adds pellet_check.py, which verifies Pellet's formula &mu;(f) = (&minus;1) deg f &chi;(disc f) over F 3 and F 5 , the function-field mechanism behind the Sawin&ndash;Shusterman twin prime theorem, which has no known integer analogue. New in version 0.8. Appendix D.5, \"Map of explored routes and the hypothesis ledger\": a figure of every route explored in the project with its status (theorem, theorem in a model, analysis, numerical), and a ledger of bold hypotheses H1&ndash;H7 with their tests. Two are notable. H3, a finite parity linear program over many patterns with positivity and one-sided parity constraints, is refuted in the model by an explicit witness: any two-point parity counterfeit extends independently to larger patterns, so these constraints alone cannot exclude &delta; = 0. H6, a base- p analogue of Pellet's formula, shows no correlation between &lambda;( n ) and the function-field M&ouml;bius of the digit polynomial at x &asymp; 10 8 (all | z | &le; 1.65). The code bundle adds parity_lp.py, h6_digits.py and the map generator. New in version 0.9. Four new results. (1) Corollar",
+      "tags": [
+        "twin prime conjecture",
+        "parity problem",
+        "Bombieri asymptotic sieve",
+        "Chowla conjecture",
+        "Liouville function",
+        "Elliott-Halberstam conjecture",
+        "expander graphs",
+        "AI for mathematics"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Why expansion methods for Chowla do not reach twin primes: a method-limitation theorem and an explicit parity compiler",
+      "url": "https://zenodo.org/records/23722939"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "aadb7297140a788f247770d4",
+      "context_id": "08da2f12a6e9c747a8dd45d7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "0a8e77470b8ef03770dc913026948674643e8a990f1f306d6caa2ccbf9b63f9e",
+      "source_published": "2026-10-27T07:07:54Z",
+      "source_updated": "2026-10-27T07:07:54Z",
+      "summary": "Spectral-temporal unmixing of MODIS time series is essential for applications such as abundance mapping and spectral library construction, yet it remains challenging due to (i) spectral-temporal information coupling in MODIS data, (ii) intra-class endmember spectral variability and inter-class signature ambiguity, and (iii) the instability of naively fusing multiple expert representations. This paper presents the Multi- task Disentangling Fusion Mamba (MDF-Mamba) to address these limitations. To resolve spectral-temporal coupling, we design a disentangling architecture that pairs per-channel spectral experts with a dedicated bidirectional state-space (Mamba) temporal branch. Convolutional modules each process a single spectral channel, while the Mamba branch encodes the cross-channel seasonal trajectory, forming a multi-branch expert ensemble with soft inter-expert reweighting based on squeeze-and-excitation. For the integration of these spectral and temporal expert outputs, we introduce mHCFusion, adapting the manifold-constrained hyper-connection framework to merge the outputs in a stable and interpretable manner. Endmember variability is addressed by extending the linear mixing model with pixel-wise learnable spectral variability weights that capture intra-class endmember variation. Finally, we design a multi-task training objective that combines supervised abundance estimation with self-supervised spectral reconstruction and endmember regularization terms on the same training data, yielding a highly efficient framework for spectral-temporal unmixing. Experiments on MODIS time series covering the Alberta and Saskatchewan provinces show that MDF-Mamba achieves the best performance on 12 of 14 evaluation metrics across both datasets (7 of 7 on Alberta; 5 of 7 on Saskatchewan), ranking second on the remaining two.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Multi-task Disentangling Fusion Mamba-CNN for MODIS Spectral-Temporal Unmixing with Endmember Variability Modeling",
+      "url": "https://arxiv.org/abs/2610.36750v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "81e64dac0e33d7cabfcb3776",
+      "context_id": "efc4f54b3b9c7f76949d47e3",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "arxiv",
+      "source_context_sha256": "221eca5544835d316e6ea75503b210addcca8abed1364cca62d494e1c4923149",
+      "source_published": "2026-10-27T04:21:27Z",
+      "source_updated": "2026-10-27T04:21:27Z",
+      "summary": "Mamba-2 compresses all context into a fixed-size recurrent state that dominates decoding memory and bandwidth. Existing compressors quantize state values or prune state coordinates, scoring each channel independently in the native basis. We examine trained Mamba-2 states and find that energy is almost rank-one, but the output does not read the energetic directions: energy concentrates in a bias-like direction accumulated by the recurrence, while the content the output reads lives in a low-dimensional subspace that is not aligned with the state's coordinates. Even output-aware scores are computed coordinate by coordinate, so they miss the directions that determine the input--output map. Compression should therefore target the write--read subspace rather than individual coordinates. We propose \\method{}, a post-training transform that instantiates balanced truncation with full controllability and observability Gramians and applies the rotation exactly via Mamba-2's scalar-identity transition. Because the useful rank varies widely across layers, we further introduce HARP, which allocates ranks per layer from the Hankel spectrum and protects retrieval-sensitive layers, improving both perplexity and retrieval over uniform budgets. Calibration takes a single forward pass, an order of magnitude faster than GHOST's released protocol, with lower peak memory. With HARP, \\method{} halves the state dimension at an average WikiText-2 perplexity increase of $0.3$ points ($1.8\\%$) across 130M--2.7B, versus $1.6$ ($9.3\\%$) for GHOST, and the gap widens at 25\\% retention.",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "stat.AP",
+        "stat.ME"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Balanced State Subspaces for Mamba-2 State Compression",
+      "url": "https://arxiv.org/abs/2610.36617v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "b5223bb99b32b80f6da40394",
+      "context_id": "ed8171af5244c7c1af5ff61f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "arxiv",
+      "source_context_sha256": "bce94df03223a558f3ac158f130b9247bac2530b184f00d21e1096602376390c",
+      "source_published": "2026-10-27T14:56:16Z",
+      "source_updated": "2026-10-27T14:56:16Z",
+      "summary": "We develop a multifidelity black-box variational inference (MF-BBVI) approach for PDE-constrained Bayesian inverse problems in which forward solves are expensive and PDE gradients are unavailable. The method is built on score-function estimators for the evidence lower bound (ELBO), which avoid differentiation through the PDE model but are known to suffer from high variance. To address this high variance, we employ multifidelity approximate control-variate estimators that combine a small number of high-fidelity samples with a larger number of low-fidelity samples to reduce estimator variance and the number of high-fidelity evaluations required for optimization. We further develop a PDE-derivative-free second-order optimization strategy based on both gradient and Hessian score-function estimators. For low-fidelity model generation, we propose an on-the-fly strategy that builds and adaptively updates a reduced-order model (ROM) as the variational distribution evolves throughout the optimization. We investigate strategies for adapting the ROM and estimating the approximate control-variate gains, examining tradeoffs between estimator bias, variance reduction, and computational cost. The resulting approach facilitates derivative-free variational inference for large-scale inverse problems through a reduction in overall computational cost. We demonstrate the method on four numerical examples: a linear benchmark with an exact posterior and three PDE-constrained inverse problems.",
+      "tags": [
+        "math.NA"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Multifidelity variational inference for derivative-free PDE-constrained inverse problems",
+      "url": "https://arxiv.org/abs/2610.37359v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "dcb19ec705b2c02858d09c39",
+      "context_id": "e0b5b073cfa9224462e30ca1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "arxiv",
+      "source_context_sha256": "74165812f209ac0b5209382de5186271885d698a2bb2eca5f9470c4e2928fcd5",
+      "source_published": "2026-10-27T07:12:01Z",
+      "source_updated": "2026-10-27T07:12:01Z",
+      "summary": "Gradient-based data attribution has become an important tool for high-quality data selection in the instruction fine-tuning of large language models (LLMs), as it estimates the contribution of training examples through their influence on model optimization. However, we find that existing global gradient attribution methods suffer from surface-form bias: minor changes to semantically irrelevant details, such as wording or formatting, can produce highly inconsistent attribution scores even when the underlying content remains unchanged. To address this issue, we propose Content-Invariant Gradient Attribution (CIGA), a robust framework for instruction data selection. CIGA first identifies layers whose gradients are both influential for attribution and stable under semantics-preserving surface-form perturbations, thereby reducing formatting noise in gradient features. It then dynamically fuses these attribution signals with semantic representations of the input, combining optimization-level influence with content-level information. Extensive experiments across multiple benchmarks show that CIGA produces more stable rankings under surface-form perturbations while preserving downstream capabilities and improving average performance. CIGA also reduces attribution cost, offering a robust and efficient approach to data selection for LLM instruction tuning.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Robust LLM Data Selection via Content-Invariant Gradient Attribution",
+      "url": "https://arxiv.org/abs/2610.36755v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "2da87da447268a98f3658eb2",
+      "context_id": "d1a8adbdea805406821c999a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "arxiv",
+      "source_context_sha256": "d549ebf9ef0b28f493fb98211a3ea3271ce0a18d8a27d845132695922f5e641a",
+      "source_published": "2026-10-26T03:41:48Z",
+      "source_updated": "2026-10-26T03:41:48Z",
+      "summary": "Centralized training with decentralized execution (CTDE) has become the dominant paradigm in multi-agent reinforcement learning (MARL), motivating extensive study of what privileged information should be made available to the critic during training. While prior work has examined the role of global state in fully cooperative settings, the design of centralized critics for N-agent ad hoc teamwork - in which dynamically varying set of learning agents must coordinate with an arbitrary set of uncontrolled teammates drawn from an unknown distribution - remains poorly understood. We study this question by comparing two natural classes of advantage estimators: controlled history estimators, which condition only on the observation and action histories of the learner's own agents, and joint history estimators, which additionally condition on the histories of the uncontrolled teammates. We prove that both estimators are unbiased and characterize the conditions under which the joint history estimate attains strictly lower variance than its controlled counterpart. Empirically, joint history critics match or outperform controlled history critics across a range of NAHT tasks, yielding improved sample efficiency and final returns. Together, these results provide both a theoretical justification and an empirical recommendation for incorporating uncontrolled agent histories into centralized critics for N-agent ad hoc teamwork.",
+      "tags": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Centralized Critics for N-Agent Ad Hoc Teamwork",
+      "url": "https://arxiv.org/abs/2610.34799v1"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "selection": "BALANCED_LENS_ROLLING_TOP",
+  "snapshot_cap": 48,
+  "snapshot_items_total": 48,
+  "target_repository": "Hawkar-usls/aura-oracle-tg"
+}

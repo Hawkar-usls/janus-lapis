@@ -1,5 +1,5 @@
 {
-  "batch_id": "0cb12d954ba5c0a319d7",
+  "batch_id": "dc7549136c395a58b69e",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -92,8 +92,8 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "171bd974efb3c09ae5671e9b",
-      "context_id": "bb86e03ce4c6b749d7dfd695",
+      "candidate_id": "bbb3272911635e8177ed747c",
+      "context_id": "1def6140546b0ca8dd63fb0a",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
@@ -107,24 +107,24 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
+        "consensus",
         "failure",
-        "multi-agent",
-        "swarm"
+        "failure mode"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.9583,
+      "score": 10.1667,
       "source": "arxiv",
-      "source_context_sha256": "6cc2c3e0a11d2b7142e77f25a2549b2bbf80cdfe76df55a09b087870233094f2",
-      "source_published": "2026-10-17T08:45:11Z",
-      "source_updated": "2026-10-17T08:45:11Z",
-      "summary": "Large language model (LLM) agents increasingly automate complex tasks, with multi-agent systems seeking further performance gains through specialization and collaboration. However, distributing work across agents does not automatically yield complementary contributions, and inter-agent dependencies can turn local errors into task failure. To address these challenges, we propose AutoSwarm, a multi-agent framework for collaborative problem solving. Collaboration formation jointly defines responsibility boundaries and conditions for acceptance and downstream use, grounding capability allocation in contributions that other agents can assess and integrate toward a shared objective. Execution coordination couples agents' local progress through a shared state, using dependencies and supervisory relationships to govern agent activation, result handoffs, and integration while adapting subsequent actions to review feedback and emerging blockers. Experiments spanning long-horizon programming, interactive planning, and professional financial analysis demonstrate AutoSwarm's advantages over single-agent baselines and existing multi-agent frameworks. Source code is available at https://github.com/HKUDS/AutoSwarm.",
+      "source_context_sha256": "374f0d4154fc2519aa10cae6d5c857c99efed5bb28a0a9dfa9dc75a96489cf2d",
+      "source_published": "2026-10-27T17:59:30Z",
+      "source_updated": "2026-10-27T17:59:30Z",
+      "summary": "Transferring semantically typed tokens between heterogeneous blockchains (e.g. EVM and Cosmos ecosystems) raises two problems: semantic mixing, the loss of a token's domainspecific meaning in transit (e.g., CO2 removals issued under different methodologies), and atomicity despite divergent consensus and timing assumptions. We propose a bridge that addresses both. A deterministic indicator identity derived from cryptographic commitments, mirrored in class registries on both chains and checked at mint time, preventing semantic mixing by construction. For atomicity, we extend hash time-locked contracts (HTLCs) from two-party exchange to single-owner transfer with an automatic callback that burns the source escrow after a destination claim, and a protocol-minimum bounty that makes the fallback burn incentive-compatible even against adversarial senders. We machine-check the protocol's invariants with TLC (supply conservation fails without the rational-monitor assumption and holds with it) and validate a bidirectional prototype on Polygon and Neutron mainnets over Axelar GMP: fully automatic transfers with a median end-to-end latency of 97 s over 50 Polygon to Neutron transfers across 7 days (all completed by the on-chain automatic callback) and 93 s in the reverse direction, and semantic-validation overhead below 0.4% of messaging cost. We also document the integration failure modes of Cosmos originated messaging, whose dominant operational risk proves to be relay eligibility rather than latency.",
       "tags": [
-        "cs.MA"
+        "cs.SE"
       ],
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "AutoSwarm: Automating Agent Swarms",
-      "url": "https://arxiv.org/abs/2610.33048v1"
+      "title": "An EVM-Cosmos Bridge for Atomic, Semantic-Preserving Transfer of Environmental Tokens",
+      "url": "https://arxiv.org/abs/2610.37663v1"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -201,41 +201,6 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "a3d1abb297f1d820dd2e55b9",
-      "context_id": "68c3e856e2d7180c6b554d49",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "multi-agent"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.75,
-      "source": "arxiv",
-      "source_context_sha256": "4d0b88ccbd2f121a896520350faba39e980ae45c775cc1e40165ec5f515bce9d",
-      "source_published": "2026-10-22T17:24:23Z",
-      "source_updated": "2026-10-26T09:38:33Z",
-      "summary": "Large language model (LLM)-based multi-agent systems (MAS) rely on role-specific prompts and execution models to solve complex tasks collaboratively. However, prompt optimization typically keeps model assignments fixed, leaving differences in role requirements and their associated inference costs outside the search. We present UniMASO, a Unified framework for heterogeneous Multi-Agent System Optimization through the joint adaptation of prompts and model assignments. UniMASO evaluates candidate updates through local, downstream, and global feedback, using cost-aware Pareto search to retain useful quality-cost trade-offs. Topology-aware co-evolution then coordinates these updates according to agent roles and dependencies. Cross-level trajectory memory further supplies historical successes and failures to guide subsequent optimization. Experiments on five benchmarks and five execution topologies show that UniMASO achieves competitive task performance at substantially lower deployment cost than the strongest homogeneous configurations. Under centralized execution, it improves the average score from 69.79 to 70.40 while reducing token-weighted deployment cost by 85.2% relative to DeepSeek-V4-Pro with MASPO. These results support joint prompt-model adaptation as an effective approach to efficient multi-agent collaboration. The code is available at https://github.com/Achilles008/UniMASO_main.",
-      "tags": [
-        "cs.MA"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Not Every Agent Needs the Strongest Model: Unified Prompt-Model Optimization for Heterogeneous LLM-based Multi-Agent Systems",
-      "url": "https://arxiv.org/abs/2610.31743v2"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "7807f7b599b6a15df659c187",
       "context_id": "128be8dba66bcfe7ec011a97",
       "delivery_preview_only": true,
@@ -269,79 +234,6 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "Remembering Is Not Enough: Refining Memories and Learning When to Use Them in Multi-Agent Systems",
       "url": "https://arxiv.org/abs/2610.36652v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "46a2fd08b45b6a241f29f0b7",
-      "context_id": "5b2fbba954c285a6c8d5fa57",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "agent orchestration",
-        "bias",
-        "multi-agent"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 7.4167,
-      "source": "arxiv",
-      "source_context_sha256": "d501bbd650276cd7cb02626f439f3b2bf8ac9e62273432c21d7e248d7c151848",
-      "source_published": "2026-10-25T17:38:55Z",
-      "source_updated": "2026-10-25T17:38:55Z",
-      "summary": "Multi-agent systems often rely on predefined collaboration structures, limiting their ability to adapt to diverse task requirements. We introduce DynaFlow, a framework that integrates free-form executable workflow synthesis into the action space of the main agent. The agent decides when collaboration is needed and generates task-specific programs that coordinate sub-agents through sequential or parallel execution, structured information exchange, and verification. Execution results and traces inform subsequent actions, enabling the agent to adapt collaboration as reasoning progresses. We train only the main agent through supervised fine-tuning on distilled trajectories, followed by refinement on examples filtered for unsupported premises, biased verification, and information-flow defects. All sub-agents remain fixed, separating orchestration learning from executor capability improvement. Across six benchmarks spanning mathematical reasoning, scientific question answering, and multi-hop retrieval, DynaFlow achieves 88.08% overall accuracy in Forced mode, outperforming the strongest evaluated baseline by 10.90 percentage points with the same Qwen3.5-27B backbone. Workflow analysis finds more explicit use, verification, and refinement of upstream outputs after training, highlighting cross-stage information flow as a key dimension of multi-agent orchestration.",
-      "tags": [
-        "cs.MA"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "DynaFlow: Learning Free-Form Multi-Agent Orchestration",
-      "url": "https://arxiv.org/abs/2610.34467v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "2da87da447268a98f3658eb2",
-      "context_id": "f3b1952ecc05862086e3a9a5",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "bias",
-        "decentralized",
-        "multi-agent"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 7.1667,
-      "source": "arxiv",
-      "source_context_sha256": "0edd5914606a6e86fb637127ceaf2859ad9eb7edd7ba1ea8297b07fde771c1ea",
-      "source_published": "2026-10-26T03:41:48Z",
-      "source_updated": "2026-10-26T03:41:48Z",
-      "summary": "Centralized training with decentralized execution (CTDE) has become the dominant paradigm in multi-agent reinforcement learning (MARL), motivating extensive study of what privileged information should be made available to the critic during training. While prior work has examined the role of global state in fully cooperative settings, the design of centralized critics for N-agent ad hoc teamwork - in which dynamically varying set of learning agents must coordinate with an arbitrary set of uncontrolled teammates drawn from an unknown distribution - remains poorly understood. We study this question by comparing two natural classes of advantage estimators: controlled history estimators, which condition only on the observation and action histories of the learner's own agents, and joint history estimators, which additionally condition on the histories of the uncontrolled teammates. We prove that both estimators are unbiased and characterize the conditions under which the joint history estimate attains strictly lower variance than its controlled counterpart. Empirically, joint history critics match or outperform controlled history critics across a range of NAHT tasks, yielding improved sample efficiency and final returns. Together, these results provide both a theoretical justification and an empirical recommendation for incorporating uncontrolled agent histories into centralized critics for N-agent ad hoc teamwork.",
-      "tags": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Centralized Critics for N-Agent Ad Hoc Teamwork",
-      "url": "https://arxiv.org/abs/2610.34799v1"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -419,44 +311,6 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "f09793f4bae409744a894163",
-      "context_id": "5f60b906705227b4c2a2cfdb",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "decentralized",
-        "multi-agent"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.0,
-      "source": "arxiv",
-      "source_context_sha256": "657c2119a51dc8845fea48907d177decfa48ad3b9bec26ba614898668b1e5263",
-      "source_published": "2026-10-25T07:39:23Z",
-      "source_updated": "2026-10-25T07:39:23Z",
-      "summary": "Multi-agent reinforcement learning supports cooperative decision-making in Internet of Things systems, but strategic deviations can disrupt coordination and undermine confidence in the training process. This paper proposes Blockchain-Enabled Centralized Training and Decentralized Execution (BE-CTDE), which uses blockchain as an active training-management layer. A behavioral verifier compares executed trajectories with shared-policy recommendations; its flags drive a token mechanism combining slashing, burning, rewards, and compensation. Retained balances determine each agent's contribution to the global policy update, connecting auditable behavior to learning influence. We derive a one-round incentive condition that accounts for action-dependent compensation and the payoff from deviation, and a finite expected exclusion-time bound under explicit conditional detection and accounting assumptions, showing perfect detection is unnecessary. An exact finite-population capacity bound characterizes the limits of the population-relative detector. In multi-agent path finding experiments, BE-CTDE outperforms a state-of-the-art learning-based path planner with substantially higher success rates under attack, even when adversaries form the majority. It also outperforms partially defended baselines in all configurations, with collision rates up to 35% lower than under detection without economic consequences and up to 43% lower than under conventional stake slashing. Together, these results characterize how behavioral verification and token feedback can support accountable cooperative learning.",
-      "tags": [
-        "cs.MA",
-        "cs.CR",
-        "cs.LG",
-        "cs.NI"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "BE-CTDE: Blockchain-Enabled Multi-Agent Reinforcement Learning with Anomaly Detection and Token Economics",
-      "url": "https://arxiv.org/abs/2610.34121v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "6de3635d449a94c7c2a8e878",
       "context_id": "b84fa26bac9e17ab23f1dc80",
       "delivery_preview_only": true,
@@ -489,42 +343,6 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "CoEvolve: Counterfactual-Guided Co-Evolution of Memory and Collaboration in Multi-Agent Systems",
       "url": "https://arxiv.org/abs/2610.33539v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "bc5576a4ab11cf8366541f48",
-      "context_id": "877ac8082453d24c9cfb38f8",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation",
-        "multi-agent"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.875,
-      "source": "arxiv",
-      "source_context_sha256": "42e622a2c701278f93f5392867f35672b02d0113916934f1dd4a8504ed07b750",
-      "source_published": "2026-10-26T05:50:57Z",
-      "source_updated": "2026-10-26T05:50:57Z",
-      "summary": "Disease diagnosis is a key application of large language model (LLM) agents in healthcare. However, existing medical agents are primarily trained and evaluated with static question-answering data, providing limited opportunities to learn active information acquisition, examination decision-making, and dynamic clinical interaction. To address this limitation, we present ClinVerse, an interactive, real-data-grounded multi-agent environment designed for training and evaluating medical diagnostic agents. Built on ClinPatient, a scalable dataset comprising 150k diagnostic cases derived from real-world electronic health records, ClinVerse supports coordinated interactions among six specialized clinical roles. Specifically, a doctor agent starts from an initial patient complaint, progressively gathers clinical evidence through patient interviews and examination requests, and ultimately produces a diagnosis. For each interaction trajectory, a rule-based scoring framework quantifies information acquisition, examination ordering, and diagnostic accuracy. These trajectory-level scores serve as reward signals for agent training while also enabling scalable evaluation. In experiments, we evaluate various general-purpose and medical-domain models and show that nine self-evolution methods across three categories consistently improve agents' diagnostic capabilities within ClinVerse. We further analyze the interplay among model capability, environment feedback, and self-evolution methods.",
-      "tags": [
-        "cs.AI",
-        "cs.MA"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "ClinVerse: A Realistic Multi-Agent Diagnostic Environment for Training and Evaluating Medical Agents",
-      "url": "https://arxiv.org/abs/2610.34878v1"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -561,6 +379,76 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "f8b79606619824853d6232d5",
+      "context_id": "d4c294cde3f450417701e576",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "e8844e86d1de4bf11135edd3c57769e7575dda561806202ff9f4e141e9aa9b71",
+      "source_published": "2026-10-27T10:13:34Z",
+      "source_updated": "2026-10-27T10:13:34Z",
+      "summary": "A user history can admit multiple plausible next interactions, yet conventional sequential recommenders produce a single deterministic ranking. While diffusion models offer a natural way to sample alternative continuations, we show that existing target-item diffusion recommenders often suffer from severe sampling collapse, producing nearly identical outputs across independent draws. We identify two ubiquitous design choices that promote this collapse: joint learning of the latent space and denoiser, and in-trajectory supervision via discrete losses. To address these failure modes, we introduce DARTS (Diverse and Accurate Recommendation Through Sampling), a three-stage latent diffusion framework that explicitly decouples representation learning, generative modeling, and discrete ranking by learning and freezing the latent space before diffusion training and postponing ranking supervision to the final decoding stage. We further characterize sampling diversity using complementary measures of variation before and after decoding, and use posterior-predictive aggregation to exploit this diversity at inference. Across three Amazon Reviews 2023 categories, DARTS preserves substantially greater sampling diversity while outperforming strong sequential, generative-retrieval, and diffusion baselines by 7-12% on standard ranking metrics. Aggregating multiple samples further improves ranking accuracy at a fixed slate size.",
+      "tags": [
+        "cs.IR"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "When Diffusion Recommenders Stop Sampling: Preserving Generative Diversity",
+      "url": "https://arxiv.org/abs/2610.36954v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "7c44502c845cffdf4f94e908",
+      "context_id": "c93dca32b17a289538655ca3",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "1dec1c8eb1cfb165ea11881a60cc7db12747489c4e4004fc395e08965c32b19b",
+      "source_published": "2026-10-27T10:18:45Z",
+      "source_updated": "2026-10-27T10:18:45Z",
+      "summary": "Several apparently distinct formulations of the charged-lepton mass relation $p_2/e_1^2 = 2/3$ share a common algebraic object: the ratio of flavor-breaking to flavor-symmetric amplitude components on an internal family space. We show that (i) the relation expressed as a Fourier-mode constraint on Shulga's compact cycle, (ii) the same relation as a Descartes curvature condition in the sense of Kocik, and (iii) the Soddy completion of the resulting circle configuration are related by exact algebra, with no approximations. The Soddy completion defines a companion scale $F^2 = α^2 μ_\\star$ with $α= \\sqrt{3/2} - 1$ and $μ_\\star = \\sum_\\ell m_\\ell$; identifying this scale with $\\bar{m}^{\\rm MS}_s(μ_\\star)$ yields a light-quark mass cascade with the ratio $m_d/m_s = 5/2 - \\sqrt{6}$. Combined with the leading Gatto-Sartori-Tonin relation, this gives the down-sector Cabibbo seed $\\sqrt{m_d/m_s} = \\sqrt{3/2} - 1 = 0.22474\\ldots$, numerically close to the measured $|V_{us}| = 0.22503 \\pm 0.00068$ ($0.4σ$). A full CKM evaluation requires the up-sector phase correction, which we defer. The correspondence is testable by future lattice QCD+QED determinations of $m_d/m_s$; explicit failure modes are listed.",
+      "tags": [
+        "physics.gen-ph"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Descartes Curvature Geometry, Compact-Cycle Amplitudes, and the GST Cabibbo Seed",
+      "url": "https://arxiv.org/abs/2610.36960v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "1c91e535d6b4154e671d10e3",
       "context_id": "0627d95ac953741b9af1b941",
       "delivery_preview_only": true,
@@ -593,6 +481,44 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "From Ripple to Boundary: Deterministic Impact Boundaries for LLM-Based Software Evolution",
       "url": "https://arxiv.org/abs/2610.36549v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "8774858f49eaf934105b2faf",
+      "context_id": "69ebc54126f6f86312555061",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "confound",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.625,
+      "source": "arxiv",
+      "source_context_sha256": "6ab151504263b7ca85836fd5c30684a283d82d15253f2a79d8c625210a46be63",
+      "source_published": "2026-10-27T17:49:39Z",
+      "source_updated": "2026-10-27T17:49:39Z",
+      "summary": "When an LLM group's discussion is compressed into a short memory for a final decision maker, what should the memory keep? Two natural heuristics keep the rarest claims or the claims relevant to the decision criteria. On hidden-profile tasks both look attractive, because how widely a fact is held is confounded with whether it helps. We introduce CrossProfile, a diagnostic benchmark of 60 templates with automatically verified answer keys, in which the ownership of supporting, decoy, and irrelevant facts is crossed while their text is held fixed (480 tasks). Across Qwen2.5-7B, Llama-3.1-8B, and two DeepSeek models, both heuristics fail in predictable places. Selecting by relevance readmits decoys, because decoys are on topic: even a perfect relevance filter loses 23 to 31 points to rarest-first selection in the classic hidden-profile configuration. Rarest-first selection is no better than random selection on average and wins only where the rare facts happen to be the useful ones. In both cases accuracy follows the balance of evidence the memory keeps, not the policy that kept it. The decision model adds a third failure, a form of social proof: it gives extra weight to facts attributed to many agents. Removing the attribution tags, or reassigning them at random with line order fixed, raises accuracy in the classic configuration by 13 to 24 points. In natural discussions the evidence is lost before any memory acts: the complete transcript yields lower accuracy than no notes at all.",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA",
+        "cs.SI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Rare, Relevant, and Still Wrong: How Memory Fails LLM Group Decisions",
+      "url": "https://arxiv.org/abs/2610.37624v1"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -635,8 +561,8 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "12adee5f6c5d2d4ffd4728a1",
-      "context_id": "dddd812f7fede39764894773",
+      "candidate_id": "6b144a34058d26714366ba9a",
+      "context_id": "c18ec51b62381fa14d01a4cb",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
@@ -655,94 +581,17 @@
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.5833,
-      "source": "zenodo",
-      "source_context_sha256": "7bf24f8bc574ebe064d85bee92cf79c53671bf799babbf89dd86630ff2e6d8d5",
-      "source_published": "2026-10-27",
-      "source_updated": "",
-      "summary": "Research artifact for the journal article Fresh on Paper, Reused in Code: Static Detection of Hidden Key Reuse in Cancelable Biometric Systems (submitted to the Journal of Information Security and Applications). The archive contains a non-executing Python static analyzer that traces record-dependent key provenance to reviewed BioHash, IoM-GRP and PolyProtect protection calls and reports reuse , conditional_fresh or unknown ; the internally authored source-case benchmarks with expected labels and Bandit outputs; analyzer development and confirmation results (v1-v3, intraprocedural baseline, branch counterexample and regression); experiment protocols and configurations; and aggregate results of the matched key-policy remediation and utility studies. Unit tests and benchmark commands are documented in README.md . Not included: MOBIO, FEI or SCface images, face embeddings, identity-level scores, keys, protected templates or trained model weights. These datasets must be obtained from their custodians under their terms of use.",
-      "tags": [
-        "cancelable biometrics",
-        "biometric template protection",
-        "static analysis",
-        "key reuse",
-        "abstract interpretation",
-        "Python",
-        "JISA",
-        "artifact"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Fresh on Paper, Reused in Code: Static Detection of Hidden Key Reuse in Cancelable Biometric Systems (JISA Artifact)",
-      "url": "https://zenodo.org/records/23690022"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "de03bbe618de8751a0662b5b",
-      "context_id": "e612d07eee826725c74928a4",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "multi-agent"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.4583,
       "source": "arxiv",
-      "source_context_sha256": "ad8d8c0b22c1333b997cc75f800a467b8cfee2e582a9d355ce1259978eb7224f",
-      "source_published": "2026-10-25T17:38:49Z",
-      "source_updated": "2026-10-25T17:38:49Z",
-      "summary": "Achieving safety in autonomous driving through Multi-Agent Reinforcement Learning (MARL) is a critical yet challenging task due to non-stationarity, partial observability, and the need for effective coordination among agents. Although earlier cooperative MARL methods have aimed to improve coordination by sharing encoded state observations, we find these strategies are insufficient in safety-critical scenarios. To address this gap, we present IntNet, a novel MARL framework that enhances safety by incorporating the transmission of vehicle intent and adaptive communication scheduling into a unified end-to-end learning paradigm, jointly optimising all components for safe coordination. Central to our approach is an observation prediction module that enables agents to forecast subsequent policy outputs, which they can then share across a vehicle-to-vehicle network. Our model-free architecture employs a Graph Attention Network to process incoming messages and a scheduler component to dynamically optimise the communication graph for bandwidth efficiency. We compare IntNet against state-of-the-art communicative MARL methods in complex urban environments with both autonomous and human-operated vehicles, achieving improved coordination, lower collision rates, and reducing communication efforts by up to 60\\%. Through extensive experiments, we assess the framework's learning efficiency, scalability, and the balance between information sharing and bandwidth usage for collision-free trajectories.",
+      "source_context_sha256": "02b9d9a77bbace6415e69135472ffe6ceef0398f768bb132a194d9b7ec45836e",
+      "source_published": "2026-10-27T12:39:12Z",
+      "source_updated": "2026-10-27T12:39:12Z",
+      "summary": "For a deterministic sequence of normal unital completely positive maps on a von Neumann algebra, convergence of normal states, loss of memory, and convergence of Cesàro averages are different properties. This paper separates these properties in the predual norm and identifies the precise role of composition order. Uniform loss of memory for right-appended products on the predual implies uniform convergence to a normal state without any compactness or trace assumption; the convergence rate is bounded by the image diameter. In contrast, on every infinite-dimensional $σ$-finite von Neumann algebra there are right-appended products with pointwise loss of memory but no convergent normal-state trajectory, even though all nontrivial state images equal a fixed compact line segment. Consequently, finite dimensionality is characterized by the universal implication from pointwise backward memory loss to mixing. An attained normal-functional minorization coefficient extends the common-lower-bound construction for matrix channels to arbitrary von Neumann algebras and yields quantitative contraction and unique normal entrance laws. Further results distinguish pointwise from uniform relaxation, Cesàro convergence from mixing, fixed-start from time-uniform contraction, and stationary from moving asymptotic states. As an application, inhomogeneous transfer states on spin chains, including matrix product states, are shown to have a unique thermodynamic limit, uniformly in the boundary condition, with an arbitrary von Neumann algebra as bond algebra; boundary dependence and correlations are controlled by the same product coefficients. All counterexamples are explicit and extend to algebras of types I, II, and III.",
       "tags": [
-        "cs.RO",
-        "cs.LG"
+        "math.OA"
       ],
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "IntNet: A Communication-Driven Multi-Agent Reinforcement Learning Framework for Cooperative Autonomous Driving",
-      "url": "https://arxiv.org/abs/2610.34466v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "ff37f3e9a91a9b394de04ff8",
-      "context_id": "bc4b3fb0ec7e16eae00ae22b",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "multi-agent"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.4583,
-      "source": "arxiv",
-      "source_context_sha256": "d64cc3dd267f4a7dcf6346bfc43e8130b88a8546dbc9a2f44390553123eec2d1",
-      "source_published": "2026-10-26T16:53:25Z",
-      "source_updated": "2026-10-26T16:53:25Z",
-      "summary": "Multi-objective multi-agent reinforcement learning (MOMARL) addresses agent coordination and objective trade-offs simultaneously while optimising overall system performance. Existing work tends to treat multi-agent cooperation and multi-objective optimisation as largely independent components of a learning problem, which amounts to an exorbitant complexity except in trivial cases. We study here whether the structure provided by multiple objectives can itself be exploited to facilitate cooperation, rather than being treated as an additional optimisation challenge. We formulate MOMARL at both the team and individual levels and introduce objective-wise counterfactual credit assignment to evaluate each agent's contribution across the team objectives. We propose Meta-Gradient Informed Multi-Objective Multi-Agent Reinforcement Learning (MIRL), with static (MIRL-S) and dynamic (MIRL-D) variants. By incorporating meta-gradient information, MIRL enables agents to learn how to prioritise objectives individually while collectively optimising the system-level objective, allowing the multi-objective structure to directly guide cooperation. Experiments on a multi-objective multiple particle environment show that our methods improve Pareto-front quality over baselines, with the dynamic variant achieving the strongest performance.",
-      "tags": [
-        "cs.MA",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Preference-Guided Cooperation in Multi-Objective Multi-Agent Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2610.35736v1"
+      "title": "Ergodicity, memory loss, and directional stability on von Neumann algebras",
+      "url": "https://arxiv.org/abs/2610.37143v1"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -815,8 +664,8 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "41a32c86ef159071f72dfee1",
-      "context_id": "457eee7b960a106dfb4d8dfa",
+      "candidate_id": "e5a78585f38f62cba36baf01",
+      "context_id": "e81596444ff96db5181ea994",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
@@ -830,22 +679,23 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "multi-agent"
+        "failure"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.4583,
+      "score": 4.2917,
       "source": "arxiv",
-      "source_context_sha256": "766a497880c4ed59573c6f65540faf6d66b2aa8d75414fd7962ab88567affe43",
-      "source_published": "2026-10-26T02:19:53Z",
-      "source_updated": "2026-10-26T02:19:53Z",
-      "summary": "Multi-agent systems (MAS) require both effective coordination and specialized task execution. Existing prompt optimization approaches typically couple these functions within agent-specific prompts. We introduce Coordinator-Executor Prompt Optimization (CEPO), a general framework for improving prompt optimization in MAS. CEPO separates system-level coordination from agent-level execution through a shared coordinator prompt and agent-specific executor prompts, and guides their updates according to their respective roles. This structure allows shared coordination rules to be refined consistently across agents while keeping execution instructions separately adjustable. CEPO provides the prompt structure and optimization guidance, while existing prompt optimizers perform the underlying search. Extensive experiments spanning 11 benchmarks across four domains demonstrate that applying CEPO to four existing prompt optimizers consistently improves their performance. Ablations and qualitative analyses support the proposed design, while controlled studies on a document-understanding MAS further demonstrate improved optimization budget efficiency and performance scaling with the number of agents.",
+      "source_context_sha256": "04b089b18f4a0e868bbb145a58c727ba9660e873ebcc8e0ae962bf0dcfdb2ef8",
+      "source_published": "2026-10-27T15:45:50Z",
+      "source_updated": "2026-10-27T15:45:50Z",
+      "summary": "A software feature usually evolves over time: developers extend its first version as new use cases and requirements arrive, and each extension builds on code written earlier. Most feature benchmarks evaluate a single request on a fixed codebase. Feature evolution requires evaluating successive extensions on an agent's own earlier code and checking whether the feature remains correct. We introduce FeatureArc to evaluate coding agents on evolving features, together with a pipeline that constructs its tasks from repository histories. The benchmark combines dependencies between successive stages of the same feature, explicit requirements and interface contracts, and executable checks across four programming languages. The pipeline validates fail-to-pass (F2P) tests for new behavior and pass-to-pass (P2P) tests for existing behavior on the reference code before and after each stage. We evaluated 10 coding agents on 73 manually reviewed tasks of 2 to 10 stages. Each agent works in one persistent session and workspace without external test feedback or rollback. The evaluation reveals a gap between first-stage and whole-feature success: pooled success falls from 62.7% at the first stage to 28.5% when the whole feature is tested on the final code. Trajectory analysis identifies inherited defects as a common failure mechanism, present in 72.9% of failed later stages. These earlier errors often remain undetected: in stages following a failure, agents leave the earlier error unnoticed about 95% of the time, and their self-tests rarely revisit earlier stages. Evolving a feature autonomously, without human checks between stages, therefore remains a substantial challenge for current coding agents. At Tencent, the pipeline extends internal evaluations to this setting and guides the development of Hunyuan, Tencent's family of large language models.",
       "tags": [
+        "cs.SE",
         "cs.AI"
       ],
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "CEPO: A General Framework for Improving Prompt Optimization in Multi-Agent Systems",
-      "url": "https://arxiv.org/abs/2610.34722v1"
+      "title": "FeatureArc: Benchmarking Coding Agents on Evolving Features",
+      "url": "https://arxiv.org/abs/2610.37434v1"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -880,47 +730,6 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "When Retrieval Is Not Enough: Obsolete Facts in Agent Memory",
       "url": "https://arxiv.org/abs/2610.36308v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "ca11b4cb607090e6817fda4d",
-      "context_id": "c0bf8296dfe7a3b2c30fd2f4",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
-      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "d68d0d3a1e13eae61eec9feb6b4ec94cc6b7e3ca6aca8714af3254508d10718d",
-      "source_published": "2026-10-27",
-      "source_updated": "",
-      "summary": "This study looked at how financial and non-financial support from development finance institutions (DFIs) relates to the perceived growth of social enterprises in Nairobi County, Kenya. DFI support is seen as a way to help enterprises grow. However, there is little direct evidence about which types of support are linked to growth, especially for social enterprises. Kenyan research has examined sector development, social capital, and financing barriers, but few studies have compared lending, capacity building, market access, industrial infrastructure, and policy advocacy in a single local context. The study employed a mixed-methods, cross-sectional design grounded in Market Failure Theory and the Resource-Based View. Eighty-three social enterprise leaders, selected through purposive and snowball sampling, completed questionnaires with both closed- and open-ended questions, representing 92.2% of the target sample. Quantitative data were analyzed using descriptive statistics, correlation analysis, and multiple regression, with HC3 robust standard errors and a bootstrap check. Thematic analysis was used for qualitative data. Study results revealed that capacity building had the highest average score (M = 4.046), followed by lending (M = 3.916) and policy advocacy (M = 3.851). All five types of support were positively linked to perceived growth (r = .308 to .575). When all five were included in the analysis, only lending was a significant predictor (B = 0.512, p = .015), explaining 45.5% of the variation in perceived growth. Capacity building (B = 0.289, p = .062) and policy advocacy (B = 0.288, p = .145) remained positive but not statistically significant, while market access and industrial infrastructure showed no adjusted association. Qualitative data most often mentioned the need for affordable financing, mentoring, buyer connections, and shared facilities. It is recommended that DFIs focus on lending arrangements that are based on verified enterprise cash flows. Capacity-building programs should be expanded only after being evaluated with clear, measurable results. Efforts in market access, infrastructure, and policy advocacy should be designed to meet the specific needs of enterprises.",
-      "tags": [
-        "Development finance institutions",
-        "Social enterprises",
-        "Enterprise growth",
-        "Lending",
-        "Market Failure Theory",
-        "Resource-Based View",
-        "Nairobi County",
-        "Kenya"
-      ],
-      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Contribution Of Development Finance Institutions To The Growth Of Social Enterprises In Nairobi County, Kenya",
-      "url": "https://zenodo.org/records/23690453"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -1027,6 +836,145 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "33f98e883388998c0b7c2c0a",
+      "context_id": "9ee95c1f24330200cf2050ad",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "96d56991dc38180ff5236eddf6a158cfcf1cb56d40111877d38bba4d48ee7afe",
+      "source_published": "2026-10-27T16:53:18Z",
+      "source_updated": "2026-10-27T16:53:18Z",
+      "summary": "Failure diagnosers for robot manipulation are increasingly vision--language models (VLMs), trained and evaluated on single-arm failures produced by perturbing a successful demonstration. Bimanual tool use adds failures of other kinds: a tool that slips out of its socket while still held, two correct gestures made at different times, and attempts that fail for two reasons at once. On a simulated bimanual tool-use task whose failure causes are read from the recorded trace, we measure what each sensing channel lets a diagnoser tell. The tool's slip is read on the tool hand; which hand was late is read on both arms, while a sensor on one hand reads its own hand's delay and at most part of the other's; and whether a late attempt was also pushed too weakly is not identifiable from passive sensing when the tool hand is late. Within two attempts, a repair policy that escalates when the cause is not identifiable repairs as many failures as one told the true cause. A VLM's internal state carries the late hand almost perfectly, along a direction no closer to the one its answer reads than a random one; whether the answer reports it depends on the wording of the question.",
+      "tags": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Which Hand Was Late? Diagnosis for Robot Failure Recovery in Bimanual Tool Use",
+      "url": "https://arxiv.org/abs/2610.37533v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "89a8717b0037a3a9bae76705",
+      "context_id": "9a3b07a6297c97e5cde98449",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "b9ec634cdb95dd69d4accfc12d680ae329a71d7b296bc8eaabcd44084ad13b42",
+      "source_published": "2026-10-27T12:22:47Z",
+      "source_updated": "2026-10-27T12:22:47Z",
+      "summary": "Fracture in food can be undesired during production and transportation but also intended during cutting, grinding or mastication. The associated peak load, the deformation at failure and the resulting fragment geometry are all product properties. This work condenses the modeling of such fracture into a physically rigorous recipe that considers the practical constraints imposed by finite element simulations where necessary and applies idealized theoretical assessments where applicable. Cooled dark chocolate serves as a reproducible model material. Two well-established modeling frameworks for Griffith-type brittle fracture are assessed at an affordable spatial discretization: a sharp-interface and a diffuse phase-field approach. The assessment covers the choice of numerical framework, its discretization and a staged identification of the model parameters. Each parameter is identified from the loading stage that governs it: elastic parameters from pre-crack tension and compression, critical energy release rate from three-point-bending peak force, and the phase-field width last. The phase-field width interferes with the structural response, crack curvature and stress fields, depending on its lower bound set by the affordable spatial resolution. Elastic slope, peak force and crack path therefore cannot be met practically by a single parameter set. The objective must be fixed for the calibration of the model parameters and reported together with the numerical parameters and the boundary value problem.",
+      "tags": [
+        "cs.CE"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Finite Element Modeling of Fracture in Brittle Foods with Physically Consistent Parameter Calibration: A Practical Case Study on Cooled Dark Chocolate",
+      "url": "https://arxiv.org/abs/2610.37124v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "ddd22af59fe5b5997866d6b4",
+      "context_id": "88bfa4c1f773be80da4a779b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "70ecd50e8b337f6150040cca6a86b3658a15c0e3f3b25013028a347480864151",
+      "source_published": "2026-10-27T16:08:08Z",
+      "source_updated": "2026-10-27T16:08:08Z",
+      "summary": "Fine-tuning Large Language Models (LLMs) on instruction data can quietly erode their safety, even when no training example looks harmful. Because this safety-degrading data looks benign, standard content filters struggle to catch it. We tackle this problem by developing SimpleLoRIF, a scalable gradient embedding method that identifies fine-tuning examples whose gradients align with unsafe behavior. By simplifying a low-rank attribution method and restricting backpropagation to the final four transformer blocks, SimpleLoRIF can embed datasets on the order of a million examples, boosting gradient attribution from a small-scale analysis tool into a practical filter for full post-training datasets. We first validate it on emergent misalignment, where we find that gradients can connect insecure-code training data to the broadly harmful behaviors that appear after fine-tuning, with AUC as high as 0.865 in the gradient space of misaligned models. We then use SimpleLoRIF to build SafeTulu, a version of Tulu 3 with the 20% of examples most gradient-aligned with unsafe responses removed. Training on SafeTulu reduces GCG attack success rate by up to 22% across Qwen, Llama, and Olmo, outperforming both LLM-as-a-judge and prior gradient-based filtering, while largely preserving or even improving capability. Finally, we analyzed the removed data and identify possibly under-studied sources of safety degradation, such as tool-execution failures and narrative arithmetic. We release SafeTulu along with a Hugging Face Space that lets researchers build their own customized versions of SafeTulu to fine-tune on, such as by changing the removal fraction or filtering only certain subsets.",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Follow the Gradient: Tracing Safety Degradation Back to Training Data",
+      "url": "https://arxiv.org/abs/2610.37481v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "b0d4818cd67a7681d12d824e",
+      "context_id": "60bbe6b4a2b12ce4476a8cb1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "119f668b841ef58a9578c61863fd4673e9cb55af7efc8245ca216d86a0772435",
+      "source_published": "2026-10-27T12:54:16Z",
+      "source_updated": "2026-10-27T12:54:16Z",
+      "summary": "Scaling supervised training for working agents requires diverse professional tasks that yield reliable expert demonstrations. However, missing or inconsistent task information can obstruct teacher execution and weaken the resulting supervision. We propose WorkFactory, a scalable framework for constructing coherent and executable professional tasks. Starting from professional intents, information-level planning builds an information support graph to guide task instantiation, explicitly representing the dependencies and locations of information required for the intended outputs. Probe executions then identify support failures and guide repairs while preserving the intended work. We construct 112,686 tasks spanning 612 occupations and use the collected teacher trajectories to fine-tune Qwen models at 4B, 27B, and 35B-A3B scales, yielding the WorkPilot family. All three models improve over their respective base models across four professional-work benchmarks, with WorkPilot-35B-A3B improving from 879 to 1565 Elo on GDPval-AA v2.1. Scaling analyses reveal model-dependent diminishing returns, with execution length first increasing and then decreasing. Controlled component analyses show that planning and repair reduce probe-diagnosed task environment defects and improve downstream performance. The data and models are available at https://github.com/IQuestLab/WorkFactory.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "WorkFactory: Turning Professional Intents into Executable Work for Scalable Agent Training",
+      "url": "https://arxiv.org/abs/2610.37161v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "3f30f87dd6a2a19609dc973c",
       "context_id": "5e65916c9fb34f52512a17ea",
       "delivery_preview_only": true,
@@ -1126,6 +1074,77 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "d18ce40f39241e983db4229b",
+      "context_id": "3dc38b892fe24ecd01a7e541",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "85ca053b6590c76b2931749beb0a3a024369a7309c19c9fcefc91c1cc04ba6ab",
+      "source_published": "2026-10-27T11:42:47Z",
+      "source_updated": "2026-10-27T11:42:47Z",
+      "summary": "Background and purpose: Radiotherapy planning agents based on large language models (LLMs) decide when to submit a plan or request review but are evaluated mainly by dose. This study developed OpenGray, a benchmark of planning tasks with known correct decisions. Materials and methods: OpenGray adds tasks with known answers to the OpenKBP-Opt head-and-neck dataset, including two contradictions with dose goals proven incompatible and a feasible control with a stored plan meeting every hard goal. Four systems, from a rule-based planning script to a full LLM agent, were evaluated on 30 patients, the LLM-based ones with a commercial (Terra) and a local (Ministral 3 8B) LLM. Decisions, achieved dose, problem recognition, and technical failures were recorded and also read from logs of 39 stereotactic radiosurgery runs of SAGE, a clinical LLM agent. Results: With Terra, the script preceded by an LLM review and the full agent had decision accuracies of 95.4% and 92.1%, respectively, yet escalated only 50% (95% confidence interval, 25-75%) and 25% (10-40%) of overlap contradictions, which required arithmetic on the anatomy. All four systems submitted every feasible control, but 24% of these plans missed a hard goal that the stored plan had met. In four SAGE runs, one goal failed at every attempt; the agent identified it in every reply but had no action for stopping. Conclusions: Favorable aggregate scores concealed specific decision failures. Planning agents should be evaluated on their decisions as well as their dose and given an explicit action for stopping and requesting review.",
+      "tags": [
+        "cs.AI",
+        "physics.med-ph"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "OpenGray: a benchmark for evaluating the decisions of radiotherapy planning agents",
+      "url": "https://arxiv.org/abs/2610.37081v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "1ffb1be841e050ee34c26dab",
+      "context_id": "2a3c583baa93855a61f01d57",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "2e7b10f1e0589fde0dfe2f9de42210536ab5c6dbe65d64a513eef0822ff68bd7",
+      "source_published": "2026-10-27T15:22:00Z",
+      "source_updated": "2026-10-27T15:22:00Z",
+      "summary": "Agentic Entity Resolution (ER) systems iteratively plan actions, retrieve evidence, revise hypotheses, and propose graph mutations. An erroneous identity hypothesis may condition later retrieval and produce apparent confirmation. This paper proposes a Digital Identity Optimization (DIO) and Ontology of Digital Identity (ODI)-informed authorization boundary between evidence available for agent reasoning and evidence eligible to authorize persistent identity-changing mutations. A domain-governed constraint-binding function maps selected reconstruction-failure distinctions to explicit identity-preserving constraints. An abstract two-phase supervisor permits a commit only when claim-specific authorization-eligible evidence supports every required proposition, relevant conflicts are resolved, the operation remains within its authorized scope, and relevant state and policy versions remain valid. Admission as UNVERIFIED does not confer authorization eligibility. Separate claim-specific promotion governs evidentiary use; insufficient support or unresolved material conflict leads to deferral. The contribution is a specification connecting diagnostic-to-constraint mapping, evidence promotion, proposition coverage, conflict handling, scope binding, and commit-time version integrity. A proposed evaluation protocol is designed to assess the mapping's incremental value beyond generic authorization and conventional identifier rules. This is a conceptual architecture without implementation or empirical validation, not a theorem of semantic correctness. Its property depends on domain-policy adequacy, evidence promotion, and enforcement. It does not prevent erroneous hypotheses or hypothesis-conditioned retrieval; dependency-aware evidence flow remains future research.",
+      "tags": [
+        "cs.AI",
+        "cs.CR",
+        "cs.DB"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Constraining the Commit Boundary: A DIO/ODI-Informed Authorization Guardrail for Agentic Entity Resolution",
+      "url": "https://arxiv.org/abs/2610.37407v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "75b2736e16decf3322597e6d",
       "context_id": "28c9e5a904f11488a9c8a5eb",
       "delivery_preview_only": true,
@@ -1193,6 +1212,42 @@
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
       "title": "Quantifying and Prioritizing Stealthy Source-Manipulation Threats Against Multi-Source Anomaly Detectors",
       "url": "https://arxiv.org/abs/2610.36693v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "08e7af85b700485380503a30",
+      "context_id": "318ac996beef1a63cebc67d6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation",
+        "non-identifiability"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 3.2083,
+      "source": "arxiv",
+      "source_context_sha256": "69e71e9f7d09aa7385a48222a84a0a1f75c780a587049bb69b8cae7044f7523e",
+      "source_published": "2026-10-27T16:45:22Z",
+      "source_updated": "2026-10-27T16:45:22Z",
+      "summary": "A persistent belief in modern AI is that sufficiently large learners trained on sufficiently much data can make explicit domain knowledge optional. This paper examines a limitation of that belief. We define structure-encoded problems: tasks whose input-output map is determined, or sharply constrained, by known structure such as a solver, symmetry group, graph, physical law, measurement operator, grammar, combinatorial search space, or optimization objective. For such tasks, the central question is not expressivity--a dense neural network may contain the desired map--but finite-data identification, extrapolation, and certification. We introduce the structure gap: the finite-resource gap between a method that receives the governing structure and a learner that receives only examples. The strongest useful form of the claim is asymptotic rather than absolute: structure-agnostic learning may approach a structured solver as coverage grows, but every finite dataset can leave residual uncertainty that the structure resolves by construction. We prove this exactly for a Gaussian inverse problem: the known-operator Wiener solver attains Bayes risk, while the dense empirical learner in the correct linear class has persistent expected excess risk. We also prove a cell-coverage lower bound and an unobserved-orbit non-identifiability result. Controlled experiments in known-operator inversion, sparse recovery, and graph reachability with size extrapolation instantiate the mechanisms. When validated structure is available, it can constrain the hypothesis space before learning begins, leaving learning to address components the structure does not specify.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "The Structure Gap: When More Data Cannot Replace Structured Reasoning",
+      "url": "https://arxiv.org/abs/2610.37523v1"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -1301,6 +1356,40 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "c584902f122cc38eb58f83f0",
+      "context_id": "d3162ad966001329df750440",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "9a519543313f15f75238b0be0166b5d1998620b8ceece499942ca73c7c8c46a4",
+      "source_published": "2026-10-27T16:34:24Z",
+      "source_updated": "2026-10-27T16:34:24Z",
+      "summary": "We examine conditional charged-multiplicity fluctuations at fixed multiparton interaction (MPI) count in retained PYTHIA proton-proton samples at centre-of-mass energies of 2.76, 7, and 13 TeV. Charged particles satisfy |eta| < 0.8 and 0.15 < pT < 20 GeV/c. In the historical colour-reconnection (CR)-labelled baseline samples, the CR-ON conditional mean is smaller by a larger fraction than the standard deviation: the absolute width is smaller, while the coefficient of variation is larger in every retained matched MPI bin. Effective lifetime/decay settings and their per-run correspondence are unverified for this baseline, so these comparisons do not establish that CR alone causes the observed differences or their energy dependence. A separately documented 13 TeV comparison using the Compact Muon Solenoid (CMS) CP5 tune, with equal non-CR physics settings and particle data across the ON/OFF pair, exhibits the same absolute-versus-relative width ordering. Retained independent Monash and A14 samples also show this pattern, subject to historical production-record limitations. A comparison with mean-transverse-momentum data from A Large Ion Collider Experiment (ALICE) and simulated activity estimators provides final-state context within the stated particle-definition and provenance limits.",
+      "tags": [
+        "hep-ph"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Color-Reconnection Effects on the nMPI-Nch Conditional Multiplicity Fluctuations in PYTHIA 8 pp Collisions",
+      "url": "https://arxiv.org/abs/2610.37511v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
       "candidate_id": "cd6d506b42f3c6499a14b165",
       "context_id": "a9738cfe9bde2f6fd3ef1db9",
       "delivery_preview_only": true,
@@ -1335,8 +1424,8 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "d0c65e43f8cbd5ab1bb34f28",
-      "context_id": "00e762c106f5e1d2525e861b",
+      "candidate_id": "6f77c83ca9ae6d26bf9a61e1",
+      "context_id": "371551afbf3a8efc32885a09",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
@@ -1355,18 +1444,24 @@
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 1.4167,
-      "source": "arxiv",
-      "source_context_sha256": "48d1bc0de3e3e8578e15d2f8236dd3a82a23a30a588205fbddb9f22ec19b936e",
-      "source_published": "2026-10-26T11:55:41Z",
-      "source_updated": "2026-10-26T11:55:41Z",
-      "summary": "The proliferation of orbital sensing data and the real-time demands of emerging global services are pushing low Earth orbit (LEO) satellite networks from bent-pipe relays toward intelligent onboard processing. This shift confronts a fundamental tension, where modern artificial intelligence (AI) training paradigms require intensive computation, abundant memory, and stable connectivity, all of which are scarce under the dynamic topologies, intermittent links, and severe size, weight, and power (SWaP) constraints of satellite networks. Addressing this tension demands rethinking AI workflows, from training and inference to the emerging deployment of large language models (LLMs), under a constraint-aware design philosophy. To the best of our knowledge, this paper provides the first survey that jointly covers all three, whereas prior surveys examine these aspects in isolation. We begin by identifying the deployment challenge of satellite intelligence (SI) and deriving design principles for SI. We then examine three advancing paradigms: i) distributed training, where federated learning (FL) and split learning (SL) enable satellite-ground co-training under resource limitations; ii) collaborative inference, which exploits single-satellite, multi-satellite, and satellite-ground architectures to meet real-time service demands; and iii) on-orbit LLM adaptation and serving, which tackles the frontier challenge of deploying LLMs under severe orbital constraints and resource-aware serving. Finally, we identify open challenges and future directions. By bridging the AI and satellite networks, this paper provides a research roadmap for the implementation of space-native AI technologies.",
+      "source": "zenodo",
+      "source_context_sha256": "a20941c04b1ab7680c4a9e96d3bace30d7cc3c4f4cd42f211c955f177bc204ea",
+      "source_published": "2026-10-28",
+      "source_updated": "",
+      "summary": "The logarithmically averaged two-point Chowla conjecture was proved by Tao and quantitatively improved by Helfgott&ndash;Radziwi&#322;&#322; and Pilatte, through a dilation identity followed by a spectral bound for a divisibility operator. On the generalised Elliott&ndash;Halberstam conjecture (GEH), Bombieri's asymptotic sieve turns the twin prime conjecture into a Chowla-type statement on almost primes, and Tao remarked that this restriction destroys the multiplicativity the Chowla arguments rely on. We make this remark a theorem. We define a class of dilation&ndash;spectral certificates containing the Helfgott&ndash;Radziwi&#322;&#322; and Pilatte certificates adapted to the shift 2, with arbitrary smooth, rough or mixed dilators up to x &kappa; , and prove that every such certificate has resolution &gt;&gt; &eta; min(1, &eta;/&kappa;) log x on twin-type parity (Theorem A). The loss is the factor 1/log x &eta; that two-sided roughness costs on every edge. To state what such a certificate would have to resolve, we write the Bombieri&ndash;Tao reformulation as an exact, numerically testable identity for &sum; n&le;X &Lambda;(n)&Lambda;(n+2)/n in terms of a logarithmic parity defect &rho;(X) of the Liouville function on almost-prime pairs (Theorem B), and show that on GEH the joint parity of rough pairs is governed by the twin parameter alone (Theorem C). A road map (Figure 1) summarises the structure. New in version 0.6. Section 6.3, \"The roughness ceiling of known mechanisms\". Theorem A holds uniformly in the roughness level z, so dilation&ndash;spectral certificates can resolve parity only on z-rough integers with z &le; exp(O(&radic;log x)) (Corollary 6.11, a theorem). Two further remarks analyse specific arguments: Tao's entropy-decrement iteration, which reaches z &le; (log x) o(1) , and the recent L&uuml;&ndash;Wang&ndash;Wu argument for &mu;(p+2) (arXiv:2610.20242, unrefereed), which reaches z &le; exp((log x) c ) with c &lt; 1/5 and cannot start at x &eta; . These remarks concern those specific proofs, not every argument of their kind. All known mechanisms stop far below the roughness x &eta; that Bombieri's parity parameter requires. The code bundle adds the scripts entropy_test.py and bilinear_probe.py with their data up to x = 10 8 . New in version 0.7. Theorem E, a rigorous limitation theorem for entropy-decrement arguments. We define entropy-decrement certificates by the ingredients of Tao's argument: an entropy budget, the decrement inequality, and a decoupling step that uses only boundedness and sparsity, so variance-sensitive variants are included. Two explicit sharpness constructions show that such certificates can resolve twin-type parity only on z-rough integers with z &le; (log x) O(&epsilon; 4 ) at precision &epsilon;. Together with Corollary 6.11, two rows of the roughness-ceiling table are now theorems. The code bundle adds pellet_check.py, which verifies Pellet's formula &mu;(f) = (&minus;1) deg f &chi;(disc f) over F 3 and F 5 , the function-field mechanism behind the Sawin&ndash;Shusterman twin prime theorem, which has no known integer analogue. New in version 0.8. Appendix D.5, \"Map of explored routes and the hypothesis ledger\": a figure of every route explored in the project with its status (theorem, theorem in a model, analysis, numerical), and a ledger of bold hypotheses H1&ndash;H7 with their tests. Two are notable. H3, a finite parity linear program over many patterns with positivity and one-sided parity constraints, is refuted in the model by an explicit witness: any two-point parity counterfeit extends independently to larger patterns, so these constraints alone cannot exclude &delta; = 0. H6, a base- p analogue of Pellet's formula, shows no correlation between &lambda;( n ) and the function-field M&ouml;bius of the digit polynomial at x &asymp; 10 8 (all | z | &le; 1.65). The code bundle adds parity_lp.py, h6_digits.py and the map generator. New in version 0.9. Four new results. (1) Corollar",
       "tags": [
-        "cs.NI",
-        "cs.AI"
+        "twin prime conjecture",
+        "parity problem",
+        "Bombieri asymptotic sieve",
+        "Chowla conjecture",
+        "Liouville function",
+        "Elliott-Halberstam conjecture",
+        "expander graphs",
+        "AI for mathematics"
       ],
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Satellite Intelligence: Distributed Training, Collaborative Inference,and LLM Adaptation in LEO Constellation",
-      "url": "https://arxiv.org/abs/2610.35282v1"
+      "title": "Why expansion methods for Chowla do not reach twin primes: a method-limitation theorem and an explicit parity compiler",
+      "url": "https://zenodo.org/records/23722939"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -1478,8 +1573,8 @@
     },
     {
       "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "f688a166eb271c71a923e249",
-      "context_id": "64c3b65fc89e459f859406eb",
+      "candidate_id": "ee8ec9c634176dbdf269bcd3",
+      "context_id": "d39c385b9e349e9011d57dab",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
@@ -1499,16 +1594,117 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 1.1667,
       "source": "arxiv",
-      "source_context_sha256": "d49b617f53608762bc1bc9b7b3a0a1cb6850861d1bc02e478350bed929360457",
-      "source_published": "2026-10-26T02:19:12Z",
-      "source_updated": "2026-10-26T02:19:12Z",
-      "summary": "When a Mixture-of-Experts (MoE) model does not fit in GPU memory, batch-1 decoding is dominated by copying expert weights from host memory. Cache-aware routing reduces these copies by biasing the router toward resident experts, but combined with asynchronous prefetching it makes the model's outputs depend on transfer timing, so a harness that does not simulate that timing no longer evaluates the deployed model. We propose prefetch-steered routing (PSR): routing conditions on a deterministic logical cache, into which at most n experts predicted by the next layer's router are inserted per layer and token; physical copies affect only latency. On OLMoE-1B-7B with 50% and 25% of experts resident on an RTX 4090, PSR decodes 2.2-2.3x faster than exact routing with LRU and 25-30% faster than the Cache-Prior operating point, with mean benchmark differences of +0.1 and +0.5 points (95% lower bounds -0.8 and -0.3). In greedy generation its lead over Cache-Prior depends on the workload and reverses on HumanEval at 50% residency. On Moonlight-16B-A3B, PSR is 1.9x faster than exact routing with LRU at 37.5% residency and, at the latency of Cache-Prior, significantly better on three of eight benchmarks. On Qwen3.6-35B-A3B, where copies are cheap relative to computation, PSR keeps its advantage over Cache-Prior on the likelihood benchmarks but not its speed. Distillation-trained gates did not help. Speculative decoding with block-level expert selection was slower than PSR with a 1B autoregressive drafter on OLMoE, but with a block drafter on Qwen3.6 it was 2.1-2.9x faster than any autoregressive configuration with at most its GPU memory on the 64 prompts we timed.",
+      "source_context_sha256": "76b74c32e2fb236014d7a69456ce5e06d9926e53abb7366674a6c48f57bae774",
+      "source_published": "2026-10-27T16:25:16Z",
+      "source_updated": "2026-10-27T16:25:16Z",
+      "summary": "Face swapping transfers a source identity onto a target image while preserving the target's pose, expression, hair, and lighting. The most realistic current methods are diffusion-based, but they need many network evaluations per image. GAN-based methods are fast, yet trained from scratch they must learn realism from the adversarial signal alone and produce visibly weaker results. We present ALADDIN (Adversarial Latent Diffusion Distillation for One-Step Identity Swapping), a one-step face swapper obtained by initialising the generator from a pre-trained multi-step flow-matching model and training it adversarially under identity and target-preservation constraints. We expose a controllable trade-off between identity transfer and target-attribute preservation by training a student model with triplet pseudo-label supervision. We additionally identify a bias in the standard evaluation protocol, which favours methods trained against the same identity encoder used to score them, and re-evaluate all baselines with an independent one. ALADDIN is state-of-the-art among one-step methods in realism and target preservation at comparable identity transfer, and matches the best multi-step model with 28 times fewer network evaluations and an order of magnitude fewer training pairs.",
       "tags": [
-        "cs.AI"
+        "cs.CV"
       ],
       "target_repository": "Hawkar-usls/-Terminal-for-Janus",
-      "title": "Prefetch-Steered Routing: Deterministic Cache-Aware Expert Selection for Offloaded Mixture-of-Experts Decoding",
-      "url": "https://arxiv.org/abs/2610.34721v1"
+      "title": "ALADDIN: Adversarial Latent Diffusion Distillation for One-Step Identity Swapping",
+      "url": "https://arxiv.org/abs/2610.37503v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "8fa31540ff86a0bb83c493ca",
+      "context_id": "9d70106226e5c203332fd990",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "arxiv",
+      "source_context_sha256": "29ce3dac019f1017641bddd4d475960adfd679a8a702df0a6379e35772596e8d",
+      "source_published": "2026-10-27T16:24:10Z",
+      "source_updated": "2026-10-27T16:24:10Z",
+      "summary": "For each time $t$, the regression function $m_t(x)=E[Y_t\\mid X_t=x]$ of an outcome on contemporaneous covariates can be regarded as a field on covariate space. We study how this field evolves when the covariates of individual units move as a diffusion and the outcome attached to each unit changes according to its own dynamics. Under mild regularity we show that $m_t$ satisfies a second-order evolution equation whose diffusion term is $\\frac12\\mathrm{tr}(Σ\\nabla^2 m_t)$, the trace of the Hessian of the regression function weighted by the instantaneous covariance $Σ$ of the covariate increments, whose transport term is the drift of the time-reversed covariate process, and whose source term is the conditional mean rate of change of the outcome. The equation is a regression-theoretic reading of a classical transport law, and it yields a Feynman-Kac representation of $m_t$ along reversed covariate paths. We connect the Hessian appearing in the equation to the Hessian estimated by quadratic regression (under Gaussian design the best quadratic approximation has Hessian $E[\\nabla^2 m(X)]$ exactly) and to the leading bias of kernel smoothers. For binary outcomes governed by bistable replicator dynamics with imitation among units with similar covariates, the closed equation is of Nagumo type, its planar travelling fronts are exactly logistic in $(x,t)$, and a single logistic regression of the outcome on covariates and time identifies the ratio of diffusion to reaction and the direction of invasion. We discuss identification under panel versus repeated cross-sectional designs and a two-stage estimation strategy, and we illustrate the results with simulations.",
+      "tags": [
+        "math.ST",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Regression Functions as Fields on Covariate Space: Evolution Equations, the Hessian, and Identification",
+      "url": "https://arxiv.org/abs/2610.37500v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "8f0f527417d5b3659700591e",
+      "context_id": "84dd7e3da69a78cdbe88cf2a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "zenodo",
+      "source_context_sha256": "a9d79387358eddd8e4b014756626935846d9d3c92279547a4e55d48df97f349a",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Disasters are not merely natural phenomena; they are socially constructed events that emerge from the interaction between hazardous events and the vulnerable conditions of exposed communities. Floods, earthquakes, landslides, cyclones, wildfires, droughts, and extreme weather events continue to cause widespread human, material, economic, and environmental losses across the globe. As climate change intensifies hazard events, urbanization concentrates populations in vulnerable areas, and technological systems become increasingly complex and interdependent, the need for sophisticated disaster management capabilities has never been greater. This book explores the transformative role of Artificial Intelligence (AI) in disaster management. It examines how AI technologies&mdash;including machine learning, deep learning, computer vision, natural language processing, robotics, and expert systems&mdash;are being applied across all phases of the disaster management cycle: mitigation, preparedness, response, and recovery. The integration of AI with remote sensing, Geographic Information Systems (GIS), Internet of Things (IoT) sensors, cloud computing, and real-time analytics offers unprecedented opportunities for predicting, preparing for, responding to, and recovering from disasters. The book is organized into eleven chapters that progressively build the reader's understanding of this interdisciplinary field. Chapter 1 establishes the foundational concepts of disasters, the disaster management cycle, and the evolution of disaster management technologies. Chapter 2 introduces the fundamentals of AI, machine learning, deep learning, and neural network architectures, with a focus on their relevance to disaster applications. Chapter 3 examines AI&nbsp;based disaster risk assessment and hazard mapping, integrating geospatial information,&nbsp; environmental observations, and computational models. Chapters 4 through 8 address specific disaster types: floods, earthquakes, landslides, cyclones and extreme weather events, and wildfires, droughts, and climate-related disasters. Each chapter presents AI applications, case studies, numerical examples, and integrated frameworks tailored to the unique characteristics of these hazards. Chapter 9 explores the synergy between remote sensing, GIS, and AI for disaster mapping and damage assessment. Chapter 10 focuses on IoT, sensors, and real-time AI-based disaster monitoring, emphasizing edge computing, cloud platforms, and early-warning systems. Chapter 11 presents an integrated AI framework, case studies from India and internationally, performance evaluation metrics, challenges, research gaps, and future directions.&nbsp; &nbsp; Throughout the book, a critical distinction is maintained: AI should not be viewed as a replacement for human judgment, field observations, engineering expertise, or disaster management experience. Rather, AI serves as a powerful complement&mdash;augmenting human capabilities, improving the speed and consistency of information processing, and supporting evidence-based forecasting, monitoring, response, and recovery. The most effective disaster management architecture integrates AI with hydrological and hydraulic modelling, seismology, structural engineering, geotechnical engineering, meteorological science, and institutional decision-making. The book emphasizes several cross-cutting themes. First, the relationship between hazard, vulnerability, exposure, and risk provides the analytical foundation for disaster risk assessment. The formula Risk = (Hazard &times; Vulnerability &times; Exposure) / Capacity demonstrates that risk can be reduced through strategic interventions that decrease vulnerability and exposure or increase capacity. Second, data quality, algorithmic bias, infrastructure requirements, trust deficits,&nbsp; privacy concerns, capacity gaps, interoperability problems, and regulatory uncertainty must all be addressed for AI to achieve its full potential. Third, expl",
+      "tags": [],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "AI IN DISASTER MANAGEMENT",
+      "url": "https://zenodo.org/records/23723049"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "b5223bb99b32b80f6da40394",
+      "context_id": "4813a22a41eca3cdcd22685d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "arxiv",
+      "source_context_sha256": "2b87dde9555fc9e25e680a94b3895927bf10a90ff0c9af2cfebf04df81aa908c",
+      "source_published": "2026-10-27T14:56:16Z",
+      "source_updated": "2026-10-27T14:56:16Z",
+      "summary": "We develop a multifidelity black-box variational inference (MF-BBVI) approach for PDE-constrained Bayesian inverse problems in which forward solves are expensive and PDE gradients are unavailable. The method is built on score-function estimators for the evidence lower bound (ELBO), which avoid differentiation through the PDE model but are known to suffer from high variance. To address this high variance, we employ multifidelity approximate control-variate estimators that combine a small number of high-fidelity samples with a larger number of low-fidelity samples to reduce estimator variance and the number of high-fidelity evaluations required for optimization. We further develop a PDE-derivative-free second-order optimization strategy based on both gradient and Hessian score-function estimators. For low-fidelity model generation, we propose an on-the-fly strategy that builds and adaptively updates a reduced-order model (ROM) as the variational distribution evolves throughout the optimization. We investigate strategies for adapting the ROM and estimating the approximate control-variate gains, examining tradeoffs between estimator bias, variance reduction, and computational cost. The resulting approach facilitates derivative-free variational inference for large-scale inverse problems through a reduction in overall computational cost. We demonstrate the method on four numerical examples: a linear benchmark with an exact posterior and three PDE-constrained inverse problems.",
+      "tags": [
+        "math.NA"
+      ],
+      "target_repository": "Hawkar-usls/-Terminal-for-Janus",
+      "title": "Multifidelity variational inference for derivative-free PDE-constrained inverse problems",
+      "url": "https://arxiv.org/abs/2610.37359v1"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -1549,6 +1745,6 @@
   "schema": "janus.beetle.repo_memory_batch.v1",
   "selection": "BALANCED_LENS_ROLLING_TOP",
   "snapshot_cap": 48,
-  "snapshot_items_total": 42,
+  "snapshot_items_total": 48,
   "target_repository": "Hawkar-usls/-Terminal-for-Janus"
 }
