@@ -104,4 +104,15 @@ class RecoveryTests(unittest.TestCase):
             self.assertNotIn(forbidden,src)
 
 
+    def test_receiver_wake_cannot_use_untrusted_or_failed_execution(self):
+        workflow = (P.parent.parent / ".github/workflows/beetle-producer-bounded-recovery.yml").read_text()
+        self.assertIn("workflow_run:", workflow)
+        self.assertIn("workflows: ['JANUS Beetle Memory Receiver']", workflow)
+        self.assertIn("types: [completed]", workflow)
+        self.assertIn("github.event.workflow_run.conclusion == 'success'", workflow)
+        self.assertIn("github.event.workflow_run.head_branch == 'main'", workflow)
+        self.assertIn("github.event.workflow_run.head_repository.full_name == github.repository", workflow)
+        self.assertIn("github.event_name != 'pull_request'", workflow)
+        self.assertIn("cron: '13,43 * * * *'", workflow)
+
 if __name__=="__main__":unittest.main()
