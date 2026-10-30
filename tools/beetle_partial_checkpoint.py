@@ -15,6 +15,7 @@ import re
 import subprocess
 
 from beetle_shard_store import iter_lines, seal
+from beetle_git_push import push_state
 
 RECEIPT_SCHEMA = 'janus.universal_beetle.receipt.v1'
 CANDIDATE_SCHEMA = 'janus.universal_beetle.candidate.v1'
@@ -220,7 +221,7 @@ def live_checkpoint(root: Path, baseline: dict, run_id: str, git_root: Path) -> 
         'commit', '-m', f'beetle: verified mid-run checkpoint {run_id}')
     # Fail closed on failure to reach remote. Never silently claim a durable
     # checkpoint based only on local runner Git state.
-    git('push', 'origin', 'HEAD:beetle-state')
+    push_state(repo)
     return {**summary, 'remote_action': 'PUSH_CONFIRMED', 'commit': git('rev-parse', 'HEAD')}
 
 
@@ -249,3 +250,4 @@ def main() -> int:
 
 if __name__ == '__main__':
     raise SystemExit(main())
+
