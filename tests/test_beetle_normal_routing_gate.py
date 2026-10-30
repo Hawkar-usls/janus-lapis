@@ -106,16 +106,22 @@ class NormalProducerGateTest(unittest.TestCase):
             root=Path(t)
             state=root/"durable"
             state.mkdir()
+            # Freeze the gate's UTC clock to the same instant as the synthetic ACK.
+            # Without this, the 2026-10-28 fixture expires on later CI runs,
+            # causing a safe HOLD to fail an otherwise healthy producer workflow.
             with mock.patch.object(m, "inspect", return_value=health()):
-                with mock.patch.dict("os.environ", {"GITHUB_OUTPUT": str(root/"out.txt")}):
-                    with mock.patch.object(sys, "argv", ["gate",
-                        "--state-dir",str(state),"--run-id","40704229012"]):
-                        self.assertEqual(m.main(),0)
+                with mock.patch.object(m, "datetime") as frozen_clock:
+                    frozen_clock.now.return_value = NOW
+                    with mock.patch.dict("os.environ", {"GITHUB_OUTPUT": str(root/"out.txt")}):
+                        with mock.patch.object(sys, "argv", ["gate",
+                            "--state-dir",str(state),"--run-id","40704229012"]):
+                            self.assertEqual(m.main(),0)
             self.assertEqual(sorted(p.name for p in state.iterdir()),
                              ["latest_routing_gate.json"])
             self.assertIn("routing_allowed=true",(root/"out.txt").read_text())
             r=json.loads((state/"latest_routing_gate.json").read_text())
             self.assertTrue(r["routing_allowed"])
+            self.assertEqual(r["at"], NOW.isoformat().replace("+00:00", "Z"))
 
     def test_source_unavailable_holds_without_queue_changes(self):
         with tempfile.TemporaryDirectory() as t:
