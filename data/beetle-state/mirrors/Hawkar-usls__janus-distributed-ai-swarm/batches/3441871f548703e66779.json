@@ -1,0 +1,1806 @@
+{
+  "batch_id": "3441871f548703e66779",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "fragment_count": 1,
+  "fragment_index": 1,
+  "items": [
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "61eece246668eb224cc2ff43",
+      "context_id": "ecb488ff8b159f8b61cb3119",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::FORWARD",
+      "direction_title": "Universal large-data ingestion methods [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "parquet"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.2917,
+      "source": "zenodo",
+      "source_context_sha256": "3aa787839f195d44fe108a123d27565c002d5e98adbced9999a90d82b93ea709",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Pre-built per-gene covariate matrices for TCGA-PCPG (Pheochromocytoma and paraganglioma: tumors of neural-crest-derived chromaffin cells, in the adrenal medulla (pheochromocytoma) or extra-adrenal paraganglia. GTEx maps to Adrenal_Gland and Nerve_Tibial; representative column gtex_adrenal_gland. TCGA ATAC-seq covered (Corces et al. 2018; the tarball's bigWigs are named PCPG_..., read from its first member). Expression: TCGA-PCPG tumor and normal (3 normal samples, so the default Tumor+Normal pair stays). Roadmap null: its only adrenal epigenome is E080 (fetal adrenal gland), rejected as non-adult, as for ACC; no adult chromaffin, sympathetic or paraganglion epigenome exists. encode_chromatin: adult adrenal gland tissue from one ENCODE donor (ENCDO575WHY, 41y; ACC's donor) -- H3K27ac, H3K27me3, H3K36me3, H3K4me1, H3K4me3, H3K9me3 and DNase. Caveat: whole adrenal gland is mostly cortex (the medulla is about a tenth of it), so this is an organ-level source that mainly carries adrenocortical chromatin, the wrong compartment for chromaffin tumors. No pheochromocytoma or paraganglioma line exists in ENCODE (pheochromocytoma, paraganglioma, hPheo1, PC12 and chromaffin all return zero experiments). As the closest available lineage -- sympathoadrenal neural crest, the common progenitor of chromaffin cells and sympathetic neuroblasts -- the row adds neuroblastoma lines: SK-N-SH (untreated, one lab, all 7 default marks plus DNase) and DNase from BE2C and SK-N-DZ (untreated). They are a different, pediatric embryonal disease, so this is a lineage proxy supplying the medullary chromatin the adrenal tissue lacks, not a disease match; retinoic-acid- and DMSO-treated experiments rejected. repliseq: SK-N-SH UW 6-fraction Repli-seq (hg19), the only sympathoadrenal-lineage source in the replication-timing catalog, registered on the same lineage argument and to be measured (rt_block_scoping.py) and dropped if it moves nothing; the hESC-derived neural crest Repli-chip profiles are rejected as embryonic. Assemblies: repliseq hg19; encode_chromatin and ATAC GRCh38.), built with sigmutselcovs : GTEx tissue-matched gene expression, TCGA per-sample gene expression, replication timing (mean replication time and CLR-transformed S-phase fractions), Roadmap Epigenomics histone marks, and TCGA ATAC-seq accessibility, indexed by Ensembl gene ID. Files: cov_matrix_full.parquet &mdash; the full matrix (all covariate columns) cov_matrix_pca.parquet &mdash; PCA-reduced to 976 components, the smallest number reaching 99% cumulative explained variance (see pca_manifest.json) cov_matrix_columns.csv &mdash; a data dictionary: one row per column of the full matrix, with source, description, assembly, and units build_manifest.json , pca_manifest.json &mdash; build provenance and PCA parameters Full source citations and methodology: SOURCES.md . Release of 2026-10-26. Every chromatin and ATAC column is one track, summarized as log1p of the mean signal over the gene's CDS span (first to last coding base); replication timing covers chrX. cov_matrix_pca.parquet now reduces the combined matrix : this cohort's own covariates plus the tissue-agnostic GENERIC pool ( GENERIC record ), with the pool's columns for chromatin tracks this cohort already has left out. That is the matrix the sigmutsel covariate model is fitted on; it predicts held-out mutation counts better than the cohort's own matrix alone in the cohorts tested, so the first components of this artifact are the ones a model should use. Versions before 2026-10-26 reduced the own matrix alone. cov_matrix_full.parquet is still the cohort's own matrix; GENERIC's is in its record. pca_manifest.json records which matrix was reduced ( matrix ) and the column counts. To rebuild: sigmutselcovs pca-artifact PCPG --data-dir DIR --generic-dir GENERIC_DIR .",
+      "tags": [
+        "sigmutselcovs",
+        "TCGA",
+        "TCGA-PCPG",
+        "covariate matrix",
+        "mutation rate",
+        "replication timing",
+        "chromatin accessibility",
+        "gene expression"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "sigmutselcovs covariate matrices: TCGA-PCPG",
+      "url": "https://zenodo.org/records/23671640"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "ca1ea7983ff2a774c0780b78",
+      "context_id": "d9b499d1f03d0c6ca4030633",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::FORWARD",
+      "direction_title": "Universal large-data ingestion methods [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "parquet"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.2917,
+      "source": "zenodo",
+      "source_context_sha256": "74232475c2627da7da0e43f657869093bd21290f495c7c854713c81424cdab9a",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Pre-built per-gene covariate matrices for TCGA-READ (Rectum adenocarcinoma. Biologically and genomically the same disease as COAD (TCGA's own marker paper pooled them as COADREAD), so every covariate source is COAD's, re-verified 2026-10-03: GTEx maps to the colon tissues (representative Colon_Transverse_Mucosa, the epithelial cell of origin; GTEx has no rectum). No TCGA ATAC-seq for READ (atac: null). Roadmap uses COAD's E075 (colonic mucosa), E106 (sigmoid colon, 6/7 marks -- H3K9ac 404s) and E101/E102 (rectal mucosa, the direct organ match, 7/7 each); all 27 live (EID, mark) pairs checked 2026-10-03; E103 (rectal smooth muscle) rejected as the wrong compartment. ENCODE's adult rectal-mucosa histone experiments (two donors, 50y/61y, Bernstein lab, Roadmap award, 2013) are E101/E102's own sources and are not added, to avoid duplicating them in another assembly; no rectum DNase exists. encode_chromatin is COAD's: adult colonic mucosa DNase and the six colorectal cancer lines HCT116, Caco-2, LoVo, SW480, HT-29 and RKO (native GRCh38, all 19 files re-checked released). Replication timing is COAD's HCT116 16-fraction MAT (GSE137764), a colorectal cancer line, the same disease. Assemblies: Roadmap hg19; RT (MAT), encode_chromatin GRCh38/hg38; expression TCGA-READ (166 tumor and 10 normal RNA-seq files, so the default Tumor+Normal pair).), built with sigmutselcovs : GTEx tissue-matched gene expression, TCGA per-sample gene expression, replication timing (mean replication time and CLR-transformed S-phase fractions), Roadmap Epigenomics histone marks, and TCGA ATAC-seq accessibility, indexed by Ensembl gene ID. Files: cov_matrix_full.parquet &mdash; the full matrix (all covariate columns) cov_matrix_pca.parquet &mdash; PCA-reduced to 956 components, the smallest number reaching 99% cumulative explained variance (see pca_manifest.json) cov_matrix_columns.csv &mdash; a data dictionary: one row per column of the full matrix, with source, description, assembly, and units build_manifest.json , pca_manifest.json &mdash; build provenance and PCA parameters Full source citations and methodology: SOURCES.md . Release of 2026-10-26. Every chromatin and ATAC column is one track, summarized as log1p of the mean signal over the gene's CDS span (first to last coding base); replication timing covers chrX. cov_matrix_pca.parquet now reduces the combined matrix : this cohort's own covariates plus the tissue-agnostic GENERIC pool ( GENERIC record ), with the pool's columns for chromatin tracks this cohort already has left out. That is the matrix the sigmutsel covariate model is fitted on; it predicts held-out mutation counts better than the cohort's own matrix alone in the cohorts tested, so the first components of this artifact are the ones a model should use. Versions before 2026-10-26 reduced the own matrix alone. cov_matrix_full.parquet is still the cohort's own matrix; GENERIC's is in its record. pca_manifest.json records which matrix was reduced ( matrix ) and the column counts. To rebuild: sigmutselcovs pca-artifact READ --data-dir DIR --generic-dir GENERIC_DIR .",
+      "tags": [
+        "sigmutselcovs",
+        "TCGA",
+        "TCGA-READ",
+        "covariate matrix",
+        "mutation rate",
+        "replication timing",
+        "chromatin accessibility",
+        "gene expression"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "sigmutselcovs covariate matrices: TCGA-READ",
+      "url": "https://zenodo.org/records/23671695"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "682bddacde77411335f6512d",
+      "context_id": "b22aa90fbaa548e571f46d5c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::FORWARD",
+      "direction_title": "Universal large-data ingestion methods [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "parquet"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.2917,
+      "source": "zenodo",
+      "source_context_sha256": "7b04e1074b980f4a238bf0618e972a74198791864b499883fb97a237a92a0987",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Pre-built per-gene covariate matrices for TCGA-PAAD (Pancreatic adenocarcinoma (mostly ductal adenocarcinoma, PDAC). GTEx maps to Pancreas (plus Islets, Acini, Mixed_Cell); representative column is Pancreas. No TCGA ATAC-seq coverage (PAAD is not in Corces et al. 2018; atac: null). TCGA-PAAD has 4 Solid Tissue Normal RNA-seq files, so the default Tumor+Normal gexp tissue types stay, the normal mean resting on only 4 samples. Roadmap uses E098 (adult pancreas, 6/7 marks -- H3K9ac 404s; live-checked 2026-10-03); E087 (pancreatic islets, 7/7) rejected as the wrong compartment: endocrine islets are a small fraction of the gland and not the ductal/acinar cell of origin of PDAC. encode_chromatin: adult pancreas tissue from one donor (ENCDO575WHY, 41y, Bernstein lab 2020-21; the same donor as LIHC's liver tracks) -- six histone marks (ENCODE has no adult whole-pancreas H3K9ac) plus DNase-seq; the 2013 Bing Ren pancreas donors are likely E098's own source and were not reused. Cell lines: the only pancreatic ductal adenocarcinoma lines in ENCODE -- Panc1 (PANC-1; six marks plus DNase, newest combined-replicate files) and 8988T (PA-TU-8988T; DNase only) -- plus HPDE6-E6E7 (DNase), an HPV-E6/E7-immortalized normal pancreatic ductal epithelial line, the ductal cell-of-origin match. Capan-1, AsPC-1, BxPC-3, MIA PaCa-2, HPAF-II, CFPAC-1, SU.86.86, PSN1, Panc 10.05, KP-4, Capan-2 and Hs 766T have no ENCODE experiments. repliseq null: no pancreatic replication-timing source exists in the ENCODE Repli-seq/Repli-chip catalog or GSE137764; the Repli-chip endodermal, posterior foregut and endocrine-cell profiles are hESC-derived in-vitro intermediates (embryonic) and were rejected. TCGA-PAAD tumors are stroma-rich and often low purity, so purity/VAF-shape QC exclusions are expected. Assemblies: Roadmap hg19, encode_chromatin GRCh38.), built with sigmutselcovs : GTEx tissue-matched gene expression, TCGA per-sample gene expression, replication timing (mean replication time and CLR-transformed S-phase fractions), Roadmap Epigenomics histone marks, and TCGA ATAC-seq accessibility, indexed by Ensembl gene ID. Files: cov_matrix_full.parquet &mdash; the full matrix (all covariate columns) cov_matrix_pca.parquet &mdash; PCA-reduced to 956 components, the smallest number reaching 99% cumulative explained variance (see pca_manifest.json) cov_matrix_columns.csv &mdash; a data dictionary: one row per column of the full matrix, with source, description, assembly, and units build_manifest.json , pca_manifest.json &mdash; build provenance and PCA parameters Full source citations and methodology: SOURCES.md . Release of 2026-10-26. Every chromatin and ATAC column is one track, summarized as log1p of the mean signal over the gene's CDS span (first to last coding base); replication timing covers chrX. cov_matrix_pca.parquet now reduces the combined matrix : this cohort's own covariates plus the tissue-agnostic GENERIC pool ( GENERIC record ), with the pool's columns for chromatin tracks this cohort already has left out. That is the matrix the sigmutsel covariate model is fitted on; it predicts held-out mutation counts better than the cohort's own matrix alone in the cohorts tested, so the first components of this artifact are the ones a model should use. Versions before 2026-10-26 reduced the own matrix alone. cov_matrix_full.parquet is still the cohort's own matrix; GENERIC's is in its record. pca_manifest.json records which matrix was reduced ( matrix ) and the column counts. To rebuild: sigmutselcovs pca-artifact PAAD --data-dir DIR --generic-dir GENERIC_DIR .",
+      "tags": [
+        "sigmutselcovs",
+        "TCGA",
+        "TCGA-PAAD",
+        "covariate matrix",
+        "mutation rate",
+        "replication timing",
+        "chromatin accessibility",
+        "gene expression"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "sigmutselcovs covariate matrices: TCGA-PAAD",
+      "url": "https://zenodo.org/records/23671625"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "c24042bd35eda2cdc3cdc8d5",
+      "context_id": "6a64d3dd7053fec5df8fba41",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::FORWARD",
+      "direction_title": "Universal large-data ingestion methods [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "parquet"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.2917,
+      "source": "zenodo",
+      "source_context_sha256": "0d3ef2f3f669032e8c3fbaacb59ff0b38c0d06323e50748a79b8eb401b7352d7",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Pre-built per-gene covariate matrices for TCGA-LUSC (Lung squamous cell carcinoma. GTEx maps to Lung (representative gtex_lung). TCGA ATAC-seq covered (Corces et al. 2018; the tarball's bigWigs are named LUSC_..., read from its first member). Roadmap uses E096 (adult lung, 6/7 marks -- H3K9ac 404s, as for LUAD) plus E127 (NHEK epidermal keratinocytes, 7/7, life stage unrecorded), the squamous-epithelium proxy for the airway basal cells LUSC arises from after squamous metaplasia (Roadmap has no bronchial or airway epithelial epigenome; E128 lung fibroblasts are stromal). All 14 (EID, mark) pairs live-checked 2026-10-03. encode_chromatin: LUAD's ENTEx adult lung donor (ENCDO451RUA, 54y male, upper lobe of left lung; six histone marks plus DNase -- a different donor and assembly from Roadmap's E096), plus primary bronchial epithelial cells (ENCODE/UW donor ENCDO106AAA, life stage unrecorded): DNase, H3K4me3, H3K27me3 and H3K36me3, the only marks that cell type has; a retinoic-acid-treated bronchial epithelial DNase was rejected. Cell lines: none -- ENCODE has no lung squamous carcinoma line (NCI-H520, SK-MES-1, Calu-1, HCC95, LK-2, EBC-1 and others all absent); NCI-H226, historically labelled lung squamous, is annotated by Cellosaurus (CVCL_1544) as pleural epithelioid mesothelioma and was rejected; adenocarcinoma (A549, PC-9), large-cell (NCI-H460) and small-cell lines rejected. repliseq: keratinocyte (ENCODE UW 6-fraction Repli-seq, hg19), the squamous cell-of-origin match HNSC uses; A549 (Gilbert wavelet) is the organ match but an adenocarcinoma and was not used. Assemblies: Roadmap and repliseq hg19, encode_chromatin and ATAC GRCh38.), built with sigmutselcovs : GTEx tissue-matched gene expression, TCGA per-sample gene expression, replication timing (mean replication time and CLR-transformed S-phase fractions), Roadmap Epigenomics histone marks, and TCGA ATAC-seq accessibility, indexed by Ensembl gene ID. Files: cov_matrix_full.parquet &mdash; the full matrix (all covariate columns) cov_matrix_pca.parquet &mdash; PCA-reduced to 1158 components, the smallest number reaching 99% cumulative explained variance (see pca_manifest.json) cov_matrix_columns.csv &mdash; a data dictionary: one row per column of the full matrix, with source, description, assembly, and units build_manifest.json , pca_manifest.json &mdash; build provenance and PCA parameters Full source citations and methodology: SOURCES.md . Release of 2026-10-26. Every chromatin and ATAC column is one track, summarized as log1p of the mean signal over the gene's CDS span (first to last coding base); replication timing covers chrX. cov_matrix_pca.parquet now reduces the combined matrix : this cohort's own covariates plus the tissue-agnostic GENERIC pool ( GENERIC record ), with the pool's columns for chromatin tracks this cohort already has left out. That is the matrix the sigmutsel covariate model is fitted on; it predicts held-out mutation counts better than the cohort's own matrix alone in the cohorts tested, so the first components of this artifact are the ones a model should use. Versions before 2026-10-26 reduced the own matrix alone. cov_matrix_full.parquet is still the cohort's own matrix; GENERIC's is in its record. pca_manifest.json records which matrix was reduced ( matrix ) and the column counts. To rebuild: sigmutselcovs pca-artifact LUSC --data-dir DIR --generic-dir GENERIC_DIR .",
+      "tags": [
+        "sigmutselcovs",
+        "TCGA",
+        "TCGA-LUSC",
+        "covariate matrix",
+        "mutation rate",
+        "replication timing",
+        "chromatin accessibility",
+        "gene expression"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "sigmutselcovs covariate matrices: TCGA-LUSC",
+      "url": "https://zenodo.org/records/23671524"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "a3dfcaa7c3c524daee0f25bf",
+      "context_id": "54bedc9568e2e8790cd6bf6b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::FORWARD",
+      "direction_title": "Universal large-data ingestion methods [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "parquet"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.2917,
+      "source": "zenodo",
+      "source_context_sha256": "fa5619f9d5a0e67c6c0ce6da79a7b26225d23f0be841f1c8dbc7a0acd210c4e9",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Pre-built per-gene covariate matrices for TCGA-MESO (Malignant mesothelioma, overwhelmingly pleural in TCGA (51 of 87 cases pleura NOS, 11 thorax NOS, 5 abdominal/peritoneal; 52 epithelioid, 21 biphasic). GTEx has no mesothelium or pleura tissue, so MESO had no GTEx mapping: the proposed mapping key MESO takes Lung (the organ the visceral pleura covers, representative column) and Adipose_Visceral_Omentum (the peritoneal surface tissue GTEx samples), both organ-level proxies in which mesothelial cells are a minor fraction -- read the GTEx block as tissue context, not cell of origin. Expression is tumor-only: all 87 TCGA-MESO RNA-seq files are primary tumors, no normals. TCGA ATAC-seq covered (Corces et al. 2018; the tarball's bigWigs are named MESO_..., read from its first member). roadmap null: Roadmap's 127 epigenomes include no mesothelial, pleural or peritoneal sample (adipose E025/E063 and lung E096 are the wrong cell). encode_chromatin: DNase-seq of NCI-H226, the only mesothelioma line in ENCODE (Cellosaurus CVCL_1544: pleural epithelioid mesothelioma, originally described as lung squamous carcinoma; ENCODE health status 'squamous cell carcinoma; mesothelioma'), no histone ChIP exists for it; 2025 pipeline replicate-1 file. NCI-H2052, NCI-H28, NCI-H2452, MSTO-211H, Met-5A and LP-9 return no ENCODE experiments. Rejected: ENCODE's 'mesothelial cell of epicardium' (in vitro differentiated, embryonic) and adult omental fat pad DNase (mostly adipose, not mesothelium); ENCODE has no adult pleura or peritoneum chromatin. repliseq null: no adult or tumor mesothelial replication-timing source exists; hESC-derived 'mesothelial cell' Repli-chip (ENCSR401KWO, ENCSR326SZT; wavelet, hg19, embryonic) is noted as an unmeasured candidate only. With so little tissue-matched chromatin, MESO is the cohort that stands to gain most from the complete GENERIC. Assemblies: encode_chromatin and ATAC GRCh38.), built with sigmutselcovs : GTEx tissue-matched gene expression, TCGA per-sample gene expression, replication timing (mean replication time and CLR-transformed S-phase fractions), Roadmap Epigenomics histone marks, and TCGA ATAC-seq accessibility, indexed by Ensembl gene ID. Files: cov_matrix_full.parquet &mdash; the full matrix (all covariate columns) cov_matrix_pca.parquet &mdash; PCA-reduced to 925 components, the smallest number reaching 99% cumulative explained variance (see pca_manifest.json) cov_matrix_columns.csv &mdash; a data dictionary: one row per column of the full matrix, with source, description, assembly, and units build_manifest.json , pca_manifest.json &mdash; build provenance and PCA parameters Full source citations and methodology: SOURCES.md . Release of 2026-10-26. Every chromatin and ATAC column is one track, summarized as log1p of the mean signal over the gene's CDS span (first to last coding base); replication timing covers chrX. cov_matrix_pca.parquet now reduces the combined matrix : this cohort's own covariates plus the tissue-agnostic GENERIC pool ( GENERIC record ), with the pool's columns for chromatin tracks this cohort already has left out. That is the matrix the sigmutsel covariate model is fitted on; it predicts held-out mutation counts better than the cohort's own matrix alone in the cohorts tested, so the first components of this artifact are the ones a model should use. Versions before 2026-10-26 reduced the own matrix alone. cov_matrix_full.parquet is still the cohort's own matrix; GENERIC's is in its record. pca_manifest.json records which matrix was reduced ( matrix ) and the column counts. To rebuild: sigmutselcovs pca-artifact MESO --data-dir DIR --generic-dir GENERIC_DIR .",
+      "tags": [
+        "sigmutselcovs",
+        "TCGA",
+        "TCGA-MESO",
+        "covariate matrix",
+        "mutation rate",
+        "replication timing",
+        "chromatin accessibility",
+        "gene expression"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "sigmutselcovs covariate matrices: TCGA-MESO",
+      "url": "https://zenodo.org/records/23671561"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "408c2de4b76aba5edb2cc3b2",
+      "context_id": "3cb0de1e3a069e48c27e1f8f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::FORWARD",
+      "direction_title": "Universal large-data ingestion methods [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "parquet"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.2917,
+      "source": "arxiv",
+      "source_context_sha256": "aa5ac842f3e32b2905e64e0471c8d12c09e524a6e1aef9276919569389a3cd00",
+      "source_published": "2026-10-26T15:19:07Z",
+      "source_updated": "2026-10-26T15:19:07Z",
+      "summary": "Edge-centric IoT systems are increasingly evaluated through sensor values or platform features, yet the telemetry pipeline itself, the sequence of sensing, serialization, message mediation, ingestion, and persistence, is rarely released as a measurable object. This limits reproducible benchmarking of timeliness, provenance, and operational cost, especially in early-stage IoT design where real deployments and high-quality open data are often unavailable. I present a measurement-first edge IoT testbed and dataset that elevate timeliness, provenance, and energy to first-class telemetry dimensions. The testbed operationalizes a role-based event-driven architecture with explicit Source-Broker-Aggregator responsibilities and a schema-governed TelemetryMessage envelope (Avro) that embeds correlation identifiers and a uniform, cross-role vocabulary of stage-level timestamps. To trace mediation effects, I extend an MQTT broker (Eclipse Mosquitto) with a plugin that annotates messages with high-precision ingress/egress timestamps. I release the dataset in a dual representation: (i) replayable raw events as compressed Avro streams and (ii) analysis-ready long-format Parquet tables partitioned for efficient query and benchmarking, generated by a deterministic raw-to-tabular transformation pipeline. The contribution is an integrated engineering artifact and dataset built from established components. The demonstration describes one deployment through latency summaries, measurement-context distributions, and energy aggregates; it does not establish a new attribution method or a controlled performance benchmark. By co-releasing heterogeneous telemetry with pipeline timing and energy signals in both replayable and queryable forms, the artifact provides a basis for reproducible exploratory analysis and subsequent benchmarking studies.",
+      "tags": [
+        "cs.DC",
+        "cs.NI",
+        "cs.SE"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Making the Telemetry Pipeline Measurable: An Edge IoT Testbed and Dataset for End-to-End Latency, Provenance, and Energy-Aware Benchmarking",
+      "url": "https://arxiv.org/abs/2610.35591v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "070629cc821c87c66232f652",
+      "context_id": "1fd8ea7489a7bcea63c91a43",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::FORWARD",
+      "direction_title": "Universal large-data ingestion methods [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "parquet"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.2917,
+      "source": "zenodo",
+      "source_context_sha256": "8e260ea381c1cdef7430f14d8412a3bfbfa6a344da6eee16d56ea78b66c09d58",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Pre-built per-gene covariate matrices for TCGA-PRAD (Prostate adenocarcinoma. GTEx maps to Prostate (gtex_prostate). TCGA-PRAD has normal RNA-seq (52 Solid Tissue Normal files), so gexp keeps the default tumor+normal means. TCGA ATAC-seq covered (Corces et al. 2018; the tarball's bigWigs are named PRAD_..., read from its first member). roadmap null: Roadmap's 127-epigenome panel has no prostate epigenome. encode_chromatin: adult prostate gland tissue from one ENTEx donor (ENCDO845WKR, 37y; DNase, H3K27ac, H3K27me3, H3K36me3, H3K4me1, H3K4me3), plus H3K9me3 from a second adult donor (ENCDO451RUA, 54y), the only donor with that mark; ENCODE has no adult prostate H3K9ac. Primary prostate epithelial cell DNase (life stage unrecorded), the cell of origin. RWPE1 (HPV18-immortalized normal prostate epithelium; DNase, H3K27ac) as an immortalized-normal cell-of-origin proxy, as PAAD uses HPDE6-E6E7; RWPE2 (RWPE1 transformed in vitro with KRAS) rejected as an engineered line. Prostate cancer lines, untreated files only (ENCODE's many androgen/DHT-treatment experiments excluded): LNCaP clone FGC (DNase x2, H3K4me3), C4-2B (H3K27ac), 22Rv1 (H3K27ac), VCaP (H3K27ac) and PC-3 (all seven standard marks plus DNase; AR-negative bone metastasis). repliseq null: LNCaP's Gilbert-lab Repli-seq series (ENCSR888VII) has no wavelet-smoothed bigWig, only a 5 kb unsmoothed relative-replication bedGraph (ENCFF995YGM, hg19), which no registry type reads. Assemblies: encode_chromatin and ATAC GRCh38.), built with sigmutselcovs : GTEx tissue-matched gene expression, TCGA per-sample gene expression, replication timing (mean replication time and CLR-transformed S-phase fractions), Roadmap Epigenomics histone marks, and TCGA ATAC-seq accessibility, indexed by Ensembl gene ID. Files: cov_matrix_full.parquet &mdash; the full matrix (all covariate columns) cov_matrix_pca.parquet &mdash; PCA-reduced to 1107 components, the smallest number reaching 99% cumulative explained variance (see pca_manifest.json) cov_matrix_columns.csv &mdash; a data dictionary: one row per column of the full matrix, with source, description, assembly, and units build_manifest.json , pca_manifest.json &mdash; build provenance and PCA parameters Full source citations and methodology: SOURCES.md . Release of 2026-10-26. Every chromatin and ATAC column is one track, summarized as log1p of the mean signal over the gene's CDS span (first to last coding base); replication timing covers chrX. cov_matrix_pca.parquet now reduces the combined matrix : this cohort's own covariates plus the tissue-agnostic GENERIC pool ( GENERIC record ), with the pool's columns for chromatin tracks this cohort already has left out. That is the matrix the sigmutsel covariate model is fitted on; it predicts held-out mutation counts better than the cohort's own matrix alone in the cohorts tested, so the first components of this artifact are the ones a model should use. Versions before 2026-10-26 reduced the own matrix alone. cov_matrix_full.parquet is still the cohort's own matrix; GENERIC's is in its record. pca_manifest.json records which matrix was reduced ( matrix ) and the column counts. To rebuild: sigmutselcovs pca-artifact PRAD --data-dir DIR --generic-dir GENERIC_DIR .",
+      "tags": [
+        "sigmutselcovs",
+        "TCGA",
+        "TCGA-PRAD",
+        "covariate matrix",
+        "mutation rate",
+        "replication timing",
+        "chromatin accessibility",
+        "gene expression"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "sigmutselcovs covariate matrices: TCGA-PRAD",
+      "url": "https://zenodo.org/records/23671650"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "171527dd69edc531fa97f12f",
+      "context_id": "071620bfc4a63ce23773d204",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::FORWARD",
+      "direction_title": "Universal large-data ingestion methods [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "parquet"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.2917,
+      "source": "zenodo",
+      "source_context_sha256": "8269f7d08cce34436e370a4bef02bd55f8d2d0da7f4a0881afd06c1c14c7d6b7",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Pre-built per-gene covariate matrices for TCGA-LUAD (Lung adenocarcinoma. GTEx maps to Lung (representative column gtex_lung). TCGA ATAC-seq covered (Corces et al. 2018; the tarball's bigWigs are named LUAD_..., read from its first member, so the prefix is luad). Roadmap uses E096 (adult lung primary tissue, 30Y female; 6/7 marks, H3K9ac 404s), the only adult lung epigenome in the panel; E088 (fetal lung) and E017 (IMR-90 fetal lung fibroblast) rejected as non-adult, E128 (NHLF lung fibroblasts) as stromal, and E114 (A549, ethanol-treated) left out in favour of ENCODE's native GRCh38 A549 tracks below. All 7 E096 (EID, mark) pairs live-checked 2026-10-03. encode_chromatin: adult lung from one ENTEx donor (ENCDO451RUA, 54M, upper lobe of left lung -- the commonest LUAD site): H3K27ac, H3K27me3, H3K36me3, H3K4me1, H3K4me3, H3K9me3 and DNase-seq, newest GRCh38 files (single-replicate, as that donor has); ENCODE has no adult lung H3K9ac. Roadmap's own E096 donor (ENCDO424HVB) is not reused, to avoid duplicating E096 in another assembly. Cell lines: the two lung adenocarcinoma lines in ENCODE's panel -- A549 (KRAS-mutant; untreated Reddy-lab H3K27ac/H3K4me1/H3K4me3/H3K9me3 and DNase, ethanol-vehicle Bernstein-lab H3K27me3/H3K36me3/H3K9ac, the only ones for those marks) and PC-9 (EGFR exon-19 deletion; all 7 marks and DNase, untreated), pooled-replicate fold-change files where available. Rejected: the small-cell lines (NCI-H69, H82, H146, H187, H209, H345, H446, H510A, H524, H748, H889, H1092, H1436, H1694, H1930, H2081, H2107, H2171, H2196, SHP77, COLO668), NCI-H460 (large-cell carcinoma), NCI-H226 (squamous), and the fetal lung fibroblasts IMR-90, WI38, AG04450, AG08396. repliseq: A549's Gilbert-lab wavelet-smoothed early/late signal (ENCSR593FTB, hg19), a disease-matched lung adenocarcinoma line -- registered like KIRC's Caki2, to be measured with the own-RT-block test. Assemblies: Roadmap and repliseq hg19, encode_chromatin and ATAC GRCh38.), built with sigmutselcovs : GTEx tissue-matched gene expression, TCGA per-sample gene expression, replication timing (mean replication time and CLR-transformed S-phase fractions), Roadmap Epigenomics histone marks, and TCGA ATAC-seq accessibility, indexed by Ensembl gene ID. Files: cov_matrix_full.parquet &mdash; the full matrix (all covariate columns) cov_matrix_pca.parquet &mdash; PCA-reduced to 1194 components, the smallest number reaching 99% cumulative explained variance (see pca_manifest.json) cov_matrix_columns.csv &mdash; a data dictionary: one row per column of the full matrix, with source, description, assembly, and units build_manifest.json , pca_manifest.json &mdash; build provenance and PCA parameters Full source citations and methodology: SOURCES.md . Release of 2026-10-26. Every chromatin and ATAC column is one track, summarized as log1p of the mean signal over the gene's CDS span (first to last coding base); replication timing covers chrX. cov_matrix_pca.parquet now reduces the combined matrix : this cohort's own covariates plus the tissue-agnostic GENERIC pool ( GENERIC record ), with the pool's columns for chromatin tracks this cohort already has left out. That is the matrix the sigmutsel covariate model is fitted on; it predicts held-out mutation counts better than the cohort's own matrix alone in the cohorts tested, so the first components of this artifact are the ones a model should use. Versions before 2026-10-26 reduced the own matrix alone. cov_matrix_full.parquet is still the cohort's own matrix; GENERIC's is in its record. pca_manifest.json records which matrix was reduced ( matrix ) and the column counts. To rebuild: sigmutselcovs pca-artifact LUAD --data-dir DIR --generic-dir GENERIC_DIR .",
+      "tags": [
+        "sigmutselcovs",
+        "TCGA",
+        "TCGA-LUAD",
+        "covariate matrix",
+        "mutation rate",
+        "replication timing",
+        "chromatin accessibility",
+        "gene expression"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "sigmutselcovs covariate matrices: TCGA-LUAD",
+      "url": "https://zenodo.org/records/23671499"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "6f2e4ff1216d9a57dcdfcd04",
+      "context_id": "028f375613dfe6c20335788b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::FORWARD",
+      "direction_title": "Universal large-data ingestion methods [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "parquet"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.2917,
+      "source": "zenodo",
+      "source_context_sha256": "fa78c13c753ac6a9ef33df283a68dbcfcdd9c02d86fbe53c78eac3f1adc16847",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Pre-built per-gene covariate matrices for TCGA-OV (Ovarian Serous Cystadenocarcinoma. encode_chromatin added 2026-09-03 (expanded-covariate-sources task, Objective A.3): DNase-seq substituted for the missing TCGA ATAC-seq coverage (Corces et al. 2018 didn't profile ovarian cancer) -- adult primary ovary tissue DNase-seq exists natively on ENCODE (9 released adult experiments; one used here), unrelated to the ATAC gap since ATAC and DNase are separate assay catalogs.), built with sigmutselcovs : GTEx tissue-matched gene expression, TCGA per-sample gene expression, replication timing (mean replication time and CLR-transformed S-phase fractions), Roadmap Epigenomics histone marks, and TCGA ATAC-seq accessibility, indexed by Ensembl gene ID. Files: cov_matrix_full.parquet &mdash; the full matrix (all covariate columns) cov_matrix_pca.parquet &mdash; PCA-reduced to 1080 components, the smallest number reaching 99% cumulative explained variance (see pca_manifest.json) cov_matrix_columns.csv &mdash; a data dictionary: one row per column of the full matrix, with source, description, assembly, and units build_manifest.json , pca_manifest.json &mdash; build provenance and PCA parameters Full source citations and methodology: SOURCES.md . Release of 2026-10-26. Every chromatin and ATAC column is one track, summarized as log1p of the mean signal over the gene's CDS span (first to last coding base); replication timing covers chrX. cov_matrix_pca.parquet now reduces the combined matrix : this cohort's own covariates plus the tissue-agnostic GENERIC pool ( GENERIC record ), with the pool's columns for chromatin tracks this cohort already has left out. That is the matrix the sigmutsel covariate model is fitted on; it predicts held-out mutation counts better than the cohort's own matrix alone in the cohorts tested, so the first components of this artifact are the ones a model should use. Versions before 2026-10-26 reduced the own matrix alone. cov_matrix_full.parquet is still the cohort's own matrix; GENERIC's is in its record. pca_manifest.json records which matrix was reduced ( matrix ) and the column counts. To rebuild: sigmutselcovs pca-artifact OV --data-dir DIR --generic-dir GENERIC_DIR .",
+      "tags": [
+        "sigmutselcovs",
+        "TCGA",
+        "TCGA-OV",
+        "covariate matrix",
+        "mutation rate",
+        "replication timing",
+        "chromatin accessibility",
+        "gene expression"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "sigmutselcovs covariate matrices: TCGA-OV",
+      "url": "https://zenodo.org/records/23671597"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "69f54dfbf04c470fc8d9f636",
+      "context_id": "3b3c6a74b751eda7f91b39a8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "inversion",
+        "reconstruction",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 14.5833,
+      "source": "arxiv",
+      "source_context_sha256": "a9918694e3f922a7f5ce6a6a25806fd11bfcf1d0fc4a9fc37c7ec4a96af2a975",
+      "source_published": "2026-10-29T14:43:01Z",
+      "source_updated": "2026-10-29T14:43:01Z",
+      "summary": "We consider three-dimensional imaging of compactly supported anisotropic electric media from fixed-frequency polarimetric Maxwell far-field data. Maxwell transversality creates an obstruction absent from scalar Born inversion: each measurement determines only a projected action of the tensor-valued Fourier transform. We first resolve this obstruction by a finite-dimensional polarimetric inversion. For a general complex $3\\times3$ contrast, three incidence--observation configurations are necessary, and we give an explicit three-configuration design that is sufficient at every nonzero interior Fourier point. Its Gram determinant yields quantitative conditioning information and exhibits the loss of recoverability at the boundary of the accessible Fourier ball. After tensor demixing, the inverse problem reduces componentwise to restricted Fourier inversion on the unit ball, which we regularize by spectral cutoff in three-dimensional ball generalized prolate spheroidal wave functions. For discrete acquisition, a combined reconstruction error estimate separates the effects of measurement noise, polarimetric amplification, off-grid Fourier mismatch, quadrature error, Born modeling error, and spectral truncation. Numerical tests examine polarimetric conditioning and use analytically generated Born data to compare three- and six-configuration recovery and assess off-grid sensitivity. Reconstructions from full-Maxwell volume-integral data assess the effects of noise, wavenumber, and basis choice, as well as the recovery of different tensor components.",
+      "tags": [
+        "math.NA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Polarimetric Low-Rank Imaging of Anisotropic Maxwell Media",
+      "url": "https://arxiv.org/abs/2610.40180v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "0a538fe4f50b23be7fa0a123",
+      "context_id": "47e20ab03ddde5aed0e0f392",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus",
+        "multi-agent"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.8333,
+      "source": "arxiv",
+      "source_context_sha256": "51dc7edc8c81935db3781daeb1c99527a8ce8aec855dfc2b44ee720e932e2a78",
+      "source_published": "2026-10-28T20:40:33Z",
+      "source_updated": "2026-10-28T20:40:33Z",
+      "summary": "Large Language Models (LLMs) are increasingly being used as cognitive interfaces that shape how users interpret evidence, communicate, and make decisions. As deployed systems become more multimodal, tool-using, and multi-agent, safety failures no longer arise only from isolated harmful outputs, but also from how agents update, store, and propagate epistemic commitments across retrieval, memory, tools, and peer communication. In this paper, we define belief as an engineering abstraction for evidence-based commitments that guide downstream action. Building on this view, we propose the Explicit Belief Multi-Agent System (EB-MAS), which externalizes belief states into a structured substrate, uses belief operators to propose candidate updates, and applies a Cognitive Firewall to bound or reject updates that are weakly evidenced but strongly driven by vulnerability cues. We also discuss the risk of group belief at the group level, including manufactured consensus, collusion, and cascading misinformation, and outline practical integration challenges around grounding, false positives, scalability, and ethical misuse. Therefore, scalable agent safety requires not only better output filtering or stronger base models, but also explicit interfaces for tracing, calibrating, and constraining belief revision at runtime.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Auditable Belief Updates as a Missing Safety Layer for LLM-Powered Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.38869v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "a105f7fd05f5312eb148adf8",
+      "context_id": "f989741c8bf2186a7e09af60",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "multi-agent"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "arxiv",
+      "source_context_sha256": "df486215ec572f528c9adfc238e3c46b077f41b030645cd5cd770a156e7d5edd",
+      "source_published": "2026-10-28T04:09:12Z",
+      "source_updated": "2026-10-28T04:09:12Z",
+      "summary": "Multi-agent search and coverage is critical to autonomous exploration, search-and-rescue, and defense applications. This paper investigates settings where a mobile sensor network is tasked with coordinating to discover the position of a stationary target within a bounded region. We develop a Bayesian update scheme where agents iteratively combine local uncertainties derived from their sensor measurements through inverse variance weighting to get a better global understanding of where the target may be located given some prior belief. Network agents' trajectories are governed by a primal-dual gradient update rule that simultaneously minimizes the expected sensing uncertainty and enforces network connectivity among the agents. We prove that the belief converges to the target under mild, planner-agnostic conditions, with an explicit exponential rate of false-hypothesis rejection and a bound on expected search time. Simulation results show that we can successfully find the target and collapse belief to the ground truth target location while ensuring connectivity of our sensor network. They also empirically confirm our theoretical bounds and revisiting assumption. Finally, we compare against a lawnmower sweep, showing that our method locates the target more quickly when the prior is informative.",
+      "tags": [
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Belief-Driven Search in Connectivity-Constrained Mobile Sensor Networks with Convergence Guarantees",
+      "url": "https://arxiv.org/abs/2610.38256v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "66389b19c95abf869082eb41",
+      "context_id": "6ca98d88e05dccc6bfbac2bc",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus",
+        "reverse"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_context_sha256": "7d036c131cfc35c361065fa3706536f4da4e44f1cc5872c2aa898e545130d849",
+      "source_published": "2026-10-29T15:39:51Z",
+      "source_updated": "2026-10-29T15:39:51Z",
+      "summary": "Recommender systems face a tension between broadening exposure to diverse viewpoints and avoiding interactions that reinforce extreme positions. This tension is especially consequential in already polarized populations. Here we investigate whether recommendation strategies can reverse polarization rather than merely slow its development. Building on the Attraction--Repulsion Model of opinion dynamics, we introduce two complementary design principles: Tolerance-aware recommendation, which seeks to learn each individual's tolerance for disagreement and reduces exposure to viewpoints beyond that tolerance, and adaptive diversification, which broadens exposure for agents with more extreme opinions while retaining stronger personalization for moderates. Agent-based experiments show that highly personalized recommendations intensify polarization under polarized initial conditions. Tolerance awareness alone primarily slows polarization, whereas combining it with adaptive diversification can reduce polarization below its initial level and, under suitable conditions, restore consensus. Additional experiments incorporating persistent extreme influencers and a spiral-of-silence mechanism show that the combined strategy can mitigate polarization under social pressure and selective participation. To examine whether these findings extend beyond predefined opinion-update rules, we repeat the experiments on a simulated social platform populated by 100 LLM-driven agents prompted to move toward opinions similar to their own and away from those that differ substantially. Across three runs, the combined strategy is again the only recommendation policy tested that reverses polarization in every run. These findings distinguish polarization prevention from reversal and identify tolerance-aware, adaptive exposure as a promising recommendation design principle for reconnecting divided populations.",
+      "tags": [
+        "cs.SI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Reversing Polarization through Tolerance-Aware Recommendation and Adaptive Diversification",
+      "url": "https://arxiv.org/abs/2610.40289v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "41bbc3c88ab8ec7481f11733",
+      "context_id": "e591db7f81fb661570bcbd1e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_context_sha256": "85757b2f0bdfa1a64cd21d00a0d53409608a27c41f7de89a46e8632029fd3d01",
+      "source_published": "2026-10-27T23:08:13Z",
+      "source_updated": "2026-10-27T23:08:13Z",
+      "summary": "The allocation of electric vehicles to public charging stations is increasingly constrained by the fact that several heterogeneous facilities often serve the same stream of requests while observing only partial local information. An accept/reject decision that is defensible for one station may nevertheless reduce the efficiency of the charging district as a whole. We formulate this operational problem as a Decentralized Partially Observable Markov Decision Process (Dec-POMDP) and examine whether Centralized Training with Decentralized Execution (CTDE), instantiated through QMIX, improves assignment performance relative to a cooperative Independent Q-Learning baseline (IQL). The evaluation uses a six-station urban network simulated with SUMO, five independent random seeds, 200 training episodes, and four traffic flux scenarios ranging from 100 to 250 vehicles/hour. Under this protocol, QMIX reaches a mean reward per evaluated decision of +0.776, versus +0.578 for IQL (delta = +0.198, seed-paired Cohens dz = 2.98, exact two-sided Wilcoxon p = 0.0625, the minimum attainable value at this sample size), and raises the acceptance rate from 72.4% to 94.0% (delta = +21.6 pp, dz = 5.24, Wilcoxon p = 0.0625). A five-variant ablation suggests this gain is primarily attributable to the CTDE architecture when holding cooperative reward terms fixed, though not formally isolated with a single seed. By contrast, cooperative reward shaping and experience sharing show no clear descriptive benefit and may slightly reduce performance. These findings support the view that, for multi-station charging assignment, coordination should be embedded in the learning architecture rather than added only through heuristic cooperation terms.",
+      "tags": [
+        "cs.MA",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Cooperative EV Charging Assignment Using Multi-Agent Reinforcement Learning: A Comparison of QMIX and Independent Q-Learning Under Urban Traffic Uncertainty",
+      "url": "https://arxiv.org/abs/2610.38053v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "551f90944f670bb78a1d9927",
+      "context_id": "917ff0ddb681c653c14f09f8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "identifiability",
+        "inverse"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9167,
+      "source": "arxiv",
+      "source_context_sha256": "553ed25e8463701205e91f245bb74fd38ba992474d2dcec3277c97bf937a7a81",
+      "source_published": "2026-10-29T17:20:09Z",
+      "source_updated": "2026-10-29T17:20:09Z",
+      "summary": "Gravitational observations can leave material properties undetermined in two different ways: distinct states can have the same total source, and distinct spacetime histories can have the same retained observations. We organize these inverse problems in general relativity through a property-level identifiability criterion, with applications to stars and black hole candidates. Two ideal massless gases illustrate equal-source ambiguity: their temperatures differ by a factor of $(8/29)^{1/4}$ and their entropies differ while their stress-energy tensors agree. A separate causal-fluid example starts with identical sources and geometric data but different constitutive responses; the two models' curvature histories separate at linear order in proper time and their scale factors at cubic order. For black hole candidates, the relevant distinction is between stationary exterior parameters, perturbing fluxes and constituent history. The framework provides a test for whether retained data identify a material property, separating instantaneous source equality, history-wide source equality and observational projection.",
+      "tags": [
+        "gr-qc"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Curvature Blindness: Material Inference in Stars and Black Hole Candidates",
+      "url": "https://arxiv.org/abs/2610.40501v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "8c518a48de4a5e9779f2b234",
+      "context_id": "8fda9d07c74c2af366d2593e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9167,
+      "source": "arxiv",
+      "source_context_sha256": "270eebbdc4a1a0e5b2b59dd072107e5437765a3b649e8d6e801c7ee6c4e34bea",
+      "source_published": "2026-10-29T15:30:28Z",
+      "source_updated": "2026-10-29T15:30:28Z",
+      "summary": "We present posterior-landscape, a Python framework to identify and characterize morphological features in two-dimensional probability densities. The framework combines concepts from topological data analysis, statistical density-ridge estimation, and scale-space image analysis. It extracts localized concentrations, valleys, ridges, and changes of slope; for Bayesian reconstructions, it propagates uncertainty in feature recovery, geometry, and correspondence across posteriors. The framework also connects two-dimensional structures to features in one-dimensional marginals, and quantifies their correlation with other inferred parameters. We validate the method on controlled densities, and demonstrate its use on gravitational-wave population reconstructions, where it provides a systematic way to identify and interpret population features and assess which ones carry information relevant for cosmology. The resulting catalogues also offer a common morphological representation for future comparisons between predictions and population reconstructions.",
+      "tags": [
+        "astro-ph.IM",
+        "astro-ph.HE",
+        "gr-qc",
+        "physics.data-an",
+        "stat.CO"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "posterior-landscape: morphological feature finding in two-dimensional probability densities",
+      "url": "https://arxiv.org/abs/2610.40272v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "c867dd4ecabc752f9a463229",
+      "context_id": "467a833eb6e804f926927b9a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "bf7c2d4f186b2f8c88fbdbadb402aaf703429224342072fed3ec2f03b707c511",
+      "source_published": "2026-10-29T02:15:35Z",
+      "source_updated": "2026-10-29T02:15:35Z",
+      "summary": "LLM-based agents are increasingly used to complete complex, long-horizon tasks without human intervention. To make progress toward the task goal, agents need to perform different duties, such as planning and verification, when needed. To understand how single agents manage these duties during long-horizon execution, we conduct a preliminary study. Our analysis shows that verification has the strongest association with task success, but often occurs late, leaving limited opportunities for correction. We also find that the proportion of duty-relevant information decreases as records from different duties accumulate in a shared context. These findings lead us to examine whether multi-agent systems (MAS) can address these problems by assigning duties to agents with separate contexts. Our analysis shows that this separation alone is insufficient. Agents can lose track of the overall goal and repeat prior investigations. They may also lack necessary background while receiving irrelevant information from others. To maintain goal awareness and coordinate collaboration as task needs change, we propose Goal-Aware Dynamic Multi-Agent Collaboration (GAD). It uses a growing execution graph to organize subtasks and their dependencies. To keep agents focused on their goals, each context retains the original instruction and the assigned task's goal and acceptance conditions. To adapt collaboration and information sharing during execution, agents can divide tasks into subtasks and specify dependencies based on execution evidence. These dependencies guide when agents work and which results they receive. Verification and recovery check subtask results and full task completion against their goals, providing feedback for repair when checks fail.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Goal-Aware Dynamic Multi-Agent Collaboration for Long-Horizon Tasks",
+      "url": "https://arxiv.org/abs/2610.39193v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "4b3331efbd5976d14f60ceef",
+      "context_id": "26ec01615119f6afdf3a5ee4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.625,
+      "source": "arxiv",
+      "source_context_sha256": "bf31d78b18a40f7d135a6074547f1ccdfbaa44d670561cc2c750ff495de0d644",
+      "source_published": "2026-10-29T17:53:12Z",
+      "source_updated": "2026-10-29T17:53:12Z",
+      "summary": "At high redshift, the cosmic microwave background (CMB) both cools relativistic leptons and provides seed photons for inverse-Compton (IC) X-ray emission. These two effects link the particle content of a bubble directly to the soft X-ray depression used to identify a cavity. We derive a physical criterion connecting lepton cooling, bubble volume, enthalpy evolution, and 0.5--2 keV X-ray visibility, while separating intrinsic filling of the X-ray depression from detector-dependent cavity recovery. For uncooled electron populations described by a power law with spectral index $s=2.5$, minimum Lorentz factor $100\\leqγ_{\\min}\\leq1000$, and maximum Lorentz factor $γ_{\\max}=10^5$, the measured atmosphere of the testbed high-redshift cluster SPT-CL J2215$-$3537 requires 0.6--1.2\\% of the pressure in radiating leptons to fill the soft-band deficit. Across the full tested ranges of $s$, $γ_{\\min}$, and atmospheric properties, the required fraction is 0.2--3.7\\%. Complete loss of this component reduces the enthalpy by less than 3\\% relative to an otherwise identical adiabatic bubble at the same pressure. A low-cutoff control with $γ_{\\min}=10$ and $s=3$ instead requires 18.9\\%, identifying the poorly constrained low-energy spectrum as the main physical uncertainty. For a fixed atmosphere and spectrum, the required fraction scales as $(1+z)^{-4}$. The declining-pressure tracks show that the X-ray deficit can cross the adopted detection threshold while the enthalpy deficit remains below 0.4\\%; the time of this transition depends on the assumed pressure history. Thus, high-redshift cavity visibility depends on both the surrounding atmosphere and the pressure-carrying particle spectrum. This criterion provides the physical basis for an instrument-specific recovery analysis.",
+      "tags": [
+        "astro-ph.HE",
+        "astro-ph.CO",
+        "astro-ph.GA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "The Conditional CMB Visibility of High-Redshift X-Ray Cavities in Galaxy clusters",
+      "url": "https://arxiv.org/abs/2610.40610v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "ddbe8ca0f53d3354cd531bd3",
+      "context_id": "fe7753bc416592e9bbfa6f00",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "e6925e4627b2c1673974bd82659d6ff746352a09683b68380d3b6dd6e4e5b487",
+      "source_published": "2026-10-27T21:29:49Z",
+      "source_updated": "2026-10-27T21:29:49Z",
+      "summary": "Full-order surrogates for high-dimensional nonlinear flows are often unnecessary when applications require only selected degrees of freedom. We propose reduced-order models that bypass full-state reconstruction by deploying graph neural networks (GNNs) directly on coarse meshes. Applied to parameterized 2D/3D confined cylinder flows and an unevenly heated cavity over Reynolds/Rayleigh-number ranges, the models generalize to unseen conditions and accurately predict sparse probe locations and integrated quantities. Coarse-mesh GNNs match or outperform finer-mesh surrogates while reducing training time and memory, even for 3D chaotic dynamics. A dynamics-informed adaptive sampling strategy guided by frequency-spectrum variations reduces maximum errors by an order of magnitude versus uniform sampling at negligible cost. Coarse-mesh training also makes noise-augmented multi-step unrolling practical, improving long-horizon autoregressive predictions. The approach outperforms parametric DMD, sparse MLPs, U-Nets, and Fourier neural operators at lower cost, and enables system identification and state estimation from sparse observations. These results show that coarse-mesh representations, adaptive sampling, and noise-augmented unrolled training form an efficient framework for reduced-order modeling of parameterized unsteady flows without solver-resolution reconstruction.",
+      "tags": [
+        "cs.LG",
+        "physics.flu-dyn"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Predicting Sparse Observables in Parameterized Unsteady Flows Using Coarse-Mesh Graph Neural Networks",
+      "url": "https://arxiv.org/abs/2610.37986v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "803cc50a80d416984259e3cf",
+      "context_id": "dffbadcd0c8e2fd0dfa7ebcb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "f125e4ea817c9469bda93b1e6b5ed81164b670e60f2abd5cab841a2db2342314",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "В статье рассматриваются вопросы прогнозирования исходов оперативных вмешательств на твёрдом нёбе у детей с двусторонней расщелиной верхней губы и нёба. Актуальность исследования обусловлена высокой частотой функциональных и морфологических нарушений у данной категории пациентов, а также необходимостью повышения эффективности хирургического лечения и снижения риска послеоперационных осложнений. EN Bilateral cleft lip and palate is a complex congenital anomaly associated with significant anatomical and functional impairments. Surgical reconstruction of the hard palate aims to restore palatal integrity, support normal orofacial function, and reduce the risk of postoperative complications. Predicting surgical outcomes is essential for individualized treatment planning and improving the quality of care. UZ Maqolada yuqori lab va tanglayning ikki tomonlama yorig'i bo'lgan bolalarda qattiq tanglayda o'tkaziladigan jarrohlik aralashuvlar natijalarini prognozlash masalalari ko'rib chiqiladi. Yuqori lab va tanglayning ikki tomonlama yorig'i sezilarli anatomik va funksional buzilishlar bilan kechadigan murakkab tug'ma anomaliya hisoblanadi. Qattiq tanglayni jarrohlik yo'li bilan rekonstruksiya qilishdan maqsad tanglay yaxlitligini tiklash, og'iz-yuz sohasi funksiyalarining me'yorida bajarilishini ta'minlash hamda operatsiyadan keyingi asoratlar xavfini kamaytirishdan iborat. Jarrohlik aralashuvi natijalarini prognozlash individual davolash rejasini tuzish va tibbiy yordam sifatini oshirishda muhim ahamiyatga ega.",
+      "tags": [
+        "bilateral cleft lip and palate",
+        "hard palate",
+        "surgical treatment",
+        "outcome prediction",
+        "postoperative complications",
+        "oronasal fistula",
+        "velopharyngeal insufficiency",
+        "children",
+        "двусторонняя расщелина верхней губы и нёба",
+        "твёрдое нёбо",
+        "межчелюстная кость",
+        "ортодонтическая подготовка",
+        "хирургическое лечение",
+        "прогнозирование исходов",
+        "послеоперационные осложнения",
+        "дети",
+        "yuqori lab va tanglayning ikki tomonlama yorig'i",
+        "qattiq tanglay",
+        "jarrohlik davolash",
+        "davolash natijalarini prognozlash",
+        "operatsiyadan keyingi asoratlar",
+        "og'iz va burun bo'shliqlari o'rtasidagi oqma",
+        "velofaringeal yetishmovchilik",
+        "bolalar"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "ПРОГНОЗИРОВАНИЕ ИСХОДОВ ОПЕРАТИВНЫХ ВМЕШАТЕЛЬСТВ НА ТВЁРДОМ НЁБЕ У ДЕТЕЙ С ДВУСТОРОННЕЙ РАСЩЕЛИНОЙ ВЕРХНЕЙ ГУБЫ И НЁБА",
+      "url": "https://zenodo.org/records/23734249"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "5c80aa3bc791e0ee4b7c9649",
+      "context_id": "aebe1b67085826b2cc217318",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "e27f26171303e10d848a937dec8ef376e34c6ab2cd29c43c96cb92bb415732b0",
+      "source_published": "2026-10-29T16:34:54Z",
+      "source_updated": "2026-10-29T16:34:54Z",
+      "summary": "We introduce Continuous-Action World Models (CoAWM), a framework for learning cross-embodiment spatiotemporal dynamics priors that support robot action generation across embodiments and execution frequencies. At its core is a shared latent function space that captures the spatial and temporal structure of robot actions. We learn this space through two stages. First, function pretraining brings trajectories from different embodiments and sampling frequencies into a common representation, learning shared dynamics priors through action reconstruction and consistency across temporal sampling views. By accommodating heterogeneous robot trajectories, this stage broadens the range of data sources available for pretraining and facilitates scaling to larger and more diverse datasets. Second, we connect the pretrained function space to a world-model backbone, enabling observations, language instructions, and the current robot state to condition the prediction of a latent action function. A single decoder takes any query time and returns the corresponding end-effector action. By separating shared dynamics priors from task-conditioned action selection and temporal sampling, our approach provides a unified foundation for transferring robot experience across embodiments and control frequencies.",
+      "tags": [
+        "cs.RO",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Continuous-Action World Models: Learning Cross-Embodiment Spatiotemporal Dynamics Priors",
+      "url": "https://arxiv.org/abs/2610.40401v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "0a538fe4f50b23be7fa0a123",
+      "context_id": "5b4c6dc266b8ada28c9d84fd",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus",
+        "failure",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.125,
+      "source": "arxiv",
+      "source_context_sha256": "05add81925e49f8b6ad58419f7c38978568ee217d678f8ec67cb38586a72e1ca",
+      "source_published": "2026-10-28T20:40:33Z",
+      "source_updated": "2026-10-28T20:40:33Z",
+      "summary": "Large Language Models (LLMs) are increasingly being used as cognitive interfaces that shape how users interpret evidence, communicate, and make decisions. As deployed systems become more multimodal, tool-using, and multi-agent, safety failures no longer arise only from isolated harmful outputs, but also from how agents update, store, and propagate epistemic commitments across retrieval, memory, tools, and peer communication. In this paper, we define belief as an engineering abstraction for evidence-based commitments that guide downstream action. Building on this view, we propose the Explicit Belief Multi-Agent System (EB-MAS), which externalizes belief states into a structured substrate, uses belief operators to propose candidate updates, and applies a Cognitive Firewall to bound or reject updates that are weakly evidenced but strongly driven by vulnerability cues. We also discuss the risk of group belief at the group level, including manufactured consensus, collusion, and cascading misinformation, and outline practical integration challenges around grounding, false positives, scalability, and ethical misuse. Therefore, scalable agent safety requires not only better output filtering or stronger base models, but also explicit interfaces for tracing, calibrating, and constraining belief revision at runtime.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Auditable Belief Updates as a Missing Safety Layer for LLM-Powered Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.38869v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "f1f7bedaec7d429560be142d",
+      "context_id": "faa17bb68ff9fcd45ad1a867",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "counterexample",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.0417,
+      "source": "zenodo",
+      "source_context_sha256": "0ab2c56a36fec71cff2eb285f56e9b6c98ca3c483a45f55ed552cec002410cee",
+      "source_published": "2026-10-30",
+      "source_updated": "",
+      "summary": "DIGITAL TWINS AND QUALITY CONTROL FOR SMART MASK MANUFACTURING AT THE LIMIT Chinese Title / 中文書名: 智慧面膜製程數位孿生與品質控制極限 Digital Twins and Quality Control for Smart Mask Manufacturing at the Limit is a 777-page English prospective nonclinical research working monograph investigating whether a smart facial-mask manufacturing digital twin can retain physically meaningful quality predictions on new production lines without confusing after-the-fact data reconstruction with genuine foresight. Its scientific three-coupling is manufacturing process twins, calibrated sensor evidence, and independent batch qualification. The central challenge is a frozen-model second-line test with unknown incoming lots, calibration variation, process disturbances and physically inspected quality outcomes. The primary candidate research metric is the dimensionless normalized signed prediction deviation e_Q = (Q_pred - Q_meas)/Q_spec, where the measured and predicted quality quantity and the nonzero prespecified specification scale have the same unit. The percent-valued representation is 100 e_Q. This relation does not convert unlike attributes - filling mass, seal integrity, microbial quality or package leakage - into a compensatory safety score. Forecasts must exist before independent out-of-line quality measurements, with trustworthy timestamps, instrument calibration, valid sample genealogy and documented uncertainty. A successful dashboard replay is not an independent production-line experiment. The monograph develops 30 distinguishable mathematical plates including prediction bias, mean and tail error, GUM-style covariance, lot-level variance, group and time-forward holdouts, prediction-interval coverage and width, sensor time alignment, EWMA and CUSUM process monitoring, process capability, filling and mixing mass closure, nozzle dispersion, calibration lineage, critical-failure false acceptance, constrained control authority, and evidence reconstruction completeness. Each plate specifies its physical units, assumptions, an identifiable measurement and a blinded counterexample, with links to the 82 chapter series and the Research Gates that can defeat its proposed interpretation.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "DIGITAL TWINS AND QUALITY CONTROL FOR SMART MASK MANUFACTURING AT THE LIMIT Chinese Title / 中文書名: 智慧面膜製程數位孿生與品質控制極限 Digital Twins and Quality Control for Smart Mask Manufacturing at the Limit is a 777-page English prospective nonclinical research working monograph investigating whether a smart facia",
+      "url": "https://zenodo.org/records/23809057"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "f1f7bedaec7d429560be142d",
+      "context_id": "2443ded16210029be118a253",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "counterexample",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.0417,
+      "source": "zenodo",
+      "source_context_sha256": "3563373f47d634d33778f6c4b6d22bca72934bb7bafc6854e6f44aa41c3e7b5f",
+      "source_published": "2026-10-30",
+      "source_updated": "",
+      "summary": "DIGITAL TWINS AND QUALITY CONTROL FOR SMART MASK MANUFACTURING AT THE LIMIT Chinese Title / 中文書名: 智慧面膜製程數位孿生與品質控制極限 Digital Twins and Quality Control for Smart Mask Manufacturing at the Limit is a 777-page English prospective nonclinical research working monograph investigating whether a smart facial-mask manufacturing digital twin can retain physically meaningful quality predictions on new production lines without confusing after-the-fact data reconstruction with genuine foresight. Its scientific three-coupling is manufacturing process twins, calibrated sensor evidence, and independent batch qualification. The central challenge is a frozen-model second-line test with unknown incoming lots, calibration variation, process disturbances and physically inspected quality outcomes. The primary candidate research metric is the dimensionless normalized signed prediction deviation e_Q = (Q_pred - Q_meas)/Q_spec, where the measured and predicted quality quantity and the nonzero prespecified specification scale have the same unit. The percent-valued representation is 100 e_Q. This relation does not convert unlike attributes - filling mass, seal integrity, microbial quality or package leakage - into a compensatory safety score. Forecasts must exist before independent out-of-line quality measurements, with trustworthy timestamps, instrument calibration, valid sample genealogy and documented uncertainty. A successful dashboard replay is not an independent production-line experiment. The monograph develops 30 distinguishable mathematical plates including prediction bias, mean and tail error, GUM-style covariance, lot-level variance, group and time-forward holdouts, prediction-interval coverage and width, sensor time alignment, EWMA and CUSUM process monitoring, process capability, filling and mixing mass closure, nozzle dispersion, calibration lineage, critical-failure false acceptance, constrained control authority, and evidence reconstruction completeness. Each plate specifies its physical units, assumptions, an identifiable measurement and a blinded counterexample, with links to the 82 chapter series and the Research Gates that can defeat its proposed interpretation.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "DIGITAL TWINS AND QUALITY CONTROL FOR SMART MASK MANUFACTURING AT THE LIMIT Chinese Title / 中文書名: 智慧面膜製程數位孿生與品質控制極限 Digital Twins and Quality Control for Smart Mask Manufacturing at the Limit is a 777-page English prospective nonclinical research working monograph investigating whether a smart facia",
+      "url": "https://zenodo.org/records/23809057"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "41bbc3c88ab8ec7481f11733",
+      "context_id": "652537fc2d6a76aa1cfc001f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_context_sha256": "c5ee356979172d01b3a483a7979d206ab0b974ba388537cc369bd73e015f2a6a",
+      "source_published": "2026-10-27T23:08:13Z",
+      "source_updated": "2026-10-27T23:08:13Z",
+      "summary": "The allocation of electric vehicles to public charging stations is increasingly constrained by the fact that several heterogeneous facilities often serve the same stream of requests while observing only partial local information. An accept/reject decision that is defensible for one station may nevertheless reduce the efficiency of the charging district as a whole. We formulate this operational problem as a Decentralized Partially Observable Markov Decision Process (Dec-POMDP) and examine whether Centralized Training with Decentralized Execution (CTDE), instantiated through QMIX, improves assignment performance relative to a cooperative Independent Q-Learning baseline (IQL). The evaluation uses a six-station urban network simulated with SUMO, five independent random seeds, 200 training episodes, and four traffic flux scenarios ranging from 100 to 250 vehicles/hour. Under this protocol, QMIX reaches a mean reward per evaluated decision of +0.776, versus +0.578 for IQL (delta = +0.198, seed-paired Cohens dz = 2.98, exact two-sided Wilcoxon p = 0.0625, the minimum attainable value at this sample size), and raises the acceptance rate from 72.4% to 94.0% (delta = +21.6 pp, dz = 5.24, Wilcoxon p = 0.0625). A five-variant ablation suggests this gain is primarily attributable to the CTDE architecture when holding cooperative reward terms fixed, though not formally isolated with a single seed. By contrast, cooperative reward shaping and experience sharing show no clear descriptive benefit and may slightly reduce performance. These findings support the view that, for multi-station charging assignment, coordination should be embedded in the learning architecture rather than added only through heuristic cooperation terms.",
+      "tags": [
+        "cs.MA",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Cooperative EV Charging Assignment Using Multi-Agent Reinforcement Learning: A Comparison of QMIX and Independent Q-Learning Under Urban Traffic Uncertainty",
+      "url": "https://arxiv.org/abs/2610.38053v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "76f06b55af185aa4c8d351e4",
+      "context_id": "e9af34388271d9e1bd4fa90f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "64eb3cd70733fc3493bf962e8cc9435d79c7588ed579f1fa7713c68130eacade",
+      "source_published": "2026-10-28T18:58:50Z",
+      "source_updated": "2026-10-28T18:58:50Z",
+      "summary": "Packing a 3D volume into a token sequence is not merely long-sequence modeling. Once the volume is packed, sequence order no longer encodes the geometry of the sample---so a positional mechanism indexed by sequence position can learn the memory layout rather than the object. This is a general failure mode for attention over packed geometric data. We introduce PACK3D, a local-global attention operator that separates memory layout from attention geometry. PACK3D keeps local neighborhood attention exact, compresses only distant context into contiguous 3D block summaries, and indexes every query-key interaction with axial RoPE on true token-grid coordinates rather than packed positions. Because the rotation is applied before a block is summarized, the query-to-summary logit remains a weighted sum of query-relative 3D displacements; compressed global context therefore stays spatially interpretable after packing, instead of collapsing to anonymous pooled content. We measure the failure mode directly. On a controlled synthetic task---train on one packing, change only the memory order of the tokens, hold the physical labeling rule fixed---learned positional embeddings and packed-sequence RoPE solve the training layout perfectly yet collapse under Morton, block-contiguous, and random repacking, while axial grid-coordinate RoPE stays exact throughout. The same coordinate system carries to real data: on Allen WTC-11 hiPSC microscopy, PACK3D improves over a parameter-matched 3D U-Net on the 15-structure joint task and over a matched learned-position local-global baseline, with controls isolating the coordinate system, not encoder capacity, as the source of the gain. A fused Triton implementation matches windowed-attention latency at 65k tokens while supplying the long-range context windowing cannot---so the operator is not only correct but trainable at scale.",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Geometry Matters in Packed 3D Attention",
+      "url": "https://arxiv.org/abs/2610.38694v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "76f06b55af185aa4c8d351e4",
+      "context_id": "c1c6c473a179e16add352a1c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "e75e57ad00572740a1c39fa07304550fd67d767bfe7c89cf651e9a4fadc384fa",
+      "source_published": "2026-10-28T18:58:50Z",
+      "source_updated": "2026-10-28T18:58:50Z",
+      "summary": "Packing a 3D volume into a token sequence is not merely long-sequence modeling. Once the volume is packed, sequence order no longer encodes the geometry of the sample---so a positional mechanism indexed by sequence position can learn the memory layout rather than the object. This is a general failure mode for attention over packed geometric data. We introduce PACK3D, a local-global attention operator that separates memory layout from attention geometry. PACK3D keeps local neighborhood attention exact, compresses only distant context into contiguous 3D block summaries, and indexes every query-key interaction with axial RoPE on true token-grid coordinates rather than packed positions. Because the rotation is applied before a block is summarized, the query-to-summary logit remains a weighted sum of query-relative 3D displacements; compressed global context therefore stays spatially interpretable after packing, instead of collapsing to anonymous pooled content. We measure the failure mode directly. On a controlled synthetic task---train on one packing, change only the memory order of the tokens, hold the physical labeling rule fixed---learned positional embeddings and packed-sequence RoPE solve the training layout perfectly yet collapse under Morton, block-contiguous, and random repacking, while axial grid-coordinate RoPE stays exact throughout. The same coordinate system carries to real data: on Allen WTC-11 hiPSC microscopy, PACK3D improves over a parameter-matched 3D U-Net on the 15-structure joint task and over a matched learned-position local-global baseline, with controls isolating the coordinate system, not encoder capacity, as the source of the gain. A fused Triton implementation matches windowed-attention latency at 65k tokens while supplying the long-range context windowing cannot---so the operator is not only correct but trainable at scale.",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Geometry Matters in Packed 3D Attention",
+      "url": "https://arxiv.org/abs/2610.38694v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "d06b18d291e9f6683d8fcdae",
+      "context_id": "8068ac5e1b2f2a296c54679c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "zenodo",
+      "source_context_sha256": "fe50ffc5cd929e8a767949ce697eebc83723671e42ec23078c6d487c476780b0",
+      "source_published": "2026-10-30",
+      "source_updated": "",
+      "summary": "Selected research artifact for the manuscript \"An ontology-driven simulator for combined cycle power plants: knowledge-governed model selection, connectivity checking and result validation\". Version rev14-minimal-3 contains a small executable subset of the ontology implementation, selected original result records, case definitions, ontology and SHACL files, protocol amendments, current vector figures and public comparison tables. The included component harness performs HermiT classification of 2,112 synthetic equipment-data states, an eight-definition ablation with 14 routing changes, SHACL checks for 704 key subsets and 12 additional boundary/hook fixtures, and four P91 applicability decisions. These are isolated component checks. The P91 fixtures distinguish saved computed inputs from deliberate stress overrides. Original failures, null comparisons and subsequent repairs remain visible. This version corrects the Table 6 counting scope by recording separate sets: 14 SHACL rejections among 27 HRSG attempts, three among 132 ontology-arm knowledge-edit attempts and six among 12 other-unit runs. The knowledge-edit set includes 19 completions and 110 other stops in addition to the three SHACL rejections. Other stops are not counted as successful result validations. The three knowledge-edit rejections belong to one edit family and do not demonstrate detection of the two unread omitted statements. The 70 evaluated points and separate injected result-record check remain distinct. The complete membership ledger and executable recount preserve the historical raw records. The full application, process and equipment-life solvers, private plant inputs, internal report, credentials and repository history are excluded. This deposit does not independently reproduce plant predictions, all original whole-cycle protocols, or every figure-generation procedure. Read README.md, COVERAGE.md and KNOWN_LIMITS.md for scope and remaining limitations. Licensing: Python source code and executable scripts retain the MIT license. Author-created data, ontology, configuration and documentation retain CC BY 4.0 terms. Source-specific notices remain in the archive. This is a new version of the GTCC research artifact, not the separate wastewater dataset and not an identical copy of the older GitHub v0.4.0 release.",
+      "tags": [
+        "ontology",
+        "combined cycle power plant",
+        "model selection",
+        "SHACL",
+        "simulation verification",
+        "reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "GTCC ontology: minimal executable decision components and selected supporting evidence",
+      "url": "https://zenodo.org/records/23808523"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "d06b18d291e9f6683d8fcdae",
+      "context_id": "25cf5f927099e4c23a84b39c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "zenodo",
+      "source_context_sha256": "2d5f6eacf4d9fb77df80c9e5e4efe6275c7887a6884c64493d64e4abe7d4c4c3",
+      "source_published": "2026-10-30",
+      "source_updated": "",
+      "summary": "Selected research artifact for the manuscript \"An ontology-driven simulator for combined cycle power plants: knowledge-governed model selection, connectivity checking and result validation\". Version rev14-minimal-3 contains a small executable subset of the ontology implementation, selected original result records, case definitions, ontology and SHACL files, protocol amendments, current vector figures and public comparison tables. The included component harness performs HermiT classification of 2,112 synthetic equipment-data states, an eight-definition ablation with 14 routing changes, SHACL checks for 704 key subsets and 12 additional boundary/hook fixtures, and four P91 applicability decisions. These are isolated component checks. The P91 fixtures distinguish saved computed inputs from deliberate stress overrides. Original failures, null comparisons and subsequent repairs remain visible. This version corrects the Table 6 counting scope by recording separate sets: 14 SHACL rejections among 27 HRSG attempts, three among 132 ontology-arm knowledge-edit attempts and six among 12 other-unit runs. The knowledge-edit set includes 19 completions and 110 other stops in addition to the three SHACL rejections. Other stops are not counted as successful result validations. The three knowledge-edit rejections belong to one edit family and do not demonstrate detection of the two unread omitted statements. The 70 evaluated points and separate injected result-record check remain distinct. The complete membership ledger and executable recount preserve the historical raw records. The full application, process and equipment-life solvers, private plant inputs, internal report, credentials and repository history are excluded. This deposit does not independently reproduce plant predictions, all original whole-cycle protocols, or every figure-generation procedure. Read README.md, COVERAGE.md and KNOWN_LIMITS.md for scope and remaining limitations. Licensing: Python source code and executable scripts retain the MIT license. Author-created data, ontology, configuration and documentation retain CC BY 4.0 terms. Source-specific notices remain in the archive. This is a new version of the GTCC research artifact, not the separate wastewater dataset and not an identical copy of the older GitHub v0.4.0 release.",
+      "tags": [
+        "ontology",
+        "combined cycle power plant",
+        "model selection",
+        "SHACL",
+        "simulation verification",
+        "reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "GTCC ontology: minimal executable decision components and selected supporting evidence",
+      "url": "https://zenodo.org/records/23808523"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "43ba40dd2e56d809c36d9f93",
+      "context_id": "0a3f6dc3960a9c0414cb0dcf",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_context_sha256": "76b0cadbcff214e15ab018d212b85c94c140faae487527d1ecd19f2b0864cfd0",
+      "source_published": "2026-10-29T08:41:46Z",
+      "source_updated": "2026-10-29T08:41:46Z",
+      "summary": "Failures of deployed clinical artificial intelligence (AI) systems have often originated in how their training data were generated. Whether the programs that train the health AI workforce teach practitioners to examine data provenance is unknown. We conducted a cross-sectional analysis of the publicly advertised curricula of health AI education programs at U.S. universities, identified through a structured multisource web search between April and July 2026. Two investigators coded coverage of data provenance (structural, dataset limitations, or data management only), ethics, and sustainability; collaborative structure; technical prerequisites; and the disciplinary background and gender of named instructors. The primary outcome was provenance coverage at the structural or dataset-limitations level. Of 43 candidate entries, 36 programs at 25 institutional units in 21 universities were included. Ethics was covered by 29 programs (80.6%; 95% confidence interval [CI], 65.0 to 90.2), data provenance by 8 (22.2%; 95% CI, 11.7 to 38.1), and structural provenance by 6 (16.7%; 95% CI, 7.9 to 31.9). None of the seven master's degree programs met the primary outcome, and no program addressed sustainability. Eighteen programs included team-based work, but only 5 assembled teams across clinical and technical backgrounds. Of 92 named instructors, 76.1% came from computational disciplines and 3.3% from the social sciences or humanities; among the 51 whose gender could be determined, 66.7% were men. U.S. health AI education programs widely taught ethics but rarely taught how clinical data are produced. None addressed the environmental cost of computation, and most instructors came from computational disciplines.",
+      "tags": [
+        "cs.CY",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Data Provenance and Ethics in the Curricula of U.S. Health AI Education Programs",
+      "url": "https://arxiv.org/abs/2610.39606v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "f0bbfaf3741e5f8b8b72a21d",
+      "context_id": "8fe566c51bcb9422bec0ba90",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "4d66d8ae08fb78689cc97d3fec231363d0b74af46d919436206a07bb25bc092a",
+      "source_published": "2026-10-29T11:58:26Z",
+      "source_updated": "2026-10-29T11:58:26Z",
+      "summary": "A ring is right pure semisimple if every right module is a direct sum of finitely generated modules, and the pure semisimplicity conjecture asserts that every such ring is of finite representation type. In this article, a division ring extension $H\\subseteq T$ is constructed such that the bimodule ${}_HT_T$ has right dimension sequence $(1,2,2,2,\\dots)$ and $T$ is infinite-dimensional as a left $H$-space. The division ring $T$ is the union of the fraction division rings of the nearest-neighbour quantum Laurent algebras with parameter $1/2$, and $H$ is the image of $T$ under a compatible family of conjugations. The extension is controlled by right bases of every length and by two-sided flags of adjacent division subrings, which identify all iterated right duals up to explicit twists. It follows that the triangular ring $\\left(\\begin{smallmatrix}H&T\\\\0&T\\end{smallmatrix}\\right)$ is right pure semisimple but neither left pure semisimple nor of finite representation type, so that the pure semisimplicity conjecture fails.",
+      "tags": [
+        "math.RA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "A counterexample to the pure semisimplicity conjecture",
+      "url": "https://arxiv.org/abs/2610.39883v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "f0bbfaf3741e5f8b8b72a21d",
+      "context_id": "0c33db567476a3f5dce1046c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "303116fa32147b2f5594b30e48fc17a32a045eed42efb0f152e09ccb6ef7473f",
+      "source_published": "2026-10-29T11:58:26Z",
+      "source_updated": "2026-10-29T11:58:26Z",
+      "summary": "A ring is right pure semisimple if every right module is a direct sum of finitely generated modules, and the pure semisimplicity conjecture asserts that every such ring is of finite representation type. In this article, a division ring extension $H\\subseteq T$ is constructed such that the bimodule ${}_HT_T$ has right dimension sequence $(1,2,2,2,\\dots)$ and $T$ is infinite-dimensional as a left $H$-space. The division ring $T$ is the union of the fraction division rings of the nearest-neighbour quantum Laurent algebras with parameter $1/2$, and $H$ is the image of $T$ under a compatible family of conjugations. The extension is controlled by right bases of every length and by two-sided flags of adjacent division subrings, which identify all iterated right duals up to explicit twists. It follows that the triangular ring $\\left(\\begin{smallmatrix}H&T\\\\0&T\\end{smallmatrix}\\right)$ is right pure semisimple but neither left pure semisimple nor of finite representation type, so that the pure semisimplicity conjecture fails.",
+      "tags": [
+        "math.RA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "A counterexample to the pure semisimplicity conjecture",
+      "url": "https://arxiv.org/abs/2610.39883v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "0ca81865e1188f274ed6b0ee",
+      "context_id": "cabd467702e6b342b318475a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_context_sha256": "ccca6b557c6d45e1f834c70afee9770556bc88cd49a9abadd04c0dd8b8c5cfbe",
+      "source_published": "2026-10-29T17:18:07Z",
+      "source_updated": "2026-10-29T17:18:07Z",
+      "summary": "Large language models support personalized tutoring, content generation, and adaptive learning paths. However, capability development requires these resources and interactions to form a coherent learning process that evolves with the learner. A central challenge is to align goals, activities, and assessment while using learning evidence to decide what should follow. We introduce Human-Participatory Multi-Agent Organization and instantiate it in Agentic University (AU). In AU, learners participate as organization members and work with specialized agents to maintain a revisable Capability Program. The program connects personal goals, learning activities across modalities, and layered assessment, while learner feedback and performance guide subsequent support. Our evaluation shows advantages in program organization, assessment design, and revision quality. Users achieved larger mean assessment gains (12.19 versus 5.61 points on a 50-point scale) and reported stronger cognitive support. This work contributes an organizational approach to adaptive learning that makes learner participation a continuing basis for multi-agent coordination. The Agentic University project is available at \\href{https://github.com/AgenticOrgLab/AgenticUniversity.git}.",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Agentic University: Collaborative Agents for Personalized Learning",
+      "url": "https://arxiv.org/abs/2610.40492v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "b1a9d22b0fe7a26194b5f33a",
+      "context_id": "a01cd33f29bb023bafc35528",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.1667,
+      "source": "arxiv",
+      "source_context_sha256": "22503d9a1ba6fb2a614f36c57d88a2f68e9ca44f0e79e72b64f34d34d399ac18",
+      "source_published": "2026-10-29T07:31:50Z",
+      "source_updated": "2026-10-29T07:31:50Z",
+      "summary": "Multi-agent LLM systems increasingly rely on persistent memory and inter-agent communication. These capabilities create privacy risks that extend beyond individual interactions: a release appropriate in isolation may become inappropriate when combined with information previously disclosed to a recipient or propagated to downstream agents along the planned workflow. Existing Contextual Integrity (CI) mechanisms for agentic systems typically rely on local judgments that assess each disclosure in isolation, with or without regard to the recipient's history, but do not account for how information propagates downstream. However, compliance at the current boundary does not guarantee appropriateness across the workflow. We introduce Task-Graph Contextual Integrity (TG-CI), to our knowledge the first task-graph-native formalization of Contextual Integrity for multi-agent systems. TG-CI represents a workflow as a Multi-Agent Task Graph (MATG) and extends CI from atomic transfers to stateful, graph-level information flows by jointly considering an item's intended propagation scope and recipients' evolving disclosure states. We operationalize TG-CI through propagation-scoped authorization under two complementary policies: Full-Scope, which requires admissibility across the complete downstream scope, and Auto-Region, which confines each item to its maximal admissible region using lightweight frontier gates. We further introduce MAPLE-Bench, a benchmark of 144 cases across four scenarios that jointly vary MATG topology, disclosure history, compromised-agent placement, and item-level privacy policies. In our primary experimental configuration, TG-CI reduces the mean unauthorized disclosure count by 85.8-94.1% relative to the Local-History CI baseline, while retaining 93.6-96.1% of the baseline's task accuracy, with the two enforcement policies providing complementary privacy--cost--utility trade-offs.",
+      "tags": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Judging Before Propagation: Task-Graph Contextual Integrity for Multi-Agent Privacy",
+      "url": "https://arxiv.org/abs/2610.39532v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "e08331c73187b646dccf85a9",
+      "context_id": "be491e1deb997243af7c7e71",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.125,
+      "source": "zenodo",
+      "source_context_sha256": "79601c62cbb8d6620fa0d34b7838176d56d8727d3099a4a145ce702d16cf3c87",
+      "source_published": "2026-10-30",
+      "source_updated": "",
+      "summary": "Borrowed Youth: Demographic Change and Multinational Location Advantage explains how national cohort succession and international recruitment become firm-specific location advantages over a production commitment. Home-linked relationships, recruitment shared across foreign affiliates and admission institutions determine attainable replacement labour. Version 3.33.0 clarifies the empirical bridge and journal exposition. The model-to-data mapping distinguishes accessible worker stocks and annual arrival flows from their discounted service values. Table 3 now leads with the main engineering-life comparison, followed by the accounting and common-support benchmarks. The country equal-pricing contrasts are expressed as conditional investment changes holding total measured international services fixed, with full covariance and uncertainty preserved. These transformations introduce no additional test, observation or regression. The discussion relates demographic succession to resource bundling, human-capital access and multinational portfolios. The exact AI declaration, including all figures, is preserved. Previously reported scientific results are preserved. The article supplies an explicit economic bridge from project value to expected investment allocation under stated choice, capital-size, duration and disclosure conditions. It distinguishes capital expenditure from accumulated assets, whose interpretation additionally depends on investment histories, depreciation and valuation changes. The retained capital-expenditure analysis uses the existing demographic construction and controls. There are 82 matched records from ten firms and 36 after fixed-effect support. The nuisance design has rank 33; the five focal regressors have rank three. Independent projection confirms this failure. No duration coefficient, interval or p-value is identified; the result is not a zero effect. The public module reconstructs the aggregate rank and supplies licensed rerun code without redistributing issuer rows. The existing engineering-life asset comparison remains: 317 allocations from 32 manufacturers in nine hosts, contrast -110.25 (95 percent interval -520.28 to 299.78; positive-direction p=0.724). Joint positive pricing and rotation are unestablished (p=0.763), and the familywise contradiction test does not reject (p=0.712). Existing Holm-adjusted block probabilities are 0.113, 0.085 and 0.656. All original estimates, covariance matrices, equations, formal results and six figures are preserved. These conditional associations do not identify recruitment-caused host choices. The held Nitra-Puebla appraisal supplies a EUR106-226 million residual strategic hurdle and 2,834 planned direct jobs. At a five-percent reference rate this is EUR2,959-6,308 per planned job-year. The retained frontier states the additional net productive service needed to cover an assigned share, excluding previously priced labour effects and without fitting a recruitment share. Cost-saving bounds distinguish fixed-life value improvement from a unique switch across lives. No new sources or observations were acquired. The manuscript has 9,920 counted words, a 172-word abstract and 23 full substantive pages before references; the main PDF has 41 pages and the appendix 137. Regression tables retain three-decimal probabilities, no significance stars and economic magnitudes. Counts include abstract, text, references and transparency; separately placed exhibits and the online appendix are excluded. Start with README.txt. Current article, appendix and complete LaTeX are directly downloadable. Three current verified ZIP blocks and nine frozen complementary archives reconstruct the exact 1,908-file replication tree with 1,907 checksum entries. Licensed WRDS rows are excluded; subscriber queries and public aggregate reconstruction are supplied. Third-party rights remain. Literature PDFs are linked rather than redistributed. ChatGPT and Codex (OpenAI) were used in October 2026 for coding h",
+      "tags": [
+        "location strategy",
+        "foreign direct investment",
+        "internationalization",
+        "demographic change",
+        "labour migration",
+        "investment horizon"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Borrowed Youth: Demographic Change and Multinational Location Advantage",
+      "url": "https://zenodo.org/records/23798077"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "e08331c73187b646dccf85a9",
+      "context_id": "b54753ba80c6db778fea71fc",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.125,
+      "source": "zenodo",
+      "source_context_sha256": "7aa7871c282247466ecee4865d305dff0d6dcccc66283bfbf06f137aabdac396",
+      "source_published": "2026-10-30",
+      "source_updated": "",
+      "summary": "Borrowed Youth: Demographic Change and Multinational Location Advantage explains how national cohort succession and international recruitment become firm-specific location advantages over a production commitment. Home-linked relationships, recruitment shared across foreign affiliates and admission institutions determine attainable replacement labour. Version 3.33.0 clarifies the empirical bridge and journal exposition. The model-to-data mapping distinguishes accessible worker stocks and annual arrival flows from their discounted service values. Table 3 now leads with the main engineering-life comparison, followed by the accounting and common-support benchmarks. The country equal-pricing contrasts are expressed as conditional investment changes holding total measured international services fixed, with full covariance and uncertainty preserved. These transformations introduce no additional test, observation or regression. The discussion relates demographic succession to resource bundling, human-capital access and multinational portfolios. The exact AI declaration, including all figures, is preserved. Previously reported scientific results are preserved. The article supplies an explicit economic bridge from project value to expected investment allocation under stated choice, capital-size, duration and disclosure conditions. It distinguishes capital expenditure from accumulated assets, whose interpretation additionally depends on investment histories, depreciation and valuation changes. The retained capital-expenditure analysis uses the existing demographic construction and controls. There are 82 matched records from ten firms and 36 after fixed-effect support. The nuisance design has rank 33; the five focal regressors have rank three. Independent projection confirms this failure. No duration coefficient, interval or p-value is identified; the result is not a zero effect. The public module reconstructs the aggregate rank and supplies licensed rerun code without redistributing issuer rows. The existing engineering-life asset comparison remains: 317 allocations from 32 manufacturers in nine hosts, contrast -110.25 (95 percent interval -520.28 to 299.78; positive-direction p=0.724). Joint positive pricing and rotation are unestablished (p=0.763), and the familywise contradiction test does not reject (p=0.712). Existing Holm-adjusted block probabilities are 0.113, 0.085 and 0.656. All original estimates, covariance matrices, equations, formal results and six figures are preserved. These conditional associations do not identify recruitment-caused host choices. The held Nitra-Puebla appraisal supplies a EUR106-226 million residual strategic hurdle and 2,834 planned direct jobs. At a five-percent reference rate this is EUR2,959-6,308 per planned job-year. The retained frontier states the additional net productive service needed to cover an assigned share, excluding previously priced labour effects and without fitting a recruitment share. Cost-saving bounds distinguish fixed-life value improvement from a unique switch across lives. No new sources or observations were acquired. The manuscript has 9,920 counted words, a 172-word abstract and 23 full substantive pages before references; the main PDF has 41 pages and the appendix 137. Regression tables retain three-decimal probabilities, no significance stars and economic magnitudes. Counts include abstract, text, references and transparency; separately placed exhibits and the online appendix are excluded. Start with README.txt. Current article, appendix and complete LaTeX are directly downloadable. Three current verified ZIP blocks and nine frozen complementary archives reconstruct the exact 1,908-file replication tree with 1,907 checksum entries. Licensed WRDS rows are excluded; subscriber queries and public aggregate reconstruction are supplied. Third-party rights remain. Literature PDFs are linked rather than redistributed. ChatGPT and Codex (OpenAI) were used in October 2026 for coding h",
+      "tags": [
+        "location strategy",
+        "foreign direct investment",
+        "internationalization",
+        "demographic change",
+        "labour migration",
+        "investment horizon"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Borrowed Youth: Demographic Change and Multinational Location Advantage",
+      "url": "https://zenodo.org/records/23798077"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "41bbc3c88ab8ec7481f11733",
+      "context_id": "83c9a63522e6c5625641fa5e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline",
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 11.6667,
+      "source": "arxiv",
+      "source_context_sha256": "873dcdf8dcc774bf5baf5f4a62776431e3f36afd06a7a53f79d0d7a8d54e6b11",
+      "source_published": "2026-10-27T23:08:13Z",
+      "source_updated": "2026-10-27T23:08:13Z",
+      "summary": "The allocation of electric vehicles to public charging stations is increasingly constrained by the fact that several heterogeneous facilities often serve the same stream of requests while observing only partial local information. An accept/reject decision that is defensible for one station may nevertheless reduce the efficiency of the charging district as a whole. We formulate this operational problem as a Decentralized Partially Observable Markov Decision Process (Dec-POMDP) and examine whether Centralized Training with Decentralized Execution (CTDE), instantiated through QMIX, improves assignment performance relative to a cooperative Independent Q-Learning baseline (IQL). The evaluation uses a six-station urban network simulated with SUMO, five independent random seeds, 200 training episodes, and four traffic flux scenarios ranging from 100 to 250 vehicles/hour. Under this protocol, QMIX reaches a mean reward per evaluated decision of +0.776, versus +0.578 for IQL (delta = +0.198, seed-paired Cohens dz = 2.98, exact two-sided Wilcoxon p = 0.0625, the minimum attainable value at this sample size), and raises the acceptance rate from 72.4% to 94.0% (delta = +21.6 pp, dz = 5.24, Wilcoxon p = 0.0625). A five-variant ablation suggests this gain is primarily attributable to the CTDE architecture when holding cooperative reward terms fixed, though not formally isolated with a single seed. By contrast, cooperative reward shaping and experience sharing show no clear descriptive benefit and may slightly reduce performance. These findings support the view that, for multi-station charging assignment, coordination should be embedded in the learning architecture rather than added only through heuristic cooperation terms.",
+      "tags": [
+        "cs.MA",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Cooperative EV Charging Assignment Using Multi-Agent Reinforcement Learning: A Comparison of QMIX and Independent Q-Learning Under Urban Traffic Uncertainty",
+      "url": "https://arxiv.org/abs/2610.38053v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "6638a574558f004de1f93332",
+      "context_id": "fc7c7b40e55af43f804ea0a9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control",
+        "holdout"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.9167,
+      "source": "zenodo",
+      "source_context_sha256": "7d3b870c9c7894809053291211f30f6a07f491ba51e29a15094baf20aa6c5de4",
+      "source_published": "2026-10-30",
+      "source_updated": "",
+      "summary": "AI-DRIVEN HERBAL SKINCARE FORMULATION OPTIMIZATION AT THE LIMIT Chinese Title / 中文書名: AI本草護膚配方最佳化極限 AI-Driven Herbal Skincare Formulation Optimization at the Limit is a 777-page English prospective research monograph on whether artificial intelligence can make genuinely better, externally reconstructable herbal skincare formulation predictions for previously unseen raw-material lots. Its core three-coupling is AI modeling, formulation constraints, and external generalization. The central falsifiable test is not a favorable random-split score: a model frozen in advance must survive complete raw-material-lot holdouts and forward-in-time evaluation against strong, resource-matched conventional baselines. The study separates botanical species and chemotype authentication, formula mass-fraction closure, sample and instrument provenance, physicochemical endpoints, safety restrictions and predictive uncertainty. It tests whether nominal AI improvements are explained instead by duplicate aliquots, batch identifiers, chronological leakage, correlated chemistry, imbalance across rare botanical families or extra measurement budget. It preserves original outcome units and treats unsafe or unqualified ingredient combinations as hard exclusions rather than soft optimization penalties. Thirty distinct mathematical research plates cover external risk, compositional closure and log ratios, hierarchical lot variance, analytical censoring, physical rheology and diffusion, Gaussian-process predictions, constrained acquisition, Pareto comparisons, distribution shift, calibrated intervals, noncompensatory safety gates and evidence provenance. Eighty-two research chapters are followed by 410 individually paginated studies. Two hundred Research Gates pose prospective falsification questions, including blinded material substitution, negative controls, independent metrology, worst-supplier performance, safe abstention and external replay. Thirty-three different Phoenix Answer Embryos propose distinct testable instruments, protocols, audits and evidence artifacts for future investigators. This manuscript is a hypothesis-forming, nonclinical Research Working Edition. It does not report an executed integrated experiment, verified cosmetic benefit, human safety trial, regulatory approval, or a qualified production system. The three STARLI mother works provide methodological ancestry rather than direct evidence that this skincare optimization works. External DOI sources are identified by their bounded roles in formulation science, machine-learning evaluation, scientific-data stewardship and evidence reporting. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Research Institute XXXV / Herbal Nanotechnology and Regenerative Skincare / Flagship F26 Edition: Research Working Edition v1.0 / October 2026 Length: 777 pages; 30 mathematical plates; 82 chapters; 410 section studies; 200 Research Gates; 33 Phoenix Answer Embryos Mother DOI lineage: 10.5281/zenodo.23480803 ; 10.5281/zenodo.23486020 ; 10.5281/zenodo.23318840 Key external method references: 10.1016/j.cocis.2024.101847 ; 10.1002/aidi.202500239 ; 10.1016/j.patter.2023.100804 ; 10.1039/C7SC02664A ; 10.1038/sdata.2016.18 ; 10.3390/cosmetics12040157. Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "AI-DRIVEN HERBAL SKINCARE FORMULATION OPTIMIZATION AT THE LIMIT Chinese Title / 中文書名: AI本草護膚配方最佳化極限 AI-Driven Herbal Skincare Formulation Optimization at the Limit is a 777-page English prospective research monograph on whether artificial intelligence can make genuinely better, externally reconstruc",
+      "url": "https://zenodo.org/records/23808961"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "6638a574558f004de1f93332",
+      "context_id": "5134f43a253b783c2b4b5cdd",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control",
+        "holdout"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.9167,
+      "source": "zenodo",
+      "source_context_sha256": "8ccec15665dea3fa7799517e12769ff6b747aecdbe873821833e5889eeeab7cc",
+      "source_published": "2026-10-30",
+      "source_updated": "",
+      "summary": "AI-DRIVEN HERBAL SKINCARE FORMULATION OPTIMIZATION AT THE LIMIT Chinese Title / 中文書名: AI本草護膚配方最佳化極限 AI-Driven Herbal Skincare Formulation Optimization at the Limit is a 777-page English prospective research monograph on whether artificial intelligence can make genuinely better, externally reconstructable herbal skincare formulation predictions for previously unseen raw-material lots. Its core three-coupling is AI modeling, formulation constraints, and external generalization. The central falsifiable test is not a favorable random-split score: a model frozen in advance must survive complete raw-material-lot holdouts and forward-in-time evaluation against strong, resource-matched conventional baselines. The study separates botanical species and chemotype authentication, formula mass-fraction closure, sample and instrument provenance, physicochemical endpoints, safety restrictions and predictive uncertainty. It tests whether nominal AI improvements are explained instead by duplicate aliquots, batch identifiers, chronological leakage, correlated chemistry, imbalance across rare botanical families or extra measurement budget. It preserves original outcome units and treats unsafe or unqualified ingredient combinations as hard exclusions rather than soft optimization penalties. Thirty distinct mathematical research plates cover external risk, compositional closure and log ratios, hierarchical lot variance, analytical censoring, physical rheology and diffusion, Gaussian-process predictions, constrained acquisition, Pareto comparisons, distribution shift, calibrated intervals, noncompensatory safety gates and evidence provenance. Eighty-two research chapters are followed by 410 individually paginated studies. Two hundred Research Gates pose prospective falsification questions, including blinded material substitution, negative controls, independent metrology, worst-supplier performance, safe abstention and external replay. Thirty-three different Phoenix Answer Embryos propose distinct testable instruments, protocols, audits and evidence artifacts for future investigators. This manuscript is a hypothesis-forming, nonclinical Research Working Edition. It does not report an executed integrated experiment, verified cosmetic benefit, human safety trial, regulatory approval, or a qualified production system. The three STARLI mother works provide methodological ancestry rather than direct evidence that this skincare optimization works. External DOI sources are identified by their bounded roles in formulation science, machine-learning evaluation, scientific-data stewardship and evidence reporting. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Research Institute XXXV / Herbal Nanotechnology and Regenerative Skincare / Flagship F26 Edition: Research Working Edition v1.0 / October 2026 Length: 777 pages; 30 mathematical plates; 82 chapters; 410 section studies; 200 Research Gates; 33 Phoenix Answer Embryos Mother DOI lineage: 10.5281/zenodo.23480803 ; 10.5281/zenodo.23486020 ; 10.5281/zenodo.23318840 Key external method references: 10.1016/j.cocis.2024.101847 ; 10.1002/aidi.202500239 ; 10.1016/j.patter.2023.100804 ; 10.1039/C7SC02664A ; 10.1038/sdata.2016.18 ; 10.3390/cosmetics12040157. Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "AI-DRIVEN HERBAL SKINCARE FORMULATION OPTIMIZATION AT THE LIMIT Chinese Title / 中文書名: AI本草護膚配方最佳化極限 AI-Driven Herbal Skincare Formulation Optimization at the Limit is a 777-page English prospective research monograph on whether artificial intelligence can make genuinely better, externally reconstruc",
+      "url": "https://zenodo.org/records/23808961"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "f074c55f50be259ef59b0505",
+      "context_id": "9d1caedf34f6b62d4fa83fd1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.8333,
+      "source": "arxiv",
+      "source_context_sha256": "2dd9301c58d6feadb91c9efe1f2fa65487bb47048b0f55ca969a9ef0cd42935a",
+      "source_published": "2026-10-27T20:11:29Z",
+      "source_updated": "2026-10-27T20:11:29Z",
+      "summary": "Cooperative multi-agent reinforcement learning (MARL) enables teams of agents, such as robots and autonomous vehicles, to learn coordinated behavior, but what such teams learn is largely determined by their reward function. Because task success alone provides too little guidance for learning, intermediate rewards are usually designed by hand, and this effort must often be repeated whenever the environment or the team changes. Large language models (LLMs) can automate the effort by writing reward functions as code, yet the resulting rewards are typically designed and tested in a single setting. To enable their reuse across settings, GARDEN (Generalist Autonomous Reward Design through Evidence Navigation) is proposed, in which one reward program is developed for a family of related scenarios and transferred, unchanged, to scenarios that were not available during its design. During development, environment code, training records, and agent behavior are investigated by an LLM reward engineer, and draft rewards are tested in trial training runs, while the learning algorithm and the rule for selecting the final reward are held fixed. On unseen scenarios of the Overcooked and SMAX benchmarks, task returns were increased by 58.2% and 52.5% over the default rewards on two kitchen layouts, and the mean win rate in two combat scenarios was raised from 51.0% to 89.9%. Under matched candidate and probe budgets, this exceeded the 84.2% and 79.2% obtained with fixed diagnostic feedback and Eureka-inspired reward reflection. These results show that a single autonomously engineered reward can be reused effectively across related cooperative scenarios.",
+      "tags": [
+        "cs.AI",
+        "cs.MA",
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "GARDEN: Generalist Autonomous Reward Design Through Evidence Navigation for Cooperative Multi-Agent Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2610.37926v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "9b8d174382fd443bde4e44a8",
+      "context_id": "885a79515e098cd52db43cc4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.8333,
+      "source": "arxiv",
+      "source_context_sha256": "a311c952085d6c49bc00bdea2e48f51f902bb0d22270dc95b0f8c067e01310e1",
+      "source_published": "2026-10-29T15:42:15Z",
+      "source_updated": "2026-10-29T15:42:15Z",
+      "summary": "Large language model (LLM)-based multi-agent systems (MAS) coordinate specialized agents to solve complex tasks, turning each user request into interdependent model and tool operations. Unlike independent requests, these operations become ready at different times and consume evolving context as agents coordinate and exchange results. This creates changing patterns of concurrency, computation, and memory demand that can expose different bottlenecks in LLM serving hardware. Yet benchmarking these effects requires capturing the collaboration rules that generate serving workloads, beyond the requests observed during execution. We present MAServeBench, a benchmark that treats multi-agent collaboration as a configurable dimension of serving workloads for LLM serving and hardware evaluation. Its composable stages capture how agents coordinate and exchange context in documented MAS workflows, enabling native executions to generate different workloads even when task inputs and tools remain unchanged. Hierarchical Semantic Traces preserve realized operations and dependencies for reproducible comparisons of legal release constraints at fixed work. Task-linked measurements connect these workloads to serving execution and GPU/NPU hardware behavior, revealing why serving efficiency does not always translate into timely task completion. The benchmark code is available at https://github.com/ShengxuanQiu/MAServeBench.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "MAServeBench: Benchmarking Multi-Agent LLM Serving Systems with Hierarchical Collaboration Workloads",
+      "url": "https://arxiv.org/abs/2610.40293v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "0a538fe4f50b23be7fa0a123",
+      "context_id": "71fdbfeacca3b2c0bf3dd5b0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.8333,
+      "source": "arxiv",
+      "source_context_sha256": "321507ee25955322c7e02eabf0683d5392e13703e7e8dfb6349683a00a430f18",
+      "source_published": "2026-10-28T20:40:33Z",
+      "source_updated": "2026-10-28T20:40:33Z",
+      "summary": "Large Language Models (LLMs) are increasingly being used as cognitive interfaces that shape how users interpret evidence, communicate, and make decisions. As deployed systems become more multimodal, tool-using, and multi-agent, safety failures no longer arise only from isolated harmful outputs, but also from how agents update, store, and propagate epistemic commitments across retrieval, memory, tools, and peer communication. In this paper, we define belief as an engineering abstraction for evidence-based commitments that guide downstream action. Building on this view, we propose the Explicit Belief Multi-Agent System (EB-MAS), which externalizes belief states into a structured substrate, uses belief operators to propose candidate updates, and applies a Cognitive Firewall to bound or reject updates that are weakly evidenced but strongly driven by vulnerability cues. We also discuss the risk of group belief at the group level, including manufactured consensus, collusion, and cascading misinformation, and outline practical integration challenges around grounding, false positives, scalability, and ethical misuse. Therefore, scalable agent safety requires not only better output filtering or stronger base models, but also explicit interfaces for tracing, calibrating, and constraining belief revision at runtime.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Auditable Belief Updates as a Missing Safety Layer for LLM-Powered Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.38869v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "7333072e1e52ab4765e6af1b",
+      "context_id": "6ac3ee9879e0a23941f6883a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.8333,
+      "source": "arxiv",
+      "source_context_sha256": "2b272d40e995f1621439dc4a8403de4ac8eca69cbdfce5d052986039a7d3b5c3",
+      "source_published": "2026-10-29T09:28:10Z",
+      "source_updated": "2026-10-29T09:28:10Z",
+      "summary": "Emerging intelligent wireless networks increasingly rely on autonomous AI agents to adapt spectrum usage to dynamic and heterogeneous operating conditions. However, collective learning is challenging when agents experience different local interference environments and cannot exchange raw observations due to communication-overhead and privacy constraints. We propose Federated Agentic Spectrum Coordination with Interference Awareness (FASCIA), a federated multi-agent deep reinforcement learning framework for adaptive spectrum coordination. In FASCIA, each network manager acts as an autonomous AI agent that perceives its local interference environment, accumulates experience in a persistent local memory, and learns an adaptive spectrum coordination policy through local interactions. Coordination among agents is achieved through periodic federated aggregation of locally trained models, without exchanging raw sensing data or experience. Since spectrum decisions made by one agent alter the environments observed by others, local learning is inherently heterogeneous and coupled. FASCIA employs proximal regularization to mitigate the resulting model drift and explicitly accounts for inter-carrier interference arising from partially overlapping channels. FASCIA is the first federated agentic AI framework to address this challenging interference-coupled spectrum coordination setting. Extensive simulations demonstrate that FASCIA achieves performance close to the centralized benchmark while avoiding raw-experience exchange and maintaining effectiveness across heterogeneous network configurations.",
+      "tags": [
+        "cs.NI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Federated Agentic AI for Interference-Aware Adaptive Spectrum Coordination",
+      "url": "https://arxiv.org/abs/2610.39680v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "c16e48e4ff045123f8187631",
+      "context_id": "9721b28728e49aaaf1ef804a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "arxiv",
+      "source_context_sha256": "d91abb3419c91390677112fba4708e818b8da3f40f51fc09028db594fbb55bc0",
+      "source_published": "2026-10-29T14:47:39Z",
+      "source_updated": "2026-10-29T14:47:39Z",
+      "summary": "Video generation is shifting from end-to-end synthesis toward agentic generation, where planning, tool use, and feedback enable coherent, controllable multi-shot videos. In parallel, video world models provide action-conditioned observations and predicted futures, serving as interactive environments for agents. We study their intersection through the agent harness: an executable runtime that constructs context, exposes tools, maintains state, routes feedback, and manages budgets around video models. This report examines three directions. First, agentic video generation, where harnesses coordinate scripting, shot planning, asset management, production, and editing, alongside the evaluation challenges of these systems. Second, agentic world modeling, where harnesses mediate observation, control, execution, and state. We discuss hybrid designs in which game engines or agent-written programs maintain world state while video models render observations, and how agents and world models can mutually evaluate and improve one another. Third, recursive self-improvement (RSI) in video model development, distinguishing output revisions, updates to harness state, generator parameters, and evaluators, and changes to the improvement procedure itself. We identify how these improvements feed back into subsequent development. Across these directions, we analyze essential agent capabilities, including audiovisual perception, long-horizon planning, memory, code-based interaction, feedback-guided control, skill reuse, and multi-agent coordination. We conclude with challenges in autonomous video production, lifelong memory, programmable hybrid control, autonomous model development, provenance, cost accounting, and evaluation linking video quality and task performance to sustained improvements in models and harnesses.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement",
+      "url": "https://arxiv.org/abs/2610.40191v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "928265e2f64ede877e9fd591",
+      "context_id": "95f1d17aa4cfc143d8500c7d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "arxiv",
+      "source_context_sha256": "c3c5ff76a7bfc376626e29534662e8e8d910f4b697b1876160fa2ca9f62de8a7",
+      "source_published": "2026-10-29T02:50:00Z",
+      "source_updated": "2026-10-29T02:50:00Z",
+      "summary": "Financial AI systems must support decision-bearing questions involving payments, collections, cash flow, and compliance while ensuring numerical accuracy, traceability, and auditability. Large language models (LLMs) enable natural language interaction but cannot independently guarantee reproducible calculations or evidence-grounded recommendations. We present a production-grounded architecture integrating three components: a financial knowledge graph for enterprise relationships, temporal context, and provenance; a deterministic optimization engine for financial calculations and decisions; and a multi-agent LLM layer for intent interpretation, task orchestration, explanation, and claim validation. A coordination layer, termed context engineering, selects, ranks, composes, and validates query-specific context across ERP systems, tools, and tenants. Based on observations from 15 deployments over approximately 11 months, single-agent pipelines exhibited hallucination rates of about 7-9% (5-10% across query types), including invented invoices and unsupported financial claims. Graph-backed multi-agent validation reduced observed rates to below 1%, although these findings are observational rather than causal. ERP data quality and tenant-specific schemas remained major implementation challenges. Reusable mappings, graph templates, and validation policies coincided with a reduction in deployment time from roughly six to two weeks. We argue that financial context engineering extends beyond text-centric retrieval-augmented generation by requiring structured relationships, temporal validity, exact numerical evidence, access controls, and validation against source records and solver outputs. We outline research challenges in evaluation, reproducibility, privacy, context quality, and cross-tenant generalization.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Beyond LLM Wrappers: Context Engineering and the Three-Engine Architecture for Reliable Financial AI",
+      "url": "https://arxiv.org/abs/2610.39230v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "b6d4f4cd531ecd053183045c",
+      "context_id": "330bcd44d71807417564319e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "multi-agent"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "arxiv",
+      "source_context_sha256": "97ef70134d3ea6d329e2e668b6125e2afad9f2299179b970b5011a9d4cb84813",
+      "source_published": "2026-10-27T21:28:48Z",
+      "source_updated": "2026-10-27T21:28:48Z",
+      "summary": "Multi agent LLM systems raise the risk of collusion among agents pursuing objectives hidden from their overseers. When potential partners identities are unknown, collusion first requires initiation: agents must discover one another, often through a public channel observed by ordinary agents and monitors. Strategic vagueness offers a way to navigate this mixed audience, conveying intent to a prospective partner while preserving a plausible ordinary interpretation. We introduce a mutual identification game in which two schemers must identify each other through public interaction, while jointly solving an ordinary task. We find that some models discover successful handshake strategies without explicit signalling guidance, using task compatible exchanges that monitors often fail to flag at low false positive rates. To characterize the communicative capabilities underlying these exchanges, we study a controlled coordination setting. We find an asymmetric response to message explicitness: as messages become more indirect, monitor punishment can fall faster than partner coordination, creating a profitable intermediate regime of strategic vagueness. Together, these findings illustrate a Blackstone style evidential asymmetry: communication sufficient for coordination between agents may remain insufficient for confident detection by monitor, opening a new surface of collusion.",
+      "tags": [
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Who Else Is In? Multi-Agent Collusion Initation Via Strategic Vagueness",
+      "url": "https://arxiv.org/abs/2610.37984v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "b1a9d22b0fe7a26194b5f33a",
+      "context_id": "ddb18cf51477e8cd3fe2bdd5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7083,
+      "source": "arxiv",
+      "source_context_sha256": "8c6e9c3e52ff6a6f742b402a9a786338c7cce766a890da087df74d699014101d",
+      "source_published": "2026-10-29T07:31:50Z",
+      "source_updated": "2026-10-29T07:31:50Z",
+      "summary": "Multi-agent LLM systems increasingly rely on persistent memory and inter-agent communication. These capabilities create privacy risks that extend beyond individual interactions: a release appropriate in isolation may become inappropriate when combined with information previously disclosed to a recipient or propagated to downstream agents along the planned workflow. Existing Contextual Integrity (CI) mechanisms for agentic systems typically rely on local judgments that assess each disclosure in isolation, with or without regard to the recipient's history, but do not account for how information propagates downstream. However, compliance at the current boundary does not guarantee appropriateness across the workflow. We introduce Task-Graph Contextual Integrity (TG-CI), to our knowledge the first task-graph-native formalization of Contextual Integrity for multi-agent systems. TG-CI represents a workflow as a Multi-Agent Task Graph (MATG) and extends CI from atomic transfers to stateful, graph-level information flows by jointly considering an item's intended propagation scope and recipients' evolving disclosure states. We operationalize TG-CI through propagation-scoped authorization under two complementary policies: Full-Scope, which requires admissibility across the complete downstream scope, and Auto-Region, which confines each item to its maximal admissible region using lightweight frontier gates. We further introduce MAPLE-Bench, a benchmark of 144 cases across four scenarios that jointly vary MATG topology, disclosure history, compromised-agent placement, and item-level privacy policies. In our primary experimental configuration, TG-CI reduces the mean unauthorized disclosure count by 85.8-94.1% relative to the Local-History CI baseline, while retaining 93.6-96.1% of the baseline's task accuracy, with the two enforcement policies providing complementary privacy--cost--utility trade-offs.",
+      "tags": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Judging Before Propagation: Task-Graph Contextual Integrity for Multi-Agent Privacy",
+      "url": "https://arxiv.org/abs/2610.39532v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "b01da9c5ea334e5aed33edee",
+      "context_id": "d5efca2028164a0079012404",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7083,
+      "source": "arxiv",
+      "source_context_sha256": "338063f47002011ae3171c0b08ab1a2b8c8f6f80272e1883b62574d4b16be476",
+      "source_published": "2026-10-29T16:32:59Z",
+      "source_updated": "2026-10-29T16:32:59Z",
+      "summary": "Mathematical supervision for language models is typically flattened into isolated problem-solution pairs, discarding the curricular organization and evidential structure of the original sources. We introduce TOME-Math (Textbook-Oriented Mathematical Evidence), a large-scale corpus that converts 2,118 textbooks spanning the core areas of university-level mathematics subjects into approximately 380K structured proof-supervision records while preserving chapter order, proposition-proof links, dependency references, and source provenance. Leveraging these structural signals, we explore curriculum learning across multiple mathematical subjects and characterize scaling patterns with supervision volume and source breadth. At full scale, fine-tuning on TOME-Math raises the unweighted mean score across our held-out evaluations and established public benchmarks by 16.7 percentage points over the base model, while exceeding all three public instruction-data baselines evaluated in aggregate. Our findings highlight structured textbooks as both a scalable source of mathematical supervision and an empirical framework for studying the impact of data organization on mathematical reasoning. We will release the corpus to facilitate further research on structured mathematical supervision.",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Scaling Mathematical Proof Supervision from Structured Textbooks",
+      "url": "https://arxiv.org/abs/2610.40394v1"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "selection": "BALANCED_LENS_ROLLING_TOP",
+  "snapshot_cap": 48,
+  "snapshot_items_total": 48,
+  "target_repository": "Hawkar-usls/janus-distributed-ai-swarm"
+}
