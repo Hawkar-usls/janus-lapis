@@ -1,0 +1,1150 @@
+{
+  "batch_id": "7457693331b5959b11ca",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "fragment_count": 1,
+  "fragment_index": 1,
+  "items": [
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "4390e583cbe8280ed4c0abeb",
+      "context_id": "27ccd1f0e3564ec0bac1ac95",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "null result",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.375,
+      "source": "zenodo",
+      "source_context_sha256": "8e7335e47008e688868978c1b4ba3703410bfa5972ea47b111825039a22f7d2b",
+      "source_published": "2026-10-28",
+      "source_updated": "",
+      "summary": "Version 1.2 (28 October 2026) adds a notice on the arithmetic precision of the split‑Gibbs runs (NOTICE_v1.2.md), with the check behind it (TF32_CHECK.md, tf32_check_files.zip). DP1&rsquo;s split‑Gibbs runs used reduced‑precision (TF32) matrix products, which a later like‑for‑like check found shift that sampler&rsquo;s estimates, while its predictions ran in full float32. The split‑Gibbs null result therefore has a further candidate explanation that DP1 cannot separate. DPS is unaffected. No file of earlier versions has changed. A pre-specified pilot testing whether a blindness-risk score computed before any target data are seen ranks the realised blindness (undetected and uncovered error) of diffusion-prior inference on real X-ray CT objects (2DeteCT) under simulated restricted access. Study DP-A: weak attenuation (F = 32,000), 240 errors &times; 20 bases. Study DP-B: bounded-reach control, 120 errors &times; 20 bases. Two samplers: split-Gibbs plug-and-play (primary) and diffusion posterior sampling (secondary). It follows the learned (VAE) pilot, arXiv:2610.28155 (reproducibility package doi:10.5281/zenodo.23392686). The analysis plan, decision rules and fixed result sentences were approved by the author, and predictions and calibration were committed by SHA-256 hash, before any trial. The plan was not lodged with an external registry, so the study is described as pre-specified; the files named PREREG_&hellip; are that plan (their names, and the word \"pre-registered\" inside the hashed plan and the dated log, are kept unchanged so that the recorded hashes still match). Version 1.1 (26 October 2026) adds a post-hoc check of the linear response used by the blindness-risk score, specified in a dated plan and approved before any computation (response_check_plan_v1.md, response_check.py, response_check_results.json, RESPONSE_CHECK.md). Under the plan&rsquo;s pre-specified reading, the response was not adequate for either sampler in either study, so the null result for the learned score does not separate the learned prior from this approximation. The pre-specified results of version 1.0 are unchanged. README.md and freeze_log.txt are updated accordingly.",
+      "tags": [
+        "uncertainty quantification",
+        "silent failure",
+        "diffusion models",
+        "Bayesian inverse problems",
+        "computed tomography",
+        "restricted access",
+        "pre-specification"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "BLINDSET diffusion-prior blind-set pilot: analysis plan, code, frozen predictions, trial records and results",
+      "url": "https://zenodo.org/records/23733048"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "76f06b55af185aa4c8d351e4",
+      "context_id": "781aa65a4a5defb004b7eb6e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "97937c4cd2694d8b7b2c51fc63191aa0b9b670a6b9474dee40cd2b5298c54b45",
+      "source_published": "2026-10-28T18:58:50Z",
+      "source_updated": "2026-10-28T18:58:50Z",
+      "summary": "Packing a 3D volume into a token sequence is not merely long-sequence modeling. Once the volume is packed, sequence order no longer encodes the geometry of the sample---so a positional mechanism indexed by sequence position can learn the memory layout rather than the object. This is a general failure mode for attention over packed geometric data. We introduce PACK3D, a local-global attention operator that separates memory layout from attention geometry. PACK3D keeps local neighborhood attention exact, compresses only distant context into contiguous 3D block summaries, and indexes every query-key interaction with axial RoPE on true token-grid coordinates rather than packed positions. Because the rotation is applied before a block is summarized, the query-to-summary logit remains a weighted sum of query-relative 3D displacements; compressed global context therefore stays spatially interpretable after packing, instead of collapsing to anonymous pooled content. We measure the failure mode directly. On a controlled synthetic task---train on one packing, change only the memory order of the tokens, hold the physical labeling rule fixed---learned positional embeddings and packed-sequence RoPE solve the training layout perfectly yet collapse under Morton, block-contiguous, and random repacking, while axial grid-coordinate RoPE stays exact throughout. The same coordinate system carries to real data: on Allen WTC-11 hiPSC microscopy, PACK3D improves over a parameter-matched 3D U-Net on the 15-structure joint task and over a matched learned-position local-global baseline, with controls isolating the coordinate system, not encoder capacity, as the source of the gain. A fused Triton implementation matches windowed-attention latency at 65k tokens while supplying the long-range context windowing cannot---so the operator is not only correct but trainable at scale.",
+      "tags": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Geometry Matters in Packed 3D Attention",
+      "url": "https://arxiv.org/abs/2610.38694v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "5980b6becba5a88e2a904f7d",
+      "context_id": "5c0a18c8f4ef0ff3ab355442",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "zenodo",
+      "source_context_sha256": "e706bac073bb50d9c09ace8596ea0a4bad5b98cdfad22efcd078e937a1a88956",
+      "source_published": "2026-10-28",
+      "source_updated": "",
+      "summary": "This research investigates recurring inconsistencies, context retention failures, and ineffective error correction in long-term interactions between humans and large language models (LLMs). Using a retrospective dataset of 1,271 ChatGPT conversations comprising 26,949 user&ndash;assistant messages , the study examines how AI systems maintain conversational context, respond to corrections, follow established instructions, and represent the status of completed tasks. A systematic screening process identified 495 potential feedback signals across 192 conversations. From these, 26 anonymized case studies were assembled to examine observable behavioral patterns, including contradictory responses, task deviation, unsupported claims of completed actions, loss of previously established constraints, and repeated errors following user correction. The study introduces context-state mismatch as an operational framework for examining discrepancies between the conversational record and an AI assistant's subsequent responses or claims. It distinguishes directly observable failures from user-reported concerns and cases requiring further verification. The findings highlight important challenges in conversational reliability, transparency, instruction adherence, and long-horizon human&ndash;AI collaboration. The paper proposes evaluation methods involving correction retention, independent verification, and tool-action accountability to improve the reliability of future AI systems. As a single-user observational study, the research does not claim to establish population-wide failure rates or definitive internal causes. Instead, it contributes original longitudinal evidence and a reproducible framework for investigating persistent limitations in LLM-assisted workflows.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Context-State Mismatch and Repair Failures in Long-Horizon Human–LLM Interaction",
+      "url": "https://zenodo.org/records/23734107"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "43ba40dd2e56d809c36d9f93",
+      "context_id": "0263e0cc77d1d1f962907ad9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_context_sha256": "b3cc35e0bf860d3e001d8effdb4905432463251ca1d4641bf9c96159a76a56d1",
+      "source_published": "2026-10-29T08:41:46Z",
+      "source_updated": "2026-10-29T08:41:46Z",
+      "summary": "Failures of deployed clinical artificial intelligence (AI) systems have often originated in how their training data were generated. Whether the programs that train the health AI workforce teach practitioners to examine data provenance is unknown. We conducted a cross-sectional analysis of the publicly advertised curricula of health AI education programs at U.S. universities, identified through a structured multisource web search between April and July 2026. Two investigators coded coverage of data provenance (structural, dataset limitations, or data management only), ethics, and sustainability; collaborative structure; technical prerequisites; and the disciplinary background and gender of named instructors. The primary outcome was provenance coverage at the structural or dataset-limitations level. Of 43 candidate entries, 36 programs at 25 institutional units in 21 universities were included. Ethics was covered by 29 programs (80.6%; 95% confidence interval [CI], 65.0 to 90.2), data provenance by 8 (22.2%; 95% CI, 11.7 to 38.1), and structural provenance by 6 (16.7%; 95% CI, 7.9 to 31.9). None of the seven master's degree programs met the primary outcome, and no program addressed sustainability. Eighteen programs included team-based work, but only 5 assembled teams across clinical and technical backgrounds. Of 92 named instructors, 76.1% came from computational disciplines and 3.3% from the social sciences or humanities; among the 51 whose gender could be determined, 66.7% were men. U.S. health AI education programs widely taught ethics but rarely taught how clinical data are produced. None addressed the environmental cost of computation, and most instructors came from computational disciplines.",
+      "tags": [
+        "cs.CY",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Data Provenance and Ethics in the Curricula of U.S. Health AI Education Programs",
+      "url": "https://arxiv.org/abs/2610.39606v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "f0bbfaf3741e5f8b8b72a21d",
+      "context_id": "6878c0c0a161bcf0a1b18c2b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "4f874bdfa410848c8fd950eb39cf1f0a368c912c1efe54cf643f5c6228f12be8",
+      "source_published": "2026-10-29T11:58:26Z",
+      "source_updated": "2026-10-29T11:58:26Z",
+      "summary": "A ring is right pure semisimple if every right module is a direct sum of finitely generated modules, and the pure semisimplicity conjecture asserts that every such ring is of finite representation type. In this article, a division ring extension $H\\subseteq T$ is constructed such that the bimodule ${}_HT_T$ has right dimension sequence $(1,2,2,2,\\dots)$ and $T$ is infinite-dimensional as a left $H$-space. The division ring $T$ is the union of the fraction division rings of the nearest-neighbour quantum Laurent algebras with parameter $1/2$, and $H$ is the image of $T$ under a compatible family of conjugations. The extension is controlled by right bases of every length and by two-sided flags of adjacent division subrings, which identify all iterated right duals up to explicit twists. It follows that the triangular ring $\\left(\\begin{smallmatrix}H&T\\\\0&T\\end{smallmatrix}\\right)$ is right pure semisimple but neither left pure semisimple nor of finite representation type, so that the pure semisimplicity conjecture fails.",
+      "tags": [
+        "math.RA"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "A counterexample to the pure semisimplicity conjecture",
+      "url": "https://arxiv.org/abs/2610.39883v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "2680ae87e768d38fcdb1eb6e",
+      "context_id": "fb95168ff83070ff1dcd165c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "10efbeb3f1c8ca66e68d766495df2f29f8a5bedce68e02057a5e3c9521d8b47d",
+      "source_published": "2026-10-29T03:28:49Z",
+      "source_updated": "2026-10-29T03:28:49Z",
+      "summary": "An effective agent memory system should adapt to a user's history and task requirements. Human-annotated supervision can guide this adaptation by providing feedback for evaluating and improving memory designs. Yet suitable labels are rarely available for new user histories, and manually constructing QA pairs and supporting evidence is costly. We introduce MemSteer, which turns unlabeled user histories into question-answer (QA) supervision with supporting evidence for memory-design optimization. MemSteer constructs an evidence-grounded answer plan that specifies how facts across related records jointly support a reference answer. The plan guides question generation, while source-grounded auditing and blind answer recovery check the resulting annotations. To study the utility of this supervision, we develop MemSteer-Opt, which combines QA-based design evaluation with evidence-guided failure diagnosis to revise memory store, retrieval, and context construction without updating model parameters. Experiments on ATM-Bench and RHELM show that this supervision is competitive with official-QA-guided optimization. Relative to Base-BM25, MemSteer-Opt improves ATM-Bench Question Score by 13.4 points and RHELM accuracy by 4.1 and 6.6 points without and with external data, respectively. The supervision also benefits two existing optimizers on ATM-Bench, while new-user experiments demonstrate continued design optimization using supervision generated from the target histories.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "MemSteer: Turning User Histories into Supervision for Agent Memory Optimization",
+      "url": "https://arxiv.org/abs/2610.39276v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "11515ba5fd193a9ce943c2be",
+      "context_id": "f3b4fcb8d23c31c8d313f722",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "d7931c684c71023892651422955d52ea585839780c0579be934add47cba20e4a",
+      "source_published": "2026-10-29T13:50:54Z",
+      "source_updated": "2026-10-29T13:50:54Z",
+      "summary": "The way software gets built is changing dramatically. AI agents now create pull requests, select dependencies, refactor codebases, interpret test failures, and execute infrastructure changes across the entire Software Development Life Cycle (SDLC). AI agents are autonomous team members, but unlike human engineers, they are ephemeral - their reasoning, decisions, and tool calls vanish the moment the session ends. Modern Security incidents involving intent mismatch or injection are becoming increasingly common - forcing us to address AI Agents as an insider threat. No widely adopted standard yet enables agentic provenance and governance and its obvious that you can't hold an ephemeral process accountable. The git log was designed for human commits. It shows what changed. It does not show what an AI agent did, which model it used, which tools it called, or whether anyone was accountable for the outcome. Every governance framework, every audit trail, every compliance control in the SDLC was built around one assumption: a human made the decision. That assumption no longer holds. This shift introduces 3 main procedural problems (not addressing scale) - Supply-chain vector - The agentic coder is software, so it is a supply-chain security risk. Policy guardrails - How to ensure the agentic coder is compliant with the policies of the organization. Task-alignment - How to align the agentic coder on its tasks and goals. We introduce Agentic Process Evidence (APE), a signed, tamper-evident, machine-readable attestation of agentic processes, linking the sessions to their outcome (process-aware logging). APE enables Policy-as-Code control over the agentic processes, allowing for human in the loop only when it's needed. We support the in-toto style attestation framework, and the protocol is aligned with the relevant regulations",
+      "tags": [
+        "cs.AI",
+        "cs.SE",
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Agentic process evidence",
+      "url": "https://arxiv.org/abs/2610.40071v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "eaf58cda0c11beb48dc06aee",
+      "context_id": "e91c5653d9464ba9a7f0c339",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "324b214f2317429ca320f1063c1489fb011a587ddc8e65f13bd7cc5636eb4c01",
+      "source_published": "2026-10-29T09:01:47Z",
+      "source_updated": "2026-10-29T09:01:47Z",
+      "summary": "A research field records its open problems in surveys, keynotes and community reports. Those are prose, written every few years, and nobody can ask them who works on a problem now or whether it was settled last year. We argue the problems should be data, and we build the system that makes them so: a hand-curated problem layer carried in unchanged, under an evidence layer rebuilt from a bibliographic index, joined by typed, provenance-carrying links in one graph database and queryable from one language. A language model does four jobs -- per-paper extraction, catalog grounding, per-paper status verdict, and idea generation -- each constrained to a candidate set so out-of-set answers are refused rather than stored. We report a study on two curated catalogs, database research (1,053 problems) and AI research (1,000 problems), each with a prior catalog-only graph. The rebuilt graph answers every question the catalog-only graph answered -- 47 of 47 on databases, 34 of 35 on AI -- plus questions the catalog-only graph refused: recent workers, untouched problems, methods tried, and outside papers bearing on a problem (336 problems, 770 works on databases). The capability we most wanted does not survive its own audit. Of 41 solves and refutes verdicts hand-checked against the papers, 9 are correct, 30 partly correct and 2 wrong; no refutes verdict (0 of 34) disproves an open problem, and only 1 of 7 solves closes the central question. We report that failure in full and draw the design conclusion: a status change must be proposed with its evidence and never applied, making the human reviewer part of the architecture. We close with the data-engineering problems this raises: entity resolution across curated and harvested layers, verifying model status claims, freshness under source quotas, and evaluation without ground truth.",
+      "tags": [
+        "cs.DB",
+        "cs.AI",
+        "cs.DL"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Rebuilding a Field's Open-Problem Catalog from the Literature: A Two-Layer Knowledge Graph, and Why Status Must Stay Proposed",
+      "url": "https://arxiv.org/abs/2610.39641v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "bac9716bf4038d9788d52a53",
+      "context_id": "deb29c61b87fa7f6dc0fd696",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "cf465dbc5da4fc0c40ee53f2bfe20f4eaafa1e1b1034518a8760b40696e28491",
+      "source_published": "2026-10-29T06:25:01Z",
+      "source_updated": "2026-10-29T06:25:01Z",
+      "summary": "Planning at run time, as in robots that re-plan while they act, needs a planner that reads the PDDL its users write (durative actions, numeric resources, time windows, continuous change), answers quickly, and delivers only validated plans. Specialised planners are strong on individual fragments of PDDL, but they differ in coverage, latency and in what their failures mean. We study whether selecting heterogeneous engines from the semantics of each task can give broad coverage of PDDL, from STRIPS to PDDL+, while remaining competitive with specialised planners and making explicit what each answer guarantees. Kairos profiles each task to decide which of five engines apply (ground heuristic search, compressed and snap-action temporal search, time steps for hybrid dynamics, lifted search) and schedules them under one budget of time and memory. Every candidate plan is checked by a validator independent of the planner's transformations, and \"unsolvable\" is reported only when a search whose exhaustion is a proof exhausts its space. On 1,756 tasks from nine comparative suites, Kairos solves more tasks at the full limits than the strongest evaluated planner of each suite, with the largest differences on numeric, temporal, PDDL3 and PDDL+ planning, and it also solves the most tasks at 100 ms and 1 s. Resampling over domains, the gain is above zero in six of the nine suites, while on classical planning against LAMA it is within the noise. A further 450 feature-oriented tasks and 26 one-feature probes show that Kairos handles all seventeen features probed, where no other planner evaluated handles more than eight. Ablations identify compressed temporal search and the novelty fallback as major contributors, and a comparison with VAL traces every disagreement to a PDDL+ convention or to a documented VAL defect. Planner and benchmark are open source.",
+      "tags": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Kairos: Semantics-Aware Orchestration of Planning Engines across Classical, Numeric, Temporal and Hybrid PDDL",
+      "url": "https://arxiv.org/abs/2610.39454v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "5c5b2b01ac9aeb14244a388e",
+      "context_id": "c1da11ff54e6dc2475a5846b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "b547a040e7e62451500c2690b2a33a2d3f641e2e06d0719afbaaba3eabae6588",
+      "source_published": "2026-10-29T04:32:11Z",
+      "source_updated": "2026-10-29T04:32:11Z",
+      "summary": "Frontier language models such as GPT 6 Astra have contributed to research mathematics, demonstrating substantial reasoning capabilities. Yet serious reasoning failures persist even in tasks governed by explicit rules. We demonstrate this in retrograde chess which is a playground for pure reasoning, where solvers reconstruct legal histories and distinguish possible events from forced ones. We introduce RetroChessBench, a 12-task benchmark covering exact-length constructions, unique endings, and exhaustive answer sets, with references, rubrics, and a terminal-reward environment. In two trials per task and condition, GPT 6 Astra High fails to produce the required final answer in 22/24 attempts without tools and 18/24 with code execution; mean terminal RL rewards are 14.75% and 27.19%, respectively. The examples identify faulty deductions: failed responses reject legal histories and treat temporary obstructions as permanent. Online retrograde archives often provide puzzles and final move sequences without detailed derivations. We hypothesize that limited exposure to these missing explanations in web-derived training data contributes to the observed reasoning failures. This questions how far frontier mathematical reasoning really generalizes beyond familiar solution patterns. Claims of general intelligence require evidence that models can transfer learnt principles to areas with few worked examples.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "RetroChessBench: A Benchmark for Reconstructing and Proving Chess Histories",
+      "url": "https://arxiv.org/abs/2610.39341v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "e4059980a344288a3be8fadc",
+      "context_id": "b7ca65a4b453e7eefed63d28",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "e7ee8a0f345fc5cb980f4426740d960f0c7d72eb751c60ae8911d595b57d53ff",
+      "source_published": "2026-10-28",
+      "source_updated": "",
+      "summary": "Version 3 research revision. We study the part of a sensor field that remains covered after every failure in a prescribed downward-closed family. The model includes independent contact failures, weighted failure budgets and losses of entire fault domains. For a convex sensor cover with nerve N, we express the surviving region by a complex on the maximal faces of N: a collection of maximal faces is a simplex exactly when its common contact set cannot fail. This is a coverage formulation of classical nerve and Dowker duality, for which we give explicit comparison maps and prove naturality under increasing failure families. For n closed planar disks, all maximal nerve faces are witnessed by at most n^2 circle points. Exact rational sign tests consequently construct the full two-skeleton of the dual model without enumerating the original nerve or the coalition shadow. A separate Lipschitz margin theorem gives continuous coverage certificates for prescribed triangulated targets under the same failure rules. Recomputing five supplied fields completes the previously unfinished dense example: its two-fold covered region has Betti numbers (5,6), calculated from a dual complex with 130 vertices and independently checked boundary rank. The implementation, inputs, exact arithmetic conventions and verification records are supplied.",
+      "tags": [
+        "sensor coverage",
+        "structured failures",
+        "Dowker duality",
+        "multicover",
+        "exact geometry",
+        "target certificates"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Sensor Coverage under Structured Failures: Dual Nerve Models and Exact Geometry",
+      "url": "https://zenodo.org/records/23734253"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "e08331c73187b646dccf85a9",
+      "context_id": "b5c17315ff59d0fd31fed549",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "56badb93c2256bc7bbb2bc084dd446764a67be52fba057623499a789b38a08c9",
+      "source_published": "2026-10-30",
+      "source_updated": "",
+      "summary": "Borrowed Youth: Demographic Change and Multinational Location Advantage explains how national cohort succession and international recruitment become firm-specific location advantages over a production commitment. Home-linked relationships, recruitment shared across foreign affiliates and admission institutions determine attainable replacement labour. Version 3.33.0 clarifies the empirical bridge and journal exposition. The model-to-data mapping distinguishes accessible worker stocks and annual arrival flows from their discounted service values. Table 3 now leads with the main engineering-life comparison, followed by the accounting and common-support benchmarks. The country equal-pricing contrasts are expressed as conditional investment changes holding total measured international services fixed, with full covariance and uncertainty preserved. These transformations introduce no additional test, observation or regression. The discussion relates demographic succession to resource bundling, human-capital access and multinational portfolios. The exact AI declaration, including all figures, is preserved. Previously reported scientific results are preserved. The article supplies an explicit economic bridge from project value to expected investment allocation under stated choice, capital-size, duration and disclosure conditions. It distinguishes capital expenditure from accumulated assets, whose interpretation additionally depends on investment histories, depreciation and valuation changes. The retained capital-expenditure analysis uses the existing demographic construction and controls. There are 82 matched records from ten firms and 36 after fixed-effect support. The nuisance design has rank 33; the five focal regressors have rank three. Independent projection confirms this failure. No duration coefficient, interval or p-value is identified; the result is not a zero effect. The public module reconstructs the aggregate rank and supplies licensed rerun code without redistributing issuer rows. The existing engineering-life asset comparison remains: 317 allocations from 32 manufacturers in nine hosts, contrast -110.25 (95 percent interval -520.28 to 299.78; positive-direction p=0.724). Joint positive pricing and rotation are unestablished (p=0.763), and the familywise contradiction test does not reject (p=0.712). Existing Holm-adjusted block probabilities are 0.113, 0.085 and 0.656. All original estimates, covariance matrices, equations, formal results and six figures are preserved. These conditional associations do not identify recruitment-caused host choices. The held Nitra-Puebla appraisal supplies a EUR106-226 million residual strategic hurdle and 2,834 planned direct jobs. At a five-percent reference rate this is EUR2,959-6,308 per planned job-year. The retained frontier states the additional net productive service needed to cover an assigned share, excluding previously priced labour effects and without fitting a recruitment share. Cost-saving bounds distinguish fixed-life value improvement from a unique switch across lives. No new sources or observations were acquired. The manuscript has 9,920 counted words, a 172-word abstract and 23 full substantive pages before references; the main PDF has 41 pages and the appendix 137. Regression tables retain three-decimal probabilities, no significance stars and economic magnitudes. Counts include abstract, text, references and transparency; separately placed exhibits and the online appendix are excluded. Start with README.txt. Current article, appendix and complete LaTeX are directly downloadable. Three current verified ZIP blocks and nine frozen complementary archives reconstruct the exact 1,908-file replication tree with 1,907 checksum entries. Licensed WRDS rows are excluded; subscriber queries and public aggregate reconstruction are supplied. Third-party rights remain. Literature PDFs are linked rather than redistributed. ChatGPT and Codex (OpenAI) were used in October 2026 for coding h",
+      "tags": [
+        "location strategy",
+        "foreign direct investment",
+        "internationalization",
+        "demographic change",
+        "labour migration",
+        "investment horizon"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Borrowed Youth: Demographic Change and Multinational Location Advantage",
+      "url": "https://zenodo.org/records/23798077"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "4e631ccbdc0b236467be7f30",
+      "context_id": "9faf917445bd4ee1f51fac26",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "1857b0502f6040060851500a59bf7be68c970f64c8bb8deb630c9832079e7cac",
+      "source_published": "2026-10-29T10:58:54Z",
+      "source_updated": "2026-10-29T10:58:54Z",
+      "summary": "World action models (WAMs) increasingly couple internal visual or world representations with action generation, making their world-to-action pathways a critical yet poorly understood source of robustness. We investigate when perturbations to these internal representations actually become behaviorally consequential, and uncover a pronounced mismatch between representation perturbability and closed-loop vulnerability: attack effectiveness varies sharply across visual K/V routes, while larger representation displacement does not reliably imply stronger control failure. Our analysis attributes this mismatch to the action-conditioned readout, where keys determine where action queries read and values determine what content they receive. This motivates an action-facing view of vulnerability, in which the effect of a perturbation depends on how it is routed into action generation rather than on representation-space magnitude alone. We instantiate this view with Tail-AV, a short-probe signal for identifying vulnerable routes, and operationalize it in PASA-KV, which selects action-facing K/V targets before training a fresh task-shared attack. Experiments across multiple WAM systems and a physical robot validate readout-informed target selection, demonstrate strong closed-loop attacks, and reveal substantial system-level differences in resistance.",
+      "tags": [
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "PASA-KV: Attacking Action-Facing Visual Routes in World Action Models",
+      "url": "https://arxiv.org/abs/2610.39816v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "9f4c579c6099bf06b74b2135",
+      "context_id": "9aef0f387f0e5f9df778a474",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "a8581bc6b47bc6c4da4f165fdc6175b15f3ea925724b6af0650d0ed554ec5c3d",
+      "source_published": "2026-10-28T19:30:40Z",
+      "source_updated": "2026-10-28T19:30:40Z",
+      "summary": "Embodied instruction following in interactive environments requires agents to interpret natural language commands and complete long-horizon tasks. Existing planners either rely on large labeled trajectories, or use few-shot and zero-shot LLM prompting that produces a whole plan in a single serial reasoning process. These approaches depend on linguistic common sense, commit to a plan from the initial instruction, and only update after failures, which weakens robustness and state awareness. We present AtomTree, a hierarchical framework for state-aware task planning with LLMs. AtomTree incrementally builds a tree of subgoals and actions, where the LLM decides at each step, from the current symbolic state, whether to further decompose or to output a grounded low-level action. A lightweight memory module summarizes past outcomes for reuse in later decisions. When a low-level action stalls, AtomTree triggers hierarchical backtracking replanning to return to the parent node and regenerate the subtree plan from the latest state, preventing continued drift along an incorrect trajectory. In zero-shot evaluation on the ALFRED benchmark, AtomTree outperforms prior LLM-based planners. Project page: https://zhaihaotian.github.io/atomtree-website/.",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "AtomTree: A Hierarchical Framework for State-Aware Embodied Instruction Following with LLMs",
+      "url": "https://arxiv.org/abs/2610.38744v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "f8b07c9266d2299544726839",
+      "context_id": "98de30253518420412d331d7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "135c3f60f5e363e3929433b9f285f2cf8d641220a41246a8f358110d2967f4b1",
+      "source_published": "2026-10-29T00:05:45Z",
+      "source_updated": "2026-10-29T00:05:45Z",
+      "summary": "Test-time compute mechanisms, such as retries, confidence-based escalation and non-local routing, are conventionally deployed as black-box additions to trained models. They typically add forward passes or halting heads, but give no structural account of what the extra compute buys or what it costs against the model's stability guarantees. We therefore propose a theoretical and empirical framework for test-time compute on a Latent Dynamics Model used as the memory. When an encoder's latent state $(q,p)$ is advanced by a damped symplectic (velocity-Verlet) step of a learned Hamiltonian, every mechanism that expands access has an exact phase-volume Jacobian, a bounded energy change and an exact latch-transport law. We split reachability failures into escape failures and reach failures. A Lorentz squeeze resolves escape failures by injecting bounded, re-absorbable energy. A gated canonical translation (a one-step channel across $C_T$) resolves reach failures at $\\detJ=1$ exactly. We verify this certificate stack on a designed analytic testbed. Reaching just beyond $C_T$ with the squeeze requires energy that grows quadratically in the excess distance. The gated channel's energy cost equals the potential difference between its endpoints, which is zero on the matched channel measured here, and so does not grow with distance in this testbed. An untrained state-replacing map annihilates phase volume and erases stored charge, while the gated channel transports it. On a learned physics-structured memory, we show calibrated compute rationing and evaluate the scaling limits of non-local routing against a physics-free baseline. The main contribution is the formalization and verification of the certificate stack, not benchmark performance.",
+      "tags": [
+        "cs.AI",
+        "hep-ph"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Certified Access: Test-Time Compute on Conservative Physics-Structured AI Memory",
+      "url": "https://arxiv.org/abs/2610.39073v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "51fced6876eaee0de3a60546",
+      "context_id": "8b510c37482de441a400f482",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "3540f2aaa70eb646d21a15f4d3fa56d8c030fc160414de626ffa4991e32e2729",
+      "source_published": "2026-10-29T13:53:26Z",
+      "source_updated": "2026-10-29T13:53:26Z",
+      "summary": "Military installation energy readiness depends on having sufficient resources to sustain mission-critical loads throughout a prolonged utility outage. This paper develops a method to help operators manage energy resources during normal grid-connected operation while preserving islanded readiness. A robust viability kernel identifies combinations of battery energy, fuel, and load-shifting capability sufficient to sustain critical load under uncertain demand and photovoltaic generation. A probability bound translates stochastic generator start failures and recovery into a deterministic generator count selected to meet a specified availability requirement at islanding. Case studies for a fourteen-day islanding requirement at 0.999 islanding-entry availability show that advance warning of an outage can be used to prepare resources to meet a higher readiness requirement before islanding begins. The case studies further demonstrate that economic-only operation and the evaluated fixed battery reserve policy can fail to sustain critical load for the required duration, whereas enforcing the resource-dependent requirement preserves readiness at a modest increase in modeled grid-connected operating cost. These results demonstrate how active resource management can preserve long-duration energy readiness. The framework also helps commanders understand how readiness changes with operating conditions, even when the available resources remain the same.",
+      "tags": [
+        "eess.SY",
+        "math.OC"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Readiness-Constrained Pre-Islanding Dispatch for Military Microgrids",
+      "url": "https://arxiv.org/abs/2610.40078v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "ba28d76974060af9fadaaab6",
+      "context_id": "84c08a9db7d48fca1717a7a5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "fb3edb9ed682b1c9e1b38a22368694f5ae3f39578e54a328308e96bfb2c4d114",
+      "source_published": "2026-10-29T14:21:50Z",
+      "source_updated": "2026-10-29T14:21:50Z",
+      "summary": "Offline goal-conditioned reinforcement learning remains challenging in stochastic long-horizon settings, where compounding value estimation errors hinder reliable goal reaching. While prior methods have sought to address this challenge through various approaches, a key challenge remains path mirage, where agents overcommit to spuriously successful trajectories in offline datasets induced by stochasticity, often leading to failure on difficult tasks. To address this issue, we propose Branch-aware Graph Planning (BGP), which captures stochastic branching structures by identifying high-variability points as graph nodes and designing goal-conditioned edges with segmented learning to avoid unreliable branches and reduce unnecessary stochasticity along paths. As a result, BGP enables reliable goal reaching even in highly stochastic long-horizon environments, and experiments on diverse OGBench tasks show that it substantially outperforms prior state-of-the-art offline goal-conditioned RL methods. Our implementation is available at https://umlic.github.io/papers/BGP/.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Escaping Path Mirages in Offline Goal-Conditioned Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2610.40130v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "a68da8f7b7db52a61358acdc",
+      "context_id": "846e61d8aa30de0f65c9bae2",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "23c10e76e73c378de8fe4a8dda62fa44c146618b8066704d68c5a30e3c26db5a",
+      "source_published": "2026-10-29T07:42:53Z",
+      "source_updated": "2026-10-29T07:42:53Z",
+      "summary": "A streaming estimator must compute from the evidence that fits in memory. We determine when storing an accurate mean is easier than computing it. For Gaussian mean estimation over the Euclidean unit ball in $\\mathbb{R}^d$, we establish the minimax rate under squared error with $K$ persistent states, a known horizon, and a public time index: $\\min\\{1, K^{-2/d}+\\frac{d}{n} (1+\\frac{\\log(ed)}{1+(\\log K)/d})\\}$. Unrestricted computation followed by $K$-level encoding has rate $\\min\\{1,d/n+K^{-2/d}\\}$. At a fixed sufficiently small error, statistically optimal sample size therefore requires order $d\\log d$ working bits, while order $d$ bits suffice to store the answer. The lower bound tracks repeated state compression through an entropy potential obtained by Gaussian smoothing. A matching construction combines a multiscale modular counter with workspace reused across coordinate groups. In one dimension, it attains the terminal rate $n^{-1}+K^{-2}$. Any fixed confidence requirement that the realized loss not exceed the zero baseline preserves these rates. Increasing confidence creates a further memory requirement: at fixed nontrivial risk in every fixed dimension, failure probability $e^{-γn}$ requires and permits order $\\log n$ working states for sufficiently small fixed $γ>0$. In the scalar problem, a fixed terminal alphabet suffices under the same protection. These bounds separate the memory needed to represent an answer from the memory needed to accumulate evidence and validate a decision.",
+      "tags": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "The Cost of Working Memory in Streaming Mean Estimation",
+      "url": "https://arxiv.org/abs/2610.39540v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "3cba6e05683c459cfacad6ab",
+      "context_id": "79d3514fb66882e95e77a8e8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "abfbd4c6540e3e1406d6b413a66f605053e76610d6daca5937ae09cea2be771a",
+      "source_published": "2026-10-30",
+      "source_updated": "",
+      "summary": "Fight, flight, and relaxation describe bodily mobilisation and recovery but leave open how attention is selectively withheld or invested in discovery. This article examines ignoring and exploring as two modes of engagement whose neural and bodily organisation requires separate analysis. Ignoring reduces processing of particular information; exploring gathers information about something incompletely known. Evidence from distractor-suppression research indicates that ignoring is an organised, often learned and sometimes anticipatory form of neural selection. Research on curiosity, exploratory choice, and orienting relates exploration to motivated learning and arousal regulation, and shows that cardiac responses unfold in stages that distinguish information intake from preparation for action. The article separates attentional investment in an input from bodily mobilisation, which permits relaxed exploration, mobilised investigation, ignoring at ease, and ignoring under exertion. It distinguishes three ways of letting something pass (sensory filtering, nonreactivity to a noticed experience, and effortful suppression) that differ in what is recognised and in their bodily costs. Quiet readiness is defined in signal-detection terms as reduced interference from irrelevant inputs, preserved sensitivity to inputs whose relevance changes, a response criterion near its optimum, and bodily cost no greater than the task requires. Three failure profiles follow: rigid filtering (an overly conservative criterion), anxious vigilance (an overly liberal criterion at high cost), and distractible ease (weak suppression). Five hypotheses, each paired with a rival, are assigned to three staged studies. Implications for the M⁵ model of mindfulness are outlined. The framework is an agenda for testing, not a taxonomy of nervous-system states.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Ignoring and Exploring: Nervous System Engagement Beyond Fight, Flight, and Relaxation",
+      "url": "https://zenodo.org/records/23798966"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "8819094de075185164bf1d42",
+      "context_id": "76cf1604f7f0afbbe0e4a6a7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "829580728ad1dcd367f7d573b412865d13a2510371c6392a921d9844e46d5855",
+      "source_published": "2026-10-29T06:00:35Z",
+      "source_updated": "2026-10-29T06:00:35Z",
+      "summary": "Multimodal large language models can recognize visual content yet struggle to reason reliably over it across multiple steps. In counting, a model may see all objects but lose track of which ones it has counted. We argue that such failures, commonly attributed to perception, reveal a reference gap: the failure to bind language to the relevant visual entities, regions, or locations. Motivated by the theory of visual routines, we test whether external references such as numbering can narrow this gap. We introduce ReGap-Bench, a paired benchmark of five visual reasoning tasks in which the scene, question, and answer are fixed and only the reference varies. Results show that task-matched references improve accuracy by up to 25\\%, while mismatched references provide little benefit or even hurt performance. These findings identify the reference gap as a bottleneck distinct from visual perception and show that constructing task-appropriate visual references can serve as a training-free visual skill for improving multimodal reasoning.",
+      "tags": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Diagnosing the Reference Gap: What Visual Scaffolds Can and Cannot Fix in Multimodal Reasoning",
+      "url": "https://arxiv.org/abs/2610.39419v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "6407e69bf96bc63a748a0a8d",
+      "context_id": "6da2473144e11b93d3c89d73",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "dc96ee287e643868dcc013a0b6986dca8673cb9583d9a694a1dbfb381e10dbe7",
+      "source_published": "2026-10-29T10:18:56Z",
+      "source_updated": "2026-10-29T10:18:56Z",
+      "summary": "Anaerobic digestion (AD) requires close monitoring of key process variables, including pH, the ratio of volatile organic acids to alkaline buffer capacity and biogas production, to maintain biological stability and prevent process failure. While mechanistic frameworks such as the Anaerobic Digestion Model No. 1 are highly parameterised, computationally expensive, and difficult to calibrate for real-time applications, data-driven Long Short-Term Memory (LSTM) networks offer a potentially more adaptable alternative. However, current data-driven approaches in AD are predominantly limited to single-output architectures that focus solely on production yields, as opposed to simultaneous prediction of vital stability indicators. Furthermore, industrial AD datasets are typically sparse and skewed toward steady-state operations. Baseline evaluations demonstrated this scarcity prevents standard algorithms (Random Forest, XGBoost) and unaugmented LSTMs from recognising the transition to unstable operations, resulting in poor estimation of stability indicators. To overcome these challenges, this study proposes a novel generative data augmentation framework using an LSTM-beta-Variational Autoencoder coupled with a multi-output LSTM (MO-LSTM) soft sensor. By synthesising physically valid sequences of these transitions to unstable operations from one year of full-scale plant data, the method safely populates sparse regions of the feature space. Trained on this augmented dataset, the MO-LSTM achieved robust simultaneous estimation across all targets. This approach mitigates data sparsity, providing a basis for hybrid mechanistic-data-driven modelling and early-warning soft sensors in industrial bioprocesses.",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Multi-output LSTM soft sensors for industrial anaerobic co-digestion using LSTM-beta-VAE generative data augmentation",
+      "url": "https://arxiv.org/abs/2610.39768v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "0a538fe4f50b23be7fa0a123",
+      "context_id": "59e38108b63347666203ee16",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "fff39747b808ae8f540be7af945f575b6963c384b016c0d89a7cecbe98592455",
+      "source_published": "2026-10-28T20:40:33Z",
+      "source_updated": "2026-10-28T20:40:33Z",
+      "summary": "Large Language Models (LLMs) are increasingly being used as cognitive interfaces that shape how users interpret evidence, communicate, and make decisions. As deployed systems become more multimodal, tool-using, and multi-agent, safety failures no longer arise only from isolated harmful outputs, but also from how agents update, store, and propagate epistemic commitments across retrieval, memory, tools, and peer communication. In this paper, we define belief as an engineering abstraction for evidence-based commitments that guide downstream action. Building on this view, we propose the Explicit Belief Multi-Agent System (EB-MAS), which externalizes belief states into a structured substrate, uses belief operators to propose candidate updates, and applies a Cognitive Firewall to bound or reject updates that are weakly evidenced but strongly driven by vulnerability cues. We also discuss the risk of group belief at the group level, including manufactured consensus, collusion, and cascading misinformation, and outline practical integration challenges around grounding, false positives, scalability, and ethical misuse. Therefore, scalable agent safety requires not only better output filtering or stronger base models, but also explicit interfaces for tracing, calibrating, and constraining belief revision at runtime.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Auditable Belief Updates as a Missing Safety Layer for LLM-Powered Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.38869v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "bf1504c82bb9eecaf7c1c4f7",
+      "context_id": "5614f16d5717b1e30b423cd6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "5d95c9505da22da639a3a5054ca48d73de234ccfded93ec5fe0ee6b6af38552c",
+      "source_published": "2026-10-27T19:32:05Z",
+      "source_updated": "2026-10-27T19:32:05Z",
+      "summary": "On PushT, our fixed action updater (1,505 parameters) solves 8 of 16 scenes reserved from our configuration selection. The comparison planners perform as follows: Selected Adam (7 tasks solved, total planning and encoding time 218.440s), adapted iCEM (2 tasks solved, total planning and encoding time 49.309s), released LePlanner (16 tasks solved, total planning and encoding time 5.652s). The total planning and encoding time for our action updater is 59.079s. Note that our action updater does not satisfy the task-cost criterion we fixed before evaluation. We also conduct another matched experiment where we only replay the first ten commands in each context and then allow the next solve 4, 8 or 12 updates (subsequent solves all get 8 updates). Among all 16 contexts (8 scene clusters), the 3 budgets get 9, 8 and 7 successes, respectively. Interestingly, the extra updates did not rescue any failing task in this experiment. All the changes in success/failure happen in one scene cluster, where we observe that the extra updates decrease the costs of the selected latent world-model trajectories for our updater, while the tasks that used to be successes become failures. The code, weights, evaluators, execution traces and cost accounting accompany the paper.",
+      "tags": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "When More Planning Hurts: Learned Planners for World Models",
+      "url": "https://arxiv.org/abs/2610.37891v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "055f957347b1ca82fd53c469",
+      "context_id": "4f7c5b5858bba4fec5f405e1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "5ad9e33d437c6804346b75665c10e44894e465985213b4bc5f3ac67ecfff3f29",
+      "source_published": "2026-10-28",
+      "source_updated": "",
+      "summary": "TRUSTWORTHY MANUFACTURING AND DIGITAL QUALITY PASSPORTS FOR BIOMEDICAL MICRO/NANOROBOTS AT THE LIMIT Manufacturing Evidence x Digital Traceability x Quality Release This 770-page Research Working Edition develops a falsification-oriented, nonclinical architecture for proving whether every biomedical micro/nanorobot product or batch can be linked to sufficient material, tool, model, process, test and failure evidence for an independent team to reconstruct its release rationale. It distinguishes record completeness from product qualification and treats physical identity, typed provenance, signature status, version compatibility, raw functional evidence, uncertainty, recall and retirement as separate scientific objects. The monograph contains 30 mathematical research plates, 82 chapters, 410 single-page investigations, 200 differentiated Research Gates and 33 genuinely distinguishable Phoenix Answer Embryos. The minimum demonstrator conceals three critical evidence gaps inside a signed passport and tests whether an independent audit refuses release without original-author assistance. A critical missing ancestor, ambiguous product identity, unverifiable signature, incompatible model evidence or unreplayable release decision is a hard veto. This is a prospective scientific architecture, not an executed clinical or regulatory study. It does not claim in-body safety, therapeutic efficacy, regulatory approval or clinical benefit. DOI-linked publications support component methods and boundaries; they do not validate the integrated F25 system. Technical profile: 770 pages; approximately 166,832 English words; 30 formula families; 82 chapters; 410 single-page studies; 200 Research Gates; 33 Phoenix Answer Embryos; 22 DOI records; navigable bookmarks; sixfold QA. Author: Feng Cheng-en (33) x Starli STARLI Research Institute XXXIV / Flagship 25 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "TRUSTWORTHY MANUFACTURING AND DIGITAL QUALITY PASSPORTS FOR BIOMEDICAL MICRO/NANOROBOTS AT THE LIMIT Manufacturing Evidence x Digital Traceability x Quality Release This 770-page Research Working Edition develops a falsification-oriented, nonclinical architecture for proving whether every biomedical",
+      "url": "https://zenodo.org/records/23733435"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "a81cf005d5ac08f80369a398",
+      "context_id": "2aaa000156f8f7356899f228",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "27d4357b51e5918c8ea16bfdd752305552ae77581b36b9dafa69945b5d224383",
+      "source_published": "2026-10-29T16:26:33Z",
+      "source_updated": "2026-10-29T16:26:33Z",
+      "summary": "This paper sets out what a sustained federal research and investment agenda would need to include to close that gap--not within a single budget cycle, but over the decade such an undertaking will realistically require. It identifies where the gap is most pronounced today: in the methods needed to verify and certify components of uncertain origin, in the foundational hardware research that has long been underfunded relative to software, in the physical infrastructure researchers need to test systems at scale, and in the workforce required to build and sustain all of it. Robotics should not be treated merely as a downstream beneficiary of a broader artificial intelligence investment strategy. It constitutes its own supply chain, with its own points of failure, and merits its own sustained federal commitment.",
+      "tags": [
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Securing the Robotics Supply Chain",
+      "url": "https://arxiv.org/abs/2610.40385v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "f602483294040ddb9d4f3a93",
+      "context_id": "24c79135dd8e6e39874bd450",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "47534de244797cbcd1cf65715502732a2764e47892afdaa0a1c54324b462ff6c",
+      "source_published": "2026-10-29T04:50:24Z",
+      "source_updated": "2026-10-29T04:50:24Z",
+      "summary": "Skill-evolution methods typically analyze execution trajectories to guide agent skill refinement. However, policy updates can change the behavioral effects and marginal utility of an unchanged skill. Attribution based on earlier trajectories may therefore no longer reflect the skill's contribution under the updated policy. Moreover, trajectory failures can arise from multiple factors, making individual skill contributions difficult to isolate. We evaluate whether policy-update signals contain predictive information about changes in skill marginal utility. At fixed contexts from pre-update training rollouts, we measure how policy updates change the contrast in token preferences between skill and control conditions. Combining these interaction shifts with advantage estimates yields reward-directed readouts for diagnosing utility changes. The readouts reuse existing training rollouts and require only forward passes for single-step action scoring, without additional post-update rollout evaluation. Our experiments show that policy updates can alter skill marginal utility and that policy-update readouts carry diagnostic information for identifying skills with declining utility. Integrating readout-guided prioritization into skill evolution improves downstream performance while reducing policy and editor token consumption.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Before the Next Rollout: Diagnosing Skill Utility Shifts from Policy Updates",
+      "url": "https://arxiv.org/abs/2610.39358v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "b805eef0edc136d17f9dee57",
+      "context_id": "11968e2b662dcf3b8dc5a5b5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "2d2094e645cdfabd8dd24ddec15918da031211bdb08b142f736ac6c88bc83f10",
+      "source_published": "2026-10-30",
+      "source_updated": "",
+      "summary": "What's Changed nf-core/variantbenchmarking 1.6.0 – Nominal Eco Highlights New benchmarking method: Aardvark for small variants ( --method aardvark ). Results are merged into the summary tables with TP/FP/FN, precision, recall, F1 and genotype-level FN/FP counts (#315) Interactive reports: all summary plots (metrics, upset, length distributions) are now interactive HTML instead of static PNG (#325) New hap.py stratified HTML report , generated from stratified hap.py results (#326) New --skip_reports parameter: comma-separated list ( datavzrd , happy ) to turn off optional report generation (#356) Concordance analysis can be limited to specific truth/query pairs , so you no longer have to run every pairwise comparison (#348) Visualising results in Depictio (#345) Changed hap.py now runs in a container that also includes rtgtools (#327); the Singularity image is gzip-enabled (#334) Local VCF_VARIANT_FILTERING replaced by the nf-core subworkflow VCF_FILTER_SURVIVOR_BCFTOOLS (#349) Local tabix module replaced by the nf-core htslib/bgziptabix module (#329) BED files for small-variant analysis reorganised (#319) Pipeline template updated to nf-core/tools v4.2.1, via v4.0.0, v4.0.2, v4.0.3 and v4.1.0 (#304, #305, #317, #322, #355) Fixed Liftover: target_bed was not passed through and is now included (#320) Sample-ID conflicts when the same sample name occurs in several inputs (#336) Sample IDs in truth files produced by rtgtools are now set correctly (#337) Performance VCF_TO_CSV streams records instead of keeping the whole VCF in memory, which lowers memory use on large VCFs (#331) Upset plot generation optimised to avoid out-of-memory failures on large comparisons (#339) Removed / deprecated [!WARNING] These changes may require updating existing parameter files or downstream scripts. pre.py preprocessing deprecated (#316) Small-variant splitting subworkflow removed (#354) Plot outputs are now .html instead of .png ; adjust any downstream scripts that look for PNG files (#325) Concordance runs only the requested pairs rather than all combinations (#348) CI / infrastructure Removed a vulnerable PR-comment artifact pattern (#318) fix-linting switched to the hardened nf-core/actions reusable workflow (#333) New nf-diff PR check and baseline workflows to catch output changes between versions (#344); Nextflow version pinned and results posted via pr-comment.yml (#346) Software dependencies | Dependency | Old version | New version | | ------------------ | ----------- | ----------- | | pigz | 2.8 | deprecated | | nf-core | 3.5.1 | 4.1.0 | | prettier | 3.6.2 | 3.8.3 | | prepy | 0.3.15 | deprecated | | r-base | 4.1.0 | deprecated | | ga4gh-happy-report | - | 0.1.2 | | rtg-tools (hap.py) | - | 3.13 | | tabix | 1.21 | deprecated | | htslib | - | 1.24 | | xz | - | 5.8.3 | | nf-schema | 2.5.1 | 2.7.3 | | Nextflow | 25.04.0 | 25.10.4 | | multiqc | 1.32 | 1.33 | New parameters: skip_plots , skip_reports , high_conf , happy_comparison_engine Depreciated parameters: falsepositive_bed Contributors Thanks to @kubranarci, @georgiakes, @edogiuili, @mashehu, @adamrtalbot and @nf-core-bot. New contributors: @mashehu (#318), @adamrtalbot (#331), @edogiuili (#345) – welcome! Full changelog: https://github.com/nf-core/variantbenchmarking/compare/1.5.0...1.6.0",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "nf-core/variantbenchmarking: 1.6.0 Nominal Eco",
+      "url": "https://zenodo.org/records/23798823"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "8ac14d099c1b00a2a4d53729",
+      "context_id": "7f8ad699459a12cd9c3d0cb7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "independent validation",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 3.5417,
+      "source": "zenodo",
+      "source_context_sha256": "49bb78c898a4d494d9fd446eb80ad64cc19eae9cd9368709401dcb9bc830b151",
+      "source_published": "2026-10-30",
+      "source_updated": "",
+      "summary": "Description This repository provides supporting data products, analysis code, and reproducibility materials for an independent evaluation of the original satellite-derived modified temperature&ndash;humidity index (MTHI) proposed by Feng et al. (2020), using ground-observed air-based temperature&ndash;humidity index (THI) as the reference quantity. The study examines two distinct measurement tasks: (1) numerical estimation of air-based THI under frozen cross-network calibration, and (2) within-date spatial ranking of observed air-based THI across urban monitoring stations. The development dataset comprises 849 matched station-date observations from 109 stations across 18 dates in Leuven, Belgium (2021&ndash;2022). The independent external evaluation uses 249 matched observations from 19 urban stations across 20 dates in Novi Sad, Serbia (2016&ndash;2017). The predefined spatial-ranking analysis includes 197 observations across 13 qualifying dates. The numerical evaluation considers four predictor configurations: LST alone, the original Feng MTHI, LST and NDMI, and LST, NDMI and land surface emissivity. Model selection and calibration were performed using the Leuven development data, with the resulting configurations frozen before external evaluation. The repository supports verification of the reported numerical comparisons, spatial-ranking analyses, uncertainty assessments, and associated sensitivity analyses. The accompanying README documents the included files, their provenance, processing procedures, and reproducibility instructions. Any restrictions on redistribution of third-party observational or satellite data are documented separately. This archive does not constitute a validation of physiological heat stress, thermal perception, or human heat-health risk.",
+      "tags": [
+        "Modified temperature–humidity index (MTHI)",
+        "Normalized Difference Moisture Index (NDMI)",
+        "Cross-network transferability",
+        "Air-based temperature–humidity index (THI)",
+        "Independent validation"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Reproducibility Data and Code for Evaluating Satellite-Derived MTHI Against Urban Air-Based THI",
+      "url": "https://zenodo.org/records/23796212"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "9364b55bb23e69451094df1a",
+      "context_id": "d2411037b97d109fe620bf42",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 3.0417,
+      "source": "zenodo",
+      "source_context_sha256": "3624042f36abef84d83abf40c3902b77d38258cfc844560f2ab16ddf60c73c20",
+      "source_published": "2026-10-28",
+      "source_updated": "",
+      "summary": "This version (v1.4) extends the reproducibility package for &ldquo;Before the weights: a validated admission gate for data-derived decision inputs, demonstrated on aggregate inward FDI&rdquo; (Results in Engineering, manuscript RINENG-D-26-21905). It adds the records of a prospective, prespecified, synthetic-only benchmark comparing the frozen admission gate (G) with two simpler calibrated admission rules: a Ridge-only rule (A) and a single-split rule (B). The principal finding is unfavourable to the gate. At the smaller planted effect (&delta; = 0.005), G admitted 27 of 50 cases, A admitted 26 of 50, and B admitted 49 of 50. None of the three rules admitted any of 50 synthetic null or 40 persistence-matched null candidates at their calibrated operating points. The prespecified outcome labels were &ldquo;No statistically resolved difference&rdquo; for A and &ldquo;Evidence favouring the comparator&rdquo; for B. The comparison is conditional on the tested synthetic designs. It does not establish equal population-level false-admission rates, demonstrate downstream decision improvements, or test genuinely environment-dependent planted effects. The deposit contains the benchmark protocol, implementation, calibration records, seed registry, 190-cell execution return, reduction report, execution history, and independent verification records. Certain operational records have been anonymised to protect identifying information. The included anonymisation map links the public files to their original hash-bound verification records. The public reproduction procedure independently reproduces the scientific reduction, with its documented protocol-hash substitution. The previously published v1.3 record remains unchanged. Consult README.md inside the archive for the reproduction instructions, scientific limitations, and relationship between the public derivative and the verified originals.",
+      "tags": [
+        "signal admissibility",
+        "clustered bootstrap",
+        "operations research",
+        "multicriteria decision analysis",
+        "criterion selection",
+        "model validation",
+        "decision analytics",
+        "reproducibility",
+        "mineral-resource investment"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Before the Weights: Reproducibility package for a validated admission gate for data-derived inputs to mineral-resource decision support",
+      "url": "https://zenodo.org/records/23733378"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "0573dc5856744c4ea17e62fa",
+      "context_id": "31d5b075c93e0a89bb44912e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "confidence score"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.6667,
+      "source": "arxiv",
+      "source_context_sha256": "e92accb2ae1cb708733e8593726323a14c669419afb416bfc824ca31708f09c9",
+      "source_published": "2026-10-27T13:01:29Z",
+      "source_updated": "2026-10-27T13:01:29Z",
+      "summary": "AI research agents can propose, execute, and improve programs that solve machine learning tasks. However, executing each candidate program requires training and evaluating ML models, limiting how many candidates an agent can explore at each step. We introduce MLE-World, a world model finetuned from Qwen3.5-4B that predicts a program's terminal output (error traces, training logs, and validation scores) from its code and data description without executing it, together with a confidence score estimating the prediction's correctness. Because a prediction costs one inference call rather than a training run, MLE-World makes test time scaling (TTS) affordable for these agents. We build five TTS policies, guided by MLE-World, that compare several candidates per step by their predicted outputs: Sequential revision, Best-of-N, Pairwise judging, Fusion, and a UCB style rule that also adds an exploration bonus from this confidence score. Since predictions can be wrong, we run a candidate for real only when its confidence score is low. On 17 MLE-bench Lite tasks, MLE-World matches the real terminal output on 77.9% of held out programs, versus 41.1% for much larger prompted models. MLE-World guided TTS achieves up to 22.1% higher observed mean performance than the agent without a world model, with less real execution. Project webpage: https://mle-world.github.io/.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "MLE-World: Predicting Machine Learning Experiment Outcomes with a Learned World Model",
+      "url": "https://arxiv.org/abs/2610.37175v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "f4bf12388025dadd40a3a83a",
+      "context_id": "6ce62872f6b78c93bbb3b37f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "48fdce316ff46d38ef3ea76c4d07c21679890a0bd2b488b73284c39a2320707b",
+      "source_published": "2026-10-27T00:29:20Z",
+      "source_updated": "2026-10-27T00:29:20Z",
+      "summary": "Construction safety management still struggles to produce daily safety bulletins (DSBs), structured daily communications that identify site-specific hazards, convey safety protocols, and set preventive measures for workers. Manual DSB creation takes 2-3 hours daily and yields inconsistent quality, with 25% of crews never conducting pretask planning (Olson et al., 2016), diverting safety personnel from field supervision. This study proposes the Lightweight Multi-Agent DSB System (LM-DSB), which integrates retrieval-augmented generation (RAG) with a locally deployable Large Language Model (LLM) to automate DSB generation on consumer-grade personal computers. LM-DSB coordinates specialized planner, researcher, and writer agents in a hierarchical architecture, enhanced by domain-specific fine-tuning on construction safety documentation and RAG grounding in 37 health, safety, and environment (HSE) documents. A two-phase validation assessed feasibility. Phase 1 comparative evaluation showed the multi-agent RAG system (Llama 3-8B) outperformed all alternative configurations, with strong lexical alignment and coherence (TF-IDF: 0.70, BLEU: 0.39, ROUGE-1: 0.66) and near-complete document generation (length ratio: 1.01 vs. 0.39 for single-agent RAG). Phase 2 expert evaluation (N=40) confirmed practical acceptability (mean scores 3.50-4.20 on a 5-point scale), particularly in regulatory compliance (4.20) and factual accuracy (4.10). The findings show that architectural design enables lightweight models to handle safety-critical documentation on consumer-grade hardware, advancing technology democratization in construction safety management. Limitations include knowledge base scope, language constraints, and lack of field deployment validation; future work should address multimodal integration and workflow adoption.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "LM-DSB: A Lightweight Multi-agent System for Automated Daily Safety Bulletin Generation in Construction",
+      "url": "https://arxiv.org/abs/2610.36433v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "f2ec4817c0262522465a5a2b",
+      "context_id": "071ef28eb58713e4427132a1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "719f8f164eb8d4259e5ae82ff55619b46306844b9ab78205be47d26b61f778e1",
+      "source_published": "2026-10-29T10:54:32Z",
+      "source_updated": "2026-10-29T10:54:32Z",
+      "summary": "Long-horizon consistency is essential for video world models, yet it becomes difficult to maintain once observed content falls outside the context window. Existing memory mechanisms either retrieve history as implicit context, which remains constrained by context capacity and entangles static and dynamic information or consolidate history into explicit global representations, which struggle to model evolving dynamics and accumulate geometric errors. To overcome these limitations, we introduce \\textbf{GROME}, a novel factorized memory framework that augments video world models for long-horizon coherence across both static scenes and dynamic entities. GROME operates via three synergistic components: 1)~\\emph{Static-Dynamic Factorization} decouples historical evidence into static and dynamic components, preserving static scene geometry and dynamic entity states separately; 2)~\\emph{Local Memory Retrieval} selects spatially aligned static history to eliminate geometric drift alongside the latest dynamic entity states to ensure temporal continuity; 3)~\\emph{Training-Free Memory Injection} seamlessly grounds the factorized memory into video world models via their native conditioning pathways. Experiments on long-horizon revisit scenarios demonstrate that GROME substantially enhances scene persistence and dynamic entity fidelity over existing methods, all while preserving the visual quality and controllability of the frozen backbone without additional training. Beyond self-rollouts, GROME readily accommodates external observations as plug-and-play memory, unlocking flexible and controllable video continuation and scene exploration.",
+      "tags": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "GROME: GROunding Factorized MEmory into Video World Models",
+      "url": "https://arxiv.org/abs/2610.39812v1"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "selection": "BALANCED_LENS_ROLLING_TOP",
+  "snapshot_cap": 48,
+  "snapshot_items_total": 32,
+  "target_repository": "Hawkar-usls/aura-oracle-tg"
+}
