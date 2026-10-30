@@ -13,6 +13,8 @@ on:
       - "tools/beetle_mirror_router.py"
       - "tools/beetle_memory_receiver.py"
       - "tools/beetle_partial_checkpoint.py"
+      - "tools/beetle_git_push.py"
+      - "tests/test_beetle_git_push.py"
       - "tools/beetle_delivery_health.py"
       - "tools/beetle_producer_routing_gate.py"
       - "tools/beetle_producer_recovery.py"
@@ -80,6 +82,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_beetle_shard_store.py' -v
           python -m unittest discover -s tests -p 'test_beetle_delivery.py' -v
           python -m unittest discover -s tests -p 'test_beetle_partial_checkpoint.py' -v
+          python -m unittest discover -s tests -p 'test_beetle_git_push.py' -v
           python -m unittest discover -s tests -p 'test_beetle_rowan_focus.py' -v
           python -m unittest discover -s tests -p 'test_beetle_rowan_relevance.py' -v
           python -m unittest discover -s tests -p 'test_beetle_normal_routing_gate.py' -v
@@ -246,7 +249,7 @@ jobs:
             # The worker leaves deliberately uncommitted telemetry. Rebasing
             # here fails even after the validated cut was committed; a normal
             # non-force push is safe and rejects a concurrent branch advance.
-            git push origin HEAD:beetle-state
+            python ../lapis/tools/beetle_git_push.py --git-root .
           fi
 
       - name: Report interrupted worker after durable salvage
@@ -311,7 +314,7 @@ jobs:
           git commit -m "beetle: mirrored hourly research state ${GITHUB_RUN_ID}"
           # Never rebase while scratch telemetry is dirty. A non-force push
           # fails closed if another writer advanced the durable branch.
-          git push origin HEAD:beetle-state
+          python ../lapis/tools/beetle_git_push.py --git-root .
 
       - name: Upload compact run receipt
         if: always()
@@ -333,3 +336,4 @@ jobs:
             beetle-memory/data/beetle-state/latest_partial_checkpoint.json
           if-no-files-found: warn
           retention-days: 14
+

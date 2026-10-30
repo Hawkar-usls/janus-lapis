@@ -1,0 +1,40 @@
+name: JANUS Beetle durable push contract
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/beetle_git_push.py'
+      - 'tools/beetle_partial_checkpoint.py'
+      - 'tests/test_beetle_git_push.py'
+      - 'tests/test_beetle_partial_checkpoint.py'
+      - '.github/workflows/universal-beetle-hourly.yml'
+      - '.github/workflows/beetle-durable-push-contract.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/beetle_git_push.py'
+      - 'tools/beetle_partial_checkpoint.py'
+      - 'tests/test_beetle_git_push.py'
+      - '.github/workflows/beetle-durable-push-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inject transient failure, conflict, exhaustion and interrupted worker
+        run: |
+          python -m unittest discover -s tests -p 'test_beetle_git_push.py' -v
+          python -m unittest discover -s tests -p 'test_beetle_partial_checkpoint.py' -v
+
