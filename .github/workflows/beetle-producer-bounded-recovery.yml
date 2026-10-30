@@ -5,6 +5,10 @@ on:
     # Secondary opportunities: skips are still possible on GitHub-hosted cron.
     - cron: '13,43 * * * *'
   workflow_dispatch:
+  workflow_run:
+    workflows: ['JANUS Beetle Memory Receiver']
+    types: [completed]
+    branches: [main]
   pull_request:
     paths:
       - tools/beetle_producer_recovery.py
@@ -41,7 +45,12 @@ jobs:
           python -m unittest tests.test_beetle_producer_recovery -v
 
   recover:
-    if: github.event_name != 'pull_request'
+    if: >-
+      ${{ github.event_name != 'pull_request' &&
+          (github.event_name != 'workflow_run' ||
+           (github.event.workflow_run.conclusion == 'success' &&
+            github.event.workflow_run.head_branch == 'main' &&
+            github.event.workflow_run.head_repository.full_name == github.repository)) }}
     needs: validate
     runs-on: ubuntu-24.04
     timeout-minutes: 7
