@@ -1,12 +1,12 @@
 {
   "ack_semantics": "INBOX_DURABLE_ONLY_NOT_RUNTIME_CONSUMPTION",
-  "at": "2026-10-31T21:57:46.251660Z",
+  "at": "2026-10-31T22:39:27.996912Z",
   "repositories": {
     "Hawkar-usls/-Terminal-for-Janus": {
       "confirmed": 83,
       "last_acknowledged_at": "2026-10-31T21:53:10.375722Z",
       "last_confirmed_batch": "293e3e6989b979513b63",
-      "oldest_pending_minutes": 0,
+      "oldest_pending_minutes": 41,
       "pending": 1,
       "produced": 84,
       "status": "PENDING"
@@ -15,16 +15,16 @@
       "confirmed": 84,
       "last_acknowledged_at": "2026-10-31T18:49:15.723270Z",
       "last_confirmed_batch": "b8f76fe811d8b18a5925",
-      "oldest_pending_minutes": 152,
+      "oldest_pending_minutes": 194,
       "pending": 2,
       "produced": 86,
-      "status": "PENDING"
+      "status": "STALE"
     },
     "Hawkar-usls/Demi_Head": {
       "confirmed": 85,
       "last_acknowledged_at": "2026-10-31T21:55:55.056043Z",
       "last_confirmed_batch": "4ea8bf1eb578932b5da6",
-      "oldest_pending_minutes": 0,
+      "oldest_pending_minutes": 41,
       "pending": 1,
       "produced": 86,
       "status": "PENDING"
@@ -41,7 +41,7 @@
       "confirmed": 85,
       "last_acknowledged_at": "2026-10-31T21:53:21.490400Z",
       "last_confirmed_batch": "45894b4b252e75c3527f",
-      "oldest_pending_minutes": 0,
+      "oldest_pending_minutes": 41,
       "pending": 1,
       "produced": 86,
       "status": "PENDING"
@@ -50,7 +50,7 @@
       "confirmed": 85,
       "last_acknowledged_at": "2026-10-31T21:54:05.549803Z",
       "last_confirmed_batch": "18e643b39901d4b5e872",
-      "oldest_pending_minutes": 0,
+      "oldest_pending_minutes": 41,
       "pending": 1,
       "produced": 86,
       "status": "PENDING"
@@ -67,16 +67,16 @@
       "confirmed": 84,
       "last_acknowledged_at": "2026-10-31T18:48:08.096987Z",
       "last_confirmed_batch": "19202ebadd3b1c4908c7",
-      "oldest_pending_minutes": 152,
+      "oldest_pending_minutes": 194,
       "pending": 2,
       "produced": 86,
-      "status": "PENDING"
+      "status": "STALE"
     },
     "Hawkar-usls/Janus-Fundamentum": {
       "confirmed": 85,
       "last_acknowledged_at": "2026-10-31T21:53:13.194968Z",
       "last_confirmed_batch": "2bcbea2e9a929b82e88f",
-      "oldest_pending_minutes": 0,
+      "oldest_pending_minutes": 41,
       "pending": 1,
       "produced": 86,
       "status": "PENDING"
@@ -85,7 +85,7 @@
       "confirmed": 84,
       "last_acknowledged_at": "2026-10-31T21:53:15.011900Z",
       "last_confirmed_batch": "339684ef457ba128934f",
-      "oldest_pending_minutes": 0,
+      "oldest_pending_minutes": 41,
       "pending": 1,
       "produced": 85,
       "status": "PENDING"
@@ -101,7 +101,7 @@
     "Hawkar-usls/SkinGPT": {
       "ack_read_error": "ACK_VISIBILITY_UNKNOWN",
       "confirmed": 0,
-      "oldest_pending_minutes": 17548,
+      "oldest_pending_minutes": 17590,
       "pending": 1,
       "produced": 1,
       "status": "ACK_UNAVAILABLE"
@@ -126,17 +126,17 @@
       "confirmed": 85,
       "last_acknowledged_at": "2026-10-31T21:52:08.124678Z",
       "last_confirmed_batch": "20bc8bc6e690c88f6cdd",
-      "oldest_pending_minutes": 0,
+      "oldest_pending_minutes": 41,
       "pending": 1,
       "produced": 86,
       "status": "PENDING"
     },
     "Hawkar-usls/janus-distributed-ai-swarm": {
-      "confirmed": 82,
-      "last_acknowledged_at": "2026-10-31T18:46:56.375429Z",
-      "last_confirmed_batch": "c92735c722f218d62145",
-      "oldest_pending_minutes": 152,
-      "pending": 2,
+      "confirmed": 83,
+      "last_acknowledged_at": "2026-10-31T21:56:15.943113Z",
+      "last_confirmed_batch": "fe1778faa1bef7ec4785",
+      "oldest_pending_minutes": 41,
+      "pending": 1,
       "produced": 84,
       "status": "PENDING"
     },
@@ -152,7 +152,7 @@
       "confirmed": 85,
       "last_acknowledged_at": "2026-10-31T21:53:34.241696Z",
       "last_confirmed_batch": "920e2e9573edb74aa0af",
-      "oldest_pending_minutes": 0,
+      "oldest_pending_minutes": 41,
       "pending": 1,
       "produced": 86,
       "status": "PENDING"
@@ -161,7 +161,7 @@
       "confirmed": 85,
       "last_acknowledged_at": "2026-10-31T21:55:06.512099Z",
       "last_confirmed_batch": "06ac20b4f32697bf4e4d",
-      "oldest_pending_minutes": 0,
+      "oldest_pending_minutes": 41,
       "pending": 1,
       "produced": 86,
       "status": "PENDING"
@@ -169,6 +169,6 @@
   },
   "schema": "janus.beetle.delivery_health.v1",
   "scientific_authority_delta": 0,
-  "status": "WARN",
-  "total_pending": 16
+  "status": "ALERT",
+  "total_pending": 15
 }
