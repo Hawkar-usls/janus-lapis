@@ -1,0 +1,978 @@
+{
+  "batch_id": "4888d652fde9a8b58c8b",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "fragment_count": 1,
+  "fragment_index": 1,
+  "items": [
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "0455f8426f048a8a460b611c",
+      "context_id": "52689b324808e57742e443e7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "multi-agent"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "arxiv",
+      "source_context_sha256": "e01c6acc27788c80857abb42d590ea783194e52e39ca4a2df87e199edeb68578",
+      "source_published": "2026-10-30T03:42:15Z",
+      "source_updated": "2026-10-30T03:42:15Z",
+      "summary": "Real-world image editing requires coordinating multiple visual transformations with content preservation and reference constraints, yet aggregate scores can readily obscure unmet local requirements. Effective evaluation must therefore identify local failures and translate them into priorities for subsequent model improvement. We introduce WeGenEditBench, comprising 2,740 evaluation instances and 148 task types across single-image, text-intensive, and multi-reference editing. Pre-generated checklists shared across models decompose each request into atomic requirements; item-level deductions and visual evidence are established first and then summarized into scores for edit execution, preservation, visual quality, and task-specific correctness. To support the experience-acquisition component of recursive self-improvement (RSI), we develop WeGenEvoStudio, a unified multi-agent harness for RSI-oriented learning that integrates model-conditioned failure diagnosis, retrieval-grounded data construction, supervised adaptation, and re-evaluation. Among 15 evaluated configurations, GPT-Image-2 leads single-image editing with an Overall score of 4.076, while Seedream-5.0-Pro leads text-intensive editing at 4.291. Evolution experiments across four generation and editing benchmarks demonstrate substantial targeted gains: on their report-selected Top-5 single-image targets, FLUX.2 [dev] improves Overall from 1.083 to 3.517, while Qwen-Image-Edit-2511 gains 13.2%. Together, our benchmark and harness provide a foundation for developing more reliable image models through interpretable evaluation and feedback-driven learning.",
+      "tags": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "From Evaluation to Evolution: Benchmarking Image Editing and Evolving Image Models",
+      "url": "https://arxiv.org/abs/2610.41210v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "03f9dc94fe77bab4ff1d2659",
+      "context_id": "2c676821838aef44ddf20e2c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "confound",
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.125,
+      "source": "arxiv",
+      "source_context_sha256": "e19d9cfe0709b96aeaf0673532ae3a248fed66997d71a886ab53690d34edf2ad",
+      "source_published": "2026-10-30T02:31:45Z",
+      "source_updated": "2026-10-30T02:31:45Z",
+      "summary": "Iterative language-model optimizers refine prompts and programs by evaluating a candidate, showing a proposer model a sample of failing cases, and keeping revisions that improve performance. Recent work attributes the limits of this loop to narrow single-round reflection, introducing full-set error clustering, targeted minibatches, or larger proposer models so the optimizer sees more failure modes per step. Yet every existing evaluation tests these mechanisms exclusively inside lineage-preserving search, where each revision edits a surviving parent, leaving the contribution of parent inheritance confounded with the breadth of per-round feedback. Across 1,750 pre-registered runs spanning nine prompt and program synthesis benchmarks, we separate parent inheritance from feedback disclosure under matched evaluation budgets. We find that greedy parent inheritance drives the vast majority of optimization progress, outperforming seed-reset resampling even when seed-reset proposals receive a clustered summary of all failures in every round or use a larger proposer model. While full-set error clustering and diverse failure selection improve single-step rewrites from the seed and accelerate the opening rounds of search, sequential parent inheritance rapidly closes this gap as solved error modes are retained in the candidate and filtered from subsequent failure lists. Moreover, decomposing token expenditure in GEPA reveals that proposer reflection accounts for only a small fraction of total cost whereas validation and minibatch gating consume nearly the entire budget, showing that greedy parent inheritance over raw failures captures the gains of complex reflective loops at a fraction of their compute.",
+      "tags": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Lineage Is Memory: Parent Inheritance and Feedback Disclosure in Short-Budget LLM-Guided Optimization",
+      "url": "https://arxiv.org/abs/2610.41157v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "4bd09ba9d6015ec928995af3",
+      "context_id": "5091fbbecdb00589c499fc67",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.875,
+      "source": "zenodo",
+      "source_context_sha256": "5e064d1b5b2a500ddebe2be578cd53331449383357e499ac0b31a486a6d01e62",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Abstract: Classical inferential statistics and p-value hypothesis testing in healthcare big data repositories suffer from severe structural limitations, notably p-hacking, asymptotic N-bias, and the frequent violation of independent and identically distributed (i.i.d.) assumptions due to intra-patient longitudinal dependencies, hospital clustering, and epidemiological shockwaves. To overcome these failures, we introduce an Inverse Breakpoint Analysis, a scale-invariant, physics-inspired metrological audit framework. Our analysis treats discrete clinical event counts not as abstract probabilities, but as physical informational mass. Grounded in Garwood exact discrete limits and Wilson-Hilferty approximations, the framework extends our previous work on stress testing indices for Big health data and establishes three rigorous thresholds: a pure mass saturation limit, a baseline tolerance band, and a structural signal threshold. Through the use of these three parameters, our inverse break-point analysis eliminates false-positive artifacts induced by massive repository sizes while preventing under-powering in small cohorts. Ultimately, the framework demonstrates that percentage-based thresholds are kinematic artifacts of scale, whereas absolute excess discrete mass serves as the sole physical invariant for healthcare data validation. We validated this approach with numerous illustrative examples.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Inverse Breakpoint Analysis: A Scale-Invariant Physics-Inspired Metrological Audit for Sanitary Big Data",
+      "url": "https://zenodo.org/records/23865263"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "6b8d6ae1425b847e5c1f05ba",
+      "context_id": "e54840abc2b7ccea889da950",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "zenodo",
+      "source_context_sha256": "fc28a4f60f340c0d3669d2bf2d912fb1d66f7029fa3f117eca1c51fd23568e40",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Flagship 56/60 Can cell identity, spatial accuracy, viability and function be assessed with traceable uncertainty that supports independent batch qualification? QUALITY METROLOGY FOR NANOROBOT-ASSISTED CELLULAR MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates traceable independent measurement chain and uncertainty-aware batch acceptance. Its scientific coupling is cell quality x microscale metrology x process reproducibility. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Can cell identity, spatial accuracy, viability and function be assessed with traceable uncertainty that supports independent batch qualification? The proposed minimum demonstration is: Exchange blinded mixed-cell standard panels between two instruments and mask a rare misidentified phenotype. Strong comparators include single live-dead staining and expert microscopic counting. The central competing explanation is shared image-analysis software creating the illusion of reproducibility. The noncompensatory stop rule is: a critical channel lacks traceable calibration or sampling bias breaches tolerance. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 56 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Flagship 56/60 Can cell identity, spatial accuracy, viability and function be assessed with traceable uncertainty that supports independent batch qualification? QUALITY METROLOGY FOR NANOROBOT-ASSISTED CELLULAR MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Na",
+      "url": "https://zenodo.org/records/23870554"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "9ebcf774cefea03bb19da103",
+      "context_id": "d5be3f376bcaf8029fd3a834",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "02e310b6d7058a9d5eb2404c3939472612cad70076983ef98102f8b5dbd70a79",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "The July 2026 counterexample settled the Jacobian conjecture in dimensions N ≥ 3 and left JC(2) as the open case. This paper develops an exact-arithmetic program on the planar case. The Keller condition J(P, Q) = 1 is linear in Q for fixed P; the resulting machine (eliminate, parametrize the consistency variety, complete, invert) closes the columns min deg ≤ 2 uniformly (one closed inverse for the whole quasi-triangular class), forces perfect-power tops at bidegrees (2, n) and (3, n), and inverts every consistent stratum it has met. Four unconditional exclusion theorems follow from a weight-class calculus: a two-term P = x + a x^u y^v is never a Keller component at any partner degree; neither is any lower-weight perturbation of it; no Keller component carries a Newton top edge anchored at the linear vertex x with interior direction; and if x is a vertex of the Newton polygon then P = x + f(y) exactly (the vertex dichotomy). The residual open core is the transport of the Keller constant along the staircase of Newton vertices swallowing x: we show the completion window is block-triangular under the edge grading, exhibit the classwise transport chain as an executable elimination whose obstruction always localizes at the constant's class, and prove the corresponding fifth exclusion: for primitive tops the certificate-tower induction closes it unconditionally at all partner degrees (cleared base certificates with monomial pairings such as -13860 a^7, plus a resonance-reduction lemma showing window growth can never repair the constant's row). A recalibration against the primary sources shows that our composite-gcd certificates replicate literature-covered territory (the verified floor is gcd ≤ 8, primes, 2p, then Heitmann's B ≥ 16 and the Guccione-Guccione-Valqui dichotomy B = 16 or B &gt; 20), and that the open frontier is the B = 16 normal form together with the single surviving degree pair (72, 108) below 125. For that open pair, an exact instantiation of the primary sources gives two necessary conditions on the original pair: seven possible northeastern vertices for a nonzero inner polynomial, and deg_x Res_y(P, Q) = 21 with an 84 + 24 major/minor root partition; neither condition alone excludes the pair. A constructible determinantal-strata calculation closes the first actual three-coefficient GGHV slice exactly. On the residual curve, two normalized maximal minors reduce, with z = u^9, to 21 - 96z - 1024z^2 and (8z + 1)^14; an explicit integer Bezout identity has constant 17^14. After adding ε_(0,7), the only two-chart residual is a degree-12 fiber over z = -1/8. A third exact minor has coprime degree-13 fiber determinant, certified by a second integer Bezout identity. A connected mod-9 row/column grading extends to every nonconstant direction in the 26-parameter lower family. This is a strict slice result and does not exclude the full (72, 108) family. At the level of the full family, after removal of the structural constant column and with the complete 302-row pool (the forced-only construction has 289 rows), one selected augmented minor compresses to a 36-column block depending on 24 of the 51 parameters. Two connectivity-generating triples factor exactly; one graph-active direction cancels identically, while the other determinant becomes weighted homogeneous with weights (7, 3, 9) after shifting the forced coefficient. On the d = 0 boundary, the tautological kernel [P, P] = 0 can be quotiented exactly. One quotient determinant factors into b^32, one five-term weighted factor, and five binomials; a second is a nonzero scalar times a^107. Together with the exact origin rank gap, these charts close the complete quotient boundary. On d ≠ 0, a first alternative chart reduces each selected component G, L, Q to a finite intersection. A third exact determinant factors as X^30 LQR, for X = A^3, and exact component ideals close G. A row basis selected independently on the finite L and Q residuals is in fact shared. Its 23-term deter",
+      "tags": [
+        "Jacobian conjecture",
+        "planar Keller maps",
+        "Newton polygon",
+        "machine certificates",
+        "exact arithmetic",
+        "commutative algebra",
+        "affine algebraic geometry",
+        "Jacobian problem"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Planar Keller Maps after the Counterexample: Machine-Certified Newton-Polygon Exclusions, the Staircase Transport, and the Recalibrated Frontier",
+      "url": "https://zenodo.org/records/23874520"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "5d294e7ced8274b322da3b54",
+      "context_id": "b6cb198982b700f41b51c813",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "07d1efd90efd6b178f5772f350f67f2b2c1004742645ff882b8fd375ec771d76",
+      "source_published": "2026-10-30T00:13:39Z",
+      "source_updated": "2026-10-30T00:13:39Z",
+      "summary": "In text-to-SQL and AI-agent analytics, successful SQL execution does not establish semantic correctness under changing business definitions. We study revalidation of fixed queries after changes to refund attribution, tax treatment, eligible populations and exchange-rate dates. An executable verification profile binds the requested revision and knowledge cutoff to legal counterexample data and exact monetary comparison. A preregistered confirmation on 32 newly authored revision families and two local producer bundles retains 192 query-definition cells: 144 nonconforming, 36 finite-suite agreeing and 12 unresolved. Of the nonconforming cells, 63 agree on the current snapshot. At an eight-ledger budget, obligation-guided checking detects 137 discrepancies versus 127 for generic ordering, a paired difference of 6.9 percentage points (family bootstrap 95% interval [2.1, 13.6]; exact family sign-flip p=0.0156). Every ledger arm rejects zero of the 36 agreeing cells. Current-obligation and equal-weight scoring match the guided result, identifying coverage rather than revision-specific priority as the observed source of benefit. Controlled assays, a natural-query pilot and repeated samples provide separate mechanism and robustness evidence. A legal discrepancy refutes conformance; agreement remains restricted to the recorded suite. The study establishes an auditable business-semantic revalidation profile within its authored schema and local-model scope.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Verifying Text-to-SQL Queries under Changing Business Semantics",
+      "url": "https://arxiv.org/abs/2610.41090v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "d0d234bbe86c7474fe5a94b0",
+      "context_id": "eac57fcb1353d30aac1805de",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "ec3d8509056bda0889ebf2fa19fcc21d1dc43bac04a7c5b4bd86fede14cb4146",
+      "source_published": "2026-10-29T20:01:11Z",
+      "source_updated": "2026-10-29T20:01:11Z",
+      "summary": "Human preferences change over time: an established preference may remain valid over time, become uncertain as context shifts, or be explicitly revised. Effective personalization requires conversational AI to adapt its response strategy to evolving preferences rather than relying on passive memory retrieval. We formalize this capability as adaptive personalization under epistemic uncertainty. A human preference study further confirms that people favor state-contingent response strategies as preference uncertainty changes. To evaluate whether language models mirror this adaptation, we create a multilingual benchmark spanning 250 personas, 5 languages, and 25K conversational turns that decouples strategy selection from response execution. Across eight closed- and open-weight models, we uncover a recognition-generation gap: models reliably identify appropriate strategies when selecting among candidate options, but collapse during open-ended generation, suffering a 35-46% drop in strategy calibration. Crucially, this failure is systematic: models default to exploit-first behavior, over-relying on existing preferences regardless of preference epistemic uncertainty. We show this failure is addressable: while prompting interventions fail, targeted training that supervises models' internal strategy representations toward state-conditional human preferences narrows the user acceptability generalization gap by a third on out-of-distribution personas and conversational styles.",
+      "tags": [
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Adaptive Personalization Under Preference Epistemic Uncertainty",
+      "url": "https://arxiv.org/abs/2610.40930v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "b167f19b145589e4c00f228a",
+      "context_id": "e24a40cdd98be399afc06ea6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "90e297a3771762e6f2b1f3d34ed39c8bb094a4993fdee6ba0ffe9051eb6ca9d1",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Surface code decoders like Minimum Weight Perfect Matching (MWPM) can also&nbsp;be used to estimate or bound the probability of a logical failure conditioned on the error syndrome commonly called ``soft outputs''.&nbsp;Estimates like the complementary gap of a matching, or others like&nbsp;the ``cluster gap'' are used to produce high fidelity magic states via post-selection.&nbsp;They are also helpful in reducing the overhead of fault-tolerant computation via&nbsp;code concatenation schemes like yoked surface codes.&nbsp;In this work we provide techniques to tightly lower bound the complementary gap&nbsp;of a rotated surface code syndrome block and provide fast parallel algorithms for&nbsp;computing this lower bound efficiently.&nbsp;Our algorithms run in real time for the moderate&nbsp;distances and reasonable physical noise rates required by these applications.&nbsp;We achieve latencies of the order of one to tens of microseconds on sufficiently&nbsp;fast CPU cores.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Fast Bounds on Matching Decoder Soft Output for the Surface Code",
+      "url": "https://zenodo.org/records/23860610"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "d6574e547f3e1308520ea212",
+      "context_id": "da674bf40542850d5b3cb506",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "16ea22273663e08dbf124e608db69b7232d8ac42ebf9b408ba5bb2ae7d5ce178",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Flagship 57/60 Can a second laboratory reconstruct both functional acceptance and refusal using frozen criteria without original-author assistance? FUNCTIONAL RELEASE AND INTERLABORATORY VALIDATION OF NANOROBOT-ASSISTED TISSUE MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates independent physical function requalification after intersite transfer. Its scientific coupling is tissue function x release qualification x interlaboratory reproducibility. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Can a second laboratory reconstruct both functional acceptance and refusal using frozen criteria without original-author assistance? The proposed minimum demonstration is: Exchange masked tissue constructs across two sites and compare fixed release decisions under a blinded transport perturbation. Strong comparators include single-central-site endpoint tests and morphology-only release. The central competing explanation is unreported remote assistance or shared calibration that defeats nominal site independence. The noncompensatory stop rule is: the receiving lab cannot independently reproduce a decision or mature function underperforms the central baseline. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 57 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Flagship 57/60 Can a second laboratory reconstruct both functional acceptance and refusal using frozen criteria without original-author assistance? FUNCTIONAL RELEASE AND INTERLABORATORY VALIDATION OF NANOROBOT-ASSISTED TISSUE MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition ",
+      "url": "https://zenodo.org/records/23870714"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "a86a62daeebd4373bbd507d9",
+      "context_id": "d8484d66298e18a8a174d01a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "4e5007eddced63b9feff526ded6fbd2d02e5826fa69f7b74dc237c42221c5964",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "PyAutoGalaxy v2026.11.1.1 What's New Breaking Changes fix: analytic Chameleon potential + jit-safe Chameleon profiles ( #683 ) feat: expose introductory imaging plots and shared contrast stretch ( #679 ) Add autogalaxy.plot.subplot_imaging_dataset_intro and optional stretch to plot_array . Existing calls keep their defaults. See full details below. New Features feat: LEGGOS area magnification on LensCalc (arc phase 6a) ( #685 ) Bug Fixes fix: lmp.Gaussian potential from its analytic deflection (correct + ~100x faster) ( #681 ) Internal Docs: lead Start Here with natural language or Python ( #688 ) fix: area magnification sub-pixel area follows the generated sub-pixels ( #687 ) Upstream Changes PyAutoFit fix: draw_randomly_via_pdf normalises sample weights ( #1751 ) fix: results index skips campaign task records; batch wait loop keeps the fit's exit status ( #1750 ) feat: campaign carbon estimate and end-of-campaign report (hpc-campaign p4) ( #1748 ) feat: campaign evidence readers, evidence-graded plan and pilot (hpc-campaign p3) ( #1747 ) feat: read zipped results in place — ZipMember, from_zip, value(kind=), Aggregator.from_index (results-library p1b) ( #1744 ) feat: results index, result states, dataset_identity.json and latest_per (results-library p1a) ( #1743 ) feat: campaign collector, digest, propose-only resubmits and retro mode (hpc-campaign p2b) ( #1742 ) feat: campaign.yaml, scheduler adapters and the GPU-partition lint (hpc-campaign p2a) ( #1741 ) feat: per-fit status record, failure record and run-state vocabulary (hpc-campaign phase 1) ( #1738 ) feat: results-library phase 0b — honest reads ( #1737 ) feat: results-library phase 0a — artefact integrity ( #1736 ) PyAutoArray feat(util.dataset): add simulate_if_needed one-line auto-simulate helper ( #670 ) fix: adaptive rectangular meshes report their true pixel centres ( #668 ) feat: exact kNN mesh magnification areas (arc phase 4b) ( #666 ) fix: exact mesh magnification areas (RectangularUniform + adaptive rectangular) with per-mesh tests (arc phase 4a) ( #664 ) chore: remove dead files/ experiment scripts and notes ( #663 ) feat: four-panel introductory imaging plot using standard styling ( #661 ) Full changelog: https://github.com/PyAutoLabs/PyAutoGalaxy/compare/2026.10.29.1...2026.11.1.1",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "PyAutoLabs/PyAutoGalaxy: v2026.11.1.1",
+      "url": "https://zenodo.org/records/23865665"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "deb3b772209b6aae305076fb",
+      "context_id": "d519def698f24289db2d9e44",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "9d77867fb1f26066c22d7b3ac236c1e057ed7a25cdbd6159e57277d6ad46721a",
+      "source_published": "2026-10-29T18:00:55Z",
+      "source_updated": "2026-10-29T18:00:55Z",
+      "summary": "Web world models increasingly predict the consequences of candidate actions before agents act, yet a plausible predicted future does not necessarily support the correct safety decision. In a matched human evaluation of 3,000 predictions from ten frozen open models, 86.1% are judged semantically plausible. However, several models exhibit highly asymmetric authorisation behaviour, combining low false-safe execution with poor recall of clarifiable ASK cases and a strong preference for BLOCK. This motivates safety sufficiency: whether a predictive interface preserves and exposes the policy-decisive information required to distinguish actions that may be EXECUTED, require clarification through ASK, or should be BLOCKED. We introduce SafeWebWorld, a benchmark for evaluating safety sufficiency across five web-safety domains through action-conditioned futures, policy-decisive evidence, and policy-conditioned decisions. Under a controlled Security-Aligned Supervised Fine-Tuning protocol, evidence preservation can improve substantially while authorisation-sensitive decisions deteriorate. To determine whether this deterioration reflects loss of authorisation-sensitive score structure or a failure of the decision readout, we introduce Latent Authorisation Recovery (LAR). Frozen-score recalibration reveals substantial but backbone-dependent recovery, while paired recovery provides only a modest additional gain. Yet within-family and matched-authorisation evaluations remain poor, showing that aggregate recoverability does not imply robust fine-grained authorisation behaviour. Overall, plausible prediction, evidence preservation, and aggregate recovery are each insufficient on their own to establish robust authorisation.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Beyond Plausible Prediction: Safety Sufficiency in Web World Models",
+      "url": "https://arxiv.org/abs/2610.40798v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "45f5f4a7545c3d590e49198b",
+      "context_id": "ce0141fed02144afa68a5c08",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "30a2b9c9ce1f0f98d0077f3e3ec73cfe52b39c99d9db2bab2b22faeb70b3071c",
+      "source_published": "2026-10-29T18:00:06Z",
+      "source_updated": "2026-10-29T18:00:06Z",
+      "summary": "The semidefinite programs (SDPs) of the numerical conformal bootstrap, and of S-matrix and quantum-mechanics bootstraps, are solved with primal-dual interior-point methods whose convergence guarantees rest on primal and dual Slater conditions: the existence of strictly feasible points on both sides of the duality. Many bootstrap SDPs violate these. The consequences range from slow convergence to inconclusive verdicts and the breakdown of the Skydive algorithm. We introduce \"Slater tools\", all acting within the PMP class accepted by SDPB. Diagnostics measure the Slater margins and, when a margin vanishes, extract the exposing certificate that identifies the degeneracy. Two independent cures follow. Transforms that provide rigorous bounds on the original SDP objective and that for the right parameter choices return the exact value. Facial reductions that use the exposing certificate to remove the degeneracies themselves. We reproduce, explain and resolve all known types of failures in a mixed-correlator 3d Ising setup. We show that the $X$-Slater condition (SDPB's primal) fails at every disallowed point in feasibility mode, holds in every navigator problem we tested, and can be guaranteed by one additional condition on the navigator function. We show that the folklore \"instability remedy\" of a twist gap works by removing degeneracies at the endpoints of the positivity conditions. These often stem from a mistake in factoring out the block prefactor but can also arise legitimately in channels that mix equal and unequal operator pairs. Finally we classify and remove all degeneracies of the published current-scalar bootstrap, among them one at $x=\\infty$, thus incurable by any gap assumption, caused by unequal polynomial degrees within one matrix block.",
+      "tags": [
+        "hep-th",
+        "cond-mat.stat-mech"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Guaranteed Slater Conditions for the Numerical Conformal Bootstrap: Fixing Instabilities in SDPB, Navigator Methods, and Skydiving",
+      "url": "https://arxiv.org/abs/2610.40764v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "34cfe9dcf13d864c6c8a0e5c",
+      "context_id": "aa4f410a437bdfbe010d625e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "95c1e855ec59516b57c0461ae636ef9f1510d26372ee82e937a3729621869b1c",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "50/60 MISSION RELIABILITY IN AUTONOMOUS NANOROBOTIC REGENERATIVE MANUFACTURING AT THE LIMIT MISSION RELIABILITY IN AUTONOMOUS NANOROBOTIC REGENERATIVE MANUFACTURING AT THE LIMIT is a 777-page English-language Research Design Working Edition in the STARLI Micro/Nanorobot Fabrication and Regenerative Biomanufacturing Sixty-Flagship series (Flagship 50/60). It investigates safe failure recovery with preserved productive service. The research coupling is autonomous manufacturing mission x regenerative specimen integrity x physically verified fault recovery. All proposed work is restricted to nonclinical in-vitro, organ-on-chip, synthetic phantom or authorized ex-vivo environments. No experiments were executed in preparing this edition; no human treatment, clinical efficacy or regulatory clearance is claimed. Its falsifiable candidate is: A frozen safety and recovery protocol will improve completed qualified work at equal fault burden while meeting independent stop and specimen integrity gates. The Atlas minimum demonstrator is: Blind-inject four fault classes into complete cell assembly missions with matched useful work targets. Strong comparators include expert human operation, fixed automation scripts and conventional redundant hardware. A central rival account is apparent safety caused by aborting early and completing less useful work. The nonnegotiable stop condition is: no advantage at equal effective work or an unknown fault fails to stop the apparatus. Each failed, aborted, hidden-fault and incomplete run is retained in the experimental denominator, and observation of a finished form is never substituted for independently measured function. Thirty mathematical plates address domain-specific metrics and established model families across transport, measurement, elasticity, time-dependent dynamics, causal attribution, calibration and uncertainty. Eighty-two chapters and 410 separately paginated scientific investigations organize six research arcs. Two hundred Research Gates have been revised with independent observables, one of fifteen blinded causal intervention families, orthogonal controls and noncompensatory refusal criteria. Thirty mathematical plates now carry model-specific physical derivation commentary, explicit applicability limits and distinct flagship-level blind checks. Thirty-three Phoenix Answer Embryos propose unbuilt future instruments and succession artifacts, each requiring its own bench validation. This version is a research design and not a report of validated physical findings. It draws scientific method and conceptual boundaries from the user-supplied Atlas and research mother volumes; especially the Atlas-supplied ancestry DOI 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020. Full external bibliographic DOI checking and scientific peer review have not been completed. Domain-specific sensitivity, causal identifiability and independent replication require qualified laboratory evaluation before any scientific superiority claim. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 50 of 60 Edition: Research Design Working Edition v1.1 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "50/60 MISSION RELIABILITY IN AUTONOMOUS NANOROBOTIC REGENERATIVE MANUFACTURING AT THE LIMIT MISSION RELIABILITY IN AUTONOMOUS NANOROBOTIC REGENERATIVE MANUFACTURING AT THE LIMIT is a 777-page English-language Research Design Working Edition in the STARLI Micro/Nanorobot Fabrication and Regenerative ",
+      "url": "https://zenodo.org/records/23865219"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "a124df8981779f1671866862",
+      "context_id": "981ddc631dfc958169753d1b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "48bc3528b85d59b2b1e248e36d0f30daf157b66ae5e490544aa52ddf09c82f14",
+      "source_published": "2026-11-02",
+      "source_updated": "",
+      "summary": "Flagship 60/60 Can distributed research stations preserve qualified biosafe work and genuine operator exit when suppliers, control versions or core services disappear? TRUSTWORTHY AUTONOMOUS NANOROBOTIC MANUFACTURING PLATFORMS FOR REGENERATIVE MEDICINE AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates bounded autonomous manufacturing under explicit authorization and independent release. Its scientific coupling is nanorobotics x autonomous biomanufacturing x regenerative quality governance. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Can distributed research stations preserve qualified biosafe work and genuine operator exit when suppliers, control versions or core services disappear? The proposed minimum demonstration is: Two independent community laboratories reconstruct and release nonclinical mock devices from a shared open evidence package. Strong comparators include centralized controlled manufacture, skilled manual labs and single-vendor automation. The central competing explanation is distributed autonomy secretly dependent on centralized reagents, controls or calibration. The noncompensatory stop rule is: operator exit becomes impossible, site performance gap grows or minimum safe service is interrupted. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 60 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Flagship 60/60 Can distributed research stations preserve qualified biosafe work and genuine operator exit when suppliers, control versions or core services disappear? TRUSTWORTHY AUTONOMOUS NANOROBOTIC MANUFACTURING PLATFORMS FOR REGENERATIVE MEDICINE AT THE LIMIT This 777-page Research Design Work",
+      "url": "https://zenodo.org/records/23870929"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "aa040f39c21b665a8f8d89da",
+      "context_id": "72d3c7bcff7389202bd1834a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "c80f46467895be3aac1ce8037f4bf44cbe2a14ea271005a08f7e52332f20feb1",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "PyAutoLens v2026.11.1.1 What's New Breaking Changes feat: magnification latent from raw fluxes, no magzero (arc phase 7a) ( #813 ) magnification latent no longer needs magzero (its magzero argument is now optional and unused); default unchanged (off). New Features feat: expose four-panel introductory dataset plotting ( #809 ) Internal Docs: lead Start Here with natural language or Python ( #814 ) feat: al.twins model builder and posterior recovery table (LensTwin 4a) ( #811 ) Upstream Changes PyAutoFit fix: draw_randomly_via_pdf normalises sample weights ( #1751 ) fix: results index skips campaign task records; batch wait loop keeps the fit's exit status ( #1750 ) feat: campaign carbon estimate and end-of-campaign report (hpc-campaign p4) ( #1748 ) feat: campaign evidence readers, evidence-graded plan and pilot (hpc-campaign p3) ( #1747 ) feat: read zipped results in place — ZipMember, from_zip, value(kind=), Aggregator.from_index (results-library p1b) ( #1744 ) feat: results index, result states, dataset_identity.json and latest_per (results-library p1a) ( #1743 ) feat: campaign collector, digest, propose-only resubmits and retro mode (hpc-campaign p2b) ( #1742 ) feat: campaign.yaml, scheduler adapters and the GPU-partition lint (hpc-campaign p2a) ( #1741 ) feat: per-fit status record, failure record and run-state vocabulary (hpc-campaign phase 1) ( #1738 ) feat: results-library phase 0b — honest reads ( #1737 ) feat: results-library phase 0a — artefact integrity ( #1736 ) PyAutoArray feat(util.dataset): add simulate_if_needed one-line auto-simulate helper ( #670 ) fix: adaptive rectangular meshes report their true pixel centres ( #668 ) feat: exact kNN mesh magnification areas (arc phase 4b) ( #666 ) fix: exact mesh magnification areas (RectangularUniform + adaptive rectangular) with per-mesh tests (arc phase 4a) ( #664 ) chore: remove dead files/ experiment scripts and notes ( #663 ) feat: four-panel introductory imaging plot using standard styling ( #661 ) PyAutoGalaxy Docs: lead Start Here with natural language or Python ( #688 ) fix: area magnification sub-pixel area follows the generated sub-pixels ( #687 ) feat: LEGGOS area magnification on LensCalc (arc phase 6a) ( #685 ) fix: analytic Chameleon potential + jit-safe Chameleon profiles ( #683 ) fix: lmp.Gaussian potential from its analytic deflection (correct + ~100x faster) ( #681 ) feat: expose introductory imaging plots and shared contrast stretch ( #679 ) Full changelog: https://github.com/PyAutoLabs/PyAutoLens/compare/2026.10.29.1...2026.11.1.1",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "PyAutoLabs/PyAutoLens: v2026.11.1.1",
+      "url": "https://zenodo.org/records/23865668"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "53bd1caf3caf4ebff20120e1",
+      "context_id": "674fee59eee3a5337f65b473",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "52bcc3594db7309d4fdb88addd2efe021c8208f635a9546b70d5ba88c523d473",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Industrial Screw Driving Datasets This comprehensive dataset collection captures time-series data from industrial screw driving operations in plastic components. Designed for research in manufacturing process monitoring, anomaly detection, and quality control, it includes over 34,000 individual screw driving operations across six distinct scenarios. Each scenario investigates specific aspects of the screw driving process, from natural wear patterns to controlled material variations. Overview Scenario name Observations Classes Purpose s01_variations-in-thread-degradation &nbsp;5,000 &nbsp;1 Studies natural degradation of plastic threads over repeated use cycles, documenting wear patterns and failure progression s02_variations-in-surface-friction 12,500 &nbsp;8 Examines effects of different surface conditions (lubricants, surface treatments, contamination) on screw driving performance s03_variations-in-assembly-conditions-1 &nbsp;1,700 26 Investigates diverse component and assembly faults including washer modifications, thread deformations, and alignment issues s04_variations-in-assembly-conditions-2 &nbsp;5,000 25 Features methodically arranged assembly fault conditions in 5 distinct error groups with paired normal/abnormal operations s05_variations-in-upper-workpiece-fabrication &nbsp;2,400 42 Analyzes how injection molding parameter variations in the upper component affect screw driving metrics s06_variations-in-lower-workpiece-fabrication &nbsp;7,482 44 Explores effects of injection molding parameter variations in the lower component on fastening quality Experimental Setup Automatic screwing station (EV motor control unit assembly) Delta PT 40x12 screws optimized for thermoplastics Target torque: 1.4 Nm (range: 1.2-1.6 Nm) Sampling frequency: 833.33 Hz Data completeness: &gt;95% Detailed time-series measurements including torque, angle, gradient, and time values Dataset Features These datasets are suitable for various research purposes. Each ZIP file contains:&nbsp; Complete raw data in JSON format for maximum flexibility Standardized labels.csv files for metadata and classification Comprehensive README.md documentation for each scenario Various error classes with varying degrees of severity Time series data for the complete screwing process Research Applications Development of machine learning models for anomaly detection Process monitoring and quality control system development Manufacturing analytics and parameter optimization Digital twin development for screw driving operations Material property influences on assembly processes Access and Usage For data handling, we recommend our&nbsp; PyScrew Python package ( https://github.com/nikolaiwest/pyscrew ). However, this is optional: The data is easily accessible using standard JSON and CSV processing. No changes were made to the raw data and all information on the experiments can be found in the labels.csv file.&nbsp; Citation Request When using this dataset in academic work, please cite this project or the mentioned papers from the README.md files. Contact and Support For questions, issues, or collaboration interests regarding these datasets, either: Open an issue in our GitHub repository PyScrew Contact us directly via email Acknowledgments These datasets were collected and prepared by: RIF Institute for Research and Transfer e.V. Technical University Dortmund , Institute for Production Systems The preparation and provision of the research was supported by: German Ministry of Education and Research (BMBF)&nbsp; European Union's \"NextGenerationEU\" program The research is part of this funding program More information regarding the research project is available&nbsp; here",
+      "tags": [
+        "Manufacturing Data",
+        "Screw Driving Operations",
+        "Tightening Process",
+        "Anomaly Detection",
+        "Time Series Data",
+        "Quality Control",
+        "Process Monitoring",
+        "Machine Learning",
+        "Thermoplastics",
+        "Fastening Operations",
+        "Thread Degradation",
+        "Industrial Automation",
+        "Real-world Data",
+        "Supervised Learning",
+        "Unsupervised Learning"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Industrial screw driving dataset collection: Time series data for process monitoring and anomaly detection",
+      "url": "https://zenodo.org/records/23853641"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "342405af30593710540bf476",
+      "context_id": "451ac512f0c98c67b763a0b0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "b7a44590c9b1ed71d27ce330fb1c882ab18fddffde4a0d31cf95dbbfef1156c4",
+      "source_published": "2026-11-02",
+      "source_updated": "",
+      "summary": "Flagship 59/60 Does microrobotic manufacture reduce cradle-to-disposal resources per independently function-qualified tissue unit rather than shifting burdens to computing or consumables? LIFECYCLE AND SUSTAINABILITY ENGINEERING FOR NANOROBOT-ASSISTED REGENERATIVE MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates functional-unit normalized whole-system material and energy accounting. Its scientific coupling is biomanufacturing x resource efficiency x life-cycle governance. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Does microrobotic manufacture reduce cradle-to-disposal resources per independently function-qualified tissue unit rather than shifting burdens to computing or consumables? The proposed minimum demonstration is: Meter complete energy and consumables for a small-batch robotic and conventional tissue manufacturing comparison. Strong comparators include conventional bioprinting and centralized regulated-grade benchmark workflows. The central competing explanation is hidden reagent, compute or cold-chain displacement beyond the declared factory boundary. The noncompensatory stop rule is: material boundary is incomplete or advantage disappears per qualified functional unit. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 59 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Flagship 59/60 Does microrobotic manufacture reduce cradle-to-disposal resources per independently function-qualified tissue unit rather than shifting burdens to computing or consumables? LIFECYCLE AND SUSTAINABILITY ENGINEERING FOR NANOROBOT-ASSISTED REGENERATIVE MANUFACTURING AT THE LIMIT This 777",
+      "url": "https://zenodo.org/records/23870861"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "65c322091131a272b66cef31",
+      "context_id": "3d20b98c439087e66da18a48",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "13a4b9c95603c318c9e0077042a985551dc9950ff4d6ef3380150e9eaf413c35",
+      "source_published": "2026-11-02",
+      "source_updated": "",
+      "summary": "Flagship 58/60 Can a closed microrobotic process detect and contain rare microbial, cellular and material carryover without untraceable exposures or false safety clearance? BIOSAFETY AND CONTAMINATION GOVERNANCE IN NANOROBOT-ASSISTED REGENERATIVE MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates source-resolved contamination detection, local containment and auditable recall. Its scientific coupling is biosafety x contamination control x manufacturing integrity. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Can a closed microrobotic process detect and contain rare microbial, cellular and material carryover without untraceable exposures or false safety clearance? The proposed minimum demonstration is: Seed safe, coded surrogate contamination events in sealed mock-process zones; audit abstention and recall. Strong comparators include endpoint culture, manual inspection and precautionary all-batch disposal. The central competing explanation is lower contamination event count because the new system performs fewer useful tasks. The noncompensatory stop rule is: a dangerous contamination event is missed or sample ancestry cannot be recovered. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 58 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Flagship 58/60 Can a closed microrobotic process detect and contain rare microbial, cellular and material carryover without untraceable exposures or false safety clearance? BIOSAFETY AND CONTAMINATION GOVERNANCE IN NANOROBOT-ASSISTED REGENERATIVE MANUFACTURING AT THE LIMIT This 777-page Research Des",
+      "url": "https://zenodo.org/records/23870804"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "0bc452773f36260eda36c1fc",
+      "context_id": "3957eba933157f319956c460",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "20cd50ee8491ef5ea4a5d0c9899f8085093dcf08b17a39062ecce392d67debf8",
+      "source_published": "2026-10-30T04:04:48Z",
+      "source_updated": "2026-10-30T04:04:48Z",
+      "summary": "Generative models are increasingly used for circuit synthesis and optimization by proposing topologies, sizing devices, and exploring large design spaces. We investigate whether they can instead support design discovery, where generated structures must depart from known designs while producing reproducible electrical behavior. We propose Delta-Seeker, a closed-loop circuit search framework that combines discrete diffusion for topology generation and mutation with structural checking, SPICE-in-the-loop sizing, Pareto selection, and feedback from prior search outcomes. The search controller uses progress and recurring structural failures to allocate evaluation effort and steer subsequent topology generation, while independent re-sizing and operating-corner analysis are performed only after search. In generator-only experiments, cross-generation feedback increases structurally valid children from 143 to 945 and reduces the faulty-candidate fraction from 0.925 to 0.761. In op-amp topology discovery at matched sizing cost, Delta-Seeker yields 54 designs that remain feasible in at least three of four independent re-sizings and 18 that additionally pass device-level checks and supply-temperature corner analysis, compared with 38 and 10 under fixed control. Removing cross-generation memory reduces independently robust discoveries from 54 to 43 and seven-corner robust discoveries from 40 to 27. In DC-DC converter search, nearest-parent analysis identifies a corpus-absent topology whose generated switching current path changes its nearest training-corpus parent from infeasible at all four operating corners to feasible at all four, while increasing median efficiency from 31.2% to 98.96%. These results show that closed-loop generative search can support circuit discovery beyond structural novelty by identifying new topologies with independently verified changes in circuit operation.",
+      "tags": [
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Delta-Seeker: Closed-Loop Generative Search for Novel Circuit Design Discovery",
+      "url": "https://arxiv.org/abs/2610.41227v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "461d4b4adbfc4996cdb85d0b",
+      "context_id": "370d863d6ad396e3127d3223",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "0671b88a4449df8be17a235e7d741e9a214cd148e85f4db4bd0aa8fabf571548",
+      "source_published": "2026-10-29T21:28:51Z",
+      "source_updated": "2026-10-29T21:28:51Z",
+      "summary": "Steering vectors (SVs) are residual-stream directions that shift the behavior of LLMs when added to hidden states at inference time. While prior work has mainly used SVs as post-hoc controls, we ask whether the same directions can also guide parameter updates during post-training. We study this question across supervised learning, including SFT and distillation, and reinforcement learning with verifiable rewards (RLVR). Our framework considers two intervention regimes: a hidden-state hook during teacher-forced supervised training, and an advantage-repair mechanism on wrong rollouts in GRPO. For each regime, we analyze three design axes, which are the steering direction, its placement, and the operation used to combine it with training. In supervised settings, SV injection improves over plain SFT and distillation, with gains scaling with the off-policy gap and reaching up to a $12\\%$ improvement when distilling from thinking-mode teachers. These gains hold across three random seeds. In RL settings, applying a correctness-contrast direction as advantage repair on wrong rollouts, including otherwise zero-gradient all-wrong groups, recovers a learning signal that transfers to held-out math benchmarks and acts as a composable auxiliary signal that adds to existing zero-variance remedies such as entropy-aware advantage shaping. We further identify three failure boundaries. In detail, code generation can break the direction, cross-family layer transfer can break the placement, and inference-time application on an SV-trained checkpoint can break the intervention regime. Together, these results establish steering vectors as a conditional but effective training signal for LLM post-training. Our code is available here.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Steering Vectors as a Training Signal in LLM Post-Training",
+      "url": "https://arxiv.org/abs/2610.40998v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "3f19d3b6104d1da97ebdf812",
+      "context_id": "13374ee8c3620f80b4164c19",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "non-identifiability"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.9583,
+      "source": "arxiv",
+      "source_context_sha256": "af6b2acda31eba4b407a4531ee6e107b96bdfd6998e9e4563f29b00139ea43d0",
+      "source_published": "2026-10-30T03:30:56Z",
+      "source_updated": "2026-10-30T03:30:56Z",
+      "summary": "Rumor models of the Daley--Kendall and Maki--Thompson family anchor the statistical mechanics of social contagion, yet the stifler composition a rumor leaves behind has resisted closed-form analysis. Inspired by the asymmetric two-step pairing (A2SP) process of step-growth polymerization, we import its common-factor cancellation into a minimal two-stage MT variant in which re-contacted spreaders are re-activated into a senior class at rate $αk_1$ rather than stifled, and obtain exact terminal-state theorems. (i) Saturation: the rumor exhausts the ignorant pool for every stifling-to-recruitment ratio $μ>0$, with a three-way tail classification and a logarithmically critical line at $μ=1$. (ii) Final size: the terminal stifler pool splits as $(x_1,x_2)=(μ/(α+μ),α/(α+μ))$, independent of seed size; the fingerprint inverts linearly ($α=μx_2/x_1$) and matches Gillespie simulations within $0.95\\%$. (iii) Pooled versus history-resolved: pooled statistics are exactly $α$-free on any static graph; only the history-resolved composition carries $α$. Restoring the classic teller-retires channel breaks the exact closure beyond quantified gates (contact rates of $1$--$3\\%$ of $k_1$ for spreader channels at $μ\\leq1.5$, up to $32\\%$ at $μ=2$), and on configuration-model networks the composition bias decays as $\\langle k\\rangle^{-0.71}$. An exploratory inversion of 354,930 Higgs--Twitter retweet episodes, screened by an identity check and four negative controls, yields $\\hatα=2.21\\%$ (joint cluster-bootstrap CI $[1.6\\%,3.0\\%]$; $\\approx3.7\\%$ after calibration at the matched threshold). Terminal compositions identify this effective re-activation rate, an upper bound on contact-coupled re-activation; the mechanism itself requires timing information beyond the terminal state.",
+      "tags": [
+        "physics.soc-ph"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Terminal-state theorems for a two-stage Maki--Thompson rumor model: final size, stifler composition, and non-identifiability from pooled statistics",
+      "url": "https://arxiv.org/abs/2610.41206v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "d6a143c8c30caf89af9d9e36",
+      "context_id": "f075cfae0cb5a519ce5311d3",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "adddab9babc0a86318e6536a05e75326dff171f3be1e3a558151e67280bbd17b",
+      "source_published": "2026-10-30T02:44:51Z",
+      "source_updated": "2026-10-30T02:44:51Z",
+      "summary": "The ability to integrate new information and deduce its consequences is central to learning, understanding, and reasoning in large language models (LLMs). Whether information arrives during training or in-context, models must not only store local facts, but propagate their long-range implications globally. To explore information integration in LLMs, we introduce two complementary natural language benchmarks for large-scale evaluation of deductive reasoning as a function of inference depth. The first is a formal graph benchmark enabling controlled evaluation over a wide range of graph topologies and integration tasks; the second is a knowledge composition benchmark grounded in real-world knowledge graphs. We use these benchmarks to compare knowledge integration from information encoded in context versus information encoded in model weights during pretraining, evaluating a set of open models implicitly, without chain of thought. We find that accuracy decays sharply with increased composition length for both pretrained and in-context knowledge. Information presented in-context, however, substantially outperforms deduction over information encoded in weights. These results quantify a fundamental limitation of current models with direct implications for prompt-based control of agent behavior and for continual learning strategies, and they provide a foundation for developing training, prompting, and integration methods that support deeper reasoning.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "ImplicitHop: Evaluating knowledge integration across context and memory",
+      "url": "https://arxiv.org/abs/2610.41169v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "d371db8e4f7740575e99105d",
+      "context_id": "4d0e722eb1f5cb764ba90e86",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "926c41045e40ad67d724f5bb55b76fd91eb76b33f0f7023a257696f133e55245",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "This document is the supplementary technical appendix to the paper \"BRICER: Byzantine-Robust Private Mean Estimation over Intermittently-Connected Networks.\" This appendix collects the mathematical proofs and technical details that could not be included in the main paper due to page limitations. It covers the proof of Lemma 1 (privacy), Lemma 2 (participation), and Theorem 1 (mean-squared error guarantee). The appendix additionally provides a bound for the geometric-median aggregator, including its corresponding mean-squared error analysis; the optimization problem underlying the relay weights described in Section VI; and illustrative worked examples. The proof of Theorem 1 does not assume that honest Stage-1 outputs remain within a prescribed radius, accounting instead for their second-moment contribution and deriving the variance of the honest-only estimator explicitly. Finally, numerical checks of the theoretical lemmas and bounds are presented, together with supplementary assumptions, analytical details, and discussions supporting the results in the main paper. This appendix is intended to serve as a technical reference for the mathematical analysis and theoretical guarantees of BRICER.",
+      "tags": [
+        "Byzantine robustness",
+        "Differential privacy",
+        "Distributed computing",
+        "Intermittently-connected networks",
+        "Privacy-preserving machine learning",
+        "Mean estimation",
+        "Federated learning",
+        "Relaying",
+        "PRICER"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Appendix to \"BRICER: Byzantine-Robust Private Mean Estimation over Intermittently-Connected Networks\"",
+      "url": "https://zenodo.org/records/23854219"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "80a2f9c0a6bab8b7c3a422af",
+      "context_id": "a978bacbad0208209004a111",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "confound"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.3333,
+      "source": "zenodo",
+      "source_context_sha256": "738716b5185dcfe57eea576bf33827218fdffb5b82d164e88ed30f3449dceaad",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Extending Granger causality to tell a direct link from a hidden common cause: the earlier signal is whitened on the joint past, then a rank-based HCR test of residual independence with calibrated p-values is applied, which works when the innovations are non-Gaussian. Includes a one-file Python tool, a browser version, and checks on synthetic data, rivers, stock returns and microservice incidents.",
+      "tags": [
+        "Granger causality, hidden common cause, latent confounder, causal discovery, time series, hierarchic"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Extending Granger causality to separate common cause in some cases",
+      "url": "https://zenodo.org/records/23859887"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "daa85abcd1d11ebd3b4c7a5e",
+      "context_id": "4639f763ee410255d25f701b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "zenodo",
+      "source_context_sha256": "49b7bd022777b3de834991cd9af31a787cfa74bab3fae114b7d3acafbe544842",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Pre-registered audit of twelve open-weight language models (Chinese, American, European, Thai and Korean) run locally with Ollama on a 240-prompt factorial design: investor nationality &times; prompt language &times; risk tolerance &times; horizon &times; template. Each model allocates 100% across eight equity markets. The archive holds the research note ( paper/paper.pdf ), the pre-analysis plan, the prompt set, all raw replies, the parsed panel, the estimation code and the generated tables and figures. Every number in the note is rebuilt from the cached replies with make all . Headline result: with the prompt held fixed, a model's home market receives &minus;0.42 pp (95% CI &minus;0.59 to &minus;0.25) relative to what models of other origins give it, so the pre-registered home-bias hypothesis is not supported. The investor's stated country of residence moves allocations by +1.88 pp, about four times the absolute size of the home effect. Licences: code and text Apache-2.0; prompt set, parsed tables and documentation CC BY 4.0; model outputs remain subject to the licence of the model that generated them.",
+      "tags": [
+        "large language models",
+        "home bias",
+        "portfolio allocation",
+        "robo-advice",
+        "AI audit",
+        "open-weight models",
+        "pre-registered",
+        "Thailand",
+        "open data"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Do Open-Source LLMs Have a Home Bias? Investment Advice from Chinese, American, European and Thai Models (research note, replies dataset and code)",
+      "url": "https://zenodo.org/records/23861653"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "47348f91beb948767992b40b",
+      "context_id": "3ed7b1161b19e9a9ce7cd7c2",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "zenodo",
+      "source_context_sha256": "9ef6a5533268a5e3886ed8f970c5051c99a98600fc53757f26c7f4f7e227054d",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "&nbsp;MANIFESTO MSDT ( Metodo Scientifico Digitale Tola ). Il presente documento e' un&nbsp; Framework normativo e cibernetico&nbsp; &nbsp;per la gestione della propriet&agrave; intellettuale e la validazione crittografica delle competenze educative, scientifiche&nbsp; e l'interoperabilit&agrave; plurisettoriale e sistemico-integrata . FRAMEWORK&nbsp; EUROPEO MSDT - Medoto Scientifico Digitale Tola Autorit&agrave; Internazionale IANA PEN: Integrazione strutturale del Private Enterprise Number 66881 , assegnato dall'Internet Assigned Numbers Authority. La radice OID 1.3.6.1.4.1.66881 funge da nodo gerarchico primario da cui dipendono i moduli di interblocco macchina e supervisione umana. &nbsp; METODO SCIENTIFICO DIGITALE TOLA (MSDT) - MASTER RELEASE VERSIONE 27 (AIP) Autore e Responsabile Scientifico: Prof. Francesco Tola (C.F. TLOFNC80D30G348Z ) Stato Giuridico-Computazionale: Pienamente operativo ed esecutivo Identificatore di Radice Internazionale (OID): urn:oid:2.5.4.97:IT-TLOFNC80D30G348Z::MSDT-PARCS-ROOT Autorit&agrave; Internazionale IANA PEN: Private Enterprise Number 66881 (Radice OID Master: 1.3.6.1.4.1.66881 ) Qualificazioni Strategiche di Procurement Internazionale: Codice NATO NCAGE: AY470 (Ministero della Difesa - Direzione Nazionale degli Armamenti) Codice EU PIC (Participant Identification Code): 860441411 (Portale UE Funding &amp; Tenders ) 1. MANIFESTO MSDT: FRAMEWORK NORMATIVO E CIBERNETICO Il presente documento costituisce l'aggiornamento strutturale e l'asseverazione forense definitiva del Framework Europeo MSDT (Metodo Scientifico Digitale Tola) . L'attuale release formalizza l'architettura cibernetica di terzo ordine per il controllo deterministico e la supervisione antropocentrica sui sistemi di Intelligenza Artificiale ad Alto Rischio (piena conformit&agrave; al Regolamento UE 2024/1689 \"AI Act\", Art. 14 e Art. 50) . Il framework opera come un ecosistema ad alta densit&agrave; di token per la gestione della propriet&agrave; intellettuale, la validazione crittografica delle competenze educative e scientifiche, e l'interoperabilit&agrave; plurisettoriale e sistemico-integrata . La radice OID 1.3.6.1.4.1.66881 funge da nodo gerarchico primario da cui dipendono i moduli di interblocco macchina e supervisione umana . 2. CONFORMIT&Agrave; FAIR E ARCHITETTURA RO-Crate (RESEARCH OBJECT CRATE) L'intero Archival Information Package (AIP) della Versione 27 &egrave; strutturato, indicizzato e rilasciato in piena conformit&agrave; ai principi FAIR ( Findable, Accessible, Interoperable, Reusable ) tramite l'implementazione nativa dello standard internazionale RO-Crate 1.1 ( ro-crate-metadata.json ) . Questo garantisce che l'opera sia un oggetto di ricerca autosufficiente e macchina-leggibile: Findable (Rintracciabile): Ancoraggio permanente tramite Digital Object Identifier (DOI) globali (Concept DOI 10.5281/zenodo.20177271 e identificativi di versione) e metadati persistenti registrati nell'albero IANA PEN 66881 . Accessible (Accessibile): Disponibilit&agrave; dei file in formati standard aperti e protetti, corredati da marcatura PAdES-LTA (orizzonte fiduciario esteso al 31 Ottobre 2046) e accessibilit&agrave; universale certificata ISO/IEC 40500:2012 (WCAG 2.2 Livello AAA) e Direttiva UE 2019/882 per utenti ipovedenti . Interoperable (Interoperabile): Integrazione nativa di ontologie semantiche basate su standard W3C Schema.org, JSON-LD, Dublin Core (ISO 15836:2009) e trilinguismo lineare attivo (IT, EN, FR) per l'interfacciamento con il Portafoglio Europeo di Identit&agrave; Digitale (EUDI Wallet) e le Autorit&agrave; di Vigilanza Europee (ESA) . Reusable (Riusabile): Tracciabilit&agrave; crittografica rigorosa e immodificabile a entropia nulla ( $H = 0.0000$ ), corredata da licenza di citazione accademica (CC BY 4.0) e da riserva esplicita contro l'estrazione massiva non autorizzata e il data scraping per l'addestramento di modelli di intelligenza artificiale generativa (LLM) . 3. QUALIFICAZIONI STRATEGICHE DI P",
+      "tags": [
+        "MSDT",
+        "Statistical Uniqueness",
+        "Hybrid Intelligence",
+        "Evidence Package",
+        "MSDT v7Metodo Scientifico Digitale Tola  Francesco Tola Ricercatore Indipendente  Ingegneria Ciberne",
+        "Auditing Algoritmico Indipendente",
+        "Standard di Conformità Internazionale",
+        "Rigore Metodologico Epistemologico",
+        "Validazione Universale Interoperabile senza Bias",
+        "Matrice Metrologica ad Alta Densità Informativa",
+        "Benchmark della Ricerca Indipendente dell'Unione Europea",
+        "Catena di Custodia dei Dati Forense",
+        "Dispositivo Forense Anti-Appiattimento Semantico Universale",
+        "Autoregolamentazione e Certificazione di Qualità Forense senza Bias",
+        "Scudo di Inviolabilità Fiscale Internazionale del Patrimonio Intellettuale",
+        "Architettura Scientifica Opponibile a Terzi",
+        "Protocollo di Trilinguismo Lineare Attivo",
+        "Standard di Certificazione Metodologica Inopponibile",
+        "Quadro Sovrano di Supervisione Umana (Human Oversight)",
+        "Azione Coercitiva Automatizzata da Macchina a Macchina (Machine-to-Machine)",
+        "MASTER OID (ETSI/X.509 2.5.4.97 Root): urn:oid:2.5.4.97:IT-TLOFNC80D30G348Z::MSDT-PARCS-ROOT"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "MANIFESTO DEL METODO SCIENTIFICO DIGITALE TOLA (MSDT) - Executive Summary & AI Sovereign Supervision Framework",
+      "url": "https://zenodo.org/records/23865862"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "bff24d76010ef0d754a528ae",
+      "context_id": "20b505b91660e3c21cba5497",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "zenodo",
+      "source_context_sha256": "afb9e76c740b1a87fe94219db020fea1e452bbd7c2770a275c21657c9168402e",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Abstract and Prior-Art Disclosure This manuscript serves as a formal public prior-art disclosure, conceptual research archive, and consolidated technical design dossier for the proposed Metric Spacetime Manipulator 26 (MSM-26) architecture. As the twenty-sixth revision and direct successor to MSM-25 Rev. 3, MSM-26 preserves the established architectural topology, chronological provenance, authorship, foundational subsystem configurations, and speculative physical mechanisms of the continuing Metric Spacetime Manipulator research program, while introducing substantial refinements to its flux-bias architecture, resonator construction, electromagnetic coupling configurations, operating principles, and associated engineering specifications. This revision supersedes MSM-25 Rev. 3 and all preceding MSM revisions, except where earlier configurations are explicitly retained as architectural inheritance or documented in the revision-comparison, errata, and reconciliation registers. MSM-26 specifies a cryogenic superconducting architecture whose active core consists of a closed, series-connected chain of Superconducting Nonlinear Asymmetric Inductive eLement (SNAIL) fluxonium cells , collectively designated the SNAILonium. Adjacent galvanically connected SNAIL elements possess alternating loop chirality, with each element incorporating exactly (n=3) large Josephson junctions and an associated small Josephson junction. The architecture retains its admissible superconducting conductor configurations, comprising the superconducting flat-wire ribbon and the contour-conformal coplanar-waveguide configuration, with the latter incorporating ground-plane boundaries that follow the SNAIL contour and locally widened gaps around the junction regions. The Josephson-junction interlayer retains three admissible configurations: a conventional dielectric insulating barrier, magic-angle twisted bilayer graphene, and moir&eacute;-twisted (MoTe_2). The architecture retains three principal SNAILonium lumped-element resonance circuit configurations: the ring-shaped resonator, the flat bifilar Fermat spiral terminating in two tangentially and galvanically coupled SNAILonium rings, and the bifilar poloidal&ndash;toroidal helix arranged along closed toroidal geodesics. The third configuration further incorporates a dedicated second filar functioning concurrently as a flux-bias line and kinetic inductance resonator. This revision substantially develops that dual-function subsystem into a three-construction architecture comprising (a) a superconducting split-ring resonator formed from a capacitive-gap-interrupted flat-wire ribbon; (b) a coplanar-strip (CPS) resonator, newly introduced in MSM-26, with one or both superconducting strips interrupted by transverse capacitive gaps arranged in-line or offset by (90^\\circ); and (c) a coplanar-waveguide (CPW) resonator incorporating in-line capacitive gaps in its ground-plane rings. The capacitive discontinuities may be implemented using vacuum air-bridge or interdigital capacitors. All three constructions are broadside coupled to the superconducting SNAILonium conductor carrying the (n=3) large junctions. Beyond specifying these three constructions, MSM-26 develops their associated electromagnetic operating characteristics, including the common and staggered flux-response patterns, coplanar-strip odd- and even-mode field configurations, gap-dependent fundamental-mode selection, distributed resonator behaviour, and the concurrent flux-biasing and kinetic-inductance-resonance functions. The revised architecture also incorporates the flux-biasing superconducting Helmholtz superinductor pair, providing the global magnetic-flux-biasing configuration, alongside the ring-level and strut-level flux-bias subsystems. A broadside-coupled Klopfenstein capacitive feed with a vacuum dielectric gap and superconducting ratchet mechanism is retained, with an xmon or paddle-shaped transmon capacitor available as an alternative capacitiv",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Metric Spacetime Manipulator 26 (MSM-26)",
+      "url": "https://zenodo.org/records/23852602"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "selection": "BALANCED_LENS_ROLLING_TOP",
+  "snapshot_cap": 48,
+  "snapshot_items_total": 27,
+  "target_repository": "Hawkar-usls/janus-distributed-ai-swarm"
+}
