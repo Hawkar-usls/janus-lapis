@@ -24,6 +24,7 @@ on:
       - "requirements-ocean-beetle.txt"
       - "tests/test_beetle_shard_store.py"
       - "tests/test_beetle_delivery.py"
+      - "tests/test_beetle_private_ack.py"
       - "tests/test_beetle_partial_checkpoint.py"
   workflow_dispatch:
     inputs:
@@ -81,6 +82,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_beetle_shard_store.py' -v
           python -m unittest discover -s tests -p 'test_beetle_delivery.py' -v
+          python -m unittest discover -s tests -p 'test_beetle_private_ack.py' -v
           python -m unittest discover -s tests -p 'test_beetle_partial_checkpoint.py' -v
           python -m unittest discover -s tests -p 'test_beetle_git_push.py' -v
           python -m unittest discover -s tests -p 'test_beetle_rowan_focus.py' -v
@@ -269,6 +271,10 @@ jobs:
       - name: Validate live receiver ACK backpressure before producing new packages
         id: delivery_gate
         if: ${{ steps.worker.outcome == 'success' }}
+        # Optional fine-grained SkinGPT CONTENTS:READ token. Never print or
+        # persist it. Without the secret, inaccessible ACK remains UNKNOWN.
+        env:
+          JANUS_BEETLE_PRIVATE_ACK_READ_TOKEN: ${{ secrets.JANUS_BEETLE_PRIVATE_ACK_READ_TOKEN }}
         run: |
           python lapis/tools/beetle_producer_routing_gate.py \
             --state-dir beetle-memory/data/beetle-state \
@@ -284,6 +290,8 @@ jobs:
 
       - name: Observe persisted receiver ACKs and delivery lag
         if: ${{ steps.worker.outcome == 'success' }}
+        env:
+          JANUS_BEETLE_PRIVATE_ACK_READ_TOKEN: ${{ secrets.JANUS_BEETLE_PRIVATE_ACK_READ_TOKEN }}
         run: |
           python lapis/tools/beetle_delivery_health.py \
             --state-dir beetle-memory/data/beetle-state \
