@@ -79,6 +79,24 @@ class RecoveryTests(unittest.TestCase):
         with self.assertRaises(m.RecoveryHold):
             m.delivery_backpressure(v,now)
 
+    def test_ack_conflict_overrides_global_backpressure(self):
+        h={"schema":"janus.beetle.delivery_health.v1",
+           "at":NOW.strftime("%Y-%m-%dT%H:%M:%SZ"),
+           "repositories":{f"consumer-{i}":{"pending":1,"status":"PENDING"}
+                           for i in range(19)},
+           "total_pending":19}
+        h["repositories"]["consumer-0"]["status"]="ACK_CONFLICT"
+        self.assertEqual(m.delivery_backpressure(h,NOW),"HOLD_ACK_CONFLICT")
+
+    def test_inconsistent_total_refused_even_when_backpressured(self):
+        h={"schema":"janus.beetle.delivery_health.v1",
+           "at":NOW.strftime("%Y-%m-%dT%H:%M:%SZ"),
+           "repositories":{f"consumer-{i}":{"pending":1,"status":"PENDING"}
+                           for i in range(19)},
+           "total_pending":25}
+        with self.assertRaisesRegex(m.RecoveryHold,"DELIVERY_PENDING_CONTRADICTION"):
+            m.delivery_backpressure(h,NOW)
+
     def test_missing_delivery_health_fails_closed(self):
         with self.assertRaises(m.RecoveryHold):
             m.delivery_backpressure(None,NOW)
