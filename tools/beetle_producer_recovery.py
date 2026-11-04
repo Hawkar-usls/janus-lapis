@@ -85,12 +85,16 @@ def delivery_backpressure(health, now):
            type(v.get("pending")) is not int or v["pending"] < 0
            for v in receivers.values()):
         raise RecoveryHold("DELIVERY_RECIPIENTS_INVALID")
+    # An inconsistent total or conflicting ACK is an integrity failure, not
+    # ordinary congestion. Check both *before* the volume backpressure gate.
+    if sum(v["pending"] for v in receivers.values()) != health["total_pending"]:
+        raise RecoveryHold("DELIVERY_PENDING_CONTRADICTION")
+    if any(v.get("status") == "ACK_CONFLICT" for v in receivers.values()):
+        return "HOLD_ACK_CONFLICT"
     if any(v.get("status") == "STALE" for v in receivers.values()):
         return "HOLD_STALE_RECEIVER_ACK"
     if health["total_pending"] >= max(2, len(receivers) // 2):
         return "HOLD_DELIVERY_BACKPRESSURE"
-    if sum(v["pending"] for v in receivers.values()) != health["total_pending"]:
-        raise RecoveryHold("DELIVERY_PENDING_CONTRADICTION")
     return "CLEAR"
 
 
