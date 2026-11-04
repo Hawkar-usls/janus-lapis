@@ -3,9 +3,12 @@
 from __future__ import annotations
 
 import argparse
+import base64
+import binascii
 import concurrent.futures
 import datetime as dt
 import json
+import os
 import pathlib
 import re
 import urllib.error
@@ -15,6 +18,58 @@ from beetle_mirror_router import load_json, atomic, safe_repo
 from beetle_memory_receiver import INBOX_STATUS
 
 ACK_PATH = 'beetle-memory/data/beetle-inbox/ACK.json'
+PRIVATE_ACK_REPOSITORY = 'Hawkar-usls/SkinGPT'
+PRIVATE_ACK_TOKEN_ENV = 'JANUS_BEETLE_PRIVATE_ACK_READ_TOKEN'
+PRIVATE_ACK_API = ('https://api.github.com/repos/Hawkar-usls/SkinGPT/'
+                   'contents/data/beetle-inbox/ACK.json?ref=beetle-memory')
+
+
+class RejectPrivateAckRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *_args, **_kwargs):
+        # Never forward a private repository token to a different host.
+        return None
+
+
+def fetch_scoped_private_ack(repo: str, token: str, opener=None):
+    """Read only SkinGPT's ACK with an optional repository-read-only secret.
+
+    No secret is logged or written to sender telemetry. A missing/invalid token
+    never permits simulated acknowledgment, state mutation, or wider scope.
+    """
+    if repo != PRIVATE_ACK_REPOSITORY or not isinstance(token, str) or not token:
+        return None, 'ACK_PRIVATE_SCOPE_DENIED'
+    request = urllib.request.Request(PRIVATE_ACK_API, headers={
+        'User-Agent': 'JANUS-Beetle-Private-ACK-ReadOnly/1',
+        'Accept': 'application/vnd.github+json',
+        'Authorization': 'Bearer ' + token,
+    })
+    try:
+        reader = opener if opener is not None else urllib.request.build_opener(
+            RejectPrivateAckRedirect())
+        with reader.open(request, timeout=8) as response:
+            payload = response.read(200_001)
+        if not payload or len(payload) > 200_000:
+            return None, 'ACK_PRIVATE_READ_UNAVAILABLE'
+        blob = json.loads(payload)
+        if (not isinstance(blob, dict) or blob.get('type') != 'file' or
+                blob.get('encoding') != 'base64' or
+                not isinstance(blob.get('content'), str) or
+                type(blob.get('size')) is not int or
+                not 0 < blob['size'] <= 100_000):
+            return None, 'ACK_PRIVATE_READ_UNAVAILABLE'
+        raw = base64.b64decode(''.join(blob['content'].split()), validate=True)
+        if len(raw) != blob['size']:
+            return None, 'ACK_PRIVATE_READ_UNAVAILABLE'
+        ack = json.loads(raw)
+        if not isinstance(ack, dict):
+            return None, 'ACK_PRIVATE_READ_UNAVAILABLE'
+        # Sender's inspect_queue independently checks the exact batch and
+        # hash; a readable but mismatched ACK must become ACK_CONFLICT.
+        return ack, None
+    except (OSError, ValueError, TypeError, UnicodeError, TimeoutError,
+            urllib.error.HTTPError, urllib.error.URLError, binascii.Error):
+        return None, 'ACK_PRIVATE_READ_UNAVAILABLE'
+
 
 
 def classify_missing_ack(repo: str) -> str:
@@ -47,6 +102,9 @@ def classify_missing_ack(repo: str) -> str:
 def fetch_ack(repo: str):
     if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repo):
         return None, 'INVALID_REPO'
+    private_token = os.environ.get(PRIVATE_ACK_TOKEN_ENV)
+    if repo == PRIVATE_ACK_REPOSITORY and private_token:
+        return fetch_scoped_private_ack(repo, private_token)
     url = f'https://raw.githubusercontent.com/{repo}/{ACK_PATH}'
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'JANUS-Beetle-Delivery-Health/1'})
@@ -128,6 +186,12 @@ def inspect(root: pathlib.Path, fetcher=fetch_ack, stale_minutes: int = 180,
     for repo, q in queues.items():
         ack, error = fetched[repo]
         row = inspect_queue(q, ack, error, observed_at, stale_minutes)
+        if repo == PRIVATE_ACK_REPOSITORY and os.environ.get(PRIVATE_ACK_TOKEN_ENV):
+            # Do not copy private ACK timestamps or identifiers into the
+            # public sender mirror. Only aggregate delivery confirmation.
+            row.pop('last_acknowledged_at', None)
+            row.pop('last_confirmed_batch', None)
+            row['ack_evidence_scope'] = 'SCOPED_PRIVATE_READ_INBOX_ONLY'
         result['repositories'][repo] = row
         result['total_pending'] += row['pending']
     states = {r['status'] for r in result['repositories'].values()}
