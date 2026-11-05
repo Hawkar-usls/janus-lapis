@@ -170,6 +170,9 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
 
     def stale_snapshot_and_live_queue(self, *, correct_ack=True):
         health = copy.deepcopy(self.sources[0])
+        # These legacy tests isolate one suspected STALE row while the
+        # producer's ordinary PENDING snapshot is still within its grace.
+        health['at'] = '2026-10-17T22:58:00Z'
         health['repositories']['Hawkar-usls/Echo-Pyramid'].update(
             status='STALE', produced=2, confirmed=1, pending=1,
             oldest_pending_minutes=240)
@@ -209,6 +212,7 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
     def aged_pending_snapshot_and_live_queue(self, *, correct_ack=True):
         health, queue, ack = self.stale_snapshot_and_live_queue(
             correct_ack=correct_ack)
+        health['at'] = '2026-10-17T22:00:00Z'
         # Isolate the aged ordinary-PENDING route from the other sample row.
         health['repositories']['Hawkar-usls/Janus_Genesis'].update(
             status='UP_TO_DATE', produced=7, confirmed=7, pending=0)
