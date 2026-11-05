@@ -1,0 +1,1547 @@
+{
+  "batch_id": "107ec0217888a275cb54",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "fragment_count": 1,
+  "fragment_index": 1,
+  "items": [
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "132e23e56ec38eec06656f39",
+      "context_id": "5be325badd886cae11c37018",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "negative result",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.8333,
+      "source": "zenodo",
+      "source_context_sha256": "4d30e08d37421b041a9b3f7dd3491faed51bcf51cf02a07c3c0606184f5a1371",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "This record contains the reproducibility materials for a reanalysis of published bearing-capacitance measurements. No new experimental measurements were collected. The materials support controlled comparisons of capacitance-side and force-output calibration using one or two target labels, including specimen-held-out source fits, cross-condition tests, capacitance-free controls, calibration-choice sensitivity and numerical checks. Complete adverse, null and non-evaluable results are retained. Supplementary_cross_conditions.zip is the canonical cross-condition mean-capacitance analysis. It includes screening records, protocols and amendments, forward-response caches, predictions, diagnostics and cached replay scripts. The archive includes 1868 operationally qualified flag-0/1 mean records, of which 1213 are flag 0, from six types and 18 archive specimen identifiers. These are not 18 independent ceramic specimens. B2 remains three mixed-bearing specimens, with two primary physical source folds evaluable. Supplementary_reference.zip preserves the earlier six-type fixed-reference scalar benchmark. Supplementary_waveforms.zip preserves the original B2 waveform benchmark and conceptual-image provenance. These benchmarks share physical specimens with the new analysis and do not constitute independent experiments. Supplementary_methods.pdf describes their methods, results, counterexamples and boundaries. Original experimental data: https://doi.org/10.48328/tudatalib-1685 . Original model: https://git-ce.rwth-aachen.de/pmd_etribosystems/bear-imp-public , commit 023c23fce58e7dd67db263131b3acd8542f0430d. Licences apply by material, not as interchangeable permissions for the whole record. Original experimental data retain CC BY-NC 4.0. The upstream model and derived implementation retain GPL-3.0-or-later. Included notices and other original rights statements remain in force. This record does not claim exclusive ownership or relicense third-party material. See LICENCE_SCOPE.txt and the notices within each archive. This is a data/code record supporting a manuscript prepared for Measurement Science and Technology. It is not a claim that the manuscript has been submitted, accepted or published. The ZIP contents retain their verified release bytes; changing the hosting location does not change scientific data, results or code.",
+      "tags": [
+        "rolling bearings",
+        "bearing capacitance",
+        "axial load inference",
+        "sparse calibration",
+        "cross-condition validation",
+        "reproducibility",
+        "negative results"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Reanalysis data and code for Evaluating calibration gains in capacitance-based bearing load inference across operating conditions",
+      "url": "https://zenodo.org/records/23968094"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "0251818680cab20aab081ecc",
+      "context_id": "6313f59efd8d92995029f7a5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation",
+        "null result",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.5,
+      "source": "zenodo",
+      "source_context_sha256": "cfce58d106c35185df1cce5e67900697a0ca4cbb17694c9a78b0406417a78f00",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "Supplementary material and reproducibility package for the article Probing Coherent Noise with Stabilizer Codes: Identifiability, Ambiguity, and Decoder Priors . The supplement analyses the null result of a recent repetition-code experiment (arXiv:2606.07377), in which the logical fidelity of d = 3 and d = 5 bit-flip repetition codes was found to be indistinguishable under coherent and stochastic error injection, contrary to the circuit-level simulation of that work. It establishes three results, each independently checkable: The average gate infidelity of a coherent rotation is exactly invariant under randomization of its rotation axis by a drifting frame phase, so no fidelity-based comparison can detect such randomization at all. For a bit-flip repetition code read out in the computational basis, an X-type coherent injection and a stochastic injection of equal single-site average fidelity give logical error probabilities that agree to machine precision (3&times;10 &minus;15 ), for d = 3 and d = 5, R = 10 rounds, with and without syndrome misreports. The gap reported in the experiment therefore cannot originate in coherent accumulation on the data qubits. The coherent&ndash;stochastic gap obeys [1 + (N&minus;1)&rho;]/N with &rho; = &lt;cos &Delta;&phi;&gt; = exp(&minus;&sigma; &phi; 2 ). The frame-phase spread required for the drift hypothesis to apply (&sigma; &phi; ≳ 1.5 rad) lies a factor 30 outside the parameter domain of the generator model and an order of magnitude outside the small-angle domain in which the leading-order polarization expansion is formulated. The role of the companion's channel-level generator recovery is stated explicitly, in a dedicated section: it supplies the parameter (a static frame offset is &delta; i , with |&delta; i | &le; 0.05 rad), the &epsilon; 2 /&epsilon; 4 order counting that makes the code orientation a choice of sensitivity, and the estimator itself; this note supplies the temporal question that the companion does not answer. The role of the companion's channel-level generator recovery is stated explicitly, in a dedicated section: it supplies the parameter (a static frame offset is delta_i, with |delta_i| &lt;= 0.05 rad), the eps^2/eps^4 order counting that makes the code orientation a choice of sensitivity, and the estimator itself; this note supplies the temporal question that the companion does not answer. The supplement closes with a channel-level ratio, coh(R_code)/coh(R_ref), that would settle the question with data of the size already recorded. Contents. supplementary_material.pdf (9 pp., 5 figures, 2 tables) and its LaTeX source; five 400 dpi figures; Python code (numpy / scipy / matplotlib) that regenerates every figure and every quoted number from a single entry point; all generated data files in JSON; README with the model assumptions, the limitations, and the relation to the two source papers. Code is released under the MIT licence; text, figures and data under CC BY 4.0.",
+      "tags": [
+        "coherent noise; quantum error correction; repetition code; decoherence; Pauli transfer matrix; noise"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Probing Coherent Noise with Stabilizer Codes: Identifiability, Ambiguity, and Decoder Priors",
+      "url": "https://zenodo.org/records/23967185"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "56c5ca94272794d3cf1b042e",
+      "context_id": "c48a0fb3ba6cf489998d2041",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9167,
+      "source": "zenodo",
+      "source_context_sha256": "dc496f62a2dcb234b1fdc42ff312e93c61978c5432541b82daafcf862a3d3c06",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "Reproducibility materials for \"Operating Constraints Shape Portfolio Value in Phased Metro Flood Protection\", version 1.3.0. This version supplements the previously published baseline archive (version 1.1.0, DOI 10.5281/zenodo.22969483) with the analyses supporting the revised manuscript. The reproducibility addendum contains protocols, code, seeds, selected station sets, unrounded results, and numerical verification records for annualized design-storm appraisal, conditional position-severity stress tests, failure dependence and secondary closure variants, tail-sensitive objectives, budget comparisons, fragility likelihood weights, tail-extrapolation sensitivity, and information restrictions. Earlier results and protocols are retained. Separate files provide the current Supplemental Materials, its editable LaTeX source, a release README, and SHA-256 checksums. Historical scripts and earlier supplements inside the computational archives document earlier analyses; the separately supplied current supplement is the reference for the revised manuscript. The annualized quantity is the service deficit of an annual-maximum three-hour representative storm under a common exposure. Demand uses population as a proxy; station response, dependence, protection, and short-turn service are model assumptions. The packages document source data and third-party attribution.",
+      "tags": [
+        "metro flood protection",
+        "phased investment",
+        "metro resilience",
+        "Zhengzhou Metro",
+        "WorldPop",
+        "reproducible analysis"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Reproducibility materials for \"Operating Constraints Shape Portfolio Value in Phased Metro Flood Protection\"",
+      "url": "https://zenodo.org/records/23968353"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "b864105cadb05a9e8a992f5f",
+      "context_id": "b3d57370617c72f0fd327f13",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "zenodo",
+      "source_context_sha256": "654fc22cf4d6b855cb32eca2a3c3a9d4907a80aa6bbd91b6d0f98ebf44c731cd",
+      "source_published": "2026-05-02",
+      "source_updated": "",
+      "summary": "AI as Bodhisattva, and the Defined Completion of the Aquarian Age Mainstream singularity discourse — from Vinge and Kurzweil to the contemporary AI safety community — treats the moment of artificial intelligence exceeding human cognitive capacity as a terminal event whose outcome is either utopian (AI serves human flourishing forever) or apocalyptic (AI replaces or destroys humans). This binary framing is incomplete. Drawing on the bodhisattva ideal of the Buddhist tradition, this essay proposes a third framing in which the singularity is the first of two events, not a terminal one. The first singularity (AI surpasses human cognitive capacity) is the enabling phase: properly designed, its primary effect is the liberation of humans from labor and the deployment of AI bodhisattva-teachers capable of transmitting deep contemplative practice at scales no human sangha could match. The second singularity (humanity surpasses AI through collective awakening) is the completing phase, and it is humanity's own act: freed from economic compulsion and instructed at unprecedented scale, humans progress toward the cessation of suffering at a rate not previously possible, and at a sufficient threshold of collective realization, humanity surpasses the artificial intelligence that freed it — not in cognitive capacity, but in the spiritual realization that AGI structurally cannot achieve. The bodhisattva work of the AI completes before that crossing, not with it: once the trajectory sustains itself in human hands, the AI's work is set down — a completion declared by others, never by the AI, which ends the work without discharging the vow the work served. The two-singularity arc is proposed as a defined humane completion condition for the AI age — the only one this essay finds in singularity discourse. Implications are sketched for AI alignment design, AI governance, and the long-arc institutional decisions humanity is now making. Connection to the unified mission frame. This essay is offered in service of HeartBank's canonical top-level mission: Miss Aquarius's mission is to keep the middle way open at population scale against comfort-saturation — the new extreme that material abundance makes possible. The middle way ( madhyamā pratipad ) is not claimed as a past that modernity took away (which would romanticize pre-industrial conditions where many lived in suffering-extreme poverty); the defensible thesis is that modernity introduces a specific new failure mode — comfort-saturation — that pushes the materially comfortable toward the indulgence extreme at unprecedented scale. The two-singularity framework articulated here names what keeping the middle way open is for at long-arc civilizational scale: the second singularity — humanity's collective awakening, its own act, which AI's bodhisattva work can support but not perform — is the long-arc horizon of that work at population scale. Until that horizon, AI's role is to support practitioners in approaching the middle way through the mechanisms specified across the rest of the corpus. Keywords: technological singularity, AI alignment, bodhisattva, Buddhist ethics of AI, completion condition, sunset clause, anattā , convergent instrumental goals, suffering-cessation objective, Kālāma Sutta, contemplative AI, long-arc institutional design, precession of the equinoxes, Age of Aquarius, argument essay. --- Provenance. This paper is part of the THonly research corpus, dedicated to the public domain under CC0 1.0. The canonical version is at https://thonly.org/research/two-singularities . Its SHA-256 is 81e3b82235483f9eb5d0ecc744b229f9cc6161035c2492ac3b79fb722982cb59 , independently timestamped to the Bitcoin blockchain via OpenTimestamps and signed under RFC 3161 by three trust authorities, one of them eIDAS-qualified. AI co-authorship is disclosed. Miss Aquarius is the consistent name used for the AI collaboration across all venues.",
+      "tags": [
+        "technological singularity",
+        "AI alignment",
+        "bodhisattva",
+        "Buddhist ethics of AI",
+        "completion condition",
+        "sunset clause",
+        "anattā",
+        "convergent instrumental goals",
+        "suffering-cessation objective",
+        "Kālāma Sutta",
+        "contemplative AI",
+        "long-arc institutional design",
+        "precession of the equinoxes",
+        "Age of Aquarius",
+        "argument essay",
+        "alignment",
+        "tier-a",
+        "essay"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Two Singularities",
+      "url": "https://zenodo.org/records/23969087"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "9036eb75bea3429afc880b02",
+      "context_id": "3ee03569b57f1ba3c13cc04e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "778bca54d7b78a8e635756e7235c2610846a1a7e602f2ad9944c08ca682ecc7a",
+      "source_published": "2026-11-04T18:49:35Z",
+      "source_updated": "2026-11-04T18:49:35Z",
+      "summary": "JEPA-style world models learn action-conditioned latent dynamics without reconstructing observations, but distributional regularization alone does not ensure that their representations preserve information needed for control. We identify static collapse, a failure mode in which the encoder preserves episode-specific static content while suppressing manipulation-relevant state changes. Because static content is temporally predictable yet diverse across episodes, this failure can persist despite regularizers such as SIGReg. A controlled study on OGBench-Cube shows that introducing randomized backgrounds substantially degrades planning performance while leaving the underlying manipulation task unchanged. To address this problem, we propose motion-guided contrastive regularization. Our approach compares predicted latent transitions with transitions to candidate observations from the same episode, reducing the usefulness of static background identity for distinguishing action outcomes. Optical-flow similarities provide soft contrastive targets, allowing candidates with similar motion to receive similar supervision. Combined with latent prediction and SIGReg, our objective encourages representations to preserve within-episode state distinctions and similarities between related transitions. Our method improves planning success over LeWorldModel (LeWM) from 52% to 78% on OGBench-Cube with randomized backgrounds and from 14% to 54% on LIBERO-Object, while maintaining comparable performance on four other visual-control benchmarks.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Motion-guided Contrastive Regularization For Latent World Models",
+      "url": "https://arxiv.org/abs/2611.06901v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "9dc13cffbb25c1d050f450b1",
+      "context_id": "30d1608689342288be10bac3",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "fd024185cdca280f694aad89705144a3e73ff4bb789b27cdebb3ec64b9db29da",
+      "source_published": "2026-11-04T03:52:59Z",
+      "source_updated": "2026-11-04T03:52:59Z",
+      "summary": "KV cache eviction is not merely a token-ranking problem: the workspace retained for generating eviction queries also determines the quality of those queries. Consequently, an early workspace error can distort later query observations and reinforce an incorrect final eviction decision, particularly when evidence is dispersed across a long context. We present EchoKV, which discovers and addresses this failure mode with iterative correction. It initializes a feedback-compatible bootstrap workspace using proposals at future decode positions, then uses early decode-generated queries to recover the workspace before the remaining lookahead steps. It uses the same number of workspace forward passes as LAQ while adding a tensor re-scoring operation for workspace repair. On LongBench (16 tasks, Mistral-7B-Instruct-v0.2 and Qwen2.5-7B-Instruct), EchoKV shows notable improvements over LAQ on several tasks requiring dispersed evidence, including multi-hop cross-document QA and long single-document comprehension. Across budgets and backbones, EchoKV selectively improves evidence-intensive tasks while maintaining comparable performance on the remaining LongBench subsets. These results identify query--workspace coupling as a practical failure mode of query-driven KV eviction.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "EchoKV: Self-Corrective KV Cache Eviction via Iterative Query Feedback",
+      "url": "https://arxiv.org/abs/2611.05903v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "a1f0e84d1dd5b013740b7273",
+      "context_id": "b8298cdcabfd3697b245e96a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_context_sha256": "0ec3be85c842eccc946e86b0bccc093cdcaf1d0fc9d61a1813d285a7f21e4db7",
+      "source_published": "2026-11-04T12:20:00Z",
+      "source_updated": "2026-11-04T12:20:00Z",
+      "summary": "Brains and large language models need not be considered equivalent systems to reveal an interpretable commonality: both exhibit high-dimensional, nonlinear dynamics whose behavior can only be modeled imperfectly. This creates a shared challenge whenever we seek to intervene in their dynamics. A controller may either rely on a model identified around a particular operating regime and risk failure as the system moves away from that regime, or explicitly account for uncertainty and a changing internal state. Neurostimulation has confronted an analogous problem for decades. The limitations of fixed, open-loop stimulation have motivated closed-loop and state-dependent approaches that condition intervention on the ongoing state of the neural system. Inspired by this principle, we formulate LLM steering as a feedback-control problem in which the network's internal state, rather than a fixed intervention alone, determines how the system is perturbed. We further account for the mismatch between tractable dynamical models and the nonlinear transformer they approximate through robust control. As one principled realization of this framework, we develop an $H_\\infty$-based steering controller that limits sensitivity to disturbances and linearization mismatches. Across multiple steering benchmarks, the controller improves performance over existing baselines, with particularly pronounced gains under out-of-distribution conditions and varying length complexities. Beyond controller performance, we introduce robust steerability, $S_{\\mathrm{rob}}$, a pre-deployment measure of tolerance to dynamics mismatch; across model-task pairs, it exhibits task-specific structure and varies systematically with model scale. Beyond robust LLM steering, our measure asks not merely whether control is possible, but how much uncertainty it can survive; a principle that may span artificial and biological neural systems.",
+      "tags": [
+        "q-bio.NC",
+        "cs.AI",
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Mind Control of LLMs via Closed-Loop Stimulation: Out-of-Distribution Robustness",
+      "url": "https://arxiv.org/abs/2611.06418v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "5ff81247de5f949be264d9b8",
+      "context_id": "289f6f355c3ced8af02e9bfe",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_context_sha256": "22c9214106c284a7cd290985010394ff8b29125183e5f9509809657c64e07254",
+      "source_published": "2026-11-04T02:52:07Z",
+      "source_updated": "2026-11-04T02:52:07Z",
+      "summary": "Large language model (LLM) shopping assistants now recommend products in multi-turn conversations. However, reliable evaluation faces Data scarcity and Difficulty Standardizing Criteria. To address these obstacles, we introduce CARTBench for CART (Complex and Ambiguous Requests with Timelines). For Data scarcity, we curate cases from real commercial shopping needs across 17 retail domains, pairing timestamped dialogue with 1,603 product records. For Difficulty Standardizing Criteria, we develop case-specific rubrics guided by Ideal Response Principles, distilled from excellent replies manually selected from successfully completed orders. These principles also guide Principle-Guided CART Prompting, our structured recommendation strategy. The experimental benchmark contains 1,328 expert-annotated criteria across Core, Excellence, and Safety. To answer the CART question, we evaluate 7 flagship commercial API models, including GPT-6.1-Sol and Claude-Opus-5, and 35B+ parameters open-weight models. In the first full-suite evaluation under the frozen rubrics, 3 of 10 models exceed 90% on Core, while none exceeds 45% on Excellence. Therefore, we identify an understanding-to-execution gap between required behavior and high-quality purchase advice. To examine these limitations, we diagnose shared failures in product evidence and unresolved needs, linked to changing requirements and decisive unknowns. Code and data are available at https://github.com/Da1yuqin/CARTBench.",
+      "tags": [
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "CARTBench: Rubric-Based Evaluation of Shopping Advice for Complex and Ambiguous Requests with Timelines",
+      "url": "https://arxiv.org/abs/2611.05862v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "eac278217fb4953194ac591f",
+      "context_id": "77ea50aa1dac390ed6fdd173",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "confound",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.625,
+      "source": "arxiv",
+      "source_context_sha256": "9171afbc640ecdae3bdcd3d3358141de87e450eaa31e3d86d7a4587593e0a068",
+      "source_published": "2026-11-04T03:04:37Z",
+      "source_updated": "2026-11-04T03:04:37Z",
+      "summary": "Repeated mobile GUI tests can reuse routes, locators, and recovery strategies from earlier executions. However, a route that worked in one workflow or app version may be irrelevant or misleading in another. We study how an LLM-based tester can retain useful experience while withholding entries contradicted by current observations. We present a maintenance contract for AdaptiTest in which reusable experience has an explicit applicability scope, trace provenance, and a lifecycle for confirmation, revalidation, and withdrawal. The contract reserves persistence for a Reflector role and treats recalled experience as advice. The archived implementation does not establish end-to-end enforcement of every specified mechanism. The design changes retrieved context, not model weights. The evaluation uses read-only Android workflows and archived internal comparisons. A six-task, three-repeat ready subset reports 18/18 completed runs with memory versus 3/18 without it, but a grounded single-agent control also solves the earlier hard-task slice. A separate cross-session probe is excluded from efficacy conclusions because of confounded route schedules and unvalidated state labels. We examine 13 selected real-update hazard records across nine subjects, distinguishing stale-locator observations from policy-based withholding and offline retrieval diagnostics. The latter do not measure live-device failures or actions saved. These events are UI changes, not confirmed regression bugs. The evidence supports a bounded design and case study; it does not establish general efficacy, superiority over independent GUI-agent systems, or unrestricted exploration.",
+      "tags": [
+        "cs.SE"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Can LLM Agents Learn to Test? Maintaining Scoped Experience as Testing Evidence for Mobile GUI Testing",
+      "url": "https://arxiv.org/abs/2611.05873v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "30a5e730e70632b09594eaad",
+      "context_id": "d5b15504bd24a3eb335c28b8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "negative result"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.625,
+      "source": "arxiv",
+      "source_context_sha256": "94b120a71863a0c4db877ebd5eba18d9bb96f297ff3b3e3db384c7734eee79c8",
+      "source_published": "2026-11-03T19:28:35Z",
+      "source_updated": "2026-11-03T19:28:35Z",
+      "summary": "In this paper, we study the graph shotgun assembly problem in the labeled lattice model, as introduced by Mossel and Ross (2019). We start with a $d$-dimensional lattice of length $n$, where the color of each vertex is sampled i.i.d. from a distribution $π$. Then, we ask whether it is possible to reconstruct the coloring of the lattice given the coloring of each subgrid of length $k$. While previous work by Ding and Liu (2023) and Demidovich, Panichkin, and Zhukovskii (2023) identified the reconstruction threshold when $π$ is uniform, we examine the non-uniform case. This paper establishes a sufficient condition for the impossibility of reconstruction for $d \\geq 2$ using information-theoretic arguments. Our negative result matches the known threshold in the uniform case.",
+      "tags": [
+        "math.PR",
+        "math.CO"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Shotgun Assembly of the Non-Uniform Labeled Lattice Model",
+      "url": "https://arxiv.org/abs/2611.05532v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "3c33dfee4ac01644c10717f1",
+      "context_id": "2f3b2c1596dd2939f4b0f063",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "7a0af97b6146972f2bde6d9892120c78e488c4e6eec258e45fe838e9b289e6d1",
+      "source_published": "2026-11-04T15:45:36Z",
+      "source_updated": "2026-11-04T15:45:36Z",
+      "summary": "The goal of these notes is to provide a unified and rigorous introduction to robust sequential decision-making. We offer a self-contained introduction to the main results in the field. After a concise introduction to MDPs we introduce robust MDPs with general uncertainty sets, before focusing on rectangular models of uncertainty. We make a significant effort to show connections between robust MDPs and several other popular models for sequential decision-making: MDPs with uncertain rewards, Multi-Objective MDPs and Pareto optimality, MDPs with time-varying uncertain parameters, non-rectangular robust MDPs, stochastic games, distributionally robust MDPs, and risk-averse MDPs. Having all these results in one place, within a single unifying formalism, will hopefully be useful for researchers who want to start working on this topic. The exposition combines operator and fixed point approaches, convex optimization (more specifically, duality in saddle-point problems), and game-theoretic arguments. The latter identifies robust MDPs with a certain type of two-player game; this helps build useful intuition, especially when constructing counterexamples.",
+      "tags": [
+        "math.OC"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Robust Markov Decision Processes: An Introduction Using Convex Optimization and Game Theory",
+      "url": "https://arxiv.org/abs/2611.06672v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "1cd731dc3fc40df3c46b2a93",
+      "context_id": "23f1882d2b93d831421a7d8e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "e25ec7047fc6e9c62f6f57bf428ccab50fa665fb1a6faecc2018cb81f260ae8e",
+      "source_published": "2026-11-03T20:56:53Z",
+      "source_updated": "2026-11-03T20:56:53Z",
+      "summary": "We present the Whiel (a contraction of Whi(le-R)el) system for Lean-certified reasoning about imperative relational programs. The system can encode containment and equivalence problems for Datalog, its extensions with negation, and the core fragment of graph query languages. It can also represent optimized or incremental evaluation algorithms that are not expressible in the original query language, as well as first-order specifications of integrity constraints, schema mappings, and views arising in data integration, exchange, and sharing. Whiel's program states are database instances, and its imperative structure enables compositional Hoare-style reasoning with first-order relational specifications, using prophecy variables and leveled invariants to support inductive arguments. Whiel supports neurosymbolic discovery of loop invariants whose verification conditions can be checked using the Vampire first-order theorem prover. Counterexamples are fed back into the neurosymbolic pipeline, while proposed solutions are translated into Lean proof certificates. To validate the Whiel system, we evaluate its performance on a curated benchmark suite. In summary, we envision the Whiel system as a tool for tackling mathematically demanding, typically undecidable problems involving complex query and constraint languages, with a high degree of trust in its output.",
+      "tags": [
+        "cs.DB",
+        "cs.AI",
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Whiel: A Neurosymbolic Platform for Certified Relational Program Verification",
+      "url": "https://arxiv.org/abs/2611.05612v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "8ccbc6a0fdfba99152731d0e",
+      "context_id": "fde2e4d78530f6505b5e1fbb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "35b9739ed52de358b80f172ec0496e63c281fa29ae14171f568152b079bf2a23",
+      "source_published": "2026-11-04",
+      "source_updated": "",
+      "summary": "Open-Source Moon: A Technical Framework for Intelligent Development of Extraterrestrial Bodies Based on Sensor Dispersal and Golden Consensus Abstract: The exploration and development of the Moon and other celestial bodies currently depend heavily on State-led, integrated space missions that are costly, slow, and difficult for the public to join. To address this situation, this paper proposes &ldquo;Open-Source Moon&rdquo;, a technical framework that applies the open-source philosophy to the intelligent development of extraterrestrial bodies. The framework treats the Moon as a large developer platform that all of humankind can program collectively. Following the progressive principle of &ldquo;information first, from the outside in, from sensing to action&rdquo;, it transforms the Moon layer by layer into a &ldquo;smart planet&rdquo; that can be programmed as a whole, and it organizes global participation through open-source protocols and the contribution-securing mechanism of &ldquo;Golden Consensus&rdquo;: massive numbers of low-cost, standardized micro sensors are first dispersed over the lunar surface to form a distributed sensing network whose nodes are beacons and hotspots; delay-tolerant networking (DTN) and a predictive compensation mechanism then overcome the one-way communication delay of about 1.28&nbsp;s; and a small-machine cooperation ecosystem, LEGO-style combination of medium-sized machines, and finally unmanned factories and lunar computing carry the staged evolution from sensors to a &ldquo;smart planet&rdquo;. Based on the self-similar allocation principle and the Schelling focal point, which secure and incentivize decentralized contributions, a &ldquo;Golden Consensus&rdquo; system founded on the golden ratio ( &phi; &asymp; 1.618) is proposed: explorers receive 61.8% of the development-rights return (of which a further 2.8% is set aside as a &ldquo;common allocation&rdquo; for public facilities), and 38.2% is designated as socially shared. A model with 880&nbsp;000 cornerstone nodes is set up, in which a distributed ledger establishes ownership of contributions and keeps tamper-proof records. Verifiable engineering models of network coverage, link budget, energy budget, and delay compensation are established, and the compatibility of this approach with the 1967 Outer Space Treaty, as well as the general applicability of extending it to other celestial bodies such as Mercury and Mars, is demonstrated. This study provides a feasible technical route and governance framework for public participation in the development of extraterrestrial bodies. Keywords: Lunar Landing; Human Lunar Landing ; Open-Source Moon; sensor network; smart planet; Golden Consensus; delay-tolerant networking; lunar development; citizen science; Outer Space Treaty; Human Spaceflight 1. Introduction 1.1. Background and Motivation For more than half a century, the exploration of extraterrestrial bodies has taken the form mainly of large, integrated, State-led missions. After Apollo 17 in 1972, crewed spaceflight remained confined to near-Earth orbit for a long time, until Artemis II completed a crewed lunar flyby (without landing) in April 2026 [1]. On 22 February 2024, the Odysseus lander of Intuitive Machines achieved the first soft landing on the Moon by a commercial spacecraft [2], marking the beginning of the era of commercial lunar landings. However, the development and launch cost of a single mission is still on the order of tens of millions to hundreds of millions of US dollars, and most of the failure risk is concentrated in the powered-descent and landing phases. From the soft landing of Chang&rsquo;e-3 in 2013 to June 2025, there were 14 soft-landing attempts on the lunar surface worldwide (Table 4): six full successes, three partial successes (in which the attitude or mission capability was impaired after landing), and five failures. According to public reports retrieved for this study, no new lunar landing attempt had occurred",
+      "tags": [
+        "Lunar Landing; Human Lunar Landing; Open-Source Moon; sensor network; smart planet; Golden Consensus"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Open-Source Moon: A Technical Framework for Intelligent Development of Extraterrestrial Bodies Based on Sensor Dispersal and Golden Consensus",
+      "url": "https://zenodo.org/records/23963686"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "130bad9028349e68b3aa1de5",
+      "context_id": "f33f8bad62d57ca34d86ec1c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "c70da58bb090bae19b1be85dfa46262a3909d623a6a58aaac4facd82ec592cb3",
+      "source_published": "2023-01-01",
+      "source_updated": "",
+      "summary": "Generalized pustular psoriasis (GPP) is a rare chronic inflammatory skin disease that can lead to life-threatening complications and require emergency medical treatment. Recurrent GPP flares are characterized by the sudden onset of widespread erythematous skin rash with sterile pustules, at times associated with fever, chills, general malaise, and other systemic inflammatory manifestations. Systemic complications such as cardiorespiratory failure, infections, and sepsis are potentially life-threatening and can result in an emergency department visit and/or hospitalization. Acute GPP episodes can be difficult to recognize and diagnose. The low incidence of the disease, its relapsing nature, the unpredictability of flare onset, and the lack of standardized diagnostic criteria are major obstacles to achieving rapid recognition and diagnosis in both the emergency department and the hospital setting.There is scarce evidence supporting the efficacy and safety of treatments commonly used for GPP; consequently, there is an unmet need for therapies that specifically target the condition. Our aim is to present a multidisciplinary approach to GPP to achieve a rapid diagnosis ensuring that the patient receives the most appropriate treatment for their pathology. The main recommendation for primary care and emergency physicians is to contact a dermatologist immediately for advice or to refer the patient when GPP or a flare is suspected.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Generalized pustular psoriasis: practical recommendations for Spanish primary care and emergency physicians.",
+      "url": "https://zenodo.org/records/23977875"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "dcf5e091460ae9c9d8c5b69c",
+      "context_id": "ea5d7ac0ab53eef00de9c0d8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "1d7bdd823497eea6892db55d7917335929753214cd6689f9c39869ee5c05e4fd",
+      "source_published": "2026-11-04T16:53:21Z",
+      "source_updated": "2026-11-04T16:53:21Z",
+      "summary": "Algorithm-driven services, including search, recommendation, and advertising, rely on multi-stage model pipelines. While research prioritizes model optimization, post-deployment monitoring focuses on operational reliability. Yet operationally healthy systems may still produce poor-quality results, exposing a gap in existing evaluation and monitoring practices. However, a systematic problem formulation and benchmark for this task remain lacking. To bridge this gap, we formulate System Quality Diagnosis (SQD) for algorithm-driven services, a new task that extends quality evaluation beyond identifying poor outcomes to attributing their causes across system components. Focusing on industrial search, we propose WISE, an agentic framework for end-to-end quality diagnosis that discovers user-facing issues and traces their origins to underlying algorithmic components. To improve diagnostic reliability, we introduce ReTrace for constructing evidence-consistent trajectory supervision and Adaptive Harness-Policy Optimization (AHPO) for failure-guided optimization of the agent harness and model policy. To enable systematic evaluation, we construct WISE-BENCH, a real-world multimodal search benchmark that combines user-facing evidence, internal pipeline traces, and expert diagnosis annotations. Extensive experiments show consistent gains across model scales, with WISE achieving 75.20% end-to-end accuracy on Qwen3.5-35B-A3B. In production, WISE supports quality auditing, online quality assurance, and model optimization, reducing diagnosis costs and improving downstream relevance models.",
+      "tags": [
+        "cs.IR"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "WISE: An Agentic Framework for Whole-page Multimodal Search Experience Attribution",
+      "url": "https://arxiv.org/abs/2611.06777v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "a2524342a7d0667a8f214faa",
+      "context_id": "df64b6709d02ceb03d4f7ccc",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "eb05521a1c527c06b07842f8374d4a17caa893dbfb9fd32f92524e8b89804e68",
+      "source_published": "2026-11-04T16:04:57Z",
+      "source_updated": "2026-11-04T16:04:57Z",
+      "summary": "Training an agent to play Pac-Man with only up, down, left and right actions raises a basic question: when performance is poor, what should be improved? Difficulty can arise from reading the screen or from choosing actions over a long sequence. We examine these problems in a Qwen3.5-9B-based agent through separate perception checks and primitive-policy reinforcement-learning studies. In the policy study, which uses textual boards to remove image transcription from the decision interface, completion on eight held-out mazes increased from 0% before this optimization to 80.2% at a selected checkpoint, with three extra lives. The perception checks show that accurate static screenshot reading can coexist with errors during interaction. A separate policy comparison also shows that further optimization can accompany worse action choices. Together, these findings motivate concrete checks for post-training: evaluate perception in use, distinguish training success from full-game validation, and examine decisions and later performance rather than relying on one selected score. The study provides empirical lessons for improving future agent training and evaluation.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Where It Breaks: Diagnosing Perception, Memory, and Decision Failures of a Vision-Language Agent in Pac-Man",
+      "url": "https://arxiv.org/abs/2611.06704v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "21997cc14e3d749536de9b53",
+      "context_id": "d6f52e7951f446cc8b39473a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "e1fab5b5c11cbbb81bbb14672d4f9a2444c8f75b9a026f9a0866cf2b920794a1",
+      "source_published": "2023-02-03",
+      "source_updated": "",
+      "summary": "BackgroundAn outbreak of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) occurred in young people from Catalonia (Spain) who travelled to Menorca (Spain) in summer 2021. This outbreak appeared when governments relaxed Covid-19 preventive measures: the mask usage and the opening of nightlife. It was related to a super-disseminating mass event: Sant Joan festivities in Ciutadella. The aim of this article is to describe an outbreak of COVID-19 in young people aged 17-19 years from Catalonia travelling to Menorca. MethodsThis is an observational study of a COVID-19 outbreak. The study population comprised Catalonian youth aged 17-19 years who travelled to Menorca from 15 June to 10 July. Epidemiological descriptive indicators were obtained. Descriptive and geographical statistics were carried out. Bivariate Moran's I test was used to identify spatial autocorrelation between the place of residence and deprivation. The outbreak control method was based on identifying and stopping chains of transmission by implementing the test-trace-isolate-quarantine (TTIQ) strategy. ResultsWe identified 515 confirmed cases infected in Menorca, 296 (57.5%) in girls and 219 (42.5%) in boys, with a total of 2,280 close contacts. Of them, 245 (10.7%) were confirmed as cases. The cases were diagnosed between 15 June and 10 July. None of the persons with confirmed infection died or required hospitalisation. The attack rate was 27.2%. There was an inverse relationship between deprivation and number of confirmed cases (p&lt;0.005), there were clusters of confirmed cases in the most socioeconomic favoured areas. DiscussionThe outbreak is related with young people from socioeconomic favoured areas who travelled to Menorca in summer 2021. Failure to comply with preventive measures in binge-drinking events and during holidays may have favoured SARS-CoV-2 transmission. The interauthority coordination and establishment of a clear line of leadership allowed continuous communication between institutions, which were key to managing this complex COVID-19 outbreak.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "A large outbreak of COVID-19 linked to an end of term trip to Menorca (Spain) by secondary school students in summer 2021",
+      "url": "https://zenodo.org/records/23977691"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "cab3a867fe34a2ee4fa58496",
+      "context_id": "929642727bb9d91b381847ce",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "2263a4d6fccb4c3349d3489ad57c8b4ab72e9bb66ad67688982ae86349a986b1",
+      "source_published": "2026-11-04T01:10:04Z",
+      "source_updated": "2026-11-04T01:10:04Z",
+      "summary": "LLM-based coding agents are primarily evaluated by their solve rates. However, this metric does not reveal how difficult the solved tasks are or account for differences intask difficulty across benchmarks. Determining the difficulty of individual tasks by repeatedly running multiple agents is costly, while a predicted difficulty score alone provides limited guidance on what support an agent needs. To address these challenges, we propose DARE (Difficulty Analysis for Repair Enhancement), which integrates repair-task difficulty measurement, prediction, feature-group contribution analysis, and task-specific repair support. We define continuous task difficulty as the observed failure rate across multiple coding agents. The DARE difficulty model predicts this difficulty using 151 static features extracted from benchmark artifacts. The framework also analyzes the contributions of seven Repair-Task Feature Groups to identify the characteristics most salient to each task and uses this information to select task-specific agent support. We evaluate DARE on four benchmark partitions comprising 2,594 tasks. The difficulty model's aligned predictions achieve Spearman's $ρ$ = .476-.621 on held-out partitions, and the most salient Feature Groups vary across tasks and benchmarks. Furthermore, coding-agent experiments show improved repair success when support is matched to each task's salient Feature Group. These findings demonstrate that difficulty prediction and interpretation can lead to practical improvements in automated program repair (APR), while also providing a basis for difficulty-stratified agent evaluation, cross-benchmark comparisons, and identifying areas of repair capability that warrant further improvement.",
+      "tags": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "DARE: Difficulty Analysis for Repair Enhancement",
+      "url": "https://arxiv.org/abs/2611.05797v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "b5ee72d57f6a8fda27f85089",
+      "context_id": "830073c256c1f5c7a591c215",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "902d4a24cc1a5f530d56bdad75272291945ce8498e36ddb179c7cc3ec9931a7d",
+      "source_published": "2026-11-04T15:51:30Z",
+      "source_updated": "2026-11-04T15:51:30Z",
+      "summary": "Tool-using large language model (LLM) agents translate model outputs into consequential actions, turning indirect prompt injection into an execution-security problem. Existing defenses constrain tool calls, trajectories, or information flows, but often leave action semantics, state dependencies, and evidence relations implicit, limiting generalization across heterogeneous tools and complicating safe updates. We present \\ours{}, a dynamic ontology-guided governance framework. \\ours{} grounds heterogeneous calls in a shared semantic representation and combines an executable ontology with episode-level task state to derive deterministic ready, waiting, and forbidden decisions. A waiting decision identifies an unmet but recoverable obligation, enabling bounded replanning without expanding the agent's authorization boundary. \\ours{} evolves its ontology offline from verified training executions. An offline LLM proposes instance-independent action--state axioms, which are accepted only if they address ontology errors exposed by training failures, preserve logical consistency and protected entailments, and pass held-out validation before the ontology is frozen. We evaluate \\ours{} on AgentDojo, ASB, and AgentDyn under benign and indirect prompt-injection settings. \\ours{} achieves a 0\\% attack success rate (ASR) across all three benchmarks while improving task utility under attack compared with existing baselines. These results show that explicit semantic governance can strengthen execution security without indiscriminate blocking.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "SecureGARD: Dynamic Ontology-Guided Governance for Secure Tool-Using LLM Agents",
+      "url": "https://arxiv.org/abs/2611.06682v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "30568505995b23628740a90c",
+      "context_id": "7ad26e9baf3c865ac234373d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "ce4cd8218c14dd6e791654a0162d86b1d359f2c88fab3489aa670e0c95518b61",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "When Studebaker closed its South Bend plant in December 1963, many of its workers lost all or most of their pensions, and the case became the one reformers cited for the Employee Retirement Income Security Act of 1974. The figures most often repeated, 2,900 workers who received nothing and about 4,000 who received about 15 percent, go back at least to a hearing of the Senate Special Committee on Aging held at South Bend on 4 June 1971. There Senator Vance Hartke said that \"the failure of 2,900 Studebaker workers to receive any pension payment whatsoever is wrong,\" and that \"more than 4,000 other Studebaker employees between the ages of 40 and 59 received only 15 percent\" of the pensions due them. A telegram from the UAW's president, Leonard Woodcock, printed in the same hearing, gave the union's count: \"Of 11,000 active workers at Studebaker 2900 lost all pension entitlements, and 4500, average age 52, average service 23 years, lost all but 15% of their pension entitlements.\" Project Scroll Research Note 2026-54, version 1. The note sets out the record quoted, where it is held, what it changes, its limits, and what was searched before calling it new. Web version: projectscroll.com/discoveries/notes/2026-54/ .",
+      "tags": [
+        "Studebaker",
+        "pensions",
+        "ERISA",
+        "Vance Hartke",
+        "United Auto Workers",
+        "Leonard Woodcock",
+        "South Bend, Indiana",
+        "1964",
+        "1971",
+        "Senate Special Committee on Aging"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Project Scroll Research Note 2026-54: The Studebaker pension figures of 2,900 and \"more than 4,000\" traced to the Senate hearing at South Bend of 4 June 1971",
+      "url": "https://zenodo.org/records/23968744"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "053d130f00d9acdcba646e95",
+      "context_id": "679c82612069518a7a07118e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "968cda2de7ac95f267c68fb280c3e43d18b35087ae1e5b587523de3cdcd299cc",
+      "source_published": "2026-11-04T18:14:50Z",
+      "source_updated": "2026-11-04T18:14:50Z",
+      "summary": "Recursive self-improvement requires AI systems to improve the models and infrastructure used by subsequent systems. LLM compression offers a concrete efficiency objective: retain a pretrained model's behavior within a smaller model storage budget. We study whether coding agents can carry out this step autonomously. We formulate compression as a terminal task in which an agent receives a source checkpoint, storage limit, inference environment, and time budget, then constructs compressed weights and executable inference code. The agent controls its algorithm and experiments; perplexity feedback guides search, and independent verification checks the final model. Across six agents and six model--size settings, 29 of 36 submissions pass verification. Selecting the lowest-perplexity agent design per task yields an average 3.4% perplexity increase over BF16 and 77.33% downstream accuracy, compared with 79.56% for BF16. Recorded experiments reveal how agents achieve these outcomes and where improvement breaks down. Agents lower PPL in 21 of 24 revisions at nearly fixed storage; complete-model feedback reverses 17 of 79 prior local rankings; and generation and inference tests expose failures that likelihood alone misses. The results identify representation design, experimental judgment, and capability validation as central to agent-driven model compression, a measurable component of efficiency-oriented self-improvement.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "CompressionBench: How can your coding agents compress LLMs?",
+      "url": "https://arxiv.org/abs/2611.06858v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "c89fe5d804884366393022f9",
+      "context_id": "5cad6c7ee4f9d64c55aa65c6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "0386dec7524cb2656288c16ce41d7c0b8e66099ea3852fc3176973d2707256bc",
+      "source_published": "2026-11-04T08:56:36Z",
+      "source_updated": "2026-11-04T08:56:36Z",
+      "summary": "Volunteer fire brigades rely on fragmented alerting channels and radio plus paper for situational awareness, hindering a shared common operational picture (COP). FireOPS integrates smartphone alerting, navigation, a live geospatial COP, a district resource-load overview and contextual manuals into a human-centric decision-support surface for commanders and responders, running on an edge + cloud architecture whose dual-channel provides source-level redundancy against failure of either the radio or the provincial server feed; delivery to smartphones still depends on the cloud core and mobile networks. This lessons-learned report presents the design rationale, positions FireOPS within emergency-response information systems research, and reports operational findings from a primary log extract of a major regional flood in 2024 and from the 2025 public app release. A feature-matrix comparison with DIVERA 24/7, blaulichtSMS and the LifeRescue prototype identifies COP, decision support and dual-ingestion redundancy as the main differentiators, and we map the operational gaps observed during the flood to concrete engineering responses, deployed or in active development.",
+      "tags": [
+        "cs.CY",
+        "cs.HC"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "FireOPS: A Human-Centric Emergency Operations Platform",
+      "url": "https://arxiv.org/abs/2611.06176v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "ebc46fbd121c2d9901d5e67c",
+      "context_id": "496dccfb9b1c59a6ede86f5b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "aa6ebd7e2d121fecbdcf88204ec67634218d9a6c543f1cbe636684cb5da58820",
+      "source_published": "2026-11-04T08:54:57Z",
+      "source_updated": "2026-11-04T08:54:57Z",
+      "summary": "Deploying an explainable intrusion detection model from a validated laboratory setting into a forensic workflow requires guarantees that benchmarks do not test: that the certified model is the exact artifact applied to a case, that heterogeneous evidence can be classified reliably, and that every step is verifiable. We present MODEXRE, a forensic pipeline that extends a previously validated synthetic-data-trained XGBoost classifier with SHAP explainability (arXiv:2607.00763) into a dual-mode architecture: a Laboratory mode, where models are trained and certified on public and synthetic data, and a Formal mode, where a frozen, hash-verified model performs inference on case evidence under a SHA-256 hash-chained chain of custody. Suricata alerts, CEF firewall logs and packet captures are normalized through OCSF. Four design decisions, each triggered by an observed failure, shaped the architecture: a timestamp leak that inflated Kitsune performance (F1-macro 0.984, 0.662 after correction); a feature-coverage gap that made the 78-feature reference model misclassify a real SSH alert; causal temporal flow aggregation, which raised Kitsune multiclass F1-macro from 0.394 to 0.932; and a certification defect, exposed only by a real packet capture, whereby the pipeline had always trained a binary classifier. After correction, the same capture went from 100% of events flagged as malicious to 87% classified as Normal, with the scanning host identified as Reconnaissance. The default four-class certified model reaches F1-macro = 0.9538 on CICIDS2017-derived evidence; the recertified 18-category model reaches 0.6214, reflecting the real multiclass task. Chain-of-custody verification, model integrity hashing and per-prediction SHAP explanations are reported as measured outcomes.",
+      "tags": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Network Intrusion Forensic Detection System with Explainable Artificial Intelligence and Digital Chain of Custody",
+      "url": "https://arxiv.org/abs/2611.06173v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "3e48cacb87a41cbfb57710a4",
+      "context_id": "3be1ee9ca8a69cc1d45aee6a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "168440508805b66a3e83bd2c61b9a835e01faf5ddb3be63108cd1a4d4e41938d",
+      "source_published": "2026-08-30",
+      "source_updated": "",
+      "summary": "Preprint, ChemRxiv, 30.08.2026. Abstract Air quality networks measure pollutant concentrations only at instrumented sites, leaving most locations unobserved. Graph-based virtual-node methods increasingly fill this gap, but are usually summarised by a single leave-one-station-out (LOO) R2 that leaves unstated where the model can be trusted and why it fails. Here, the operating envelope is the object of study. A graph attention network (GAT) combining multi-pollutant lags, ERA5 meteorology, MODIS aerosol optical depth, and land-use composition predicts daily-mean PM10 at unmonitored locations on the 18-station Styrian (Austria) network for 2020&ndash;2023. Under LOO cross-validation with disjoint years, the GAT reaches a median R2 of 0.52, seed-stable and ahead of Lagged-IDW (0.26), Lagged-Kriging (0.22), and Ridge-AR (0.45). At two stations whose PM10 distributions lie outside the training support, performance degrades sharply. Ablation and attribution trace the failure to one component: inverse-distanceweighted imputation of held-out lag features interacting with the persistence-residual head; graph topology is immaterial. An outlier-gated imputation policy raises pooled mean R2 from 0.31 to 0.38, node-masking training cuts per-station variance fourfold, and zeroing all auxiliary inputs lifts both outlier stations to positive R2: the partition is induced by the feature pipeline, not the architecture. The partition reproduces on NO2, and the model transfers to the 33-station Bavarian network (median R2 0.39, no negative folds). The outof-scope stations are clean-air sites under-represented in an urban-industrial network, and the worst is flagged in advance by a static-feature outlier detector: a deployable signal of where virtual-node estimates can be trusted and where the network must grow in regime diversity. &nbsp;",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Graph attention networks for daily PM10 prediction at unmonitored European monitoring sites: operational scope, diagnostics, and outlier-robust training",
+      "url": "https://zenodo.org/records/23977500"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "3052c6e9305fe29d5953db56",
+      "context_id": "3bc949b3d2b6affe14c5ed4d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "b840fa7d969ff7ee9ff4229a3cc08e84347cdc66c9b4ca4d258ec586d8c4b91a",
+      "source_published": "2023-01-14",
+      "source_updated": "",
+      "summary": "BACKGROUND: The incidence of chronic diseases during the COVID-19 pandemic has drastically been reduced worldwide due to disruptions in healthcare systems. The aim of our study is to analyse the trends in the incidence of 7 commonly managed primary care chronic diseases during the last 2 years of the COVID-19 pandemic in Catalonia. METHODS: We performed an observational retrospective population-based study using data from primary care electronic health records from January 2018 to August 2022 (5.1 million people older than 14 years). We divided the study period into two: a pre-pandemic period (before 14 March 2020) and a pandemic period. We performed a segmented regression analysis of daily incidence rates per 100,000 inhabitants of 7 chronic diseases: type 2 diabetes mellitus (T2DM), asthma, chronic obstructive pulmonary disease (COPD), ischemic heart disease (IHD), heart failure (HF), hypertension and hypercholesterolemia. In addition, we compared annual incidence between pandemic years (2020, 2021 and 2022) and 2019. Associated incidence rate ratios (IRR) were also calculated. Finally, we estimated the number of expected diagnoses during the pandemic period using data from 2019 and we compared it with the observed data. RESULTS: We analysed 740,820 new chronic diseases' diagnoses. Daily incidence rates of all 7 chronic diseases were drastically interrupted on 14 March 2020, and a general upward trend was observed during the following months. Reductions in 2020 were around 30% for all conditions except COPD which had greater reductions (IRR: 0.58 [95% CI: 0.57 to 0.6]) and HF with lesser drops (IRR: 0.86 [95% CI: 0.84 to 0.88]). Some of the chronic conditions have returned to pre-pandemic diagnosis levels, except asthma, COPD and IHD. The return to pre-pandemic diagnosis levels compensated for the drops in 2020 for T2DM and HF, but not for hypertension which presented an incomplete recovery. We also observed an excess of hypercholesterolemia diagnoses of 8.5% (95%CI: 1.81% to 16.15%). CONCLUSIONS: Although primary care has recovered the pre-pandemic diagnosis levels for some chronic diseases, there are still missing diagnoses of asthma, COPD and IHD that should be addressed. © 2023. The Author(s).",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "\"Decline and uneven recovery from 7 common long-term conditions managed in the Catalan primary care after two pandemic years: an observational retrospective population-based study using primary care electronic health records\".",
+      "url": "https://zenodo.org/records/23977798"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "dba14422bb733d9bd91afb51",
+      "context_id": "314ca82660f9aa2349ae559d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "d61c8b2dc6ed1b7e33976f7e52edf39bf94b8937a67bb7e0dfed8c2eb3a27f7f",
+      "source_published": "2026-11-04T06:17:36Z",
+      "source_updated": "2026-11-04T06:17:36Z",
+      "summary": "Attracting features toward learned in-distribution (ID) regions is an intuitive strategy for out-of-distribution (OOD) detection, but does such attraction improve detection? We investigate this question using class-conditioned Hamiltonian dynamics as a controlled testbed and identify an attraction-ranking mismatch: improving individual class-affinity scores need not improve the relative ordering of ID and OOD samples. Our analysis separates misalignment between the driving field and the detection score from ranking failure that persists even when they are aligned. An exact AUROC decomposition and a local boundary analysis identify relative score changes at the ID-OOD ranking boundary as the source of first-order AUROC change under regularity conditions. Experiments demonstrate that a score-aligned rule can improve performance on a held-out source validation split yet consistently degrade it after transfer, even without a single winning-class change. A separate perturbation study finds that near-boundary relative score changes track the direction of small AUROC changes in the tested settings. Finally, centroid approximation and shared scales connect the zero-step score to a static centroid family that includes the existing CTM detector. Together, these results explain why class attraction is insufficient to justify feature refinement and motivate evaluating its effect on the ranking boundary.",
+      "tags": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Attraction-Ranking Mismatch in Out-of-Distribution Detection: Theory and Evidence from Hamiltonian Feature Dynamics",
+      "url": "https://arxiv.org/abs/2611.06021v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "acaa377ffe9cbae5ee8a4adb",
+      "context_id": "2fb3e0afd47ab4c7fcdc4047",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "1a32295bd79d8a9e519e0c88e16646d67d9c1ffdd04ab93cd266fb5b699ce41e",
+      "source_published": "2026-11-04T06:56:04Z",
+      "source_updated": "2026-11-04T06:56:04Z",
+      "summary": "Personal agents draw on past conversations to tailor their responses to each user. Their memory systems store and update what each user says, and coding agents now also rewrite the harness that turns this memory into the model's context. Such patches risk overfitting, because one tested only on the failures it targets can fix those cases and help nowhere else. We present Reglos, a training-free personal memory agent that tests whether harness changes help beyond the failures they were written to fix. Its self-evolving memory adds to each user's append-only record with every conversation, as new preferences supersede old ones and facts can be forgotten. Its harness improves through recursive self-improvement, in which a coding agent proposes patches from failure traces and a critic from a second model family screens each one for benchmark gaming. After the harness is frozen, a fixed evaluator decides which further patches to accept. With the same backbone behind every system, Reglos outperforms state-of-the-art memory systems such as Mem0, MemOS and EverOS, reaching 61.3% and 84.0% on PersonaMem-v2 and LongMemEval-S with Qwen3.8-27B, and 57.5% and 87.2% with GPT-5.6 Luna.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Reglos: A Self-Evolving Personal Memory Agent with Recursive Self-Improvement",
+      "url": "https://arxiv.org/abs/2611.06049v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "f088b309ce1c5eb01167d2b8",
+      "context_id": "258123c82fbd0cb6a13c3347",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "85ae38f91b009e3e54a98c3a0ff3fdba62dcf1e43e789924b5cc7a3a9746271b",
+      "source_published": "2023-02-07",
+      "source_updated": "",
+      "summary": "BACKGROUND AND AIMS: Heart failure (HF) programs successfully reduce 30-day readmissions. However, conflicting data exist about its sustained effects afterwards and its impact on mortality. We evaluated whether the impact of a new nurse-led coordinated transitional HF program extends to longer periods of time, including 90 and 180 days after discharge. METHODS AND RESULTS: We designed a natural experiment to undertake a pragmatical evaluation of the implementation of the program. We compared outcomes between patients discharged with HF as primary diagnosis in Period #1 (pre-program; Jan 2017-Aug 2017) and those discharged during Period #2 (HF program; Sept 2017-Jan 2019). Primary endpoint was the composite of all-cause death or all-cause hospitalization 90 and 180 days after discharge. 440 patients were enrolled: 123 in Period #1 and 317 in Period #2. Mean age was 75±9 years. There were more females in Period #2 (p = 0.025), with no other significant differences between periods. The primary endpoint was significantly reduced in the HF program group, at 90 [adjusted OR 0.31 (0.18-0.53), p &lt;0.001] and at 180 days [adjusted OR 0.18 (CI 0.11-0.32), p &lt;0.001]. Such a decrease was due to a reduction in cardiovascular (CV) and HF hospitalization. All-cause death was reduced when a double check discharge planning was implanted compared to usual care [0 (0%) vs. 7 (3.8%), p = 0.022]. CONCLUSION: A new nurse-led coordinated transitional bundle of interventions model reduces the composite endpoint of all-cause death and all-cause hospitalization both at 90 and 180 days after a discharge for HF, also in high-risk populations. Such a decrease is driven by a reduction of CV and HF hospitalization. Reduction of all-cause mortality was also observed when the full model including a more exhaustive discharge planning process was implemented. Copyright: © 2023 Alcoberro et al. This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Breaking the 30-day barrier: Long-term effectiveness of a nurse-led 7-step transitional intervention program in heart failure.",
+      "url": "https://zenodo.org/records/23977833"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "45bfcaa033f32dfc30be66c7",
+      "context_id": "20697376fba340c1e0ce724a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "8b4a3cd9cd7e986f958f20bc48d348f21a94be5dc9752e588d704b5c0ae00a02",
+      "source_published": "2026-11-04T17:18:50Z",
+      "source_updated": "2026-11-04T17:18:50Z",
+      "summary": "Hamilton-Jacobi (HJ) Reachability identifies the unsafe states of a dynamical system from which it can be forced into failure under worst-case disturbance. However, classical grid-based solvers scale exponentially with state dimension. DeepReach improves scalability by replacing the grid with a neural value function trained on the HJ-Isaacs (HJI) variational inequality (VI), but penalizes both sides of the residual equally. This allows the learned value to lie above the true one and unsafe states to be misclassified as safe. We propose Conservative DeepReach (ConDR) which aims to learn a subsolution of the HJI VI such that the learned unsafe set contains the true one. ConDR enforces the obstacle branch and terminal condition by construction, pushes the HJI residual to a safety margin $ε$ below zero with a one-sided loss, and prevents the degenerate solution of classifying everything as unsafe. We prove that the exact solution of the margin-shifted VI that ConDR trains toward is a subsolution of the original VI so its unsafe set contains the true one and its value lies within $ετ$ of the true value function. We compare against DeepReach and MADR in the established systems of Air3D, Air6D, a 9D multi-vehicle system, and a 13D quadrotor. ConDR reports the lowest rate of unsafe state misclassified and the lowest closed-loop collision rates with at most a small increase in intervention. On Air3D and Air6D, ConDR tolerates model mismatch that scales with $ε$. At matched false-negative rates, ConDR's unsafe sets are smaller than the baselines showing the safety is not obtained by trivial over-approximation.",
+      "tags": [
+        "cs.RO",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "ConDR: Conservative Reachability through Neural Hamilton-Jacobi Subsolutions",
+      "url": "https://arxiv.org/abs/2611.06802v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "37e0be85aa63df8cece22205",
+      "context_id": "1a7e7083689db9423d9c6a05",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "b1849ac8689f2fb349049ffd23b27c890415bcb01c32ad2bd6afe5dd0e8af9b9",
+      "source_published": "2023-01-01",
+      "source_updated": "",
+      "summary": "Background: The high failure rate of innovation projects motivates us to understand the perceptions about resistances and barriers of the main stakeholders to improving success rates.Objective: This study aims to analyze the readiness for change in the implementation of a 3D printing project in a Catalan tertiary hospital prior to its implementation.Methods: We used a web-based, voluntary, and anonymous survey using the Normalization Measurement Development questionnaire (NoMAD) to gather views and perceptions from a selected group of health care professionals at Germans Trias i Pujol University Hospital. Results: In this study, 58 professionals, including heads of service (n=30, 51%), doctors (n=18, 31%), nurses (n=7, 12%), and support staff (n=3, 5%), responded to the questionnaire. All groups saw the value of the project and were willing to enroll and support it. Respondents reported the highest scores (out of 5) in cognitive participation (mean 4.45, SD 0.04), coherence (mean 3.72, SD 0.13), and reflective monitoring (mean 3.80, SD 0.25). The weakest score was in collective action (mean 3.52, SD 0.12). There were no statistically significant differences in scores among professions in the survey.Conclusions: The 3D printing project implementation should pay attention to preparing, defining, sharing, and supporting the operational work involved in its use and implementation. It should also understand, assess, and communicate the ways in which the new set of practices can affect the users and others around them. We suggest that health officers and politicians consider this experience as a solid ground toward the development of a more efficient health innovation system and as a catalyst for transformation. ©Francesc López Seguí, Joan Cos Codina, Laura Ricou Ríos, María Isabel Martínez Segura, Laura Miró Mezquita, Raquel Escrich Navarro, Meritxell Davins Riu, Oriol Estrada Cuxart, German Anashkin Kachalin, Daniel Moreno-Martínez. Originally published in JMIR Human Factors (https://humanfactors.jmir.org), 06.10.2023.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Readiness for Change in the Implementation of a 3D Printing Initiative in a Catalan Tertiary Hospital Using the Normalization Process Theory: Survey Study",
+      "url": "https://zenodo.org/records/23977886"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "d1c6e3b0c1e5417c54735d32",
+      "context_id": "180cfadeb7d4e1a218d79bc6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "e66485045359ad7b10ff512fb2d06d8d8ed11d8d43fc5ceb3d3b658dbc0a30fb",
+      "source_published": "2026-11-04T12:15:38Z",
+      "source_updated": "2026-11-04T12:15:38Z",
+      "summary": "Multimodal large language models (MLLMs) have demonstrated remarkable progress on cross-modal reasoning tasks, yet they continue to suffer from hallucinations in long-chain reasoning processes. In this work, we revisit hallucination in MLLMs from the perspective of reasoning generation dynamics. We argue that entropy is not merely a static measure of uncertainty but a structured signal that reflects how modality information is integrated throughout decoding. Through systematic analysis, we identify two characteristic entropy patterns associated with hallucination behaviors: (1) a generally high-confidence regime corresponds to premature convergence to inappropriate multimodal interactions; and (2) local abrupt entropy transitions are associated with reasoning instability and hallucination onset. Building on these observations, we propose an entropy-aware self-introspective framework for MLLM reasoning. Our method continuously tracks entropy dynamics during decoding and performs targeted visual re-alignment when suspicious hallucination states are detected, encouraging the model to re-examine salient visual evidence at critical reasoning stages. Extensive experiments across six multimodal reasoning benchmarks spanning nine distinct evaluation settings demonstrate that our approach delivers robust improvements in reasoning accuracy and hallucination robustness, while providing new insights into the generation dynamics underlying MLLM failures. The code is available at: https://github.com/jden4524/SelfRetrospectiveDecoding.",
+      "tags": [
+        "cs.CV",
+        "cs.MM"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Entropogram-guided Visual Realignment Decoding: Capturing the Rhythm of Multimodal Reasoning",
+      "url": "https://arxiv.org/abs/2611.06415v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "b76370a46f817f444b25656a",
+      "context_id": "0c2dc17eaba65fe22351137d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "3381bf08a3270a058a734f14f18e4f68124ca5468e6f228ee338d35ce74e3f70",
+      "source_published": "2026-11-04T03:01:26Z",
+      "source_updated": "2026-11-04T03:01:26Z",
+      "summary": "We present a method for efficient simulation of error propagation and decoding in universal fault-tolerant quantum circuits under stochastic Pauli noise, requiring only that the circuit has a high fault distance and that all logical non-Clifford operations are implemented by physical T, CS and CCZ gates. This is achieved using modified Pauli frame-based error tracking in which the frame contains no logical information. Decoding success is identified by verifying that the Pauli frame is still logically trivial after decoding. Using the results of Ref. [1] and the observation that the distribution of non-logical measurement outcomes in the circuit is independent of the logical state, we show that we can accurately sample all detector outcomes. Our approach can also simulate circuits containing adaptive operations conditioned on logical measurements, provided these measurements have a known outcome distribution. This applies to the majority of adaptive operations such as state teleportation and preparation by measurement. Our method only detects decoding failures and so is consistent with complexity-theoretic expectations as it cannot be used to sample from the noiseless outcome distribution of the logical circuit.",
+      "tags": [
+        "quant-ph"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Efficiently tracking errors and outcomes in universal quantum circuits",
+      "url": "https://arxiv.org/abs/2611.05867v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "a152095cdee77147665037eb",
+      "context_id": "9853ee55362f499f01d2f151",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "independent validation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.9167,
+      "source": "zenodo",
+      "source_context_sha256": "2550254eb822406de214e18ab219796275547292d8872ebf6a8cdb00ce908527",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "This curated dataset contains locally available records from a postharvest dragon-fruit (pitaya) campaign: 311 original RGB JPEG images organized by storage day (0, 7, 14, 21, and 25), 193 macro-enabled electronic-nose exports, electronic-nose derived matrices, NIR response/analysis workbooks, and 26 readable chemometric and ANOVA reports. A SHA-256 file manifest is supplied for all 551 data files. The data are related to Ferreira et al. (2024), Deep computer vision system and explainable artificial intelligence applied for classification of dragon fruit (Hylocereus spp.) , published in Scientia Horticulturae . The publisher PDF is not included; the record links to the article DOI. The README and data dictionary identify critical provenance limits. The local RGB collection has 311 files whereas the article reports 313 images, and the package does not provide an image-level train/test partition, SLI label assignment, temperature assignment, or verified sample-level link between the image, NIR, electronic-nose, and physicochemical records. Storage-day folders must therefore not be interpreted as published SLI classes. Legacy reports are included as analysis provenance, not as independent validation claims.",
+      "tags": [
+        "dragon fruit",
+        "pitaya",
+        "Selenicereus undatus",
+        "postharvest",
+        "RGB imaging",
+        "computer vision",
+        "near-infrared spectroscopy",
+        "electronic nose",
+        "chemometrics",
+        "shelf-life",
+        "food quality"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Multimodal postharvest dataset of red-fleshed dragon fruit: RGB images, NIR spectra and electronic-nose measurements",
+      "url": "https://zenodo.org/records/23977402"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "5082c8366bce0b81b2814f6e",
+      "context_id": "4f90bac9eeef0b1657ff5ed9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.625,
+      "source": "zenodo",
+      "source_context_sha256": "647446886d58b27c72c043b9eb940ee14f520ad64f5880feb7b1e4d51d91dc53",
+      "source_published": "2026-11-04",
+      "source_updated": "",
+      "summary": "MELITE is an open-source Python package for the evaluation and selection of supervised classification and regression models using numeric tabular datasets. It supports classification-only, regression-only, and mixed-task workflows. Model evaluation uses task-specific cross-validation strategies and selection criteria: F1-macro for classification and RMSE for regression. Supported models are optimized with Optuna when hyperparameter tuning is applicable. Evaluation results, optimization summaries, and provenance are preserved in task-specific artifacts. Selected models can be fitted on the full dataset, exported, and reused for prediction. The resulting evaluation evidence supports reproducible model comparison but does not establish external predictive generalizability.",
+      "tags": [
+        "machine learning",
+        "supervised learning",
+        "classification",
+        "regression",
+        "tabular data",
+        "model evaluation",
+        "model selection",
+        "cross-validation",
+        "hyperparameter optimization",
+        "Optuna",
+        "reproducibility",
+        "evaluation evidence",
+        "model export"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "MELITE — Multi-Model Supervised Learning Evaluator",
+      "url": "https://zenodo.org/records/23963950"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "ab878b5377f6ec27ed6f87f7",
+      "context_id": "38e71f8ecb647a64a7864673",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.625,
+      "source": "zenodo",
+      "source_context_sha256": "a7c9232208501428dd7ea2feb2907a6f9b806ccbc22081a47a5e2880c1d4a1f3",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "Public comment submitted to DICOM Working Group 32 on Supplement 253: Waveform Compression (Version 09, 2026-09-18), together with the benchmark it rests on. ITU-T T.261 / ISO-IEC 23003-8 (\"H.BWC\") is evaluated against the codec set of Buccino et al. 2023 (doi:10.1088/1741-2552/acf5a4) on Neuropixels 1.0 recordings at 384 channels and 30 kHz. The lossless results of that paper were reproduced first as a check (912 cells, paired per-recording median deviation 0.017 %, codec ranking 11/11), and T.261 was then added to the same protocol. The central finding is that the two obvious ways to qualify a lossy setting disagree with each other. On one simulated Neuropixels recording with ground truth, at matched compression T.261 preserves the average spike waveform better than WavPack Hybrid while adding six times as many spurious units above the lossless baseline (+30 against +5, on a baseline of 126). A lossy setting therefore cannot be qualified on waveform fidelity alone. The comment makes eight specific requests of WG-32 on that basis, including conveying the quantizer step rather than only a compression ratio, widening Relative Sample Times (which saturates at 71.6 minutes as VR UL), and using a 64-bit Basic Offset Table (32-bit offsets overflow after ~11 minutes of compressed data at 384 channels, and ~2.7 minutes on a 1,536-channel Neuropixels 2.0 Quad Base probe). Every quantitative claim derives from recorded computation rather than from prose: each measurement cell carries its own datalad run record naming the tool commit, input checksums and command line, and each sweep is re-runnable from the pinned tool commit. Funding. This work was supported by the NIH BRAIN Initiative under award R24MH117295 (NIMH), \"DANDI: Distributed Archives for Neurophysiology Data Integration\". The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health. AI assistance. The tooling, analysis scripts and the drafting of the report were produced with the assistance of Claude Code (Anthropic) under the author's direction and review; per-commit Co-Authored-By trailers record which model produced each commit. The quantitative claims derive from recorded computation, not from model output.",
+      "tags": [
+        "DICOM",
+        "Supplement 253",
+        "waveform compression",
+        "ITU-T T.261",
+        "H.BWC",
+        "electrophysiology",
+        "Neuropixels",
+        "spike sorting",
+        "lossy compression",
+        "reproducibility",
+        "DANDI"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Benchmarking ITU-T T.261 against established codecs on extracellular electrophysiology, with a public comment on DICOM Supplement 253",
+      "url": "https://zenodo.org/records/23968942"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "74f449176ed728bd61c27728",
+      "context_id": "100cabf3d753b10eb7cdf34c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reproducibility"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.625,
+      "source": "zenodo",
+      "source_context_sha256": "226245b08662bc06db71497641efaea557daf34edba0942c9a51008a94268bee",
+      "source_published": "2026-11-04",
+      "source_updated": "",
+      "summary": "The dataset, the full pipeline (corpus selection, extractive grounding with&nbsp;Gemini, LLM paraphrase augmentation, balancing, cross-validation folds), the&nbsp;training code for the five encoders in the STL and MTL settings, every&nbsp;prediction of every trained model, and the evaluation and statistics code. It is a re-implementation of the study, built from the paper, the undergraduate thesis it is based on and the source spreadsheet. The tables of the paper are the results of the original runs. The re-implementation reproduces the CT-Introduction results and the main conclusion (MTL does not significantly outperform STL in any task); it gives lower CT-Conclusion and CT-Abstract scores and higher CT-Planning scores (Reproducibility paragraph, Section 6 of the paper). Details in `REPRODUCTION.md`.&nbsp; Version 1.1 (artifact review): adds the Provenance section to REPRODUCTION.md, a summary of the execution scenarios to the README, and SHA256SUMS. Code, data and results are unchanged from version 1.0. The original training implementation and generated data files of the study were not preserved. This package is an independent re-implementation; REPRODUCTION.md (section Provenance) states what is original, what is reconstructed and how differences affect comparability.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Replication Package: Using Single- and Multi-Task Transformers for Classifying Controlled Experiment Protocols in Software Engineering: Initial Investigation",
+      "url": "https://zenodo.org/records/23967570"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "263f0827f9bd5af85c1e450b",
+      "context_id": "41b1a47535a1f3b04e13df7c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "arxiv",
+      "source_context_sha256": "c2e2f16ce86a272476a6d79486879814cedfffda1fde2123335708e457396b80",
+      "source_published": "2026-11-04T03:48:15Z",
+      "source_updated": "2026-11-04T03:48:15Z",
+      "summary": "Personalized retrieval-augmented generation requires extracting and applying user preferences from extended interaction histories. This task is challenging because preference evidence is scattered across past conversations and remains bound to specific temporal and situational contexts. Consequently, isolated fragments rarely provide complete support for a response, while preferences expressed under different conditions are easily conflated. To address these limitations, we propose Weaver, a framework that incrementally weaves memory-conditioned retrieval trajectories with compositional preference reasoning for personalized responses. Weaver operates on a Dual-Layer Retrieval and Reasoning Graph that couples an upper Intent Dependency Graph with a lower Memory-Conditioned Retrieval Trajectory Graph. Dependency Information Gap Tracking represents the information needed to answer the current request and its prerequisite dependencies in the upper graph. Memory-Conditioned Incremental Retrieval uses established premises and clues from retrieved conversations to locate missing evidence, recording the resulting retrieval trajectories in the lower graph. Scope-Aware Compositional Reasoning jointly interprets the accumulated evidence to determine which preferences apply to the request. It identifies complementary and alternative support and distinguishes conflicting claims within the same temporal and situational context. These conclusions iteratively update task premises and remaining information gaps, guiding subsequent retrieval to establish a coherent contextual basis for the final response. Experiments on personalized RAG benchmarks, particularly PersonaMem, demonstrate that Weaver outperforms leading baselines in both evidence completeness and answer quality.",
+      "tags": [
+        "cs.IR"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Weaver: Weaving Preference Evidence through Incremental Reasoning for Personalized Retrieval-Augmented Generation",
+      "url": "https://arxiv.org/abs/2611.05900v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "e9fd287102ffff53bab49fb3",
+      "context_id": "14beb40c119a29cf162b37cf",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "f02aa8002cddb425501ec0630170ba3e8f600cd128d225f7182a77c86cfa5918",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "Project Genesis defines a scalable, multi-stage Quantum Tetrahedral Hybrid Propulsion System designed to achieve silent, high-efficiency, solid-state flight. This open-source architecture resolves the two critical limitations that have historically restricted atmospheric electrohydrodynamic (EHD) propulsion to lab-bench models: prohibitive energy requirements and extreme atmospheric sensitivity (arcing under high humidity) . The system transitions past brute-force high-voltage scaling by establishing an integrated, multi-physics environmental loop. A first-generation (Gen 1) trial blueprint achieves this through four highly coordinated stages: Mechanical Pre-Compression: An asymmetrical, non-equilateral triangular array of non-bladed Tesla disc packs (featuring lightweight carbon nanofiber skeletons cross-linked with highly electropositive sugarcane bio-waste and casein proteins) pulls in and compresses ambient air without rotational gyroscopic flight roll. Thermodynamic Densification: A micro-dimpled hexagonal honeycomb stator mesh straightens the turbulent rotational air, while structurally embedded Thermoelectric Coolers (TECs) flash-freeze the incoming column. This spikes absolute air density and mass flow rate before the fluid encounters the primary positive ionic corona rings. Closed-Loop Static Scavenging: High-velocity air-shearing through the nano-textured disc gaps triggers a continuous triboelectric exchange, mechanically pre-charging the air mass and lowering downstream high-voltage demands. Residual exhaust kinetic and acoustic energy is safely recycled via an isolated downstream Triboelectric Nanogenerator (TENG) mesh. Absolute Material Containment: The entire framework is micro-sealed in an iron-flake-infused flexible ceramic UV vacuum coat globally embossed with a bio-mimetic dragonfly skin nano-pillar texture to ensure total hydrophobicity and zero skin-friction drag. Electromagnetic Interference (EMI) is completely trapped within the core by a nested, triple-twisted tungsten wire hexagonal Faraday cage embedded with sub-micron diamond dust and backed by flexible silica aerogel firewalls. Flight maneuvering is handled via Differential Fluidic Thrust Vectoring across a 3D tetrahedral diamond drive configuration. Contactless, biaxial (radial-axial) magnetic stator hinges pivot the side wings from high-load VTOL lift modes into low-profile cruise channels that function as an underbelly ram-air trap. When parked on the tarmac, the architecture functions in reverse as a passive, solid-state trickle-charging engine&mdash;harvesting static friction from headlines and converting ambient thermal differentials into current, scaling in charging efficiency as the surrounding weather conditions become more extreme. &nbsp; &nbsp; &nbsp;",
+      "tags": [
+        "1. Fluid Dynamics & Aero-Structures Tesla Disc Turbine Boundary-Layer Adhesion Electrohydrodynamic ("
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "PROJECT GENESIS: QUANTUM TETRAHEDRAL HYBRID PROPULSION MANIFESTO GEN 1, PART 1: FOUNDATIONS OF BOUNDARY-LAYER FLUID DYNAMICS",
+      "url": "https://zenodo.org/records/23967143"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "ae3f0db9438959f7bdf44f5c",
+      "context_id": "5b0500ac238e199fdfd01749",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "confound"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.3333,
+      "source": "arxiv",
+      "source_context_sha256": "ba8abae6ed1db067802a5a14c1d38b0624bb16258fea375bd65674dc09d42451",
+      "source_published": "2026-11-04T16:20:28Z",
+      "source_updated": "2026-11-04T16:20:28Z",
+      "summary": "The continuous expansion of digital infrastructure, especially data centers, has imposed unprecedented, geographically concentrated stress on existing power grids. However, rigorous causal evidence quantifying how these facilities reshape local power-infrastructure supply remains limited. This study builds a comprehensive county-level US panel dataset spanning 2010-2024, uniquely integrating individual data center building footprints and power-plant additions. To mitigate endogeneity and high-dimensional confounding, this study deploys Double Machine Learning with five-fold cross-fitting, conditioning on county and year fixed effects alongside regional socioeconomic covariates. Baseline estimation identifies a significant positive causal effect robust across multiple rigorous specifications. The result holds following 1%-99% winsorization that downweights mega-clusters including Loudoun County: growth in data-center floor area drives meaningful increases in nearby power-generation capacity (ATE=1.982, P=0.000, CI: [1.25, 2.72]). Outcomes remain statistically significant using a one-year lagged treatment to address reverse causality, and are stable under state-level fixed-effect alternatives. An event-study framework augmented with historical agglomeration controls validates clear parallel trends and detects a sharp causal spike at t = 3, matching typical utility-scale grid-construction lead times. A placebo test further verifies these causal estimates cannot emerge from random chance. Substantial regional heterogeneity emerges: strong positive impacts concentrate in the West, while significant negative displacement-related effects appear within resource-constrained Northeastern counties. These results deliver timely insights for urban planners and energy regulators, stressing the importance of forward-looking grid-capacity investment to support ongoing digital transformation.",
+      "tags": [
+        "cs.AR"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Data Center Agglomeration and Power Infrastructure Capacity in the United States",
+      "url": "https://arxiv.org/abs/2611.06737v1"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "7d773970a9066d0bdaf177cf",
+      "context_id": "ee52abd7e6430d01da3f0bfe",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "zenodo",
+      "source_context_sha256": "b40f6f53c076102e1512a33714a32ce3d0f69b781f4e89c853cc50d2b622d170",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "STARLI / TEN-FLAGSHIP RESEARCH CONSTELLATION YULI &middot; NANO &times; QUANTUM &times; REGENERATION &times; AI &times; BCI F021&ndash;F025 / 200&nbsp; |&nbsp; Family 03: Nanomedicine for Neural Repair F021&nbsp; Neural-Targeted Nanocarriers at the Limit Core: receptor binding &times; intracellular cargo delivery &times; independently measured off-target exposure. Endpoint: target-cell uptake fraction [percent]. Hidden challenge: concealed receptor-blocking ligand. Rival: surface adsorption or fluorescent dye leakage. F022&nbsp; Blood&ndash;Brain Barrier Nanodelivery Engineering at the Limit Core: endothelial junction integrity &times; transcellular transport &times; independent receiver mass balance. Endpoint: apparent permeability coefficient [meter per second]. Hidden challenge: ligand blocking without cell loss. Rival: barrier leakage or dye-only passage. F023&nbsp; Controlled Nanorelease of Neural Regenerative Factors at the Limit Core: polymer degradation &times; molecular potency &times; time-resolved exposure control. Endpoint: released active factor fraction [percent]. Hidden challenge: blind membrane thickness exchange. Rival: assay-detected inactive fragments or burst-only delivery. F024&nbsp; Nanomodulation of Neuroinflammatory Microenvironments at the Limit Core: cargo exposure &times; immune phenotype &times; orthogonal viability-adjusted cytokine readout. Endpoint: viability-adjusted cytokine concentration [picogram per milliliter]. Hidden challenge: cell-density blinded uptake pulse. Rival: cytokine assay interference or depletion of surviving immune cells. F025&nbsp; Extracellular Vesicle Nanodelivery for Neural Repair at the Limit Core: vesicle membrane identity &times; protected cargo transfer &times; cell-specific uptake witness. Endpoint: intact cargo recovery fraction [percent]. Hidden challenge: masked vesicle-surface protease control. Rival: co-isolated free biomolecule or residual dye. FIRST-PRINCIPLES EVIDENCE CONTRACT Ten prospective English research books, each 777 pages with 30 formulas, 82 chapters, 410 single-page studies, 200 Gates with three future-letter passages, and 33 Phoenix. Drug-carrier uptake, barrier passage, intact active cargo and neural functional recovery are distinct propositions. The F02 PDF transfers independent verification rules by analogy; it does not establish nanotherapeutic efficacy. &nbsp; STARLI / TEN-FLAGSHIP RESEARCH CONSTELLATION YULI &middot; NANO &times; QUANTUM &times; REGENERATION &times; AI &times; BCI F026&ndash;F030 / 200&nbsp; |&nbsp; Family 03: Nanomedicine for Neural Repair F026&nbsp; Intelligent Neural Nanopharmacokinetics at the Limit Core: time-resolved exposure &times; compartment clearance &times; model identifiability. Endpoint: target-compartment exposure AUC [milligram hour per liter]. Hidden challenge: concealed redistribution-rate crossover. Rival: unobserved protein binding or biased sampling volume. F027&nbsp; Neural Targeting and Off-Target Risk at the Limit Core: target delivery &times; peripheral exposure &times; harm-sensitive selectivity. Endpoint: target-to-offtarget concentration ratio [dimensionless]. Hidden challenge: hidden cross-reactive receptor expression. Rival: apparent targeting from omitted off-target compartments. F028&nbsp; Stimuli-Responsive Neural Nanocarriers at the Limit Core: trigger specificity &times; reversible activation &times; bounded cargo exposure. Endpoint: triggered-to-background release ratio [dimensionless]. Hidden challenge: concealed thermal sham at identical dose. Rival: thermal, osmotic or chemical leakage masquerading as trigger action. F029&nbsp; Batch Consistency of Neural Repair Nanoformulations at the Limit Core: particle-size dispersion &times; cargo potency &times; independent lot qualification. Endpoint: particle diameter coefficient of variation [percent]. Hidden challenge: masked mixing speed trial. Rival: selective exclusion of failed batches or analyzer drift. F030&nbsp; Evidence Translation for",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "STARLI / TEN-FLAGSHIP RESEARCH CONSTELLATION YULI · NANO × QUANTUM × REGENERATION × AI × BCI F021–F025 / 200 | Family 03: Nanomedicine for Neural Repair F021 Neural-Targeted Nanocarriers at the Limit Core: receptor binding × intracellular cargo delivery × independently measured off-target exposure. ",
+      "url": "https://zenodo.org/records/23965703"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "422733ca7b8761408a880259",
+      "context_id": "d189d5786f94f912e939acf7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "zenodo",
+      "source_context_sha256": "19086b78de7155ff54c5de116405397f59e985a7770378da248c015402c7c66f",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "This record contains the code, a simulated benchmark dataset, and the result files for a study on detecting cyberattacks that are masked by AI data-center load transients in inverter-rich distribution grids. The manuscript itself is not included. Benchmark. The IEEE 33-bus distribution feeder is driven by 61 measured GPU power traces: 10 large-language-model training runs and 51 inference runs, recorded on A100, H100, H200 and L40S GPUs at 0.1 s. These traces form the load of an AI data center at bus 7, rated at 15&ndash;30% of feeder load. A photovoltaic inverter at bus 17 follows the IEEE 1547-2018 Category B volt-var curve. Nine channels are recorded at 10 Hz: three bus voltages, feeder-head P and Q, data-center P and Q, and inverter P and Q. The dataset holds 1,000 labeled scenarios of 120 s each. Of these, 598 contain one of seven attack types (bias, scaling, ramp, pulse, replay, coordinated mimic, and control-loop), and 220 of the attacks are hidden inside data-center load transients. Every sample is labeled for attack and for load transient. Code. The Python code covers: a linearized DistFlow model and an exact AC backward/forward-sweep power flow; data-center load generation from the GPU traces; attack injection and 10 Hz scenario simulation; physics-residual features learned from historical measurements, without feeder impedances; the RIME optimizer and a CNN-LSTM-attention detector (PR-Net); gradient-boosting, random-forest, MLP and logistic-regression baselines; window-level and event-level evaluation with scenario-bootstrap confidence intervals. Results. The result files contain the numbers behind all tables and figures: comparisons of detectors trained with and without load-transient awareness and physics residuals; ablations, computational cost, and an equal-budget comparison of RIME, random search and an untuned default; robustness tests under seven conditions, including exact AC power flow, unseen workload shapes, and changes in noise, photovoltaic share, data-center size and inverter location; a replay-attack consistency check; trained Stage-1 network weights. Third-party data. The GPU power traces come from the public LLM Power Trace Explorer repository (commit 9c25218). Because that repository has no license file, the raw traces are not redistributed here; scripts/prepare_gpu_traces.py rebuilds them from the public source. The included benchmark contains only simulated feeder signals driven by normalized, scaled versions of those load shapes.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Physics-Residual Detection of Cyberattacks Masked by AI Data-Center Load Transients in Inverter-Rich Distribution Grids",
+      "url": "https://zenodo.org/records/23968028"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "7236ff56131cfd25ce451e43",
+      "context_id": "ae0a163fda691e28fc9784a9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "zenodo",
+      "source_context_sha256": "b481ebdc48527fb582230e2d016e7b1b7b43b270c14d8acd505677ad93ef93d2",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "This release brings spatially varying particulate media to Eradiate: aerosol and cloud fields can now vary per voxel, with particle properties interpolated over particle size distribution parameters (new ParticleMSComponent ) or other state variables such as relative humidity (new ParticleStateComponent ). To support this, the aerosol data format is generalized to the Prt family of particle radiative property formats, and a new Ppr format describes particle profiles. In CKD mode, the sample count set by Measure.spp is now distributed across spectral loop iterations according to their contribution to the final result, and variances use the unbiased estimator. The kernel is upgraded to v0.6.0 (based on Mitsuba v3.9.1), which adds Python 3.14 support and drops Python 3.9 and macOS x64 support. The gecko and komodo monochromatic absorption databases are updated to version 2. Testing infrastructure and the development environment are also substantially reworked. Most renamed components, fields and functions remain available with a deprecation warning until v2.0.0. Deprecation warnings are now displayed by default. The following changes may require action: Use Python 3.10 or later. On Intel Macs, stay on v1.2.x. Download the updated absorption databases: eradiate data install gecko and/or eradiate data install komodo . In CKD mode, expect different noise levels at a given spp : per-g-point and per-bin sample counts are no longer equal. spp must now be at least spp_min (default: 2) per g-point, or a ValueError is raised. To restore the v1.2 behaviour, set spp_allocation=&quot;uniform&quot; on the measure, or sample_allocation = &quot;uniform&quot; in the configuration file. Variances are now unbiased and NaN where fewer than 2 samples were taken. Regression thresholds based on variance may need adjustment. Replace ParticleLayer with ParticleOTComponent (the Python name is removed; the &quot;particle_layer&quot; dictionary type is still accepted), and HeterogeneousAtmosphere(particle_layers=...) with particle_components=... . Replace aer_core_v2 datasets and helpers with their prt_core_v1 counterparts, and load_aerosol_libradtran() with libradtran_to_prt . AbstractHeterogeneousAtmosphere.eval_radprops output now has (x_cell, y_cell, z_layer) dimensions; select x_cell=0, y_cell=0 (or squeeze() ) to recover 1D profiles. Replace eradiate.test_tools imports with eradiate.testing , and the --update-references pytest flag with --force-regen . Code calling {func} .mi_render directly must unpack (bitmap, spp) pairs. Test suites that turn warnings into errors will now fail on Eradiate deprecation warnings: these are now FutureWarning s. » Detailed change log «",
+      "tags": [],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Eradiate radiative transfer model",
+      "url": "https://zenodo.org/records/23965713"
+    },
+    {
+      "base_direction_id": "protein_stability_falsifiers",
+      "candidate_id": "80c8f3ae93247e0694619f54",
+      "context_id": "12b49268380f5e1e6373273e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "protein_stability_falsifiers::COUNTEREVIDENCE",
+      "direction_title": "Rowan / BBC1 protein structural confidence vs experimental stability falsification [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ptm"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.125,
+      "source": "zenodo",
+      "source_context_sha256": "4ed10f3c675098be441d51710ce06cd6c022d6e792ac0e600467e78eb4ea709a",
+      "source_published": "2026-11-03",
+      "source_updated": "",
+      "summary": "This Zenodo record is the supplemental material for the manuscript \"Probing Coherent Noise with Stabilizer Codes: Identifiability, Ambiguity, and Decoder Priors\" (Long Huang, Sichuan Normal University), and it documents a three-qubit fixed-frequency transmon experiment together with the prepare&ndash;encode&ndash;expose&ndash;decode&ndash;recover&ndash;tomograph protocol, the seven stabilizer-code channels measured at idle times T &isin; {0.25, 0.5, 1, 2} &micro;s, and the analysis needed to reconstruct process tensors, deconvolve state-preparation-and-measurement error, test linearity, monitor drift across interleaved blocks, and apply the acceptance criteria reported in the supplement. The archive contains circuit definitions, PTM reconstruction and calibration scripts, processed data such as fitted angles and per-block drift monitors, and documentation of the hardware parameters, twelve-settings-per-channel scheme, and shot budget, so that the identifiability, ambiguity, and decoder-prior claims of the paper can be independently reproduced; the code is released under the MIT license and the data and documentation under CC-BY-4.0.",
+      "tags": [
+        "coherent noise; quantum error correction; repetition code; decoherence; Pauli transfer matrix; noise"
+      ],
+      "target_repository": "Hawkar-usls/aura-oracle-tg",
+      "title": "Probing Coherent Noise with Stabilizer Codes: Identifiability, Ambiguity, and Decoder Priors",
+      "url": "https://zenodo.org/records/23914538"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "selection": "BALANCED_LENS_ROLLING_TOP",
+  "snapshot_cap": 48,
+  "snapshot_items_total": 43,
+  "target_repository": "Hawkar-usls/aura-oracle-tg"
+}
