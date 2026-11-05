@@ -206,6 +206,81 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
         self.assertEqual(self.check(sources)['status'], 'PASS')
         self.assertEqual(fetch.call_count, 2)
 
+    def aged_pending_snapshot_and_live_queue(self, *, correct_ack=True):
+        health, queue, ack = self.stale_snapshot_and_live_queue(
+            correct_ack=correct_ack)
+        # Isolate the aged ordinary-PENDING route from the other sample row.
+        health['repositories']['Hawkar-usls/Janus_Genesis'].update(
+            status='UP_TO_DATE', produced=7, confirmed=7, pending=0)
+        health['repositories']['Hawkar-usls/Echo-Pyramid'].update(
+            status='PENDING', oldest_pending_minutes=0)
+        health['total_pending'] = 1
+        return health, queue, ack
+
+    def test_aged_pending_live_ack_clears_old_producer_backlog(self):
+        health, queue, ack = self.aged_pending_snapshot_and_live_queue()
+        fetch = mock.Mock(side_effect=[queue, ack])
+        current = reconcile_stale(health, NOW, fetcher=fetch)
+        row = current['repositories']['Hawkar-usls/Echo-Pyramid']
+        self.assertEqual(row['status'], 'UP_TO_DATE')
+        self.assertEqual(row['confirmed'], 2)
+        self.assertEqual(current['total_pending'], 0)
+        self.assertEqual(current['live_rechecked_recipients'],
+                         ['Hawkar-usls/Echo-Pyramid'])
+        self.assertEqual(fetch.call_count, 2)
+        self.assertEqual(health['total_pending'], 1)
+
+    def test_aged_pending_old_ack_exposes_real_stale_not_false_clear(self):
+        health, queue, ack = self.aged_pending_snapshot_and_live_queue(
+            correct_ack=False)
+        current = reconcile_stale(health, NOW,
+                                  fetcher=mock.Mock(side_effect=[queue, ack]))
+        self.assertEqual(current['repositories']['Hawkar-usls/Echo-Pyramid']['status'],
+                         'STALE')
+        self.assertEqual(current['total_pending'], 1)
+
+    def test_aged_pending_wrong_sha_is_conflict_not_delivered(self):
+        health, queue, ack = self.aged_pending_snapshot_and_live_queue()
+        ack['sha256'] = 'f' * 64
+        current = reconcile_stale(health, NOW,
+                                  fetcher=mock.Mock(side_effect=[queue, ack]))
+        self.assertEqual(current['repositories']['Hawkar-usls/Echo-Pyramid']['status'],
+                         'ACK_CONFLICT')
+        self.assertEqual(current['total_pending'], 2)
+
+    def test_aged_pending_inconsistent_sender_queue_fails_closed(self):
+        health, queue, ack = self.aged_pending_snapshot_and_live_queue()
+        queue['entries'].pop()
+        with self.assertRaisesRegex(ValueError, 'sender queue changed'):
+            reconcile_stale(health, NOW,
+                            fetcher=mock.Mock(side_effect=[queue, ack]))
+
+    def test_fresh_pending_snapshot_does_not_recheck_early(self):
+        health = copy.deepcopy(self.sources[0])
+        health['at'] = '2026-10-17T22:58:00Z'
+        fetch = mock.Mock(side_effect=AssertionError('unnecessary network'))
+        current = reconcile_stale(health, NOW, fetcher=fetch)
+        self.assertEqual(current['total_pending'], 1)
+        self.assertEqual(current['live_rechecked_recipients'], [])
+        fetch.assert_not_called()
+
+    def test_private_ack_unavailable_is_never_publicly_rechecked(self):
+        health = copy.deepcopy(self.sources[0])
+        health['repositories']['Hawkar-usls/Janus_Genesis'].update(
+            status='UP_TO_DATE', produced=7, confirmed=7, pending=0)
+        health['repositories']['Hawkar-usls/SkinGPT'] = {
+            'status': 'ACK_UNAVAILABLE', 'produced': 1,
+            'confirmed': 0, 'pending': 1,
+            'ack_read_error': 'ACK_VISIBILITY_UNKNOWN'}
+        health['total_pending'] = 1
+        fetch = mock.Mock(side_effect=AssertionError('private ACK read'))
+        current = reconcile_stale(health, NOW, fetcher=fetch)
+        self.assertEqual(current['repositories']['Hawkar-usls/SkinGPT']['status'],
+                         'ACK_UNAVAILABLE')
+        self.assertEqual(current['total_pending'], 1)
+        self.assertEqual(current['live_rechecked_recipients'], [])
+        fetch.assert_not_called()
+
     def test_live_old_ack_does_not_suppress_real_stale_alert(self):
         health, queue, ack = self.stale_snapshot_and_live_queue(correct_ack=False)
         current = reconcile_stale(health, NOW, fetcher=mock.Mock(side_effect=[queue, ack]))
@@ -243,8 +318,10 @@ class BeetleHomeWatchdogTests(unittest.TestCase):
                          'ACK_CONFLICT')
 
     def test_no_suspected_lag_never_makes_extra_requests(self):
+        health = copy.deepcopy(self.sources[0])
+        health['at'] = NOW.isoformat()
         fetch = mock.Mock(side_effect=AssertionError('unexpected network request'))
-        current = reconcile_stale(self.sources[0], NOW, fetcher=fetch)
+        current = reconcile_stale(health, NOW, fetcher=fetch)
         self.assertEqual(current['live_rechecked_recipients'], [])
         fetch.assert_not_called()
 
