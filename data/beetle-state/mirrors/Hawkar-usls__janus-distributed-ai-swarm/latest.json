@@ -1,17 +1,17 @@
 {
-  "batch_id": "161dc80715200ffa96dd",
+  "batch_id": "642c8ba50b8c75313952",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
   "items": [
     {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "8f303dfb131da3b6a57b04cd",
-      "context_id": "c8caea24de6604f1672e5019",
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "1285fc7b5794376a12904aa3",
+      "context_id": "86b41c4c1bf1db48c85e5ce2",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -21,70 +21,33 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "parquet"
+        "inverse",
+        "reconstruction",
+        "recovery"
       ],
-      "mirror_lens": "FORWARD",
+      "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.2917,
-      "source": "zenodo",
-      "source_context_sha256": "8d08b3c41f921ac5bb0973d753eba7b5afa2b1c9d2cc292b248ea2552d8a3449",
-      "source_published": "2026-06-01",
-      "source_updated": "",
-      "summary": "Replication data for: Cho, F. H. T., Rhodes, J. R., Maron, M., Lunney, D., Iftekhar, M. S., McIlwee, A., &amp; Williams, B. A. (forthcoming).&nbsp; Leakage effects of establishing protected areas in multi-use forests . This dataset contains the pre-computed data files needed to reproduce all figures and summary tables in the paper. The study estimates the causal effect of New South Wales (NSW) state forest revocations on deforestation in adjacent areas using a Before&ndash;After Control&ndash;Impact (BACI) design with propensity-score matching. Two leakage channels are estimated: (1) leakage to private land within 10 km of a revoked state forest, and (2) leakage to neighbouring state forests within 10 km. Contents: processed_data_for_plotting.RData &nbsp;&mdash; all model estimates, Average Marginal Effects (AME), matched pair summaries, and spatial objects required to reproduce Figures 1&ndash;6 (103 MB) state_forests_revoked_update.gpkg &nbsp;&mdash; NSW state forest polygons with revocation year and woody vegetation attributes focal_sf_year.gpkg &nbsp;&mdash; focal state forest polygons aggregated by revocation year nsw_grid_points.parquet &nbsp;&mdash; NSW 10 km regular grid cell centroids (712,714 cells; 1.2 GB) matching_data/parquet/ &nbsp;&mdash; pixel-level covariate and deforestation panel for all NSW grid cells, split across 1,000 Parquet files The R code for full replication is available at Github . To reproduce all figures, download the data files, place them in the&nbsp; data/ &nbsp;subdirectory of the code repository, and run&nbsp; scripts/05_replicate_figures.R with R &ge; 4.2.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Replication data: Leakage effects of establishing protected areas in multi-use forests in NSW, Australia",
-      "url": "https://zenodo.org/records/20483818"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "409264b72d62380d36a10860",
-      "context_id": "bde659afa32beb039745367b",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "parquet"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.2917,
-      "source": "zenodo",
-      "source_context_sha256": "2ef1d944a5556c97ee535f338fd0b1bbb6e3d6ca6931ce45223c91e6f7f56bd0",
-      "source_published": "2026-11-01",
-      "source_updated": "",
-      "summary": "The calibration and test probabilities of every run of a tabular classification benchmark, released so that prediction sets and their metrics can be recomputed without refitting a model. A conformal set is a function of four arrays: the class probabilities and labels on a calibration split, and the same on a test split. This deposit is those arrays, together with the software that reads them. The benchmark comprises 218 classification datasets and 22 models from four families, among them 13 tabular foundation models, each evaluated with the same ten seeds. Of the 218, 178 are real datasets and 40 are a synthetic block generated for this benchmark; three of the real ones are Bayesian-network resamplings of small classical datasets and are much larger than their seeds; of those, only one has its own seed in the collection, so that pair is not independent of itself while a rank test treats datasets as independent. Dataset size does not indicate provenance: the largest datasets in the collection are real. Coverage is not uniform and the per-model dataset count is reported for every cell. Eleven datasets carry more than ten classes, and the in-context models measured on them cannot enter them: one refuses and names the limit, another builds a ten-output head and fails inside a kernel. That is a capability limit observed on the models that were run rather than a property claimed of the family, and it is not missing work. One foundation model is measured on the original datasets only. Anything computed across models should be computed on a complete submatrix: the datasets on which every model being compared has all ten seeds. The calibration rows are held out of fitting, of tuning, of early stopping and of the in-context data, and each cell records which rows they were. The code that does it is included, with the line of each step documented. Probabilities are float64 and are not rounded: a prediction set is a comparison against a threshold, and a point sitting on that threshold moves if the value it is compared to is shortened. The data are released under CC BY 4.0. The software included in the source archive is released under the MIT licence, as stated by the LICENSE file it contains. The datasets themselves are not redistributed: each cell carries the row indices into its source dataset, and the synthetic datasets regenerate from their seeds with an included script. Model weights are not redistributed; every checkpoint is named in the model table. Version 1.2.0 adds the runs completed after version 1.1.0 and changes or removes nothing in it. Three new shards (cells-011 to cells-013, 2.02 GB) hold 311 further cells; index.parquet now lists all 46,182 cells and manifest_1016.parquet is their manifest. The files prefixed blocks_1016__ recompute the two blocks outside the main comparison on the completed runs, with the pipeline that produced the article's tables: the large-dataset block on 49 datasets and 21 models (42 in version 1.1.0) and the many-class block on 11 datasets and 7 models (5 in version 1.1.0). The main block of 113 real datasets and 22 models is unchanged. CHANGELOG.md lists what is added and the pairs that are still missing, with the reason for each.",
+      "score": 10.2083,
+      "source": "arxiv",
+      "source_context_sha256": "0ed5bca6f3e7206f3df407baec5108c10243e00ba39184b08032fc2a560421ee",
+      "source_published": "2026-11-03T13:12:18Z",
+      "source_updated": "2026-11-03T13:12:18Z",
+      "summary": "Separable nonlinear least squares problems arise in inverse problems such as semi-blind image deblurring, where the image enters the forward model linearly, and the blur parameters enter nonlinearly. Even when the image is regularized, joint estimation of the image and blur parameters can favor a degenerate no-blur solution, in which the blur operator tends to the identity and the reconstruction merely denoises the data without removing the blur. We address this by regularizing the blur parameters. Motivated by the determinant term arising from Gaussian marginalization, we construct a family of blur-parameter priors whose weight and auxiliary operators can be chosen independently of the image prior. The resulting log-determinant penalty is incorporated into regularized variable projection, which eliminates the image variables by minimization. Under periodic boundary conditions and assuming the matrices involved admit a joint spectral decomposition, we show that a sufficiently large determinant weight rules out the no-blur solution as a local minimizer. We also characterize the regularizer's behavior as the auxiliary regularization scale tends to zero or infinity. We solve the reduced problem with a quasi-Newton method that evaluates the objective and its derivatives in the Fourier domain. In experiments with Gaussian, defocus, and motion blur, the proposed prior improves image and blur recovery over Gaussian marginalization across several settings, with determinant weights computed from the true image. A single-sample experiment illustrates how to automatically choose parameters from the data using a conditional generalized cross-validation criterion.",
       "tags": [
-        "conformal prediction",
-        "prediction sets",
-        "uncertainty quantification",
-        "calibration",
-        "tabular foundation models",
-        "tabular data",
-        "benchmark",
-        "released predictions"
+        "math.NA"
       ],
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "TabSets: calibration and test probabilities for set-valued evaluation of tabular classifiers",
-      "url": "https://zenodo.org/records/23865903"
+      "title": "Marginalization-Based Regularization for Separable Nonlinear Least Squares Problems with Applications to Semi-Blind Deblurring",
+      "url": "https://arxiv.org/abs/2611.04846v1"
     },
     {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "c8751e5771ffbf38a14d1dad",
-      "context_id": "63fd349ab0f96f3dd568c486",
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "859eecbc4d955d8760f840c0",
+      "context_id": "3d40712ac1e8002eb4c820bb",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -94,66 +57,33 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "parquet"
+        "inverse",
+        "reconstruction",
+        "recovery"
       ],
-      "mirror_lens": "FORWARD",
+      "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.2917,
-      "source": "zenodo",
-      "source_context_sha256": "c8ff798748fba13228172642e5f8345f8fef8986604a9790e01ccd8a1880a9db",
-      "source_published": "2026-11-03",
-      "source_updated": "",
-      "summary": "Microbiome Repo — data package v1.29.0 (2026-11-02) One catalog, two tiers, all ages. The catalog tables ( catalog_* ) are the curated tier: human-associated microbial communities sequenced by shotgun DNA or RNA sequencing, from every body site and at every age — 5,053 projects, 810,820 samples, 4,789,110 sample × field values — with body site, age at collection, sex, BMI, country, health condition (controlled vocabulary), antibiotic exposure, subject and timepoint recovered from archive attributes (R1), supplementary tables (R2), paper full text (R3) and abstracts (R4); every value carries a verbatim evidence quote (≤ 12 words), a labelled source, a route and a confidence. Each run is labelled DNA or RNA ( catalog_runs.nucleic_acid ), each sample says which data sets it has ( has_dna , has_rna ), and each project carries the nucleic acid of its data sets ( catalog_studies.nucleic_acid ). Coverage over all catalog samples: age 24%, sex 29%, country 89%, health condition 43%, antibiotic exposure 16%. The registry tables ( registry_* ) list every screened public study in ENA/SRA/DDBJ with a human-associated metagenome signal — 64,369 studies — with archive-only classification (host, UBERON-anchored body sites, life stages, assay, access) and the harvested BioSample tier (637,397 BioSamples with normalised site / age / sex / country). Start here. catalog_studies.parquet (one row per project: body sites, DNA / RNA, papers, methods and setting read from the paper, per-field coverage, age-category and health-condition mix, curated depth) → catalog_sample_metadata_wide.parquet (one row per sample: every field with __route / __confidence , body_site_code , age_category + basis, has_dna / has_rna ) → catalog_sample_determinations.parquet (the evidence behind every value) and catalog_runs.parquet (every run). registry_studies.parquet is the registry; registry_runs_v1.29.0.parquet (every screened run) ships as a GitHub Release asset. Infant extension. The 370 infant gut projects carry a deeper infant-field curation (delivery mode, feeding mode, preterm status, gestational age, birth weight, maternal antibiotics, probiotics, HMO supplementation, NEC). Those rows are present in the catalog_* tables ( curated_source = infant_catalog ; infant_scope = true selects them: 66,355 samples) and the deep tables ( sample_metadata_wide , sample_determinations , study_metadata_wide , cohorts , universe_studies_all , sandpiper_* , …) are in the package as well. Files | File | Rows | What it is | |---|---:|---| | catalog_studies.parquet | 5,348 | Catalog projects: body sites (sample_body_sites, body_site_primary), nucleic acid of the data sets (nucleic_acid, n_runs_dna / n_runs_rna, n_samples_dna / n_samples_rna), methods and setting read from the paper (platform, extraction_kit, library_kit, study_shape, n_participants, recruitment, settlement), registry columns + per-field coverage (cov_&lt;field&gt; for every pack field), age-category / health-condition distributions, sequencing summary (n_runs_total, Gbp per run, instrument models, layouts, Sandpiper share; 1.12.0), curated depth and source | | catalog_sample_metadata_wide.parquet | 864,842 | Catalog samples, one row per sample: body_site_code / body_site_class / body_site_basis, has_dna / has_rna, age category, age, sex, BMI, country, health condition, antibiotic exposure, subject, timepoint, collection date, detailed location (region / locality / site), latitude / longitude, lifestyle (+ route / confidence per field), infant-only fields, body-site class, infant_scope (== the infant catalog's catalog_scope filter) | | catalog_sample_determinations.parquet | 4,947,738 | Catalog determinations : one row per sample × field for every catalog sample (every body site, all ages) — value, normalised value, route (R1 archive attribute / R2 supplementary table / R3 paper prose / R4 abstract), confidence, verbatim evidence quote and source; infant-catalog rows copied verbatim (src_track infant_catalog) | | ca",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "OlmLab/microbiome_repo-data: Data package data-v1.29.0",
-      "url": "https://zenodo.org/records/23921440"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "b38903b38089433cc0676c21",
-      "context_id": "279de63b59197ce921494165",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "netcdf"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.25,
-      "source": "zenodo",
-      "source_context_sha256": "116d09e54d6008e68863dc00505e10e75490c9dd672756b288281555d25e8270",
-      "source_published": "2026-11-03",
-      "source_updated": "",
-      "summary": "Dataset description This dataset provides gap-filled daily, high-resolution binary snow cover maps for 12 eddy-covariance stations within the FLUXNET, ICOS, and i-Box networks distributed across the French, Swiss, Austrian, and Italian Alps. The maps were generated to characterize surface snow conditions within the source areas of eddy-covariance measurements for the updated analysis of Scheidt et al. (2026). The dataset was specifically used to determine whether the area enclosed by a station&rsquo;s 80% flux-footprint contour was snow covered and to calculate the snow-cover fraction (SCF) within that footprint. Footprint-scale SCF can be calculated from the maps as the proportion of valid pixels within the footprint classified as snow covered. The data cover the following eddy-covariance sites for the hydrological years (1 st October - 30 th September) from 2013/14 to 2023/24: Alp Weissenstein (CH-Aws), Switzerland Col du Lautaret (FR-CLt), France Fr&uuml;eb&uuml;el (CH-Fru), Switzerland Monte Bondone (IT-MBo), Italy Mazia Pasture (IT-MtP), Italy Neustift (AT-Neu), Austria Nivolet (IT-NiG), Italy Torgnon (IT-Tor), Italy The i-Box observational network in the Inn Valley, Austria, comprising the Eggen (CS-SF1), Kolsass (CS-VF0), Hochh&auml;user (CS-NF27), and Weerberg (CS-NF10) stations For each station outside the i-Box network, the NetCDF files cover a 15 km &times; 15 km square centered on the station. Because the four i-Box stations are located close to one another, they are represented by a common 20 km &times; 20 km domain centered on the station cluster. The maps have a spatial resolution of 50 m and are provided in the WGS 84 / UTM zone 32N coordinate reference system (EPSG:32632). Files are organized by site and hydrological year. The binary snow cover condition variable represents daily snow-cover conditions, while the reconstruction_method variable distinguishes pixels obtained from high-resolution satellite observations from pixels reconstructed by the gap-filling procedure. High-resolution snow cover fraction maps were derived from Sentinel-2 MSI and Landsat 8 and Landsat 9 OLI imagery using SnowFLAKES ( Snow extent from applying a Flexible Learning Algorithm using KErnel-based Spectral unmixing ) at a resolution of 50m. SnowFLAKES is an unsupervised, image-adaptive snow-mapping approach developed for mountainous terrain and challenging observation conditions, including topographic shadows and variable illumination. The processing follows the approach described by Barella et al. (2022). Daily, spatially complete maps were generated by combining the available high-resolution snow observations with daily, lower-resolution MODIS SCF from the MOD10A1 product (Hall and Riggs, 2021). Gap filling and spatial downscaling were performed using an implementation adapted from the hierarchical multiresolution data-fusion method proposed by Premier et al. (2021). The approach uses spatial patterns learned from available optical observations to reconstruct snow-cover conditions on days without usable high-resolution satellite imagery. The resulting product represents daily binary snow presence at high spatial resolution. Raw Sentinel-2, Landsat, and MODIS imagery, eddy-covariance measurements, and flux footprint polygons are not included in this archive. The archive also includes an interactive Python viewer for the daily *_SC_GAM.nc snow-cover products. It can display snow-cover classes and reconstruction provenance over time, with station locations shown for context. Setup instructions and examples are provided in the README. NetCDF structure and value conventions For each site and hydrological year a NetCDF product is provided. Files ending in _SC_GAM.nc contain the 50 m high-resolution product. The main variable,&nbsp; binary_snow_cover_condition (time, y, x) , has units of percent and represents binary snow presence: 0 denotes snow-free ground and 100 denotes snow-covered ground. The product uses the dimensions time , y , a",
+      "score": 10.2083,
+      "source": "arxiv",
+      "source_context_sha256": "ae17d380c7c2c6bfc90e09a82a74bd6dedb244d66e70492ecc3fff11f9e3fc27",
+      "source_published": "2026-11-03T21:28:12Z",
+      "source_updated": "2026-11-03T21:28:12Z",
+      "summary": "Reconstruction of three-dimensional vascular structures from a limited number of X-ray projections is a severely underdetermined and ill-conditioned inverse problem. This work presents a unified matrix-free computational framework for evaluating iterative numerical methods for sparse-view cone-beam tomography. Forward and backprojection are implemented from ray-voxel intersection lengths computed with the Amanatides-Woo traversal algorithm, avoiding explicit construction of the large sparse system matrix. We systematically compare ART, SART, SIRT, gradient descent (GD), and Krylov subspace methods, including Conjugate Gradient, LSQR, and GMRES. The common matrix-free operators and geometry are used for all methods, allowing consistent comparisons under matched conditions. Particular emphasis is placed on gradient scaling using scalar step sizes, Jacobi preconditioning, and diagonal Hessian majorization, together with L1, Tikhonov, and total variation regularization. Numerical experiments use five three-dimensional coronary vessel models reconstructed from ten simulated X-ray projections under noise and scattering conditions, and are extended to real X-ray projections of a static thin-vessel phantom. Performance is evaluated in terms of convergence, computational cost, volumetric overlap, contrast-to-noise ratio, vessel diameter and centerline errors, and projection consistency at an unseen viewing angle. The results show that total-variation-regularized gradient descent with diagonal majorization provides the best overall reconstruction performance within the investigated computational budgets. By contrast, the tested Krylov implementations achieve limited geometric recovery despite higher computational cost. These findings emphasize the importance of appropriate gradient scaling and regularization for stable and computationally efficient sparse-view tomographic reconstruction.",
       "tags": [
-        "snow cover product",
-        "daily high-resolution snow cover product",
-        "eddy-covariance station",
-        "FLUXNET"
+        "math.NA"
       ],
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Gap-filled daily high-resolution snow-cover maps around Alpine eddy-covariance stations derived with SnowFLAKES",
-      "url": "https://zenodo.org/records/23734461"
+      "title": "Comparative analysis of numerical methods for X-ray 3D reconstruction from sparse views",
+      "url": "https://arxiv.org/abs/2611.05645v1"
     },
     {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "445626ff5c30d5173193f9e4",
-      "context_id": "f735a1052b8f4e3752a7870b",
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "60298ce4acb4d2035137227d",
+      "context_id": "d2a2087473384124cb75c274",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -163,29 +93,33 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "hdf5"
+        "inverse",
+        "reconstruction"
       ],
-      "mirror_lens": "FORWARD",
+      "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.1667,
-      "source": "zenodo",
-      "source_context_sha256": "b35eee327fa1a5d9b0eb86383f9c23a4422df066e777796c3bf3e28bbf37a417",
-      "source_published": "2026-11-03",
-      "source_updated": "",
-      "summary": "Validation dataset of the H5MD biophysics module, a metadata schema that stores the topology, force field, MD parameters, selection groups and observables of a molecular dynamics simulation together with its trajectory in one H5MD (HDF5) file. It accompanies the paper A Hierarchical Metadata Schema for Self-Contained Molecular Dynamics Trajectory Archives . validation_systems.zip contains the GROMACS inputs of the 58 chemical systems used in the paper's technical validation, reduced to what grompp needs: topology, force field, coordinates or run input, index groups and MD parameters. The systems range from 711 to 1,066,628 particles, cover AMBER, CHARMM, GROMOS, OPLS-AA and MARTINI force fields, and come in six groups by origin: self_generated (8): built with GROMACS from PDB entries bena (10): sessions of the Bena dataset ( 10.5281/zenodo.17632513 ) jcp_benchmark (6): GROMACS benchmark systems ( 10.5281/zenodo.3893789 ) hexabc (8): hexABC nucleic-acid and protein&ndash;nucleic-acid deposits from MDposit memprotmd (6): MemProtMD membrane proteins, atomistic and coarse-grained misato (20): MISATO protein&ndash;ligand complexes ( 10.5281/zenodo.7711953 ) Run under 23 simulation protocols, these inputs give the 379 reference files of the validation. The files can be regenerated with the validation scripts ( github.com/miemiemmmm/h5md-biophysics-validation ) and the GROMACS implementation published with the paper. Each group's MANIFEST.md credits its source and states the changes made; provenance/ holds the scripts that selected and prepared the systems. Four of the reference files are included as examples, each a short trajectory with the full metadata. They also serve as test data for the validator in gitlab.com/gromacs/h5md-biophysics : hexabc_a001u2_rna_protein__nvt-vrescale.h5md bench_villin__tcoupl-multigroup.h5md bench_villin__sd-langevin.h5md bench_villin__selection-noncontiguous.h5md",
-      "tags": [],
+      "score": 8.875,
+      "source": "arxiv",
+      "source_context_sha256": "45e2a417110b0a7740f3e51ec4609758084b94f6c92efd39e7fc00cfd1c7e053",
+      "source_published": "2026-11-03T15:00:14Z",
+      "source_updated": "2026-11-03T15:00:14Z",
+      "summary": "Bragg Coherent Diffraction Imaging (BCDI) relies on phase retrieval (PR), a non-convex, ill-posed inverse problem whose conditioning is degraded by factors like noise, partial coherence, and strain or crystallographic defects in the imaged nanocrystal. Conventional approaches, including alternating projections and deep learning methods, represent the object on a dense voxel grid, which is prone to amplitude-phase mixing and becomes increasingly ill-posed under these factors, often preventing reliable three-dimensional mapping of the particle's shape and strain. Here we present ConvexAD, a gradient descent PR model that parametrizes the object shape as a convex polyhedron, built by the intersection of half-spaces and enforces flat amplitude within it by construction. This geometric regularization eliminates amplitude-phase mixing and reduces the number of trainable parameters, hence facilitating the convergence of the PR. Implemented in JAX for native GPU acceleration and forward-model flexibility, ConvexAD is validated on simulated and experimental BCDI data, where it outperforms conventional and deep learning assisted PR at high strain, low signal, and reduced coherence, extending the conditions under which quantitative BCDI reconstruction is achievable.",
+      "tags": [
+        "cond-mat.mes-hall",
+        "physics.comp-ph"
+      ],
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Validation systems and reference files for the H5MD biophysics metadata module",
-      "url": "https://zenodo.org/records/23399239"
+      "title": "ConvexAD: differentiable phase retrieval with geometric regularization for high-strain, low-signal Bragg coherent diffraction imaging",
+      "url": "https://arxiv.org/abs/2611.05020v1"
     },
     {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "f5a1e62e4238bb8e96ab0177",
-      "context_id": "1025891905de3c00c6b31792",
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "d0cb8a8b61e303f9bbf1802d",
+      "context_id": "c38371f3172e8afcb7d52201",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::FORWARD",
-      "direction_title": "Universal large-data ingestion methods [FORWARD]",
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -195,26 +129,303 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "hdf5"
+        "inverse",
+        "reconstruction"
       ],
-      "mirror_lens": "FORWARD",
+      "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.1667,
+      "score": 8.875,
+      "source": "arxiv",
+      "source_context_sha256": "f675e79b5d2726b4274d88c6b17711e31cd3f0968ecc60ba3999c8d3ae87f6f3",
+      "source_published": "2026-11-04T02:32:34Z",
+      "source_updated": "2026-11-04T02:32:34Z",
+      "summary": "Existing generative model-based approaches to linear inverse problems typically use the acquired noisy measurement to condition or guide sampling in the image domain. In this work, we introduce Dual Flow, a novel joint flow model for solving linear inverse problems by jointly estimating the clean image and its corresponding noise-free measurement from the observation. Specifically, Dual Flow formulates image reconstruction and measurement denoising as a coupled estimation problem, using coupled flows in the image and measurement domains. The acquired noisy measurement $\\mathbf{y}_0$ is used only to initialize the measurement state; thereafter, the image and measurement states are jointly updated based on their current values. By construction, the final image and measurement estimates are guaranteed to satisfy the underlying forward model. We derive the sampling updates for the joint flow and show that they are governed by the conditional mean of the clean image given the current joint state. We further derive a closed-form expression for a sufficient statistic of the joint state and show that the required conditional mean can be obtained by solving an image-domain Gaussian denoising problem involving operator-dependent, correlated noise. We train a velocity-prediction network using this formulation to estimate the conditional mean from the derived sufficient statistic. Dual Flow requires no hyperparameter tuning beyond selecting the number of inference steps and achieves substantially shorter reconstruction times than competing methods. Extensive experiments across various linear inverse problems and image datasets demonstrate state-of-the-art performance in both distortion metrics and perceptual quality. Additional analyses assess robustness to model mismatch, as well as the ability to generate diverse plausible reconstructions and characterize reconstruction uncertainty.",
+      "tags": [
+        "eess.IV",
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Dual Flow: Joint Image-Measurement Flow for Inverse Problems",
+      "url": "https://arxiv.org/abs/2611.05843v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "d0c14b08d1956c2e681740ad",
+      "context_id": "02ebc90ecf8a87b73d85ac42",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "inversion"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
       "source": "zenodo",
-      "source_context_sha256": "a35b1336596b0fd6f392fa74fd2c2cf55c89821b560910c9e1a99d1e9e381501",
+      "source_context_sha256": "c382406f9d797807a0335168d792483b41538d2f09a3b8a6a15d414d26b1a73b",
       "source_published": "2026-11-04",
       "source_updated": "",
-      "summary": "SlideRule is an open source server-side framework for on-demand processing of science data in the cloud. The SlideRule project offers a new paradigm for NASA archival data management – rapid delivery of customizable on-demand data products, rather than hosting large volumes of standard derivative products, which will inevitably be insufficient for some science applications. The scalable server-side components of SlideRule run in the AWS cloud with optimized functions to read HDF5 data hosted by NASA in S3 cloud object storage. While SlideRule can be accessed by any HTTP client (e.g., curl) through GET and POST requests, the sliderule-python client provides a user-friendly API for synchronous interaction with the SlideRule service. The client library returns standard Python data containers (i.e., Pandas DataFrame) and facilitates serialization with provenance metadata for reproducible science. SlideRule uses a plugin framework to support different NASA missions and data products. The ICESat-2 SlideRule plugin offers customizable algorithms to process the archive of low-level data products from the NASA Ice Cloud and land Elevation Satellite-2 (ICESat-2) laser altimetry mission. The user defines a geographic area of interest and key processing parameters via an interactive web interface or the API, and SlideRule returns high-level surface elevation point cloud products in seconds to minutes, enabling rapid algorithm development, visualization and scientific interpretation.",
+      "summary": "Nonlinear root-finding, analytic signal extrapolation, and Marchenko inverse scattering share a common mathematical bottleneck: the inversion of ill-posed linear or linearized operators that suffer from spectral clustering, numerical instability, and spurious pole proliferation in unconstrained continuous spaces. Projecting these systems onto the maximal class-number-one Heegner modular curve establishes a unique factorization domain that eliminates fractional holonomy phase slips, preventing branch-cut bifurcations and suppressing spurious pole-zero doublets. Truncating the singular modulus expansion at its principal term provides an analytical starting anchor that strictly satisfies Smale point-estimate convergence criteria, placing the system directly within the quadratic attraction basin and reaching machine precision in a single iteration. In analytic continuation, the modular coordinate under the maximal discriminant is suppressed well below double-precision machine epsilon, truncating out-of-band noise and bypassing the Runge phenomenon without empirical regularization parameters. For high-dimensional networks and discretized scattering kernels, operator preconditioning via Lubotzky&ndash;Phillips&ndash;Sarnak Ramanujan graph Laplacians enforces a uniform spectral gap derived from the Deligne bound on Hecke operators. This holds the condition number on the invariant zero-mean subspace to a small, constant bound, ensuring that both the Newton Jacobian update and the Marchenko integral equation converge in very few Krylov iterations regardless of network scale.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Arithmetic Operator Inversion: Resolving Nonlinear Root-Finding, Analytic Extrapolation, and Inverse Scattering via Heegner Modular Uniformization and Ramanujan Preconditioning",
+      "url": "https://zenodo.org/records/23958358"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "80c8f3ae93247e0694619f54",
+      "context_id": "f72259235b6bdc45f956d665",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "identifiability",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.2083,
+      "source": "zenodo",
+      "source_context_sha256": "c304e5952d018db7557f35b497906ac7f4f0cde51edf608254d11ed3d06ce1bd",
+      "source_published": "2026-11-03",
+      "source_updated": "",
+      "summary": "This Zenodo record is the supplemental material for the manuscript \"Probing Coherent Noise with Stabilizer Codes: Identifiability, Ambiguity, and Decoder Priors\" (Long Huang, Sichuan Normal University), and it documents a three-qubit fixed-frequency transmon experiment together with the prepare&ndash;encode&ndash;expose&ndash;decode&ndash;recover&ndash;tomograph protocol, the seven stabilizer-code channels measured at idle times T &isin; {0.25, 0.5, 1, 2} &micro;s, and the analysis needed to reconstruct process tensors, deconvolve state-preparation-and-measurement error, test linearity, monitor drift across interleaved blocks, and apply the acceptance criteria reported in the supplement. The archive contains circuit definitions, PTM reconstruction and calibration scripts, processed data such as fitted angles and per-block drift monitors, and documentation of the hardware parameters, twelve-settings-per-channel scheme, and shot budget, so that the identifiability, ambiguity, and decoder-prior claims of the paper can be independently reproduced; the code is released under the MIT license and the data and documentation under CC-BY-4.0.",
       "tags": [
-        "Earth data",
-        "ICESat-2",
-        "GEDI",
-        "Laser altimetry",
-        "Topography"
+        "coherent noise; quantum error correction; repetition code; decoherence; Pauli transfer matrix; noise"
       ],
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "SlideRule",
-      "url": "https://zenodo.org/records/23963599"
+      "title": "Probing Coherent Noise with Stabilizer Codes: Identifiability, Ambiguity, and Decoder Priors",
+      "url": "https://zenodo.org/records/23914538"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "fd1a710b15ce261dc9cf90fd",
+      "context_id": "3a9c96b57e0e4ac0207955f1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "decentralized",
+        "multi-agent"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0,
+      "source": "arxiv",
+      "source_context_sha256": "71053bc8a23e6c95ca5178c54d82d6e10bd8c71487a43a270073bff41cdc8a5c",
+      "source_published": "2026-11-03T14:16:51Z",
+      "source_updated": "2026-11-03T14:16:51Z",
+      "summary": "Multi-Agent Reinforcement Learning (MARL) shows promise in coordinating connected and automated vehicles but offers no safety guarantee. Although Control Barrier Functions (CBFs) can add this guarantee, their optimization problem can become infeasible in practice due to control bounds. Moreover, they often overapproximate vehicle and road geometry, which makes them conservative. This paper proposes the Backup-Horizon CBF (BH-CBF), which evaluates safety along a horizon until all vehicles stop. BH-CBF is recursively feasible under control bounds, and it considers the exact vehicle and road geometry. Based on BH-CBF, we derive a fully decentralized safety filter that only needs a single broadcast of vehicle states and routes per step and stays real-time in dense traffic. We use BH-CBF to safeguard a MARL policy over its life cycle: as a reward during pre-training, as a run-time filter at deployment, and as a filter in the training loop that keeps fine-tuning on unseen maps collision-free. In simulations on real-world maps of a roundabout and an intersection, BH-CBF avoids all collisions of unsafe MARL policies and keeps its safety guarantee at every step. Existing filters either collide, lose the guarantee, or fall back to full braking far more often. In recorded roundabout traffic with 1264 human-driven vehicles over 115 km, our safeguarded policies shorten the median travel time by 14% compared with the human drivers, without any collision.",
+      "tags": [
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Safeguarding Multi-Agent Reinforcement Learning for Connected and Automated Vehicles with Recursively Feasible Control Barrier Functions",
+      "url": "https://arxiv.org/abs/2611.04957v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "59c544fc22b6d9ae103b9c0f",
+      "context_id": "349451c5be0f9e720413cb83",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "fault tolerance",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9583,
+      "source": "arxiv",
+      "source_context_sha256": "bf787915b36b8053db3803bdbb5913fac8bc330c97a6987b686baaeecb12d963",
+      "source_published": "2026-11-03T12:18:16Z",
+      "source_updated": "2026-11-03T12:18:16Z",
+      "summary": "Split Inference (SI) addresses the hardware resource limitations of Internet of Things (IoT) devices by distributing tiny Machine Learning (TinyML) model segments across multiple IoT devices. However, a device failure can interrupt the inference pipeline. This paper proposes a replica-aware recovery approach that deploys replicas of TinyML model segments originally hosted on failed devices onto surviving devices. We formulate the joint selection of replica hosts and communication protocols as a mixed-integer linear programming (MILP) problem that minimizes post-reconfiguration inference latency, accounting for computation and transmission latencies, under flash memory and runtime memory constraints. Simulations using MobileNetV2 on heterogeneous IoT networks compare the proposed approach with four baselines. We implement the model in a network of 15 IoT devices with a maximum link-rate reduction of 75%, and show that MILP approach achieves an average modeled end-to-end inference latency that is 6.8% lower than that of Computation Greedy and 18.3% lower than that of Random. Index Terms TinyML, split inference, Internet of Things, fault tolerance, replica placement.",
+      "tags": [
+        "cs.DC",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Replica-Aware Split Inference for Edge IoT Systems",
+      "url": "https://arxiv.org/abs/2611.04779v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "b2f89d947b96eff229e5e897",
+      "context_id": "bbd7e64fbe1c3c21fced0baa",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9167,
+      "source": "zenodo",
+      "source_context_sha256": "bfcf8011d66d22d2b883f58b30a7c209cdda72fcc91f62c80aef3401b69ac13f",
+      "source_published": "2026-11-04",
+      "source_updated": "",
+      "summary": "STARLI / TEN-FLAGSHIP RESEARCH CONSTELLATION YULI &middot; NANO &times; QUANTUM &times; REGENERATION &times; AI &times; BCI F011&ndash;F015 / 200&nbsp; |&nbsp; Family 02: Neural Regeneration Scaffolds F011&nbsp;&nbsp; Nanofibrous Neural Regeneration Scaffolds at the Limit Core: nanofiber anisotropy &times; neurite extension &times; reference-controlled cytocompatibility. Endpoint: neurite extension length [micrometer]. Blind challenge: masked fiber-axis rotation. Strong baseline: randomly oriented polymer nanofiber and flat inert substrate under identical culture conditions. F012&nbsp;&nbsp; Programmable Axonal Guidance Nanostructures at the Limit Core: reversible cue programming &times; axonal directionality &times; orthogonal geometry readout. Endpoint: axonal directional coherence [dimensionless]. Blind challenge: hidden groove-angle crossover. Strong baseline: static patterned guidance grooves and unpatterned stiffness-matched gel. F013&nbsp;&nbsp; Neural Stem Cell Nanomicroenvironments at the Limit Core: extracellular matrix cues &times; stem-cell identity &times; longitudinal differentiation tracing. Endpoint: lineage-marker-positive cell fraction [percent]. Blind challenge: concealed integrin-blocking dose. Strong baseline: defined-medium monolayer and composition-matched nonstructured hydrogel. F014&nbsp;&nbsp; Nanotopology and Synaptic Reconstruction at the Limit Core: surface nanotopology &times; synaptic apposition &times; electrophysiology confirmation. Endpoint: synaptic colocalization density [per square millimeter]. Blind challenge: concealed nanoridge wavelength. Strong baseline: flat and microscale-patterned controls with independent synaptic-functional recordings. F015&nbsp;&nbsp; Conductive Hydrogels for Neural Regeneration at the Limit Core: hydrated network conduction &times; tissue-compatible mechanics &times; independent neural readout. Endpoint: scaffold bulk conductivity [siemens per meter]. Blind challenge: hidden filler-percolation fraction. Strong baseline: composition-matched nonconductive hydrogel and commercial electrode under equal hydration. SCIENTIFIC INHERITANCE AND GATE CONTRACT Each volume follows the 777-page research book architecture: 14 distinct front-matter arguments, 30 formulas, 82 chapters and 410 individual investigations, 200 experimentally discriminating Research Gates and 33 Phoenix candidates. The three-letter prose is a gift to future scientists, not evidence that an experiment occurred. The source F02 publication supplies engineering rules for distinguishing apparent recovery from verified function. It is not evidence of neuronal regeneration. The YULI atlas fixes the ten independent research themes. &nbsp; &nbsp; STARLI / TEN-FLAGSHIP RESEARCH CONSTELLATION YULI &middot; NANO &times; QUANTUM &times; REGENERATION &times; AI &times; BCI F016&ndash;F020 / 200&nbsp; |&nbsp; Family 02: Neural Regeneration Scaffolds F016&nbsp;&nbsp; Intelligent Remodeling of Neural Injury Microenvironments at the Limit Core: bounded milieu feedback &times; inflammation markers &times; independent cellular phenotype. Endpoint: cytokine reduction in culture [nanogram per milliliter]. Blind challenge: masked cytokine spiking. Strong baseline: static intervention and vehicle-matched hydrogel with the same cell count. F017&nbsp;&nbsp; Self-Assembling 3D Neural Nanoscaffolds at the Limit Core: programmable assembly forces &times; 3D pore topology &times; qualified cell ingress. Endpoint: connected pore volume fraction [percent]. Blind challenge: masked fiber-length distribution. Strong baseline: templated 3D porous scaffold and static porogen fabrication with matched solids. F018&nbsp;&nbsp; Bioelectric-Coupled Neural Nanoscaffolds at the Limit Core: electric field exposure &times; axon steering &times; electrochemical dose restraint. Endpoint: field-linked neurite direction change [degree]. Blind challenge: concealed polarity reversal. Strong baseline: unstimulated matched scaffold and conventional low",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "STARLI / TEN-FLAGSHIP RESEARCH CONSTELLATION YULI · NANO × QUANTUM × REGENERATION × AI × BCI F011–F015 / 200 | Family 02: Neural Regeneration Scaffolds F011 Nanofibrous Neural Regeneration Scaffolds at the Limit Core: nanofiber anisotropy × neurite extension × reference-controlled cytocompatibility.",
+      "url": "https://zenodo.org/records/23965573"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "8ccbc6a0fdfba99152731d0e",
+      "context_id": "944cc4a1f66e45236ee4d7ac",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "consensus",
+        "decentralized"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9167,
+      "source": "zenodo",
+      "source_context_sha256": "2456ae878de88d66bf0eab7771f0ba0aaca3b4079e1a35541c8db1f598d022da",
+      "source_published": "2026-11-04",
+      "source_updated": "",
+      "summary": "Open-Source Moon: A Technical Framework for Intelligent Development of Extraterrestrial Bodies Based on Sensor Dispersal and Golden Consensus Abstract: The exploration and development of the Moon and other celestial bodies currently depend heavily on State-led, integrated space missions that are costly, slow, and difficult for the public to join. To address this situation, this paper proposes &ldquo;Open-Source Moon&rdquo;, a technical framework that applies the open-source philosophy to the intelligent development of extraterrestrial bodies. The framework treats the Moon as a large developer platform that all of humankind can program collectively. Following the progressive principle of &ldquo;information first, from the outside in, from sensing to action&rdquo;, it transforms the Moon layer by layer into a &ldquo;smart planet&rdquo; that can be programmed as a whole, and it organizes global participation through open-source protocols and the contribution-securing mechanism of &ldquo;Golden Consensus&rdquo;: massive numbers of low-cost, standardized micro sensors are first dispersed over the lunar surface to form a distributed sensing network whose nodes are beacons and hotspots; delay-tolerant networking (DTN) and a predictive compensation mechanism then overcome the one-way communication delay of about 1.28&nbsp;s; and a small-machine cooperation ecosystem, LEGO-style combination of medium-sized machines, and finally unmanned factories and lunar computing carry the staged evolution from sensors to a &ldquo;smart planet&rdquo;. Based on the self-similar allocation principle and the Schelling focal point, which secure and incentivize decentralized contributions, a &ldquo;Golden Consensus&rdquo; system founded on the golden ratio ( &phi; &asymp; 1.618) is proposed: explorers receive 61.8% of the development-rights return (of which a further 2.8% is set aside as a &ldquo;common allocation&rdquo; for public facilities), and 38.2% is designated as socially shared. A model with 880&nbsp;000 cornerstone nodes is set up, in which a distributed ledger establishes ownership of contributions and keeps tamper-proof records. Verifiable engineering models of network coverage, link budget, energy budget, and delay compensation are established, and the compatibility of this approach with the 1967 Outer Space Treaty, as well as the general applicability of extending it to other celestial bodies such as Mercury and Mars, is demonstrated. This study provides a feasible technical route and governance framework for public participation in the development of extraterrestrial bodies. Keywords: Lunar Landing; Human Lunar Landing ; Open-Source Moon; sensor network; smart planet; Golden Consensus; delay-tolerant networking; lunar development; citizen science; Outer Space Treaty; Human Spaceflight 1. Introduction 1.1. Background and Motivation For more than half a century, the exploration of extraterrestrial bodies has taken the form mainly of large, integrated, State-led missions. After Apollo 17 in 1972, crewed spaceflight remained confined to near-Earth orbit for a long time, until Artemis II completed a crewed lunar flyby (without landing) in April 2026 [1]. On 22 February 2024, the Odysseus lander of Intuitive Machines achieved the first soft landing on the Moon by a commercial spacecraft [2], marking the beginning of the era of commercial lunar landings. However, the development and launch cost of a single mission is still on the order of tens of millions to hundreds of millions of US dollars, and most of the failure risk is concentrated in the powered-descent and landing phases. From the soft landing of Chang&rsquo;e-3 in 2013 to June 2025, there were 14 soft-landing attempts on the lunar surface worldwide (Table 4): six full successes, three partial successes (in which the attitude or mission capability was impaired after landing), and five failures. According to public reports retrieved for this study, no new lunar landing attempt had occurred",
+      "tags": [
+        "Lunar Landing; Human Lunar Landing; Open-Source Moon; sensor network; smart planet; Golden Consensus"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Open-Source Moon: A Technical Framework for Intelligent Development of Extraterrestrial Bodies Based on Sensor Dispersal and Golden Consensus",
+      "url": "https://zenodo.org/records/23963686"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "2c2c0b04b718f20198c9f2b9",
+      "context_id": "4f34fd0a7e4eca3278585308",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "92adb2f69089d876aa03c71ddaf60b80e2edaa0cfafb158a40a7987bad9796c6",
+      "source_published": "2026-11-03T14:32:03Z",
+      "source_updated": "2026-11-03T14:32:03Z",
+      "summary": "Real-world geospatial decision support requires more than single-step retrieval or code generation. Disaster-response questions often involve multi-source workflows that combine spatial databases, map-derived features, satellite imagery, raster products, and reusable geospatial artifacts, where correctness depends on preserving spatial scope, temporal context, and intermediate execution state. While large language models and coding agents offer a promising interface for such workflows, they struggle with geospatial-specific failure modes, including handling large artifacts, selecting the wrong evidence source, losing spatial or temporal metadata, and applying invalid geometric operations. We introduce GeoFaham, a domain-specialized multi-agent system for geospatial disaster analytics. GeoFaham decomposes workflows into specialist agents for vector operations, map feature retrieval, imagery discovery, and raster analysis, coordinated by an Orchestrator with a dual-ledger control loop for dependency-aware planning, progress tracking, validation, and replanning. To support artifact-centric collaboration, GeoFaham uses a Response Store that persists full geospatial outputs and typed metadata outside the LLM context window while agents exchange compact identifiers and summaries. We also introduce GeoFaham-Bench, a 40-task benchmark grounded in 17 real-world disaster records, designed to evaluate multi-step geospatial reasoning, cross-source integration, raster-vector computation, artifact generation, and recovery under non-rigid ground truth. We evaluate GeoFaham on GeoFaham-Bench against strong general-purpose coding-agent baselines, including Codex, Claude Code, and OpenCode. GeoFaham achieves the best overall performance, scoring 0.940 versus the next-best 0.879, while using 7.5 times fewer tokens. Our code and benchmark are publicly available at https://github.com/microsoft/GeoFaham.",
+      "tags": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "GeoFaham: Domain-Specialized Multi-Agent Geospatial Analytics for Disaster Response",
+      "url": "https://arxiv.org/abs/2611.04977v1"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "ddb1b4e35e9156ebec98b9a1",
+      "context_id": "1b07f0567edccf54923f24f8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::REVERSE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "multi-agent",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "6230059a9c85387c701c2f04078713aed721d315745bf3b7737bfa760136430d",
+      "source_published": "2026-11-04T04:47:38Z",
+      "source_updated": "2026-11-04T04:47:38Z",
+      "summary": "Graphs play an increasingly important role in large language model (LLM) systems, supporting structural reasoning, knowledge grounding, retrieval, and memory. As these systems evolve toward the agentic era, graphs also organize execution dependencies and multi-agent communication, linking intermediate observations and retained information to subsequent decisions. However, understanding their contribution requires distinguishing the function of each graph operation, the component responsible for its computation, and the subsequent use of its output. This survey introduces an operation-level role--locus taxonomy for reasoning, knowledge and evidence, retrieval and memory, execution, and coordination. We compare how graph observations and external computations guide decisions, how memory representations and updates support later tasks, and how dependencies constrain execution and information delivery. These comparisons distinguish improvements in local metrics from downstream task performance while retaining the conditions under which results were reported. We then organize benchmarks, comparison designs, process diagnostics, and system costs into an evaluation framework. Finally, we identify open challenges in adaptive computation and stopping, memory maintenance, and dependency-aware recovery. The survey provides a basis for assessing when graph mechanisms are useful and for evaluating their effects across components and stages.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Graph-Mediated Large Language Model Systems in the Agentic Era: Reasoning, Knowledge, Retrieval, Execution, and Coordination",
+      "url": "https://arxiv.org/abs/2611.05953v1"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -251,6 +462,88 @@
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
       "title": "Open-Source Moon: A Technical Framework for Intelligent Development of Extraterrestrial Bodies Based on Sensor Dispersal and Golden Consensus",
       "url": "https://zenodo.org/records/23963686"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "132e23e56ec38eec06656f39",
+      "context_id": "a0840f470121b8f7038d8ab7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "negative result"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.2083,
+      "source": "zenodo",
+      "source_context_sha256": "b10026c7a73ebd8ccc2079dcd726c4ddd19650317be69af4ae17a7a6accfbf04",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "This record contains the reproducibility materials for a reanalysis of published bearing-capacitance measurements. No new experimental measurements were collected. The materials support controlled comparisons of capacitance-side and force-output calibration using one or two target labels, including specimen-held-out source fits, cross-condition tests, capacitance-free controls, calibration-choice sensitivity and numerical checks. Complete adverse, null and non-evaluable results are retained. Supplementary_cross_conditions.zip is the canonical cross-condition mean-capacitance analysis. It includes screening records, protocols and amendments, forward-response caches, predictions, diagnostics and cached replay scripts. The archive includes 1868 operationally qualified flag-0/1 mean records, of which 1213 are flag 0, from six types and 18 archive specimen identifiers. These are not 18 independent ceramic specimens. B2 remains three mixed-bearing specimens, with two primary physical source folds evaluable. Supplementary_reference.zip preserves the earlier six-type fixed-reference scalar benchmark. Supplementary_waveforms.zip preserves the original B2 waveform benchmark and conceptual-image provenance. These benchmarks share physical specimens with the new analysis and do not constitute independent experiments. Supplementary_methods.pdf describes their methods, results, counterexamples and boundaries. Original experimental data: https://doi.org/10.48328/tudatalib-1685 . Original model: https://git-ce.rwth-aachen.de/pmd_etribosystems/bear-imp-public , commit 023c23fce58e7dd67db263131b3acd8542f0430d. Licences apply by material, not as interchangeable permissions for the whole record. Original experimental data retain CC BY-NC 4.0. The upstream model and derived implementation retain GPL-3.0-or-later. Included notices and other original rights statements remain in force. This record does not claim exclusive ownership or relicense third-party material. See LICENCE_SCOPE.txt and the notices within each archive. This is a data/code record supporting a manuscript prepared for Measurement Science and Technology. It is not a claim that the manuscript has been submitted, accepted or published. The ZIP contents retain their verified release bytes; changing the hosting location does not change scientific data, results or code.",
+      "tags": [
+        "rolling bearings",
+        "bearing capacitance",
+        "axial load inference",
+        "sparse calibration",
+        "cross-condition validation",
+        "reproducibility",
+        "negative results"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Reanalysis data and code for Evaluating calibration gains in capacitance-based bearing load inference across operating conditions",
+      "url": "https://zenodo.org/records/23968094"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "132e23e56ec38eec06656f39",
+      "context_id": "5a273a698395ca0f8bcae96c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "negative result"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.2083,
+      "source": "zenodo",
+      "source_context_sha256": "3c3a6a2162b998bbec452e2517c115464ad0ef698b09ea598f6553673bf48e09",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "This record contains the reproducibility materials for a reanalysis of published bearing-capacitance measurements. No new experimental measurements were collected. The materials support controlled comparisons of capacitance-side and force-output calibration using one or two target labels, including specimen-held-out source fits, cross-condition tests, capacitance-free controls, calibration-choice sensitivity and numerical checks. Complete adverse, null and non-evaluable results are retained. Supplementary_cross_conditions.zip is the canonical cross-condition mean-capacitance analysis. It includes screening records, protocols and amendments, forward-response caches, predictions, diagnostics and cached replay scripts. The archive includes 1868 operationally qualified flag-0/1 mean records, of which 1213 are flag 0, from six types and 18 archive specimen identifiers. These are not 18 independent ceramic specimens. B2 remains three mixed-bearing specimens, with two primary physical source folds evaluable. Supplementary_reference.zip preserves the earlier six-type fixed-reference scalar benchmark. Supplementary_waveforms.zip preserves the original B2 waveform benchmark and conceptual-image provenance. These benchmarks share physical specimens with the new analysis and do not constitute independent experiments. Supplementary_methods.pdf describes their methods, results, counterexamples and boundaries. Original experimental data: https://doi.org/10.48328/tudatalib-1685 . Original model: https://git-ce.rwth-aachen.de/pmd_etribosystems/bear-imp-public , commit 023c23fce58e7dd67db263131b3acd8542f0430d. Licences apply by material, not as interchangeable permissions for the whole record. Original experimental data retain CC BY-NC 4.0. The upstream model and derived implementation retain GPL-3.0-or-later. Included notices and other original rights statements remain in force. This record does not claim exclusive ownership or relicense third-party material. See LICENCE_SCOPE.txt and the notices within each archive. This is a data/code record supporting a manuscript prepared for Measurement Science and Technology. It is not a claim that the manuscript has been submitted, accepted or published. The ZIP contents retain their verified release bytes; changing the hosting location does not change scientific data, results or code.",
+      "tags": [
+        "rolling bearings",
+        "bearing capacitance",
+        "axial load inference",
+        "sparse calibration",
+        "cross-condition validation",
+        "reproducibility",
+        "negative results"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Reanalysis data and code for Evaluating calibration gains in capacitance-based bearing load inference across operating conditions",
+      "url": "https://zenodo.org/records/23968094"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -414,6 +707,76 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "0251818680cab20aab081ecc",
+      "context_id": "8b1e9d7dff994e66d4ff0afa",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::COUNTEREVIDENCE",
+      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation",
+        "null result"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.875,
+      "source": "zenodo",
+      "source_context_sha256": "23e937e2d006064237c4bfc6b27ee52ae63728d2b3341dbbaf84721c3fde72c5",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "Supplementary material and reproducibility package for the article Probing Coherent Noise with Stabilizer Codes: Identifiability, Ambiguity, and Decoder Priors . The supplement analyses the null result of a recent repetition-code experiment (arXiv:2606.07377), in which the logical fidelity of d = 3 and d = 5 bit-flip repetition codes was found to be indistinguishable under coherent and stochastic error injection, contrary to the circuit-level simulation of that work. It establishes three results, each independently checkable: The average gate infidelity of a coherent rotation is exactly invariant under randomization of its rotation axis by a drifting frame phase, so no fidelity-based comparison can detect such randomization at all. For a bit-flip repetition code read out in the computational basis, an X-type coherent injection and a stochastic injection of equal single-site average fidelity give logical error probabilities that agree to machine precision (3&times;10 &minus;15 ), for d = 3 and d = 5, R = 10 rounds, with and without syndrome misreports. The gap reported in the experiment therefore cannot originate in coherent accumulation on the data qubits. The coherent&ndash;stochastic gap obeys [1 + (N&minus;1)&rho;]/N with &rho; = &lt;cos &Delta;&phi;&gt; = exp(&minus;&sigma; &phi; 2 ). The frame-phase spread required for the drift hypothesis to apply (&sigma; &phi; ≳ 1.5 rad) lies a factor 30 outside the parameter domain of the generator model and an order of magnitude outside the small-angle domain in which the leading-order polarization expansion is formulated. The role of the companion's channel-level generator recovery is stated explicitly, in a dedicated section: it supplies the parameter (a static frame offset is &delta; i , with |&delta; i | &le; 0.05 rad), the &epsilon; 2 /&epsilon; 4 order counting that makes the code orientation a choice of sensitivity, and the estimator itself; this note supplies the temporal question that the companion does not answer. The role of the companion's channel-level generator recovery is stated explicitly, in a dedicated section: it supplies the parameter (a static frame offset is delta_i, with |delta_i| &lt;= 0.05 rad), the eps^2/eps^4 order counting that makes the code orientation a choice of sensitivity, and the estimator itself; this note supplies the temporal question that the companion does not answer. The supplement closes with a channel-level ratio, coh(R_code)/coh(R_ref), that would settle the question with data of the size already recorded. Contents. supplementary_material.pdf (9 pp., 5 figures, 2 tables) and its LaTeX source; five 400 dpi figures; Python code (numpy / scipy / matplotlib) that regenerates every figure and every quoted number from a single entry point; all generated data files in JSON; README with the model assumptions, the limitations, and the relation to the two source papers. Code is released under the MIT licence; text, figures and data under CC BY 4.0.",
+      "tags": [
+        "coherent noise; quantum error correction; repetition code; decoherence; Pauli transfer matrix; noise"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Probing Coherent Noise with Stabilizer Codes: Identifiability, Ambiguity, and Decoder Priors",
+      "url": "https://zenodo.org/records/23967185"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "0251818680cab20aab081ecc",
+      "context_id": "1040179476d6ba4ac40ccbcc",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation",
+        "null result"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.875,
+      "source": "zenodo",
+      "source_context_sha256": "98cca0ab1fae17007f7482da5dde935b0ef5195bed14da7f37436a84cdafd365",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "Supplementary material and reproducibility package for the article Probing Coherent Noise with Stabilizer Codes: Identifiability, Ambiguity, and Decoder Priors . The supplement analyses the null result of a recent repetition-code experiment (arXiv:2606.07377), in which the logical fidelity of d = 3 and d = 5 bit-flip repetition codes was found to be indistinguishable under coherent and stochastic error injection, contrary to the circuit-level simulation of that work. It establishes three results, each independently checkable: The average gate infidelity of a coherent rotation is exactly invariant under randomization of its rotation axis by a drifting frame phase, so no fidelity-based comparison can detect such randomization at all. For a bit-flip repetition code read out in the computational basis, an X-type coherent injection and a stochastic injection of equal single-site average fidelity give logical error probabilities that agree to machine precision (3&times;10 &minus;15 ), for d = 3 and d = 5, R = 10 rounds, with and without syndrome misreports. The gap reported in the experiment therefore cannot originate in coherent accumulation on the data qubits. The coherent&ndash;stochastic gap obeys [1 + (N&minus;1)&rho;]/N with &rho; = &lt;cos &Delta;&phi;&gt; = exp(&minus;&sigma; &phi; 2 ). The frame-phase spread required for the drift hypothesis to apply (&sigma; &phi; ≳ 1.5 rad) lies a factor 30 outside the parameter domain of the generator model and an order of magnitude outside the small-angle domain in which the leading-order polarization expansion is formulated. The role of the companion's channel-level generator recovery is stated explicitly, in a dedicated section: it supplies the parameter (a static frame offset is &delta; i , with |&delta; i | &le; 0.05 rad), the &epsilon; 2 /&epsilon; 4 order counting that makes the code orientation a choice of sensitivity, and the estimator itself; this note supplies the temporal question that the companion does not answer. The role of the companion's channel-level generator recovery is stated explicitly, in a dedicated section: it supplies the parameter (a static frame offset is delta_i, with |delta_i| &lt;= 0.05 rad), the eps^2/eps^4 order counting that makes the code orientation a choice of sensitivity, and the estimator itself; this note supplies the temporal question that the companion does not answer. The supplement closes with a channel-level ratio, coh(R_code)/coh(R_ref), that would settle the question with data of the size already recorded. Contents. supplementary_material.pdf (9 pp., 5 figures, 2 tables) and its LaTeX source; five 400 dpi figures; Python code (numpy / scipy / matplotlib) that regenerates every figure and every quoted number from a single entry point; all generated data files in JSON; README with the model assumptions, the limitations, and the relation to the two source papers. Code is released under the MIT licence; text, figures and data under CC BY 4.0.",
+      "tags": [
+        "coherent noise; quantum error correction; repetition code; decoherence; Pauli transfer matrix; noise"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Probing Coherent Noise with Stabilizer Codes: Identifiability, Ambiguity, and Decoder Priors",
+      "url": "https://zenodo.org/records/23967185"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "dfe8acfe5093d07faf281990",
       "context_id": "d64c1103c3786e53483aa975",
       "delivery_preview_only": true,
@@ -455,6 +818,41 @@
       "url": "https://zenodo.org/records/23925449"
     },
     {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "9dc13cffbb25c1d050f450b1",
+      "context_id": "b0343edbc4d4d69262db381f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::COUNTEREVIDENCE",
+      "direction_title": "Distributed agents / swarm / resilient coordination [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "82223f5de985f766899c9ab50e58a7a1e09624985dfa8de1bcfb7b2d64295ba8",
+      "source_published": "2026-11-04T03:52:59Z",
+      "source_updated": "2026-11-04T03:52:59Z",
+      "summary": "KV cache eviction is not merely a token-ranking problem: the workspace retained for generating eviction queries also determines the quality of those queries. Consequently, an early workspace error can distort later query observations and reinforce an incorrect final eviction decision, particularly when evidence is dispersed across a long context. We present EchoKV, which discovers and addresses this failure mode with iterative correction. It initializes a feedback-compatible bootstrap workspace using proposals at future decode positions, then uses early decode-generated queries to recover the workspace before the remaining lookahead steps. It uses the same number of workspace forward passes as LAQ while adding a tensor re-scoring operation for workspace repair. On LongBench (16 tasks, Mistral-7B-Instruct-v0.2 and Qwen2.5-7B-Instruct), EchoKV shows notable improvements over LAQ on several tasks requiring dispersed evidence, including multi-hop cross-document QA and long single-document comprehension. Across budgets and backbones, EchoKV selectively improves evidence-intensive tasks while maintaining comparable performance on the remaining LongBench subsets. These results identify query--workspace coupling as a practical failure mode of query-driven KV eviction.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "EchoKV: Self-Corrective KV Cache Eviction via Iterative Query Feedback",
+      "url": "https://arxiv.org/abs/2611.05903v1"
+    },
+    {
       "base_direction_id": "large_data_methods",
       "candidate_id": "66b62d1133187e43f266e57b",
       "context_id": "aad101770fc0c842c0946ae8",
@@ -488,191 +886,6 @@
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
       "title": "Treating the Symptom, Missing the Cause: Anatomy of a Scientific Reasoning Failure",
       "url": "https://arxiv.org/abs/2611.04473v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "6d7d29eb7824a4245e50cbbb",
-      "context_id": "9fef56e08677bb2de3efeef7",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "77ae344b2283fb877fbb9af2ac365049aad6c6cb15d3c665dead07503816beb7",
-      "source_published": "2026-11-03T06:34:45Z",
-      "source_updated": "2026-11-03T06:34:45Z",
-      "summary": "On a public agent leaderboard, a general-purpose agent trails a scaffold built for an airline customer-service benchmark by 13 points on the tasks that touch its database, and a reader could conclude that generality costs accuracy. The gap comes from the grader. The general agent often ends its conversations in a way that never triggers grading, so only about half of its episodes were scored and the rest were stored as failures. Grading the ungraded half under the benchmark's own rule closes the pooled gap, without rerunning any agent. We audit two carefully maintained public leaderboards, HAL and tau2-bench, from their published artifacts alone and find three more instrument errors. A cost column counts nested model calls twice, unevenly across rows. Archived trajectories record grader-written actions as agent actions. Re-grading saved trajectories under a newer evaluator is itself a new measurement: a correct and announced fix reorders a leaderboard, and a mode check that misreads four files collapses their scores by 59 to 82 points while printing no error. Each produced a plausible number, and the HAL maintainers confirmed their three within five weeks. Together the cases show that the infrastructure of agent evaluation, meaning the code that grades, logs, replays and versions an evaluation, is part of the measurement and fails silently, so scores and orderings can move with no visible sign. These failure modes follow from how agent evaluation pipelines are built, and those pipelines change as fast as the agents they measure, so we expect more of them elsewhere. We propose cheap checks that expose the instrument: report the graded fraction, aggregate cost from root spans, tag the provenance of every recorded action, and pin evaluator versions with a published re-grade diff.",
-      "tags": [
-        "cs.AI",
-        "cs.SE"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Silent Instrument Errors Reorder Agent Leaderboards",
-      "url": "https://arxiv.org/abs/2611.04399v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "2c2c0b04b718f20198c9f2b9",
-      "context_id": "9adf213d5f5eea6d8a12d06e",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "6632dec725de5ddba9aa78e11b3b0ad60cc8f7f45a189943855a54980b5ada59",
-      "source_published": "2026-11-03T14:32:03Z",
-      "source_updated": "2026-11-03T14:32:03Z",
-      "summary": "Real-world geospatial decision support requires more than single-step retrieval or code generation. Disaster-response questions often involve multi-source workflows that combine spatial databases, map-derived features, satellite imagery, raster products, and reusable geospatial artifacts, where correctness depends on preserving spatial scope, temporal context, and intermediate execution state. While large language models and coding agents offer a promising interface for such workflows, they struggle with geospatial-specific failure modes, including handling large artifacts, selecting the wrong evidence source, losing spatial or temporal metadata, and applying invalid geometric operations. We introduce GeoFaham, a domain-specialized multi-agent system for geospatial disaster analytics. GeoFaham decomposes workflows into specialist agents for vector operations, map feature retrieval, imagery discovery, and raster analysis, coordinated by an Orchestrator with a dual-ledger control loop for dependency-aware planning, progress tracking, validation, and replanning. To support artifact-centric collaboration, GeoFaham uses a Response Store that persists full geospatial outputs and typed metadata outside the LLM context window while agents exchange compact identifiers and summaries. We also introduce GeoFaham-Bench, a 40-task benchmark grounded in 17 real-world disaster records, designed to evaluate multi-step geospatial reasoning, cross-source integration, raster-vector computation, artifact generation, and recovery under non-rigid ground truth. We evaluate GeoFaham on GeoFaham-Bench against strong general-purpose coding-agent baselines, including Codex, Claude Code, and OpenCode. GeoFaham achieves the best overall performance, scoring 0.940 versus the next-best 0.879, while using 7.5 times fewer tokens. Our code and benchmark are publicly available at https://github.com/microsoft/GeoFaham.",
-      "tags": [
-        "cs.MA",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "GeoFaham: Domain-Specialized Multi-Agent Geospatial Analytics for Disaster Response",
-      "url": "https://arxiv.org/abs/2611.04977v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "6edf67283f098718e0308c3c",
-      "context_id": "95e5a8418db8513a33e764b3",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "zenodo",
-      "source_context_sha256": "8d1c7f0917e0055112596ae7fe6facf56b28b8f3993a842aad30d758ad46825a",
-      "source_published": "2026-11-03",
-      "source_updated": "",
-      "summary": "Measured failure modes of verifier panels: companion paper accepted (poster) at the NeurIPS 2026 workshop Who Verifies the Agents? — Verification Theater: Measured Failure Modes of AI Verifier Panels . Version of record: SSRN 7390698 , DOI 10.2139/ssrn.7390698 . Cite that version. The same text is also at https://polyhelper.ai/research/agreement-not-evidence/ and https://github.com/vadimchernets/papers/tree/main/agreement-not-evidence . Someone who asks one language model a question cannot tell a confidently wrong answer from a confidently right one. The two are identical on every surface cue available to a non-expert. Asking several models seems to solve this, but it mostly relocates the problem: reconciling several answers produces one confident text again, and that text now carries the borrowed authority of \"ten of them agreed.\" The protocol formalized here collects answers from several consumer chat models through the user's own browser or phone, with no API keys, no installation and no intermediary server. It reconciles them by anchor-and-enrich: the strongest available answer becomes the base, and each of the others contributes only what the base lacks. Every contribution is signed with the model that supplied it. Disagreements are kept in a section of their own rather than averaged away. The paper makes four contributions. The first is the protocol itself, stated as an algorithm that preserves provenance and forbids silent deletion, together with a taxonomy of five ways a merge can fail. Four of them are defects of naive pooling; the fifth is a failure of the operator rather than of the method: a synthesis that presents a single model's output as a collegial result. The second is the application of the correlated-witness arithmetic to protocol design. That arithmetic is not claimed here. Kohli (2026) applied the same Kish correction to a panel of nine frontier judges and measured about two effective votes, and Kim et al. (2025) established the underlying error correlation across more than 350 models. A council of N models whose errors carry intraclass correlation ρ is worth = N / (1 + (N−1)ρ) independent witnesses, and that quantity saturates at 1/ρ however many models are added. Once a council is larger than 1/ρ, halving ρ beats doubling N, and a pair with low error correlation can outweigh five with high correlation. Which pairs those are is measured, not read off the label: the larger and more accurate models carry the most correlated errors even when architecture and provider differ (Kim et al., 2025), and the author's per-pair measurements found no detectable effect of geopolitical bloc on error correlation and, in the pairs measured, none of shared lineage (Chernets, 2026). The estimation procedure of Section 5.5 supplies that measurement. The third is an account of three deployment tiers, manual, one-tap mobile and browser-agent, and of the axis that separates them epistemically: whether the second model sees the first model's answer. Conditioning the second model raises ρ in exchange for error correction. The fourth is a small-sample observation of the counterfeit-council failure across five models, the one-sentence intervention that removed it in a three-model re-run, and a blinded three-arm evaluation design with a stated falsification condition. Correlated agreement is treated here as established, not as a finding. That a panel of models is worth far fewer independent witnesses than it has members has been measured directly: nine frontier judges drawn from seven families supply about two effective votes (Kohli, 2026), and error correlation rises with model capability even across providers and architectures (Kim et al., 2025). Section 5 restates the design-effect arithmetic behind those measurements, because three of the protocol's rules are derived from it and read as fastidiousness without it. The protocol then takes the other side of the same problem. That literature measures the correlation; this protocol ",
-      "tags": [
-        "correlated errors",
-        "model agreement",
-        "multi-model synthesis",
-        "multi-agent debate",
-        "LLM-as-a-judge",
-        "self-consistency",
-        "effective sample size",
-        "verification",
-        "AI hallucination",
-        "ensemble"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Agreement Is Not Independent Evidence: Auditable Multi-Model Synthesis Without an API",
-      "url": "https://zenodo.org/records/23931802"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "a075f90e5d7cbbb0150e435e",
-      "context_id": "70940ac81a4e47017ddfad54",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "zenodo",
-      "source_context_sha256": "02cbb03bc7160a5e79ecd47e88ff93ab96f9634a882ca5771597101705b392ef",
-      "source_published": "2026-11-03",
-      "source_updated": "",
-      "summary": "Wave energy converters (WECs) are typically designed to operate near resonance to maximize energy capture. While this enhances power absorption, it also amplifies structural loads and accelerates fatigue damage. As a result, fatigue becomes a critical design driver even when stress remains below material yield limits. Fatigue in offshore systems has been widely studied, particularly under variable-amplitude loading induced by waves, wind, and currents. These effects are commonly evaluated using the Palmgren&ndash;Miner damage accumulation rule, where failure is predicted once cumulative damage reaches unity. However, fatigue assessment for WECs remains less developed, especially in terms of linking environmental conditions to structural degradation and operational stress limits. The objective of this work is to evaluate, predict and improve confidence in the structural response and fatigue life of a WEC under representative operating conditions and to identify critical components and failure modes before deployment in March 2026 accounting for not only load and geometric factors, but also environmental conditions such as temperature.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Worst-Case Fatigue Life of an OSWEC Under Sustained Sea States",
-      "url": "https://zenodo.org/records/23930725"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "c7b72055990aaf26967f2901",
-      "context_id": "0ba0ac84a836f82cdcb7a3cb",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::COUNTEREVIDENCE",
-      "direction_title": "Universal large-data ingestion methods [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "cc0a0c725625deab91826820f1f4531b5d373108b103f94f4a1d3922cf2137cf",
-      "source_published": "2026-11-03T14:29:36Z",
-      "source_updated": "2026-11-03T14:29:36Z",
-      "summary": "We investigate the automated generation of executable robot reinforcement learning (RL) policies from natural-language task descriptions. Rather than using large language models (LLMs) as execution-time decision makers, we use them as designers that construct RL pipelines before deployment, including Markov decision process (MDP) formulation and simulator implementation. We identify a phase-wise structure in this problem: MDP formulation is dependency-structured and sequential, whereas simulator implementation becomes modular once the formulation is fixed. Based on this structure, we propose ARPG, a dependency-aware agentic framework that performs sequential MDP modeling, localized verification and correction, and simulator-structured implementation while externalizing intermediate artifacts. ARPG targets a key failure mode of automated policy generation: executable code may still yield non-learnable policies when state, action, reward, and termination artifacts are not semantically aligned. Experiments in Isaac Sim show that ARPG improves modeling correctness, environment executability, and policy-generation success compared with monolithic LLM baselines and off-the-shelf agentic systems. Additional demonstrations on custom robotics, standard RL, and engineering-domain MDPs further suggest that the same modeling pipeline can be reused beyond the main benchmark suite.",
-      "tags": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "LLMs as MDP Designers: A Dependency-Aware Agentic Framework for Automated Robot Policy Generation",
-      "url": "https://arxiv.org/abs/2611.04974v1"
     },
     {
       "base_direction_id": "swarm_distributed_systems",
@@ -829,6 +1042,76 @@
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
       "title": "STARLI | FLAGSHIP 13 FISSION Volume II | Bioelectric Quantum Sensing: Traceable Causality and Cross-Platform Reliability | F171–F180 / 300 Author: 33 | White Rainbow Epoch | Nonclinical Research Design Working Edition v1.2 This ten-volume research-design set investigates cross-platform calibration, ",
       "url": "https://zenodo.org/records/23902662"
+    },
+    {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "422733ca7b8761408a880259",
+      "context_id": "6c1efc6e1e22661e9c9ffe2d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline",
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 14.3333,
+      "source": "zenodo",
+      "source_context_sha256": "81dfa83eb7b7c08dbf2b7c6829310ee23c620b3887c4cc3e4c060882535371a6",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "This record contains the code, a simulated benchmark dataset, and the result files for a study on detecting cyberattacks that are masked by AI data-center load transients in inverter-rich distribution grids. The manuscript itself is not included. Benchmark. The IEEE 33-bus distribution feeder is driven by 61 measured GPU power traces: 10 large-language-model training runs and 51 inference runs, recorded on A100, H100, H200 and L40S GPUs at 0.1 s. These traces form the load of an AI data center at bus 7, rated at 15&ndash;30% of feeder load. A photovoltaic inverter at bus 17 follows the IEEE 1547-2018 Category B volt-var curve. Nine channels are recorded at 10 Hz: three bus voltages, feeder-head P and Q, data-center P and Q, and inverter P and Q. The dataset holds 1,000 labeled scenarios of 120 s each. Of these, 598 contain one of seven attack types (bias, scaling, ramp, pulse, replay, coordinated mimic, and control-loop), and 220 of the attacks are hidden inside data-center load transients. Every sample is labeled for attack and for load transient. Code. The Python code covers: a linearized DistFlow model and an exact AC backward/forward-sweep power flow; data-center load generation from the GPU traces; attack injection and 10 Hz scenario simulation; physics-residual features learned from historical measurements, without feeder impedances; the RIME optimizer and a CNN-LSTM-attention detector (PR-Net); gradient-boosting, random-forest, MLP and logistic-regression baselines; window-level and event-level evaluation with scenario-bootstrap confidence intervals. Results. The result files contain the numbers behind all tables and figures: comparisons of detectors trained with and without load-transient awareness and physics residuals; ablations, computational cost, and an equal-budget comparison of RIME, random search and an untuned default; robustness tests under seven conditions, including exact AC power flow, unseen workload shapes, and changes in noise, photovoltaic share, data-center size and inverter location; a replay-attack consistency check; trained Stage-1 network weights. Third-party data. The GPU power traces come from the public LLM Power Trace Explorer repository (commit 9c25218). Because that repository has no license file, the raw traces are not redistributed here; scripts/prepare_gpu_traces.py rebuilds them from the public source. The included benchmark contains only simulated feeder signals driven by normalized, scaled versions of those load shapes.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Physics-Residual Detection of Cyberattacks Masked by AI Data-Center Load Transients in Inverter-Rich Distribution Grids",
+      "url": "https://zenodo.org/records/23968028"
+    },
+    {
+      "base_direction_id": "large_data_methods",
+      "candidate_id": "422733ca7b8761408a880259",
+      "context_id": "4255a4dbf2ecd76c6553d341",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline",
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 14.3333,
+      "source": "zenodo",
+      "source_context_sha256": "d15a5fe519ea4d2890ff3adc0fc4e20a79928c84143c9ad816911e7cabacdc57",
+      "source_published": "2026-11-05",
+      "source_updated": "",
+      "summary": "This record contains the code, a simulated benchmark dataset, and the result files for a study on detecting cyberattacks that are masked by AI data-center load transients in inverter-rich distribution grids. The manuscript itself is not included. Benchmark. The IEEE 33-bus distribution feeder is driven by 61 measured GPU power traces: 10 large-language-model training runs and 51 inference runs, recorded on A100, H100, H200 and L40S GPUs at 0.1 s. These traces form the load of an AI data center at bus 7, rated at 15&ndash;30% of feeder load. A photovoltaic inverter at bus 17 follows the IEEE 1547-2018 Category B volt-var curve. Nine channels are recorded at 10 Hz: three bus voltages, feeder-head P and Q, data-center P and Q, and inverter P and Q. The dataset holds 1,000 labeled scenarios of 120 s each. Of these, 598 contain one of seven attack types (bias, scaling, ramp, pulse, replay, coordinated mimic, and control-loop), and 220 of the attacks are hidden inside data-center load transients. Every sample is labeled for attack and for load transient. Code. The Python code covers: a linearized DistFlow model and an exact AC backward/forward-sweep power flow; data-center load generation from the GPU traces; attack injection and 10 Hz scenario simulation; physics-residual features learned from historical measurements, without feeder impedances; the RIME optimizer and a CNN-LSTM-attention detector (PR-Net); gradient-boosting, random-forest, MLP and logistic-regression baselines; window-level and event-level evaluation with scenario-bootstrap confidence intervals. Results. The result files contain the numbers behind all tables and figures: comparisons of detectors trained with and without load-transient awareness and physics residuals; ablations, computational cost, and an equal-budget comparison of RIME, random search and an untuned default; robustness tests under seven conditions, including exact AC power flow, unseen workload shapes, and changes in noise, photovoltaic share, data-center size and inverter location; a replay-attack consistency check; trained Stage-1 network weights. Third-party data. The GPU power traces come from the public LLM Power Trace Explorer repository (commit 9c25218). Because that repository has no license file, the raw traces are not redistributed here; scripts/prepare_gpu_traces.py rebuilds them from the public source. The included benchmark contains only simulated feeder signals driven by normalized, scaled versions of those load shapes.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Physics-Residual Detection of Cyberattacks Masked by AI Data-Center Load Transients in Inverter-Rich Distribution Grids",
+      "url": "https://zenodo.org/records/23968028"
     },
     {
       "base_direction_id": "large_data_methods",
@@ -1175,6 +1458,44 @@
     },
     {
       "base_direction_id": "large_data_methods",
+      "candidate_id": "d6acb064cd51c9b29cacc8e1",
+      "context_id": "df82dc80cfe0478dfc9e5ac4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "large_data_methods::CONTROL",
+      "direction_title": "Universal large-data ingestion methods [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.0,
+      "source": "arxiv",
+      "source_context_sha256": "b6b1c4b00a86b0676ce94d0f2d198fde8a40fd23c0264c256caa3e8f974ac225",
+      "source_published": "2026-11-04T03:59:15Z",
+      "source_updated": "2026-11-04T03:59:15Z",
+      "summary": "Patient world models are increasingly proposed as simulators of clinical trials, and recent surveys rank their capabilities on a ladder from temporal prediction to counterfactual rollouts. Position on that ladder is currently assigned by reading papers rather than by measurement. We turn the counterfactual rung into a measured quantity. From 30,119 completed phase 2/3 trials with results posted to ClinicalTrials.gov we construct 9,996 audited within-trial contrasts from 7,207 trials, and we score a simulator on how much of its accuracy depends on knowing which intervention was tested. The instrument is an intervention-blind reference: the same model, trained on the same trials, with every intervention-identifying field withheld. Interventional skill is the error the full model removes relative to that reference. On a temporal split (878 test contrasts from 655 trials) a registry-trained gradient-boosting simulator removes a fifth of the error of a trivial baseline, but its interventional skill is -0.12 (95% CI -0.21 to -0.05): withholding the intervention makes it better, and no alternative featurisation, stratum, temporal cut or same-molecule retrieval yields an interval above zero. A frontier language model reading only the registered protocol has interventional skill 0.20 [0.08, 0.31]; smaller and open-weight models sit at the limit of detection. Perturbation tests show the large model uses the intervention as such: swapping the arms reverses the sign of its prediction in 86% of contrasts. The blind reference is itself not drug-blind (a language model recovers the withheld drug class 45% of the time from the blind prompt), so interventional skill is a conservative lower bound. A reliability layer shows that ranking by predicted error lowers it but that calibrated error control does not transfer under temporal shift. Benchmark, code, prompts and per-call model outputs are released.",
+      "tags": [
+        "stat.AP",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Does Your Trial Simulator Know What the Drug Does? An Intervention-Blind Test of Interventional Validity on 7,207 Registered Trials",
+      "url": "https://arxiv.org/abs/2611.05907v1"
+    },
+    {
+      "base_direction_id": "large_data_methods",
       "candidate_id": "3091da07a779331755349047",
       "context_id": "d99f65fa58ae2c03b43c902f",
       "delivery_preview_only": true,
@@ -1359,6 +1680,44 @@
       "url": "https://arxiv.org/abs/2611.03414v1"
     },
     {
+      "base_direction_id": "swarm_distributed_systems",
+      "candidate_id": "d6acb064cd51c9b29cacc8e1",
+      "context_id": "3e7cea6d337de24596cbd411",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "swarm_distributed_systems::CONTROL",
+      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.0,
+      "source": "arxiv",
+      "source_context_sha256": "592f93099085871f1c4cd9bdad242fb5a94369bcc6560838f0ff6eb4c2d4e132",
+      "source_published": "2026-11-04T03:59:15Z",
+      "source_updated": "2026-11-04T03:59:15Z",
+      "summary": "Patient world models are increasingly proposed as simulators of clinical trials, and recent surveys rank their capabilities on a ladder from temporal prediction to counterfactual rollouts. Position on that ladder is currently assigned by reading papers rather than by measurement. We turn the counterfactual rung into a measured quantity. From 30,119 completed phase 2/3 trials with results posted to ClinicalTrials.gov we construct 9,996 audited within-trial contrasts from 7,207 trials, and we score a simulator on how much of its accuracy depends on knowing which intervention was tested. The instrument is an intervention-blind reference: the same model, trained on the same trials, with every intervention-identifying field withheld. Interventional skill is the error the full model removes relative to that reference. On a temporal split (878 test contrasts from 655 trials) a registry-trained gradient-boosting simulator removes a fifth of the error of a trivial baseline, but its interventional skill is -0.12 (95% CI -0.21 to -0.05): withholding the intervention makes it better, and no alternative featurisation, stratum, temporal cut or same-molecule retrieval yields an interval above zero. A frontier language model reading only the registered protocol has interventional skill 0.20 [0.08, 0.31]; smaller and open-weight models sit at the limit of detection. Perturbation tests show the large model uses the intervention as such: swapping the arms reverses the sign of its prediction in 86% of contrasts. The blind reference is itself not drug-blind (a language model recovers the withheld drug class 45% of the time from the blind prompt), so interventional skill is a conservative lower bound. A reliability layer shows that ranking by predicted error lowers it but that calibrated error control does not transfer under temporal shift. Benchmark, code, prompts and per-call model outputs are released.",
+      "tags": [
+        "stat.AP",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
+      "title": "Does Your Trial Simulator Know What the Drug Does? An Intervention-Blind Test of Interventional Validity on 7,207 Registered Trials",
+      "url": "https://arxiv.org/abs/2611.05907v1"
+    },
+    {
       "base_direction_id": "large_data_methods",
       "candidate_id": "13c44a374d59cea56af00d01",
       "context_id": "2f410369a11524900810222f",
@@ -1429,364 +1788,6 @@
       "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
       "title": "preheater-scenario-library: an open scenario library of operating envelopes, alternative-fuel",
       "url": "https://zenodo.org/records/23658030"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "2c2c0b04b718f20198c9f2b9",
-      "context_id": "15e701b41f1c9ac24692af46",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::CONTROL",
-      "direction_title": "Universal large-data ingestion methods [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 13.0,
-      "source": "arxiv",
-      "source_context_sha256": "36ff0366b9f65b482df01495db4e45ac7fad68e3eab8310c6e65b2abed65d874",
-      "source_published": "2026-11-03T14:32:03Z",
-      "source_updated": "2026-11-03T14:32:03Z",
-      "summary": "Real-world geospatial decision support requires more than single-step retrieval or code generation. Disaster-response questions often involve multi-source workflows that combine spatial databases, map-derived features, satellite imagery, raster products, and reusable geospatial artifacts, where correctness depends on preserving spatial scope, temporal context, and intermediate execution state. While large language models and coding agents offer a promising interface for such workflows, they struggle with geospatial-specific failure modes, including handling large artifacts, selecting the wrong evidence source, losing spatial or temporal metadata, and applying invalid geometric operations. We introduce GeoFaham, a domain-specialized multi-agent system for geospatial disaster analytics. GeoFaham decomposes workflows into specialist agents for vector operations, map feature retrieval, imagery discovery, and raster analysis, coordinated by an Orchestrator with a dual-ledger control loop for dependency-aware planning, progress tracking, validation, and replanning. To support artifact-centric collaboration, GeoFaham uses a Response Store that persists full geospatial outputs and typed metadata outside the LLM context window while agents exchange compact identifiers and summaries. We also introduce GeoFaham-Bench, a 40-task benchmark grounded in 17 real-world disaster records, designed to evaluate multi-step geospatial reasoning, cross-source integration, raster-vector computation, artifact generation, and recovery under non-rigid ground truth. We evaluate GeoFaham on GeoFaham-Bench against strong general-purpose coding-agent baselines, including Codex, Claude Code, and OpenCode. GeoFaham achieves the best overall performance, scoring 0.940 versus the next-best 0.879, while using 7.5 times fewer tokens. Our code and benchmark are publicly available at https://github.com/microsoft/GeoFaham.",
-      "tags": [
-        "cs.MA",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "GeoFaham: Domain-Specialized Multi-Agent Geospatial Analytics for Disaster Response",
-      "url": "https://arxiv.org/abs/2611.04977v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "fd1a710b15ce261dc9cf90fd",
-      "context_id": "47df14e7e3bc078c53348990",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::CONTROL",
-      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "control",
-        "decentralized",
-        "multi-agent"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.2917,
-      "source": "arxiv",
-      "source_context_sha256": "79df2badc2453a38c313ada90dae47831e9ecfc1d24d441f0e9fdeab4d8e62fd",
-      "source_published": "2026-11-03T14:16:51Z",
-      "source_updated": "2026-11-03T14:16:51Z",
-      "summary": "Multi-Agent Reinforcement Learning (MARL) shows promise in coordinating connected and automated vehicles but offers no safety guarantee. Although Control Barrier Functions (CBFs) can add this guarantee, their optimization problem can become infeasible in practice due to control bounds. Moreover, they often overapproximate vehicle and road geometry, which makes them conservative. This paper proposes the Backup-Horizon CBF (BH-CBF), which evaluates safety along a horizon until all vehicles stop. BH-CBF is recursively feasible under control bounds, and it considers the exact vehicle and road geometry. Based on BH-CBF, we derive a fully decentralized safety filter that only needs a single broadcast of vehicle states and routes per step and stays real-time in dense traffic. We use BH-CBF to safeguard a MARL policy over its life cycle: as a reward during pre-training, as a run-time filter at deployment, and as a filter in the training loop that keeps fine-tuning on unseen maps collision-free. In simulations on real-world maps of a roundabout and an intersection, BH-CBF avoids all collisions of unsafe MARL policies and keeps its safety guarantee at every step. Existing filters either collide, lose the guarantee, or fall back to full braking far more often. In recorded roundabout traffic with 1264 human-driven vehicles over 115 km, our safeguarded policies shorten the median travel time by 14% compared with the human drivers, without any collision.",
-      "tags": [
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Safeguarding Multi-Agent Reinforcement Learning for Connected and Automated Vehicles with Recursively Feasible Control Barrier Functions",
-      "url": "https://arxiv.org/abs/2611.04957v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "34cfe9dcf13d864c6c8a0e5c",
-      "context_id": "64b35615c6764c4ab711865c",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "large_data_methods::CONTROL",
-      "direction_title": "Universal large-data ingestion methods [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "calibration",
-        "control",
-        "replication"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.2083,
-      "source": "zenodo",
-      "source_context_sha256": "288df4739547dc11da7f94007632f9e8182d422ed1c32f614ace67766a6f772b",
-      "source_published": "2026-11-01",
-      "source_updated": "",
-      "summary": "50/60 MISSION RELIABILITY IN AUTONOMOUS NANOROBOTIC REGENERATIVE MANUFACTURING AT THE LIMIT MISSION RELIABILITY IN AUTONOMOUS NANOROBOTIC REGENERATIVE MANUFACTURING AT THE LIMIT is a 777-page English-language Research Design Working Edition in the STARLI Micro/Nanorobot Fabrication and Regenerative Biomanufacturing Sixty-Flagship series (Flagship 50/60). It investigates safe failure recovery with preserved productive service. The research coupling is autonomous manufacturing mission x regenerative specimen integrity x physically verified fault recovery. All proposed work is restricted to nonclinical in-vitro, organ-on-chip, synthetic phantom or authorized ex-vivo environments. No experiments were executed in preparing this edition; no human treatment, clinical efficacy or regulatory clearance is claimed. Its falsifiable candidate is: A frozen safety and recovery protocol will improve completed qualified work at equal fault burden while meeting independent stop and specimen integrity gates. The Atlas minimum demonstrator is: Blind-inject four fault classes into complete cell assembly missions with matched useful work targets. Strong comparators include expert human operation, fixed automation scripts and conventional redundant hardware. A central rival account is apparent safety caused by aborting early and completing less useful work. The nonnegotiable stop condition is: no advantage at equal effective work or an unknown fault fails to stop the apparatus. Each failed, aborted, hidden-fault and incomplete run is retained in the experimental denominator, and observation of a finished form is never substituted for independently measured function. Thirty mathematical plates address domain-specific metrics and established model families across transport, measurement, elasticity, time-dependent dynamics, causal attribution, calibration and uncertainty. Eighty-two chapters and 410 separately paginated scientific investigations organize six research arcs. Two hundred Research Gates have been revised with independent observables, one of fifteen blinded causal intervention families, orthogonal controls and noncompensatory refusal criteria. Thirty mathematical plates now carry model-specific physical derivation commentary, explicit applicability limits and distinct flagship-level blind checks. Thirty-three Phoenix Answer Embryos propose unbuilt future instruments and succession artifacts, each requiring its own bench validation. This version is a research design and not a report of validated physical findings. It draws scientific method and conceptual boundaries from the user-supplied Atlas and research mother volumes; especially the Atlas-supplied ancestry DOI 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020. Full external bibliographic DOI checking and scientific peer review have not been completed. Domain-specific sensitivity, causal identifiability and independent replication require qualified laboratory evaluation before any scientific superiority claim. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 50 of 60 Edition: Research Design Working Edition v1.1 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "50/60 MISSION RELIABILITY IN AUTONOMOUS NANOROBOTIC REGENERATIVE MANUFACTURING AT THE LIMIT MISSION RELIABILITY IN AUTONOMOUS NANOROBOTIC REGENERATIVE MANUFACTURING AT THE LIMIT is a 777-page English-language Research Design Working Edition in the STARLI Micro/Nanorobot Fabrication and Regenerative ",
-      "url": "https://zenodo.org/records/23865219"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "88456e22b787b7e45fddf4e2",
-      "context_id": "aad4fa0b05474f01a9c2111a",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "large_data_methods::CONTROL",
-      "direction_title": "Universal large-data ingestion methods [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "calibration",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.125,
-      "source": "zenodo",
-      "source_context_sha256": "8bb92dad78276fef4190d1adb882ddbe6bcb8a510c560008e2ed7ea7a48b779c",
-      "source_published": "2026-11-03",
-      "source_updated": "",
-      "summary": "RESEARCH COLLECTION / FLAGSHIPS 251&ndash;260 OF 300 Microscale Evidence, Fault Analysis &amp; Covariant Reconstruction at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 This research-design collection treats the integrity of scientific measurement as an experimental subject: physical artifacts, raw-data custody, fair microrobotic comparators, quantum-sensor calibration, mission risk, repeat measurements, competing sensing models, post-failure containment, microfluidic fault injection and reconstructable correlated errors. None of the candidate systems is represented as independently validated or clinically authorized. Ten English 777-page working editions: 300 mathematical research plates, 820 chapter openings, 4,100 single-page investigations, 2,000 Research Gates and 330 Phoenix Answer Embryos. Each Gate includes three distinct future-facing essays: Origin, Extreme Extrapolation and Future Research Plan. Counts do not certify independent scientific novelty. RESEARCH UNIT I&nbsp; &middot;&nbsp; F251&ndash;F255 F251&nbsp; MICROSCALE MEASUREMENT ARTIFACT CAUSAL IDENTIFICATION AT THE LIMIT &mdash; Core: photon-detector afterpulsing; microfluidic stage drift. Witness: artifact-specific attribution recall [dimensionless]. Comparator: independently calibrated dual-sensor physical truth and a frozen classical artifact classifier. Rival: genuine delayed specimen fluorescence. Stop: sample reference identity is lost or unresolved artifact causes an unsafe physical release. F252&nbsp; NANO-QUANTUM SYSTEM RAW-DATA INTEGRITY AT THE LIMIT &mdash; Core: sensor frame loss during burst readout; sample barcode collision. Witness: independently replayable raw-record fraction [dimensionless]. Comparator: immutable append-only event log with independent checksum and physical raw acquisition. Rival: truly silent physical interval. Stop: source data or physical specimen identity cannot be reconstructed from an unmodified acquisition. F253&nbsp; MICROROBOTIC SAMPLING STRONG BENCHMARK COMPARISON AT THE LIMIT &mdash; Core: manual pipette aspiration limit; sampling operation energy. Witness: valid recovered sample mass per joule [ug J^-1]. Comparator: optimized calibrated manual pipetting plus passive microchannel control. Rival: robotic control simply uses more sample. Stop: sample contamination, unrecorded loss or physical damage exceeds preregistered limits. F254&nbsp; QUANTUM SENSOR CROSS-SITE CALIBRATION TRANSFER AT THE LIMIT &mdash; Core: ODMR microwave-frequency reference transfer; photodetector spectral response mismatch. Witness: cross-site bias [nT]. Comparator: independent site-specific NIST-traceable calibration and a frozen classical sensor transfer. Rival: true magnetic field shift. Stop: untraceable reference ancestry or unsafe calibration release under failed commutability. F255&nbsp; NANOROBOTIC MISSION RELIABILITY STATISTICS AT THE LIMIT &mdash; Core: early mission failure censoring; recovery-conditional survival bias. Witness: mission completion probability [dimensionless]. Comparator: fixed-limit statistical process control with transparent unselected failure registry. Rival: improved mission reliability. Stop: a hazardous failure has no traceable state or is incorrectly classified as safe. &nbsp; &nbsp; RESEARCH UNIT II&nbsp; /&nbsp; RECONSTRUCTION, RECOVERY AND SUCCESSION F256&nbsp; MICROSCALE EXPERIMENT REPEAT-MEASUREMENT BIAS AT THE LIMIT &mdash; Core: measurement sequence effect; sensor warm-up effect. Witness: paired measurement bias [native units]. Comparator: randomized blinded single-site repeatability with external second-operator reference. Rival: true specimen ageing. Stop: unidentified systematic error exceeds the preregistered accuracy margin. F257&nbsp; QUANTUM BIOSENSING RIVAL-MODEL VALIDATION AT THE LIMIT &mdash; Core: spin-state dependent fluorescence; surface adsorption optical rival. Witness: held-out calibrated log score [nats per case]. Comparator: optimiz",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "RESEARCH COLLECTION / FLAGSHIPS 251–260 OF 300 Microscale Evidence, Fault Analysis & Covariant Reconstruction at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 This research-design collection treats the integrity of scientific measurement as an e",
-      "url": "https://zenodo.org/records/23932285"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "de39c135b66b5a09d9eaac95",
-      "context_id": "772bfd8ee8efb9f21885d27b",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::CONTROL",
-      "direction_title": "Universal large-data ingestion methods [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "calibration",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.125,
-      "source": "arxiv",
-      "source_context_sha256": "a0a33354a7d72c6667cc087880b043a8c8bb207c034dbf770a7d871fa5368640",
-      "source_published": "2026-10-31T00:12:23Z",
-      "source_updated": "2026-10-31T00:12:23Z",
-      "summary": "Machine learning can screen far more candidates than can be experimentally validated, creating a need for selection procedures that identify promising candidates while controlling risk before costly experimental validation. We propose Uncertainty-Normalized Empirical Calibration (UNEC), a p-value-free framework that ranks candidates by uncertainty-normalized predictive margins and directly calibrates a selection cutoff using held-out losses. UNEC supports flexible prediction models, general bounded losses, and diverse selection targets. We study marginal discovery risk (MDR) and selective discovery risk (SDR), with SDR reducing to the false discovery rate under binary loss. We establish finite-sample MDR control for an adjusted rule and asymptotic SDR control with explicit limiting risk and power. Under a location--scale model with a common one-sided binary target, we further show that UNEC asymptotically attains the oracle power benchmark among observation-wise selection rules. Simulations and molecular screening applications in solubility, toxicity, and lipophilicity demonstrate favorable risk--power trade-offs and substantial computational gains across binary and graded-loss settings.",
-      "tags": [
-        "stat.ME",
-        "stat.ML"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Power-Optimal Risk Control via Standardized Margin Calibration",
-      "url": "https://arxiv.org/abs/2611.00480v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "deb3b772209b6aae305076fb",
-      "context_id": "17459b8531bf28c08490537d",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::CONTROL",
-      "direction_title": "Universal large-data ingestion methods [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "calibration",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.125,
-      "source": "arxiv",
-      "source_context_sha256": "eb59063ca37eee9020262d4075caac9ef0807ff99c17faf8b7de3f4a460ee10c",
-      "source_published": "2026-10-29T18:00:55Z",
-      "source_updated": "2026-10-29T18:00:55Z",
-      "summary": "Web world models increasingly predict the consequences of candidate actions before agents act, yet a plausible predicted future does not necessarily support the correct safety decision. In a matched human evaluation of 3,000 predictions from ten frozen open models, 86.1% are judged semantically plausible. However, several models exhibit highly asymmetric authorisation behaviour, combining low false-safe execution with poor recall of clarifiable ASK cases and a strong preference for BLOCK. This motivates safety sufficiency: whether a predictive interface preserves and exposes the policy-decisive information required to distinguish actions that may be EXECUTED, require clarification through ASK, or should be BLOCKED. We introduce SafeWebWorld, a benchmark for evaluating safety sufficiency across five web-safety domains through action-conditioned futures, policy-decisive evidence, and policy-conditioned decisions. Under a controlled Security-Aligned Supervised Fine-Tuning protocol, evidence preservation can improve substantially while authorisation-sensitive decisions deteriorate. To determine whether this deterioration reflects loss of authorisation-sensitive score structure or a failure of the decision readout, we introduce Latent Authorisation Recovery (LAR). Frozen-score recalibration reveals substantial but backbone-dependent recovery, while paired recovery provides only a modest additional gain. Yet within-family and matched-authorisation evaluations remain poor, showing that aggregate recoverability does not imply robust fine-grained authorisation behaviour. Overall, plausible prediction, evidence preservation, and aggregate recovery are each insufficient on their own to establish robust authorisation.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "Beyond Plausible Prediction: Safety Sufficiency in Web World Models",
-      "url": "https://arxiv.org/abs/2610.40798v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "c691b3583eb384176e576f3e",
-      "context_id": "a94c7f1d5648770de2953045",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "large_data_methods::CONTROL",
-      "direction_title": "Universal large-data ingestion methods [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "calibration",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.0833,
-      "source": "zenodo",
-      "source_context_sha256": "516b389ca5c5f1002571f5e37f34575d18f85f5029dacf2405586f253fd22976",
-      "source_published": "2026-11-03",
-      "source_updated": "",
-      "summary": "RESEARCH COLLECTION / FLAGSHIPS 81&ndash;90 OF 90 Classical Qi, Mind-Body Inquiry &amp; Trustworthy Biomedical Evidence at the Limit STARLI Acupuncture Trilogy&nbsp; |&nbsp; F81&ndash;F90 of 90&nbsp; |&nbsp; Author 33&nbsp; |&nbsp; Research Design Working Edition v1.0 This ten-volume research-design collection tests classical qi-blood descriptions against microcirculatory measurements, mind-body attention effects, qigong breathing and bioelectric artifacts, volitional neurofeedback, and externally asserted qi phenomena. Its second research unit explores provenance-aware acupuncture knowledge graphs, acupoint nano-interfaces, causal pattern models, matched-resource quantum sensing and cross-generational evidence platforms. Cultural concepts are hypotheses and labels, not proven energies or therapies. Two five-theme research units contain ten English 777-page working editions: 300 conditional mathematical research plates, 820 chapter openings, 4,100 separately paginated investigations, 2,000 Research Gates and 330 Phoenix Answer Embryos. Designs call for blinded perturbations, calibrated physical witnesses, optimized conventional baselines and explicit stop policies. This collection reports candidate research protocols, not completed results or demonstrated clinical effects. Research Unit I &middot; F81&ndash;F85 / Classical Claims &amp; Blinded Physiology F81&nbsp; QI-BLOOD PHILOSOPHY AND HUMAN MICROCIRCULATORY PHYSIOLOGY AT THE LIMIT &mdash; Tests whether preregistered qi-blood labels improve held-out microvascular perfusion prediction beyond temperature, anatomy, pulse and motion. Blinded non-needle cues and matched warm stimuli challenge ordinary thermal and cardiovascular explanations. Tissue stress, unblinded-only gains or calibration failure are hard stops. F82&nbsp; MIND-BODY UNITY PHILOSOPHY AND PSYCHOPHYSIOLOGICAL REGULATION AT THE LIMIT &mdash; Separates randomized attention and feedback effects from autonomic changes caused by posture or covert muscle activation. Crossed blinded feedback, hidden replay and synchronized ECG, EMG and posture controls challenge interpretation of subjective sensation as a distinct mechanism. Unidentifiable effects or consent failure halt claims. F83&nbsp; QIGONG BREATHING AND HUMAN BIOELECTRIC REGULATION AT THE LIMIT &mdash; Compares qigong-labeled breathing with ordinary paced breathing under matched respiration, electrode geometry and motion. Masked rate matching and exchanged session labels test whether sweat activity, respiratory rhythms or contact impedance account for surface EDA/ECG differences. Uncontrolled artifact prohibits special-energy inference. F84&nbsp; VOLITION, MIND-BODY UNITY AND INTELLIGENT NEUROFEEDBACK AT THE LIMIT &mdash; Challenges apparent intent-related information using live versus timestamp-matched replayed neurofeedback, yoked sham feedback and identical EEG bandwidth. Cross-validated information gains must survive face-EMG, breathing and expectancy controls. Label leakage, unsafe feedback or ignored human stop authority veto interpretation. F85&nbsp; EXTERNAL QIGONG CLAIMS, CLASSICAL QI THEORY AND SCIENTIFIC FALSIFIABILITY AT THE LIMIT &mdash; Subjects alleged remote effects to sealed target schedules, signal isolation, independent randomization and double-blind instrument readings. Shams, shielded blanks and equal operator schedules confront electromagnetic, acoustic, thermal and experimenter leakage. Nonblind-only effects or selective exclusions trigger refusal; remote qi remains unestablished. &nbsp; &nbsp; SECOND RESEARCH UNIT / SOURCE FIDELITY &amp; SUCCESSOR SCIENCE Research Unit II &middot; F86&ndash;F90 / Knowledge, Causality &amp; Continuity F86&nbsp; CLASSICAL ACUPUNCTURE KNOWLEDGE GRAPHS AND TRUSTWORTHY MEDICAL AI AT THE LIMIT &mdash; Measures source-attribution error when classical manuscripts are converted into provenance-typed biomedical knowledge graphs. Blinded conflicting translations, swapped citations and out-of-era terms test edition drif",
-      "tags": [],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "RESEARCH COLLECTION / FLAGSHIPS 81–90 OF 90 Classical Qi, Mind-Body Inquiry & Trustworthy Biomedical Evidence at the Limit STARLI Acupuncture Trilogy | F81–F90 of 90 | Author 33 | Research Design Working Edition v1.0 This ten-volume research-design collection tests classical qi-blood descriptions ag",
-      "url": "https://zenodo.org/records/23926303"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "88cdac54ab253f76966d4d1a",
-      "context_id": "5e12056127486e63d3abeaef",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::CONTROL",
-      "direction_title": "Universal large-data ingestion methods [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "calibration",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.0833,
-      "source": "arxiv",
-      "source_context_sha256": "1727a26b32533ca384ce50fb8a158f51d73830db47ac93bb6bdbf1d1d397f81e",
-      "source_published": "2026-10-31T00:33:11Z",
-      "source_updated": "2026-10-31T00:33:11Z",
-      "summary": "LLM-as-a-judge systems often aggregate multiple judges to improve evaluation reliability. However, judge agreement can reflect shared biases toward verbosity, formatting, or fluency rather than the intended evaluation target. Addressing these shared biases is challenging because observational judge outputs alone cannot distinguish agreement driven by target quality from agreement driven by nuisance attributes. We introduce VoirDire, an intervention-calibrated aggregation method for LLM-judge panels. VoirDire applies controlled interventions that vary specified surface attributes while aiming to preserve the evaluation target; it then uses paired changes in judge scores to identify nuisance-sensitive directions. It attenuates these directions and selects aggregation weights that retain variation across items while penalizing sensitivity to the interventions, making the final consensus less dependent on superficial features. We show theoretically that observational judge outputs alone cannot identify which shared direction is target-relevant, while paired interventions provide the contrast needed to identify nuisance-sensitive variation. We evaluate VoirDire on 12 datasets spanning continuous scoring, binary classification, and pairwise preference. Compared with the existing LLM-judge aggregation baselines, VoirDire reduces MAE by up to 26.8% on continuous-score tasks and improves accuracy by up to 5.3 percentage points on binary and preference tasks. These findings suggest that counterfactual interventions provide an additional means of improving the reliability and controllability of LLM-based evaluation beyond merely relying on observed judge agreement.",
-      "tags": [
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "VoirDire: Counterfactual Calibration for Reliable LLM-as-a-Judge Aggregation",
-      "url": "https://arxiv.org/abs/2611.00491v1"
-    },
-    {
-      "base_direction_id": "swarm_distributed_systems",
-      "candidate_id": "470d3f320bf5245ea25a258f",
-      "context_id": "bd50db21059320682f12d256",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "swarm_distributed_systems::CONTROL",
-      "direction_title": "Distributed agents / swarm / resilient coordination [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "ablation",
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.0417,
-      "source": "arxiv",
-      "source_context_sha256": "d0c6380df6b3ab9f3e77efbde68666bbfca55f9ed8b3bca188a62d24b58091a4",
-      "source_published": "2026-11-03T18:24:20Z",
-      "source_updated": "2026-11-03T18:24:20Z",
-      "summary": "In LLM-based recommendation, memory acts as a user-level agent in a memory-augmented backbone. Yet users and items remain asymmetric: only the user is given a structured profile; it enters a bandwidth-limited reranker prompt; and it is frozen after warmup. We recast LLM-based recommendation as an agentic-communication process in four stages: BUILD a self-description, TRANSMIT it along the collaborative graph, UNDERSTAND the other side, and SYNC it from the next interaction. This formulation reveals three unresolved communication challenges: the item side never produces a comparable self-description (one-sided BUILD); profile-level signals enter only the bandwidth-limited reranker prompt rather than retrieval, where they would not compete for context tokens (prompt-trapped UNDERSTAND); and the user's description is frozen after warmup with no principled update rule (absent SYNC). We instantiate the missing stages as HARP (Homophily-aware Agentic Recommendation via dual Profiles), a training-free, three-operator addition to a frozen LLM backbone: a rule-extracted symmetric item profile (zero extra LLM calls), a channel-decomposable profile-level homophily H(phi_u, phi_i) consumed at retrieval time rather than inside the reranker prompt, and a single-pass reflective update realising in-context profile evolution without any gradient step. On four public benchmarks (Yelp, Books, MovieTV, Goodreads), HARP lifts Hit@1 over the strongest published baseline by 6.9%-24.0%, with family-wise Holm-corrected p < 1e-9 on every dataset. Ablations and a per-case attribution study show that the operators contribute complementary gains, with the retrieval-side gate as the main source; we also report the trade-off introduced by the reflective pass. We formulate agentic communication and provide a training-free instantiation. Code is available at https://github.com/Jove-Zhen/HARP.",
-      "tags": [
-        "cs.IR",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "HARP: Training-Free Dual-Profile Agentic Communication for LLM-Based Recommendation",
-      "url": "https://arxiv.org/abs/2611.05319v1"
-    },
-    {
-      "base_direction_id": "large_data_methods",
-      "candidate_id": "470d3f320bf5245ea25a258f",
-      "context_id": "76a65b6bf4c62deb9a6c8a6f",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "large_data_methods::CONTROL",
-      "direction_title": "Universal large-data ingestion methods [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "ablation",
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.0417,
-      "source": "arxiv",
-      "source_context_sha256": "8abd5d09ae44f8520c3d1b209b42695b5c8f3fdd0c79c7439a3caf32e97d8d77",
-      "source_published": "2026-11-03T18:24:20Z",
-      "source_updated": "2026-11-03T18:24:20Z",
-      "summary": "In LLM-based recommendation, memory acts as a user-level agent in a memory-augmented backbone. Yet users and items remain asymmetric: only the user is given a structured profile; it enters a bandwidth-limited reranker prompt; and it is frozen after warmup. We recast LLM-based recommendation as an agentic-communication process in four stages: BUILD a self-description, TRANSMIT it along the collaborative graph, UNDERSTAND the other side, and SYNC it from the next interaction. This formulation reveals three unresolved communication challenges: the item side never produces a comparable self-description (one-sided BUILD); profile-level signals enter only the bandwidth-limited reranker prompt rather than retrieval, where they would not compete for context tokens (prompt-trapped UNDERSTAND); and the user's description is frozen after warmup with no principled update rule (absent SYNC). We instantiate the missing stages as HARP (Homophily-aware Agentic Recommendation via dual Profiles), a training-free, three-operator addition to a frozen LLM backbone: a rule-extracted symmetric item profile (zero extra LLM calls), a channel-decomposable profile-level homophily H(phi_u, phi_i) consumed at retrieval time rather than inside the reranker prompt, and a single-pass reflective update realising in-context profile evolution without any gradient step. On four public benchmarks (Yelp, Books, MovieTV, Goodreads), HARP lifts Hit@1 over the strongest published baseline by 6.9%-24.0%, with family-wise Holm-corrected p < 1e-9 on every dataset. Ablations and a per-case attribution study show that the operators contribute complementary gains, with the retrieval-side gate as the main source; we also report the trade-off introduced by the reflective pass. We formulate agentic communication and provide a training-free instantiation. Code is available at https://github.com/Jove-Zhen/HARP.",
-      "tags": [
-        "cs.IR",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/janus-distributed-ai-swarm",
-      "title": "HARP: Training-Free Dual-Profile Agentic Communication for LLM-Based Recommendation",
-      "url": "https://arxiv.org/abs/2611.05319v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
