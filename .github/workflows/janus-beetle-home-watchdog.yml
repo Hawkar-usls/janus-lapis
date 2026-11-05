@@ -13,6 +13,8 @@ on:
     workflows:
       - 'JANUS Universal Beetle hourly'
       - 'JANUS Beetle Memory Receiver'
+      # Independent bounded recovery tick also refreshes durable HOME high-water.
+      - 'JANUS Beetle producer bounded recovery'
     types: [completed]
     branches: [main]
   push:
