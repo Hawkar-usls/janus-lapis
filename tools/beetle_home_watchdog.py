@@ -218,19 +218,28 @@ def elapsed_minutes(value: str, now: dt.datetime) -> float:
 
 
 def reconcile_stale(health: dict, now: dt.datetime, fetcher=fetch_json) -> dict:
-    """Recheck alerts against live ACKs; producer/receiver cron can race.
+    """Recheck unsafe rows and aged public pending ACKs against sender SHA.
 
-    The producer can persist its health report seconds *before* a receiver's
-    atomic inbox+ACK push.  Re-evaluate only suspect recipients from the
-    immutable sender queue, never trust a newer ACK without matching its hash.
+    A receiver may commit an atomic inbox+ACK after the producer published its
+    health snapshot. Aged PENDING rows are not live backlog evidence. Never
+    infer private ACK visibility or runtime consumption from public GitHub.
     """
     result = copy.deepcopy(health)
     rows = result.get('repositories')
     if not isinstance(rows, dict):
         raise ValueError('missing delivery health rows')
+    # Grace period avoids extra GitHub requests during a fresh producer tick.
+    # Beyond this point the report is an observation of the past, not of the
+    # recipients' current durable ACKs. The source queue is SHA-bound below.
+    health_age = elapsed_minutes(health.get('at'), now)
     rechecked = []
     for repo, old in rows.items():
-        if not isinstance(old, dict) or old.get('status') not in ('STALE', 'ACK_CONFLICT'):
+        if not isinstance(old, dict):
+            continue
+        status = old.get('status')
+        recheck = status in ('STALE', 'ACK_CONFLICT') or (
+            status == 'PENDING' and old.get('pending', 0) > 0 and health_age >= 5)
+        if not recheck:
             continue
         if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repo):
             raise ValueError('invalid recipient identity')
