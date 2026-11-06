@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-11-05T23:39:26.925069Z",
+  "finished_at": "2026-11-06T00:06:01.981806Z",
   "graze": {
-    "finished_at": "2026-11-05T23:39:26.925042Z",
+    "finished_at": "2026-11-06T00:06:01.981784Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,16 +13,22 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "d13a78e1a252aa2a2a98acbdf40aec68adff8cc07cdaca8e52e98b96cae1ce9a",
+  "receipt_head": "36ff52b4b9526b3d162763403f297288263f58ba5951a0c83b2f6ad2f4d4f73a",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-11-05T23:39:15.704397Z",
-    "metadata_bytes": 747999,
-    "new_candidates": 11,
+    "errors": [
+      {
+        "direction": "registry_provenance::FORWARD",
+        "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=all%3A%22data+provenance%22+OR+all%3A%22research+reproducibility%22+OR+all%3A%22workflow+provenance%22&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      }
+    ],
+    "finished_at": "2026-11-06T00:05:53.257982Z",
+    "metadata_bytes": 744757,
+    "new_candidates": 2,
     "requests": 35,
-    "started_at": "2026-11-05T23:38:14.271202Z"
+    "started_at": "2026-11-06T00:04:29.228265Z"
   },
-  "started_at": "2026-11-05T23:38:14.271084Z",
+  "started_at": "2026-11-06T00:04:29.228092Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
