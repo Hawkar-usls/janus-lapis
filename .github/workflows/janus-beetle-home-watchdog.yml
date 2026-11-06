@@ -75,13 +75,18 @@ jobs:
         run: python -m unittest -v tests.test_beetle_home_watchdog tests.test_beetle_incident_issues tests.test_beetle_observation_blindness tests.test_beetle_watchdog_receipt tests.test_beetle_home_highwater
       - name: Check real durable ACK and Cloud HOME without writes
         shell: bash
-        # A real deployment SLO ALERT is operational evidence, not a code
-        # regression in an unrelated PR. Preserve the classified artifact,
-        # but only trusted main runs fail and open the incident journal.
-        continue-on-error: ${{ github.event_name == 'pull_request' }}
+        # A trustworthy ALERT or transport UNKNOWN shows the observer ran;
+        # delivery health is separately classified in the durable receipt.
+        # Save the exact script exit code for fail-closed verification below.
         run: |
-          set -euo pipefail
+          set -uo pipefail
+          set +e
           python tools/beetle_home_watchdog.py | tee watchdog-run.txt "$GITHUB_STEP_SUMMARY"
+          pipeline_status=("${PIPESTATUS[@]}")
+          printf '%s\n' "${pipeline_status[0]}" > watchdog-exitcode.txt
+          if (( pipeline_status[1] != 0 )); then
+            exit "${pipeline_status[1]}"
+          fi
       - name: Classify receipt, keeping missing or malformed telemetry UNKNOWN
         id: classify
         if: always()
@@ -90,6 +95,12 @@ jobs:
           set -euo pipefail
           status="$(python tools/beetle_watchdog_receipt.py --report watchdog-run.txt)"
           echo "status=$status" >> "$GITHUB_OUTPUT"
+      - name: Verify observer completed with a matching trustworthy receipt
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/beetle_watchdog_receipt.py --report watchdog-run.txt --exit-code-file watchdog-exitcode.txt
       - name: Preserve watcher receipt, even after ALERT
         if: always()
         uses: actions/upload-artifact@v7
