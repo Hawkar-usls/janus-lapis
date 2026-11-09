@@ -13,7 +13,7 @@ import json
 import re
 from typing import Any
 from urllib.parse import urlparse
-from wolfram_mcp_numeric_verify import verify_numeric_content
+from wolfram_mcp_numeric_verify import verify_numeric_content, safe_shape_summary
 
 MCP_ENDPOINT = "https://agenttools.wolfram.com/mcp"
 MCP_DOCS = "https://www.wolfram.com/ai/mcp/cloud/"
@@ -35,6 +35,13 @@ CASES = {
         "query": "cos(pi/4)^4",
         "public_reference": 0.25,
         "description": "Single additional Zeno N=2 numeric check for Ocean council",
+        "verify_numeric": True,
+    },
+    # Not included in Beetle's recurring config: one PR-only live check.
+    "zeno_format_probe_v2": {
+        "query": "cos(pi/4)^4",
+        "public_reference": 0.25,
+        "description": "One-time response format probe with in-memory numeric verification",
         "verify_numeric": True,
     },
 }
@@ -170,10 +177,12 @@ def one_shot(case_id, session, note_request=lambda n: None):
         raise MCPHold("WOLFRAMALPHA_EMPTY_RESPONSE")
     # Provider text stays in RAM only. Never print it, log it or train on it.
     math_verified, math_status = (
-        verify_numeric_content(content, case["public_reference"])
+        verify_numeric_content(content, case["public_reference"],
+                               result.get("structuredContent"))
         if case.get("verify_numeric") is True
         else (False, "NUMERIC_VERIFICATION_NOT_REQUESTED")
     )
+    format_flags = safe_shape_summary(content, result.get("structuredContent"))
     return {
         "schema": "janus.beetle.wolfram_keyless_mcp_probe.v1",
         "status": ("LIVE_MCP_MATH_VERIFIED" if math_verified
@@ -190,6 +199,7 @@ def one_shot(case_id, session, note_request=lambda n: None):
         "provider_response_cached": False,
         "provider_math_answer_verified": math_verified,
         "provider_math_verification_status": math_status,
+        "noncontent_format_flags": format_flags,
         "arithmetic_match_not_physics_evidence": True,
         "physical_retrocausality_proven": False,
         "underlying_model_modified": False,

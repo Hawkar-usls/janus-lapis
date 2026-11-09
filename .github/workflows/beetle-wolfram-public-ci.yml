@@ -7,6 +7,7 @@ on:
       - "tools/wolfram_mcp_one_shot.py"
       - "tools/wolfram_mcp_numeric_verify.py"
       - "tests/test_wolfram_numeric_verification.py"
+      - "tests/test_wolfram_format_v2.py"
       - "tools/universal_beetle.py"
       - "data/beetle/directions.json"
       - "tests/test_wolfram_public_beetle.py"
@@ -41,6 +42,7 @@ jobs:
           python -m py_compile tools/wolfram_public_sources.py tools/wolfram_mcp_one_shot.py tools/wolfram_mcp_numeric_verify.py tools/universal_beetle.py
           PYTHONPATH=tools python -m unittest discover -s tests -p 'test_wolfram_public_beetle.py' -v
           PYTHONPATH=tools python -m unittest discover -s tests -p 'test_wolfram_numeric_verification.py' -v
+          PYTHONPATH=tools python -m unittest discover -s tests -p 'test_wolfram_format_v2.py' -v
       - name: Check source direction and privileges
         run: |
           python - <<'PY'
