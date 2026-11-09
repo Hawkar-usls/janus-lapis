@@ -1005,7 +1005,9 @@
         "research_authority": "DISCOVERY_ONLY",
         "copyright": "LINKS_AND_SHORT_METADATA_NO_BULK_COPY",
         "keyless_cloud_mcp_one_shot": "ONE_FIXED_QUERY_WITH_7_DAY_ERROR_BACKOFF_AND_NO_REPEATED_SUCCESS",
-        "cloud_mcp_is_official_credential_free": true
+        "cloud_mcp_is_official_credential_free": true,
+        "math_verification_case": "ONE_ADDITIONAL_FIXED_QUERY_WITH_SHA_BOUND_ATTESTATION",
+        "wolfram_math_provider_raw_output_persisted": false
       },
       "sources": [
         {
@@ -1024,6 +1026,13 @@
           "case": "zeno_n2_analytic",
           "max_results": 1,
           "policy": "Wolfram official free keyless MCP; one approved query; persistent receipt and no result text"
+        },
+        {
+          "kind": "wolfram_mcp_once",
+          "enabled": true,
+          "case": "zeno_n2_verified_v1",
+          "max_results": 1,
+          "policy": "ONE verified public Zeno calculation for Ocean, no raw Wolfram result stored, auto-deduped after first receipt"
         }
       ]
     }
