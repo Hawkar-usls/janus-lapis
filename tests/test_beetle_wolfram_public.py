@@ -40,6 +40,14 @@ class FakeResponse:
     def __init__(self, data, url):
         self.content = data
         self.url = url
+        self.status_code = 200
+    def __enter__(self):
+        return self
+    def __exit__(self, *_):
+        return False
+    def iter_content(self, chunk_size=8192):
+        for i in range(0, len(self.content), chunk_size):
+            yield self.content[i:i+chunk_size]
     def raise_for_status(self):
         pass
 
