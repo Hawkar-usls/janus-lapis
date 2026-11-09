@@ -420,10 +420,13 @@ def scout_wolfram_mcp_once(sess: requests.Session, state: State, budget: Budget,
                        "physical_retrocausality_proven": False})
         # Source-bound small receipt for JANUS Ocean. Never write provider
         # content or the provider's numeric output. Never overwrite a run.
-        if case_id == "zeno_n2_verified_v1":
+        if case_id in ("zeno_n2_verified_v1", "zeno_n4_unconditional_v3"):
+            v3_case = case_id == "zeno_n4_unconditional_v3"
             attestation = {
-                "schema": "janus.beetle.wolfram_ocean_math_attestation.v1",
-                "experiment_id": "JANUS-ZENO-TEMPORAL-001",
+                "schema": ("janus.beetle.wolfram_ocean_math_attestation.v3"
+                           if v3_case else "janus.beetle.wolfram_ocean_math_attestation.v1"),
+                "experiment_id": ("JANUS-ZENO-TEMPORAL-002"
+                                  if v3_case else "JANUS-ZENO-TEMPORAL-001"),
                 "query_id": case_id,
                 "research_query": WOLFRAM_MCP_CASES[case_id]["query"],
                 "independent_reference": WOLFRAM_MCP_CASES[case_id]["public_reference"],
@@ -440,6 +443,13 @@ def scout_wolfram_mcp_once(sess: requests.Session, state: State, budget: Budget,
                 "physical_retrocausality_proven": False,
                 "production_model_promoted": False,
             }
+            if v3_case:
+                attestation.update({
+                    "physical_observable": "N4_FINAL_ZERO_WITH_EARLIER_RESULTS_UNREAD",
+                    "competing_observable_not_equal": "N4_ALL_FOUR_ZERO",
+                    "zeno_cpu_v3_report_sha256": "fc93a5f12690cb969b68aea55fdf06dbe8c2e13a4b120add5c735890b5c8d8a2",
+                    "older_v1_attestation_overwritten": False,
+                })
             receipt_path = state.root / "wolfram_math" / (case_id + ".json")
             if receipt_path.exists():
                 raise ValueError("WOLFRAM_ATTESTATION_OVERWRITE_REFUSED")
