@@ -321,11 +321,23 @@ def scout_wolfram_public(sess: requests.Session, state: State, budget: Budget,
              "wolfram_public_repo": (REPO_URL, REPO_MAX_BYTES)}
     if kind not in known:
         raise ValueError("UNAPPROVED_WOLFRAM_PUBLIC_SOURCE")
+    # Public RSS and repository metadata are not a license to hammer the
+    # provider during Beetle's 20-minute runs. At most one request/source/day.
+    cooldown_key = "wolfram_public_source:" + kind + ":last_attempt"
+    previous = state.cursors.get(cooldown_key)
+    if isinstance(previous, str):
+        try:
+            last = dt.datetime.fromisoformat(previous.replace("Z", "+00:00"))
+            if last.tzinfo and (dt.datetime.now(dt.timezone.utc) - last).total_seconds() < 86400:
+                return
+        except ValueError:
+            pass
     url, cap = known[kind]
     if not budget.can_request():
         raise RuntimeError("request budget exhausted")
     # Bound network bytes BEFORE materialization, reject redirects to arbitrary
     # domains, and avoid treating an error page as a successful public source.
+    state.cursors[cooldown_key] = now()
     with sess.get(url, timeout=20, allow_redirects=False, stream=True,
                   headers={"Accept": "application/rss+xml, application/atom+xml, application/json"}) as r:
         validate_final_url(url, r.url)
