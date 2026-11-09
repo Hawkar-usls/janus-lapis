@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-11-09T07:16:08.486680Z",
+  "finished_at": "2026-11-09T09:41:04.784447Z",
   "graze": {
-    "finished_at": "2026-11-09T07:16:08.486657Z",
+    "finished_at": "2026-11-09T09:41:04.784423Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,16 +13,22 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "13e50b5eb2ee3073916d09f5d6d46e0a55855972a6c274545176c5aef78405c7",
+  "receipt_head": "3599ab2ff1a9cf832fa417a6d9fde675d5a6ef81c0144b9b563e0b94346c8fec",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-11-09T07:15:59.997230Z",
-    "metadata_bytes": 1824639,
-    "new_candidates": 60,
-    "requests": 36,
-    "started_at": "2026-11-09T07:14:39.498336Z"
+    "errors": [
+      {
+        "direction": "protein_stability_falsifiers::COUNTEREVIDENCE",
+        "error": "HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: https://zenodo.org/api/records?q=independent+proteolysis+stability+mutants+protein+benchmark+failure+null+result+negative+result&size=6&sort=mostrecent",
+        "source": "zenodo"
+      }
+    ],
+    "finished_at": "2026-11-09T09:39:21.412613Z",
+    "metadata_bytes": 697737,
+    "new_candidates": 11,
+    "requests": 37,
+    "started_at": "2026-11-09T09:37:42.958411Z"
   },
-  "started_at": "2026-11-09T07:14:39.498205Z",
+  "started_at": "2026-11-09T09:37:42.958341Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
