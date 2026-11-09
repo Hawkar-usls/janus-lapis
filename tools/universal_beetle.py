@@ -408,10 +408,42 @@ def scout_wolfram_mcp_once(sess: requests.Session, state: State, budget: Budget,
         "epistemic_limit": "ONE_TOOL_RESPONSE_NOT_INDEPENDENT_SCIENTIFIC_VERIFICATION",
     }
     if record_candidate(state, budget, direction, item):
-        state.receipt("WOLFRAM_MCP_KEYLESS_RECEIVED",
+        math_checked = result.get("provider_math_answer_verified") is True
+        receipt_event = (
+            "WOLFRAM_MCP_MATH_VERIFIED" if math_checked
+            else "WOLFRAM_MCP_KEYLESS_RECEIVED"
+        )
+        receipt_hash = state.receipt(receipt_event,
                       {"candidate_id": iid, "query_id": case_id,
                        "provider_content_sha256": result["provider_content_sha256"],
+                       "numeric_verification_status": result.get("provider_math_verification_status"),
                        "physical_retrocausality_proven": False})
+        # Source-bound small receipt for JANUS Ocean. Never write provider
+        # content or the provider's numeric output. Never overwrite a run.
+        if case_id == "zeno_n2_verified_v1":
+            attestation = {
+                "schema": "janus.beetle.wolfram_ocean_math_attestation.v1",
+                "experiment_id": "JANUS-ZENO-TEMPORAL-001",
+                "query_id": case_id,
+                "research_query": WOLFRAM_MCP_CASES[case_id]["query"],
+                "independent_reference": WOLFRAM_MCP_CASES[case_id]["public_reference"],
+                "verified_arithmetic_match": math_checked,
+                "verification_status": result["provider_math_verification_status"],
+                "mcp_provider_response_sha256": result["provider_content_sha256"],
+                "beetle_receipt_sha256": receipt_hash,
+                "beetle_candidate_id": iid,
+                "created_utc": now(),
+                "provider_endpoint": "https://agenttools.wolfram.com/mcp",
+                "provider_raw_result_retained": False,
+                "future_outcomes_transmitted": False,
+                "live_external_arithmetic_only": True,
+                "physical_retrocausality_proven": False,
+                "production_model_promoted": False,
+            }
+            receipt_path = state.root / "wolfram_math" / (case_id + ".json")
+            if receipt_path.exists():
+                raise ValueError("WOLFRAM_ATTESTATION_OVERWRITE_REFUSED")
+            atomic_json(receipt_path, attestation)
 
 
 SCOUTERS = {"arxiv": scout_arxiv, "zenodo": scout_zenodo, "github": scout_github,
