@@ -959,6 +959,64 @@
         "ROWAN_SPEND_AUTHORITY_ZERO",
         "REPEATED_SOURCE_NE_INDEPENDENCE"
       ]
+    },
+    {
+      "id": "wolfram_official_open_quantum",
+      "title": "Wolfram official open quantum research metadata — no Alpha API",
+      "enabled": true,
+      "priority": 91,
+      "min_score": 1,
+      "mirror_lenses": [
+        "FORWARD",
+        "REVERSE",
+        "COUNTEREVIDENCE",
+        "CONTROL"
+      ],
+      "priority_keywords": [
+        "quantum",
+        "QuantumFramework",
+        "measurement",
+        "wolfram"
+      ],
+      "keywords": [
+        "quantum",
+        "quantum zeno",
+        "measurement",
+        "wavefunction",
+        "open quantum",
+        "simulation",
+        "probability",
+        "WolframResearch",
+        "Wolfram",
+        "physics",
+        "time evolution",
+        "decoherence"
+      ],
+      "target_repositories": [
+        "Hawkar-usls/janus-meta-registry",
+        "Hawkar-usls/janus-lapis"
+      ],
+      "scientific_boundary": {
+        "source_kind": "OFFICIAL_PUBLIC_METADATA_ONLY",
+        "wolfram_alpha_queries_without_appid": false,
+        "max_public_requests_per_mirror_lane": 2,
+        "provider_results_saved": false,
+        "use_to_train_ai_models": false,
+        "research_authority": "DISCOVERY_ONLY",
+        "copyright": "LINKS_AND_SHORT_METADATA_NO_BULK_COPY"
+      },
+      "sources": [
+        {
+          "kind": "wolfram_public_feed",
+          "enabled": true,
+          "max_results": 3
+        },
+        {
+          "kind": "wolfram_public_repo",
+          "enabled": true,
+          "max_results": 1
+        }
+      ]
     }
   ],
   "grazer_tasks": [
