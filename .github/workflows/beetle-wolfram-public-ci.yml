@@ -1,0 +1,54 @@
+name: JANUS Beetle / Wolfram Public and Keyless MCP Gates
+
+on:
+  pull_request:
+    paths:
+      - "tools/wolfram_public_sources.py"
+      - "tools/wolfram_mcp_one_shot.py"
+      - "tools/universal_beetle.py"
+      - "data/beetle/directions.json"
+      - "tests/test_wolfram_public_beetle.py"
+      - ".github/workflows/beetle-wolfram-public-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: beetle-wolfram-public-ci-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  offline-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install minimal existing Beetle dependency
+        run: python -m pip install --disable-pip-version-check 'requests>=2.31,<3'
+      - name: Python syntax, no-auth Wolfram mocked transport and durable dedupe tests
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/wolfram_public_sources.py tools/wolfram_mcp_one_shot.py tools/universal_beetle.py
+          PYTHONPATH=tools python -m unittest discover -s tests -p 'test_wolfram_public_beetle.py' -v
+      - name: Check source direction and privileges
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          c=json.loads(Path("data/beetle/directions.json").read_text())
+          d=next(x for x in c["directions"] if x["id"]=="wolfram_public_quantum")
+          kinds={x["kind"] for x in d["sources"]}
+          assert kinds=={"wolfram_public_feed","wolfram_public_repo","wolfram_mcp_once"}
+          assert d["enabled"] is True
+          assert set(d["mirror_lenses"])=={"FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"}
+          assert not any("appid" in json.dumps(x).casefold() or "secret" in json.dumps(x).casefold() for x in d["sources"])
+          print("PASS official sources, one-shot MCP and unchanged mirror budget")
+          PY
