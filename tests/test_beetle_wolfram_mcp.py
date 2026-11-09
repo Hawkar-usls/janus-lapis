@@ -97,7 +97,7 @@ class Tests(unittest.TestCase):
             self.assertEqual(first,1)
             beetle.scout_wolfram_mcp_once(s,state,budget,d,source)
             self.assertEqual(len(s.calls),first)
-            self.assertIn("wolfram_mcp_once:zeno_n2_analytic:last_attempt",state.cursors)
+            self.assertIn("wolfram_mcp_once:zeno_n2_analytic:"+mcp.MCP_CLIENT_REVISION+":last_attempt",state.cursors)
 
 
 if __name__=="__main__":
