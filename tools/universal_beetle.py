@@ -321,11 +321,28 @@ def scout_wolfram_public(sess: requests.Session, state: State, budget: Budget,
     if kind not in known:
         raise ValueError("UNAPPROVED_WOLFRAM_PUBLIC_SOURCE")
     url, cap = known[kind]
-    r = _get(sess, budget, url, allow_redirects=False)
-    validate_final_url(url, r.url)
-    if len(r.content) > cap:
-        raise ValueError("WOLFRAM_PUBLIC_SOURCE_TOO_LARGE")
-    rows = discover(kind, r.content, max_results=min(3, max(1, int(source_cfg.get("max_results", 3)))))
+    if not budget.can_request():
+        raise RuntimeError("request budget exhausted")
+    # Bound network bytes BEFORE materialization, reject redirects to arbitrary
+    # domains, and avoid treating an error page as a successful public source.
+    with sess.get(url, timeout=20, allow_redirects=False, stream=True,
+                  headers={"Accept": "application/rss+xml, application/atom+xml, application/json"}) as r:
+        validate_final_url(url, r.url)
+        if r.status_code != 200:
+            budget.note_request(0)
+            raise RuntimeError("WOLFRAM_PUBLIC_SOURCE_UNAVAILABLE")
+        pieces = []
+        nbytes = 0
+        try:
+            for piece in r.iter_content(chunk_size=8192):
+                nbytes += len(piece)
+                if nbytes > cap:
+                    raise ValueError("WOLFRAM_PUBLIC_SOURCE_TOO_LARGE")
+                pieces.append(piece)
+        finally:
+            budget.note_request(nbytes)
+        body = b"".join(pieces)
+    rows = discover(kind, body, max_results=min(3, max(1, int(source_cfg.get("max_results", 3)))))
     for item in rows:
         if not budget.can_add():
             break
