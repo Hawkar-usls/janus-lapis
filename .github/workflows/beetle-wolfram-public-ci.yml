@@ -7,6 +7,7 @@ on:
       - "tools/wolfram_mcp_one_shot.py"
       - "tools/wolfram_mcp_numeric_verify.py"
       - "tests/test_wolfram_numeric_verification.py"
+      - "tests/test_beetle_wolfram_v3.py"
       - "tests/test_wolfram_format_v2.py"
       - "tools/universal_beetle.py"
       - "data/beetle/directions.json"
@@ -42,6 +43,7 @@ jobs:
           python -m py_compile tools/wolfram_public_sources.py tools/wolfram_mcp_one_shot.py tools/wolfram_mcp_numeric_verify.py tools/universal_beetle.py
           PYTHONPATH=tools python -m unittest discover -s tests -p 'test_wolfram_public_beetle.py' -v
           PYTHONPATH=tools python -m unittest discover -s tests -p 'test_wolfram_numeric_verification.py' -v
+          PYTHONPATH=tools python -m unittest discover -s tests -p 'test_beetle_wolfram_v3.py' -v
           PYTHONPATH=tools python -m unittest discover -s tests -p 'test_wolfram_format_v2.py' -v
       - name: Check source direction and privileges
         run: |
@@ -52,7 +54,7 @@ jobs:
           d=next(x for x in c["directions"] if x["id"]=="wolfram_official_open_quantum")
           kinds={x["kind"] for x in d["sources"]}
           assert kinds=={"wolfram_public_feed","wolfram_public_repo","wolfram_mcp_once"}
-          assert sorted(x.get("case") for x in d["sources"] if x["kind"]=="wolfram_mcp_once")==["zeno_n2_analytic","zeno_n2_verified_v1"]
+          assert sorted(x.get("case") for x in d["sources"] if x["kind"]=="wolfram_mcp_once")==["zeno_n2_analytic","zeno_n2_verified_v1","zeno_n4_unconditional_v3"]
           assert d["enabled"] is True
           assert set(d["mirror_lenses"])=={"FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL"}
           assert not any("appid" in json.dumps(x).casefold() or "secret" in json.dumps(x).casefold() for x in d["sources"])
