@@ -26,10 +26,11 @@ class R:
 
 
 class S:
-    def __init__(self, result_text="Result: 1/4", negotiated="2025-03-26"):
+    def __init__(self, result_text="Result: 1/4", negotiated="2025-03-26", case_id="zeno_n2_verified_v1"):
         self.calls = []
         self.result_text = result_text
         self.negotiated = negotiated
+        self.case_id = case_id
     def post(self, url, *, headers, json, **kwargs):
         if url != MCP_ENDPOINT or "Authorization" in headers:
             raise AssertionError("UNEXPECTED_ENDPOINT_OR_AUTH")
@@ -46,7 +47,7 @@ class S:
                 "tools":[{"name":"WolframAlpha","inputSchema":{
                     "properties":{"query":{"type":"string"}},"required":["query"]}}]}})
         if m == "tools/call":
-            if json["params"]["arguments"] != {"query": CASES["zeno_n2_verified_v1"]["query"]}:
+            if json["params"]["arguments"] != {"query": CASES[self.case_id]["query"]}:
                 raise AssertionError("UNAPPROVED_QUERY")
             return R({"id":3,"jsonrpc":"2.0","result":{
                 "isError":False,
