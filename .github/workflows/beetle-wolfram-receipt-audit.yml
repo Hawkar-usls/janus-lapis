@@ -1,0 +1,76 @@
+name: JANUS Beetle / Wolfram MCP Receipt Audit
+# Recheck after keyless MCP protocol negotiation repair in PR #49.
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/beetle-wolfram-receipt-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/beetle-wolfram-receipt-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  independent-readonly-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: beetle-state
+          persist-credentials: false
+          path: memory
+      - name: Inspect durable receipts without rerunning external queries
+        env:
+          GITHUB_AUDIT_RUN: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          root=Path('memory/data/beetle-state/receipts.parts')
+          idx=json.loads((root/'index.json').read_text())
+          interesting={"WOLFRAM_MCP_KEYLESS_RECEIVED","WOLFRAM_MCP_ONE_SHOT_HOLD"}
+          events=[]
+          for part in idx['parts'][-2:]:
+              with (root/part['name']).open(encoding='utf-8') as f:
+                  for line in f:
+                      if '"WOLFRAM_MCP_' not in line:
+                          continue
+                      try:
+                          row=json.loads(line)
+                          if row.get('event') in interesting:
+                              events.append({
+                                  "event":row["event"], "at":row.get("at"),
+                                  "query_id":row.get("payload",{}).get("query_id"),
+                                  "reason":row.get("payload",{}).get("reason"),
+                                  "receipt_sha256":row.get("receipt_sha256"),
+                              })
+                      except (ValueError,KeyError,TypeError):
+                          raise SystemExit("INVALID_RECEIPT_ROW")
+          summary={
+              "schema":"janus.beetle.wolfram_keyless_receipt_audit.v1",
+              "audit_run_id":os.environ["GITHUB_AUDIT_RUN"],
+              "status":"LIVE_MCP_RECEIPT_SEEN" if any(x["event"]=="WOLFRAM_MCP_KEYLESS_RECEIVED" for x in events)
+                  else "MCP_HOLD_SEEN" if events else "NO_MCP_RECEIPT_YET",
+              "events":events[-8:],
+              "raw_provider_output_included":False,
+              "external_credential_used":False,
+          }
+          p=Path('wolfram_mcp_receipt_audit.json')
+          p.write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,sort_keys=True))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write('## Wolfram Cloud MCP · durable Beetle receipt\n\n')
+              f.write('Status: **'+summary['status']+'**\n\n')
+              f.write('Events: '+str(len(summary['events']))+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wolfram-beetle-source-receipt
+          path: wolfram_mcp_receipt_audit.json
+          retention-days: 14
