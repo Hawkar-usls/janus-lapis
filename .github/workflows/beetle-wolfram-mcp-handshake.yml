@@ -1,0 +1,48 @@
+name: JANUS Beetle / Wolfram MCP Protocol Discovery
+
+on:
+  pull_request:
+    paths: [".github/workflows/beetle-wolfram-mcp-handshake.yml"]
+permissions:
+  contents: read
+jobs:
+  safe-readonly-handshake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install requests for MCP handshake
+        run: python -m pip install 'requests>=2.31,<3'
+      - name: Discover server-negotiated protocol and allowlisted tool schema without querying Alpha
+        shell: bash
+        run: |
+          set -euo pipefail
+          PYTHONPATH=tools python - <<'PY'
+          import json, requests
+          from wolfram_mcp_one_shot import send, PROTOCOL
+          with requests.Session() as s:
+              init,sid=send(s,method="initialize",request_id=1,params={
+                  "protocolVersion": PROTOCOL,"capabilities":{},
+                  "clientInfo":{"name":"janus-mcp-protocol-audit","version":"1.0.0"}
+              })
+              version=str(init.get("result",{}).get("protocolVersion","MISSING"))
+              assert len(version)<64
+              print(json.dumps({"endpoint":"OFFICIAL_WOLFRAM_MCP",
+                               "requested":PROTOCOL,"negotiated":version,
+                               "session_header_present":bool(sid)},
+                               sort_keys=True))
+              if version == PROTOCOL:
+                  send(s,method="notifications/initialized",session_id=sid)
+                  tools,_=send(s,method="tools/list",request_id=2,session_id=sid)
+                  v=[{"name":t.get("name"),
+                      "props":sorted(t.get("inputSchema",{}).get("properties",{}).keys()),
+                      "required":t.get("inputSchema",{}).get("required",[])}
+                      for t in tools.get("result",{}).get("tools",[])
+                      if t.get("name")=="WolframAlpha"]
+                  print(json.dumps({"wolfram_alpha_schemas":v},sort_keys=True))
+          PY
