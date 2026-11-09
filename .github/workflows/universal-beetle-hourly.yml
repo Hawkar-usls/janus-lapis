@@ -8,6 +8,9 @@ on:
     paths:
       - "tools/universal_beetle.py"
       - "tools/wolfram_public_sources.py"
+      - "tools/wolfram_mcp_one_shot.py"
+      - "tests/test_wolfram_public_beetle.py"
+      - "tools/wolfram_public_sources.py"
       - "tests/test_beetle_wolfram_public.py"
       - "tools/beetle_shard_store.py"
       - "tools/beetle_director_overlay.py"
@@ -89,6 +92,7 @@ jobs:
           python -m unittest discover -s tests -p 'test_beetle_git_push.py' -v
           python -m unittest discover -s tests -p 'test_beetle_rowan_focus.py' -v
           python -m unittest discover -s tests -p 'test_beetle_rowan_relevance.py' -v
+          PYTHONPATH=tools python -m unittest discover -s tests -p 'test_wolfram_public_beetle.py' -v
           python -m unittest discover -s tests -p 'test_beetle_wolfram_public.py' -v
           python -m unittest discover -s tests -p 'test_beetle_normal_routing_gate.py' -v
 
