@@ -36,6 +36,7 @@ from typing import Any, Iterable
 import requests
 from beetle_shard_store import append as append_ledger, latest_row
 from wolfram_public_sources import FEED_URL, REPO_URL, FEED_MAX_BYTES, REPO_MAX_BYTES, discover, validate_final_url
+from wolfram_mcp_one_shot import CASES as WOLFRAM_MCP_CASES, MCPHold, one_shot
 
 VERSION = "1.0.0"
 UA = "JANUS-Universal-Beetle/1.0 (+https://github.com/Hawkar-usls/janus-lapis)"
@@ -349,10 +350,63 @@ def scout_wolfram_public(sess: requests.Session, state: State, budget: Budget,
         record_candidate(state, budget, direction, item)
 
 
+def scout_wolfram_mcp_once(sess: requests.Session, state: State, budget: Budget,
+                          direction: dict[str, Any], source_cfg: dict[str, Any]) -> None:
+    """One credential-free official Wolfram MCP probe per source-bound question.
+
+    Fails closed, and pauses seven days after network/provider errors rather
+    than repeatedly polling a free personal-use computation endpoint.
+    """
+    case_id = str(source_cfg.get("case", ""))
+    if case_id not in WOLFRAM_MCP_CASES:
+        raise ValueError("WOLFRAM_MCP_CASE_NOT_PREAPPROVED")
+    if budget.max_requests - budget.requests < 4:
+        return
+    title = "Wolfram Cloud MCP quantum Zeno one-shot: " + case_id
+    origin_url = "https://www.wolfram.com/ai/mcp/cloud/"
+    iid = item_id("wolfram_cloud_mcp_one_shot", origin_url, title)
+    if iid in state.seen:
+        return  # Already fetched; never keep draining free Wolfram quotas
+    cooldown_key = "wolfram_mcp_once:" + case_id + ":last_attempt"
+    previous = state.cursors.get(cooldown_key)
+    if isinstance(previous, str):
+        try:
+            last = dt.datetime.fromisoformat(previous.replace("Z", "+00:00"))
+            if last.tzinfo and (dt.datetime.now(dt.timezone.utc) - last).total_seconds() < 604800:
+                return
+        except ValueError:
+            pass
+    state.cursors[cooldown_key] = now()
+    try:
+        result = one_shot(case_id, sess, note_request=budget.note_request)
+    except MCPHold as exc:
+        state.receipt("WOLFRAM_MCP_ONE_SHOT_HOLD",
+                      {"query_id": case_id, "reason": str(exc)[:120],
+                       "retry_after_days": 7, "provider_raw_output_persisted": False})
+        return
+    # The provider result itself is never saved. This is metadata about a
+    # successful MCP call, not a physics or prediction proof.
+    item = {
+        "source": "wolfram_cloud_mcp_one_shot",
+        "url": origin_url,
+        "title": title,
+        "summary": "Official Wolfram Cloud MCP responded to bounded public quantum Zeno math query; no raw result retained",
+        "tags": ["Wolfram", "quantum", "quantum Zeno", "measurement", "provenance"],
+        "mcp_attestation": result,
+        "epistemic_limit": "ONE_TOOL_RESPONSE_NOT_INDEPENDENT_SCIENTIFIC_VERIFICATION",
+    }
+    if record_candidate(state, budget, direction, item):
+        state.receipt("WOLFRAM_MCP_KEYLESS_RECEIVED",
+                      {"candidate_id": iid, "query_id": case_id,
+                       "provider_content_sha256": result["provider_content_sha256"],
+                       "physical_retrocausality_proven": False})
+
+
 SCOUTERS = {"arxiv": scout_arxiv, "zenodo": scout_zenodo, "github": scout_github,
             "feed": scout_feed,
             "wolfram_public_feed": scout_wolfram_public,
-            "wolfram_public_repo": scout_wolfram_public}
+            "wolfram_public_repo": scout_wolfram_public,
+            "wolfram_mcp_once": scout_wolfram_mcp_once}
 
 
 def run_scout(config: dict[str, Any], state: State, only_direction: str | None,
