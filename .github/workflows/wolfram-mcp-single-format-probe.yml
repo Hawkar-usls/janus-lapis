@@ -1,0 +1,93 @@
+name: JANUS Wolfram MCP / Single Format Probe V2
+
+on:
+  push:
+    branches:
+      - janus/wolfram-mcp-format-v2-20261109
+    paths:
+      - .github/workflows/wolfram-mcp-single-format-probe.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: janus-wolfram-one-provider-query-v2
+  cancel-in-progress: false
+
+jobs:
+  bounded-one-shot:
+    if: github.repository == 'Hawkar-usls/janus-lapis'
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install minimal request client
+        run: python -m pip install --disable-pip-version-check 'requests>=2.31,<3'
+      - name: Verify parser using synthetic provider samples before remote call
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          set -euo pipefail
+          PYTHONPATH=tools python -m unittest discover -s tests -p 'test_wolfram_format_v2.py' -v
+          PYTHONPATH=tools python -m unittest discover -s tests -p 'test_wolfram_numeric_verification.py' -v
+      - name: Exactly one approved public WolframAlpha query (no authorization)
+        env:
+          PYTHONPATH: tools
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import requests
+          from pathlib import Path
+          from wolfram_mcp_one_shot import one_shot, MCPHold
+          # This step performs ONE WolframAlpha tool/call for fixed query.
+          # Never print provider body, decoded numbers, URLs in that body,
+          # raw exceptions, or untrusted fields.
+          try:
+              with requests.Session() as client:
+                  outcome=one_shot("zeno_format_probe_v2",client)
+              approved={
+                  "schema":"janus.beetle.wolfram_mcp_one_live_format_probe.v2",
+                  "status":outcome["status"],
+                  "query_id":"zeno_format_probe_v2",
+                  "reference_expression":"cos(pi/4)^4",
+                  "our_independent_reference":0.25,
+                  "math_verified":outcome["provider_math_answer_verified"],
+                  "verification_status":outcome["provider_math_verification_status"],
+                  "provider_content_sha256":outcome["provider_content_sha256"],
+                  "format_flags":outcome["noncontent_format_flags"],
+                  "provider_text_stored":False,
+                  "api_key_used":False,
+                  "physical_retrocausality_proven":False,
+                  "number_of_wolframalpha_tool_calls":1
+              }
+          except MCPHold:
+              approved={
+                  "schema":"janus.beetle.wolfram_mcp_one_live_format_probe.v2",
+                  "status":"MCP_CALL_HELD",
+                  "math_verified":False,
+                  "provider_text_stored":False,
+                  "api_key_used":False,
+                  "physical_retrocausality_proven":False,
+                  "number_of_wolframalpha_tool_calls":"AT_MOST_ONE"
+              }
+          dest=Path("wolfram_one_shot_v2.json")
+          dest.write_text(json.dumps(approved,indent=2,sort_keys=True)+"\n")
+          print(json.dumps(approved,sort_keys=True))
+          with open(__import__("os").environ["GITHUB_STEP_SUMMARY"],"a") as out:
+              out.write("### Wolfram MCP one-shot V2\n\n")
+              out.write("Math verified: **"+str(approved["math_verified"])+"**\n")
+              out.write("Status: **"+approved["status"]+"**\n")
+              out.write("Provider output retained: **NO**\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wolfram-v2-single-probe
+          path: wolfram_one_shot_v2.json
+          if-no-files-found: error
+          retention-days: 14
