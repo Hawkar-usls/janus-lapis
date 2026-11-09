@@ -44,7 +44,7 @@ jobs:
           import json
           from pathlib import Path
           c=json.loads(Path("data/beetle/directions.json").read_text())
-          d=next(x for x in c["directions"] if x["id"]=="wolfram_public_quantum")
+          d=next(x for x in c["directions"] if x["id"]=="wolfram_official_open_quantum")
           kinds={x["kind"] for x in d["sources"]}
           assert kinds=={"wolfram_public_feed","wolfram_public_repo","wolfram_mcp_once"}
           assert d["enabled"] is True
