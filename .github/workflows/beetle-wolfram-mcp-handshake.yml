@@ -36,9 +36,9 @@ jobs:
                                "requested":PROTOCOL,"negotiated":version,
                                "session_header_present":bool(sid)},
                                sort_keys=True))
-              if version == PROTOCOL:
-                  send(s,method="notifications/initialized",session_id=sid)
-                  tools,_=send(s,method="tools/list",request_id=2,session_id=sid)
+              if version in ("2025-03-26", "2025-06-18"):
+                  send(s,method="notifications/initialized",session_id=sid,protocol_version=version)
+                  tools,_=send(s,method="tools/list",request_id=2,session_id=sid,protocol_version=version)
                   v=[{"name":t.get("name"),
                       "props":sorted(t.get("inputSchema",{}).get("properties",{}).keys()),
                       "required":t.get("inputSchema",{}).get("required",[])}
