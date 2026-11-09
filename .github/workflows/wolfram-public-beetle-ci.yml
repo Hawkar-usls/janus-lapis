@@ -7,6 +7,8 @@ on:
       - "tools/universal_beetle.py"
       - "data/beetle/directions.json"
       - "tests/test_beetle_wolfram_public.py"
+      - "tests/test_beetle_wolfram_mcp.py"
+      - "tools/wolfram_mcp_one_shot.py"
       - ".github/workflows/wolfram-public-beetle-ci.yml"
   workflow_dispatch:
 
@@ -30,6 +32,7 @@ jobs:
         run: |
           set -euo pipefail
           python -m unittest discover -s tests -p 'test_beetle_wolfram_public.py' -v
+          python -m unittest discover -s tests -p 'test_beetle_wolfram_mcp.py' -v
           python -m unittest discover -s tests -p 'test_beetle_rowan_focus.py' -v
           python -m unittest discover -s tests -p 'test_beetle_rowan_relevance.py' -v
       - name: Verify direction budget and isolated source kinds
@@ -40,9 +43,9 @@ jobs:
           cfg=json.loads(Path('data/beetle/directions.json').read_text())
           d=[x for x in cfg['directions'] if x['id']=='wolfram_official_open_quantum']
           assert len(d)==1 and d[0]['priority']==91
-          assert {s['kind'] for s in d[0]['sources']} == {'wolfram_public_feed','wolfram_public_repo'}
-          assert len(d[0]['sources'])==2
-          assert all(s['max_results'] <= 3 for s in d[0]['sources'])
+          assert {s['kind'] for s in d[0]['sources']} == {'wolfram_public_feed','wolfram_public_repo','wolfram_mcp_once'}
+          assert len(d[0]['sources'])==3
+          assert all(s.get('max_results',1) <= 3 for s in d[0]['sources'])
           assert d[0]['scientific_boundary']['wolfram_alpha_queries_without_appid'] is False
           print("Wolfram official public sources: metadata only / no AppID / two bounded endpoints")
           PY
