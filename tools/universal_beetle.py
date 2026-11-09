@@ -35,6 +35,7 @@ from typing import Any, Iterable
 
 import requests
 from beetle_shard_store import append as append_ledger, latest_row
+from wolfram_public_sources import FEED_URL, REPO_URL, FEED_MAX_BYTES, REPO_MAX_BYTES, discover, validate_final_url
 
 VERSION = "1.0.0"
 UA = "JANUS-Universal-Beetle/1.0 (+https://github.com/Hawkar-usls/janus-lapis)"
@@ -307,7 +308,34 @@ def scout_feed(sess: requests.Session, state: State, budget: Budget, direction: 
                 record_candidate(state, budget, direction, {"source": "feed", "url": link, "title": title, "summary": summary[:4000], "tags": []})
 
 
-SCOUTERS = {"arxiv": scout_arxiv, "zenodo": scout_zenodo, "github": scout_github, "feed": scout_feed}
+def scout_wolfram_public(sess: requests.Session, state: State, budget: Budget,
+                        direction: dict[str, Any], source_cfg: dict[str, Any]) -> None:
+    """Read only official Wolfram public RSS/verified MIT GitHub metadata.
+
+    Never visit wolframalpha.com, use an AppID, follow redirects to other
+    origins, copy copyrighted article bodies, or treat candidates as evidence.
+    """
+    kind = str(source_cfg.get("kind", ""))
+    known = {"wolfram_public_feed": (FEED_URL, FEED_MAX_BYTES),
+             "wolfram_public_repo": (REPO_URL, REPO_MAX_BYTES)}
+    if kind not in known:
+        raise ValueError("UNAPPROVED_WOLFRAM_PUBLIC_SOURCE")
+    url, cap = known[kind]
+    r = _get(sess, budget, url, allow_redirects=False)
+    validate_final_url(url, r.url)
+    if len(r.content) > cap:
+        raise ValueError("WOLFRAM_PUBLIC_SOURCE_TOO_LARGE")
+    rows = discover(kind, r.content, max_results=min(3, max(1, int(source_cfg.get("max_results", 3)))))
+    for item in rows:
+        if not budget.can_add():
+            break
+        record_candidate(state, budget, direction, item)
+
+
+SCOUTERS = {"arxiv": scout_arxiv, "zenodo": scout_zenodo, "github": scout_github,
+            "feed": scout_feed,
+            "wolfram_public_feed": scout_wolfram_public,
+            "wolfram_public_repo": scout_wolfram_public}
 
 
 def run_scout(config: dict[str, Any], state: State, only_direction: str | None,
