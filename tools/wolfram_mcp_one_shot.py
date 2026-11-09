@@ -17,6 +17,8 @@ from urllib.parse import urlparse
 MCP_ENDPOINT = "https://agenttools.wolfram.com/mcp"
 MCP_DOCS = "https://www.wolfram.com/ai/mcp/cloud/"
 PROTOCOL = "2025-06-18"
+ALLOWED_NEGOTIATED_PROTOCOLS = ("2025-03-26", "2025-06-18")
+MCP_CLIENT_REVISION = "negotiated-protocol-v2"
 MAX_BODY_BYTES = 200_000
 # Explicitly approved queries are intentionally few. Add new research
 # question IDs only by code review, not from model output or mutable config.
@@ -85,11 +87,11 @@ def _read_bounded_response(response, *, expected_id, note_request):
 
 
 def send(session, *, method, params=None, request_id=None, session_id=None,
-         note_request=lambda n: None):
+         protocol_version=PROTOCOL, note_request=lambda n: None):
     headers = {
         "Accept": "application/json, text/event-stream",
         "Content-Type": "application/json",
-        "MCP-Protocol-Version": PROTOCOL,
+        "MCP-Protocol-Version": protocol_version,
         "User-Agent": "JANUS-Beetle-Research-OneShot/1",
     }
     if session_id:
@@ -128,11 +130,12 @@ def one_shot(case_id, session, note_request=lambda n: None):
     if not isinstance(init.get("result"), dict):
         raise MCPHold("MCP_INITIALIZE_FAILED")
     negotiated = init["result"].get("protocolVersion")
-    if negotiated != PROTOCOL:
-        raise MCPHold("MCP_PROTOCOL_VERSION_DRIFT")
-    send(session, method="notifications/initialized", session_id=sid, note_request=note_request)
+    if negotiated not in ALLOWED_NEGOTIATED_PROTOCOLS:
+        raise MCPHold("MCP_PROTOCOL_VERSION_UNSUPPORTED")
+    send(session, method="notifications/initialized", session_id=sid,
+         protocol_version=negotiated, note_request=note_request)
     listed, _ = send(session, method="tools/list", request_id=2, session_id=sid,
-                     note_request=note_request)
+                     protocol_version=negotiated, note_request=note_request)
     tools = listed.get("result", {}).get("tools", [])
     allowed = [x for x in tools if x.get("name") == "WolframAlpha"]
     if len(allowed) != 1:
@@ -146,6 +149,7 @@ def one_shot(case_id, session, note_request=lambda n: None):
     if len(candidates) != 1 or any(x != candidates[0] for x in required):
         raise MCPHold("WOLFRAMALPHA_TOOL_SCHEMA_NOT_ALLOWED")
     called, _ = send(session, method="tools/call", request_id=3, session_id=sid,
+                     protocol_version=negotiated,
                      params={"name": "WolframAlpha",
                              "arguments": {candidates[0]: case["query"]}},
                      note_request=note_request)
@@ -172,7 +176,8 @@ def one_shot(case_id, session, note_request=lambda n: None):
         "provider_math_answer_verified": False,
         "physical_retrocausality_proven": False,
         "underlying_model_modified": False,
-        "mcp_protocol": PROTOCOL,
+        "mcp_protocol_requested": PROTOCOL,
+        "mcp_protocol_negotiated": negotiated,
         "api_appid_or_login_used": False,
         "one_shot_no_bulk_collection": True,
     }
