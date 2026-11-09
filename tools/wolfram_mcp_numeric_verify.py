@@ -122,7 +122,7 @@ def _text_values(text: str) -> list[float]:
                 except ValueError:
                     pass
             continue
-        m=MARKDOWN_LABEL.fullmatch(line)
+        m=MARKDOWN_LABEL.fullmatch(line.replace("**",""))
         if not m or not LABEL.fullmatch(m.group(1)):
             continue
         remainder=m.group(2).strip()
