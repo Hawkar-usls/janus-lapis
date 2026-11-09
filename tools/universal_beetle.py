@@ -36,7 +36,7 @@ from typing import Any, Iterable
 import requests
 from beetle_shard_store import append as append_ledger, latest_row
 from wolfram_public_sources import FEED_URL, REPO_URL, FEED_MAX_BYTES, REPO_MAX_BYTES, discover, validate_final_url
-from wolfram_mcp_one_shot import CASES as WOLFRAM_MCP_CASES, MCPHold, one_shot
+from wolfram_mcp_one_shot import CASES as WOLFRAM_MCP_CASES, MCPHold, MCP_CLIENT_REVISION, one_shot
 
 VERSION = "1.0.0"
 UA = "JANUS-Universal-Beetle/1.0 (+https://github.com/Hawkar-usls/janus-lapis)"
@@ -379,7 +379,7 @@ def scout_wolfram_mcp_once(sess: requests.Session, state: State, budget: Budget,
     iid = item_id("wolfram_cloud_mcp_one_shot", origin_url, title)
     if iid in state.seen:
         return  # Already fetched; never keep draining free Wolfram quotas
-    cooldown_key = "wolfram_mcp_once:" + case_id + ":last_attempt"
+    cooldown_key = "wolfram_mcp_once:" + case_id + ":" + MCP_CLIENT_REVISION + ":last_attempt"
     previous = state.cursors.get(cooldown_key)
     if isinstance(previous, str):
         try:
