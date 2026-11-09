@@ -1017,6 +1017,64 @@
           "max_results": 1
         }
       ]
+    },
+    {
+      "id": "wolfram_public_quantum",
+      "title": "Wolfram public quantum research and source-bound mathematics",
+      "enabled": true,
+      "priority": 87,
+      "min_score": 1,
+      "mirror_lenses": [
+        "FORWARD",
+        "REVERSE",
+        "COUNTEREVIDENCE",
+        "CONTROL"
+      ],
+      "priority_keywords": [
+        "wolfram",
+        "quantum",
+        "measurement",
+        "simulation"
+      ],
+      "keywords": [
+        "Wolfram",
+        "quantum",
+        "physics",
+        "mathematics",
+        "measurement",
+        "quantum Zeno",
+        "simulation",
+        "computation",
+        "entanglement",
+        "probability",
+        "source provenance"
+      ],
+      "target_repositories": [
+        "Hawkar-usls/Janus-Demiurge",
+        "Hawkar-usls/janus-meta-registry",
+        "Hawkar-usls/janus-lapis"
+      ],
+      "sources": [
+        {
+          "kind": "wolfram_public_feed",
+          "enabled": true,
+          "max_results": 3,
+          "policy": "official public RSS, titles+links only"
+        },
+        {
+          "kind": "wolfram_public_repo",
+          "enabled": true,
+          "max_results": 1,
+          "policy": "official GitHub QuantumFramework MIT metadata only"
+        },
+        {
+          "kind": "wolfram_mcp_once",
+          "enabled": true,
+          "case": "zeno_n2_analytic",
+          "max_results": 1,
+          "policy": "Wolfram official free keyless MCP; one approved query; persistent receipt and no result text"
+        }
+      ]
     }
   ],
   "grazer_tasks": [
