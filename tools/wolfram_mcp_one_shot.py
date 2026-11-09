@@ -44,6 +44,14 @@ CASES = {
         "description": "One-time response format probe with in-memory numeric verification",
         "verify_numeric": True,
     },
+    # A new, nonidentical Zeno observable. Exactly one source-bound Beetle
+    # attempt, with permanent deduplication after a response.
+    "zeno_n4_unconditional_v3": {
+        "query": "(1+cos(pi/4)^4)/2",
+        "public_reference": 0.625,
+        "description": "Nonselective final Z=0 with N=4; not the all-zero joint probability",
+        "verify_numeric": True,
+    },
 }
 
 

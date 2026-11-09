@@ -9,6 +9,7 @@ on:
       - "tests/test_beetle_wolfram_public.py"
       - "tests/test_beetle_wolfram_mcp.py"
       - "tools/wolfram_mcp_one_shot.py"
+      - "tests/test_beetle_wolfram_v3.py"
       - "tools/wolfram_mcp_numeric_verify.py"
       - "tests/test_wolfram_numeric_verification.py"
       - ".github/workflows/wolfram-public-beetle-ci.yml"
@@ -35,6 +36,7 @@ jobs:
           set -euo pipefail
           python -m unittest discover -s tests -p 'test_beetle_wolfram_public.py' -v
           python -m unittest discover -s tests -p 'test_beetle_wolfram_mcp.py' -v
+          PYTHONPATH=tools python -m unittest discover -s tests -p 'test_beetle_wolfram_v3.py' -v
           PYTHONPATH=tools python -m unittest discover -s tests -p 'test_wolfram_numeric_verification.py' -v
           python -m unittest discover -s tests -p 'test_beetle_rowan_focus.py' -v
           python -m unittest discover -s tests -p 'test_beetle_rowan_relevance.py' -v
@@ -47,8 +49,8 @@ jobs:
           d=[x for x in cfg['directions'] if x['id']=='wolfram_official_open_quantum']
           assert len(d)==1 and d[0]['priority']==91
           assert {s['kind'] for s in d[0]['sources']} == {'wolfram_public_feed','wolfram_public_repo','wolfram_mcp_once'}
-          assert len(d[0]['sources'])==4
-          assert sorted(s.get('case') for s in d[0]['sources'] if s['kind']=='wolfram_mcp_once')==['zeno_n2_analytic','zeno_n2_verified_v1']
+          assert len(d[0]['sources'])==5
+          assert sorted(s.get('case') for s in d[0]['sources'] if s['kind']=='wolfram_mcp_once')==['zeno_n2_analytic','zeno_n2_verified_v1','zeno_n4_unconditional_v3']
           assert all(s.get('max_results',1) <= 3 for s in d[0]['sources'])
           assert d[0]['scientific_boundary']['wolfram_alpha_queries_without_appid'] is False
           print("Wolfram official public sources: metadata only / no AppID / two bounded endpoints")
