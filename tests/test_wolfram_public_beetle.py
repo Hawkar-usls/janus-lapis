@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 from wolfram_public_sources import FEED_URL, REPO_URL, parse_feed, parse_repo, discover
-from wolfram_mcp_one_shot import MCPHold, CASES, MCP_ENDPOINT, one_shot
+from wolfram_mcp_one_shot import MCPHold, CASES, MCP_ENDPOINT, MCP_CLIENT_REVISION, one_shot
 from universal_beetle import Budget, State, scout_wolfram_public, scout_wolfram_mcp_once
 
 
@@ -28,9 +28,10 @@ class FakeResponse:
 
 
 class FakeSession:
-    def __init__(self, *, feed_override=None, repo_override=None, schema=None):
+    def __init__(self, *, feed_override=None, repo_override=None, schema=None, negotiated_version="2025-06-18"):
         self.posts = []
         self.gets = []
+        self.negotiated_version = negotiated_version
         self.schema = schema or {
             "type": "object",
             "properties": {"query": {"type": "string"}},
@@ -67,7 +68,7 @@ class FakeSession:
         if method == "initialize":
             return FakeResponse(url, __import__("json").dumps({
                 "jsonrpc": "2.0", "id": 1,
-                "result": {"protocolVersion": "2025-06-18", "capabilities": {}, "serverInfo": {"name":"fake","version":"0"}}
+                "result": {"protocolVersion": self.negotiated_version, "capabilities": {}, "serverInfo": {"name":"fake","version":"0"}}
             }).encode(), sid="TESTSESSION")
         if method == "notifications/initialized":
             return FakeResponse(url, b"", status=202)
@@ -123,6 +124,16 @@ class WolframTest(unittest.TestCase):
         self.assertEqual(fake.posts[-1][2]["params"]["arguments"],
                          {"query":"cos(pi/4)^4"})
 
+    def test_real_provider_legacy_protocol_is_respected(self):
+        # Wolfram Cloud MCP was independently observed negotiating 2025-03-26.
+        fake=FakeSession(negotiated_version="2025-03-26")
+        report=one_shot("zeno_n2_analytic",fake)
+        self.assertEqual(report["mcp_protocol_negotiated"], "2025-03-26")
+        self.assertEqual(len(fake.posts), 4)
+        self.assertEqual(fake.posts[1][1]["MCP-Protocol-Version"], "2025-03-26")
+        self.assertEqual(fake.posts[2][1]["MCP-Protocol-Version"], "2025-03-26")
+        self.assertEqual(fake.posts[3][1]["MCP-Protocol-Version"], "2025-03-26")
+
     def test_mcp_rejects_arbitrary_query_and_schema(self):
         with self.assertRaisesRegex(MCPHold,"UNAPPROVED_RESEARCH_QUERY"):
             one_shot("predict_2040",FakeSession())
@@ -164,7 +175,7 @@ class WolframTest(unittest.TestCase):
             scout_wolfram_mcp_once(sess,state,budget,direction,cfg)
             self.assertEqual(len(sess.posts),4)
             self.assertEqual(budget.new_items,1)
-            self.assertIn("wolfram_mcp_once:zeno_n2_analytic:last_attempt",state.cursors)
+            self.assertIn("wolfram_mcp_once:zeno_n2_analytic:"+MCP_CLIENT_REVISION+":last_attempt",state.cursors)
             state.save()
             self.assertEqual(len(State(Path(tmp)).seen),1)
 
