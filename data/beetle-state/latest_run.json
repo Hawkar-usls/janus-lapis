@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-11-10T02:51:30.338068Z",
+  "finished_at": "2026-11-10T08:56:06.574747Z",
   "graze": {
-    "finished_at": "2026-11-10T02:51:30.338046Z",
+    "finished_at": "2026-11-10T08:56:06.574723Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,16 +13,22 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "db999277d75a1289e8ad32454b7aabaa151cdf56ef4e7e132e37ce7cade36f08",
+  "receipt_head": "8405e16c3f01766600428679958bea9cf187deb5c65e2686ef53acd9c6413cd0",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-11-10T02:51:20.049878Z",
-    "metadata_bytes": 638000,
-    "new_candidates": 43,
-    "requests": 35,
-    "started_at": "2026-11-10T02:49:16.949553Z"
+    "errors": [
+      {
+        "direction": "mirror_bidirectional_provenance::FORWARD",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='zenodo.org', port=443): Read timed out. (read timeout=45)",
+        "source": "zenodo"
+      }
+    ],
+    "finished_at": "2026-11-10T08:55:54.670203Z",
+    "metadata_bytes": 805381,
+    "new_candidates": 62,
+    "requests": 34,
+    "started_at": "2026-11-10T08:53:26.164101Z"
   },
-  "started_at": "2026-11-10T02:49:16.949444Z",
+  "started_at": "2026-11-10T08:53:26.163943Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
