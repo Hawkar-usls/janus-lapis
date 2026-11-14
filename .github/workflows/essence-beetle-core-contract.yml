@@ -1,0 +1,40 @@
+name: JANUS ESSENCE to Universal Beetle inbound contract
+
+on:
+  pull_request:
+    paths:
+      - 'tools/beetle_essence_core_binding.py'
+      - 'tools/beetle_director_overlay.py'
+      - 'tests/test_beetle_essence_core_binding.py'
+      - '.github/workflows/essence-beetle-core-contract.yml'
+      - '.github/workflows/universal-beetle-hourly.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/beetle_essence_core_binding.py'
+      - 'tools/beetle_director_overlay.py'
+      - 'tests/test_beetle_essence_core_binding.py'
+      - '.github/workflows/essence-beetle-core-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install only public read-only Beetle overlay dependency
+        run: python -m pip install --disable-pip-version-check requests
+      - name: Test direct SHA-bound six-way core handoff and retained Rowan firewall
+        run: |
+          python -m py_compile tools/beetle_essence_core_binding.py tools/beetle_director_overlay.py
+          python -m unittest discover -s tests -p 'test_beetle_essence_core_binding.py' -v
+          python -m unittest discover -s tests -p 'test_beetle_rowan_focus.py' -v
