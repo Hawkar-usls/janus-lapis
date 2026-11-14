@@ -3,6 +3,10 @@ from __future__ import annotations
 import argparse, copy, datetime as dt, hashlib, json, pathlib
 from typing import Any
 import requests
+if __package__:
+    from .beetle_essence_core_binding import filter_core_topics
+else:
+    from beetle_essence_core_binding import filter_core_topics
 
 MIRROR_ORDER=("FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL")
 
@@ -137,10 +141,13 @@ def main():
     ap.add_argument('--state-dir',required=True); ap.add_argument('--out',required=True)
     ap.add_argument('--rowan-council-url',default=None)
     ap.add_argument('--rowan-meta-url',default=None)
+    ap.add_argument('--essence-core-url',default=None)
     ap.add_argument('--max-primary',type=int,default=None)
     ap.add_argument('--max-lanes',type=int,default=None)
     a=ap.parse_args()
     base=load_local(a.base); static=load_remote(a.static_url); live=load_remote(a.live_url)
+    live,essence_core_verified=filter_core_topics(
+        live,load_remote(a.essence_core_url) if a.essence_core_url else {})
     rowan_question=(verify_rowan_focus(load_remote(a.rowan_meta_url),load_remote(a.rowan_council_url))
         if a.rowan_meta_url and a.rowan_council_url else None)
     state_dir=pathlib.Path(a.state_dir); sched_path=state_dir/'scheduler.json'
@@ -231,6 +238,9 @@ def main():
       'priority_semantics':'ATTENTION_ONLY_NOT_EVIDENCE','base_direction_fairness_slot':fairness,
       'rowan_source_bound_focus':rowan_question or 'UNAVAILABLE_OR_STALE__BASE_QUERIES_ONLY',
       'rowan_council_authority_delta':0,
+      'essence_core_bridge_verified':essence_core_verified,
+      'essence_core_bridge_receipt_sha256':live.get('essence_core_bridge_receipt_sha256') if essence_core_verified else None,
+      'essence_core_scientific_authority_delta':0,
       'scheduler_width':{'max_primary':max_primary,'max_lanes':max_lanes,'static_max_primary':static_max_primary,'static_max_lanes':static_max_lanes},
       'mirror_invariant':'FORWARD_REVERSE_COUNTEREVIDENCE_CONTROL_EACH_CYCLE_WHEN_MAX_LANES_GE_4'
     }
