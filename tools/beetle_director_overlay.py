@@ -6,7 +6,10 @@ import requests
 if __package__:
     from .beetle_essence_core_binding import filter_core_topics
 else:
-    from beetle_essence_core_binding import filter_core_topics
+    try:
+        from beetle_essence_core_binding import filter_core_topics
+    except ModuleNotFoundError:
+        from tools.beetle_essence_core_binding import filter_core_topics
 
 MIRROR_ORDER=("FORWARD","REVERSE","COUNTEREVIDENCE","CONTROL")
 
