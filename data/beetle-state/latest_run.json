@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-11-16T00:06:39.948807Z",
+  "finished_at": "2026-11-16T03:13:11.654612Z",
   "graze": {
-    "finished_at": "2026-11-16T00:06:39.948776Z",
+    "finished_at": "2026-11-16T03:13:11.654592Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,37 +13,16 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "4ad5edafb9a6318fa85ae05cb58fe01bdf3291d87518ce9d46cca4b36f296007",
+  "receipt_head": "644b3eb01ddd4c55081bb4aae4e4c67ee1adb3e0434d7acbf897b058e29b6a8a",
   "scout": {
-    "errors": [
-      {
-        "direction": "mirror_bidirectional_provenance::FORWARD",
-        "error": "ReadTimeout: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=45)",
-        "source": "arxiv"
-      },
-      {
-        "direction": "swarm_distributed_systems::COUNTEREVIDENCE",
-        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28%28all%3A%22multi-agent%22+OR+all%3A%22distributed+agents%22%29+AND+%28all%3A%22fault+tolerance%22+OR+all%3A%22coordination%22%29%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
-        "source": "arxiv"
-      },
-      {
-        "direction": "registry_provenance::REVERSE",
-        "error": "HTTPError: 503 Server Error: Service Unavailable for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22data+provenance%22+OR+all%3A%22research+reproducibility%22+OR+all%3A%22workflow+provenance%22%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
-        "source": "arxiv"
-      },
-      {
-        "direction": "mirror_bidirectional_provenance::REVERSE",
-        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
-        "source": "arxiv"
-      }
-    ],
-    "finished_at": "2026-11-16T00:06:28.925113Z",
-    "metadata_bytes": 946497,
-    "new_candidates": 6,
-    "requests": 35,
-    "started_at": "2026-11-16T00:03:24.094647Z"
+    "errors": [],
+    "finished_at": "2026-11-16T03:13:02.583368Z",
+    "metadata_bytes": 686859,
+    "new_candidates": 64,
+    "requests": 33,
+    "started_at": "2026-11-16T03:11:51.061685Z"
   },
-  "started_at": "2026-11-16T00:03:24.094551Z",
+  "started_at": "2026-11-16T03:11:51.061524Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
