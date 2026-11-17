@@ -13,6 +13,8 @@ on:
     paths:
       - tools/beetle_producer_recovery.py
       - tests/test_beetle_producer_recovery.py
+      - tools/beetle_recovery_observation.py
+      - tests/test_beetle_recovery_observation.py
       - tools/beetle_local_receiver_recovery.py
       - tests/test_beetle_local_receiver_recovery.py
       - .github/workflows/beetle-producer-bounded-recovery.yml
@@ -21,6 +23,8 @@ on:
     paths:
       - tools/beetle_producer_recovery.py
       - tests/test_beetle_producer_recovery.py
+      - tools/beetle_recovery_observation.py
+      - tests/test_beetle_recovery_observation.py
       - tools/beetle_local_receiver_recovery.py
       - tests/test_beetle_local_receiver_recovery.py
       - .github/workflows/beetle-producer-bounded-recovery.yml
@@ -49,6 +53,8 @@ jobs:
           python -m unittest tests.test_beetle_producer_recovery -v
           python -m py_compile tools/beetle_local_receiver_recovery.py tests/test_beetle_local_receiver_recovery.py
           python -m unittest tests.test_beetle_local_receiver_recovery -v
+          python -m py_compile tools/beetle_recovery_observation.py tests/test_beetle_recovery_observation.py
+          python -m unittest tests.test_beetle_recovery_observation -v
 
   recover:
     if: >-
@@ -101,6 +107,16 @@ jobs:
           print("BEETLE_RECOVERY_REFRESHED_ACK_HEALTH=" + health["status"])
           print("BEETLE_RECOVERY_REFRESHED_PENDING=" + str(health["total_pending"]))
           PY
+      - name: Emit source-bound aggregate recovery observation (not a routing permit)
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/beetle_recovery_observation.py \
+            --health delivery-health.json \
+            --prior-gate beetle-durable/data/beetle-state/latest_routing_gate.json \
+            --source-sha "$(git -C beetle-durable rev-parse HEAD)" \
+            --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT"
       # Repair receiver lag first, independently of the producer's protective
       # backpressure HOLD. This never mutates ACK or bypasses producer routing.
       - name: Checkout local receiver ACK as untrusted read-only data
