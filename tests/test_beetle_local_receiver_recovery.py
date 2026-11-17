@@ -46,9 +46,32 @@ class LocalReceiverWakeTests(unittest.TestCase):
         self.assertTrue(d["dispatch"])
         self.assertEqual(d["pending"], 1)
 
-    def test_current_ack_never_dispatches(self):
+    def test_current_ack_requires_verified_recent_history(self):
         q, a = fixture(seq=2)
-        self.assertEqual(m.decide(q, a, {"workflow_runs": []}, NOW)["action"], "CURRENT_ACK")
+        self.assertEqual(m.decide(q, a, {"workflow_runs": [run(age=179)]}, NOW),
+                         {"action": "CURRENT_ACK", "dispatch": False, "pending": 0})
+        with self.assertRaises(m.Hold):
+            m.decide(q, a, {"workflow_runs": []}, NOW)
+
+    def test_idle_receiver_liveness_recheck_at_three_hours(self):
+        q, a = fixture(seq=2)
+        for age in (180, 360, 500):
+            with self.subTest(age=age):
+                self.assertEqual(m.decide(q, a, {"workflow_runs": [run(age=age)]}, NOW),
+                                 {"action": "RECHECK_IDLE_RECEIVER_LIVENESS", "dispatch": True, "pending": 0})
+
+    def test_idle_recheck_does_not_duplicate_or_use_untrusted_history(self):
+        q, a = fixture(seq=2)
+        for recent in (run(age=10, event="workflow_dispatch"),
+                       run(age=10, conclusion="failure")):
+            self.assertFalse(m.decide(q, a, {"workflow_runs": [dict(recent, id=12346), run(age=360)]}, NOW)["dispatch"])
+        self.assertFalse(m.decide(q, a, {"workflow_runs": [run(status="in_progress")]}, NOW)["dispatch"])
+        self.assertFalse(m.decide(q, a, {"workflow_runs": [run(conclusion="failure")]}, NOW)["dispatch"])
+        for origin in (None, {"full_name": "foreign/repo"}):
+            with self.assertRaises(m.Hold):
+                m.decide(q, a, {"workflow_runs": [dict(run(), head_repository=origin)]}, NOW)
+        with self.assertRaises(m.Hold):
+            m.decide(q, dict(a, sha256="f" * 64), {"workflow_runs": [run()]}, NOW)
 
     def test_active_recent_attempt_and_recent_success_block_duplicates(self):
         q, a = fixture()
