@@ -13,7 +13,7 @@ import re
 from beetle_producer_recovery import delivery_backpressure, timestamp
 from beetle_producer_routing_gate import classify as classify_routing
 
-GIT_SHA = re.compile(r"[0-9a-f]{40}\\Z")
+GIT_SHA = re.compile(r"[0-9a-f]{40}")
 STATES = frozenset({"UP_TO_DATE", "PENDING", "STALE", "ACK_CONFLICT",
                     "ACK_UNAVAILABLE", "AWAITING_ACK"})
 HEALTH_STATES = frozenset({"PASS", "WARN", "ALERT"})
