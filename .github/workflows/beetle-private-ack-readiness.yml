@@ -1,0 +1,84 @@
+name: JANUS P0.3 Private ACK Credential Readiness (No Token in PR)
+
+on:
+  push:
+    branches:
+      - research/p03-private-ack-preflight-20261123
+    paths:
+      - 'tools/beetle_private_ack_readiness.py'
+      - 'tests/test_beetle_private_ack_readiness.py'
+      - '.github/workflows/beetle-private-ack-readiness.yml'
+  pull_request:
+    paths:
+      - 'tools/beetle_private_ack_readiness.py'
+      - 'tests/test_beetle_private_ack_readiness.py'
+      - '.github/workflows/beetle-private-ack-readiness.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run existing private ACK guards and new no-token privacy tests
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/beetle_private_ack_readiness.py
+          python -m unittest discover -v -s tests -p 'test_beetle_private_ack_readiness.py'
+          python -m unittest discover -v -s tests -p 'test_beetle_private_ack.py'
+          python -m unittest discover -v -s tests -p 'test_beetle_normal_routing_gate.py'
+
+  producer-public-readiness:
+    needs: offline-contract
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: _code
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: beetle-state
+          path: _state
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inspect real producer queue WITHOUT secret or private API access
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p runtime/p03
+          cd _code
+          env -u JANUS_BEETLE_PRIVATE_ACK_READ_TOKEN \
+            python tools/beetle_private_ack_readiness.py \
+              --state-dir ../_state/data/beetle-state \
+              --out ../runtime/p03/ACK_READINESS.json
+          cd ..
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('runtime/p03/ACK_READINESS.json').read_text())
+          assert r['status']=='HOLD_READ_CREDENTIAL_NOT_CONFIGURED'
+          assert r['pending']>=0
+          assert r['p03_phase_admitted'] is False
+          assert r['private_ack_contents_output'] is False
+          assert r['producer_workflow_dispatched'] is False
+          print('P03_ACK_READINESS_PUBLIC_CI_HOLD_EXPECTED__NO_SECRET_ACCESS_ATTEMPT')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: janus-p03-private-ack-readiness-public
+          path: runtime/p03/ACK_READINESS.json
+          if-no-files-found: error
+          retention-days: 30
