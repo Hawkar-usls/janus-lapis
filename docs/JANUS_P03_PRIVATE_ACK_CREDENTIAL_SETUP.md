@@ -10,9 +10,14 @@ connected ChatGPT GitHub session are DIFFERENT security principals.
 
 ## Separate credential-owner action
 
-1. Use a fine-grained PAT or preferably a short-lived GitHub App installation
-   token with access to ONLY Hawkar-usls/SkinGPT and Contents: Read.
-   No write, workflows, Actions, issues, admin or other repository permissions.
+1. For the CURRENT existing workflow, use a **fine-grained PAT** with an
+   explicit expiration and rotation schedule, restricted to ONLY
+   Hawkar-usls/SkinGPT and Contents: Read. Never store a short-lived GitHub
+   App installation token as a static repository secret: it expires.
+   A GitHub App is preferable LONG TERM only if the workflow securely mints
+   a new installation token each run from a separately protected App identity,
+   restricted to SkinGPT and Contents: Read. That minting flow is NOT installed
+   by this proposal. No write, workflows, Actions, issues or admin permissions.
 2. In Hawkar-usls/janus-lapis → Settings → Secrets and variables →
    Actions, create the repository secret named exactly
    JANUS_BEETLE_PRIVATE_ACK_READ_TOKEN. Never commit or log its value.
