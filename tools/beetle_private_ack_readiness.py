@@ -13,6 +13,7 @@ import datetime as dt
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 
 from beetle_delivery_health import (
@@ -27,6 +28,19 @@ QUEUE=Path("mirrors/Hawkar-usls__SkinGPT/delivery.json")
 def assess(queue, token_present: bool, ack, error=None):
     if not isinstance(queue,dict) or queue.get("target_repository")!=PRIVATE_ACK_REPOSITORY:
         raise ValueError("P03_QUEUE_SCOPE_DENIED")
+    entries=queue.get("entries")
+    if (queue.get("schema")!="janus.beetle.delivery_queue.v1"
+        or type(entries) is not list or len(entries)>1000
+        or type(queue.get("next_sequence")) is not int
+        or queue["next_sequence"]!=len(entries)+1):
+        raise ValueError("P03_QUEUE_STRUCTURE_INVALID")
+    for i,x in enumerate(entries,1):
+        if (type(x) is not dict or type(x.get("sequence")) is not int
+            or x["sequence"]!=i
+            or not isinstance(x.get("created_at"),str)
+            or not re.fullmatch(r"[0-9a-f]{20}",str(x.get("batch_id","")))
+            or not re.fullmatch(r"[0-9a-f]{64}",str(x.get("sha256","")))):
+            raise ValueError("P03_QUEUE_SOURCE_ENTRY_INVALID")
     # The original sender validator rejects mismatched identities and SHA.
     if not token_present:
         status="HOLD_READ_CREDENTIAL_NOT_CONFIGURED"
