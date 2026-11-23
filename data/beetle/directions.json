@@ -1043,6 +1043,51 @@
           "policy": "One source-bound N4 final unconditional measurement check; record only boolean verdict and sha; never repeat on success"
         }
       ]
+    },
+    {
+      "id": "memory_cortex_incremental_sources",
+      "enabled": true,
+      "priority": 100,
+      "title": "Memory Cortex: new source-grounded retrieval and continual-memory research",
+      "keywords": [
+        "memory",
+        "retrieval",
+        "index",
+        "incremental",
+        "deduplication",
+        "provenance",
+        "continual"
+      ],
+      "priority_keywords": [
+        "retrieval",
+        "memory",
+        "incremental"
+      ],
+      "min_score": 1.0,
+      "target_repositories": [
+        "Hawkar-usls/Hrain",
+        "Hawkar-usls/janus-meta-registry"
+      ],
+      "sources": [
+        {
+          "kind": "arxiv",
+          "enabled": true,
+          "query": "(cat:cs.IR OR cat:cs.AI OR cat:cs.LG) AND (all:\"retrieval augmented\" OR all:\"continual memory\" OR all:\"incremental indexing\")",
+          "max_results": 12
+        },
+        {
+          "kind": "zenodo",
+          "enabled": true,
+          "query": "retrieval memory incremental indexing provenance",
+          "max_results": 8
+        }
+      ],
+      "memory_cortex_consumer": {
+        "repository": "Hawkar-usls/Janus-Demiurge",
+        "state_branch": "memory-cortex-state",
+        "source_kind": "DISCOVERY_LEAD_ONLY__PRIMARY_API_REPLAY_REQUIRED",
+        "dedupe": "provider ID and exact source text SHA256"
+      }
     }
   ],
   "grazer_tasks": [
