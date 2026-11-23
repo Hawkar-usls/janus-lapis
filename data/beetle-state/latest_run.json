@@ -1,7 +1,7 @@
 {
-  "finished_at": "2026-11-23T09:50:56.662150Z",
+  "finished_at": "2026-11-23T12:16:31.992571Z",
   "graze": {
-    "finished_at": "2026-11-23T09:50:56.662120Z",
+    "finished_at": "2026-11-23T12:16:31.992533Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
@@ -13,16 +13,67 @@
     ]
   },
   "mode": "both",
-  "receipt_head": "3b877ccd264ac181f8ae162a3702594fb64512542b6bdcb8fc8e30e5c039f710",
+  "receipt_head": "38d34b26d00366e129f262049a8be2c28c7309455bc9ddda64dfbfcd3bc74c4e",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-11-23T09:50:43.950177Z",
-    "metadata_bytes": 1912111,
-    "new_candidates": 27,
+    "errors": [
+      {
+        "direction": "registry_provenance::FORWARD",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=all%3A%22data+provenance%22+OR+all%3A%22research+reproducibility%22+OR+all%3A%22workflow+provenance%22&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "registry_provenance::CONTROL",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22data+provenance%22+OR+all%3A%22research+reproducibility%22+OR+all%3A%22workflow+provenance%22%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=10&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "memory_cortex_incremental_sources::COUNTEREVIDENCE",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.IR+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22retrieval+augmented%22+OR+all%3A%22continual+memory%22+OR+all%3A%22incremental+indexing%22%29%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "formal_proof_verification::COUNTEREVIDENCE",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22proof+complexity%22+OR+all%3A%22SAT+solving%22+OR+all%3A%22proof+certificate%22%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "cognition_memory_reverse::COUNTEREVIDENCE",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22memory%22+OR+all%3A%22world+model%22+OR+all%3A%22inverse+model%22%29%29+AND+%28all%3A%22failure%22+OR+all%3A%22null+result%22+OR+all%3A%22negative+result%22+OR+all%3A%22counterexample%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "cognition_memory_reverse::CONTROL",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22memory%22+OR+all%3A%22world+model%22+OR+all%3A%22inverse+model%22%29%29+AND+%28all%3A%22replication%22+OR+all%3A%22benchmark%22+OR+all%3A%22baseline%22+OR+all%3A%22control%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "mirror_bidirectional_provenance::REVERSE",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22inverse+problem%22+OR+all%3A%22identifiability%22+OR+all%3A%22provenance%22+OR+all%3A%22bidirectional%22%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "memory_cortex_incremental_sources::REVERSE",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.IR+OR+cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22retrieval+augmented%22+OR+all%3A%22continual+memory%22+OR+all%3A%22incremental+indexing%22%29%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "formal_proof_verification::REVERSE",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3A%22proof+complexity%22+OR+all%3A%22SAT+solving%22+OR+all%3A%22proof+certificate%22%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      },
+      {
+        "direction": "cognition_memory_reverse::REVERSE",
+        "error": "HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28%28cat%3Acs.AI+OR+cat%3Acs.LG%29+AND+%28all%3A%22memory%22+OR+all%3A%22world+model%22+OR+all%3A%22inverse+model%22%29%29+AND+%28all%3A%22inverse%22+OR+all%3A%22reverse%22+OR+all%3A%22reconstruction%22+OR+all%3A%22inversion%22%29&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+        "source": "arxiv"
+      }
+    ],
+    "finished_at": "2026-11-23T12:16:21.576389Z",
+    "metadata_bytes": 808721,
+    "new_candidates": 13,
     "requests": 35,
-    "started_at": "2026-11-23T09:48:59.637446Z"
+    "started_at": "2026-11-23T12:13:05.486215Z"
   },
-  "started_at": "2026-11-23T09:48:59.637295Z",
+  "started_at": "2026-11-23T12:13:05.486004Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
