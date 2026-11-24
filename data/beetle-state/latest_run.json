@@ -1,28 +1,34 @@
 {
-  "finished_at": "2026-11-24T05:04:38.071560Z",
+  "finished_at": "2026-11-24T09:50:31.623920Z",
   "graze": {
-    "finished_at": "2026-11-24T05:04:38.071538Z",
+    "finished_at": "2026-11-24T09:50:31.623894Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
-        "returncode": 0,
-        "stderr_tail": "",
-        "stdout_tail": "{\"event\": \"OPEN\", \"run_id\": \"uwa-channel-content-dc5d937c62b1\", \"disk_shape\": [2553, 12, 320], \"logical_shape\": [320, 12, 2553], \"params\": {\"fs_delay\": 9765.625, \"fs_time\": 48.828125, \"fc\": 13000.0, \"version\": 1.0}, \"resume_from\": 2553, \"stop\": 2553}\n{\"event\": \"COMPLETE\", \"bites\": 40, \"receipts\": \"/home/runner/work/janus-lapis/janus-lapis/beetle-memory/data/beetle-state/grazers/uwa_blue_1_raw_channel/uwa-channel-content-dc5d937c62b1/receipts.jsonl\", \"checkpoint\": \"/home/runner/work/janus-lapis/janus-lapis/beetle-memory/data/beetle-state/grazers/uwa_blue_1_raw_channel/uwa-channel-content-dc5d937c62b1/checkpoint.json\"}\n",
+        "returncode": 2,
+        "stderr_tail": "{\"event\": \"ERROR\", \"type\": \"RuntimeError\", \"message\": \"Range probe failed: HTTPSConnectionPool(host='zenodo.org', port=443): Read timed out. (read timeout=30)\"}\n",
+        "stdout_tail": "",
         "task_id": "uwa_blue_1_raw_channel"
       }
     ]
   },
   "mode": "both",
-  "receipt_head": "d32d6ad9041aa57c9ec41a8d03ff660569534fa323ba7e5146bc45a75c55c81e",
+  "receipt_head": "2465add8bcc3140eaf0760210961ea871676b438fa47d9a725907de7ec9db082",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-11-24T05:04:27.067606Z",
-    "metadata_bytes": 4416552,
-    "new_candidates": 62,
-    "requests": 34,
-    "started_at": "2026-11-24T05:02:43.536410Z"
+    "errors": [
+      {
+        "direction": "memory_cortex_incremental_sources::COUNTEREVIDENCE",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='zenodo.org', port=443): Read timed out. (read timeout=45)",
+        "source": "zenodo"
+      }
+    ],
+    "finished_at": "2026-11-24T09:49:25.605287Z",
+    "metadata_bytes": 682257,
+    "new_candidates": 49,
+    "requests": 33,
+    "started_at": "2026-11-24T09:45:30.444278Z"
   },
-  "started_at": "2026-11-24T05:02:43.536202Z",
+  "started_at": "2026-11-24T09:45:30.444103Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
