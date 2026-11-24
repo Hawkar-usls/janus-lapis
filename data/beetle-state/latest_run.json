@@ -1,28 +1,59 @@
 {
-  "finished_at": "2026-11-24T16:32:22.463606Z",
+  "finished_at": "2026-11-24T20:23:59.172567Z",
   "graze": {
-    "finished_at": "2026-11-24T16:32:22.463580Z",
+    "finished_at": "2026-11-24T20:23:59.172542Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
-        "returncode": 0,
-        "stderr_tail": "",
-        "stdout_tail": "{\"event\": \"OPEN\", \"run_id\": \"uwa-channel-content-dc5d937c62b1\", \"disk_shape\": [2553, 12, 320], \"logical_shape\": [320, 12, 2553], \"params\": {\"fs_delay\": 9765.625, \"fs_time\": 48.828125, \"fc\": 13000.0, \"version\": 1.0}, \"resume_from\": 2553, \"stop\": 2553}\n{\"event\": \"COMPLETE\", \"bites\": 40, \"receipts\": \"/home/runner/work/janus-lapis/janus-lapis/beetle-memory/data/beetle-state/grazers/uwa_blue_1_raw_channel/uwa-channel-content-dc5d937c62b1/receipts.jsonl\", \"checkpoint\": \"/home/runner/work/janus-lapis/janus-lapis/beetle-memory/data/beetle-state/grazers/uwa_blue_1_raw_channel/uwa-channel-content-dc5d937c62b1/checkpoint.json\"}\n",
+        "returncode": 2,
+        "stderr_tail": "{\"event\": \"ERROR\", \"type\": \"RuntimeError\", \"message\": \"Remote server did not answer the 1-byte probe with HTTP 206. Ocean Beetle refuses to risk a whole-file download. Use --allow-full-download only if you explicitly accept that risk.\"}\n",
+        "stdout_tail": "",
         "task_id": "uwa_blue_1_raw_channel"
       }
     ]
   },
   "mode": "both",
-  "receipt_head": "97927fd09e23050125633967eabc2f8c7a898c58248734ea2cf66609adbd6ffb",
+  "receipt_head": "d96e19fe4f56e935b40707faa3ae373cc7d504bb4ed0089419fc8bc1f98fd900",
   "scout": {
-    "errors": [],
-    "finished_at": "2026-11-24T16:32:09.646545Z",
-    "metadata_bytes": 1050305,
-    "new_candidates": 37,
+    "errors": [
+      {
+        "direction": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
+        "error": "HTTPError: 403 Client Error: Forbidden for url: https://zenodo.org/api/records?q=inverse+problem+identifiability+provenance+failure+null+result+negative+result&size=8&sort=mostrecent",
+        "source": "zenodo"
+      },
+      {
+        "direction": "memory_cortex_incremental_sources::COUNTEREVIDENCE",
+        "error": "HTTPError: 403 Client Error: Forbidden for url: https://zenodo.org/api/records?q=retrieval+memory+incremental+indexing+provenance+failure+null+result+negative+result&size=8&sort=mostrecent",
+        "source": "zenodo"
+      },
+      {
+        "direction": "mirror_bidirectional_provenance::CONTROL",
+        "error": "HTTPError: 403 Client Error: Forbidden for url: https://zenodo.org/api/records?q=inverse+problem+identifiability+provenance+replication+benchmark+baseline&size=8&sort=mostrecent",
+        "source": "zenodo"
+      },
+      {
+        "direction": "memory_cortex_incremental_sources::CONTROL",
+        "error": "HTTPError: 403 Client Error: Forbidden for url: https://zenodo.org/api/records?q=retrieval+memory+incremental+indexing+provenance+replication+benchmark+baseline&size=8&sort=mostrecent",
+        "source": "zenodo"
+      },
+      {
+        "direction": "mirror_bidirectional_provenance::REVERSE",
+        "error": "HTTPError: 403 Client Error: Forbidden for url: https://zenodo.org/api/records?q=inverse+problem+identifiability+provenance+inverse+reverse+reconstruction&size=8&sort=mostrecent",
+        "source": "zenodo"
+      },
+      {
+        "direction": "memory_cortex_incremental_sources::REVERSE",
+        "error": "HTTPError: 403 Client Error: Forbidden for url: https://zenodo.org/api/records?q=retrieval+memory+incremental+indexing+provenance+inverse+reverse+reconstruction&size=8&sort=mostrecent",
+        "source": "zenodo"
+      }
+    ],
+    "finished_at": "2026-11-24T20:23:53.277242Z",
+    "metadata_bytes": 479548,
+    "new_candidates": 0,
     "requests": 35,
-    "started_at": "2026-11-24T16:30:48.832501Z"
+    "started_at": "2026-11-24T20:22:48.589408Z"
   },
-  "started_at": "2026-11-24T16:30:48.832388Z",
+  "started_at": "2026-11-24T20:22:48.589286Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
