@@ -1,59 +1,28 @@
 {
-  "finished_at": "2026-11-24T20:23:59.172567Z",
+  "finished_at": "2026-11-25T01:10:54.197050Z",
   "graze": {
-    "finished_at": "2026-11-24T20:23:59.172542Z",
+    "finished_at": "2026-11-25T01:10:54.197028Z",
     "tasks": [
       {
         "kind": "uwa_hdf5_channel",
-        "returncode": 2,
-        "stderr_tail": "{\"event\": \"ERROR\", \"type\": \"RuntimeError\", \"message\": \"Remote server did not answer the 1-byte probe with HTTP 206. Ocean Beetle refuses to risk a whole-file download. Use --allow-full-download only if you explicitly accept that risk.\"}\n",
-        "stdout_tail": "",
+        "returncode": 0,
+        "stderr_tail": "",
+        "stdout_tail": "{\"event\": \"OPEN\", \"run_id\": \"uwa-channel-content-dc5d937c62b1\", \"disk_shape\": [2553, 12, 320], \"logical_shape\": [320, 12, 2553], \"params\": {\"fs_delay\": 9765.625, \"fs_time\": 48.828125, \"fc\": 13000.0, \"version\": 1.0}, \"resume_from\": 2553, \"stop\": 2553}\n{\"event\": \"COMPLETE\", \"bites\": 40, \"receipts\": \"/home/runner/work/janus-lapis/janus-lapis/beetle-memory/data/beetle-state/grazers/uwa_blue_1_raw_channel/uwa-channel-content-dc5d937c62b1/receipts.jsonl\", \"checkpoint\": \"/home/runner/work/janus-lapis/janus-lapis/beetle-memory/data/beetle-state/grazers/uwa_blue_1_raw_channel/uwa-channel-content-dc5d937c62b1/checkpoint.json\"}\n",
         "task_id": "uwa_blue_1_raw_channel"
       }
     ]
   },
   "mode": "both",
-  "receipt_head": "d96e19fe4f56e935b40707faa3ae373cc7d504bb4ed0089419fc8bc1f98fd900",
+  "receipt_head": "ce3c53abd7795c3414ab6a85edb3dbdeb4e5a6086dfac60e81dbd08720a592b8",
   "scout": {
-    "errors": [
-      {
-        "direction": "mirror_bidirectional_provenance::COUNTEREVIDENCE",
-        "error": "HTTPError: 403 Client Error: Forbidden for url: https://zenodo.org/api/records?q=inverse+problem+identifiability+provenance+failure+null+result+negative+result&size=8&sort=mostrecent",
-        "source": "zenodo"
-      },
-      {
-        "direction": "memory_cortex_incremental_sources::COUNTEREVIDENCE",
-        "error": "HTTPError: 403 Client Error: Forbidden for url: https://zenodo.org/api/records?q=retrieval+memory+incremental+indexing+provenance+failure+null+result+negative+result&size=8&sort=mostrecent",
-        "source": "zenodo"
-      },
-      {
-        "direction": "mirror_bidirectional_provenance::CONTROL",
-        "error": "HTTPError: 403 Client Error: Forbidden for url: https://zenodo.org/api/records?q=inverse+problem+identifiability+provenance+replication+benchmark+baseline&size=8&sort=mostrecent",
-        "source": "zenodo"
-      },
-      {
-        "direction": "memory_cortex_incremental_sources::CONTROL",
-        "error": "HTTPError: 403 Client Error: Forbidden for url: https://zenodo.org/api/records?q=retrieval+memory+incremental+indexing+provenance+replication+benchmark+baseline&size=8&sort=mostrecent",
-        "source": "zenodo"
-      },
-      {
-        "direction": "mirror_bidirectional_provenance::REVERSE",
-        "error": "HTTPError: 403 Client Error: Forbidden for url: https://zenodo.org/api/records?q=inverse+problem+identifiability+provenance+inverse+reverse+reconstruction&size=8&sort=mostrecent",
-        "source": "zenodo"
-      },
-      {
-        "direction": "memory_cortex_incremental_sources::REVERSE",
-        "error": "HTTPError: 403 Client Error: Forbidden for url: https://zenodo.org/api/records?q=retrieval+memory+incremental+indexing+provenance+inverse+reverse+reconstruction&size=8&sort=mostrecent",
-        "source": "zenodo"
-      }
-    ],
-    "finished_at": "2026-11-24T20:23:53.277242Z",
-    "metadata_bytes": 479548,
-    "new_candidates": 0,
-    "requests": 35,
-    "started_at": "2026-11-24T20:22:48.589408Z"
+    "errors": [],
+    "finished_at": "2026-11-25T01:10:42.530336Z",
+    "metadata_bytes": 1334276,
+    "new_candidates": 10,
+    "requests": 34,
+    "started_at": "2026-11-25T01:09:08.929890Z"
   },
-  "started_at": "2026-11-24T20:22:48.589286Z",
+  "started_at": "2026-11-25T01:09:08.929708Z",
   "tool": "JANUS UNIVERSAL BEETLE",
   "version": "1.0.0"
 }
